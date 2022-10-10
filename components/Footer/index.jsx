@@ -18,7 +18,7 @@ const socialNetworks = [
 export const Footer = () => {
   return (
     <section className="social-networks">
-      <h2 className="title">Faça parte da nossa comunidade!</h2>
+      <h2 className="title-networks">Faça parte da nossa comunidade!</h2>
        {socialNetworks.map((network) => (
        <a href="#" target="_blank" className="social-btn" id={network.discord} key={network.discord}>
        {network.icon}
