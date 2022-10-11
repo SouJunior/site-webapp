@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+}
+.navbar{
+    position: absolute;
+}
+.bg{
+    background-color:#d9d9d9 ;
+    width: 100%;
+    height: 728px;
+    position: absolute;
+}
+.text{
+    z-index: 99;
+}
+.textArea{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.strip{
+    background-color: #A0A0A0;
+    height: 685px;
+    width: 424px;
+}
