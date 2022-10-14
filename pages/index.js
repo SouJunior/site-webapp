@@ -4,10 +4,10 @@ import {Participation} from "../components/Participation/Participation";
 
 export default function Home() {
   return (
-    <main>
+    <>
       <AboutSection />
       <OccupationSection />
       <Participation />
-    </main>
+    </>
   );
 }

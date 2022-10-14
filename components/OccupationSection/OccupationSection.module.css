@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 102px 0;
 }
 
 .OccupationContainer {
@@ -28,6 +29,7 @@
   font-weight: 400;
   margin-bottom: 48px;
   line-height: 150%;
+  color: #767676;
 }
 
 .itemContainer {
@@ -35,10 +37,33 @@
   justify-content: center;
   gap: 16px;
   max-width: inherit;
-  overflow: hidden;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.itemContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .item {
   width: 154.68px;
   height: 143.85px;
+}
+
+.arrowContainer {
+  margin-top: 30px;
+  padding: 20px;
+  display: flex;
+  gap: 42px;
+}
+
+.arrowContainer button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.arrowContainer button:first-child img {
+  transform: rotate(180deg);
+  border: 0;
 }
