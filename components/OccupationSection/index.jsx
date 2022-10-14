@@ -1,6 +1,20 @@
+import {useRef} from "react";
+import Image from "next/image";
 import styles from "../OccupationSection/OccupationSection.module.css";
 
 export const OccupationSection = () => {
+  const carrousel = useRef(null);
+
+  const handleLeftSide = (e) => {
+    e.preventDefault();
+    carrousel.current.scrollLeft += carrousel.current.offsetWidth;
+    console.log(carrousel.current.scrollLeft);
+  };
+  const handleRightSide = (e) => {
+    e.preventDefault();
+    carrousel.current.scrollLeft -= carrousel.current.offsetWidth;
+  };
+
   const item = [
     {title: "1Teste", src: "https://via.placeholder.com/150"},
     {title: "2Teste", src: "https://via.placeholder.com/150"},
@@ -10,6 +24,9 @@ export const OccupationSection = () => {
     {title: "6Teste", src: "https://via.placeholder.com/150"},
     {title: "7Teste", src: "https://via.placeholder.com/150"},
     {title: "8Teste", src: "https://via.placeholder.com/150"},
+    {title: "9Teste", src: "https://via.placeholder.com/150"},
+    {title: "10Teste", src: "https://via.placeholder.com/150"},
+    {title: "11Teste", src: "https://via.placeholder.com/150"},
   ];
 
   return (
@@ -22,12 +39,19 @@ export const OccupationSection = () => {
           atuação que temos em nosso quadro atualmente:
         </p>
 
-        <div className={styles.itemContainer}>
+        <div className={styles.itemContainer} ref={carrousel}>
           {item.map(({title, src}) => (
             <img key={title} src={src} alt={title} />
           ))}
         </div>
-        <span style={{marginTop: "15px"}}>Anterior | Próximo</span>
+        <div className={styles.arrowContainer}>
+          <button onClick={handleLeftSide}>
+            <Image src="/arrow.svg" width={8} height={12} alt="Anterior" />
+          </button>
+          <button onClick={handleRightSide}>
+            <Image src="/arrow.svg" width={8} height={12} alt="Próximo" />
+          </button>
+        </div>
       </div>
     </section>
   );
