@@ -1,4 +1,4 @@
-# linkedin-frontend
+# Site
 
 Projeto Opensource que visa melhorar o match entre os profissionais Juniors e Empresas.
 
