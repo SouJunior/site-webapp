@@ -36,6 +36,13 @@ Inicie o servidor
 
 Esse projeto é usado pela [SouJunior](https://github.com/SouJunior).
 
+## Autor(es) 🙎🏻‍♂️
+
+- Anderson Nunes | [GitHub](https://https://github.com/Dande94) - [LinkedIn](https://www.linkedin.com/in/anderson-nunes-000541225/)
+- Ana Santos | [GitHub](https://github.com/SilviaLTeixeira) - [LinkedIn](https://www.linkedin.com/in/ana-saantos/)
+- Edvaldo Cabral | [GitHub](https://github.com/edcabralc) - [LinkedIn](https://www.linkedin.com/in/edcabralc/)
+- Michelle Porto | [GitHub](https://github.com/michelleporto/michelleporto) - [LinkedIn](https://www.linkedin.com/in/michelle-porto-ribeiro/)
+
 ## Feedback
 
 Se você tiver algum feedback, por favor nos deixe saber por meio do nosso [Discord](https://discord.gg/naTaHgZZpz).

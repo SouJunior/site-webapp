@@ -1,0 +1,44 @@
+.OccupationSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.OccupationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1088px;
+}
+
+.titlePrimary {
+  color: #046ad0;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 38px;
+}
+
+.paragraph {
+  text-align: center;
+  max-width: 90ch;
+  font-weight: 400;
+  margin-bottom: 48px;
+  line-height: 150%;
+}
+
+.itemContainer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  max-width: inherit;
+  overflow: hidden;
+}
+
+.item {
+  width: 154.68px;
+  height: 143.85px;
+}

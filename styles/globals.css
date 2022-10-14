@@ -1,6 +1,8 @@
-*{
-  margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600&display=swap");
+
+* {
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
@@ -8,9 +10,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    color: black;
+  font-family: "Radio Canada", sans-serif;
+  color: black;
 }
 body{
   display: flex;
@@ -20,10 +21,6 @@ body{
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 
