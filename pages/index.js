@@ -1,9 +1,10 @@
 import {OccupationSection} from "../components/OccupationSection";
+import {AboutSection} from "../components/AboutSection";
 
 export default function Home() {
   return (
     <main>
-      <h1>Página principal</h1>
+      <AboutSection />
       <OccupationSection />
     </main>
   );

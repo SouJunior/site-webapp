@@ -27,6 +27,7 @@ export const OccupationSection = () => {
             <img src={src} alt={title} />
           ))}
         </div>
+        <span style={{marginTop: "15px"}}>Anterior | Próximo</span>
       </div>
     </section>
   );

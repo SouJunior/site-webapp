@@ -8,12 +8,12 @@
 
 .OccupationContainer {
   display: flex;
-  gap: 48px;
+  /* gap: 48px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1088px;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .titlePrimary {
@@ -21,11 +21,15 @@
   font-weight: 600;
   font-size: 32px;
   line-height: 38px;
+  margin-bottom: 38px;
 }
 
 .paragraph {
   text-align: center;
   max-width: 90ch;
+  font-weight: 400;
+  margin-bottom: 48px;
+  line-height: 150%;
 }
 
 .itemContainer {
