@@ -2,14 +2,14 @@ import styles from "../OccupationSection/OccupationSection.module.css";
 
 export const OccupationSection = () => {
   const item = [
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
-    {title: "Teste", src: "https://via.placeholder.com/150"},
+    {title: "1Teste", src: "https://via.placeholder.com/150"},
+    {title: "2Teste", src: "https://via.placeholder.com/150"},
+    {title: "3Teste", src: "https://via.placeholder.com/150"},
+    {title: "4Teste", src: "https://via.placeholder.com/150"},
+    {title: "5Teste", src: "https://via.placeholder.com/150"},
+    {title: "6Teste", src: "https://via.placeholder.com/150"},
+    {title: "7Teste", src: "https://via.placeholder.com/150"},
+    {title: "8Teste", src: "https://via.placeholder.com/150"},
   ];
 
   return (
@@ -24,7 +24,7 @@ export const OccupationSection = () => {
 
         <div className={styles.itemContainer}>
           {item.map(({title, src}) => (
-            <img src={src} alt={title} />
+            <img key={title} src={src} alt={title} />
           ))}
         </div>
         <span style={{marginTop: "15px"}}>Anterior | Próximo</span>

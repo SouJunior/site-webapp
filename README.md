@@ -1,4 +1,4 @@
-# linkedin-frontend
+# Site
 
 Projeto Opensource que visa melhorar o match entre os profissionais Juniors e Empresas.
 
@@ -35,6 +35,13 @@ Inicie o servidor
 ## Usado por
 
 Esse projeto é usado pela [SouJunior](https://github.com/SouJunior).
+
+## Autor(es) 🙎🏻‍♂️
+
+- Anderson Nunes | [GitHub](https://https://github.com/Dande94) - [LinkedIn](https://www.linkedin.com/in/anderson-nunes-000541225/)
+- Ana Santos | [GitHub](https://github.com/SilviaLTeixeira) - [LinkedIn](https://www.linkedin.com/in/ana-saantos/)
+- Edvaldo Cabral | [GitHub](https://github.com/edcabralc) - [LinkedIn](https://www.linkedin.com/in/edcabralc/)
+- Michelle Porto | [GitHub](https://github.com/michelleporto/michelleporto) - [LinkedIn](https://www.linkedin.com/in/michelle-porto-ribeiro/)
 
 ## Feedback
 

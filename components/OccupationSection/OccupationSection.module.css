@@ -8,12 +8,10 @@
 
 .OccupationContainer {
   display: flex;
-  /* gap: 48px; */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 1088px;
-  /* background-color: red; */
 }
 
 .titlePrimary {

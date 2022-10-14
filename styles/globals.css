@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html,
@@ -12,12 +13,14 @@ body {
   font-family: "Radio Canada", sans-serif;
   color: black;
 }
+body{
+  display: flex;
+  justify-content: center;
+}
 
 a {
   color: inherit;
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
+
