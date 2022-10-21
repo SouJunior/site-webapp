@@ -2,13 +2,16 @@ import React from "react";
 
 import styles from "./Footer.module.css";
 
+
 import {FaDiscord, FaFacebookSquare, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube, } from "react-icons/fa";
+
+import {FaDiscord,FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+
 
 //array com os icones
 
 const socialNetworks = [
   {id:"discord", name: "discord" , icon: <FaDiscord />, path: "www.youtube.com"},
-  {id:"facebook", name: "facebook" , icon:<FaFacebookSquare />, path: "www.youtube.com" },
   {id:"github", name: "github", icon: <FaGithub />, path: "www.youtube.com" },
   {id:"instangram", name: "instagram", icon: <FaInstagram />, path: "www.youtube.com" },
   {id:"linkedin", name: "linkedin", icon: <FaLinkedinIn />, path: "www.youtube.com" },
