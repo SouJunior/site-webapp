@@ -2,7 +2,7 @@ import React from "react";
 
 import styles from "./Footer.module.css";
 
-import {FaDiscord, FaFacebookSquare, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "react-icons/fa";
+import {FaDiscord, FaFacebookSquare, FaGithub, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube, } from "react-icons/fa";
 
 //array com os icones
 
@@ -14,6 +14,7 @@ const socialNetworks = [
   {id:"linkedin", name: "linkedin", icon: <FaLinkedinIn />, path: "www.youtube.com" },
   {id:"twitter",name: "twitter" , icon: <FaTwitter />, path: "www.youtube.com" },
   {id:"youtube",name: "youtube", icon: <FaYoutube />, path: "www.youtube.com" },
+  {id:"facebook",name: "facebook", icon: <FaFacebookSquare />, path: "https://www.facebook.com/people/SouJunior/100086671131030" },
    ];
 
 export const Footer = () => {
