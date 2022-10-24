@@ -8,13 +8,13 @@ export const OccupationSection = () => {
 
   const handleLeftSide = (e) => {
     e.preventDefault();
-    // carrousel.current.scrollLeft -= carrousel.current.offsetWidth;
-    carrousel.current.scrollLeft -= 150;
+    carrousel.current.scrollLeft -= carrousel.current.offsetWidth;
+    // carrousel.current.scrollLeft -= 150;
   };
   const handleRightSide = (e) => {
     e.preventDefault();
-    // carrousel.current.scrollLeft += carrousel.current.offsetWidth;
-    carrousel.current.scrollLeft += 150;
+    carrousel.current.scrollLeft += carrousel.current.offsetWidth;
+    // carrousel.current.scrollLeft += 150;
   };
 
   return (

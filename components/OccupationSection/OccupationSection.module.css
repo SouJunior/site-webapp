@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin: 102px 0;
+  margin: 95px 0;
   background-color: #212;
 }
 
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   max-width: 1088px;
+  transition: ease 25s;
 }
 
 .titlePrimary {
@@ -54,9 +55,9 @@
   align-items: center;
   width: 159px;
   height: 146px;
-  background-color: #046ad0;
+  background-color: hsl(210, 70%, 25%);
   border-radius: 10px;
-  transition: all ease-in 0.5s;
+  transition: ease 5s;
 }
 
 .item p {
@@ -67,7 +68,7 @@
   margin-top: 30px;
   padding: 20px;
   display: flex;
-  gap: 42px;
+  gap: 23px;
 }
 
 .arrowContainer button {
@@ -76,7 +77,16 @@
   cursor: pointer;
 }
 
+.arrowContainer button:hover {
+  background-image: url("/assets/button-directional-light-caroussel.png");
+}
+
 .arrowContainer button:first-child img {
+  transition: ease-in 3s;
   transform: rotate(180deg);
   border: 0;
+}
+.arrowContainer button:first-child:hover img {
+  background-image: url("/assets/button-directional-light-caroussel.png");
+  transform: rotate(180deg);
 }

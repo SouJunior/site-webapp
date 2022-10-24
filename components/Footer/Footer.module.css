@@ -1,31 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-.footerContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    height: 186.27px;
-    padding: 36px;
-    
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 186.27px;
+  padding: 36px;
 }
 
-
-.title{
-    color: rgba(5, 117, 231, 1);
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 26.44px;
-    line-height:31.73px;
-    text-align: center;
+.title {
+  color: rgba(5, 117, 231, 1);
+  font-family: "Radio Canada", sans-serif;
+  font-size: 26.44px;
+  line-height: 31.73px;
+  text-align: center;
 }
 
-.icons{
-    display: flex;
-    justify-content: center;
-    align-items: space-between;
-    gap: 25px;
-    font-size: 43px;
-    color: #0575E7;
-    
-    }
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  gap: 25px;
+  font-size: 43px;
+  color: #0575e7;
+}
