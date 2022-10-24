@@ -1,33 +1,21 @@
 import {useRef} from "react";
 import Image from "next/image";
 import styles from "../OccupationSection/OccupationSection.module.css";
+import {carouselItems} from "../../utils/carouselItems";
 
 export const OccupationSection = () => {
   const carrousel = useRef(null);
 
   const handleLeftSide = (e) => {
     e.preventDefault();
-    carrousel.current.scrollLeft += carrousel.current.offsetWidth;
-    console.log(carrousel.current.scrollLeft);
+    // carrousel.current.scrollLeft -= carrousel.current.offsetWidth;
+    carrousel.current.scrollLeft -= 150;
   };
   const handleRightSide = (e) => {
     e.preventDefault();
-    carrousel.current.scrollLeft -= carrousel.current.offsetWidth;
+    // carrousel.current.scrollLeft += carrousel.current.offsetWidth;
+    carrousel.current.scrollLeft += 150;
   };
-
-  const item = [
-    {title: "1Teste", src: "https://via.placeholder.com/150"},
-    {title: "2Teste", src: "https://via.placeholder.com/150"},
-    {title: "3Teste", src: "https://via.placeholder.com/150"},
-    {title: "4Teste", src: "https://via.placeholder.com/150"},
-    {title: "5Teste", src: "https://via.placeholder.com/150"},
-    {title: "6Teste", src: "https://via.placeholder.com/150"},
-    {title: "7Teste", src: "https://via.placeholder.com/150"},
-    {title: "8Teste", src: "https://via.placeholder.com/150"},
-    {title: "9Teste", src: "https://via.placeholder.com/150"},
-    {title: "10Teste", src: "https://via.placeholder.com/150"},
-    {title: "11Teste", src: "https://via.placeholder.com/150"},
-  ];
 
   return (
     <section className={styles.OccupationSection}>
@@ -40,16 +28,35 @@ export const OccupationSection = () => {
         </p>
 
         <div className={styles.itemContainer} ref={carrousel}>
-          {item.map(({title, src}) => (
-            <img key={title} src={src} alt={title} />
+          {carouselItems.map(({title, icon}) => (
+            <div className={styles.item}>
+              <Image
+                key={title}
+                src={icon}
+                alt={title}
+                width={61}
+                height={61}
+              />
+              <p>{title}</p>
+            </div>
           ))}
         </div>
         <div className={styles.arrowContainer}>
           <button onClick={handleLeftSide}>
-            <Image src="/arrow.svg" width={8} height={12} alt="Anterior" />
+            <Image
+              src="/assets/button-directional-dark-caroussel.svg"
+              width={34}
+              height={34}
+              alt="Anterior"
+            />
           </button>
           <button onClick={handleRightSide}>
-            <Image src="/arrow.svg" width={8} height={12} alt="Próximo" />
+            <Image
+              src="/assets/button-directional-dark-caroussel.svg"
+              width={34}
+              height={34}
+              alt="Próximo"
+            />
           </button>
         </div>
       </div>

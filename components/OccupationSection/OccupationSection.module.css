@@ -1,10 +1,10 @@
 .OccupationSection {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   margin: 102px 0;
+  background-color: #212;
 }
 
 .OccupationContainer {
@@ -29,14 +29,14 @@
   font-weight: 400;
   margin-bottom: 48px;
   line-height: 150%;
-  color: #767676;
+  color: #f9f9f9;
 }
 
 .itemContainer {
   display: flex;
-  justify-content: center;
   gap: 16px;
   max-width: inherit;
+  flex-wrap: nowrap;
   overflow-x: auto;
   scroll-behavior: smooth;
 }
@@ -46,8 +46,21 @@
 }
 
 .item {
-  width: 154.68px;
-  height: 143.85px;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 159px;
+  height: 146px;
+  background-color: #046ad0;
+  border-radius: 10px;
+  transition: all ease-in 0.5s;
+}
+
+.item p {
+  margin-top: 10px;
 }
 
 .arrowContainer {

@@ -11,16 +11,10 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Radio Canada", sans-serif;
-  color: black;
-}
-body{
-  display: flex;
-  justify-content: center;
+  color: #f9f9f9;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
-
