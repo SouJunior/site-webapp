@@ -1,6 +1,6 @@
 import React from "react";
-import {Navbar} from "../Navbar";
-import styles from "./Header.module.css";
+import { Navbar } from "../Navbar";
+import styles from "./Header.module.css"
 import Image from "next/image";
 
 export const Header = () => {
@@ -11,28 +11,19 @@ export const Header = () => {
         <div>
           <div className={styles.navbar}>
             <div>
-              <Image
-                src="/assets/soujuniot-logo-light.svg"
-                alt="logo SouJunior"
-                width={216}
-                height={33}
-              />
+              <Image src="/assets/icons/Logo.svg" alt="logo SouJunior" width={216} height={33} />
             </div>
             <Navbar />
           </div>
           <div className={styles.textArea}>
             <div className={styles.textInner}>
-              <h1>SouJunior</h1>
-              <article>
-                Uma experiência real de trabalho em um projeto de uma empresa de
-                tecnologia
-              </article>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <article>Uma experiência real de trabalho em um projeto de uma empresa de tecnologia.</article>
+              <p>O Junior de hoje é o Sênior do amanhã!</p>
             </div>
             <div className={styles.strip}></div>
-          </div>
+          </div> 
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

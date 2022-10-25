@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
+    color:white !important;
 }
 .navbar{
     position: absolute;
@@ -17,16 +18,6 @@
     position: absolute;
     overflow: hidden;
 }
-.bg::after{
-    content: '';
-    position: absolute;
-    width: 1443px;
-    height: 100px;
-    bottom: -55px;
-    right: -3px;
-    transform: rotate(-2.5deg);
-    background-color: #FFF;
-}
 .text{
     z-index: 99;
     width: 1090px;
@@ -35,32 +26,20 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: #A0A0A0;
-    
+    justify-content: space-between;    
 }
 .textInner{
     display: flex;
     flex-direction: column;
 }
-.textInner h1{
-    font-weight: lighter;
-    font-size: 60px;
-    margin: 0;
-}
 .textInner article{
     width: 420px;
     margin-bottom: 34px;
-    font-size: 22px;
+    font-size: 36px;
 }
 .textInner p{
-    font-weight: lighter;
-    font-size: 16px;
-    padding: 12px 6px ;
-    color: #FFF;
-    text-align: center;
-    background-color: #828282;
-    width: 420px;
+    font-weight: medium;
+    font-size: 24px;
 }
 .strip{
     background-color: #A0A0A0;
