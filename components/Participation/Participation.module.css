@@ -80,3 +80,9 @@ color: rgba(4, 106, 208, 1);
     color:rgba(249, 249, 249, 1);
     padding: 15px;
    }
+
+   .button:hover{
+    background-color: rgba(1, 76, 151, 1);
+    cursor: pointer;
+    border: none;
+   }
