@@ -8,13 +8,11 @@ export const OccupationSection = () => {
 
   const handleLeftSide = (e) => {
     e.preventDefault();
-    carrousel.current.scrollLeft -= carrousel.current.offsetWidth;
-    // carrousel.current.scrollLeft -= 150;
+    carrousel.current.scrollLeft -= carrousel.current.offsetWidth + 159;
   };
   const handleRightSide = (e) => {
     e.preventDefault();
-    carrousel.current.scrollLeft += carrousel.current.offsetWidth;
-    // carrousel.current.scrollLeft += 150;
+    carrousel.current.scrollLeft += carrousel.current.offsetWidth + 159;
   };
 
   return (
@@ -29,14 +27,8 @@ export const OccupationSection = () => {
 
         <div className={styles.itemContainer} ref={carrousel}>
           {carouselItems.map(({title, icon}) => (
-            <div className={styles.item}>
-              <Image
-                key={title}
-                src={icon}
-                alt={title}
-                width={61}
-                height={61}
-              />
+            <div key={title} className={styles.item}>
+              <Image src={icon} alt={title} width={61} height={61} />
               <p>{title}</p>
             </div>
           ))}

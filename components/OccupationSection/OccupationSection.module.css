@@ -77,14 +77,14 @@
   cursor: pointer;
 }
 
-.arrowContainer button:hover {
-  background-image: url("/assets/button-directional-light-caroussel.png");
-}
-
 .arrowContainer button:first-child img {
   transition: ease-in 3s;
   transform: rotate(180deg);
   border: 0;
+}
+
+.arrowContainer button:hover:last-child {
+  background-image: url("/assets/button-directional-light-caroussel.png");
 }
 .arrowContainer button:first-child:hover img {
   background-image: url("/assets/button-directional-light-caroussel.png");
