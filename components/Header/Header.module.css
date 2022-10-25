@@ -2,21 +2,14 @@
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
-    color:white !important;
+    color:white;
+    border:1px solid white;
 }
 .navbar{
     position: absolute;
     top: 50px;
     display: flex;
     align-items: center;
-}
-.bg{
-    background-color:#d9d9d9 ;
-    width: 100%;
-    max-width: 1440px;
-    height: 728px;
-    position: absolute;
-    overflow: hidden;
 }
 .text{
     z-index: 99;
@@ -41,8 +34,8 @@
     font-weight: medium;
     font-size: 24px;
 }
-.strip{
-    background-color: #A0A0A0;
-    height: 685px;
-    width: 424px;
+.banner{
+    border:1px solid white;
+    border-radius:152px;
+    margin-bottom:0;
 }

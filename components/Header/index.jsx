@@ -6,7 +6,6 @@ import Image from "next/image";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.bg}></div>
       <div className={styles.text}>
         <div>
           <div className={styles.navbar}>
@@ -20,7 +19,9 @@ export const Header = () => {
               <article>Uma experiência real de trabalho em um projeto de uma empresa de tecnologia.</article>
               <p>O Junior de hoje é o Sênior do amanhã!</p>
             </div>
-            <div className={styles.strip}></div>
+            <div className={styles.banner}>
+              <Image src="/assets/Box.png" alt="logo SouJunior" width={322} height={483} />
+            </div>
           </div> 
         </div>
       </div>
