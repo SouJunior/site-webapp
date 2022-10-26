@@ -1,5 +1,4 @@
 export const carouselItems = [
-  {title: "Mentoria", icon: "/assets/icons/icon-mentor.svg"},
   {title: "Business", icon: "/assets/icons/icon-business.svg"},
   {title: "Tech Recruiter", icon: "/assets/icons/icon-techrecruiter.svg"},
   {title: "APM", icon: "/assets/icons/icon-apm.svg"},
@@ -12,4 +11,5 @@ export const carouselItems = [
   {title: "Mobile", icon: "/assets/icons/icon-mobile.svg"},
   {title: "QA", icon: "/assets/icons/icon-qa.svg"},
   {title: "DevOps", icon: "/assets/icons/icon-devops.svg"},
+  {title: "Mentoria", icon: "/assets/icons/icon-mentor.svg"},
 ];

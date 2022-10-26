@@ -1,9 +1,10 @@
 .OccupationSection {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 100%;
-  margin: 95px 0;
+  margin: 95px 0px;
+  padding: 0 15px;
   background-color: #212;
 }
 
@@ -12,8 +13,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1088px;
-  transition: ease 25s;
+  max-width: 1089px;
+  overflow-x: hidden;
 }
 
 .titlePrimary {
@@ -37,8 +38,7 @@
   display: flex;
   gap: 16px;
   max-width: inherit;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 

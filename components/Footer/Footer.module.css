@@ -5,9 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
-  height: 186.27px;
-  padding: 36px;
+  padding: 83px 0;
 }
 
 .title {
@@ -16,13 +14,19 @@
   font-size: 26.44px;
   line-height: 31.73px;
   text-align: center;
+  margin-bottom: 48px;
 }
 
 .icons {
   display: flex;
   justify-content: center;
-  align-items: space-between;
-  gap: 25px;
+  align-items: center;
+  gap: 39px;
+}
+
+.icons a {
   font-size: 43px;
   color: #0575e7;
+  padding: 0;
+  margin: 0;
 }
