@@ -14,7 +14,6 @@ export const ParticipationSection = () => {
     const [icon, setIcon] = useState(IoMdAdd);
 
 
-
 return (
 
     <section className={styles.container}>
@@ -23,7 +22,7 @@ return (
         <h1 className={styles.h1}>
         Quem pode participar?
                 </h1>
-        <p className={styles.p}> Temos oportunidades para profissionais Juniors e mentores de diversas profissões.
+        <p className={styles.paragraph}> Temos oportunidades para profissionais Juniors e mentores de diversas profissões.
              Além disso, temos oportunidades para apoiadores e parceiros para diferentes
               frentes de contribuição para o projeto.
              Veja ao lado quais são as categorias de participantes disponíveis para
@@ -33,8 +32,9 @@ return (
     <section className={styles.rightSide}>
         
     
-        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextJr(!textJr) } onChange={() => setIcon(iconChange( () => setIcon(IoIosClose)))}> {icon} </button> Sou Júnior</h3>
+       
         <div className={styles.textJr}>
+        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextJr(!textJr) && setIcon(IoIosClose) } > {icon} </button> Sou Júnior</h3>
 {
 
     textJr &&
@@ -61,8 +61,9 @@ return (
 
         </div>
 
-        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextMentor(!textMentor)}><IoMdAdd /></button> Sou Mentor</h3>
+        
         <div className={styles.textMentor}>
+        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextMentor(!textMentor)}><IoMdAdd /></button> Sou Mentor</h3>
         {
 
 textMentor &&
@@ -77,8 +78,9 @@ textMentor &&
 }
 </div> 
 
-<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextSupporter(!textSupporter)}><IoMdAdd /></button> Sou Apoiador</h3>
+
 <div className={styles.textSupporter}>
+<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextSupporter(!textSupporter)}><IoMdAdd /></button> Sou Apoiador</h3>
 {
 
     textSupporter &&
@@ -98,9 +100,9 @@ textMentor &&
 }   
 </div>   
 
-<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextCommunity(!textCommunity)}><IoMdAdd /></button> Comunidade</h3>
-<div className={styles.textCommunity}>
 
+<div className={styles.textCommunity}>
+<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextCommunity(!textCommunity)}><IoMdAdd /></button> Comunidade</h3>
 {
     textCommunity &&
 
