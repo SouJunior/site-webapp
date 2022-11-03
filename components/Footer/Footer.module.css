@@ -30,3 +30,17 @@
   padding: 0;
   margin: 0;
 }
+
+
+/*Resposividade*/
+
+@media (max-width: 900px){
+  .footerContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+
+}
