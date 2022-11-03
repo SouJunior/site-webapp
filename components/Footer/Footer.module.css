@@ -5,16 +5,30 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 83px 0;
+  
+  padding: 32px;
+  top: 95px;
+  bottom: 95px;
+
+}
+
+.align{
+ 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
   color: rgba(5, 117, 231, 1);
   font-family: "Radio Canada", sans-serif;
-  font-size: 26.44px;
+  font-size: 26.4413px;
   line-height: 31.73px;
   text-align: center;
   margin-bottom: 48px;
+  padding: 0;
+  gap: 13.22px;
+
 }
 
 .icons {
@@ -34,13 +48,14 @@
 
 /*Resposividade*/
 
-@media (max-width: 900px){
-  .footerContainer{
+@media (max-width: 900px) {
+  .footerContainer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-   
-  }
+    width: 300vw;
+    padding: 83px 0;
+      }
+
+
 
 }

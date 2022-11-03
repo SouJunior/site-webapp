@@ -33,11 +33,22 @@ color:rgba(4, 106, 208, 1);
   color: rgba(249, 249, 249, 1)
 }
 
-.p{
+.paragraph{
     align-items: left;
-    Weight:400;
+    weight: 400;
     font-size: 14px;
     Line-height: 16.8px;
+    padding: 5px;
+    color: rgba(249, 249, 249, 1)
+}
+
+.p{
+    align-items: left;
+    weight: 400;
+    font-size: 14px;
+    Line-height: 16.8px;
+    padding: 5px;
+   
     
 }
 
@@ -61,6 +72,12 @@ color: rgba(4, 106, 208, 1);
     font-size: 16px;
     line-height: 19px;
     }
+
+ .textJr, .textMentor,.textSupporter, .textCommunity {
+    width: 100%;
+    border-left: 3px solid #fff;
+    padding-left: 10px;
+ }   
 
 /*Linha abaixo do h3*/
 .border{
@@ -93,6 +110,10 @@ color: rgba(4, 106, 208, 1);
     cursor: pointer;
     border: none;
    }
+
+   /*Borda esquerda dos containers*/
+
+  
 
    /*Responsividade*/
 
