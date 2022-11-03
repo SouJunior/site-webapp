@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import {IoMdAdd} from "react-icons/io";
+import {IoMdAdd, IoIosClose} from "react-icons/io";
 import {VscCircleFilled} from "react-icons/vsc";
 
 import styles from "./Participation.module.css";
@@ -11,6 +11,9 @@ export const ParticipationSection = () => {
     const [textMentor, setTextMentor]= useState(false);
     const [textSupporter, setTextSupporter]= useState(false);
     const [textCommunity, setTextCommunity]= useState(false);
+    const [icon, setIcon] = useState(IoMdAdd);
+
+
 
 return (
 
@@ -30,7 +33,7 @@ return (
     <section className={styles.rightSide}>
         
     
-        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextJr(!textJr)}><IoMdAdd /></button> Sou Júnior</h3>
+        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextJr(!textJr) } onChange={() => setIcon(iconChange( () => setIcon(IoIosClose)))}> {icon} </button> Sou Júnior</h3>
         <div className={styles.textJr}>
 {
 
