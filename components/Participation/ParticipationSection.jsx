@@ -7,11 +7,13 @@ import styles from "./Participation.module.css";
 
 export const ParticipationSection = () => {
    
+    {/* Constantes usadas nas div. useState(false) indica que o estado daquela div será falso, ou seja, começará renderizada fechada */}
     const [textJr, setTextJr, ] = useState(false);
     const [textMentor, setTextMentor]= useState(false);
     const [textSupporter, setTextSupporter]= useState(false);
     const [textCommunity, setTextCommunity]= useState(false);
-    const [icon, setIcon] = useState(IoMdAdd);
+    const [icon, setIcon] = useState(IoMdAdd); 
+
 
 
 return (
@@ -34,26 +36,25 @@ return (
     
        
         <div className={styles.textJr}>
-        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextJr(!textJr) && setIcon(IoIosClose) } > {icon} </button> Sou Júnior</h3>
+        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextJr(!textJr) && setIcon(IoIosClose) } > {textJr ? <IoIosClose /> : <IoMdAdd />} </button> Sou Júnior</h3>
 {
-
     textJr &&
 
     <>
     <p className={styles.p}>São as pessoas que querem trabalhar na área de tecnologia, estudam ou estão estudando
-    sobre a área de interesse, mas <b>ainda não tem toda experiência exigida</b> pelos
-    recrutadores e empresas para contratarem para uma vaga júnior.<br/>
-    
+    sobre a área de interesse, mas <b>ainda não tem toda experiência exigida</b> pelos recrutadores e empresas para contratarem para uma vaga júnior.
+    <br />
     Se você identificou que possui interesse e, alguma das carreiras acima, mas ainda não
     tem experiência (seu perfil Junior será analisado pelo Linkedin),<b>pode aplicar para
-    participar do SouJunior, através do formulário de inscrição.</b><br/>
-
+    participar do SouJunior, através do formulário de inscrição.</b>
+    <br />
     Assim que tivermos vaga para sua área de interesse, analisaremos suas informações e caso 
-    você seja um match, entraremos em contato.<br/>
-    
+    você seja um match, entraremos em contato.
+    <br />
     Daremos sempre prioridade para aqueles que já participarem do servidor <b>SouJunior no Discor</b>
     e do <b>Github do SouJunior</b> por já estarem familiarizados com as ferramentas e sobre como o projeto funciona.
-    </p><br/>
+    </p>
+    <br />
     <button className={styles.button} ><a href="https://forms.gle/d7yFWXjCPj9CLFFN9"> Quero Participar</a></button>
 </>
 
@@ -61,9 +62,9 @@ return (
 
         </div>
 
-        
+        {/* Na função onClick usei o UseState indicando a div .p como false (fechada) e a função renderiza ela para true (aberta). A mesma função usa os icones para fazer a troca o + para o x*/}
         <div className={styles.textMentor}>
-        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextMentor(!textMentor)}><IoMdAdd /></button> Sou Mentor</h3>
+        <h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextMentor(!textMentor) && setIcon(IoIosClose)}>{textMentor ? <IoIosClose /> : <IoMdAdd />}</button> Sou Mentor</h3>
         {
 
 textMentor &&
@@ -80,7 +81,7 @@ textMentor &&
 
 
 <div className={styles.textSupporter}>
-<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextSupporter(!textSupporter)}><IoMdAdd /></button> Sou Apoiador</h3>
+<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextSupporter(!textSupporter) && setIcon(IoIosClose)}>{textSupporter ? <IoIosClose /> : <IoMdAdd />}</button> Sou Apoiador</h3>
 {
 
     textSupporter &&
@@ -102,7 +103,7 @@ textMentor &&
 
 
 <div className={styles.textCommunity}>
-<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextCommunity(!textCommunity)}><IoMdAdd /></button> Comunidade</h3>
+<h3 className={styles.border}> <button type="button" className={styles.btn} onClick={()=> setTextCommunity(!textCommunity) && setIcon(IoIosClose)}>{textCommunity ? <IoIosClose /> : <IoMdAdd />}</button> Comunidade</h3>
 {
     textCommunity &&
 
