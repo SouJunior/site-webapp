@@ -21,7 +21,7 @@ export const Header = () => {
               <p>O Junior de hoje é o Sênior do amanhã!</p>
             </div>
             <div className={styles.banner}>
-              <Image src="/assets/Box.png" alt="modelo" width={499} height={593} />
+              <Image src="/assets/image-header-dark-desktop.png" alt="modelo" width={499} height={593} />
             </div>
           </div> 
         </div>
