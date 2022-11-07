@@ -4,10 +4,10 @@
     margin-left: 50px;
 }
 .linkNav{
+    color:white;
     padding: 3px 10px;
     font-weight: bold;
-    color: #333;
 }
 .linkNav:first-child{
-    border-left: 2px solid #333;
+    border-left: 2px solid white;
 }
