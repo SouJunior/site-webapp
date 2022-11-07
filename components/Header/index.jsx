@@ -6,8 +6,9 @@ import Image from "next/image";
 export const Header = () => {
   return (
     <header className={styles.header}>
-      <div className={styles.text}>
-        <div>
+      <div className={styles.backgroud}></div>
+      <div className={styles.front}>
+        <div className={styles.text}>
           <div className={styles.navbar}>
             <div>
               <Image src="/assets/icons/Logo.svg" alt="logo SouJunior" width={216} height={33} />
@@ -20,7 +21,7 @@ export const Header = () => {
               <p>O Junior de hoje é o Sênior do amanhã!</p>
             </div>
             <div className={styles.banner}>
-              <Image src="/assets/Box.png" alt="logo SouJunior" width={322} height={483} />
+              <Image src="/assets/Box.png" alt="modelo" width={499} height={593} />
             </div>
           </div> 
         </div>
