@@ -5,9 +5,13 @@
 }
 .linkNav{
     color:white;
-    padding: 3px 10px;
+    padding: 3px 30px;
     font-weight: bold;
 }
 .linkNav:first-child{
     border-left: 2px solid white;
+}
+
+.linkNav:hover{
+    text-decoration:underline;
 }

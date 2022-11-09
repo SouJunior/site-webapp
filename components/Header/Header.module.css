@@ -7,8 +7,10 @@
     /* border:1px solid white; */
 }
 .navbar{
-    position: absolute;
-    top: 50px;
+    width:100%;
+    margin:50px 0px 5px 0px;
+    /* position: absolute; */
+    /* top: 50px; */
     display: flex;
     align-items: center;
 }
@@ -36,12 +38,12 @@
     font-size: 24px;
 }
 .banner{
-    /* background: linear-gradient(50deg, rgba(35,37,52,0) 0%, rgba(35,37,52,0.5) 49%, rgba(5,117,231,1) 100%); */
-    border-radius:152px;
     margin-bottom:0;
-}
-.banner img{
-    max-height:80%;
-    max-width:80%;
-    border:1px solid white;
+    background-image: url("/assets/image-header-dark-desktop.png");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:contain;
+    width:470px;
+    height:470px;
+    /* border:1px solid white; */
 }
