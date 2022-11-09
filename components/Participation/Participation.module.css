@@ -42,14 +42,15 @@
 }
 
 .p {
-  display: flex;
+ display: inline-block;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  padding: 8px;
+  justify-content: flex-end;
+  align-items: flex-start;/**/
+  padding: 10px;
   gap: 8px;
   font-size: 14px;
   line-height: 16.8px;
+  
 }
 
 .rightSide {
