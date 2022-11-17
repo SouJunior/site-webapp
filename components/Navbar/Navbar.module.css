@@ -14,3 +14,14 @@
 .linkNav:hover{
     text-decoration:underline;
 }
+
+@media (max-width: 900px){
+    .menuNav{
+        flex-direction:column;
+        position:absolute;
+        z-index:2;
+    }   
+    .linkNav:first-child{
+        border-left: none;
+    }
+}
