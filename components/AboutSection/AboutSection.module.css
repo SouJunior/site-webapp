@@ -1,4 +1,47 @@
-.alight{
-color: blue;
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content:baseline;
+    align-items:flex-end;
+    padding: 72px 176px;
+    background-color: #212;
+    margin: 95px 0px;
+    font-family: "Radio Canada", sans-serif;
 }
+.alight{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 15px;
+    gap: 19px;
+    width: 429px;
+    height: 254px;
+    }
+    
+    .title{
+    color: #046ad0;
+    font-family: 'Radio Canada', sans-serif;
+   
+    
+    }
+    
+    .text{
+        color: #f9f9f9;
+        text-align: left;
+        text-align: justify;
+        max-width: 90ch;
+        font-weight: 400;
+        margin-bottom: 40px;
+        line-height: 150%;
+        font-family: 'Radio Canada', sans-serif;
+    }
+    
+    .galaxia{
+        background-image: "/public/assets/galaxia.png";
+        background-repeat:no-repeat;
+        background-position:right;
+        background-size:contain;
+    }
+    
