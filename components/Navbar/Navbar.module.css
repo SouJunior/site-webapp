@@ -14,3 +14,22 @@
 .linkNav:hover{
     text-decoration:underline;
 }
+
+@media (max-width: 900px){
+    .menuNav{
+        flex-direction: column;
+        position:absolute;
+        right:0px;
+        /* border:2px solid #F00; */
+        border-radius:10px;
+        background:rgba(255,255,255,0.1);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+    }
+    .linkNav{
+        margin:10px;
+    }
+    .linkNav:first-child{
+        border-left: none;
+    }
+}

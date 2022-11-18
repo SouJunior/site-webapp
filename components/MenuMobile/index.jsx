@@ -1,7 +1,7 @@
 import {useState} from "react";
 
 import styles from "./MenuMobile.module.css";
-import Hamburger from "hamburger-react";
+import {Divide as Hamburger} from "hamburger-react";
 import {Navbar} from "../Navbar";
 
 export const MenuMobile = () => {
@@ -15,14 +15,10 @@ export const MenuMobile = () => {
         toggled={isOpen}
         toggle={handleToggle}
         className={styles.teste}
+        rounded
       />
       <div className={isOpen ? styles.teste : styles.hide}>
-        <ul>
-          <li>teste</li>
-          <li>teste</li>
-          <li>teste</li>
-          <li>teste</li>
-        </ul>
+      <Navbar/>
       </div>
     </>
   );
