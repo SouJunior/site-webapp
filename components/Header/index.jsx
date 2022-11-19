@@ -3,6 +3,7 @@ import {MenuMobile} from "../MenuMobile";
 import styles from "./Header.module.css";
 import Image from "next/image";
 
+
 export const Header = () => {
   return (
     <header className={styles.header}>
