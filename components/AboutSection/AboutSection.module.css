@@ -1,4 +1,82 @@
-.alight{
-color: blue;
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
+.container {
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    padding: 72px 176px;
+    background-color: #212;
+    margin: 95px 0px;
+    font-family: "Radio Canada", sans-serif;
 }
+
+.alight{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    gap: 19px;
+    width: 429px;
+    height: 254px;
+    }
+    
+    .title{
+    color: #046ad0;
+    font-family: 'Radio Canada', sans-serif;
+   
+    
+    }
+    
+    .text{
+        color: #f9f9f9;
+        align-items: left;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        padding: 5px;
+        font-family: 'Radio Canada', sans-serif;
+    }
+    
+    .galaxia{
+        background-image: "/public/assets/galaxia1.png";
+        background-repeat:no-repeat;
+        background-position:right;
+        background-size:contain;
+        width:410px;
+        height:470px;
+    }
+
+    @media (max-width: 900px) {
+        .container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 300vw;
+          height: auto;
+          margin: 0;
+        }
+      
+        .alight {
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          max-width: 100vw;
+        }
+      
+        .title {
+          text-align: left;
+        }
+      
+        .text {
+          width: 100vw;
+          align-items: center;
+        }
+
+        .galaxia {
+            width:280px;
+            height:421px;
+        }
+      }
+
+    
