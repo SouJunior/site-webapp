@@ -20,6 +20,7 @@
         flex-direction: column;
         position:absolute;
         right:0px;
+        height:70%;
         /* border:2px solid #F00; */
         border-radius:10px;
         background:rgba(255,255,255,0.1);
@@ -27,7 +28,7 @@
         -webkit-backdrop-filter:blur(10px);
     }
     .linkNav{
-        margin:10px;
+        margin:30px 10px;
     }
     .linkNav:first-child{
         border-left: none;
