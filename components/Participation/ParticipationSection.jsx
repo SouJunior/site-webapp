@@ -21,8 +21,9 @@ export const ParticipationSection = () => {
         <p className={styles.paragraph}>
           Temos oportunidades para profissionais Juniors e mentores de diversas
           profissões. Além disso, temos oportunidades para apoiadores e
-          parceiros para diferentes frentes de contribuição para o projeto. Veja
-          ao lado quais são as categorias de participantes disponíveis para
+          parceiros para diferentes frentes de contribuição para o projeto.
+          <br /> <br />
+           Veja ao lado quais são as categorias de participantes disponíveis para
           contribuir com a SouJunior e como participar.
         </p>
       </div>
@@ -62,7 +63,7 @@ export const ParticipationSection = () => {
               </p>
               <br /><br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9">
+                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
                   Quero Participar
                 </a>
               </button>
@@ -94,7 +95,7 @@ export const ParticipationSection = () => {
               </p>
               <br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9">
+                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
                   Quero Participar
                 </a>
               </button>
@@ -141,7 +142,7 @@ export const ParticipationSection = () => {
               <br />
               <br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9">
+                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
                   Quero Participar
                 </a>
               </button>
@@ -189,7 +190,7 @@ export const ParticipationSection = () => {
               </p>
               <br /><br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9">
+                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
                   Quero Participar
                 </a>
               </button>
