@@ -6,6 +6,7 @@ import Image from "next/image";
 
 export const AboutSection = () => {
   return (
+
     <section className={styles.container}>
       <div className={styles.alight}> 
       <h1 className={styles.title}> O que é o Sou Junior?</h1>
@@ -22,15 +23,17 @@ export const AboutSection = () => {
         oportunidades.
         </p>
         </div>
-
         
+
+      
         <div className={styles.galaxia}>
 
            {/* identificar o erro no comando abaixo */}
-          {/* <Image src="/assets/galaxia.png" alt="galaxia" width={410} heigth={470}/> */}
-          <img src="../../assets/galaxia.png" alt="galaxia"/>
+          {/* <Image src="/assets/galaxia1.png" alt="galaxia" width={410} heigth={470}/> */}
+          <img src="../../assets/galaxia1.png" alt="galaxia"/>
           </div>
-    </section>
+          </section>
+  
 
   );
 };
