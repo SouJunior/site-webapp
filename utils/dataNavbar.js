@@ -4,3 +4,6 @@ export const dataNavbar = [
   {title: "Participar", path: "/participar"},
   {title: "Redes Sociais", path: "/redes-sociais"},
 ];
+
+
+
