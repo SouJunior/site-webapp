@@ -10,16 +10,14 @@
   background-color: #212;
   margin: 0 auto;
   font-family: "Radio Canada", sans-serif;
+  gap: 40px;
 }
 
 .alight {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   flex-direction: column;
-  /* padding: 0px; */
   gap: 19px;
-  /* width: 429px;
-    height: 254px; */
 }
 
 .title {

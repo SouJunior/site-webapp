@@ -11,5 +11,4 @@ export const carouselItems = [
   {title: "Mobile", icon: "/assets/icons/icon-mobile.svg"},
   {title: "QA", icon: "/assets/icons/icon-qa.svg"},
   {title: "DevOps", icon: "/assets/icons/icon-devops.svg"},
-  {title: "Mentoria", icon: "/assets/icons/icon-mentor.svg"},
 ];
