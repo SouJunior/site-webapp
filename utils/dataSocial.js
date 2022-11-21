@@ -9,36 +9,40 @@ import {
 } from "react-icons/fa";
 
 export const dataSocial = [
+
+  {id: "github",
+  name: "github",
+   icon: <FaGithub />,
+    path: "https://github.com/SouJunior"},
   {
     id: "discord",
     name: "discord",
     icon: <FaDiscord />,
-    path: "www.youtube.com",
-  },
-  {id: "github", name: "github", icon: <FaGithub />, path: "www.youtube.com"},
-  {
-    id: "instangram",
-    name: "instagram",
-    icon: <FaInstagram />,
-    path: "www.youtube.com",
+    path: "https://discord.gg/UJVf4kjz",
   },
   {
     id: "linkedin",
     name: "linkedin",
     icon: <FaLinkedinIn />,
-    path: "www.youtube.com",
+    path: "https://www.linkedin.com/company/soujunior/",
   },
-  {
-    id: "twitter",
-    name: "twitter",
-    icon: <FaTwitter />,
-    path: "www.youtube.com",
+   {
+    id: "instangram",
+    name: "instagram",
+    icon: <FaInstagram />,
+    path: "https://www.instagram.com/soujunior.tech/",
   },
   {
     id: "youtube",
     name: "youtube",
     icon: <FaYoutube />,
-    path: "www.youtube.com",
+    path: "https://www.youtube.com/@soujunior3515",
+  }, 
+  {
+    id: "twitter",
+    name: "twitter",
+    icon: <FaTwitter />,
+    path: "https://mobile.twitter.com/SouJunior_Tech",
   },
   {
     id: "facebook",
