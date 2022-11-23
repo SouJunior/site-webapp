@@ -23,13 +23,15 @@ export const ParticipationSection = () => {
           profissões. Além disso, temos oportunidades para apoiadores e
           parceiros para diferentes frentes de contribuição para o projeto.
           <br /> <br />
-           Veja ao lado quais são as categorias de participantes disponíveis para
+          Veja ao lado quais são as categorias de participantes disponíveis para
           contribuir com a SouJunior e como participar.
         </p>
       </div>
 
       <section className={styles.rightSide}>
-        <div className={textJr ? styles.textJr : styles.hide}> {/* styles.hide esconde a borda lateral*/}
+        <div className={textJr ? styles.textJr : styles.hide}>
+          {" "}
+          {/* styles.hide esconde a borda lateral*/}
           <h3 className={styles.border}>
             <button
               className={styles.btn}
@@ -46,24 +48,35 @@ export const ParticipationSection = () => {
                 estudam ou estão estudando sobre a área de interesse, mas
                 <b>ainda não tem toda experiência exigida</b> pelos recrutadores
                 e empresas para contratarem para uma vaga júnior.
-                <br /><br />
+                <br />
+                <br />
                 Se você identificou que possui interesse e, alguma das carreiras
                 acima, mas ainda não tem experiência (seu perfil Junior será
-                analisado pelo Linkedin),<b>pode aplicar para participar do SouJunior, através do
+                analisado pelo Linkedin),
+                <b>
+                  pode aplicar para participar do SouJunior, através do
                   formulário de inscrição.
                 </b>
-                <br /><br />
+                <br />
+                <br />
                 Assim que tivermos vaga para sua área de interesse, analisaremos
                 suas informações e caso você seja um match, entraremos em
                 contato.
-                <br /><br />
+                <br />
+                <br />
                 Daremos sempre prioridade para aqueles que já participarem do
-                servidor <b>SouJunior no Discor</b>e do <b>Github do SouJunior</b> por já estarem familiarizados com as
+                servidor <b>SouJunior no Discor</b>e do{" "}
+                <b>Github do SouJunior</b> por já estarem familiarizados com as
                 ferramentas e sobre como o projeto funciona.
               </p>
-              <br /><br />
+              <br />
+              <br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
+                <a
+                  href="https://forms.gle/d7yFWXjCPj9CLFFN9"
+                  target="_blank"
+                  rel="noopener"
+                >
                   Quero Participar
                 </a>
               </button>
@@ -86,16 +99,22 @@ export const ParticipationSection = () => {
               <p className={styles.p}>
                 São profissionais já inseridos e
                 <b>atuantes no mercado de trabalho, há pelo menos 6 meses.</b>
-                <br /><br />
+                <br />
+                <br />
                 Se você tem disponibilidade e interesse em contribuir para o
                 SouJunior, preencha o formulário de inscrição quere entraremos
                 em contato quando tivermos demanda de pessoas mentoras na área
                 de atuação.
-                <br /><br />
+                <br />
+                <br />
               </p>
               <br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
+                <a
+                  href="https://forms.gle/d7yFWXjCPj9CLFFN9"
+                  target="_blank"
+                  rel="noopener"
+                >
                   Quero Participar
                 </a>
               </button>
@@ -120,21 +139,25 @@ export const ParticipationSection = () => {
               <p className={styles.p}>
                 São pessoas que tenham interesse e possam contribuir de alguma
                 forma para o projeto SouJunior.
-                <br /><br />
+                <br />
+                <br />
                 <VscCircleFilled /> Pessoas de divulgação, que tenham canal no
                 YouTube, podcast, Blog ou Administradores de grupos, todos que
                 abordem assuntos referentes às áreas de atuação de profissionais
                 de tecnologia.
-                <br /><br />
+                <br />
+                <br />
                 <VscCircleFilled /> Pessoas especialistas que se disponham em
                 <b>palestrar sobre algum assunto de interesse,</b>aos
-                profissionais Juniors de tecnologia. <br /><br />
+                profissionais Juniors de tecnologia. <br />
+                <br />
                 <VscCircleFilled /> Recrutadores e empresas
                 <b>
                   dispostas a contratar ou que priorizem a contratação de
                   profissionais Juniors
                 </b>
-                voluntários do SouJunior. <br /><br />
+                voluntários do SouJunior. <br />
+                <br />
                 Se você pode contribuir para o SouJunior como pessoa apoiadora
                 ou parceira, inscreva-se através do formulário e nossa equipe
                 responsável entrará em contato com você.
@@ -142,7 +165,11 @@ export const ParticipationSection = () => {
               <br />
               <br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
+                <a
+                  href="https://forms.gle/d7yFWXjCPj9CLFFN9"
+                  target="_blank"
+                  rel="noopener"
+                >
                   Quero Participar
                 </a>
               </button>
@@ -165,18 +192,22 @@ export const ParticipationSection = () => {
             <>
               <p className={styles.p}>
                 São pessoas que queiram saber como funciona e o que está
-                acontecendo no projeto. <br /><br />
+                acontecendo no projeto. <br />
+                <br />
                 Como o SouJunior é um plataforma Open Source, qualquer pessoa
                 que se interesse pode acessar as informações sobre o andamento
-                do projeto. <br /><br />
+                do projeto. <br />
+                <br />
                 Desde <b>curiosos</b> que só querem dar uma olhadinha, até
                 aqueles que queiram <b>observar como o SouJunior funciona</b>,
                 antes de decidirem se querem participar do projeto ou não.
-                <br /><br />
+                <br />
+                <br />
                 Acesse o servidor <b>SouJunior no Discord</b> e do
                 <b>Github do SouJunior</b> espie e acompanhe o dia a dia do
                 projeto, inclusive como ouvite nas reuniões nos canais de voz.
-                <br /><br />
+                <br />
+                <br />
                 Ao entrar no servidor SouJunior do Discord, leia atentamente as
                 regras
                 <>
@@ -188,9 +219,14 @@ export const ParticipationSection = () => {
                 </>
                 para interagir com os demais participantes da comunidade.
               </p>
-              <br /><br />
+              <br />
+              <br />
               <button className={styles.button}>
-                <a href="https://forms.gle/d7yFWXjCPj9CLFFN9" target="_blank">
+                <a
+                  href="https://forms.gle/d7yFWXjCPj9CLFFN9"
+                  target="_blank"
+                  rel="noopener"
+                >
                   Quero Participar
                 </a>
               </button>
