@@ -5,9 +5,6 @@ import {VscCircleFilled} from "react-icons/vsc";
 import styles from "./Participation.module.css";
 
 export const ParticipationSection = () => {
-  {
-    /* Constantes usadas nas div. useState(false) indica que o estado daquela div será falso, ou seja, começará renderizada fechada */
-  }
   const [textJr, setTextJr] = useState(false);
   const [textMentor, setTextMentor] = useState(false);
   const [textSupporter, setTextSupporter] = useState(false);
@@ -30,8 +27,6 @@ export const ParticipationSection = () => {
 
       <section className={styles.rightSide}>
         <div className={textJr ? styles.textJr : styles.hide}>
-          {" "}
-          {/* styles.hide esconde a borda lateral*/}
           <h3 className={styles.border}>
             <button
               className={styles.btn}
@@ -75,7 +70,7 @@ export const ParticipationSection = () => {
                 <a
                   href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Quero Participar
                 </a>
@@ -83,7 +78,7 @@ export const ParticipationSection = () => {
             </>
           )}
         </div>
-        {/* Na função onClick usei o UseState indicando a div .p como false (fechada) e a função renderiza ela para true (aberta). A mesma função usa os icones para fazer a troca o + para o x*/}
+
         <div className={textMentor ? styles.textMentor : styles.hide}>
           <h3 className={styles.border}>
             <button
@@ -113,7 +108,7 @@ export const ParticipationSection = () => {
                 <a
                   href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer "
                 >
                   Quero Participar
                 </a>
@@ -168,7 +163,7 @@ export const ParticipationSection = () => {
                 <a
                   href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Quero Participar
                 </a>
@@ -225,7 +220,7 @@ export const ParticipationSection = () => {
                 <a
                   href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   Quero Participar
                 </a>
