@@ -5,7 +5,7 @@
 .linkNav{
     color:white;
     padding: 3px 30px;
-    font-weight: bold;
+    font-weight: lighter;
 }
 .linkNav:first-child{
     border-left: 2px solid white;
@@ -29,6 +29,7 @@
     }
     .linkNav{
         margin:30px 10px;
+        font-size: 24px;
     }
     .linkNav:first-child{
         border-left: none;
