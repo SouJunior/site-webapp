@@ -1,8 +1,8 @@
 .header {
   background: linear-gradient(
     180deg,
-    rgba(4, 106, 208, 1) 15%,
-    rgba(33, 33, 33, 0.78) 85%
+    #046ad0 8.33%,
+    rgba(33, 33, 33, 0.78) 91.75%
   );
   display: flex;
   justify-content: center;
