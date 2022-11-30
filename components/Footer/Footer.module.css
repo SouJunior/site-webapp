@@ -1,20 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 .footerContainer {
-  display: flex;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 32px;
+gap: 48px;
+height: 187.27px;
+left: 64px;
+right: 63px;
+margin-bottom: 83.45px;
+margin-top: 97px;
+
+
+}
+
+.align{
+ 
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 83px 0;
 }
 
 .title {
   color: rgba(5, 117, 231, 1);
   font-family: "Radio Canada", sans-serif;
-  font-size: 26.44px;
-  line-height: 31.73px;
+  font-size: 26.4413px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
   text-align: center;
   margin-bottom: 48px;
+  
+ /* gap: 13.22px;*/
+
 }
 
 .icons {
@@ -22,11 +42,27 @@
   justify-content: center;
   align-items: center;
   gap: 39px;
+ 
 }
 
 .icons a {
-  font-size: 43px;
+  font-size: 44px; /*Tamanho dos icones*/
   color: #0575e7;
   padding: 0;
   margin: 0;
+}
+
+
+/*Resposividade*/
+
+@media (max-width: 900px) {
+  .footerContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 83px 0;
+      }
+
+
+
 }

@@ -1,13 +1,37 @@
 .menuNav{
     list-style: none;
     display: flex;
-    margin-left: 50px;
 }
 .linkNav{
-    padding: 3px 10px;
+    color:white;
+    padding: 3px 30px;
     font-weight: bold;
-    color: #333;
 }
 .linkNav:first-child{
-    border-left: 2px solid #333;
+    border-left: 2px solid white;
 }
+
+.linkNav:hover{
+    text-decoration:underline;
+}
+
+@media (max-width: 900px){
+    .menuNav{
+        flex-direction: column;
+        position:absolute;
+        right:0px;
+        height:70%;
+        /* border:2px solid #F00; */
+        border-radius:10px;
+        background:rgba(255,255,255,0.1);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+    }
+    .linkNav{
+        margin:30px 10px;
+    }
+    .linkNav:first-child{
+        border-left: none;
+    }
+}   
+
