@@ -18,6 +18,7 @@ export const Header = () => {
         <meta name="description" content="Uma experiência real de trabalho em uma empresa de tecnologia." />
         <meta name="keywords" content={getKeywords()}/>
         <meta name="google-site-verification" content="bGguO_xpzk5qMD1itVipsY4J5FGDjMekPTHP_ZyU-D8" />
+        <meta name="robots" content="index, follow"/>
       </Head>
       <div className={styles.front}>
         <div className={styles.navbar}>
