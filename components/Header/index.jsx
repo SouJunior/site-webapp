@@ -1,13 +1,24 @@
+import Image from "next/image";
+import Head from "next/head";
 import {Navbar} from "../Navbar";
 import {MenuMobile} from "../MenuMobile";
 import styles from "./Header.module.css";
-import Image from "next/image";
+import { keyWords } from "../../utils/keyWords";
+
 
 
 export const Header = () => {
+
+  const getKeywords = ()=> keyWords.map(({title})=>` ${title}`)
+
   return (
     <header className={styles.header}>
-      {/* <div className={styles.backgroud}></div> */}
+      <Head>
+        <title>Sou Junior | Uma experiência real de trabalho em uma empresa de tecnologia. </title>
+        <meta name="description" content="Uma experiência real de trabalho em uma empresa de tecnologia." />
+        <meta name="keywords" content={getKeywords()}/>
+        <meta name="google-site-verification" content="bGguO_xpzk5qMD1itVipsY4J5FGDjMekPTHP_ZyU-D8" />
+      </Head>
       <div className={styles.front}>
         <div className={styles.navbar}>
           <div className={styles.logo}>
@@ -22,7 +33,7 @@ export const Header = () => {
             <Navbar />
           </div>
           <div className={styles.menuHamburger}>
-            {/* <Image src="/assets/icons/menu.svg" alt="menu hamburguer" width={40} height={40}/> */}
+          
             <MenuMobile />
           </div>
         </div>
