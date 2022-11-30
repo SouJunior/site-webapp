@@ -12,7 +12,7 @@ export const ParticipationSection = () => {
   const [icon, setIcon] = useState(IoMdAdd);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id={'participar'}>
       <div className={styles.leftSide}>
         <h1 className={styles.h1}>Quem pode participar?</h1>
         <p className={styles.paragraph}>
