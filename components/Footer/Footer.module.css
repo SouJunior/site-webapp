@@ -55,14 +55,25 @@ margin-top: 97px;
 
 /*Resposividade*/
 
-@media (max-width: 900px) {
+@media (max-width: 414px) {
   .footerContainer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 35px;
+   /* gap: 10px;*/
     width: 100%;
-    padding: 83px 0;
-      }
+    height: 128px;
+    }
+  .align{
+ display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 16px;
 
-
-
+  }
+ 
 }
