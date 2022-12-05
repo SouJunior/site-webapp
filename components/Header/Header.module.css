@@ -9,7 +9,6 @@
   margin-bottom: 50px;
   color: white;
   background-blend-mode: overlay, normal;
-  /* border:1px solid white; */
 }
 .navbar {
   width: 100%;
@@ -30,42 +29,68 @@
   width: 1090px;
   margin: 0px 10px;
 }
+.bannerArea{
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+.stars{
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 70%;
+  top:75px;
+  z-index:2;
+}
+.starOne{
+  background-image: url("/assets/Stars1.png");
+  height: 108px;
+  width: 70px;
+  transform: rotate(90deg);
+}
+.starTwo{
+  background-image: url("/assets/Stars2.png");
+  height: 92px;
+  width:70px;
+}
+
+.banner {
+  background-image: url("/assets/bannerGroup.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 470px;
+}
 .textArea {
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 .textInner {
   display: flex;
   flex-direction: column;
+  max-width: 768px;
+  width: 100%;
 }
 .textInner article {
-  width: 420px;
+  width: 100%;
   margin-bottom: 34px;
-  font-size: 36px;
+  /* font-weight: medium; */
+  font-size: 46px;
+  text-align: center;
 }
 .textInner p {
-  font-weight: medium;
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
   font-size: 24px;
-}
-.banner {
-  background-image: url("/assets/image-header-dark-desktop.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 410px;
-  height: 470px;
 }
 
 @media (max-width: 900px) {
   .navbar {
-    width: 90%;
+    /* width: 90%; */
     margin: 50px auto 5px auto;
-  }
-  .banner {
-    width: 328px;
-    height: 376px;
   }
   .textArea {
     justify-content: space-evenly;
@@ -95,12 +120,19 @@
     margin-top: 24px;
     margin-bottom: 64px;
   }
+  .frontBottom{
+    display: flex;
+    flex-direction: column-reverse;
+  }
   .textArea {
     width: 390px;
   }
   .banner {
-    width: 280px;
-    height: 421px;
+    background-image: url("/assets/bannerGroupMobile.png");
+  }
+  .stars{
+    width: 85%;
+    top:50px;
   }
   .textInner article {
     width: 390px;

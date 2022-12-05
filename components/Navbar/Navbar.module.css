@@ -1,6 +1,7 @@
 .menuNav{
     list-style: none;
     display: flex;
+    justify-content: flex-end;
 }
 .linkNav{
     color:white;
@@ -21,11 +22,13 @@
         position:absolute;
         right:0px;
         height:70%;
+        z-index: 99;
         /* border:2px solid #F00; */
         border-radius:10px;
         background:rgba(255,255,255,0.1);
         backdrop-filter:blur(10px);
         -webkit-backdrop-filter:blur(10px);
+        justify-content: flex-start;
     }
     .linkNav{
         margin:30px 10px;
@@ -36,3 +39,8 @@
     }
 }   
 
+@media (max-width: 414px){
+    .menuNav{
+        justify-content: flex-start;
+    }
+}
