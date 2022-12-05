@@ -11,7 +11,7 @@ export const Footer = () => {
       <h2 className={styles.title}>Faça parte da nossa comunidade!</h2>
       <div className={styles.icons}>
         {dataSocial.map(({name, icon, path, id}) => (
-          <a href={path}  className={styles.socialBtn} id={id} key={name} >
+          <a href={path}  className={styles.socialBtn} id={id} key={name} target="_blank" rel="noreferrer" > 
                        {icon}
           </a>
         ))}
@@ -21,3 +21,7 @@ export const Footer = () => {
     </>
   );
 };
+
+/*
+rel="noreferrer" - Controle de segurança para evitar invasões via link
+*/

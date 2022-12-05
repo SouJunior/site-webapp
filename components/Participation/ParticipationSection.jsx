@@ -10,6 +10,8 @@ export const ParticipationSection = () => {
   const [textSupporter, setTextSupporter] = useState(false);
   const [textCommunity, setTextCommunity] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
+  
+  
 
   return (
     <section className={styles.container}>
@@ -26,16 +28,18 @@ export const ParticipationSection = () => {
       </div>
 
       <section className={styles.rightSide}>
-        <div className={textJr ? styles.textJr : styles.hide}>
-          <h3 className={styles.border}>
+            
+            <div className={textJr ? styles.textJr : styles.hide}>
+          
             <button
               className={styles.btn}
               onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}
             >
               {textJr ? <IoMdClose /> : <IoMdAdd />}
+              <h3 >Sou Júnior</h3>
             </button>
-            Sou Júnior
-          </h3>
+            
+     
           {textJr && (
             <>
               <p className={styles.p}>
@@ -77,18 +81,20 @@ export const ParticipationSection = () => {
               </button>
             </>
           )}
-        </div>
+          </div>
+       
+        
 
         <div className={textMentor ? styles.textMentor : styles.hide}>
-          <h3 className={styles.border}>
+        
             <button
               className={styles.btn}
               onClick={() => setTextMentor(!textMentor) && setIcon(IoMdClose)}
             >
               {textMentor ? <IoMdClose /> : <IoMdAdd />}
+             <h3 className={styles.border}>Sou Mentor</h3> 
             </button>
-            Sou Mentor
-          </h3>
+           
           {textMentor && (
             <>
               <p className={styles.p}>
@@ -118,7 +124,7 @@ export const ParticipationSection = () => {
         </div>
 
         <div className={textSupporter ? styles.textSupporter : styles.hide}>
-          <h3 className={styles.border}>
+          
             <button
               className={styles.btn}
               onClick={() =>
@@ -126,9 +132,9 @@ export const ParticipationSection = () => {
               }
             >
               {textSupporter ? <IoMdClose /> : <IoMdAdd />}
+              <h3 className={styles.border}> Sou Apoiador</h3>
             </button>
-            Sou Apoiador
-          </h3>
+          
           {textSupporter && (
             <>
               <p className={styles.p}>
@@ -171,8 +177,9 @@ export const ParticipationSection = () => {
             </>
           )}
         </div>
+
         <div className={textCommunity ? styles.textCommunity : styles.hide}>
-          <h3 className={styles.border}>
+         
             <button
               className={styles.btn}
               onClick={() =>
@@ -180,9 +187,9 @@ export const ParticipationSection = () => {
               }
             >
               {textCommunity ? <IoMdClose /> : <IoMdAdd />}
+              <h3 className={styles.border}>Comunidade</h3>
             </button>
-            Comunidade
-          </h3>
+          
           {textCommunity && (
             <>
               <p className={styles.p}>

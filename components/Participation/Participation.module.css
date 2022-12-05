@@ -56,12 +56,13 @@
 .rightSide {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items:  flex-start;
   padding: 0px;
   gap: 32px;
   width: 589px;
   height: auto;
   color: rgba(4, 106, 208, 1);
+ 
 }
 
 .rightSide h3 {
@@ -69,9 +70,13 @@
   color: rgba(249, 249, 249, 1);
   font-style: normal;
   font-weight: 400;
-  font-size: 21px;
+  font-size: 20px;
   line-height: 26px;
+ 
+  
 }
+
+
 
 /*Borda Esquerda das divs*/
 
@@ -88,16 +93,13 @@
   width: 100%;
   border-left: 3px solid #fff;
   padding-left: 10px;
+ 
 }
 
 /*Linha abaixo do h3*/
-.border {
-  content: "";
-  position: absolute;
-  border-bottom: 1px solid rgba(249, 249, 249, 1);
-  padding-bottom: 16px;
-  bottom: 0px;
-}
+/*.border {
+  
+}*/
 
 /*Estilização dos botões*/
 
@@ -106,7 +108,17 @@
   background: none;
   color: rgba(249, 249, 249, 1);
   margin-right: 30px;
-  /* width: 50px; */
+  width: 100%; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  /*Borda inferior*/
+  content: "";
+  
+  border-bottom: 1px solid rgba(249, 249, 249, 1);
+  padding-bottom: 16px;
+  bottom: 0px;
 }
 
 .btn svg {
@@ -131,13 +143,13 @@
 
 /*Responsividade*/
 
-@media (max-width: 900px) {
+@media (max-width: 414px) {
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 150vw;
     height: auto;
     margin: 0;
   }
