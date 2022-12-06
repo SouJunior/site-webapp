@@ -1,10 +1,11 @@
 import React from "react";
-import styles from "./AboutSection.module.css";
 import Image from "next/image";
+
+import styles from "./AboutSection.module.css";
 
 export const AboutSection = () => {
   return (
-    <section className={styles.container} id={'sobre'}>
+    <section className={styles.container} id={"sobre"}>
       <div className={styles.alight}>
         <h1 className={styles.title}> O que é o Sou Junior?</h1>
         <p className={styles.text}>
@@ -22,7 +23,7 @@ export const AboutSection = () => {
 
       <div className={styles.galaxia}>
         <Image
-          src="/assets/galaxia2.png"
+          src="/assets/galaxia2.webp"
           alt="galaxia"
           width={594}
           height={409}
