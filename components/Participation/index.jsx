@@ -10,11 +10,9 @@ export const ParticipationSection = () => {
   const [textSupporter, setTextSupporter] = useState(false);
   const [textCommunity, setTextCommunity] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
-  
-  
 
   return (
-    <section className={styles.container} id={'participar'}>
+    <section className={styles.container} id={"participar"}>
       <div className={styles.leftSide}>
         <h1 className={styles.h1}>Quem pode participar?</h1>
         <p className={styles.paragraph}>
@@ -28,18 +26,15 @@ export const ParticipationSection = () => {
       </div>
 
       <section className={styles.rightSide}>
-            
-            <div className={textJr ? styles.textJr : styles.hide}>
-          
-            <button
-              className={styles.btn}
-              onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}
-            >
-              {textJr ? <IoMdClose /> : <IoMdAdd />}
-              <h3 >Sou Júnior</h3>
-            </button>
-            
-     
+        <div className={textJr ? styles.textJr : styles.hide}>
+          <button
+            className={styles.btn}
+            onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}
+          >
+            {textJr ? <IoMdClose /> : <IoMdAdd />}
+            <h3>Sou Júnior</h3>
+          </button>
+
           {textJr && (
             <>
               <p className={styles.p}>
@@ -81,20 +76,17 @@ export const ParticipationSection = () => {
               </button>
             </>
           )}
-          </div>
-       
-        
+        </div>
 
         <div className={textMentor ? styles.textMentor : styles.hide}>
-        
-            <button
-              className={styles.btn}
-              onClick={() => setTextMentor(!textMentor) && setIcon(IoMdClose)}
-            >
-              {textMentor ? <IoMdClose /> : <IoMdAdd />}
-             <h3 className={styles.border}>Sou Mentor</h3> 
-            </button>
-           
+          <button
+            className={styles.btn}
+            onClick={() => setTextMentor(!textMentor) && setIcon(IoMdClose)}
+          >
+            {textMentor ? <IoMdClose /> : <IoMdAdd />}
+            <h3 className={styles.border}>Sou Mentor</h3>
+          </button>
+
           {textMentor && (
             <>
               <p className={styles.p}>
@@ -124,17 +116,16 @@ export const ParticipationSection = () => {
         </div>
 
         <div className={textSupporter ? styles.textSupporter : styles.hide}>
-          
-            <button
-              className={styles.btn}
-              onClick={() =>
-                setTextSupporter(!textSupporter) && setIcon(IoMdClose)
-              }
-            >
-              {textSupporter ? <IoMdClose /> : <IoMdAdd />}
-              <h3 className={styles.border}> Sou Apoiador</h3>
-            </button>
-          
+          <button
+            className={styles.btn}
+            onClick={() =>
+              setTextSupporter(!textSupporter) && setIcon(IoMdClose)
+            }
+          >
+            {textSupporter ? <IoMdClose /> : <IoMdAdd />}
+            <h3 className={styles.border}> Sou Apoiador</h3>
+          </button>
+
           {textSupporter && (
             <>
               <p className={styles.p}>
@@ -179,17 +170,16 @@ export const ParticipationSection = () => {
         </div>
 
         <div className={textCommunity ? styles.textCommunity : styles.hide}>
-         
-            <button
-              className={styles.btn}
-              onClick={() =>
-                setTextCommunity(!textCommunity) && setIcon(IoMdClose)
-              }
-            >
-              {textCommunity ? <IoMdClose /> : <IoMdAdd />}
-              <h3 className={styles.border}>Comunidade</h3>
-            </button>
-          
+          <button
+            className={styles.btn}
+            onClick={() =>
+              setTextCommunity(!textCommunity) && setIcon(IoMdClose)
+            }
+          >
+            {textCommunity ? <IoMdClose /> : <IoMdAdd />}
+            <h3 className={styles.border}>Comunidade</h3>
+          </button>
+
           {textCommunity && (
             <>
               <p className={styles.p}>
