@@ -6,7 +6,7 @@ import {dataSocial} from "../../utils/dataSocial";
 export const Footer = () => {
   return (
     <>
-      <section className={styles.footerContainer}>
+      <footer className={styles.footerContainer}>
         <div className={styles.align}>
           <h2 className={styles.title}>Faça parte da nossa comunidade!</h2>
           <div className={styles.icons}>
@@ -24,7 +24,7 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-      </section>
+      </footer>
     </>
   );
 };
