@@ -5,7 +5,7 @@
   width: 100%;
   padding: 95px 15px;
   background-color: #212;
-  background: url("/assets/fill-effect.png") no-repeat top 69px right -70px;
+  background: url("/assets/fill-effect.webp") no-repeat top 69px right -70px;
 }
 
 .OccupationContainer {
@@ -26,6 +26,7 @@
 }
 
 .paragraph {
+  font-size: 18px;
   text-align: center;
   max-width: 90ch;
   font-weight: 400;
@@ -89,4 +90,16 @@
 .arrowContainer button:first-child:hover img {
   background-image: url("/assets/button-directional-light-caroussel.png");
   transform: rotate(180deg);
+}
+
+@media (max-width: 900px) {
+  .OccupationContainer .titlePrimary {
+    align-self: flex-start;
+    font-size: 32px;
+  }
+  .paragraph {
+    font-size: 14px;
+    text-align: left;
+    max-width: 100%;
+  }
 }
