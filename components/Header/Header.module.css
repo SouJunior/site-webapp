@@ -6,13 +6,13 @@
   );
   display: flex;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 3.13rem;
   color: white;
   background-blend-mode: overlay, normal;
 }
 .navbar {
   width: 100%;
-  margin: 50px 0px 5px 0px;
+  margin: 3.13rem 0rem 0.315rem 0rem;
   display: flex;
   align-items: center;
 }
@@ -27,7 +27,7 @@
 }
 .front {
   width: 1090px;
-  margin: 0px 10px;
+  margin: 0rem 0.625rem;
 }
 .bannerArea{
   display: flex;
@@ -39,19 +39,19 @@
   position: absolute;
   justify-content: space-between;
   width: 70%;
-  top:75px;
+  top:4.6875rem;
   z-index:2;
 }
 .starOne{
   background-image: url("/assets/Stars1.png");
-  height: 108px;
-  width: 70px;
+  height: 6.75rem;
+  width: 4.375rem;
   transform: rotate(90deg);
 }
 .starTwo{
   background-image: url("/assets/Stars2.png");
-  height: 92px;
-  width:70px;
+  height: 5.75rem;
+  width:4.375rem;
 }
 
 .banner {
@@ -60,7 +60,7 @@
   background-position: center;
   background-size: contain;
   width: 100%;
-  height: 470px;
+  height: 29.375rem;
 }
 .textArea {
   width: 100%;
@@ -70,13 +70,12 @@
 .textInner {
   display: flex;
   flex-direction: column;
-  max-width: 768px;
+  max-width: 48rem;
   width: 100%;
 }
 .textInner article {
   width: 100%;
-  margin-bottom: 34px;
-  /* font-weight: medium; */
+  margin-bottom: 2.13rem;
   font-size: 46px;
   text-align: center;
 }
@@ -84,13 +83,12 @@
   width: 100%;
   text-align: center;
   font-weight: lighter;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 @media (max-width: 900px) {
   .navbar {
-    /* width: 90%; */
-    margin: 50px auto 5px auto;
+    margin: 3.13rem auto 0.315rem auto;
   }
   .textArea {
     justify-content: space-evenly;
@@ -106,40 +104,40 @@
 
 @media (max-width: 414px) {
   .header {
-    padding: 12px;
+    padding: 0.75rem;
   }
   .header,
   .textArea {
     flex-direction: column;
   }
   .front {
-    width: 390px;
-    margin: 0px;
+    width: 24.375rem;
+    margin: 0rem;
   }
   .navbar {
-    margin-top: 24px;
-    margin-bottom: 64px;
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
   }
   .frontBottom{
     display: flex;
     flex-direction: column-reverse;
   }
   .textArea {
-    width: 390px;
+    width: 24.375rem;
   }
   .banner {
     background-image: url("/assets/bannerGroupMobile.png");
   }
   .stars{
     width: 85%;
-    top:50px;
+    top:3.13rem;
   }
   .textInner article {
-    width: 390px;
-    font-size: 24px;
+    width: 24.375rem;
+    font-size: 1.5rem;
   }
   .textInner p {
-    font-size: 18px;
+    font-size: 1.13rem;
     text-align: center;
   }
 }
