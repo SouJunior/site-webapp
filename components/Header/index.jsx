@@ -44,15 +44,22 @@ export const Header = () => {
             <MenuMobile />
           </div>
         </div>
+        <div className={styles.frontBottom}>
+          <div className={styles.bannerArea}>
+            <div className={styles.banner}></div>
+            <div className={styles.stars}>
+              <div className={styles.starOne}></div>
+              <div className={styles.starTwo}></div>
+            </div>
+          </div>
         <div className={styles.textArea}>
           <div className={styles.textInner}>
             <article>
-              Uma experiência real de trabalho em um projeto de uma empresa de
-              tecnologia.
+            Uma experiência real de trabalho em uma empresa de tecnologia.
             </article>
             <p>O Junior de hoje é o Sênior do amanhã!</p>
           </div>
-          <div className={styles.banner}></div>
+        </div>
         </div>
       </div>
     </header>
