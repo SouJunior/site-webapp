@@ -87,12 +87,23 @@
   font-size: 24px;
 }
 
+
+.banner {
+  background-image: url("/assets/image-header-dark-desktop.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 410px;
+  height: 470px;
+}
+
+
 @media (max-width: 900px) {
   .navbar {
     /* width: 90%; */
     margin: 50px auto 5px auto;
   }
-  .textArea {
+  .textArea{
     justify-content: space-evenly;
   }
   .menu {
