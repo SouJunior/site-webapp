@@ -5,7 +5,8 @@
 }
 .linkNav{
     color:white;
-    padding: 0.1875rem 1.88rem;
+    padding: 0.3rem 3rem;
+    font-size: 2rem;
     font-weight: lighter;
 }
 .linkNav:first-child{
@@ -24,14 +25,14 @@
         height:70%;
         z-index: 99;
         /* border:2px solid #F00; */
-        border-radius:0.625rem;
+        border-radius:1rem;
         background:rgba(255,255,255,0.1);
         backdrop-filter:blur(10px);
         -webkit-backdrop-filter:blur(10px);
         justify-content: flex-start;
     }
     .linkNav{
-        margin:1.88rem 0.625rem;
+        margin:3rem 1rem;
         font-size: 24px;
     }
     .linkNav:first-child{
