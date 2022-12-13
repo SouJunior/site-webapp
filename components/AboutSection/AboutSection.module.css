@@ -7,29 +7,31 @@
 
 .container {
   display: flex;
-  max-width: 1089px;
+  max-width: 108.9rem;
   background-color: #212;
   font-family: "Radio Canada", sans-serif;
-  gap: 40px;
+  gap: 4rem;
 }
 
 .alight {
   display: flex;
   flex-direction: column;
-  gap: 19px;
+  gap: 1.9rem;
 }
 
 .title {
   color: #046ad0;
   font-family: "Radio Canada", sans-serif;
+  font-size: 4.8rem;
+  max-width: 10ch;
+  font-weight: 700;
 }
 
 .text {
   color: #f9f9f9;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 27px;
-  padding: 5px;
+  font-size: 1.8rem;
+  line-height: 2.7rem;
   font-family: "Radio Canada", sans-serif;
   max-width: 40ch;
 }
@@ -44,12 +46,14 @@
   .container {
     flex-direction: column;
     width: 100%;
-    padding: 72px 32px;
+    padding: 7.2rem 3.2rem;
     align-items: center;
   }
 
   .title {
     text-align: left;
+    max-width: 100%;
+    font-size: 3.2rem;
   }
 
   .text {

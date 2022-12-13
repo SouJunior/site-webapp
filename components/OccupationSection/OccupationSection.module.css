@@ -93,6 +93,9 @@
 }
 
 @media (max-width: 900px) {
+  .OccupationSection {
+    padding: 4.7rem 1.5rem 9.7rem 1.5rem;
+  }
   .OccupationContainer .titlePrimary {
     align-self: flex-start;
     font-size: 3.2rem;
