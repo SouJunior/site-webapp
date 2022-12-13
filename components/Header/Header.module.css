@@ -54,7 +54,7 @@
 }
 
 .banner {
-  background-image: url("/assets/bannerGroup.png");
+  background-image: url("/assets/bannerGroup.webp");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -125,7 +125,7 @@
     width: 24.375rem;
   }
   .banner {
-    background-image: url("/assets/bannerGroupMobile.png");
+    background-image: url("/assets/bannerGroupMobile.webp");
   }
   .stars{
     width: 85%;
