@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 * {
   padding: 0;
@@ -11,9 +11,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Radio Canada", sans-serif;
+  font-size: 10px;
   color: #f9f9f9;
   background-color: #212;
-  /* background-color:rgba(33,33,33,0.78); */
 }
 
 a {

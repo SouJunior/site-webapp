@@ -1,19 +1,19 @@
-.menuNav{
-    list-style: none;
-    display: flex;
-    justify-content: flex-end;
+.menuNav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
 }
 .linkNav{
     color:white;
     padding: 0.1875rem 1.88rem;
     font-weight: lighter;
 }
-.linkNav:first-child{
-    border-left: 2px solid white;
+.linkNav:first-child {
+  border-left: 2px solid white;
 }
 
-.linkNav:hover{
-    text-decoration:underline;
+.linkNav:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 900px){
@@ -39,8 +39,9 @@
     }
 }   
 
-@media (max-width: 414px){
-    .menuNav{
-        justify-content: flex-start;
-    }
+
+@media (max-width: 414px) {
+  .menuNav {
+    justify-content: flex-start;
+  }
 }
