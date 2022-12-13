@@ -18,12 +18,10 @@ export const ParticipationSection = () => {
       <div className={styles.leftSide}>
         <h1 className={styles.h1}>Quem pode participar?</h1>
         <p className={styles.paragraph}>
-          Temos oportunidades para profissionais Juniors e mentores de diversas
-          profissões. Além disso, temos oportunidades para apoiadores e
-          parceiros para diferentes frentes de contribuição para o projeto.
-          <br /> <br />
-          Veja ao lado quais são as categorias de participantes disponíveis para
-          contribuir com a SouJunior e como participar.
+        Temos oportunidades para profissionais Juniors e mentores de diversas profissões. Além disso,
+         temos oportunidades para apoiadores e parceiros para diferentes frentes de contribuição para o projeto. 
+          <br />
+          Confira ao lado quais são as categorias de participantes disponíveis para contribuir com a SouJunior e como participar
         </p>
       </div>
 
@@ -35,7 +33,7 @@ export const ParticipationSection = () => {
               className={styles.btn}
               onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}
             >
-              {textJr ? <IoMdClose /> : <IoMdAdd />}
+             {textJr ? <IoMdClose /> : <IoMdAdd />}
               <h3 >Sou Júnior</h3>
             </button>
             
@@ -43,19 +41,15 @@ export const ParticipationSection = () => {
           {textJr && (
             <>
               <p className={styles.p}>
-                São as pessoas que querem trabalhar na área de tecnologia,
-                estudam ou estão estudando sobre a área de interesse, mas
-                <b>ainda não tem toda experiência exigida</b> pelos recrutadores
-                e empresas para contratarem para uma vaga júnior.
+
+              São as pessoas que querem trabalhar na área de tecnologia, estudaram ou estão estudando sobre a área de interesse,
+               mas <b>ainda não tem toda a experiência exigida</b> pelos recrutadores e empresas para o contratarem para uma vaga júnior. 
+               <br />
                 <br />
-                <br />
-                Se você identificou que possui interesse e, alguma das carreiras
-                acima, mas ainda não tem experiência (seu perfil Junior será
-                analisado pelo Linkedin),
-                <b>
-                  pode aplicar para participar do SouJunior, através do
-                  formulário de inscrição.
-                </b>
+                Se você identificou que possui interesse em alguma das carreiras acima, mas ainda não tem experiência 
+                (seu perfil Junior será analisado pelo Linkedin),&nbsp; 
+                  <b>pode aplicar para participar do SouJunior, através do formulário de inscrição</b>.
+               
                 <br />
                 <br />
                 Assim que tivermos vaga para sua área de interesse, analisaremos
@@ -64,7 +58,7 @@ export const ParticipationSection = () => {
                 <br />
                 <br />
                 Daremos sempre prioridade para aqueles que já participarem do
-                servidor <b>SouJunior no Discor</b>e do{" "}
+                servidor <b>SouJunior no Discor</b>e do
                 <b>Github do SouJunior</b> por já estarem familiarizados com as
                 ferramentas e sobre como o projeto funciona.
               </p>
@@ -142,17 +136,17 @@ export const ParticipationSection = () => {
                 forma para o projeto SouJunior.
                 <br />
                 <br />
-                <VscCircleFilled /> Pessoas de divulgação, que tenham canal no
+                &nbsp;&nbsp;&nbsp;&nbsp;<VscCircleFilled /> Pessoas de divulgação, que tenham canal no
                 YouTube, podcast, Blog ou Administradores de grupos, todos que
                 abordem assuntos referentes às áreas de atuação de profissionais
                 de tecnologia.
                 <br />
                 <br />
-                <VscCircleFilled /> Pessoas especialistas que se disponham em
-                <b>palestrar sobre algum assunto de interesse,</b>aos
+                &nbsp;&nbsp;&nbsp;&nbsp;<VscCircleFilled /> Pessoas especialistas que se disponham em&nbsp; 
+                <b>palestrar sobre algum assunto de interesse</b>, aos
                 profissionais Juniors de tecnologia. <br />
                 <br />
-                <VscCircleFilled /> Recrutadores e empresas
+                &nbsp;&nbsp;&nbsp;&nbsp;<VscCircleFilled /> Recrutadores e empresas
                 <b>
                   dispostas a contratar ou que priorizem a contratação de
                   profissionais Juniors
@@ -213,12 +207,12 @@ export const ParticipationSection = () => {
                 Ao entrar no servidor SouJunior do Discord, leia atentamente as
                 regras
                 <>
-                  <b>#rules</b>
-                </>
+                &nbsp;<b>#rules</b>
+                </>&nbsp;
                 e fique sempre atento ao
                 <>
-                  <b>#chat</b>
-                </>
+                &nbsp;<b>#chat</b>
+                </>&nbsp;
                 para interagir com os demais participantes da comunidade.
               </p>
               <br />

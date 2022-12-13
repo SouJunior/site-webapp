@@ -18,8 +18,10 @@
   flex-direction: column;
   padding: 0px;
   gap: 19px;
-  width: 429px;
+  width: 489px;
   height: 254px;
+  /*width: 45.9rem;
+  height: 25.4rem;*/
   color: rgba(4, 106, 208, 1);
 }
 
@@ -42,15 +44,17 @@
 }
 
 .p {
- display: inline-block;
+  display: inline-block;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start;/**/
+  align-items: flex-start;
   padding: 10px;
   gap: 8px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16.8px;
+  margin-left: 2pxn;
   
+ 
 }
 
 .rightSide {
@@ -151,8 +155,7 @@
     align-items: center;
     width: 150vw;
     height: auto;
-    margin: 0;
-  }
+     }
 
   .leftSide {
     display: flex;
@@ -163,6 +166,8 @@
 
   .leftSide p {
     text-align: left;
+    
+
   }
 
   .rightSide {
@@ -173,7 +178,9 @@
   .p {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content:space-around;
     align-items: flex-start;
+    marg: 1rem;
+    
   }
 }
