@@ -43,7 +43,7 @@ export const ParticipationSection = () => {
               <p className={styles.p}>
 
               São as pessoas que querem trabalhar na área de tecnologia, estudaram ou estão estudando sobre a área de interesse,
-               mas <b>ainda não tem toda a experiência exigida</b> pelos recrutadores e empresas para o contratarem para uma vaga júnior. 
+               mas&nbsp; <b>ainda não tem toda a experiência exigida</b> pelos recrutadores e empresas para o contratarem para uma vaga júnior. 
                <br />
                 <br />
                 Se você identificou que possui interesse em alguma das carreiras acima, mas ainda não tem experiência 
@@ -58,7 +58,7 @@ export const ParticipationSection = () => {
                 <br />
                 <br />
                 Daremos sempre prioridade para aqueles que já participarem do
-                servidor <b>SouJunior no Discor</b>e do
+                servidor <b>SouJunior no Discord</b>e do
                 <b>Github do SouJunior</b> por já estarem familiarizados com as
                 ferramentas e sobre como o projeto funciona.
               </p>

@@ -5,7 +5,7 @@
   width: 100%;
   padding: 95px 15px;
   background-color: #212;
-  background: url("/assets/fill-effect.png") no-repeat top 69px right -70px;
+  background: url("/assets/fill-effect.webp") no-repeat top 69px right -70px;
 }
 
 .OccupationContainer {
@@ -13,30 +13,31 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1089px;
+  max-width: 108.9rem;
   overflow-x: hidden;
 }
 
 .titlePrimary {
   color: #046ad0;
   font-weight: 600;
-  font-size: 32px;
-  line-height: 38px;
-  margin-bottom: 38px;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  margin-bottom: 3.8rem;
 }
 
 .paragraph {
+  font-size: 1.8rem;
   text-align: center;
   max-width: 90ch;
   font-weight: 400;
-  margin-bottom: 48px;
+  margin-bottom: 4.8rem;
   line-height: 150%;
   color: #f9f9f9;
 }
 
 .itemContainer {
   display: flex;
-  gap: 16px;
+  gap: 1.6rem;
   max-width: inherit;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -53,22 +54,22 @@
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  width: 159px;
-  height: 146px;
+  width: 15.9rem;
+  height: 14.6rem;
   background-color: hsl(210, 70%, 25%);
-  border-radius: 10px;
+  border-radius: 1rem;
   transition: ease 5s;
 }
 
 .item p {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .arrowContainer {
-  margin-top: 30px;
-  padding: 20px;
+  margin-top: 3rem;
+  padding: 2rem;
   display: flex;
-  gap: 23px;
+  gap: 2.3rem;
 }
 
 .arrowContainer button {
@@ -89,4 +90,19 @@
 .arrowContainer button:first-child:hover img {
   background-image: url("/assets/button-directional-light-caroussel.png");
   transform: rotate(180deg);
+}
+
+@media (max-width: 900px) {
+  .OccupationSection {
+    padding: 4.7rem 1.5rem 9.7rem 1.5rem;
+  }
+  .OccupationContainer .titlePrimary {
+    align-self: flex-start;
+    font-size: 3.2rem;
+  }
+  .paragraph {
+    font-size: 1.4rem;
+    text-align: left;
+    max-width: 100%;
+  }
 }
