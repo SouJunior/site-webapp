@@ -19,7 +19,10 @@
   flex-direction: column;
   padding: 0px;
   gap: 19px;
-  flex: 1;
+  width: 489px;
+  height: 254px;
+  /*width: 45.9rem;
+  height: 25.4rem;*/
   color: rgba(4, 106, 208, 1);
 }
 
@@ -44,11 +47,14 @@
   display: inline-block;
   flex-direction: column;
   justify-content: flex-end;
-  align-items: flex-start; /**/
+  align-items: flex-start;
   padding: 10px;
   gap: 8px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16.8px;
+  margin-left: 2px;
+  
+ 
 }
 
 .rightSide {
