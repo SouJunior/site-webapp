@@ -9,8 +9,8 @@
 
 .container {
   display: flex;
-  max-width: 1089px;
-  gap: 40px;
+  max-width: 108.9rem;
+  gap: 4rem;
   font-family: "Radio Canada", sans-serif;
 }
 
@@ -18,16 +18,13 @@
   display: flex;
   flex-direction: column;
   padding: 0px;
-  gap: 19px;
-  width: 489px;
-  height: 254px;
-  /*width: 45.9rem;
-  height: 25.4rem;*/
+  gap: 1.9rem;
+  flex: 1;
   color: rgba(4, 106, 208, 1);
 }
 
 .h1 {
-  font-size: 32px;
+  font-size: 3.2rem;
 }
 
 .h1,
@@ -36,9 +33,9 @@
 }
 
 .paragraph {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 300;
-  line-height: 27px;
+  line-height: 2.7rem;
   font-family: "Radio Canada", sans-serif;
   color: rgba(249, 249, 249, 1);
 }
@@ -46,6 +43,7 @@
 .hidden {
   display: none;
   color: #fff;
+  width: 100%;
 }
 
 .p {
@@ -53,11 +51,11 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  padding: 10px;
-  gap: 8px;
-  font-size: 12px;
-  line-height: 16.8px;
-  margin-left: 2px;
+  padding: 1rem;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  margin-left: 2rem;
 }
 
 .rightSide {
@@ -65,8 +63,8 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 32px;
-  width: 589px;
+  gap: 3.2rem;
+  width: 58.9rem;
   height: auto;
   color: rgba(4, 106, 208, 1);
 }
@@ -76,13 +74,13 @@
   color: rgba(249, 249, 249, 1);
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
+  font-size: 2rem;
+  line-height: 2.6rem;
 }
 
 .hide {
   width: 100%;
-  padding-left: 10px;
+  padding-left: 1rem;
 }
 
 .textJr,
@@ -90,8 +88,8 @@
 .textSupporter,
 .textCommunity {
   width: 100%;
-  border-left: 3px solid #fff;
-  padding-left: 10px;
+  border-left: 3rem solid #fff;
+  padding-left: 1rem;
   transition: ease-out 0.1s;
 }
 
@@ -99,36 +97,36 @@
   border: none;
   background: none;
   color: rgba(249, 249, 249, 1);
-  margin-right: 30px;
+  margin-right: 3rem;
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 3rem;
   justify-content: flex-start;
   align-items: center;
   content: "";
-  border-bottom: 2px solid rgba(249, 249, 249, 1);
-  padding-bottom: 16px;
+  border-bottom: 0.2rem solid rgba(249, 249, 249, 1);
+  padding-bottom: 1.6rem;
   bottom: 0px;
 }
 
 .btn svg {
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .button {
   background-color: #046ad0;
-  border: 1px solid rgba(249, 249, 249, 1);
-  border-radius: 5px;
+  border: 0.1rem solid rgba(249, 249, 249, 1);
+  border-radius: 0.5rem;
   color: rgba(249, 249, 249, 1);
-  padding: 15px;
+  padding: 1.5rem;
   transition: ease 0.15s;
 }
 
 .button:hover {
   background-color: rgba(1, 76, 151, 1);
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 0.1rem solid transparent;
 }
 
 .p,
@@ -148,27 +146,22 @@
 
 /*Responsividade*/
 
-@media (min-width: 414px) and (max-width: 960px) {
+@media (max-width: 960px) {
   .container {
     flex-direction: column;
-    min-width: 400px;
-    max-width: 960px;;
-  }
-
-  .leftSide {
-    flex-direction: column;
+    max-width: 100%;
   }
 
   .leftSide p {
     text-align: left;
-    padding-bottom: 40px;
-    line-height: 21px;
+    padding-bottom: 4rem;
+    line-height: 2.1rem;
   }
 
   .rightSide {
     max-width: 100%;
     align-items: center;
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   .leftSide .paragraph {
@@ -177,7 +170,6 @@
 
   .leftSide .hidden {
     display: flex;
+    font-size: 1.4rem;
   }
 }
-
-
