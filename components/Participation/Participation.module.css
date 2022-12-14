@@ -148,10 +148,11 @@
 
 /*Responsividade*/
 
-@media (max-width: 960px) {
+@media (min-width: 414px) and (max-width: 960px) {
   .container {
     flex-direction: column;
-    max-width: 100%;
+    min-width: 400px;
+    max-width: 960px;;
   }
 
   .leftSide {
@@ -178,3 +179,5 @@
     display: flex;
   }
 }
+
+
