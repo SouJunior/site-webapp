@@ -23,6 +23,14 @@ export const ParticipationSection = () => {
           <br />
           Confira ao lado quais são as categorias de participantes disponíveis para contribuir com a SouJunior e como participar
         </p>
+        <p className={styles.hidden}>
+        Temos oportunidades para profissionais Juniors e mentores de diversas profissões. Além disso,
+         temos oportunidades para apoiadores e parceiros para diferentes frentes de contribuição para o projeto. 
+          <br />
+          Confira abaixo quais são as categorias de participantes disponíveis para contribuir com a SouJunior e como participar
+        </p>
+        {/*.hidden só será mostrado no mobile - texto modificado*/}
+       
       </div>
 
       <section className={styles.rightSide}>

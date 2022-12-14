@@ -40,8 +40,13 @@
   font-weight: 300;
   line-height: 27px;
   font-family: "Radio Canada", sans-serif;
-  color: rgba(249, 249, 249, 1);
+  color:rgba(249, 249, 249, 1);
 }
+
+.hidden{
+  display: none;
+}
+
 
 .p {
   display: inline-block;
@@ -165,5 +170,13 @@
     max-width: 100%;
     align-items: center;
     font-size: 16px;
+  }
+  
+  .leftSide .paragraph{
+    display: none;
+  }
+
+  .leftSide .hidden{
+    display: flex;
   }
 }
