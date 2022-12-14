@@ -23,6 +23,8 @@ export const ParticipationSection = () => {
           <br />
           Confira ao lado quais são as categorias de participantes disponíveis para contribuir com a SouJunior e como participar
         </p>
+
+       
       </div>
 
       <section className={styles.rightSide}>
