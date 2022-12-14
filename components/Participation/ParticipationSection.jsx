@@ -205,13 +205,13 @@ export const ParticipationSection = () => {
                 <br />
                 <br />
                 Ao entrar no servidor SouJunior do Discord, leia atentamente as
-                regras
+                regras&nbsp;
                 <>
-                &nbsp;<b>#rules</b>
+                <b>#rules</b>
                 </>&nbsp;
-                e fique sempre atento ao
+                e fique sempre atento ao &nbsp;
                 <>
-                &nbsp;<b>#chat</b>
+                <b>#chat</b>
                 </>&nbsp;
                 para interagir com os demais participantes da comunidade.
               </p>

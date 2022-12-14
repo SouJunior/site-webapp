@@ -36,7 +36,7 @@ export const dataSocial = [
     id: "youtube",
     name: "youtube",
     icon: <FaYoutube />,
-    path: "https://www.youtube.com/@soujunior3515",
+    path: "https://www.youtube.com/@soujuniortech",
     
   }, 
   {
