@@ -139,22 +139,27 @@ export const ParticipationSection = () => {
           
           {textSupporter && (
             <>
-              <p className={styles.p}>
+              <ul className={styles.p}>
                 São pessoas que tenham interesse e possam contribuir de alguma
                 forma para o projeto SouJunior.
                 <br />
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;<VscCircleFilled /> Pessoas de divulgação, que tenham canal no
+                              
+                <li>Pessoas de divulgação, que tenham canal no
                 YouTube, podcast, Blog ou Administradores de grupos, todos que
                 abordem assuntos referentes às áreas de atuação de profissionais
-                de tecnologia.
+                de tecnologia.</li>
+                
                 <br />
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;<VscCircleFilled /> Pessoas especialistas que se disponham em&nbsp; 
-                <b>palestrar sobre algum assunto de interesse</b>, aos
-                profissionais Juniors de tecnologia. <br />
+                
+              
+               <li> Pessoas especialistas que se disponham em 
+                <b>palestrar sobre algum assunto de interesse</b>,  aos
+                profissionais Juniors de tecnologia.</li> <br />
                 <br />
-                &nbsp;&nbsp;&nbsp;&nbsp;<VscCircleFilled /> Recrutadores e empresas
+                
+              <li>Recrutadores e empresas
                 <b>
                   dispostas a contratar ou que priorizem a contratação de
                   profissionais Juniors
@@ -163,8 +168,8 @@ export const ParticipationSection = () => {
                 <br />
                 Se você pode contribuir para o SouJunior como pessoa apoiadora
                 ou parceira, inscreva-se através do formulário e nossa equipe
-                responsável entrará em contato com você.
-              </p>
+                responsável entrará em contato com você.</li>
+              </ul>
               <br />
               <br />
               <button className={styles.button}>
