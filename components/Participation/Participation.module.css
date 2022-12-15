@@ -88,7 +88,7 @@
 .textSupporter,
 .textCommunity {
   width: 100%;
-  border-left: 3rem solid #fff;
+  border-left: 0.5rem solid #fff;
   padding-left: 1rem;
   transition: ease-out 0.1s;
 }
@@ -129,12 +129,19 @@
   border: 0.1rem solid transparent;
 }
 
+
 .p,
 .button {
   opacity: 0;
   transform: translateY(-10px);
   transition: 0.3s ease-in;
   animation: p 0.3s forwards;
+}
+
+.indent ::before{
+  content: ' ';
+  padding-left: 5rem;
+  
 }
 
 @keyframes p {
