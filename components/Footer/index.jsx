@@ -6,7 +6,7 @@ import {dataSocial} from "../../utils/dataSocial";
 export const Footer = () => {
   return (
     <>
-      <footer className={styles.footerContainer}>
+      <footer className={styles.footerContainer} id={"redes-sociais"}>
         <div className={styles.align}>
           <h2 className={styles.title}>Faça parte da nossa comunidade!</h2>
           <div className={styles.icons}>
