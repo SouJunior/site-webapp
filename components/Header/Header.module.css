@@ -1,9 +1,9 @@
 .header {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     #046ad0 8.33%,
     rgba(33, 33, 33, 0.78) 91.75%
-  );
+  ); */
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
@@ -82,7 +82,7 @@
   width: 100%;
   text-align: center;
   font-weight: lighter;
-  font-size: 3.8rem;
+  font-size: 2.4rem;
 }
 
 @media (max-width: 900px) {
