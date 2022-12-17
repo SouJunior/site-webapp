@@ -7,7 +7,8 @@
 
 .container {
   display: flex;
-  max-width: 108.9rem;
+  justify-content:center;
+ max-width: 108.9rem;
   font-family: "Radio Canada", sans-serif;
   gap: 4rem;
 }

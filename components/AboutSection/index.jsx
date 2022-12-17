@@ -8,7 +8,7 @@ export const AboutSection = () => {
     <section className={styles.AboutSection} id={"sobre"}>
       <div className={styles.container}>
         <div className={styles.alight}>
-          <h1 className={styles.title}> O que é o Sou Junior?</h1>
+          <h1 className={styles.title}> Sobre a Iniciativa</h1>
           <p className={styles.text}>
             Um projeto Open Source focado em construir uma plataforma para
             conectar recrutadores a profissionais juniores que buscam uma
@@ -22,14 +22,7 @@ export const AboutSection = () => {
           </p>
         </div>
 
-        <div className={styles.galaxia}>
-          <Image
-            src="/assets/galaxia2.webp"
-            alt="galaxia"
-            width={594}
-            height={409}
-          />
-        </div>
+      
       </div>
     </section>
   );
