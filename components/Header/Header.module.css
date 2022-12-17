@@ -1,9 +1,4 @@
 .header {
-  /* background: linear-gradient(
-    180deg,
-    #046ad0 8.33%,
-    rgba(33, 33, 33, 0.78) 91.75%
-  ); */
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;
@@ -54,7 +49,7 @@
 }
 
 .banner {
-  background-image: url("/assets/bannerGroup.webp");
+  background-image: url("/assets/bannerGroup.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -106,7 +101,7 @@
 
 @media(max-width:570px){
   .banner {
-    background-image: url("/assets/bannerGroupMobile.webp");
+    background-image: url("/assets/bannerGroupMobile.svg");
   }
 }
 
@@ -134,7 +129,7 @@
     width: 100%;
   }
   .banner {
-    background-image: url("/assets/bannerGroupMobile.webp");
+    background-image: url("/assets/bannerGroupMobile.svg");
   }
   .stars{
     width: 85%;

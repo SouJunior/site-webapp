@@ -17,7 +17,7 @@ export const MenuMobile = () => {
         className={styles.teste}
         rounded
       />
-      <div className={isOpen ? styles.teste : styles.hide}>
+      <div className={isOpen ? styles.show : styles.hide}>
       <Navbar/>
       </div>
     </>

@@ -17,8 +17,7 @@ export const ParticipationSection = () => {
         <div className={styles.leftSide}>
           <h1 className={styles.h1}>Quem pode participar?</h1>
           <p className={styles.paragraph}>
-          Aqui na SouJunior, você poderá participar do projeto de muitas maneiras.
-          Temos oportunidades para profissionais nível júnior e mentores das mais diversas áreas, caso você tenha o interesse de colocar a "mão na massa" e construir esse projeto conosco.<br/><br/>
+          Aqui na SouJunior, você poderá participar do projeto de muitas maneiras. Temos oportunidades para profissionais nível júnior e mentores das mais diversas áreas, caso você tenha o interesse de colocar a "mão na massa" e construir esse projeto conosco.<br/><br/>
           Porém, se o interesse for de patrocinar a iniciativa para que ela continue por muito tempo, você poderá se tornar nosso apoiador ou parceiro.
           Confira ao lado todas as categorias de participação disponíveis na SouJunior, preencha os formulários das quais for do seu interesse e entraremos em contato!
           </p>
