@@ -3,31 +3,33 @@
 .AboutSection {
   display: flex;
   place-content: center;
+  padding: 95px 15px;
+  background: url("/assets/fill-effect.webp") no-repeat top 69px right -70px;
 }
 
 .container {
   display: flex;
+  justify-content:center;
   max-width: 108.9rem;
+  width: 100%;
   font-family: "Radio Canada", sans-serif;
   gap: 4rem;
 }
 
 .alight {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  gap: 1.9rem;
-  background-image: url("/assets/Ellipse.webp");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: 50% 40%;
-}
+  text-align: center;
+  }
 
 .title {
-  color: #046ad0;
   font-family: "Radio Canada", sans-serif;
-  font-size: 4.8rem;
-  max-width: 10ch;
-  font-weight: 700;
+  color: #046ad0;
+  font-weight: 600;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  margin-bottom: 3.8rem;
 }
 
 .text {
@@ -36,20 +38,7 @@
   font-size: 1.8rem;
   line-height: 2.7rem;
   font-family: "Radio Canada", sans-serif;
-  max-width: 40ch;
-}
-
-/* .galaxia {
-  flex: 1;
-  object-fit: contain;
-  background: url("/assets/fill-effect.webp") no-repeat cover top 69px right -70px ;
-} */
-.galaxia {
-  flex: 1;
-  background-image: url("/assets/fill-effect.webp");
-  background-position: 35% 45%;
-  background-size: 130%;
-  background-repeat: no-repeat;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
@@ -61,7 +50,7 @@
   }
 
   .title {
-    text-align: left;
+    text-align: center;
     max-width: 100%;
     font-size: 3.2rem;
   }

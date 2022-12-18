@@ -4,7 +4,8 @@
   justify-content: flex-end;
 }
 .linkNav{
-    color:white;
+    color:#fff;
+    font-weight: 700;
     padding: 0.3rem 0rem 0.3rem 6rem;
     font-size: 2rem;
     font-weight: lighter;
@@ -24,9 +25,8 @@
         right:0rem;
         height:70%;
         z-index: 99;
-        /* border:2px solid #F00; */
         border-radius:1rem;
-        background:rgba(255,255,255,0.1);
+        background:rgba(255,255,255,0.8);
         backdrop-filter:blur(10px);
         -webkit-backdrop-filter:blur(10px);
         justify-content: flex-start;
@@ -34,6 +34,8 @@
     .linkNav{
         margin:3rem 1rem;
         font-size: 24px;
+        color: #046ad0;
+        font-weight: 400;
     }
     .linkNav:first-child{
         border-left: none;

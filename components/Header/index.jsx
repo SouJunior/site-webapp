@@ -13,8 +13,7 @@ export const Header = () => {
     <header className={styles.header}>
       <Head>
         <title>
-          Sou Junior | Uma experiência real de trabalho em uma empresa de
-          tecnologia.
+          Sou Junior | Experiência real de trabalho em projetos, construída por uma empresa de tecnologia!
         </title>
         <meta
           name="description"
@@ -55,7 +54,7 @@ export const Header = () => {
         <div className={styles.textArea}>
           <div className={styles.textInner}>
             <article>
-            Uma experiência real de trabalho em uma empresa de tecnologia.
+            Experiência real de trabalho em projetos, construída por uma empresa de tecnologia!
             </article>
             <p>O Junior de hoje é o Sênior do amanhã!</p>
           </div>

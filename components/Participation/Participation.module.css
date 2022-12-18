@@ -9,7 +9,7 @@
 
 .container {
   display: flex;
-  max-width: 108.9rem;
+  max-width: 109.9rem;
   gap: 4rem;
   font-family: "Radio Canada", sans-serif;
 }
@@ -38,6 +38,7 @@
   line-height: 2.7rem;
   font-family: "Radio Canada", sans-serif;
   color: rgba(249, 249, 249, 1);
+  max-width: 55ch;
 }
 
 .hidden {
@@ -56,6 +57,9 @@
   font-size: 1.4rem;
   line-height: 1.6rem;
   margin-left: 2rem;
+  font-weight: 40.0rem;
+  margin-top: 2rem;
+  
 }
 
 .rightSide {
@@ -65,6 +69,7 @@
   padding: 0px;
   gap: 3.2rem;
   width: 58.9rem;
+ 
   height: auto;
   color: rgba(4, 106, 208, 1);
 }
@@ -121,6 +126,7 @@
   color: rgba(249, 249, 249, 1);
   padding: 1.5rem;
   transition: ease 0.15s;
+  margin-left: 2.5rem;
 }
 
 .button:hover {
@@ -164,7 +170,7 @@
   }
 
   .rightSide {
-    max-width: 100%;
+    width: 100%;
     align-items: center;
     font-size: 1.6rem;
   }

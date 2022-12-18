@@ -1,7 +1,7 @@
 export const carouselItems = [
   {title: "Business", icon: "/assets/icons/icon-business.svg"},
   {title: "Tech Recruiter", icon: "/assets/icons/icon-techrecruiter.svg"},
-  {title: "APM", icon: "/assets/icons/icon-apm.svg"},
+  {title: "Produtos", icon: "/assets/icons/icon-apm.svg"},
   {title: "Ágil", icon: "/assets/icons/icon-agil.svg"},
   {title: "Social Media", icon: "/assets/icons/icon-socialmedia.svg"},
   {title: "UI & UX Design", icon: "/assets/icons/icon-ui.svg"},
