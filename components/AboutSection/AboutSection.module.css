@@ -49,13 +49,15 @@
     align-items: center;
   }
 
-  .title {
-    text-align: center;
+  .container .title {
+    align-self: flex-start;
+    text-align: left;
     max-width: 100%;
     font-size: 3.2rem;
   }
 
   .text {
     max-width: 100%;
+    text-align: left;
   }
 }
