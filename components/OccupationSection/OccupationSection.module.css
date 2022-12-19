@@ -36,11 +36,14 @@
 }
 
 .itemContainer {
-  display: flex;
+  display: inline-flex;
+  flex-direction: row;
   gap: 1.6rem;
   max-width: inherit;
-  overflow-x: hidden;
+  overflow: scroll;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
 }
 
 .itemContainer::-webkit-scrollbar {
@@ -87,6 +90,7 @@
 .arrowContainer button:hover:last-child {
   background-image: url("/assets/button-directional-light-caroussel.png");
 }
+
 .arrowContainer button:first-child:hover img {
   background-image: url("/assets/button-directional-light-caroussel.png");
   transform: rotate(180deg);
@@ -96,13 +100,27 @@
   .OccupationSection {
     padding: 4.7rem 1.5rem 9.7rem 1.5rem;
   }
+
   .OccupationContainer .titlePrimary {
     align-self: flex-start;
     font-size: 3.2rem;
   }
+
   .paragraph {
     font-size: 1.4rem;
     text-align: left;
     max-width: 100%;
+  }
+
+  .itemContainer {
+    gap: 1.4rem;
+    max-width: 90vw;
+    display: flex;
+    overflow: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+  .arrowContainer{
+    display: none;
   }
 }
