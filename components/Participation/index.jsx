@@ -17,13 +17,13 @@ export const ParticipationSection = () => {
         <div className={styles.leftSide}>
           <h1 className={styles.h1}>Quem pode participar?</h1>
           <p className={styles.paragraph}>
-          Aqui na SouJunior, você poderá participar do projeto de muitas maneiras. Temos oportunidades para profissionais nível júnior e mentores das mais diversas áreas, caso você tenha o interesse de colocar a "mão na massa" e construir esse projeto conosco.<br/><br/>
+          Aqui na SouJunior, você poderá participar do projeto de muitas maneiras. Temos oportunidades para profissionais nível júnior e mentores das mais diversas áreas, caso você tenha o interesse de colocar a {"mão na massa"} e construir esse projeto conosco.<br/><br/>
           Porém, se o interesse for de patrocinar a iniciativa para que ela continue por muito tempo, você poderá se tornar nosso apoiador ou parceiro.
           Confira ao lado todas as categorias de participação disponíveis na SouJunior, preencha os formulários das quais for do seu interesse e entraremos em contato!
           </p>
           <p className={styles.hidden}>
           Aqui na SouJunior, você poderá participar do projeto de muitas maneiras.
-          Temos oportunidades para profissionais nível júnior e mentores das mais diversas áreas, caso você tenha o interesse de colocar a "mão na massa" e construir esse projeto conosco.<br/><br/>
+          Temos oportunidades para profissionais nível júnior e mentores das mais diversas áreas, caso você tenha o interesse de colocar a {"mão na massa"}e construir esse projeto conosco.<br/><br/>
           Porém, se o interesse for de patrocinar a iniciativa para que ela continue por muito tempo, você poderá se tornar nosso apoiador ou parceiro.
           Confira ao abaixo todas as categorias de participação disponíveis na SouJunior, preencha os formulários das quais for do seu interesse e entraremos em contato!
           </p>
@@ -110,18 +110,25 @@ export const ParticipationSection = () => {
 
             {textSupporter && (
               <>
-                <p className={styles.p}>
+                  <p className={styles.p}>
+                  
+                  São pessoas que tenham interesse e possam contribuir de alguma forma para o projeto SouJunior. <br/><br/>
                 
-              São pessoas que tenham interesse e possam contribuir de alguma forma para o projeto SouJunior. <br/><br/>
+                <ul>
+                
+                <li>Pessoas de divulgação, que tenham canal no YouTube, podcast, Blog ou Administradores de grupos, todos que abordem assuntos referentes às
+                      áreas de atuação de profissionais de tecnologia.</li><br/><br/>
+                      
+                <li>Pessoas especialistas que se disponham em palestrar sobre algum assunto de interesse, aos profissionais Juniors de tecnologia.</li><br/><br/>
+                      
+                <li>Recrutadores e empresas dispostas a contratar ou que priorizem a contratação de profissionais Juniors voluntários do SouJunior.</li><br/><br/><br/>
+                                      
               
-              &nbsp;&nbsp;<VscCircleFilled /> Pessoas de divulgação, que tenham canal no YouTube, podcast, Blog ou Administradores de grupos, todos que abordem assuntos referentes às
-              áreas de &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;atuação de profissionais de tecnologia.<br/><br/>
-              
-              &nbsp;&nbsp;<VscCircleFilled /> Pessoas especialistas que se disponham em palestrar sobre algum assunto de interesse, aos profissionais Juniors de tecnologia.<br/><br/>
-              
-              &nbsp;&nbsp;<VscCircleFilled /> Recrutadores e empresas dispostas a contratar ou que priorizem a contratação de profissionais Juniors voluntários do SouJunior.<br/><br/><br/>
-               Se você pode contribuir para o SouJunior como pessoa apoiadora ou parceira, inscreva-se através do formulário e nossa equipe responsável entrará em contato com você.
+              </ul>
 
+              <br/><br/>
+
+              Se você pode contribuir para o SouJunior como pessoa apoiadora ou parceira, inscreva-se através do formulário e nossa equipe responsável entrará em contato com você.
 
                 </p>
                 <br />
