@@ -10,15 +10,14 @@ export const AboutSection = () => {
         <div className={styles.alight}>
           <h1 className={styles.title}> Sobre a Iniciativa</h1>
           <p className={styles.text}>
-            Um projeto Open Source focado em construir uma plataforma para
-            conectar recrutadores a profissionais juniores que buscam uma
-            colocação no mercado de tecnologia. 
-            Feito por pessoas voluntárias e iniciantes no mercado de tecnologia,
-            mentorados por profissionais experientes que lideram os times.
-            
-            Uma chance de adquirir experiência e de participar de um projeto de
-            alta visibilidade, com o amparo de uma rede de apoio, além do
-            networking e conexão com novas oportunidades.
+          A SouJunior é um projeto Open Source com o propósito de preparar os profissionais juniores para o mercado através da construção de
+           alguns produtos e do conhecimento prático do dia a dia de trabalho de uma empresa de tecnologia. Para que essa iniciativa se torne real, contamos com um time de voluntários,
+            desde iniciantes no mercado de tecnologia até profissionais experientes que atuam como mentores e lideram os times.<br/><br/>
+
+        A SouJunior contará com um portfolio de produtos que proporcionará visibilidade aos juniores, os conectando tanto aos profissionais de recrutamento,
+         para que a tão almejada primeira experiência seja alcançada, quanto aos mentores que irão orientá-los em sua jornada profissional que está apenas começando.<br/><br/>
+
+  Portanto, participar da Sou Junior é uma grande chance de adquirir experiência e de participar de um projeto de alta visibilidade, com o amparo de uma rede de apoio, além do networking e conexão com novas oportunidades.
           </p>
         </div>
 
