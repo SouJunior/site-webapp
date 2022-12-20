@@ -4,12 +4,12 @@
   display: flex;
   place-content: center;
   padding: 95px 15px;
-  background: url("/assets/fill-effect.webp") no-repeat top 69px right -70px;
+  background: url(/assets/fill-effect.webp) no-repeat top -428px right -987px;
 }
 
 .container {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   max-width: 110rem;
   width: 100%;
   font-family: "Radio Canada", sans-serif;
@@ -21,7 +21,7 @@
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  }
+}
 
 .title {
   font-family: "Radio Canada", sans-serif;
@@ -42,10 +42,13 @@
 }
 
 @media (max-width: 900px) {
+  .AboutSection {
+    padding: 3.2rem;
+  }
   .container {
     flex-direction: column;
     width: 100%;
-    padding: 7.2rem 3.2rem;
+    /* padding: 7.2rem 3.2rem; */
     align-items: center;
   }
 
@@ -59,5 +62,6 @@
   .text {
     max-width: 100%;
     text-align: left;
+    font-size: 1.4rem;
   }
 }

@@ -43,7 +43,6 @@
   overflow: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
 }
 
 .itemContainer::-webkit-scrollbar {
@@ -119,8 +118,9 @@
     overflow: scroll;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
+    position: relative;
   }
-  .arrowContainer{
+  .arrowContainer {
     display: none;
   }
 }
