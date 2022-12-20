@@ -23,29 +23,29 @@
 .front {
   width: 1090px;
 }
-.bannerArea{
+.bannerArea {
   display: flex;
   position: relative;
   justify-content: center;
 }
-.stars{
+.stars {
   display: flex;
   position: absolute;
   justify-content: space-between;
   width: 70%;
-  top:7.5rem;
-  z-index:2;
+  top: 7.5rem;
+  z-index: 2;
 }
-.starOne{
+.starOne {
   background-image: url("/assets/Stars1.png");
   height: 9.2rem;
   width: 7rem;
   transform: rotate(90deg);
 }
-.starTwo{
+.starTwo {
   background-image: url("/assets/Stars2.png");
   height: 9.2rem;
-  width:7rem;
+  width: 7rem;
 }
 
 .banner {
@@ -84,10 +84,10 @@
   .navbar {
     margin: 5rem auto 0.5rem auto;
   }
-  .textArea{
+  .textArea {
     justify-content: space-evenly;
   }
-  .textInner{
+  .textInner {
     margin: 1rem;
   }
   .menu {
@@ -99,7 +99,7 @@
   }
 }
 
-@media(max-width:570px){
+@media (max-width: 570px) {
   .banner {
     background-image: url("/assets/bannerGroupMobile.svg");
   }
@@ -121,7 +121,7 @@
     margin-top: 3.8rem;
     margin-bottom: 10.2rem;
   }
-  .frontBottom{
+  .frontBottom {
     display: flex;
     flex-direction: column-reverse;
   }
@@ -131,9 +131,9 @@
   .banner {
     background-image: url("/assets/bannerGroupMobile.svg");
   }
-  .stars{
+  .stars {
     width: 85%;
-    top:8rem;
+    top: 8rem;
   }
   .textInner article {
     font-size: 3.8rem;
