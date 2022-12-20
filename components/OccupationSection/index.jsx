@@ -5,6 +5,7 @@ import {carouselItems} from "../../utils/carouselItems";
 
 export const OccupationSection = () => {
   const carousel = useRef(null);
+  const iconTec = useRef(null);
 
   const handleLeftSide = (e) => {
     e.preventDefault();
@@ -13,6 +14,24 @@ export const OccupationSection = () => {
   const handleRightSide = (e) => {
     e.preventDefault();
     carousel.current.scrollLeft += carousel.current.clientWidth;
+  };
+
+  let pos = {top: 0, left: 0, x: 0, y: 0};
+
+  const mouseDownHandler = function (e) {
+    pos = {
+      // The current scroll
+      left: iconTec.scrollLeft,
+      top: iconTec.scrollTop,
+      // Get the current mouse position
+      x: iconTec.current.clientX,
+      y: iconTec.current.clientY,
+    };
+    console.log(pos);
+    console.log(y, x);
+
+    // document.addEventListener('mousemove', mouseMoveHandler);
+    // document.addEventListener('mouseup', mouseUpHandler);
   };
 
   return (
@@ -28,7 +47,15 @@ export const OccupationSection = () => {
         <div className={styles.itemContainer} ref={carousel}>
           {carouselItems.map(({title, icon}) => (
             <div key={title} className={styles.item}>
-              <Image src={icon} alt={title} width={61} height={61} />
+              <Image
+                src={icon}
+                alt={title}
+                width={61}
+                height={61}
+                ref={iconTec}
+                onMouseMove={mouseDownHandler}
+                onMouseUp={mouseDownHandler}
+              />
               <p>{title}</p>
             </div>
           ))}

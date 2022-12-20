@@ -115,7 +115,7 @@
     gap: 1.4rem;
     max-width: 90vw;
     display: flex;
-    overflow: scroll;
+    overflow: auto;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     position: relative;
