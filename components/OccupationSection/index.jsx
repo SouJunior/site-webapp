@@ -39,7 +39,7 @@ export const OccupationSection = () => {
       <div className={styles.OccupationContainer}>
         <h2 className={styles.titlePrimary}>Áreas de atuação</h2>
         <p className={styles.paragraph}>
-          Aqui no SouJunior, atuam profissionais iniciantes das diversas áreas
+          Aqui na SouJunior, atuam profissionais iniciantes das diversas áreas
           que compõem uma empresa de tecnologia. Confira abaixo as áreas de
           atuação que temos em nosso quadro atualmente:
         </p>
