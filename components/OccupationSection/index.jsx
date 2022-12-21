@@ -16,24 +16,6 @@ export const OccupationSection = () => {
     carousel.current.scrollLeft += carousel.current.clientWidth;
   };
 
-  let pos = {top: 0, left: 0, x: 0, y: 0};
-
-  const mouseDownHandler = function (e) {
-    pos = {
-      // The current scroll
-      left: iconTec.scrollLeft,
-      top: iconTec.scrollTop,
-      // Get the current mouse position
-      x: iconTec.current.clientX,
-      y: iconTec.current.clientY,
-    };
-    console.log(pos);
-    console.log(y, x);
-
-    // document.addEventListener('mousemove', mouseMoveHandler);
-    // document.addEventListener('mouseup', mouseUpHandler);
-  };
-
   return (
     <section className={styles.OccupationSection}>
       <div className={styles.OccupationContainer}>
@@ -53,8 +35,6 @@ export const OccupationSection = () => {
                 width={61}
                 height={61}
                 ref={iconTec}
-                onMouseMove={mouseDownHandler}
-                onMouseUp={mouseDownHandler}
               />
               <p>{title}</p>
             </div>
