@@ -98,6 +98,20 @@
 @media (max-width: 900px) {
   .OccupationSection {
     padding: 4.7rem 1.5rem 9.7rem 1.5rem;
+    position: relative;
+  }
+
+  .OccupationSection::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 212px;
+    bottom: 60px;
+    right: 0;
+    position: absolute;
+    z-index: 2;
+    background: linear-gradient(to left, #212121 0%, rgba(33, 33, 33, 0) 200%);
+    filter: blur(25.5px);
   }
 
   .OccupationContainer .titlePrimary {
