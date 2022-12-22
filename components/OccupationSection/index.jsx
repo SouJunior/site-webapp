@@ -5,7 +5,6 @@ import {carouselItems} from "../../utils/carouselItems";
 
 export const OccupationSection = () => {
   const carousel = useRef(null);
-  const iconTec = useRef(null);
 
   const handleLeftSide = (e) => {
     e.preventDefault();
@@ -29,13 +28,7 @@ export const OccupationSection = () => {
         <div className={styles.itemContainer} ref={carousel}>
           {carouselItems.map(({title, icon}) => (
             <div key={title} className={styles.item}>
-              <Image
-                src={icon}
-                alt={title}
-                width={61}
-                height={61}
-                ref={iconTec}
-              />
+              <Image src={icon} alt={title} width={61} height={61} />
               <p>{title}</p>
             </div>
           ))}
