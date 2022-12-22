@@ -1,6 +1,5 @@
 import {useState} from "react";
 import {IoMdAdd, IoMdClose} from "react-icons/io";
-import {VscCircleFilled} from "react-icons/vsc";
 
 import styles from "./Participation.module.css";
 
@@ -20,7 +19,7 @@ export const ParticipationSection = () => {
             Aqui na SouJunior, você poderá participar do projeto de muitas
             maneiras. Temos oportunidades para profissionais nível júnior e
             mentores das mais diversas áreas, caso você tenha o interesse de
-            colocar a "mão na massa" e construir esse projeto conosco.
+            colocar a &quot;mão na massa&quot; e construir esse projeto conosco.
             <br />
             <br />
             Porém, se o interesse for de patrocinar a iniciativa para que ela
@@ -33,7 +32,7 @@ export const ParticipationSection = () => {
             Aqui na SouJunior, você poderá participar do projeto de muitas
             maneiras. Temos oportunidades para profissionais nível júnior e
             mentores das mais diversas áreas, caso você tenha o interesse de
-            colocar a "mão na massa" e construir esse projeto conosco.
+            colocar a &quot;mão na massa&quot; e construir esse projeto conosco.
             <br />
             <br />
             Porém, se o interesse for de patrocinar a iniciativa para que ela
