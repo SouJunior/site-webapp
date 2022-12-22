@@ -58,7 +58,7 @@ export const ParticipationSection = () => {
               <>
                 <p className={styles.p}>
                   São as pessoas que querem trabalhar na área de tecnologia,
-                  estudaram ou estão estudando sobre a área de interesse, mas{" "}
+                  estudaram ou estão estudando sobre a área de interesse, mas
                   <b>ainda não têm toda a experiência exigida</b> pelos
                   recrutadores e empresas para as contratarem para uma vaga
                   júnior.
@@ -68,7 +68,6 @@ export const ParticipationSection = () => {
                   carreiras acima, mas ainda não tem experiência (seu perfil
                   Junior será analisado pelo Linkedin),
                   <b>
-                    {" "}
                     pode aplicar para participar do SouJunior, através do
                     formulário de inscrição
                   </b>
@@ -77,7 +76,7 @@ export const ParticipationSection = () => {
                   Assim que tivermos vaga para sua área de interesse,
                   analisaremos suas informações e caso você seja um match,
                   entraremos em contato. Daremos sempre prioridade para aqueles
-                  que já participem do servidor <b>SouJunior no Discord</b> e do{" "}
+                  que já participem do servidor <b>SouJunior no Discord</b> e do
                   <b>Github da SouJunior</b> por já estarem familiarizados com
                   as ferramentas e sobre como projeto funciona.
                 </p>
@@ -108,7 +107,7 @@ export const ParticipationSection = () => {
             {textMentor && (
               <>
                 <p className={styles.p}>
-                  São profissionais já inseridos e{" "}
+                  São profissionais já inseridos e
                   <b>atuantes no mercado de trabalho, há pelo menos 6 meses</b>.
                   <br />
                   <br />
