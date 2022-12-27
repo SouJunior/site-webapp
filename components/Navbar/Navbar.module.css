@@ -2,23 +2,20 @@
   list-style: none;
   display: flex;
   justify-content: flex-end;
-
 }
 
 .linkNav {
   color: #fff;
   font-weight: 700;
-  padding: 0.3rem 0rem 0.3rem 6rem;
+  padding: 0rem 0rem 0.3rem 0rem;
   font-size: 2rem;
   font-weight: lighter;
-}
-
-.linkNav:first-child {
-  border-left: 2px solid white;
+  margin: 0 1rem;
+  transition: 1s;
 }
 
 .linkNav:hover {
-  text-decoration: underline;
+  box-shadow: 0 2px 0px 0 white;
 }
 
 @media (max-width: 900px) {
