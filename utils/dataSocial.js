@@ -18,7 +18,7 @@ export const dataSocial = [
     id: "discord",
     name: "discord",
     icon: <FaDiscord />,
-    path: "https://discord.gg/zWWdRVFNhC",
+    path: "https://discord.gg/soujunior-community-759176734460346423",
   },
   {
     id: "linkedin",
