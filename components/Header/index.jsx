@@ -1,13 +1,15 @@
 import Image from "next/image";
 import Head from "next/head";
+import Link from "next/link";
 
-import {Navbar} from "../Navbar";
-import {MenuMobile} from "../MenuMobile";
+import { Navbar } from "../Navbar";
+import { MenuMobile } from "../MenuMobile";
 import styles from "./Header.module.css";
-import {keyWords} from "../../utils/keyWords";
+import { keyWords } from "../../utils/keyWords";
+
 
 export const Header = () => {
-  const getKeywords = () => keyWords.map(({title}) => ` ${title}`);
+  const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
 
   return (
     <header className={styles.header}>
@@ -29,12 +31,16 @@ export const Header = () => {
       <div className={styles.front}>
         <div className={styles.navbar}>
           <div className={styles.logo}>
-            <Image
-              src="/assets/icons/Logo.svg"
-              alt="logo SouJunior"
-              width={216}
-              height={33}
-            />
+            <Link href='/'>
+             <a>
+             <Image
+                src="/assets/icons/Logo.svg"
+                alt="logo SouJunior"
+                width={216}
+                height={33}
+              />
+             </a>
+            </Link>
           </div>
           <div className={styles.menu}>
             <Navbar />
@@ -51,14 +57,14 @@ export const Header = () => {
               <div className={styles.starTwo}></div>
             </div>
           </div>
-        <div className={styles.textArea}>
-          <div className={styles.textInner}>
-            <article>
-            Experiência real de trabalho em projetos construída por uma empresa de tecnologia!
-            </article>
-            <p>O Junior de hoje é o Sênior do amanhã!</p>
+          <div className={styles.textArea}>
+            <div className={styles.textInner}>
+              <article>
+                Experiência real de trabalho em projetos construída por uma empresa de tecnologia!
+              </article>
+              <p>O Junior de hoje é o Sênior do amanhã!</p>
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </header>
