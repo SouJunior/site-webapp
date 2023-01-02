@@ -1,5 +1,5 @@
-import {useState} from "react";
-import {IoMdAdd, IoMdClose} from "react-icons/io";
+import { useState } from "react";
+import { IoMdAdd, IoMdClose } from "react-icons/io";
 
 import styles from "./Participation.module.css";
 
@@ -57,28 +57,32 @@ export const ParticipationSection = () => {
               <>
                 <p className={styles.p}>
                   São as pessoas que querem trabalhar na área de tecnologia,
-                  estudaram ou estão estudando sobre a área de interesse, mas
-                  <b> ainda não têm toda a experiência exigida</b> pelos
-                  recrutadores e empresas para as contratarem para uma vaga
-                  júnior.
+                  estudaram ou estão estudando sobre a área de interesse,
+                  mas&nbsp;
+                  <strong>
+                    &nbsp; ainda não têm toda a experiência exigida
+                  </strong>
+                  &nbsp; pelos recrutadores e empresas para as contratarem para
+                  uma vaga júnior.
                   <br />
                   <br />
                   Se você identificou que possui interesse em alguma das
                   carreiras acima, mas ainda não tem experiência (seu perfil
                   Junior será analisado pelo Linkedin),
-                  <b>
-                    {" "}
-                    pode aplicar para participar do SouJunior, através do
+                  <strong>
+                    &nbsp; pode aplicar para participar do SouJunior, através do
                     formulário de inscrição
-                  </b>
+                  </strong>
                   .<br />
                   <br />
                   Assim que tivermos vaga para sua área de interesse,
                   analisaremos suas informações e caso você seja um match,
                   entraremos em contato. Daremos sempre prioridade para aqueles
-                  que já participem do servidor <b>SouJunior no Discord</b> e do
-                  <b> Github da SouJunior</b> por já estarem familiarizados com
-                  as ferramentas e sobre como projeto funciona.
+                  que já participem do servidor&nbsp;
+                  <strong>SouJunior no Discord</strong> e do
+                  <strong> Github da SouJunior</strong> por já estarem
+                  familiarizados com as ferramentas e sobre como projeto
+                  funciona.
                 </p>
                 <br />
                 <br />

@@ -1,7 +1,7 @@
-import {useRef} from "react";
+import { useRef } from "react";
 import Image from "next/image";
 import styles from "../OccupationSection/OccupationSection.module.css";
-import {carouselItems} from "../../utils/carouselItems";
+import { carouselItems } from "../../utils/carouselItems";
 
 export const OccupationSection = () => {
   const carousel = useRef(null);
@@ -26,7 +26,7 @@ export const OccupationSection = () => {
         </p>
 
         <div className={styles.itemContainer} ref={carousel}>
-          {carouselItems.map(({title, icon}) => (
+          {carouselItems.map(({ title, icon }) => (
             <div key={title} className={styles.item}>
               <Image src={icon} alt={title} width={61} height={61} />
               <p>{title}</p>
