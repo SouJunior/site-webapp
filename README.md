@@ -4,6 +4,9 @@ Projeto Opensource que visa melhorar o match entre os profissionais Juniors e Em
 
 ![Logo](./logo-soujunior.png)
 
+## Status Deploy
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9ee40066-22ee-4b96-85a6-6025b2bb6533/deploy-status)](https://app.netlify.com/sites/soujunior/deploys)
+
 ## Instalação
 
 Clone o projeto
