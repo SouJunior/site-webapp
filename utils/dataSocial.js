@@ -6,6 +6,7 @@ import {
   FaLinkedinIn,
   FaTwitter,
   FaYoutube,
+  FaTelegram,
 } from "react-icons/fa";
 
 export const dataSocial = [
@@ -50,5 +51,11 @@ export const dataSocial = [
     name: "facebook",
     icon: <FaFacebookSquare />,
     path: "https://www.facebook.com/people/SouJunior/100086671131030",
+  },
+  {
+    id: "telegram",
+    name: "telegram",
+    icon: <FaTelegram />,
+    path: "https://t.me/soujuniortech",
   },
 ];
