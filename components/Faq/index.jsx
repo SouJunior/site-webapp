@@ -1,10 +1,18 @@
 import React from "react";
-import {dataFaq} from "../../utils/dataSocial";
+import {souJunior} from "../../utils/dataSocial";
 
-export const Faq = () => {
+const Faq = () => {
+  
+  const souJr = souJunior.filter(souJunior.titulo)
+
   return (
-    <>
-   TESTE
-    </>
+    <div>
+      <h1>{souJr}</h1>
+    </div>
+   
+
   );
 };
+
+
+export default Faq;
