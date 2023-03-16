@@ -24,3 +24,5 @@ export const SouJunior = [
       'Teremos, em breve, o nosso “Portal de vagas” onde divulgaremos as oportunidades e facilitaremos o contato dos juniores com as empresas através da divulgação do contato.',
   },
 ];
+
+
