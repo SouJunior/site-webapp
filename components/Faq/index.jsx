@@ -1,4 +1,7 @@
 import React from "react";
+import styles from "./Faq.module.css";
+import { IoMdAdd, IoMdClose } from "react-icons/io";
+
 
 const souJunior = [
   {
@@ -79,37 +82,59 @@ const voluntario = [
   },
 ];
 
+const Titulo = ({texto}) => {
+  
+  return( 
+   
+    <h1 style={{ color: ' #FFFFFF'
+  }}>
+        {texto}
+    </h1>
+ 
+  )
+};
 
+export default Titulo;
 
 export const Faq= () => {
   return(
-  <section>
+  <section className={styles.sectionContainer}>
    
-    <div>
+  
+   
+   
+    <div className={styles.divs}>
+    <Titulo texto="Sou Junior" />
       {souJunior.map((nome) => (
         <>
-        <h2>{nome.titulo}</h2>
-        <p>{nome.descricao}</p>
+        <h2 className={styles.h2}>{nome.titulo}</h2>
+        <p className={styles.p}>{nome.descricao}</p>
         </>
       ))}
 
     </div>
-
-    <div>
+    
+    
+   
+    
+    <div className={styles.divs}>
+    <Titulo texto="Mentor" />
       {mentor.map((item) => (
         <>
-        <h1>{item.titulo}</h1>
-        <p>{item.descricao}</p>
+        <h2>{item.titulo}</h2>
+        <p className={styles.p}>{item.descricao}</p>
         </>
       ))}
 
-    </div>
-
-    <div>
+  
+</div>
+   
+    <div className={styles.divs}>
+    <Titulo texto="Voluntáio" />
       {voluntario.map((nome2) => (
         <>
           <h2>{nome2.titulo}</h2> 
-        <p>{nome2.descricao}</p>
+        <p className={styles.p}>{nome2.descricao}</p>
         </>
 
       ))}
