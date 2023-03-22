@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import styles from "./Faq.module.css";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 
@@ -97,6 +98,10 @@ const Titulo = ({texto}) => {
 export default Titulo;
 
 export const Faq= () => {
+
+  const [souJr, setSouJr] = useState(true);
+  const [icon, setIcon] = useState(IoMdAdd);
+
   return(
   <section className={styles.sectionContainer}>
    
@@ -105,12 +110,34 @@ export const Faq= () => {
    
     <div className={styles.divs}>
     <Titulo texto="Sou Junior" />
+      <div className={styles.souJr}>
+
+        
       {souJunior.map((nome) => (
         <>
-        <h2 className={styles.h2}>{nome.titulo}</h2>
-        <p className={styles.p}>{nome.descricao}</p>
+  <button onclick={()=> setSouJr(!souJr) && setIcon(IoMdClose)
+        }>
+          <h2 className={styles.h2}>{nome.titulo}</h2>
+          {souJr ? <IoMdAdd /> : <IoMdClose />}
+          
+        </button>
+
+        {souJr && (
+          <>
+           <p className={styles.p}>{nome.descricao}</p>
+          
+          </>
+        )}
+       
         </>
       ))}
+
+
+      
+      
+      </div>
+    
+      
 
     </div>
     
