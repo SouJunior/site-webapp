@@ -1,0 +1,44 @@
+.faqContainer {
+  background-color: red;
+}
+
+.tabContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px;
+}
+
+.react-tabs {
+  width: 100%;
+}
+
+.tabPanel {
+  width: 100%;
+  background-color: #007bff;
+}
+
+.itemBtn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
+}
+
+.p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.hide {
+  display: none;
+}
