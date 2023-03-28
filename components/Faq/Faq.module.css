@@ -1,23 +1,90 @@
-@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+.faqContainer {}
 
-.sectionContainer {
+.tabContainer {
   display: flex;
   justify-content: center;
+  width: 100%;
+  padding: 50px;
+}
+
+
+
+.titleH1 {
+  color: #1165BA;
+  border-bottom: 2px solid #1165BA;
+}
+
+
+.react-tabs {
+  width: 100%;
+}
+
+.tabPanel {
+  width: 100%;
+
+  /*background-color: #007bff;*/
+}
+
+.itemBtn {
+  cursor: pointer;
+  display: flex;
   align-items: center;
-  
-
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  color: #007bff;
+  background-color: transparent;
+  border: none;
 }
-
-.divs {
-  margin: 50px;
-  
-}
-
 
 .p {
-  
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+.accordionItem {
+  color: #EDEDED;
+  gap: 10px;
+  width: 889px;
+  padding-top: 1rem;
+  margin: 10px;
+  align-items: flex-start;
+}
+
+.accordionh1 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.accordionItem p {
+  font-size: 15px;
+  color: #EDEDED;
+  padding: 15px 0;
+}
+
+.formSection h1 {
+  width: 100%;
+  height: 58px;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.formSection h3{
+  font-weight: 400;
+font-size: 32px;
+line-height: 120%;
+text-align: center;
+margin-top: 15px;
 }

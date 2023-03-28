@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@szhsin/react-accordion": "^1.2.0",
     "hamburger-react": "^2.5.0",
     "i": "^0.3.7",
     "next": "^12.3.1",
     "react": "^18.2.0",
+    "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.6.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-tabs": "^6.0.0"
   },
   "devDependencies": {
     "eslint": "8.25.0",

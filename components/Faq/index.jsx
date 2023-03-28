@@ -1,182 +1,74 @@
-import React from "react";
-import { useState } from "react";
-import styles from "./Faq.module.css";
+import React, { useState } from "react";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
+import Title from "../commons/Title";
+import styles from "./Faq.module.css";
+import { souJunior, mentor, voluntario } from "../../utils/faqItems";
+import { Accordion, AccordionItem } from "@szhsin/react-accordion";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 
-
-const souJunior = [
-  {
-    id:'Sou Junior',
-    titulo: 'Qual o objetivo da SouJunior?',
-    descricao:
-      'A SouJunior tem como objetivo apoiar e preparar profissionais juniores para o mercado de tecnologia, através do voluntariado.',
-  },
-
-  {
-    id:'Sou Junior',
-    titulo: 'Como fazer parte da Comunidade da SouJunior?',
-    descricao:
-      'Para você se conectar com a Comunidade da SouJunior, acesse o servidor SouJunior no Discord e no Github.Ao entrar no servidor SouJunior no Discord, leia as regras e fique sempre atento ao #chat para interagir com os demais participantes da Comunidade.Para fazer parte da Comunidade da SouJunior, selecione no Menu da Home do Site SouJunior a opção “Participar”, em seguida escolha a seção “Comunidade” e clique em “Quero Participar”. Você será direcionado para o formulário de candidatura que, após enviado, nossa equipe responsável entrará em contato com você.',
-  },
-
-  {
-    id:'Sou Junior',
-    titulo: 'A SouJunior oferece alguma ajuda de custo para quem é voluntário?',
-    descricao:
-      'Não. Todos os voluntários da SouJunior atuam em regime home office.',
-  },
-
-  {
-    id:'Sou Junior',
-    titulo:
-      'Qual auxílio a Sou Junior oferece ao junior em relação ao mercado de trabalho?',
-    descricao:
-      'Teremos, em breve, o nosso “Portal de vagas” onde divulgaremos as oportunidades e facilitaremos o contato dos juniores com as empresas através da divulgação do contato.',
-  },
-];
-
-const mentor = [
-  {
-    titulo: 'Como me tornar um mentor na SouJunior?',
-    descricao: 'O mentor na SouJunior é aquele que apoia os juniores na execução das suas atividades, sendo no esclarecimento das dúvidas ou orientando sobre a área de atuação. Para ser um mentor, pedimos que o voluntário tenha no mínimo 6 meses de experiência na função e vontade de ensinar. Portanto, se você acredita que pode contribuir nesse papel, selecione no Menu da Home do Site SouJunior a opção “Participar”, em seguida escolha a seção “Sou Mentor” e clique em “Quero Participar”. Você será direcionado para o formulário de candidatura que, após enviado, passará por nossa seleção interna e você será comunicado no momento que uma oportunidade com o seu perfil ficar disponível.',
-  },
-
-  {
-    titulo: 'Como ser um Apoiador ou Parceiro na SouJunior?',
-    descricao: 'O Apoiador ou Parceiro na SouJunior, poderá incrementar o seu portfólio ou envolver-se com alguma ação dentro da SouJunior. Portanto, se você acredita que pode contribuir como Apoiador ou Parceiro na SouJunior, selecione no Menu da Home do Site SouJunior a opção “Participar”, em seguida escolha a seção “Sou Apoiador” e clique em “Quero Participar”. Você será direcionado para o formulário de candidatura que após enviado, nossa equipe responsável entrará em contato com você.',
-  },
-
-    
-]
-
-const voluntario = [
-  {
-    titulo: 'Como ser voluntário na SouJunior?',
-    descricao:
-      'O voluntário participa ativamente nas atividades agregando conhecimentos, executando projetos, e colocando a “mão na massa”.Para tornar-se um voluntário na SouJunior, selecione no Menu da Home do Site SouJunior a opção “Participar”, em seguida escolha a seção “Sou Júnior” e clique em “Quero Participar”. Você será direcionado para o formulário de candidatura que, após enviado, passará por nossa seleção interna e você será comunicado no momento que uma oportunidade com o seu perfil ficar disponível.',
-  },
-
-  {
-    titulo: 'Quantas horas semanalmente preciso me dedicar à iniciativa?',
-    descricao:
-      'Na SouJunior a prioridade é manter as atividades de forma assíncrona, para que os voluntários possam gerenciar seu tempo. Cada time tem suas metas de entregas e alguns encontros síncronos pontuais. Desta forma, quando estiver no processo seletivo, procure conversar com o Head da área e pergunte qual é o tempo médio necessário de trabalho dentro do seu time e veja se existe alguma forma de flexibilização caso não se adeque ao seu tempo disponível.',
-  },
-
-  {
-    titulo:
-      'Após fazer o meu cadastro na SouJunior, qual o próximo passo a seguir?',
-    descricao:
-      'Após preenchido e enviado o formulário de candidatura, nossa equipe de tech recruiters ou business entrará em contato através do e-mail cadastrado.',
-  },
-
-  {
-    titulo:
-      'Posso trabalhar em outra empresa enquanto sou voluntário na SouJunior?',
-    descricao:
-      'Sim, o voluntariado na SouJunior não impede que você esteja empregado ou trabalhando como voluntário em outra iniciativa.',
-  },
-
-  {
-    titulo:
-      'Os voluntários da SouJunior precisam se deslocar até a sede da empresa?',
-    descricao: 'Não. Todos os setores da SouJunior atuam de forma home office.',
-  },
-];
-
-const Titulo = ({texto}) => {
-  
-  return( 
-   
-    <h1 style={{ color: ' #FFFFFF'
-  }}>
-        {texto}
-    </h1>
- 
-  )
-};
-
-export default Titulo;
-
-export const Faq= () => {
-
-  const [souJr, setSouJr] = useState(true);
+export const Faq = () => {
+  const [souJr, setSouJr] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
 
-  return(
-  <section className={styles.sectionContainer}>
-   
-  
-   
-   
-    <div className={styles.divs}>
-    <Titulo texto="Sou Junior" />
-      <div className={styles.souJr}>
+  return (
+    <>
+    <section className={styles.faqContainer}>
+      <div className={styles.tabContainer}>
+        <Tabs>
+          <TabList className={styles.tabList}>
+            <Tab >
+              <Title><h1 className={styles.titleH1} > Sou Junior</h1></Title>
+              
+            </Tab>
+            <Tab>
+              <Title>
+              <h1 className={styles.titleH1}> Voluntário</h1></Title>
+            </Tab>
+            <Tab>
+              <Title><h1 className={styles.titleH1}>Mentor/Apoiador</h1></Title>
+            </Tab>
+          </TabList>
+          <TabPanel className={styles.tabPanel}>
 
-        
-      {souJunior.map((nome) => (
-        <>
-  <button onclick={()=> setSouJr(!souJr) && setIcon(IoMdClose)
-        }>
-          <h2 className={styles.h2}>{nome.titulo}</h2>
-          {souJr ? <IoMdAdd /> : <IoMdClose />}
-          
-        </button>
+            <Accordion>
+              {souJunior.map(({ titulo, descricao, id }) => (
+                <AccordionItem className={styles.accordionItem} key={id} header=<h1 className={styles.accordionh1}>{titulo}</h1>>
+                   <p className={styles.accordionP}>{descricao} </p> 
+                                   </AccordionItem>
+              ))}
+            </Accordion>
+          </TabPanel>
 
-        {souJr && (
-          <>
-           <p className={styles.p}>{nome.descricao}</p>
-          
-          </>
-        )}
-       
-        </>
-      ))}
-
-
-      
-      
+          <TabPanel>
+            <Accordion>
+              {mentor.map(({ titulo, descricao, id }) => (
+                <AccordionItem  className={styles.accordionItem} key={id} header=<h1 className={styles.accordionh1}>{titulo}</h1>>
+                 <p className={styles.accordionP}>{descricao}</p> 
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabPanel>
+          <TabPanel>
+            <Accordion >
+              {voluntario.map(({ titulo, descricao, id }) => (
+                <AccordionItem className={styles.accordionItem} key={id} header=<h1 className={styles.accordionh1}>{titulo}</h1>>
+                  <p className={styles.accordionP}>{descricao} </p>
+                  
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </TabPanel>
+        </Tabs>
       </div>
-    
-      
-
-    </div>
-    
-    
-   
-    
-    <div className={styles.divs}>
-    <Titulo texto="Mentor" />
-      {mentor.map((item) => (
-        <>
-        <h2>{item.titulo}</h2>
-        <p className={styles.p}>{item.descricao}</p>
-        </>
-      ))}
-
-  
-</div>
-   
-    <div className={styles.divs}>
-    <Titulo texto="Voluntáio" />
-      {voluntario.map((nome2) => (
-        <>
-          <h2>{nome2.titulo}</h2> 
-        <p className={styles.p}>{nome2.descricao}</p>
-        </>
-
-      ))}
-    </div>
-
-  
-
-
-
     </section>
-    
-    
-  
-    
-    
-    )
 
-}
+    <section className={styles.formSection}>
+      <h1>Não encontrou sua dúvida, fale conosco!</h1>
+      <h3>Preencha o formulário e entraremos em contato!</h3>
+    </section>
+
+   </>
+  );
+
+};
