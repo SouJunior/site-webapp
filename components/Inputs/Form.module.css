@@ -1,0 +1,24 @@
+.formControl{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+ 
+  align-items: center;
+
+}
+
+.formControl label{
+
+  padding-bottom: 1rem;
+
+}
+
+.formControl input{
+  width: 1000px;
+  height: 58px;
+  
+}
+
+.formControl input::placeholder{
+  padding-left: 2rem;
+}

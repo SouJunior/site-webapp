@@ -1,4 +1,4 @@
-.faqContainer {}
+
 
 .tabContainer {
   display: flex;
@@ -7,9 +7,15 @@
   padding: 50px;
 }
 
+.tabList{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .titleH1 {
+  
   color: #1165BA;
   border-bottom: 2px solid #1165BA;
 }
@@ -87,4 +93,57 @@ font-size: 32px;
 line-height: 120%;
 text-align: center;
 margin-top: 15px;
+}
+
+/*FORM*/
+
+.form{
+  display: flex;
+  justify-content: flex-start;
+  margin: 50px auto;
+  flex-direction: column;
+  width: 1100px;
+  
+ 
+}
+
+.formCheckbox{
+  display: flex;
+  width: 300px;
+  margin: 0;
+  gap: 100px;
+}
+
+.formbox{
+ display: inline-flex;
+  width: 50px;
+  padding-bottom: 25px;  
+  
+}
+
+.area{
+  margin: 50px;
+}
+
+.area textarea{
+width: 1000px;
+height: 194px;
+margin-top: 10px;
+background: #FFFFFF;
+border-radius: 3px;
+}
+
+.button{
+width: 91px;
+height: 30px;
+font-style: normal;
+text-transform: uppercase;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+background: #046AD0;
+border: 2px solid #EDEDED;
+border-radius: 5px;
+color:  #EDEDED;
+margin-top: 2rem;
 }
