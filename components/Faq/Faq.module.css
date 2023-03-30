@@ -14,12 +14,6 @@
 }
 
 
-.titleH1 {
-  
-  color: #1165BA;
-  border-bottom: 2px solid #1165BA;
-}
-
 
 .react-tabs {
   width: 100%;
@@ -78,6 +72,30 @@
   padding: 15px 0;
 }
 
+
+
+/*FORM*/
+
+.form{
+ 
+  align-items: center;
+  margin: 50px auto;
+  flex-direction: column;
+  width: 1100px;
+  padding: 10px;
+   
+}
+
+.form Input{
+  padding-bottom: 10px;
+}
+
+.labelInput{
+  padding-bottom: 20px;
+}
+
+
+
 .formSection h1 {
   width: 100%;
   height: 58px;
@@ -95,34 +113,33 @@ text-align: center;
 margin-top: 15px;
 }
 
-/*FORM*/
-
-.form{
-  display: flex;
-  justify-content: flex-start;
-  margin: 50px auto;
-  flex-direction: column;
-  width: 1100px;
-  
- 
-}
-
 .formCheckbox{
   display: flex;
-  width: 300px;
+  width: 50px;
   margin: 0;
   gap: 100px;
 }
 
-.formbox{
- display: inline-flex;
-  width: 50px;
-  padding-bottom: 25px;  
+
+
+.checkbox{
+  display: flex;
+  justify-content: flex-start;
+  padding: 25px;
+  font-size: 18px;
+}
+
+.checkbox input{
+  margin-left: 20px ;
   
 }
 
+.checkbox label{
+  padding-left: 3px;
+}
+
 .area{
-  margin: 50px;
+  margin-top: 20px;
 }
 
 .area textarea{

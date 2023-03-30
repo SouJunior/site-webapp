@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 import Title from "../commons/Title";
 import styles from "./Faq.module.css";
+import emailjs from '@emailjs/browser'
 
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
@@ -13,6 +14,30 @@ import Textarea from "../Textarea/Textarea";
 export const Faq = () => {
   const [souJr, setSouJr] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('')
+
+  function sendEmail(e){
+    e.preventDefault();
+
+      const templateParams ={
+      from_name: name,
+      message: message,
+      email: email
+    }
+    
+    emailjs.send("service_k47b2cj", "template_a9xnen5", templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
+    {console.log("email enviado", response.satatus, response.text)
+      setName('')
+      setEmail('')
+      setMessage('')
+    },(err) =>
+    {
+      console.log("Erro", err)
+    })
+    
+  }
 
   return (
     <>
@@ -22,15 +47,15 @@ export const Faq = () => {
           <TabList  className={styles.tabList
             }>
             <Tab  >
-              <Title ><h1 className={styles.titleH1} > Sou Junior</h1></Title>
+              <Title > Sou Junior</Title>
               
             </Tab>
             <Tab>
               <Title>
-              <h1 className={styles.titleH1}> Voluntário</h1></Title>
+              Voluntário</Title>
             </Tab>
             <Tab>
-              <Title><h1 className={styles.titleH1}>Mentor/Apoiador</h1></Title>
+              <Title>Mentor/Apoiador</Title>
             </Tab>
           </TabList>
           <TabPanel className={styles.tabPanel}>
@@ -71,49 +96,59 @@ export const Faq = () => {
       <h1>Não encontrou sua dúvida, fale conosco!</h1>
       <h3>Preencha o formulário e entraremos em contato!</h3>
 
-      <form className={styles.form}>
+      <form className={styles.form} onSubmit={sendEmail}>
+     
+       
 
-        <div className={styles.formCheckbox}>
-          <div className={styles.formbox}>
-          <Input 
-            type="radio"
-            text="Sou Junior"
-            name="Sou Junior"
-          />
-          </div>
-         
-         <div className={styles.formbox}>
-         <Input 
-            type="radio"
-            text="Voluntário"
-            name="Voluntário"
-          />
-         </div>
+           <div className={styles.checkbox}>
+            
+              
+
+              <input
+                  type="radio"
+                  name="sou junior" />
+                                  
+                  <label >Sou Junior</label>     
+                
+
+                
+                  <input
+                  type="radio"
+                  name="Voluntário" />
+                                  
+                  <label >Voluntário</label> 
+                
+
+                
+                  <input
+                  type="radio"
+                  name="Mentor/Apoiador" />
+                                  
+                  <label >Mentor/Apoiador</label>  
+                
+
+                
+
+                  <input
+                  type="radio"
+                  name="Outros" />
+                                  
+                  <label >Outros</label>
+              </div>
+              
+       
+
+        
+        
+
+        <div className={styles.labelInput} >
           
-        <div className={styles.formbox}>
-        <Input 
-            type="radio"
-            text="Mentos/Apoiador"
-            name="Mentos/Apoiador"
-          />
-        </div>
-
-         <div className={styles.formbox}>
-         <Input 
-            type="radio"
-            text="Outros"
-            name="Outros"
-          />
-         </div>
-
-
-
-        </div>
-
-        <div >
         <Input
           type="text" text="Qual o seu nome?*"
           placeholder="Digite seu nome completo"
+          onChange={(e) => setName(e.target.value)}
+          value={name}
+         
         />
         </div>
 
@@ -122,14 +157,22 @@ export const Faq = () => {
           type="email"
           text="Qual o seu e-mail?*"
           placeholder="Digite o seu e-mail"
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
+          
         />
                 
         </div>
 
         <div className={styles.area} >
         <Textarea 
-        name="Fale-nos sobre sua dúvida*" text="Fale-nos sobre sua dúvida*" />
-        <button className={styles.button} type="submit">Enviar</button>
+        name="Fale-nos sobre sua dúvida*" 
+        text="Fale-nos sobre sua dúvida*" 
+        onChange={(e) => setMessage(e.target.value)}
+        value={message}
+       
+        />
+        <button className={styles.button} type="submit" >Enviar</button>
         </div>
       
       <div>

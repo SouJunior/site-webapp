@@ -5,7 +5,7 @@ const Textarea = ({name, text}) => {
   return (
     <div className={styles.textarea}>
 
-        <label htmlFor={name}>{text}</label>
+        <label forHtml={name}>{text}</label>
         <textarea>
 
         </textarea>
