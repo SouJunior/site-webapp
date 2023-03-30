@@ -28,14 +28,16 @@ export const Faq = () => {
     }
     
     emailjs.send("service_k47b2cj", "template_a9xnen5", templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
-    {console.log("email enviado", response.satatus, response.text)
-      setName('')
-      setEmail('')
-      setMessage('')
+    {console.log("email enviado", response.satatus, response.text);
+    setName('')
+    setEmail('')
+    setMessage('')
+     
     },(err) =>
     {
       console.log("Erro", err)
-    })
+    }
+    )
     
   }
 
@@ -146,8 +148,8 @@ export const Faq = () => {
         <Input
           type="text" text="Qual o seu nome?*"
           placeholder="Digite seu nome completo"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
+          //onChange={(e) => setName(e.target.value)}
+          //value={name}
          
         />
         </div>
@@ -157,8 +159,8 @@ export const Faq = () => {
           type="email"
           text="Qual o seu e-mail?*"
           placeholder="Digite o seu e-mail"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
+          //onChange={(e) => setEmail(e.target.value)}
+          //value={email}
           
         />
                 
