@@ -28,10 +28,11 @@ export const Faq = () => {
     }
     
     emailjs.send("service_k47b2cj", "template_a9xnen5", templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
-    {console.log("email enviado", response.satatus, response.text);
-    setName('')
-    setEmail('')
-    setMessage('')
+    {
+      console.log("email enviado", response.satatus, response.text);
+      setName('')
+      setEmail('')
+      setMessage('')
      
     },(err) =>
     {
@@ -170,8 +171,8 @@ export const Faq = () => {
         <Textarea 
         name="Fale-nos sobre sua dúvida*" 
         text="Fale-nos sobre sua dúvida*" 
-        onChange={(e) => setMessage(e.target.value)}
-        value={message}
+        ///onChange={(e) => setMessage(e.target.value)}
+        //value={message}
        
         />
         <button className={styles.button} type="submit" >Enviar</button>
