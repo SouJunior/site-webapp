@@ -1,0 +1,187 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+
+.container h1{
+  color: #046AD0;
+  font-weight: 700;
+font-size: 32px;
+line-height: 38px;
+text-align: center;
+
+}
+
+.container p{
+  color:  #FFFFFF;
+  width: 1204px;
+  height: 352px;
+  left: 243px;
+  top: 997px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 10px; 
+  margin-bottom: 50px;
+  
+}
+
+.border{
+  border-bottom: 2px solid #FFFFFF;
+ 
+}
+
+.interview{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.interview h1{
+  color: #046AD0;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.brandao{
+  display: flex;
+  width: 328px;
+  margin: 50px;
+  justify-content: space-around;
+  }
+
+.brandao img{
+  width: 232.6px;
+height: 235.92px;
+border-radius: 50%;
+
+}
+
+.brandao div{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandao h2{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.brandao p{
+  width: 328px;
+height: 110px;
+text-align: center;
+font-weight: 400;
+font-size: 18px;
+line-height: 22px;
+}
+
+.brandao ul{
+  display: flex;
+}
+
+.brandao ul li{
+  padding: 15px;
+}
+
+.brandao a{
+  text-decoration: none;
+  
+}
+
+.brandao a svg{
+  width: 40px;
+  height: 40px;
+  fill: #046AD0;
+  
+}
+
+.brandao li{
+  list-style: none;
+}
+
+/*Accordion*/
+
+.accordion{
+ 
+  width: 889px;
+}
+
+.MuiButtonBase-root .MuiAccordionSummary-root .Mui-expanded .MuiAccordionSummary-gutters .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
+  background-color: black !important;
+}
+
+.h1{
+  font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+}
+
+.paragraphy{
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 4px;
+}
+
+.headers{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 100px;
+  flex-direction: column;
+}
+
+.headers h1{
+  
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+}
+
+
+
+.headersContainers{
+  display: inline-block;
+  flex-direction: column;
+  width: 33%;
+}
+
+.headersContainers img{
+  width: 100px;
+  height:100px;
+  border-radius: 100%;
+}
+
+.headersContainers ul{
+  display: flex;
+  
+}
+
+.headersContainers ul li{
+  list-style: none;
+   padding: 10px;
+}
+
+.headersContainers a svg{
+  width: 25px;
+  height: 25px;
+  fill:#046AD0;
+}
+

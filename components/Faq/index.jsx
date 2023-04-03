@@ -68,7 +68,7 @@ export const Faq = () => {
               {souJunior.map(({ titulo, descricao, id }) => (
                 <AccordionItem className={styles.accordionItem} key={id} header=<h1 className={styles.accordionh1}>{titulo}</h1>>
                    <p className={styles.accordionP}>{descricao} </p> 
-                                   </AccordionItem>
+                  </AccordionItem>
               ))}
             </Accordion>
           </TabPanel>

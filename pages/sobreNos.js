@@ -1,6 +1,6 @@
-import {AboutUs}  from '../components/AboutUs'
+import { SobreNos } from "../components/AboutUs/SobreNos";
 
-export default function SobreNos(){
+export default function sobreNos(){
 
   return (
     <>
