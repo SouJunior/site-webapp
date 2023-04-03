@@ -59,7 +59,7 @@ export const SobreNos = () =>{
       </div>
 
       <div className={styles.accordion} >
-      <Accordion  style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion  style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -78,7 +78,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon /> }
           aria-controls="panel2a-content"
@@ -93,7 +93,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -108,7 +108,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion > 
-        <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"110px", padding: "15px"}}>
+        <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -122,7 +122,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -136,7 +136,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -151,7 +151,7 @@ export const SobreNos = () =>{
         </AccordionDetails>
       </Accordion>  
       
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -166,7 +166,7 @@ export const SobreNos = () =>{
         </AccordionDetails>
       </Accordion>
      
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center",  padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
