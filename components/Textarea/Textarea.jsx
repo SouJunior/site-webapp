@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from "./Textarea.module.css"
 
-const Textarea = ({name, text}) => {
+const Textarea = ({name, text, mensage}) => {
   return (
     <div className={styles.textarea}>
 
         <label forHtml={name}>{text}</label>
-        <textarea>
-
+        <textarea className={styles.textarea}>
+            {mensage}
         </textarea>
         </div>
   )

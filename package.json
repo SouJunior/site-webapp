@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@szhsin/react-accordion": "^1.2.0",
     "hamburger-react": "^2.5.0",
     "i": "^0.3.7",

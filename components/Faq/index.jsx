@@ -29,7 +29,8 @@ export const Faq = () => {
     
     emailjs.send("service_k47b2cj", "template_a9xnen5", templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
     {
-      console.log("email enviado", response.satatus, response.text);
+      alert("E-mail enviado com sucesso!")
+      console.log("email enviado", response.status, response.text);
       setName('')
       setEmail('')
       setMessage('')
@@ -104,45 +105,32 @@ export const Faq = () => {
        
 
            <div className={styles.checkbox}>
-            
-              
-
+           
               <input
                   type="radio"
                   name="sou junior" />
                                   
                   <label >Sou Junior</label>     
-                
-
-                
+               
                   <input
                   type="radio"
                   name="Voluntário" />
                                   
                   <label >Voluntário</label> 
-                
-
-                
+                                
                   <input
                   type="radio"
                   name="Mentor/Apoiador" />
                                   
                   <label >Mentor/Apoiador</label>  
-                
-
-                
-
+          
                   <input
                   type="radio"
                   name="Outros" />
                                   
                   <label >Outros</label>
               </div>
-              
-       
-
-        
-        
+          
 
         <div className={styles.labelInput} >
           
@@ -160,8 +148,8 @@ export const Faq = () => {
           type="email"
           text="Qual o seu e-mail?*"
           placeholder="Digite o seu e-mail"
-          //onChange={(e) => setEmail(e.target.value)}
-          //value={email}
+          // onChange={(e) => setEmail(e.target.value)}
+          // value={email}
           
         />
                 
@@ -171,22 +159,17 @@ export const Faq = () => {
         <Textarea 
         name="Fale-nos sobre sua dúvida*" 
         text="Fale-nos sobre sua dúvida*" 
-        ///onChange={(e) => setMessage(e.target.value)}
-        //value={message}
+        // onChange={(e) => setMessage(e.target.value)}
+        value={message}
        
         />
         <button className={styles.button} type="submit" >Enviar</button>
         </div>
       
       <div>
-        
-      
-      
-
+  
       </div>
-       
-      
-                
+   
       </form>
     </section>
 
