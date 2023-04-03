@@ -59,7 +59,7 @@ export const SobreNos = () =>{
       </div>
 
       <div className={styles.accordion} >
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+      <Accordion  style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -78,8 +78,8 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
-        <AccordionSummary style={{fill:"#fff"}}
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
+        <AccordionSummary
           expandIcon={<ExpandMoreIcon /> }
           aria-controls="panel2a-content"
           id="panel2a-header"
@@ -93,7 +93,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -108,7 +108,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion > 
-        <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+        <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"110px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -122,7 +122,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -136,7 +136,7 @@ export const SobreNos = () =>{
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -151,7 +151,7 @@ export const SobreNos = () =>{
         </AccordionDetails>
       </Accordion>  
       
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -166,7 +166,7 @@ export const SobreNos = () =>{
         </AccordionDetails>
       </Accordion>
      
-      <Accordion style={{backgroundColor:" #212121", color: "#FFF"}}>
+      <Accordion style={{backgroundColor:" #212121", color: "#FFF", borderBottom: "1px solid #FFF", alignItems:"center", height:"90px", padding: "15px"}}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
@@ -188,18 +188,24 @@ export const SobreNos = () =>{
       
         <h1>Essa é a equipe de heads que, junto com o Brandão, gerenciam os produtos do projeto!</h1>
 
-       
-      {headers.map(({id, nome, cargo, img}) =>{
+        <section className={styles.perfil}>
+
+      {headers.map(({id, nome, cargo, img, path}) =>{
           return (
                        
-
+            
+              
               <div className={styles.headersContainers}>
                 <img src={img}/>
                 <h2>{nome}</h2>
                 <h3>{cargo}</h3>
                 <ul>
                   <li>
-                    <a href="https://www.linkedin.com/in/vanessa-patricia/">
+                    <a href={path}
+                       key={id}
+                       target="_blank"
+                       rel="noreferrer"
+                    >
                       <AiFillLinkedin/>
                     </a>
                   </li>
@@ -210,14 +216,13 @@ export const SobreNos = () =>{
                   </li>
                 </ul>
               </div>
-
-            
+         
         
 
           )
-      
+          
       })}
-
+        </section>
 
     </section>
 

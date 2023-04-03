@@ -72,6 +72,7 @@ border-radius: 50%;
   margin-left: 50px;
   justify-content: center;
   align-items: center;
+  padding-top: 20px;
 }
 
 .brandao h2{
@@ -119,12 +120,10 @@ line-height: 22px;
 
 .accordion{
  
-  width: 889px;
+  width: 1024px;
 }
 
-.MuiButtonBase-root .MuiAccordionSummary-root .Mui-expanded .MuiAccordionSummary-gutters .css-sh22l5-MuiButtonBase-root-MuiAccordionSummary-root{
-  background-color: black !important;
-}
+
 
 .h1{
   font-weight: 600;
@@ -136,7 +135,19 @@ line-height: 24px;
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
-  padding: 4px;
+  padding: 6px 4px;
+}
+
+/*headers*/
+
+.perfil{
+ display: grid;
+ grid-template-columns: auto auto auto auto auto;
+ justify-content: space-around;
+ width: 1024px;
+ height: 600px;
+ margin-top: 60px;
+ 
 }
 
 .headers{
@@ -158,9 +169,11 @@ line-height: 24px;
 
 
 .headersContainers{
-  display: inline-block;
+  display: flex;
   flex-direction: column;
-  width: 33%;
+  align-items: center;
+  
+  padding-bottom: 20px;
 }
 
 .headersContainers img{
