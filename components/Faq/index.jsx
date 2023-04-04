@@ -27,7 +27,7 @@ export const Faq = () => {
       email: email
     }
     
-    emailjs.send("service_k47b2cj", "template_a9xnen5", templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
+    emailjs.send("service_k47b2cj", "template_a9xnen5",templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
     {
       alert("E-mail enviado com sucesso!")
       console.log("email enviado", response.status, response.text);

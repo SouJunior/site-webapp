@@ -9,9 +9,11 @@
 .container h1{
   color: #046AD0;
   font-weight: 700;
-font-size: 32px;
-line-height: 38px;
-text-align: center;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 20px;
 
 }
 
@@ -40,7 +42,7 @@ text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .interview h1{
@@ -85,15 +87,17 @@ border-radius: 50%;
 
 .brandao p{
   width: 328px;
-height: 110px;
-text-align: center;
-font-weight: 400;
-font-size: 18px;
-line-height: 22px;
+  height: 110px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-top: 5px;
 }
 
 .brandao ul{
   display: flex;
+  padding-top: 5px;
 }
 
 .brandao ul li{
@@ -144,7 +148,7 @@ line-height: 24px;
  display: grid;
  grid-template-columns: auto auto auto auto auto;
  justify-content: space-around;
- width: 1024px;
+ width: 1000px;
  height: 600px;
  margin-top: 60px;
  
@@ -179,7 +183,8 @@ line-height: 24px;
 .headersContainers img{
   width: 100px;
   height:100px;
-  border-radius: 100%;
+  border-radius: 80%;
+  padding-bottom: 10px;
 }
 
 .headersContainers ul{

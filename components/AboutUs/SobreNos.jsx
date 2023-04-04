@@ -48,8 +48,23 @@ export const SobreNos = () =>{
         <p> Wouerner Brandão é natural de Brasília, casado, pai do Erik, reside no Recanto das Emas e recentemente trabalhou em órgãos federais em Brasília.</p>
         
           <ul>
-            <li><a href="https://www.linkedin.com/in/wouerner/"><AiFillLinkedin/></a></li>
-            <li><a href="wouerner#0001"><FaDiscord/></a></li>
+            <li>
+              <a 
+                href="https://www.linkedin.com/in/wouerner/"
+                target="_blank"
+                rel="noreferrer">
+                    <AiFillLinkedin/>
+              </a>
+            </li>
+
+            <li>
+              <a 
+                href="https://discordapp.com/users/502651078685360129" 
+                target="_blank"
+                rel="noreferrer">
+                  <FaDiscord/>
+              </a>
+            </li>
           </ul>
         
           <p></p>
@@ -190,7 +205,7 @@ export const SobreNos = () =>{
 
         <section className={styles.perfil}>
 
-      {headers.map(({id, nome, cargo, img, path}) =>{
+      {headers.map(({id, nome, cargo, img, path, path2}) =>{
           return (
                        
             
@@ -210,7 +225,12 @@ export const SobreNos = () =>{
                     </a>
                   </li>
                   <li>
-                    <a href="">
+                    <a 
+                      href={path2}
+                      key={id}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <FaDiscord/>
                     </a>
                   </li>
