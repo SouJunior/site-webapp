@@ -42,6 +42,7 @@ export  const headers =[
     cargo: "Head de Back End ",
     img: "https://user-images.githubusercontent.com/104070821/229590195-d5de7868-956e-4a06-a4f4-755a53dbc810.png",
     path:"https://www.linkedin.com/in/wandersongsantos/",
+    path2:"https://discordapp.com/users/427653385123135490"
   },
   {
     id: 6,
