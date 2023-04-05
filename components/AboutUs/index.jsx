@@ -58,7 +58,7 @@ export const SobreNos = () => {
 
         <div className={styles.brandao}>
           <img
-            src="https://github.com/wouerner.png"
+            src="https://avatars.githubusercontent.com/u/287287?v=4"
             alt="foto de perfil Wouerner Brandão"
           />
 
