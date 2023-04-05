@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Form.module.css";
+import styles from "./Input.module.css";
 
 const Input = ({ type, text, name, placeholder, value }) => {
   return (

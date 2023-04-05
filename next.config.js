@@ -2,10 +2,20 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n:{
-    locales:['pt-br'],
-    defaultLocale:'pt-br'
+  optimizeFonts: true,
+  i18n: {
+    locales: ["pt-br"],
+    defaultLocale: "pt-br",
   },
-}
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "user-images.githubusercontent.com",
+      },
+    ],
+    minimumCacheTTL: 1500000,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

@@ -1,15 +1,14 @@
-import React, { useState } from "react";
-import { IoMdAdd, IoMdClose } from "react-icons/io";
-import Title from "../commons/Title";
-import styles from "./Faq.module.css";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
-
-import { souJunior, mentor, voluntario } from "../../utils/faqItems";
+import { IoMdAdd, IoMdClose } from "react-icons/io";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-// import "react-tabs/style/react-tabs.css";
-import Input from "../Inputs/Input";
-import Textarea from "../Textarea/Textarea";
+
+import styles from "./Faq.module.css";
+import Title from "../commons/Title";
+import Input from "../commons/Input";
+import Textarea from "../commons/Textarea";
+import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 
 export const Faq = () => {
   const [souJr, setSouJr] = useState(false);
