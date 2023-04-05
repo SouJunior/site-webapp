@@ -13,7 +13,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Input from "../Inputs/Input";
 import Textarea from "../Textarea/Textarea";
 
-
+//Validação do FORM
 const schema = yup
   .object().shape({
     name: yup.string().required("'Nome é obrigatório'"),
@@ -27,7 +27,7 @@ const schema = yup
 
 
 export const Faq = () => {
-
+//Validação do FORM
   const {
     register,
     handleSubmit,
@@ -35,7 +35,7 @@ export const Faq = () => {
   } = useForm({
     resolver: yupResolver(schema),
   })
-  // const onSubmit = data => console.log(data);
+  const onSubmit = data => console.log(data);
 
   const [souJr, setSouJr] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
@@ -43,13 +43,18 @@ export const Faq = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-//Validação do FORM
+
 
 
   function sendEmail(e) {
   
-     e.preventDefault();
-     console.log("OK")
+    //  e.preventDefault();
+
+     alert("enviado")
+     setName('')
+     setEmail('')
+     setMessage('')
+    
   }
 
     
