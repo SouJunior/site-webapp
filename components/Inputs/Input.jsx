@@ -1,22 +1,20 @@
-import React from 'react'
-import styles from "./Form.module.css"
+import React from "react";
+import styles from "./Form.module.css";
 
-const Input = ({type, text, name, placeholder, value}) => {
+const Input = ({ type, text, name, placeholder, value }) => {
   return (
     <div className={styles.formControl}>
-
-      <label forHtml={name}>{text}</label>
+      <label htmlFor={name}>{text}</label>
       <input
-          type={type}
-          name={name}
-          id={name}
-          placeholder={placeholder}
-          value={value}
-      
+        type={type}
+        name={name}
+        id={name}
+        placeholder={placeholder}
+        value={value}
+        
       />
-
     </div>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;

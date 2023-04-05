@@ -1,7 +1,7 @@
-.Title{
-      color: #1165BA;
-      border-bottom: 2px solid #1165BA;
-      font-size: 24px;
-      background-color: transparent;
-    }
-
+.Title {
+  /* color: #1165ba; */
+  font-weight: 400;
+  font-size: 36px;
+  background-color: transparent;
+  cursor: pointer;
+}

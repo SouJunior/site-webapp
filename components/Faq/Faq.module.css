@@ -1,100 +1,111 @@
-
+.FaqSection,
+.formSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 72px 32px;
+}
 
 .tabContainer {
   display: flex;
+  max-width: 1084px;
   justify-content: center;
-  width: 100%;
-  padding: 50px;
-}
-
-.tabList{
   display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 109.9rem;
+  gap: 4rem;
+  font-family: "Radio Canada", sans-serif;
 }
 
+.tabList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
 
+.tabContainer div ul li {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  list-style: none;
+}
 
-.react-tabs {
-  width: 100%;
+.tabContainer div ul li[aria-selected="true"] {
+  border: none;
+  border-bottom: 2px solid #007bff;
+  color: #007bff;
+}
+
+.tabContainer div ul li[aria-selected="true"]::after {
+  display: none;
+  border: none;
 }
 
 .tabPanel {
   width: 100%;
-
-  /*background-color: #007bff;*/
 }
 
-.itemBtn {
+.accordion {
+  padding: 80px 0;
+}
+
+.accordion button {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
   width: 100%;
   margin: 0;
-  padding: 1rem;
+  padding: 1rem 0;
   font-size: 1rem;
   text-align: left;
-  color: #007bff;
   background-color: transparent;
   border: none;
 }
 
-.p {
+.accordionItem {
+  padding: 45px 80px;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+
+.accordionItem {
+  color: #ededed;
+  gap: 10px;
+  width: 889px;
+}
+
+.accordionTitle {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.accordionParagraph {
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
   line-height: 22px;
 }
 
-.hide {
-  display: none;
-}
-
-
-
-.accordionItem {
-  color: #EDEDED;
-  gap: 10px;
-  width: 889px;
-  padding-top: 1rem;
-  margin: 10px;
-  align-items: flex-start;
-}
-
-.accordionh1 {
-  font-size: 20px;
-  line-height: 24px;
-}
-
 .accordionItem p {
   font-size: 15px;
-  color: #EDEDED;
+  color: #ededed;
   padding: 15px 0;
 }
 
-
-
 /*FORM*/
 
-.form{
- 
-  align-items: center;
-  margin: 50px auto;
-  flex-direction: column;
-  width: 1100px;
-  padding: 10px;
-   
+.form {
+  width: 1084px;
 }
 
-.form Input{
-  padding-bottom: 10px;
-}
-
-.labelInput{
+.labelInput {
   padding-bottom: 20px;
+  width: 100%;
 }
-
-
 
 .formSection h1 {
   width: 100%;
@@ -105,62 +116,78 @@
   text-align: center;
 }
 
-.formSection h3{
+.formSection h3 {
   font-weight: 400;
-font-size: 32px;
-line-height: 120%;
-text-align: center;
-margin-top: 15px;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  margin-top: 15px;
 }
 
-.formCheckbox{
+.formCheckbox {
   display: flex;
   width: 50px;
   margin: 0;
   gap: 100px;
 }
 
-
-
-.checkbox{
+.checkbox {
   display: flex;
   justify-content: flex-start;
   padding: 25px;
   font-size: 18px;
 }
 
-.checkbox input{
-  margin-left: 20px ;
-  
+.checkbox input {
+  margin-left: 20px;
 }
 
-.checkbox label{
+.checkbox label {
   padding-left: 3px;
 }
 
-.area{
+.area {
   margin-top: 20px;
 }
 
-.area textarea{
-width: 1000px;
-height: 194px;
-margin-top: 10px;
-background: #FFFFFF;
-border-radius: 3px;
+.description {
+  font-family: "Radio Canada";
+  font-style: normal;
+  text-align: center;
 }
 
-.button{
-width: 91px;
-height: 30px;
-font-style: normal;
-text-transform: uppercase;
-font-weight: 400;
-font-size: 14px;
-line-height: 18px;
-background: #046AD0;
-border: 2px solid #EDEDED;
-border-radius: 5px;
-color:  #EDEDED;
-margin-top: 2rem;
+.description h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
 }
+
+.description h3 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 120%;
+}
+
+.error{
+  color: red;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  font-size: 15px;
+}
+
+.button {
+  width: 91px;
+  height: 30px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  background: #046ad0;
+  border: 2px solid #ededed;
+  border-radius: 5px;
+  color: #ededed;
+  margin-top: 2rem;
+}
+
+
