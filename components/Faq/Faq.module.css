@@ -124,26 +124,29 @@
   margin-top: 15px;
 }
 
-.formCheckbox {
+.formRadios {
   display: flex;
   width: 50px;
   margin: 0;
   gap: 100px;
 }
 
-.checkbox {
+.radios {
   display: flex;
+  gap: 50px;
   justify-content: flex-start;
-  padding: 25px;
+  padding: 25px 0;
   font-size: 18px;
+  color: #fff;
 }
 
-.checkbox input {
-  margin-left: 20px;
+.radios[type="radio"] + label {
+  color: red;
 }
 
-.checkbox label {
-  padding-left: 3px;
+.radiosContainer {
+  display: flex;
+  gap: 10px;
 }
 
 .area {

@@ -115,22 +115,23 @@ export const Faq = () => {
 
       <section className={styles.formSection}>
         <form className={styles.form} onSubmit={sendEmail}>
-          <div className={styles.checkbox}>
-            <input type="radio" name="sou junior" />
-
-            <label>Sou Junior</label>
-
-            <input type="radio" name="Voluntário" />
-
-            <label>Voluntário</label>
-
-            <input type="radio" name="Mentor/Apoiador" />
-
-            <label>Mentor/Apoiador</label>
-
-            <input type="radio" name="Outros" />
-
-            <label>Outros</label>
+          <div className={styles.radios}>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="soujunior" />
+              <label htmlFor="soujunior">Sou Junior</label>
+            </div>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="voluntario" />
+              <label htmlFor="voluntario">Voluntário</label>
+            </div>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="mentor/apoiador" />
+              <label htmlFor="mentor/apoiador">Mentor/Apoiador</label>
+            </div>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="outros" />
+              <label htmlFor="outros">Outros</label>
+            </div>
           </div>
 
           <div className={styles.labelInput}>
