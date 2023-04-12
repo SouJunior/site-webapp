@@ -8,6 +8,7 @@ import styles from "./Faq.module.css";
 import Title from "../commons/Title";
 import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
+import { RadioButton } from "../commons/RadioButton";
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 
 export const Faq = () => {
@@ -116,6 +117,19 @@ export const Faq = () => {
       <section className={styles.formSection}>
         <form className={styles.form} onSubmit={sendEmail}>
           <div className={styles.radios}>
+            <RadioButton
+              id="soujunior"
+              name="soujunior"
+              titleFor="soujunior"
+              title="Rádio Person"
+              defaultChecked
+            />
+            <RadioButton
+              id="teste"
+              name="teste"
+              titleFor="teste"
+              title="Outro teste"
+            />
             <div className={styles.radiosContainer}>
               <input type="radio" name="soujunior" id="soujunior" />
               <label htmlFor="soujunior">Sou Junior</label>
