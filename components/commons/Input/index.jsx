@@ -11,6 +11,7 @@ const Input = ({ type, text, name, placeholder, value }) => {
         id={name}
         placeholder={placeholder}
         value={value}
+        
       />
     </div>
   );

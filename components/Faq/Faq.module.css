@@ -171,6 +171,13 @@
   line-height: 120%;
 }
 
+.error{
+  color: red;
+  margin-top: 1rem;
+  padding-left: 0.5rem;
+  font-size: 15px;
+}
+
 .button {
   width: 91px;
   height: 30px;
@@ -185,3 +192,5 @@
   color: #ededed;
   margin-top: 2rem;
 }
+
+
