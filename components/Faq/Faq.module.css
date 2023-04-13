@@ -19,6 +19,8 @@
 
 .tabList {
   display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -75,7 +77,6 @@
 .accordionItem {
   color: #ededed;
   gap: 10px;
-  width: 889px;
 }
 
 .accordionTitle {
@@ -124,24 +125,14 @@
   margin-top: 15px;
 }
 
-.formRadios {
-  display: flex;
-  width: 50px;
-  margin: 0;
-  gap: 100px;
-}
-
 .radios {
   display: flex;
+  flex-wrap: wrap;
   gap: 50px;
   justify-content: flex-start;
   padding: 25px 0;
   font-size: 18px;
   color: #fff;
-}
-
-.radios[type="radio"] + label {
-  color: red;
 }
 
 .radiosContainer {
@@ -171,7 +162,7 @@
   line-height: 120%;
 }
 
-.error{
+.error {
   color: red;
   margin-top: 1rem;
   padding-left: 0.5rem;
@@ -179,18 +170,22 @@
 }
 
 .button {
-  width: 91px;
-  height: 30px;
-  font-style: normal;
+  width: 155px;
+  height: 50px;
   text-transform: uppercase;
-  font-weight: 400;
-  font-size: 14px;
+  font-family: "Radio Canada";
+  font-size: 24px;
   line-height: 18px;
+  font-weight: 300;
   background: #046ad0;
   border: 2px solid #ededed;
-  border-radius: 5px;
   color: #ededed;
+  padding: 16px 32px;
   margin-top: 2rem;
 }
 
-
+@media (max-width: 920px) {
+  .tabList {
+    justify-content: center;
+  }
+}
