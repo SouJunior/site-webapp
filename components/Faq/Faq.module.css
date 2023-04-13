@@ -1,3 +1,7 @@
+.textInner {
+  text-align: center;
+}
+
 .FaqSection,
 .formSection {
   display: flex;

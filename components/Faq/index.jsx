@@ -14,12 +14,6 @@ import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { RadioButton } from "../commons/RadioButton";
 
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
-
 //Validação do FORM
 const schema = yup.object().shape({
   name: yup.string().required("'Nome é obrigatório'"),
@@ -46,7 +40,7 @@ export const Faq = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [type, setType] = useState("");
+  const [radioOption, setRadioOption] = useState("Sou Junior");
 
   function sendEmail(e) {
     //  e.preventDefault();
@@ -59,6 +53,10 @@ export const Faq = () => {
 
   return (
     <>
+      <div className={styles.textInner}>
+        <p>Perguntas frequentes</p>
+        <article>Olá! Como podemos de ajudar?</article>
+      </div>
       <section className={styles.FaqSection}>
         <div className={styles.tabContainer}>
           <Tabs>
@@ -141,8 +139,8 @@ export const Faq = () => {
                 "Mentor/Apoiador",
                 "Outros",
               ]}
-              value={type}
-              setValue={setType}
+              value={radioOption}
+              setValue={setRadioOption}
             />
           </div>
 
