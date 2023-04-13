@@ -1,30 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 import Title from "../commons/Title";
 import styles from "./Faq.module.css";
-import { useForm } from "react-hook-form";
 import emailjs from "@emailjs/browser";
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from "yup";
 
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+// import "react-tabs/style/react-tabs.css";
 import Input from "../Inputs/Input";
 import Textarea from "../Textarea/Textarea";
-
-//Validação do FORM
-const schema = yup
-  .object().shape({
-    name: yup.string().required("'Nome é obrigatório'"),
-    email: yup
-      .string()
-      .email("'E-mail inválido'")
-      .required('E-mail é obrigatório'),
-    description: yup.string().required("'Mensagem é obrigatória'"),
-  })
-  
-
 
 export const Faq = () => {
 //Validação do FORM
@@ -47,18 +33,54 @@ export const Faq = () => {
 
 
   function sendEmail(e) {
-  
-    //  e.preventDefault();
+    e.preventDefault();
 
-     alert("enviado")
-     setName('')
-     setEmail('')
-     setMessage('')
+    const templateParams = {
+      from_name: name,
+      message: message,
+<<<<<<<<< Temporary merge branch 1
+      email: email
+    }
     
+    emailjs.send("service_k47b2cj", "template_a9xnen5",templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
+    {
+      alert("E-mail enviado com sucesso!")
+      console.log("email enviado", response.status, response.text);
+      setName('')
+      setEmail('')
+      setMessage('')
+     
+    },(err) =>
+    {
+      console.log("Erro", err)
+    }
+    )
+    
+=========
+      email: email,
+    };
+
+    emailjs
+      .send(
+        "service_k47b2cj",
+        "template_a9xnen5",
+        templateParams,
+        "BeY4OuM8WvMaH_COp"
+      )
+      .then(
+        (response) => {
+          alert("E-mail enviado com sucesso!");
+          console.log("email enviado", response.status, response.text);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (err) => {
+          console.log("Erro", err);
+        }
+      );
+>>>>>>>>> Temporary merge branch 2
   }
-
-    
-
 
   return (
     <>
@@ -127,20 +149,22 @@ export const Faq = () => {
       </div>
 
       <section className={styles.formSection}>
-
-      
-      <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
+        <form className={styles.form} onSubmit={sendEmail}>
           <div className={styles.checkbox}>
             <input type="radio" name="sou junior" />
+
             <label>Sou Junior</label>
 
             <input type="radio" name="Voluntário" />
+
             <label>Voluntário</label>
 
             <input type="radio" name="Mentor/Apoiador" />
+
             <label>Mentor/Apoiador</label>
 
             <input type="radio" name="Outros" />
+
             <label>Outros</label>
           </div>
 
