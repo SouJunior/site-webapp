@@ -69,9 +69,8 @@ export const Faq = () => {
                   <AccordionItem
                     className={styles.accordionItem}
                     key={id}
-                    header={
-                      <h2 className={styles.accordionTitle}>{titulo}</h2>
-                    }>
+                    header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
+                  >
                     <p className={styles.accordionP}>{descricao} </p>
                   </AccordionItem>
                 ))}
@@ -83,9 +82,8 @@ export const Faq = () => {
                   <AccordionItem
                     className={styles.accordionItem}
                     key={id}
-                    header={
-                      <h2 className={styles.accordionTitle}>{titulo}</h2>
-                    }>
+                    header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
+                  >
                     <p className={styles.accordionP}>{descricao}</p>
                   </AccordionItem>
                 ))}
@@ -97,9 +95,8 @@ export const Faq = () => {
                   <AccordionItem
                     className={styles.accordionItem}
                     key={id}
-                    header={
-                      <h2 className={styles.accordionTitle}>{titulo}</h2>
-                    }>
+                    header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
+                  >
                     <p className={styles.accordionP}>{descricao} </p>
                   </AccordionItem>
                 ))}
@@ -149,8 +146,8 @@ export const Faq = () => {
               type="email"
               text="Qual o seu e-mail?*"
               placeholder="Digite o seu e-mail"
-              // onChange={(e) => setEmail(e.target.value)}
-              // value={email}
+              //onChange={(e) => setEmail(e.target.value)}
+              //value={email}
             />
           </div>
 
@@ -158,7 +155,7 @@ export const Faq = () => {
             <Textarea
               name="Fale-nos sobre sua dúvida*"
               text="Fale-nos sobre sua dúvida*"
-              // onChange={(e) => setMessage(e.target.value)}
+              //onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
             <button className={styles.button} type="submit">
