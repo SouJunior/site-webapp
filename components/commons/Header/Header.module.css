@@ -3,6 +3,8 @@
   justify-content: center;
   margin-bottom: 5rem;
   color: white;
+  backdrop-filter: overlay;
+  background-image: url("../../../public/assets/hero-background.svg");
   background: linear-gradient(
     180deg,
     #046ad0 8%,

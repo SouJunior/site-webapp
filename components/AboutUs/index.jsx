@@ -118,7 +118,7 @@ export const SobreNos = () => {
               <Typography variant="string" className={styles.paragraphy}>
                 Iniciei a carreira na área de tecnologia no ano de 2010 como
                 estagiário, permanecendo 1 ano e 2 meses. Após essa experiência,
-                nquistei uma colocação de contrato CLT. Estudei bacharelado na
+                conquistei uma colocação de contrato CLT. Estudei bacharelado na
                 área de sistemas por 4 anos, e nos últimos 12 anos atuo
                 profissionalmente em programação nas linguagens de PHP e
                 JavaScript, no cargo de desenvolvedor Sênior na empresa eNe
