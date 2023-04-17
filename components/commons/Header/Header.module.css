@@ -3,7 +3,13 @@
   justify-content: center;
   margin-bottom: 5rem;
   color: white;
-  background-blend-mode: overlay, normal;
+  backdrop-filter: overlay;
+  background-image: url("../../../public/assets/hero-background.svg");
+  background: linear-gradient(
+    180deg,
+    #046ad0 8%,
+    rgba(23, 17, 35, 0.78) 91.75%
+  );
 }
 
 .navbar {

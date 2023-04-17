@@ -58,13 +58,13 @@ export const Header = () => {
             </div>
           </div>
           <div className={styles.textArea}>
-            <div className={styles.textInner}>
+            {/* <div className={styles.textInner}>
               <article>
                 Experiência real de trabalho em projetos construída por uma
                 empresa de tecnologia!
               </article>
               <p>O Junior de hoje é o Sênior do amanhã!</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
