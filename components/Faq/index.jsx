@@ -22,7 +22,7 @@ export const Faq = () => {
     <>
       <div className={styles.textInner}>
         <p>Perguntas frequentes</p>
-        <article>Olá! Como podemos de ajudar?</article>
+        <h2>Olá! Como podemos de ajudar?</h2>
       </div>
       <section className={styles.FaqSection}>
         <div className={styles.tabContainer}>
