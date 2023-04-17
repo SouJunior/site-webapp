@@ -1,16 +1,15 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
-import Title from "../commons/Title";
-import styles from "./Faq.module.css";
-import emailjs from "@emailjs/browser";
-
-import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-// import "react-tabs/style/react-tabs.css";
-import Input from "../Inputs/Input";
-import Textarea from "../Textarea/Textarea";
+
+import styles from "./Faq.module.css";
+import Title from "../commons/Title";
+import Input from "../commons/Input";
+import Textarea from "../commons/Textarea";
+import { RadioButton } from "../commons/RadioButton";
+import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 
 export const Faq = () => {
 //Validação do FORM
@@ -38,25 +37,6 @@ export const Faq = () => {
     const templateParams = {
       from_name: name,
       message: message,
-<<<<<<<<< Temporary merge branch 1
-      email: email
-    }
-    
-    emailjs.send("service_k47b2cj", "template_a9xnen5",templateParams, "BeY4OuM8WvMaH_COp").then((response) =>
-    {
-      alert("E-mail enviado com sucesso!")
-      console.log("email enviado", response.status, response.text);
-      setName('')
-      setEmail('')
-      setMessage('')
-     
-    },(err) =>
-    {
-      console.log("Erro", err)
-    }
-    )
-    
-=========
       email: email,
     };
 
@@ -79,7 +59,6 @@ export const Faq = () => {
           console.log("Erro", err);
         }
       );
->>>>>>>>> Temporary merge branch 2
   }
 
   return (
@@ -150,22 +129,36 @@ export const Faq = () => {
 
       <section className={styles.formSection}>
         <form className={styles.form} onSubmit={sendEmail}>
-          <div className={styles.checkbox}>
-            <input type="radio" name="sou junior" />
-
-            <label>Sou Junior</label>
-
-            <input type="radio" name="Voluntário" />
-
-            <label>Voluntário</label>
-
-            <input type="radio" name="Mentor/Apoiador" />
-
-            <label>Mentor/Apoiador</label>
-
-            <input type="radio" name="Outros" />
-
-            <label>Outros</label>
+          <div className={styles.radios}>
+            <RadioButton
+              id="soujunior"
+              name="soujunior"
+              titleFor="soujunior"
+              title="Rádio Person"
+              defaultChecked
+            />
+            <RadioButton
+              id="teste"
+              name="teste"
+              titleFor="teste"
+              title="Outro teste"
+            />
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="soujunior" />
+              <label htmlFor="soujunior">Sou Junior</label>
+            </div>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="voluntario" />
+              <label htmlFor="voluntario">Voluntário</label>
+            </div>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="mentor/apoiador" />
+              <label htmlFor="mentor/apoiador">Mentor/Apoiador</label>
+            </div>
+            <div className={styles.radiosContainer}>
+              <input type="radio" name="soujunior" id="outros" />
+              <label htmlFor="outros">Outros</label>
+            </div>
           </div>
 
           <div className={styles.labelInput}>
