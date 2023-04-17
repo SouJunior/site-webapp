@@ -11,6 +11,14 @@ import { FaDiscord } from "react-icons/fa";
 import { headers } from "../../utils/headers";
 
 export const SobreNos = () => {
+  const inlineStyle = {
+    backgroundColor: "transparent",
+    color: "#FFF",
+    borderBottom: "1px solid #FFF",
+    borderShadow: "0px",
+    padding: "15px",
+  };
+
   return (
     <>
       <section className={styles.container}>
@@ -97,24 +105,17 @@ export const SobreNos = () => {
         </div>
 
         <div className={styles.accordion}>
-          <Accordion
-            style={{
-              backgroundColor: "#212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel1a-content"
               id="panel1a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 Como e quando foi iniciar na carreira de tecnologia?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="string" className={styles.paragraphy}>
                 Iniciei a carreira na área de tecnologia no ano de 2010 como
                 estagiário, permanecendo 1 ano e 2 meses. Após essa experiência,
                 nquistei uma colocação de contrato CLT. Estudei bacharelado na
@@ -125,24 +126,17 @@ export const SobreNos = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            style={{
-              backgroundColor: " #212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 O que te motivou a criar a Open Source SouJunior?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 Depois de 5 - 6 anos de carreira já com uma boa bagagem de
                 conhecimentos, via que em alguns lugares que trabalhei tinham
                 estagiários. Mas estas empresas, geralmente não contratavam
@@ -164,25 +158,18 @@ export const SobreNos = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            style={{
-              backgroundColor: " #212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 O que você considera um diferencial da SouJunior em relação às
                 outras comunidades de trabalho voluntário?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 O diferencial é que as pessoas migram para a SouJunior para
                 ganhar experiência, criando projetos reais em grupo, em equipe e
                 as outras comunidades são voltadas para cursos ou para tirar
@@ -197,19 +184,12 @@ export const SobreNos = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            style={{
-              backgroundColor: " #212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 Qual o seu plano para estimular o interesse das pessoas em
                 relação a SouJunior e impactar tanto os curiosos quanto os
                 voluntários de forma que eles permaneçam continuamente engajados
@@ -217,7 +197,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 A SouJunior está presente nas maiores Redes Sociais, mas na
                 maioria delas percebemos que o conteúdo se perde no meio da
                 diversidade de informações, como postagens, imagens e vídeos.
@@ -235,24 +215,17 @@ export const SobreNos = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            style={{
-              backgroundColor: " #212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 Você acredita que a SouJunior é o que você idealizou?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 Sim. Em relação a ideia do projeto eu sempre tive o propósito de
                 entregar duas coisas: a primeira era promover a experiência
                 prática para os juniores, que mesmo sendo difícil mensurar
@@ -265,25 +238,18 @@ export const SobreNos = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion
-            style={{
-              backgroundColor: " #212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 Você acredita que a SouJunior te ajudou a evoluir
                 profissionalmente?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 Com certeza eu evolui profissionalmente após a SouJunior. Na
                 verdade, eu não tinha liderado equipes tão grandes, como as que
                 a SouJunior tem hoje. As equipes que eu liderava anteriormente
@@ -296,24 +262,17 @@ export const SobreNos = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion
-            style={{
-              backgroundColor: " #212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 Qual o maior desafio para você em ser o CEO da SouJunior?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 O maior desafio foi o recrutamento em alguns aspectos, por ser
                 voluntariado. Outra questão é o desafio financeiro em colocar os
                 projetos on-line, já que tudo se baseia em dólar, como
@@ -325,25 +284,18 @@ export const SobreNos = () => {
             </AccordionDetails>
           </Accordion>
 
-          <Accordion
-            style={{
-              backgroundColor: "#212121",
-              color: "#FFF",
-              borderBottom: "1px solid #FFF",
-              alignItems: "center",
-              padding: "15px",
-            }}>
+          <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
+              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
-              <Typography className={styles.h1}>
+              <Typography variant="string" className={styles.question}>
                 Você pretende futuramente transformar a SouJunior numa empresa
                 jurídica?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraphy}>
                 Provavelmente não. Acredito que a SouJunior terá pequenos
                 negócios para se sustentar, mas não a transformarei em uma
                 empresa no formato total, com profissionais remunerados ou algo
