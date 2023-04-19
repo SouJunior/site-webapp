@@ -15,8 +15,7 @@ body {
   font-family: "Radio Canada", sans-serif;
   font-size: 10px;
   color: #f9f9f9;
-  /* background-color: #212; */
-  background: linear-gradient(180deg, #046ad0 8%, rgba(33, 33, 33, 0.78) 35%);
+  background-color: #171123;
 }
 
 a {

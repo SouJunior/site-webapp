@@ -1,5 +1,4 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -8,47 +7,72 @@ import styles from "./Faq.module.css";
 import Title from "../commons/Title";
 import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
+import { RadioButton } from "../commons/RadioButton";
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 
 export const Faq = () => {
   const [souJr, setSouJr] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
+  const [radioOption, setRadioOption] = useState("Sou Junior");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [isNameValid, setIsNameValid] = useState(false);
+  const [isEmailValid, setIsEmailValid] = useState(false);
+  const [isTextValid, setIsTextValid] = useState(false);
+  const [nameTouched, setNameTouched] = useState(false);
+  const [emailTouched, setEmailTouched] = useState(false);
+  const [messageTouched, setMessageTouched] = useState(false);
 
-  function sendEmail(e) {
-    e.preventDefault();
+  function handleNameChange(event) {
+    const newName = event.target.value;
+    setName(newName);
+    setNameTouched(true);
+    setIsNameValid(validateName(newName));
+  }
 
-    const templateParams = {
-      from_name: name,
-      message: message,
-      email: email,
-    };
+  function handleEmailChange(event) {
+    const newEmail = event.target.value;
+    setEmail(newEmail);
+    setEmailTouched(true);
+    setIsEmailValid(validateEmail(newEmail));
+  }
 
-    emailjs
-      .send(
-        "service_k47b2cj",
-        "template_a9xnen5",
-        templateParams,
-        "BeY4OuM8WvMaH_COp"
-      )
-      .then(
-        (response) => {
-          alert("E-mail enviado com sucesso!");
-          console.log("email enviado", response.status, response.text);
-          setName("");
-          setEmail("");
-          setMessage("");
-        },
-        (err) => {
-          console.log("Erro", err);
-        }
-      );
+  function handleMessageChange(event) {
+    const newText = event.target.value;
+    setMessage(newText);
+    setMessageTouched(true);
+    setIsTextValid(validateMessage(newText));
+  }
+
+  function validateName(name) {
+    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+    return nameRegex.test(name);
+  }
+
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (isNameValid && isEmailValid && isTextValid) {
+      console.log(`Nome: ${name}`);
+      console.log(`Email: ${email}`);
+    }
+  }
+
+  function validateMessage(message) {
+    return message.trim() !== "";
   }
 
   return (
     <>
+      <div className={styles.textInner}>
+        <p>Perguntas frequentes</p>
+        <h2>Olá! Como podemos de ajudar?</h2>
+      </div>
       <section className={styles.FaqSection}>
         <div className={styles.tabContainer}>
           <Tabs>
@@ -67,6 +91,7 @@ export const Faq = () => {
               <Accordion className={styles.accordion}>
                 {souJunior.map(({ titulo, descricao, id }) => (
                   <AccordionItem
+                    initialEntered
                     className={styles.accordionItem}
                     key={id}
                     header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
@@ -80,6 +105,7 @@ export const Faq = () => {
               <Accordion className={styles.accordion}>
                 {mentor.map(({ titulo, descricao, id }) => (
                   <AccordionItem
+                    initialEntered
                     className={styles.accordionItem}
                     key={id}
                     header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
@@ -93,9 +119,17 @@ export const Faq = () => {
               <Accordion className={styles.accordion}>
                 {voluntario.map(({ titulo, descricao, id }) => (
                   <AccordionItem
+                    initialEntered
                     className={styles.accordionItem}
                     key={id}
                     header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
+                    {...(
+                      <img
+                        className={styles.chevron}
+                        src="../../public/assets/icons/chevron-down.svg"
+                        alt="Chevron Down"
+                      />
+                    )}
                   >
                     <p className={styles.accordionP}>{descricao} </p>
                   </AccordionItem>
@@ -106,29 +140,23 @@ export const Faq = () => {
         </div>
       </section>
       <div className={styles.description}>
-        <h2>Não encontrou sua dúvida, fale conosco!</h2>
+        <h2>Não encontrou sua dúvida, fale conosco! </h2>
         <h3>Preencha o formulário e entraremos em contato!</h3>
       </div>
 
       <section className={styles.formSection}>
-        <form className={styles.form} onSubmit={sendEmail}>
+        <form className={styles.form}>
           <div className={styles.radios}>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="soujunior" />
-              <label htmlFor="soujunior">Sou Junior</label>
-            </div>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="voluntario" />
-              <label htmlFor="voluntario">Voluntário</label>
-            </div>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="mentor/apoiador" />
-              <label htmlFor="mentor/apoiador">Mentor/Apoiador</label>
-            </div>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="outros" />
-              <label htmlFor="outros">Outros</label>
-            </div>
+            <RadioButton
+              options={[
+                "Sou Junior",
+                "Voluntário",
+                "Mentor/Apoiador",
+                "Outros",
+              ]}
+              value={radioOption}
+              setValue={setRadioOption}
+            />
           </div>
 
           <div className={styles.labelInput}>
@@ -136,8 +164,10 @@ export const Faq = () => {
               type="text"
               text="Qual o seu nome?*"
               placeholder="Digite seu nome completo"
-              //onChange={(e) => setName(e.target.value)}
-              //value={name}
+              label="Nome"
+              value={name}
+              onChange={handleNameChange}
+              isValid={!nameTouched || isNameValid}
             />
           </div>
 
@@ -146,19 +176,27 @@ export const Faq = () => {
               type="email"
               text="Qual o seu e-mail?*"
               placeholder="Digite o seu e-mail"
-              //onChange={(e) => setEmail(e.target.value)}
-              //value={email}
+              label="E-mail"
+              value={email}
+              onChange={handleEmailChange}
+              isValid={!emailTouched || isEmailValid}
             />
           </div>
 
           <div className={styles.area}>
             <Textarea
-              name="Fale-nos sobre sua dúvida*"
-              text="Fale-nos sobre sua dúvida*"
-              //onChange={(e) => setMessage(e.target.value)}
+              name="description"
               value={message}
+              isValid={!messageTouched || validateMessage(message)}
+              onChange={handleMessageChange}
+              text="Fale-nos sobre sua dúvida*"
             />
-            <button className={styles.button} type="submit">
+
+            <button
+              className={styles.button}
+              type="submit"
+              disabled={!isNameValid || !isEmailValid || !isTextValid}
+            >
               Enviar
             </button>
           </div>
