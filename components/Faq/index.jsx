@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import emailjs from "@emailjs/browser";
-import { IoMdAdd, IoMdClose } from "react-icons/io";
-import { Accordion, AccordionItem } from "@szhsin/react-accordion";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-
-import styles from "./Faq.module.css";
-import Title from "../commons/Title";
-import Input from "../commons/Input";
-import Textarea from "../commons/Textarea";
-import { RadioButton } from "../commons/RadioButton";
-import { souJunior, mentor, voluntario } from "../../utils/faqItems";
-=======
 import React, { useState } from "react";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 import Title from "../commons/Title";
@@ -37,7 +23,6 @@ const schema = yup.object().shape({
     .required("E-mail é obrigatório"),
   description: yup.string().required("'Mensagem é obrigatória'"),
 });
->>>>>>> 3bdc870b518d8690e6f5590bd7cfccdf2d930622
 
 export const Faq = () => {
   //Validação do FORM
@@ -58,42 +43,12 @@ export const Faq = () => {
   const [radioOption, setRadioOption] = useState("Sou Junior");
 
   function sendEmail(e) {
-<<<<<<< HEAD
-    e.preventDefault();
-
-    const templateParams = {
-      from_name: name,
-      message: message,
-      email: email,
-    };
-
-    emailjs
-      .send(
-        "service_k47b2cj",
-        "template_a9xnen5",
-        templateParams,
-        "BeY4OuM8WvMaH_COp"
-      )
-      .then(
-        (response) => {
-          alert("E-mail enviado com sucesso!");
-          console.log("email enviado", response.status, response.text);
-          setName("");
-          setEmail("");
-          setMessage("");
-        },
-        (err) => {
-          console.log("Erro", err);
-        }
-      );
-=======
     //  e.preventDefault();
 
     alert("enviado");
     setName("");
     setEmail("");
     setMessage("");
->>>>>>> 3bdc870b518d8690e6f5590bd7cfccdf2d930622
   }
 
   return (
@@ -175,11 +130,7 @@ export const Faq = () => {
       </div>
 
       <section className={styles.formSection}>
-<<<<<<< HEAD
-        <form className={styles.form} onSubmit={sendEmail}>
-=======
         <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
->>>>>>> 3bdc870b518d8690e6f5590bd7cfccdf2d930622
           <div className={styles.radios}>
             <RadioButton
               options={[
@@ -191,31 +142,6 @@ export const Faq = () => {
               value={radioOption}
               setValue={setRadioOption}
             />
-<<<<<<< HEAD
-            <RadioButton
-              id="teste"
-              name="teste"
-              titleFor="teste"
-              title="Outro teste"
-            />
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="soujunior" />
-              <label htmlFor="soujunior">Sou Junior</label>
-            </div>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="voluntario" />
-              <label htmlFor="voluntario">Voluntário</label>
-            </div>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="mentor/apoiador" />
-              <label htmlFor="mentor/apoiador">Mentor/Apoiador</label>
-            </div>
-            <div className={styles.radiosContainer}>
-              <input type="radio" name="soujunior" id="outros" />
-              <label htmlFor="outros">Outros</label>
-            </div>
-=======
->>>>>>> 3bdc870b518d8690e6f5590bd7cfccdf2d930622
           </div>
 
           <div className={styles.labelInput}>
