@@ -4,7 +4,7 @@ import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
 const sobreNos = () => {
   return (
     <>
-      <HeaderComponent tittle={"Teste no sobre nós!"} />
+      <HeaderComponent tittle={"Texto para a págiina Soobre-nos!"} />
       <SobreNos />
     </>
   );
