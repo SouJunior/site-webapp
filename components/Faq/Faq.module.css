@@ -1,5 +1,20 @@
 .textInner {
+  font-family: "Radio Canada";
+  font-style: normal;
   text-align: center;
+}
+
+.textInner p {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.textInner h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
 }
 
 .FaqSection,
@@ -186,6 +201,16 @@
   color: #ededed;
   padding: 16px 32px;
   margin-top: 2rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #307cc9;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 920px) {

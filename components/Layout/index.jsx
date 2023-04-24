@@ -6,7 +6,6 @@ import { Footer } from "../commons/Footer";
 export const Layout = ({ children }) => {
   return (
     <>
-      <Header>{children}</Header>
       <main>{children}</main>
       <Footer />
     </>

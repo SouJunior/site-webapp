@@ -1,0 +1,178 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5rem;
+  color: white;
+  backdrop-filter: overlay;
+  background-image: url("../../../public/assets/hero-background.svg");
+  background: linear-gradient(
+    180deg,
+    #046ad0 8%,
+    rgba(23, 17, 35, 0.78) 91.75%
+  );
+}
+
+.navbar {
+  width: 100%;
+  margin: 5rem 0rem 0.5rem 0rem;
+  display: flex;
+  align-items: center;
+}
+
+.menuHamburger {
+  display: none;
+}
+
+.logo {
+  flex: 1;
+}
+
+.menu {
+  flex: 2;
+}
+
+.front {
+  width: 1090px;
+}
+
+.bannerArea {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.stars {
+  display: flex;
+  position: absolute;
+  justify-content: space-between;
+  width: 70%;
+  top: 7.5rem;
+  z-index: 2;
+}
+
+.starOne {
+  background-image: url("/assets/Stars1.png");
+  height: 9.2rem;
+  width: 7rem;
+  transform: rotate(90deg);
+}
+
+.starTwo {
+  background-image: url("/assets/Stars2.png");
+  height: 9.2rem;
+  width: 7rem;
+}
+
+.banner {
+  background-image: url("/assets/BannerV2.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  height: 47rem;
+}
+
+.textArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.textInner {
+  display: flex;
+  flex-direction: column;
+  max-width: 120ch;
+  width: 100%;
+}
+
+.textInner article {
+  width: 100%;
+  margin-bottom: 5.4rem;
+  font-size: 46px;
+  text-align: center;
+}
+
+.textInner p {
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 2.4rem;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    margin: 5rem auto 0.5rem auto;
+  }
+
+  .textArea {
+    justify-content: space-evenly;
+  }
+
+  .textInner {
+    margin: 1rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menuHamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 570px) {
+  .banner {
+    background-image: url("/assets/Hero.svg");
+  }
+}
+
+@media (max-width: 414px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .header,
+  .textArea {
+    flex-direction: column;
+  }
+
+  .front {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  .navbar {
+    margin-top: 3.8rem;
+    margin-bottom: 10.2rem;
+  }
+
+  .frontBottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .textArea {
+    width: 100%;
+  }
+
+  .banner {
+    background-image: url("/assets/bannerGroupMobile.svg");
+  }
+
+  .stars {
+    width: 85%;
+    top: 8rem;
+  }
+
+  .textInner article {
+    font-size: 3.8rem;
+  }
+
+  .textInner p {
+    width: 100%;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}

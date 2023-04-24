@@ -1,0 +1,42 @@
+.ApoiadorSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-width: 1084px; */
+  width: 100%;
+  padding: 72px 32px;
+}
+
+.form {
+  width: 1084px;
+}
+
+.radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  padding: 25px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.radiosContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  width: 155px;
+  height: 50px;
+  text-transform: uppercase;
+  font-family: "Radio Canada";
+  font-size: 24px;
+  line-height: 18px;
+  font-weight: 300;
+  background: #046ad0;
+  border: 2px solid #ededed;
+  color: #ededed;
+  padding: 16px 32px;
+  margin-top: 2rem;
+}

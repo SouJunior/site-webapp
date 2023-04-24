@@ -10,7 +10,7 @@ export const souJunior = [
     id: 2,
     titulo: "Como fazer parte da Comunidade da SouJunior?",
     descricao:
-      "Para você se conectar com a Comunidade da SouJunior, acesse o servidor SouJunior no Discord e no Github.Ao entrar no servidor SouJunior no Discord, leia as regras e fique sempre atento ao #chat para interagir com os demais participantes da Comunidade.Para fazer parte da Comunidade da SouJunior, selecione no Menu da Home do Site SouJunior a opção “Participar”, em seguida escolha a seção “Comunidade” e clique em “Quero Participar”. Você será direcionado para o formulário de candidatura que, após enviado, nossa equipe responsável entrará em contato com você.",
+      "Para você se conectar com a Comunidade da SouJunior, acesse o servidor SouJunior no Discord e no Github. Ao entrar no servidor SouJunior no Discord, leia as regras e fique sempre atento ao #chat para interagir com os demais participantes da Comunidade. Para fazer parte da Comunidade da SouJunior, selecione no Menu da Home do Site SouJunior a opção “Participar”, em seguida escolha a seção “Comunidade” e clique em “Quero Participar”. Você será direcionado para o formulário de candidatura que, após enviado, nossa equipe responsável entrará em contato com você.",
   },
 
   {
