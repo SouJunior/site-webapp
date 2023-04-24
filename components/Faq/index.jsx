@@ -162,11 +162,11 @@ export const Faq = () => {
       </div>
 
       <section className={styles.formSection}>
-<<<<<<< HEAD
+
         <form className={styles.form} onSubmit={sendEmail}>
-=======
+
         <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
->>>>>>> 3bdc870b518d8690e6f5590bd7cfccdf2d930622
+
           <div className={styles.radios}>
             <RadioButton
               options={[
@@ -221,6 +221,7 @@ export const Faq = () => {
               Enviar
             </button>
           </div>
+        </form>
         </form>
       </section>
     </>
