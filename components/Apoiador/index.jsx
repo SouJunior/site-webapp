@@ -9,7 +9,7 @@ export const Apoiador = () => {
   return (
     <>
       <section className={styles.ApoiadorSection}>
-        <section className={styles.formSection}>
+        <section className={styles.formContainer}>
           <form className={styles.form}>
             <div className={styles.radios}>
               <RadioButton

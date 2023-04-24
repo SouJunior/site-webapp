@@ -81,7 +81,7 @@
 .textInner {
   display: flex;
   flex-direction: column;
-  max-width: 122.8rem;
+  max-width: 120ch;
   width: 100%;
 }
 

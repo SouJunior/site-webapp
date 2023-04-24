@@ -2,8 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  /* max-width: 1084px; */
   width: 100%;
   padding: 72px 32px;
+}
+
+.form {
+  width: 1084px;
 }
 
 .radios {

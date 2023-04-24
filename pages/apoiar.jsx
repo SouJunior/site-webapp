@@ -4,7 +4,7 @@ import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
 const apoiar = () => {
   return (
     <>
-      <HeaderComponent tittle={"Texto para a página do apoiador"} />
+      <HeaderComponent tittle={"Sou apoiador "} />
       <Apoiador />
     </>
   );
