@@ -46,42 +46,12 @@ export const Faq = () => {
   }
 
   function sendEmail(e) {
-<<<<<<< HEAD
-    e.preventDefault();
-
-    const templateParams = {
-      from_name: name,
-      message: message,
-      email: email,
-    };
-
-    emailjs
-      .send(
-        "service_k47b2cj",
-        "template_a9xnen5",
-        templateParams,
-        "BeY4OuM8WvMaH_COp"
-      )
-      .then(
-        (response) => {
-          alert("E-mail enviado com sucesso!");
-          console.log("email enviado", response.status, response.text);
-          setName("");
-          setEmail("");
-          setMessage("");
-        },
-        (err) => {
-          console.log("Erro", err);
-        }
-      );
-=======
     //  e.preventDefault();
 
     alert("enviado");
     setName("");
     setEmail("");
     setMessage("");
->>>>>>> 3bdc870b518d8690e6f5590bd7cfccdf2d930622
   }
 
   return (
