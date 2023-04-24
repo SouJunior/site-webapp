@@ -201,6 +201,16 @@
   color: #ededed;
   padding: 16px 32px;
   margin-top: 2rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #307cc9;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 @media (max-width: 920px) {

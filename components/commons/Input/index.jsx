@@ -1,18 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Input.module.css";
 
-const Input = ({ type, text, name, placeholder, value }) => {
+const Input = ({ type, label, placeholder, value, onChange, isValid }) => {
+  const [,] = useState();
+
   return (
     <div className={styles.formControl}>
-      <label htmlFor={name}>{text}</label>
+      <label htmlFor={label}>{label}</label>
       <input
         type={type}
-        name={name}
-        id={name}
+        name={label}
+        id={label}
         placeholder={placeholder}
         value={value}
-        
+        onChange={onChange}
       />
+      {!isValid && (
+        <p style={{ fontSize: "14px", color: "red" }}>{label} inválido</p>
+      )}
     </div>
   );
 };
