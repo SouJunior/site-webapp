@@ -107,7 +107,6 @@ export const SobreNos = () => {
         <div className={styles.accordion}>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel1a-content"
               id="panel1a-header">
               <Typography variant="string" className={styles.question}>
@@ -128,7 +127,6 @@ export const SobreNos = () => {
           </Accordion>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
@@ -160,7 +158,6 @@ export const SobreNos = () => {
           </Accordion>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
@@ -186,7 +183,6 @@ export const SobreNos = () => {
           </Accordion>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
@@ -217,7 +213,6 @@ export const SobreNos = () => {
           </Accordion>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
@@ -240,7 +235,6 @@ export const SobreNos = () => {
           </Accordion>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
@@ -264,7 +258,6 @@ export const SobreNos = () => {
 
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
@@ -286,7 +279,6 @@ export const SobreNos = () => {
 
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon className={styles.icon} />}
               aria-controls="panel2a-content"
               id="panel2a-header">
               <Typography variant="string" className={styles.question}>
