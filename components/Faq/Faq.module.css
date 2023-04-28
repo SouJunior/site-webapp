@@ -56,14 +56,14 @@
   display: block;
   position: relative;
   width: 380px;
+  height: 5px;
   margin-top: 10px;
   transition: all 0.3s;
   top: 0;
   left: 0;
   content: "";
   border: none;
-  border-bottom: 2px solid #1165ba;
-  color: #007bff;
+  background-color: #1165ba;
 }
 
 .tabContainer div ul li[aria-selected="true"]::after {
