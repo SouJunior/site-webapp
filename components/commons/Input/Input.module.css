@@ -28,3 +28,9 @@
   line-height: 22px;
   color: rgba(125, 125, 125, 0.6);
 }
+
+.errorMessage {
+  color: #ff6863;
+  padding: 10px 0;
+  font-size: 14px;
+}

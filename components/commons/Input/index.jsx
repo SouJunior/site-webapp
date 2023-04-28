@@ -15,9 +15,7 @@ const Input = ({ type, label, placeholder, value, onChange, isValid }) => {
         value={value}
         onChange={onChange}
       />
-      {!isValid && (
-        <p style={{ fontSize: "14px", color: "red" }}>{label} inválido</p>
-      )}
+      {!isValid && <p className={styles.errorMessage}>{label} inválido</p>}
     </div>
   );
 };

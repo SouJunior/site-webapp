@@ -52,9 +52,17 @@
   list-style: none;
 }
 
-.tabContainer div ul li[aria-selected="true"] {
+.tabContainer div ul li[aria-selected="true"] ::after {
+  display: block;
+  position: relative;
+  width: 380px;
+  margin-top: 10px;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  content: "";
   border: none;
-  border-bottom: 2px solid #007bff;
+  border-bottom: 2px solid #1165ba;
   color: #007bff;
 }
 
@@ -67,20 +75,37 @@
   width: 100%;
 }
 
+.headerTitle {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.accordion div button[aria-expanded="true"] img {
+  transition: all 0.4s;
+}
+
+.accordion div button[aria-expanded="false"] img {
+  transition: all 0.4s;
+  transform: rotate(180deg);
+}
+
 .accordion {
   padding: 80px 0;
 }
 
 .accordion button {
   color: #fff;
-  font-size: 20px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
   margin: 0;
-  padding: 1rem 0;
   font-size: 1rem;
   text-align: left;
   background-color: transparent;
@@ -90,12 +115,7 @@
 .accordionItem {
   padding: 45px 80px;
   border-bottom: 1px solid #fff;
-  color: #fff;
-}
-
-.accordionItem {
   color: #ededed;
-  gap: 10px;
 }
 
 .accordionTitle {
@@ -114,6 +134,7 @@
   font-size: 15px;
   color: #ededed;
   padding: 15px 0;
+  font-weight: 300;
 }
 
 /*FORM*/

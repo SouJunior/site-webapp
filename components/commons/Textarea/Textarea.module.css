@@ -16,3 +16,9 @@
   font-size: 18px;
   line-height: 22px;
 }
+
+.errorMessage {
+  color: #ff6863;
+  padding: 10px 0;
+  font-size: 14px;
+}

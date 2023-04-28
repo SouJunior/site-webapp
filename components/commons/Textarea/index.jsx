@@ -17,14 +17,11 @@ const Textarea = ({
         onChange={onChange}
         value={value}
         id={name}
-        className={styles.textarea}
-      >
+        className={styles.textarea}>
         {mensage}
       </textarea>
       {!isValid && (
-        <p style={{ fontSize: "14px", color: "red" }}>
-          Por favor, preencha este campo.
-        </p>
+        <p className={styles.errorMessage}>Por favor, preencha este campo.</p>
       )}
     </div>
   );

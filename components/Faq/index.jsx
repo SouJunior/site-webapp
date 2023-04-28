@@ -88,49 +88,58 @@ export const Faq = () => {
               </Tab>
             </TabList>
             <TabPanel className={styles.tabPanel}>
-              <Accordion className={styles.accordion}>
+              <Accordion className={styles.accordion} allowMultiple>
                 {souJunior.map(({ titulo, descricao, id }) => (
                   <AccordionItem
                     initialEntered
                     className={styles.accordionItem}
                     key={id}
-                    header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
-                  >
+                    header={
+                      <div className={styles.headerTitle}>
+                        <h2 className={styles.accordionTitle}>{titulo}</h2>
+                        <img src="../assets/icons/chevron-up.svg" alt="" />
+                      </div>
+                    }>
                     <p className={styles.accordionP}>{descricao} </p>
                   </AccordionItem>
                 ))}
               </Accordion>
             </TabPanel>
             <TabPanel>
-              <Accordion className={styles.accordion}>
+              <Accordion className={styles.accordion} allowMultiple>
                 {mentor.map(({ titulo, descricao, id }) => (
                   <AccordionItem
                     initialEntered
                     className={styles.accordionItem}
                     key={id}
-                    header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
-                  >
+                    header={
+                      <div className={styles.headerTitle}>
+                        <h2 className={styles.accordionTitle}>{titulo}</h2>
+                        <img src="../assets/icons/chevron-up.svg" alt="" />
+                      </div>
+                    }>
                     <p className={styles.accordionP}>{descricao}</p>
                   </AccordionItem>
                 ))}
               </Accordion>
             </TabPanel>
             <TabPanel>
-              <Accordion className={styles.accordion}>
+              <Accordion className={styles.accordion} allowMultiple>
                 {voluntario.map(({ titulo, descricao, id }) => (
                   <AccordionItem
                     initialEntered
                     className={styles.accordionItem}
                     key={id}
-                    header={<h2 className={styles.accordionTitle}>{titulo}</h2>}
-                    {...(
-                      <img
-                        className={styles.chevron}
-                        src="../../public/assets/icons/chevron-down.svg"
-                        alt="Chevron Down"
-                      />
-                    )}
-                  >
+                    header={
+                      <div className={styles.headerTitle}>
+                        <h2 className={styles.accordionTitle}>{titulo}</h2>
+                        <img
+                          src="../assets/icons/chevron-up.svg"
+                          alt=""
+                          srcset=""
+                        />
+                      </div>
+                    }>
                     <p className={styles.accordionP}>{descricao} </p>
                   </AccordionItem>
                 ))}
@@ -195,8 +204,7 @@ export const Faq = () => {
             <button
               className={styles.button}
               type="submit"
-              disabled={!isNameValid || !isEmailValid || !isTextValid}
-            >
+              disabled={!isNameValid || !isEmailValid || !isTextValid}>
               Enviar
             </button>
           </div>
