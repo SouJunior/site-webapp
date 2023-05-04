@@ -1,5 +1,5 @@
 import { SobreNos } from "../components/AboutUs";
-import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
+import HeaderComponent from "../components/commons/HeaderComponent";
 
 const sobreNos = () => {
   return (
