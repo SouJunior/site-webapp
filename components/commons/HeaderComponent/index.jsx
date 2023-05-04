@@ -7,9 +7,9 @@ import { MenuMobile } from "../MenuMobile";
 import styles from "./HeaderComponent.module.css";
 import { keyWords } from "../../../utils/keyWords";
 
-const HeaderComponent = () => {
+const HeaderComponent = ({ img = "/assets/BannerV2.svg" }) => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
-
+  console.log(img);
   return (
     <header className={styles.HeaderContainer}>
       <Head>
@@ -48,6 +48,13 @@ const HeaderComponent = () => {
           <div className={styles.menuHamburger}>
             <MenuMobile />
           </div>
+        </div>
+        <div className={styles.heroBanner}>
+          <div className={styles.stars}>
+            <img src="/assets/left-stars.svg" alt="" />
+            <img src="/assets/right-stars.svg" alt="" />
+          </div>
+          <img src={img} alt="" />
         </div>
         {/* <div className={styles.frontBottom}>
           <div className={styles.bannerArea}>

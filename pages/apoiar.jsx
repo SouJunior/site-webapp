@@ -4,7 +4,7 @@ import HeaderComponent from "../components/commons/HeaderComponent";
 const apoiar = () => {
   return (
     <>
-      <HeaderComponent />
+      <HeaderComponent img="/assets/sou-apoiador-cover.svg" />
       <Apoiador />
     </>
   );

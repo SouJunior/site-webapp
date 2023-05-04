@@ -4,30 +4,15 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 60vh;
   padding: 72px 32px;
-  margin-bottom: 5rem;
   color: white;
-  /* background: linear-gradient(
-    180deg,
-    #046ad0 8%,
-    rgba(23, 17, 35, 0.78) 91.75%
-  ); */
-}
-
-.HeaderWrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 108.9rem;
 }
 
 .navbar {
   width: 100%;
-  /* margin: 5rem 0rem 0.5rem 0rem; */
   display: flex;
   align-items: center;
+  margin-bottom: 32px 0;
 }
 
 .menuHamburger {
@@ -43,60 +28,35 @@
 }
 
 .front {
-  max-width: 108.9rem;
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  position: absolute;
+  max-width: 108.9rem;
+  width: 100%;
 }
 
-.front::after {
-  content: "";
-  position: relative;
+.heroBanner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 1453px;
   height: 47rem;
-  bottom: -70px;
-  background: url("/assets/BannerV2.svg") no-repeat center/contain;
+  position: relative;
+  object-fit: contain;
+  margin-top: 50px;
 }
 
-/* .bannerArea {
+.stars {
   display: flex;
-  width: 100%;
-  position: absolute;
-  justify-content: center;
-  margin-bottom: 100px;
-} */
-
-/* .stars {
-  display: flex;
-  position: absolute;
   justify-content: space-between;
-  width: 70%;
-  top: 7.5rem;
-  z-index: 2;
-} */
-
-/* .starOne {
-  background-image: url("/assets/Stars1.png");
-  height: 9.2rem;
-  width: 7rem;
-  transform: rotate(90deg);
+  position: relative;
+  width: 100%;
+  padding: 0 200px;
 }
-
-.starTwo {
-  background-image: url("/assets/Stars2.png");
-  height: 9.2rem;
-  width: 7rem;
-  padding-top: 100px;
-} */
 
 .textArea {
-  /* max-width: 110rem; */
   width: 100%;
   display: flex;
   justify-content: center;
@@ -115,7 +75,6 @@
 
 .textInner article {
   width: 100%;
-  margin-bottom: 5.4rem;
   font-size: 46px;
   text-align: center;
 }
