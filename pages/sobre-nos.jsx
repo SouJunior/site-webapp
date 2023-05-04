@@ -8,6 +8,7 @@ const sobreNos = () => {
         tittle={
           "Uma experiência real de trabalho em uma empresa de tecnologia."
         }
+        subtitle={""}
       />
       <SobreNos />
     </>

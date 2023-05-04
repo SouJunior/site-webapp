@@ -6,7 +6,10 @@ import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
 const Home = () => {
   return (
     <>
-      <HeaderComponent tittle={"Texto para a página home!"} />
+      <HeaderComponent
+        tittle={"Texto para a página home!"}
+        subtitle={"O Junior de hoje é o Sênior do amanhã!"}
+      />
       <AboutSection />
       <OccupationSection />
       <ParticipationSection />

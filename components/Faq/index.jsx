@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { IoMdAdd, IoMdClose } from "react-icons/io";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
@@ -11,8 +10,6 @@ import { RadioButton } from "../commons/RadioButton";
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 
 export const Faq = () => {
-  const [souJr, setSouJr] = useState(false);
-  const [icon, setIcon] = useState(IoMdAdd);
   const [radioOption, setRadioOption] = useState("Sou Junior");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -24,12 +21,12 @@ export const Faq = () => {
   const [emailTouched, setEmailTouched] = useState(false);
   const [messageTouched, setMessageTouched] = useState(false);
 
-  function handleNameChange(event) {
+  const handleNameChange = (event) => {
     const newName = event.target.value;
     setName(newName);
     setNameTouched(true);
     setIsNameValid(validateName(newName));
-  }
+  };
 
   function handleEmailChange(event) {
     const newEmail = event.target.value;

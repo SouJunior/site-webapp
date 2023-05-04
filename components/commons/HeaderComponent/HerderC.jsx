@@ -7,7 +7,7 @@ import { MenuMobile } from "../../commons/MenuMobile";
 import styles from "./HeaderC.module.css";
 import { keyWords } from "../../../utils/keyWords";
 
-const HeaderComponent = ({ tittle }) => {
+const HeaderComponent = ({ tittle, subtitle }) => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
 
   return (
@@ -60,7 +60,7 @@ const HeaderComponent = ({ tittle }) => {
           <div className={styles.textArea}>
             <div className={styles.textInner}>
               <article>{tittle}</article>
-              <p>O Junior de hoje é o Sênior do amanhã!</p>
+              <p>{subtitle}</p>
             </div>
           </div>
         </div>
