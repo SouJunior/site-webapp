@@ -115,6 +115,14 @@ export const Apoiador = () => {
     return message.trim() !== "";
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (isNameValid && isEmailValid && isTextValid) {
+      console.log(`Nome: ${name}`);
+      console.log(`Email: ${email}`);
+    }
+  }
+
   return (
     <>
       <section className={styles.ApoiadorSection}>
@@ -209,7 +217,17 @@ export const Apoiador = () => {
                 text="Como você gostaria de apoiar o Sou Junior?*"
               />
 
-              <button className={styles.button} type="submit">
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={
+                  !isNameValid ||
+                  !isEmailValid ||
+                  !isTextValid ||
+                  !isPhoneValid ||
+                  !isSurnameValid ||
+                  !isConfirmEmailValid
+                }>
                 Enviar
               </button>
             </div>
