@@ -8,6 +8,14 @@ export const Apoiador = () => {
   const [radioOption, setRadioOption] = useState("Sou Pessoa Física");
   return (
     <>
+      <div className={styles.textInner}>
+        <h2>Sou Apoiador</h2>
+        <p>
+          Olá! Preenchendo as informações abaixo, você receberá um contato do
+          nosso time, para te conhecer um pouco mais e entender como você
+          gostaria de apoiar a Sou Junior
+        </p>
+      </div>
       <section className={styles.ApoiadorSection}>
         <section className={styles.formContainer}>
           <form className={styles.form}>

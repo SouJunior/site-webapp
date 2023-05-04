@@ -1,20 +1,31 @@
-.header {
+.HeaderContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 60vh;
+  padding: 72px 32px;
   margin-bottom: 5rem;
   color: white;
-  backdrop-filter: overlay;
-  background-image: url("../../../public/assets/hero-background.svg");
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     #046ad0 8%,
     rgba(23, 17, 35, 0.78) 91.75%
-  );
+  ); */
+}
+
+.HeaderWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 108.9rem;
 }
 
 .navbar {
   width: 100%;
-  margin: 5rem 0rem 0.5rem 0rem;
+  /* margin: 5rem 0rem 0.5rem 0rem; */
   display: flex;
   align-items: center;
 }
@@ -32,25 +43,45 @@
 }
 
 .front {
-  width: 1090px;
-}
-
-.bannerArea {
+  max-width: 108.9rem;
+  width: 100%;
   display: flex;
-  position: relative;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
 }
 
-.stars {
+.front::after {
+  content: "";
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 1453px;
+  height: 47rem;
+  bottom: -70px;
+  background: url("/assets/BannerV2.svg") no-repeat center/contain;
+}
+
+/* .bannerArea {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  margin-bottom: 100px;
+} */
+
+/* .stars {
   display: flex;
   position: absolute;
   justify-content: space-between;
   width: 70%;
   top: 7.5rem;
   z-index: 2;
-}
+} */
 
-.starOne {
+/* .starOne {
   background-image: url("/assets/Stars1.png");
   height: 9.2rem;
   width: 7rem;
@@ -61,21 +92,18 @@
   background-image: url("/assets/Stars2.png");
   height: 9.2rem;
   width: 7rem;
-}
-
-.banner {
-  background-image: url("/assets/BannerV2.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
-  width: 100%;
-  height: 47rem;
-}
+  padding-top: 100px;
+} */
 
 .textArea {
+  /* max-width: 110rem; */
   width: 100%;
   display: flex;
   justify-content: center;
+  font-family: "Radio Canada";
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
 }
 
 .textInner {
@@ -101,7 +129,7 @@
 
 @media (max-width: 900px) {
   .navbar {
-    margin: 5rem auto 0.5rem auto;
+    padding: 0 32px;
   }
 
   .textArea {
@@ -123,7 +151,7 @@
 }
 
 @media (max-width: 570px) {
-  .banner {
+  .front {
     background-image: url("/assets/Hero.svg");
   }
 }
