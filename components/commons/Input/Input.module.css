@@ -1,6 +1,7 @@
 .formControl {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 
 .formControl label {
@@ -16,8 +17,10 @@
   width: 100%;
   height: 58px;
   padding-left: 2rem;
+  /* margin-bottom: 3.5rem; */
   font-size: 18px;
   border-radius: 3px;
+  /* position: absolute; */
 }
 
 .formControl input::placeholder {
@@ -33,4 +36,6 @@
   color: #ff6863;
   padding: 10px 0;
   font-size: 14px;
+  /* top: -38px;
+  position: relative; */
 }
