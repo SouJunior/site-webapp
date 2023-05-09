@@ -135,7 +135,7 @@ export const Faq = () => {
 
         <form className={styles.form} onSubmit={sendEmail}>
 
-        <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
+          <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
 
           <div className={styles.radios}>
             <RadioButton
