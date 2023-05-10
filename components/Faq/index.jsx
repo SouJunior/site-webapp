@@ -45,26 +45,13 @@ export const Faq = () => {
     setIsTextValid(validateMessage(newText));
   }
 
-  function validateName(name) {
-    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
-    return nameRegex.test(name);
-  }
+  function sendEmail(e) {
+    //  e.preventDefault();
 
-  function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (isNameValid && isEmailValid && isTextValid) {
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-    }
-  }
-
-  function validateMessage(message) {
-    return message.trim() !== "";
+    alert("enviado");
+    setName("");
+    setEmail("");
+    setMessage("");
   }
 
   return (
@@ -154,7 +141,11 @@ export const Faq = () => {
       </div>
 
       <section className={styles.formSection}>
-        <form className={styles.form}>
+
+        <form className={styles.form} onSubmit={sendEmail}>
+
+          <form className={styles.form} onSubmit={handleSubmit(sendEmail)}>
+
           <div className={styles.radios}>
             <RadioButton
               options={[
@@ -208,6 +199,7 @@ export const Faq = () => {
               Enviar
             </button>
           </div>
+        </form>
         </form>
       </section>
     </>
