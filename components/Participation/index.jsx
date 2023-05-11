@@ -1,21 +1,47 @@
 import { useState } from "react";
+import Image from "next/image";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 
 import styles from "./Participation.module.css";
+import { headers } from "../../utils/headers";
 
 export const ParticipationSection = () => {
   const [textJr, setTextJr] = useState(false);
   const [textMentor, setTextMentor] = useState(false);
   const [textSupporter, setTextSupporter] = useState(false);
-  const [textCommunity, setTextCommunity] = useState(false);
+  // const [textCommunity, setTextCommunity] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
 
   return (
-    <section className={styles.ParticipationSection} id={"participar"}>
-      <div className={styles.container}>
-        <div className={styles.leftSide}>
-          <h1 className={styles.h1}>Quem pode participar?</h1>
-          <p className={styles.paragraph}>
+    <>
+      <div className={styles.headerContainer}>
+        <h1 className={styles.h1}>
+          Faça você também parte da nossa comunidade!
+        </h1>
+        <div className={styles.headers}>
+          <div>
+            {headers.map(({ id, img }) => (
+              <Image key={id} src={img} width={100} height={100} />
+            ))}
+          </div>
+        </div>
+      </div>
+      <section className={styles.ParticipationSection} id={"participar"}>
+        <div className={styles.container}>
+          <div className={styles.leftSide}>
+            <p className={styles.paragraph}>
+              Na SouJunior, há diversas maneiras de participar do projeto, tanto
+              para juniores como para mentores ou apoiadores.
+            </p>
+            <p className={styles.paragraph}>
+              Os interessados em colaborar podem ajudar na construção do projeto
+              ou patrocinar a iniciativa como apoiadores ou parceiros.
+            </p>
+            <p className={styles.paragraph}>
+              Há várias formas de participar e os interessados podem clicar em
+              uma das categorias abaixo e preencher as informações solicitadas.
+            </p>
+            {/* <p className={styles.paragraph}>
             Aqui na SouJunior, você poderá participar do projeto de muitas
             maneiras. Temos oportunidades para profissionais nível júnior e
             mentores das mais diversas áreas, caso você tenha o interesse de
@@ -40,172 +66,112 @@ export const ParticipationSection = () => {
             parceiro. Confira abaixo todas as categorias de participação
             disponíveis na SouJunior, preencha os formulários das quais for do
             seu interesse e entraremos em contato!
-          </p>
-        </div>
-
-        <div className={styles.rightSide}>
-          <div className={textJr ? styles.textJr : styles.hide}>
-            <button
-              className={styles.btn}
-              onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}
-            >
-              {textJr ? <IoMdClose /> : <IoMdAdd />}
-              <h2>Sou Júnior</h2>
-            </button>
-
-            {textJr && (
-              <>
-                <p className={styles.p}>
-                  São as pessoas que querem trabalhar na área de tecnologia,
-                  estudaram ou estão estudando sobre a área de interesse,
-                  mas&nbsp;
-                  <strong>
-                    &nbsp; ainda não têm toda a experiência exigida
-                  </strong>
-                  &nbsp; pelos recrutadores e empresas para as contratarem para
-                  uma vaga júnior.
-                  <br />
-                  <br />
-                  Se você identificou que possui interesse em alguma das
-                  carreiras acima, mas ainda não tem experiência (seu perfil
-                  Junior será analisado pelo Linkedin),
-                  <strong>
-                    &nbsp; pode aplicar para participar do SouJunior, através do
-                    formulário de inscrição
-                  </strong>
-                  .<br />
-                  <br />
-                  Assim que tivermos vaga para sua área de interesse,
-                  analisaremos suas informações e caso você seja um match,
-                  entraremos em contato. Daremos sempre prioridade para aqueles
-                  que já participem do servidor&nbsp;
-                  <strong>SouJunior no Discord</strong> e do
-                  <strong> Github da SouJunior</strong> por já estarem
-                  familiarizados com as ferramentas e sobre como projeto
-                  funciona.
-                </p>
-                <br />
-                <br />
-                <button className={styles.button}>
-                  <a
-                    href="https://forms.gle/d7yFWXjCPj9CLFFN9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Quero Participar
-                  </a>
-                </button>
-              </>
-            )}
+          </p> */}
           </div>
 
-          <div className={textMentor ? styles.textMentor : styles.hide}>
-            <button
-              className={styles.btn}
-              onClick={() => setTextMentor(!textMentor) && setIcon(IoMdClose)}
-            >
-              {textMentor ? <IoMdClose /> : <IoMdAdd />}
-              <h2 className={styles.border}>Sou Mentor</h2>
-            </button>
+          <div className={styles.rightSide}>
+            <div className={textJr ? styles.textJr : styles.hide}>
+              <button
+                className={styles.btn}
+                onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}>
+                {textJr ? <IoMdClose /> : <IoMdAdd />}
+                <h2>Sou Júnior</h2>
+              </button>
 
-            {textMentor && (
-              <>
-                <p className={styles.p}>
-                  São profissionais já inseridos e
-                  <b> atuantes no mercado de trabalho, há pelo menos 6 meses</b>
-                  .
+              {textJr && (
+                <>
+                  <p className={styles.p}>
+                    A SouJunior oferece uma oportunidade para pessoas
+                    interessadas em trabalhar na área de tecnologia, mas que
+                    ainda não têm experiência suficiente. Os candidatos podem se
+                    inscrever através de um formulário. As informações dos
+                    candidatos serão avaliadas quando houver vagas disponíveis
+                    para a área de interesse e o candidato será contatado para
+                    seguir o processo.
+                  </p>
                   <br />
                   <br />
-                  Se você tem disponibilidade e interesse em contribuir para a
-                  SouJunior, preencha o formulário de inscrição que entraremos
-                  em contato quando tivermos a demanda de pessoas mentoras na
-                  área de sua atuação.
+                  <button className={styles.button}>
+                    <a
+                      href="https://forms.gle/d7yFWXjCPj9CLFFN9"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      Quero Participar
+                    </a>
+                  </button>
+                </>
+              )}
+            </div>
+
+            <div className={textMentor ? styles.textMentor : styles.hide}>
+              <button
+                className={styles.btn}
+                onClick={() =>
+                  setTextMentor(!textMentor) && setIcon(IoMdClose)
+                }>
+                {textMentor ? <IoMdClose /> : <IoMdAdd />}
+                <h2 className={styles.border}>Sou Mentor</h2>
+              </button>
+
+              {textMentor && (
+                <>
+                  <p className={styles.p}>
+                    A SouJunior busca profissionais atuantes no mercado de
+                    trabalho há pelo menos 6 meses para atuar como mentores. Os
+                    interessados devem preencher o formulário de inscrição e
+                    serão contatados quando houver demanda na área de atuação.”
+                  </p>
                   <br />
-                  <br />
-                </p>
-                <br />
-                <button className={styles.button}>
-                  <a
-                    href="https://forms.gle/d7yFWXjCPj9CLFFN9"
-                    target="_blank"
-                    rel="noopener noreferrer "
-                  >
-                    Quero Participar
-                  </a>
-                </button>
-              </>
-            )}
-          </div>
+                  <button className={styles.button}>
+                    <a
+                      href="https://forms.gle/d7yFWXjCPj9CLFFN9"
+                      target="_blank"
+                      rel="noopener noreferrer ">
+                      Quero Participar
+                    </a>
+                  </button>
+                </>
+              )}
+            </div>
 
-          <div className={textSupporter ? styles.textSupporter : styles.hide}>
-            <button
-              className={styles.btn}
-              onClick={() =>
-                setTextSupporter(!textSupporter) && setIcon(IoMdClose)
-              }
-            >
-              {textSupporter ? <IoMdClose /> : <IoMdAdd />}
-              <h2 className={styles.border}> Sou Apoiador</h2>
-            </button>
+            <div className={textSupporter ? styles.textSupporter : styles.hide}>
+              <button
+                className={styles.btn}
+                onClick={() =>
+                  setTextSupporter(!textSupporter) && setIcon(IoMdClose)
+                }>
+                {textSupporter ? <IoMdClose /> : <IoMdAdd />}
+                <h2 className={styles.border}> Sou Apoiador</h2>
+              </button>
 
-            {textSupporter && (
-              <>
-                <p className={styles.p}>
-                  São pessoas que tenham interesse e possam contribuir de alguma
-                  forma para o projeto SouJunior. <br />
-                  <br />
-                  <ul>
-                    <li>
-                      Pessoas de divulgação, que tenham canal no YouTube,
-                      podcast, blog ou administradores de grupos, que abordem
-                      assuntos referentes às áreas de atuação de profissionais
-                      de tecnologia.
-                    </li>
-                    <br />
-                    <br />
+              {textSupporter && (
+                <>
+                  <p className={styles.p}>
+                    O projeto SouJunior busca pessoas interessadas em contribuir
+                    para o projeto de alguma forma, incluindo financiadores da
+                    iniciativa, divulgadores com canais no YouTube, podcast ou
+                    blog sobre tecnologia, especialistas dispostos a palestrar
+                    para profissionais Juniores de tecnologia, recrutadores e
+                    empresas que desejam contratar. Interessados devem se
+                    inscrever através do formulário e, posteriormente,
+                    contatados pela equipe responsável.
+                  </p>
 
-                    <li>
-                      Pessoas especialistas que se disponham a palestrar sobre
-                      algum assunto de interesse, aos profissionais Juniors de
-                      tecnologia.
-                    </li>
-                    <br />
-                    <br />
+                  <button className={styles.button}>
+                    <a href="/apoiar" rel="noopener noreferrer">
+                      Quero Participar
+                    </a>
+                  </button>
+                </>
+              )}
+            </div>
 
-                    <li>
-                      Recrutadores e empresas dispostas a contratar ou que
-                      priorizem a contratação dos profissionais Juniors
-                      voluntários da SouJunior.
-                    </li>
-                    <br />
-                    <br />
-                  </ul>
-                  Se você pode contribuir para a SouJunior como pessoa apoiadora
-                  ou parceira, inscreva-se através do formulário e nossa equipe
-                  responsável entrará em contato com você.
-                </p>
-                <br />
-                <br />
-                <button className={styles.button}>
-                  <a
-                    href="https://forms.gle/d7yFWXjCPj9CLFFN9"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Quero Participar
-                  </a>
-                </button>
-              </>
-            )}
-          </div>
-
-          <div className={textCommunity ? styles.textCommunity : styles.hide}>
+            {/* <div className={textCommunity ? styles.textCommunity : styles.hide}>
             <button
               className={styles.btn}
               onClick={() =>
                 setTextCommunity(!textCommunity) && setIcon(IoMdClose)
-              }
-            >
+              }>
               {textCommunity ? <IoMdClose /> : <IoMdAdd />}
               <h2 className={styles.border}>Comunidade</h2>
             </button>
@@ -241,16 +207,16 @@ export const ParticipationSection = () => {
                   <a
                     href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                     target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                    rel="noopener noreferrer">
                     Quero Participar
                   </a>
                 </button>
               </>
             )}
+          </div> */}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };

@@ -9,7 +9,7 @@ import { keyWords } from "../../../utils/keyWords";
 
 const HeaderComponent = ({ img = "/assets/BannerV2.svg" }) => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
-  console.log(img);
+
   return (
     <header className={styles.HeaderContainer}>
       <Head>
