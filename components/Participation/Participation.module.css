@@ -27,12 +27,20 @@
   text-align: center;
 }
 
+.headers {
+  display: flex;
+}
+
 .headers img {
   border-radius: 50%;
   object-fit: cover;
-  /* position: relative; */
-  right: -1px;
-  margin: 0 -50px;
+}
+
+.headersImg {
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin: 0 -8px;
 }
 
 .container {
