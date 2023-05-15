@@ -4,7 +4,7 @@ import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
 const faq = () => {
   return (
     <>
-      <HeaderComponent tittle={""} />
+      <HeaderComponent tittle={""}  />
       <Faq />
     </>
   );
