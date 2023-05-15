@@ -19,11 +19,13 @@ export const ParticipationSection = () => {
           Faça você também parte da nossa comunidade!
         </h1>
         <div className={styles.headers}>
-          {headers.map(({ id, img }) => (
-            <div key={id} className={styles.headersImg}>
-              <Image src={img} width={150} height={150} />
-            </div>
-          ))}
+          {headers
+            .filter((header) => header.id <= 7)
+            .map(({ id, img }) => (
+              <div key={id} className={styles.headersImg}>
+                <Image src={img} width={150} height={150} />
+              </div>
+            ))}
         </div>
       </div>
       <section className={styles.ParticipationSection} id={"participar"}>
