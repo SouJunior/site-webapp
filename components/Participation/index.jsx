@@ -9,7 +9,6 @@ export const ParticipationSection = () => {
   const [textJr, setTextJr] = useState(false);
   const [textMentor, setTextMentor] = useState(false);
   const [textSupporter, setTextSupporter] = useState(false);
-  // const [textCommunity, setTextCommunity] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
   const [action, setAction] = useState(false);
 
@@ -42,32 +41,6 @@ export const ParticipationSection = () => {
               Há várias formas de participar e os interessados podem clicar em
               uma das categorias abaixo e preencher as informações solicitadas.
             </p>
-            {/* <p className={styles.paragraph}>
-            Aqui na SouJunior, você poderá participar do projeto de muitas
-            maneiras. Temos oportunidades para profissionais nível júnior e
-            mentores das mais diversas áreas, caso você tenha o interesse de
-            colocar a &quot;mão na massa&quot; e construir esse projeto conosco.
-            <br />
-            <br />
-            Porém, se o interesse for de patrocinar a iniciativa para que ela
-            continue por muito tempo, você poderá se tornar nosso apoiador ou
-            parceiro. Confira ao lado todas as categorias de participação
-            disponíveis na SouJunior, preencha os formulários das quais for do
-            seu interesse e entraremos em contato!
-          </p>
-          <p className={styles.hidden}>
-            Aqui na SouJunior, você poderá participar do projeto de muitas
-            maneiras. Temos oportunidades para profissionais nível júnior e
-            mentores das mais diversas áreas, caso você tenha o interesse de
-            colocar a &quot;mão na massa&quot; e construir esse projeto conosco.
-            <br />
-            <br />
-            Porém, se o interesse for de patrocinar a iniciativa para que ela
-            continue por muito tempo, você poderá se tornar nosso apoiador ou
-            parceiro. Confira abaixo todas as categorias de participação
-            disponíveis na SouJunior, preencha os formulários das quais for do
-            seu interesse e entraremos em contato!
-          </p> */}
           </div>
 
           <div className={styles.rightSide}>
@@ -176,55 +149,6 @@ export const ParticipationSection = () => {
                 </>
               )}
             </div>
-
-            {/* <div className={textCommunity ? styles.textCommunity : styles.hide}>
-            <button
-              className={styles.btn}
-              onClick={() =>
-                setTextCommunity(!textCommunity) && setIcon(IoMdClose)
-              }>
-              {textCommunity ? <IoMdClose /> : <IoMdAdd />}
-              <h2 className={styles.border}>Comunidade</h2>
-            </button>
-
-            {textCommunity && (
-              <>
-                <p className={styles.p}>
-                  São pessoas que queiram saber como funciona e o que está
-                  acontecendo no projeto. <br />
-                  <br />
-                  Como a SouJunior é uma plataforma Open Source, qualquer pessoa
-                  que se interesse pode acessar as informações sobre o andamento
-                  do projeto. <br />
-                  <br />
-                  Desde <b>curiosos</b> que só querem dar uma olhadinha, até
-                  aqueles que queiram <b>observar como a SouJunior funciona</b>,
-                  antes de decidirem se querem participar do projeto ou não.
-                  <br />
-                  <br />
-                  Acesse o servidor <b>SouJunior no Discord</b> e do{" "}
-                  <b>Github do SouJunior</b>, espie e acompanhe o dia a dia do
-                  projeto, inclusive como ouvinte nas reuniões nos canais de
-                  voz.
-                  <br />
-                  <br />
-                  Ao entrar no servidor SouJunior do Discord, leia atentamente
-                  as regras <b>#rules</b> e fique sempre atento ao <b>#chat</b>{" "}
-                  para interagir com os demais participantes da comunidade.
-                </p>
-                <br />
-                <br />
-                <button className={styles.button}>
-                  <a
-                    href="https://forms.gle/d7yFWXjCPj9CLFFN9"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    Quero Participar!
-                  </a>
-                </button>
-              </>
-            )}
-          </div> */}
           </div>
         </div>
       </section>
