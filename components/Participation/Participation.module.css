@@ -131,6 +131,7 @@
   flex-direction: column;
   border-left: 0.3rem solid #fff;
   transition: ease-out 0.1s;
+  margin-bottom: 12rem;
 }
 
 .btn {
