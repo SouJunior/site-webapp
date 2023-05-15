@@ -11,6 +11,7 @@ export const ParticipationSection = () => {
   const [textSupporter, setTextSupporter] = useState(false);
   // const [textCommunity, setTextCommunity] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
+  const [action, setAction] = useState(false);
 
   return (
     <>
@@ -83,12 +84,18 @@ export const ParticipationSection = () => {
                   <p className={styles.p}>
                     A SouJunior oferece uma oportunidade para pessoas
                     interessadas em trabalhar na área de tecnologia, mas que
-                    ainda não têm experiência suficiente. Os candidatos podem se
-                    inscrever através de um formulário. As informações dos
-                    candidatos serão avaliadas quando houver vagas disponíveis
-                    para a área de interesse e o candidato será contatado para
-                    seguir o processo.
+                    ainda não têm experiência suficiente.
                   </p>
+
+                  <p className={styles.p}>
+                    Os candidatos podem se inscrever através de um formulário.
+                  </p>
+                  <p className={styles.p}>
+                    As informações dos candidatos serão avaliadas quando houver
+                    vagas disponíveis para a área de interesse e o candidato
+                    será contatado para seguir o processo.
+                  </p>
+
                   <br />
                   <br />
                   <button className={styles.button}>
@@ -96,7 +103,7 @@ export const ParticipationSection = () => {
                       href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                       target="_blank"
                       rel="noopener noreferrer">
-                      Quero Participar
+                      Quero Participar!
                     </a>
                   </button>
                 </>
@@ -117,8 +124,10 @@ export const ParticipationSection = () => {
                 <>
                   <p className={styles.p}>
                     A SouJunior busca profissionais atuantes no mercado de
-                    trabalho há pelo menos 6 meses para atuar como mentores. Os
-                    interessados devem preencher o formulário de inscrição e
+                    trabalho há pelo menos 6 meses para atuar como mentores.
+                  </p>
+                  <p className={styles.p}>
+                    Os interessados devem preencher o formulário de inscrição e
                     serão contatados quando houver demanda na área de atuação.”
                   </p>
                   <br />
@@ -127,7 +136,7 @@ export const ParticipationSection = () => {
                       href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                       target="_blank"
                       rel="noopener noreferrer ">
-                      Quero Participar
+                      Quero Participar!
                     </a>
                   </button>
                 </>
@@ -152,14 +161,16 @@ export const ParticipationSection = () => {
                     iniciativa, divulgadores com canais no YouTube, podcast ou
                     blog sobre tecnologia, especialistas dispostos a palestrar
                     para profissionais Juniores de tecnologia, recrutadores e
-                    empresas que desejam contratar. Interessados devem se
-                    inscrever através do formulário e, posteriormente,
-                    contatados pela equipe responsável.
+                    empresas que desejam contratar.
+                  </p>
+                  <p className={styles.p}>
+                    Interessados devem se inscrever através do formulário e,
+                    posteriormente, contatados pela equipe responsável.
                   </p>
 
                   <button className={styles.button}>
                     <a href="/apoiar" rel="noopener noreferrer">
-                      Quero Participar
+                      Quero Participar!
                     </a>
                   </button>
                 </>
@@ -208,7 +219,7 @@ export const ParticipationSection = () => {
                     href="https://forms.gle/d7yFWXjCPj9CLFFN9"
                     target="_blank"
                     rel="noopener noreferrer">
-                    Quero Participar
+                    Quero Participar!
                   </a>
                 </button>
               </>
