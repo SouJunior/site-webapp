@@ -1,10 +1,10 @@
 import { Faq } from "../components/Faq";
-import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
+import HeaderComponent from "../components/commons/HeaderComponent";
 
 const faq = () => {
   return (
     <>
-      <HeaderComponent tittle={""} />
+      <HeaderComponent />
       <Faq />
     </>
   );

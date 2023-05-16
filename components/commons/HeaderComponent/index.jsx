@@ -2,16 +2,16 @@ import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
 
-import { Navbar } from "../../commons/Navbar";
-import { MenuMobile } from "../../commons/MenuMobile";
-import styles from "./HeaderC.module.css";
+import { Navbar } from "../Navbar";
+import { MenuMobile } from "../MenuMobile";
+import styles from "./HeaderComponent.module.css";
 import { keyWords } from "../../../utils/keyWords";
 
-const HeaderComponent = ({ tittle }) => {
+const HeaderComponent = ({ img = "/assets/BannerV2.svg" }) => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.HeaderContainer}>
       <Head>
         <title>
           Sou Junior | Experiência real de trabalho em projetos construída por
@@ -49,7 +49,14 @@ const HeaderComponent = ({ tittle }) => {
             <MenuMobile />
           </div>
         </div>
-        <div className={styles.frontBottom}>
+        <div className={styles.heroBanner}>
+          <div className={styles.stars}>
+            <img src="/assets/left-stars.svg" alt="" />
+            <img src="/assets/right-stars.svg" alt="" />
+          </div>
+          <img src={img} alt="" />
+        </div>
+        {/* <div className={styles.frontBottom}>
           <div className={styles.bannerArea}>
             <div className={styles.banner}></div>
             <div className={styles.stars}>
@@ -57,14 +64,14 @@ const HeaderComponent = ({ tittle }) => {
               <div className={styles.starTwo}></div>
             </div>
           </div>
-          <div className={styles.textArea}>
-            <div className={styles.textInner}>
-              <article>{tittle}</article>
-              <p>O Junior de hoje é o Sênior do amanhã!</p>
-            </div>
-          </div>
-        </div>
+        </div> */}
       </div>
+      {/* <div className={styles.textArea}>
+        <div className={styles.textInner}>
+          <article>{tittle}</article>
+          <p>{subtitle}</p>
+        </div>
+      </div> */}
     </header>
   );
 };

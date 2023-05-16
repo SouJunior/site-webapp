@@ -20,6 +20,9 @@ export const SobreNos = () => {
 
   return (
     <>
+      <div className={styles.textInner}>
+        <h2>Uma experiência real de trabalho em uma empresa de tecnologia.</h2>
+      </div>
       <section className={styles.container}>
         <h1>Sobre Nós</h1>
         <div className={styles.border}>

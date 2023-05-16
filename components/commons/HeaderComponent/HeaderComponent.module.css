@@ -1,22 +1,18 @@
-.header {
+.HeaderContainer {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 5rem;
+  width: 100%;
+  padding: 72px 32px;
   color: white;
-  backdrop-filter: overlay;
-  background-image: url("../../../public/assets/hero-background.svg");
-  background: linear-gradient(
-    180deg,
-    #046ad0 8%,
-    rgba(23, 17, 35, 0.78) 91.75%
-  );
 }
 
 .navbar {
   width: 100%;
-  margin: 5rem 0rem 0.5rem 0rem;
   display: flex;
   align-items: center;
+  margin-bottom: 32px 0;
 }
 
 .menuHamburger {
@@ -32,50 +28,42 @@
 }
 
 .front {
-  width: 1090px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 108.9rem;
+  width: 100%;
 }
 
-.bannerArea {
+.heroBanner {
   display: flex;
-  position: relative;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  width: 1453px;
+  height: 47rem;
+  position: relative;
+  object-fit: contain;
+  margin-top: 50px;
 }
 
 .stars {
   display: flex;
-  position: absolute;
   justify-content: space-between;
-  width: 70%;
-  top: 7.5rem;
-  z-index: 2;
-}
-
-.starOne {
-  background-image: url("/assets/Stars1.png");
-  height: 9.2rem;
-  width: 7rem;
-  transform: rotate(90deg);
-}
-
-.starTwo {
-  background-image: url("/assets/Stars2.png");
-  height: 9.2rem;
-  width: 7rem;
-}
-
-.banner {
-  background-image: url("/assets/BannerV2.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  position: relative;
   width: 100%;
-  height: 47rem;
+  padding: 0 200px;
 }
 
 .textArea {
   width: 100%;
   display: flex;
   justify-content: center;
+  font-family: "Radio Canada";
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
 }
 
 .textInner {
@@ -87,7 +75,6 @@
 
 .textInner article {
   width: 100%;
-  margin-bottom: 5.4rem;
   font-size: 46px;
   text-align: center;
 }
@@ -101,7 +88,7 @@
 
 @media (max-width: 900px) {
   .navbar {
-    margin: 5rem auto 0.5rem auto;
+    padding: 0 32px;
   }
 
   .textArea {
@@ -123,7 +110,7 @@
 }
 
 @media (max-width: 570px) {
-  .banner {
+  .front {
     background-image: url("/assets/Hero.svg");
   }
 }

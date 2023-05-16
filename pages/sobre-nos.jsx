@@ -1,5 +1,5 @@
 import { SobreNos } from "../components/AboutUs";
-import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
+import HeaderComponent from "../components/commons/HeaderComponent";
 
 const sobreNos = () => {
   return (
@@ -8,6 +8,7 @@ const sobreNos = () => {
         tittle={
           "Uma experiência real de trabalho em uma empresa de tecnologia."
         }
+        subtitle={""}
       />
       <SobreNos />
     </>
