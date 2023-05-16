@@ -2,13 +2,13 @@ import React from 'react';
 import style from "./Card.module.css"
 
 
-const Card = ({ title,title2,description, image }) => (
+const Card = ({ title,subtitle,description, image }) => (
   <section className={style.card}>
     <h1>{title}</h1>
     <div className={style.container}>
       <div className={style.content} >
       
-        <h2>{title2}</h2>
+        <h2>{subtitle}</h2>
         <h3>{description}</h3>
         
         <button className={style.button}>
