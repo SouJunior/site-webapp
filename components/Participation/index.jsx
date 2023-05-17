@@ -23,7 +23,12 @@ export const ParticipationSection = () => {
             .filter((header) => header.id <= 7)
             .map(({ id, img }) => (
               <div key={id} className={styles.headersImg}>
-                <Image src={img} width={150} height={150} />
+                <Image
+                  src={img}
+                  width={150}
+                  height={150}
+                  className={styles.image}
+                />
               </div>
             ))}
         </div>
