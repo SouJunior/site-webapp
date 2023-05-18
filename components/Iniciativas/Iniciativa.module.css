@@ -22,5 +22,12 @@
 }
 
 
-/*Card*/
+.swiper-pagination-bullet{
+  color: #FFF;
+}
+
+.swiper-pagination-bullet-active{
+color: red;
+}
+
 

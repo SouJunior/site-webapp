@@ -2,84 +2,166 @@
 background: linear-gradient(180deg, rgba(10, 168, 126, 0.75) 26.48%, rgba(0, 0, 0, 0.6375) 113.99%);
 width: 100%;
 height: 100%;
-
 }
+
+.card h1{
+  color:  #EDEDED;
+ font-weight: 700;
+ font-size: 48px;
+ line-height: 58px;
+ text-align: center;
+ padding-top: 100px;
+ 
+ }
+ 
+ 
+ .container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin-top: 150px;
+ }
+ 
+ .content{
+   text-align: flex-start;
+   justify-content: center;
+   padding-left: 50px;
+   /* padding-top: 100px; */
+   margin-bottom: 100px;
+ }
+ 
+.content h2{
+   
+ color:#EDEDED;
+ left: 14.5%;
+ right: 50%;
+ margin-top: 10%;
+ bottom: 57.22%;
+ font-style: normal;
+ font-weight: 700;
+ font-size: 48px;
+ line-height: 58px;
+ padding-top: 40px;
+ }
+ 
+ 
+ .content h3{
+  Width:  602px;
+ Height: 114px;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 32px;
+ line-height: 38px;
+ color: #EDEDED;
+ padding-top: 60px;
+ }
+ 
+.image img{
+   border-radius: 50%;
+   Width:500.02px;
+ Height:498px;
+ }
+ 
+ .card .button{
+ left: 1849px;
+ margin-top: 240px;
+ Width:544px;
+ Height:75px;
+ Padding:16px, 32px, 16px, 32px;
+ Gap:10px;
+ background: #046AD0;
+ color: #EDEDED;
+ border: none;
+ outline: none;
+ text-align: center;
+ font-style: normal;
+ font-weight: 600;
+ font-size: 32px;
+ line-height: 18px;
+ }
+ 
+/*Card2*/
 
 .card2{
   background: linear-gradient(180deg, rgba(233, 0, 0, 0.75) 37.32%, rgba(161, 98, 210, 0.375) 97.89%, rgba(4, 106, 208, 0.75) 149.15%);
   mix-blend-mode: normal;
+  width: 100%;
+  height: 100%;
 }
 
-.card h1{
- color:  #EDEDED;
-font-weight: 700;
-font-size: 48px;
-line-height: 58px;
-text-align: center;
-margin-top: 150px;
-
-}
-
-
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 150px;
-}
-
-.content{
-  text-align: flex-start;
-  justify-content: center;
-  padding-left: 50px;
-}
-
-.content h2{
-  
-color:#EDEDED;
-left: 14.5%;
-right: 50%;
-margin-top: 10%;
-bottom: 57.22%;
-font-style: normal;
-font-weight: 700;
-font-size: 48px;
-line-height: 58px;
-padding-top: 40px;
-}
-
-
-.content h3{
- Width:  602px;
-Height: 114px;
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 38px;
-color: #EDEDED;
-padding-top: 60px;
-}
-
-.image img{
-  border-radius: 50%;
-  Width:500.02px;
-Height:498px;
-}
-
-.button{
-left: 1849px;
-margin-top: 150px;
-Width:544px;
-Height:75px;
-Padding:16px, 32px, 16px, 32px;
-Gap:10px;
-background: #046AD0;
-color: #EDEDED;
-border: none;
-outline: none;
-text-align: center;
-font-style: normal;
-font-weight: 600;
-font-size: 32px;
-line-height: 18px;
-}
+.card2 h1{
+  color:  #EDEDED;
+ font-weight: 700;
+ font-size: 48px;
+ line-height: 58px;
+ text-align: center;
+ padding-top: 100px;
+ 
+ }
+ 
+ 
+ .card2 .container{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   margin-top: 150px;
+ }
+ 
+ .card2 .content{
+   text-align: flex-start;
+   justify-content: center;
+   padding-left: 50px;
+   /* padding-top: 100px; */
+   margin-bottom: 100px;
+ }
+ 
+ .card2 .content h2{
+   
+ color:#EDEDED;
+ left: 14.5%;
+ right: 50%;
+ margin-top: 10%;
+ bottom: 57.22%;
+ font-style: normal;
+ font-weight: 700;
+ font-size: 48px;
+ line-height: 58px;
+ padding-top: 40px;
+ }
+ 
+ 
+ .card2 .content h3{
+  Width:  602px;
+ Height: 114px;
+ font-style: normal;
+ font-weight: 400;
+ font-size: 32px;
+ line-height: 38px;
+ color: #EDEDED;
+ padding-top: 60px;
+ }
+ 
+ .card2 .image img{
+   border-radius: 50%;
+   Width:500.02px;
+ Height:498px;
+ }
+ 
+ .card2 .button{
+ left: 1849px;
+ margin-top: 240px;
+ Width:544px;
+ Height:75px;
+ Padding:16px, 32px, 16px, 32px;
+ Gap:10px;
+ background: #046AD0;
+ color: #EDEDED;
+ border: none;
+ outline: none;
+ text-align: center;
+ font-style: normal;
+ font-weight: 600;
+ font-size: 32px;
+ line-height: 18px;
+ }
+ 
