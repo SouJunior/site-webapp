@@ -1,9 +1,9 @@
 import { OccupationSection } from "../components/OccupationSection";
 import { AboutSection } from "../components/AboutSection";
 import { ParticipationSection } from "../components/Participation";
-import HeaderComponent from "../components/commons/HeaderComponent";
-import Iniciativas2 from "../components/Iniciativas2";
 import HeaderHome from "../components/HeaderHome";
+import Iniciativas from "../components/Iniciativas";
+import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
 
 function Home() {
   return (
@@ -11,7 +11,7 @@ function Home() {
       <HeaderComponent />
       <HeaderHome />
       <OccupationSection />
-      <Iniciativas2 />
+      <Iniciativas />
       <ParticipationSection />
     </>
   );
