@@ -49,13 +49,7 @@ const HeaderComponent = ({ img = "/assets/BannerV2.svg" }) => {
             <MenuMobile />
           </div>
         </div>
-        <div className={styles.heroBanner}>
-          <div className={styles.stars}>
-            <img src="/assets/left-stars.svg" alt="" />
-            <img src="/assets/right-stars.svg" alt="" />
-          </div>
-          <img src={img} alt="" />
-        </div>
+
         {/* <div className={styles.frontBottom}>
           <div className={styles.bannerArea}>
             <div className={styles.banner}></div>
