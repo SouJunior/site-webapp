@@ -1,12 +1,12 @@
-.mySwiper{
-  width: 100%;
-  /* height: 80vh;
-  background: grey; */
-}
+/* .mySwiper{
+  width: 100%; 
+ height: 80vh;
+  background: grey;
+} */
 
 .swiper {
   width: 100%;
-  height: 50%;
+  /* height:10vh; */
   
 }
 
@@ -15,19 +15,17 @@
   font-size: 150px;
   background: #FFF;
   width: 100%;
+  height: 879px;
   /* Center slide text vertically */
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 
-.swiper-pagination-bullet{
-  color: #FFF;
-}
 
-.swiper-pagination-bullet-active{
-color: red;
-}
+
+
 
 

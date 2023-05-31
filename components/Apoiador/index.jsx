@@ -115,112 +115,124 @@ export const Apoiador = () => {
     return message.trim() !== "";
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    if (isNameValid && isEmailValid && isTextValid) {
+      console.log(`Nome: ${name}`);
+      console.log(`Email: ${email}`);
+    }
+  }
+
   return (
     <>
-      <div className={styles.textInner}>
-        <h2>Sou Apoiador</h2>
-        <p>
-          Olá! Preenchendo as informações abaixo, você receberá um contato do
-          nosso time, para te conhecer um pouco mais e entender como você
-          gostaria de apoiar a Sou Junior
-        </p>
-      </div>
       <section className={styles.ApoiadorSection}>
-        <form className={styles.form}>
-          <div className={styles.radios}>
-            <RadioButton
-              options={["Sou Pessoa Física", "Sou Pessoa Jurídica"]}
-              value={radioOption}
-              setValue={setRadioOption}
-            />
-          </div>
-          <div className={styles.labelInput}>
-            <Input
-              type="text"
-              text="Nome/Instituição*"
-              placeholder="Digite seu nome completo"
-              label="Nome"
-              value={name}
-              onChange={handleNameChange}
-              isValid={!nameTouched || isNameValid}
-            />
-          </div>
-          <div className={styles.labelInput}>
-            <Input
-              type="text"
-              text="Como prefere ser chamado?*"
-              placeholder="Como prefere ser chamado"
-              label="Surname"
-              value={surname}
-              onChange={handleSurnameChange}
-              isValid={!surnameTouched || isSurnameValid}
-            />
-          </div>
+        <section className={styles.formContainer}>
+          <form className={styles.form}>
+            <div className={styles.radios}>
+              <RadioButton
+                options={["Sou Pessoa Física", "Sou Pessoa Jurídica"]}
+                value={radioOption}
+                setValue={setRadioOption}
+              />
+            </div>
+            <div className={styles.labelInput}>
+              <Input
+                type="text"
+                text="Nome/Instituição*"
+                placeholder="Digite seu nome completo"
+                label="Nome"
+                value={name}
+                onChange={handleNameChange}
+                isValid={!nameTouched || isNameValid}
+              />
+            </div>
+            <div className={styles.labelInput}>
+              <Input
+                type="text"
+                text="Como prefere ser chamado?*"
+                placeholder="Como prefere ser chamado"
+                label="Surname"
+                value={surname}
+                onChange={handleSurnameChange}
+                isValid={!surnameTouched || isSurnameValid}
+              />
+            </div>
 
-          <div className={styles.labelInput}>
-            <Input
-              type="text"
-              text="Telefone/Whats*"
-              placeholder="(xx) xxxxxxxxx"
-              label="Telefone (com DDD)"
-              value={phone}
-              onChange={handlePhoneChange}
-              isValid={!phoneTouched || validatePhone(phone)}
-            />
-          </div>
+            <div className={styles.labelInput}>
+              <Input
+                type="text"
+                text="Telefone/Whats*"
+                placeholder="(xx) xxxxxxxxx"
+                label="Telefone (com DDD)"
+                value={phone}
+                onChange={handlePhoneChange}
+                isValid={!phoneTouched || validatePhone(phone)}
+              />
+            </div>
 
-          <div className={styles.labelInput}>
-            <Input
-              text="Confirme seu telefone/whats*"
-              label="Confirmar Telefone"
-              type="tel"
-              placeholder="(xx) xxxxxxxxx"
-              value={confirmPhone}
-              onChange={handleConfirmPhoneChange}
-              isValid={
-                confirmPhone === "" || validateConfirmPhone(confirmPhone)
-              }
-            />
-          </div>
+            <div className={styles.labelInput}>
+              <Input
+                text="Confirme seu telefone/whats*"
+                label="Confirmar Telefone"
+                type="tel"
+                placeholder="(xx) xxxxxxxxx"
+                value={confirmPhone}
+                onChange={handleConfirmPhoneChange}
+                isValid={
+                  confirmPhone === "" || validateConfirmPhone(confirmPhone)
+                }
+              />
+            </div>
 
-          <div>
-            <Input
-              type="email"
-              text="Qual o seu e-mail?*"
-              placeholder="Digite o seu e-mail"
-              label="E-mail"
-              value={email}
-              onChange={handleEmailChange}
-              isValid={!emailTouched || isEmailValid}
-            />
-          </div>
+            <div>
+              <Input
+                type="email"
+                text="Qual o seu e-mail?*"
+                placeholder="Digite o seu e-mail"
+                label="E-mail"
+                value={email}
+                onChange={handleEmailChange}
+                isValid={!emailTouched || isEmailValid}
+              />
+            </div>
 
-          <div>
-            <Input
-              type="email"
-              text="Confirme seu e-mail?*"
-              label="Confirmar Email"
-              placeholder="Digite o seu e-mail"
-              value={confirmEmail}
-              onChange={handleConfirmEmailChange}
-              isValid={!confirmEmailTouched || isConfirmEmailValid}
-            />
-          </div>
+            <div>
+              <Input
+                type="email"
+                text="Confirme seu e-mail?*"
+                label="Confirmar Email"
+                placeholder="Digite o seu e-mail"
+                value={confirmEmail}
+                onChange={handleConfirmEmailChange}
+                isValid={!confirmEmailTouched || isConfirmEmailValid}
+              />
+            </div>
 
-          <div className={styles.area}>
-            <Textarea
-              name="description"
-              value={message}
-              isValid={!messageTouched || validateMessage(message)}
-              onChange={handleMessageChange}
-              text="Como você gostaria de apoiar o Sou Junior?*"
-            />
+            <div className={styles.area}>
+              <Textarea
+                name="description"
+                value={message}
+                isValid={!messageTouched || validateMessage(message)}
+                onChange={handleMessageChange}
+                text="Como você gostaria de apoiar o Sou Junior?*"
+              />
 
-            <button className={styles.button} type="submit">
-              Enviar
-            </button>
-          </div>
-        </form>
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={
+                  !isNameValid ||
+                  !isEmailValid ||
+                  !isTextValid ||
+                  !isPhoneValid ||
+                  !isSurnameValid ||
+                  !isConfirmEmailValid
+                }>
+                Enviar
+              </button>
+            </div>
+          </form>
+        </section>
       </section>
     </>
   );
