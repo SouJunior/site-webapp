@@ -1,0 +1,165 @@
+.HeaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 72px 32px;
+  color: white;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px 0;
+}
+
+.menuHamburger {
+  display: none;
+}
+
+.logo {
+  flex: 1;
+}
+
+.menu {
+  flex: 2;
+}
+
+.front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 108.9rem;
+  width: 100%;
+}
+
+.heroBanner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1453px;
+  height: 47rem;
+  position: relative;
+  object-fit: contain;
+  margin-top: 50px;
+}
+
+.stars {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  padding: 0 200px;
+}
+
+.textArea {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Radio Canada";
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+}
+
+.textInner {
+  display: flex;
+  flex-direction: column;
+  max-width: 120ch;
+  width: 100%;
+}
+
+.textInner article {
+  width: 100%;
+  font-size: 46px;
+  text-align: center;
+}
+
+.textInner p {
+  width: 100%;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 2.4rem;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 32px;
+  }
+
+  .textArea {
+    justify-content: space-evenly;
+  }
+
+  .textInner {
+    margin: 1rem;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menuHamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 570px) {
+  .front {
+    background-image: url("/assets/Hero.svg");
+  }
+}
+
+@media (max-width: 414px) {
+  .header {
+    padding: 2rem;
+  }
+
+  .header,
+  .textArea {
+    flex-direction: column;
+  }
+
+  .front {
+    width: 100%;
+    margin: 0rem;
+  }
+
+  .navbar {
+    margin-top: 3.8rem;
+    margin-bottom: 10.2rem;
+  }
+
+  .frontBottom {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .textArea {
+    width: 100%;
+  }
+
+  .banner {
+    background-image: url("/assets/bannerGroupMobile.svg");
+  }
+
+  .stars {
+    width: 85%;
+    top: 8rem;
+  }
+
+  .textInner article {
+    font-size: 3.8rem;
+  }
+
+  .textInner p {
+    width: 100%;
+    font-size: 2.8rem;
+    text-align: center;
+  }
+}

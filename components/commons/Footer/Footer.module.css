@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.footerContainer {
+  display: flex;
+  place-content: center;
+  padding: 112px 0;
+}
+
+.align {
+  max-width: 1089px;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+  color: rgba(5, 117, 231, 1);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 32px;
+  margin-bottom: 48px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 39px;
+}
+
+.icons a {
+  font-size: 44px; /*Tamanho dos icones*/
+  color: #0575e7;
+  padding: 0;
+  margin: 0;
+  object-fit: contain;
+}
+
+/*Resposividade*/
+
+@media (max-width: 560px) {
+  .footerContainer {
+    padding: 105px 0;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+  .icons {
+    gap: 22px;
+  }
+  .icons a {
+    font-size: 24px;
+  }
+}
