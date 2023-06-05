@@ -18,7 +18,7 @@
 
 .depositionsContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 0 6.8rem;
   padding-top: 97px;
@@ -47,5 +47,25 @@
 }
 
 .carouselContainer {
-  height: 500px;
+  width: 800px;
 }
+
+.carouselWrapper {
+  position: relative;
+}
+ 
+.leftArrow {
+  position: absolute;
+  left: -90px;
+  top: 30%;
+  cursor: pointer;
+}
+
+.rightArrow {
+  position: absolute;
+  right: -70px;
+  z-index: 10000;
+  top: 30%;
+  cursor: pointer;
+}
+
