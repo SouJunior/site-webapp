@@ -1,0 +1,51 @@
+.depositionsSectionWrapper {
+  height: var(--desktop-screen);
+  background: rgb(24,17,35);
+  background: linear-gradient(180deg, rgba(24,17,35,1) 11%, rgba(0,0,0,0.865983893557423) 38%, rgba(24,17,35,1) 91%);
+}
+
+.depositionsHeader {
+  text-align: center;
+  padding-top: 11rem;
+}
+
+.depositionsTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 3.625rem;
+}
+
+.depositionsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 6.8rem;
+  padding-top: 97px;
+}
+
+.depositionsContainerWrapper {
+  display: flex;
+}
+
+.depositionsContainerWrapper > div {
+  margin-left: -28px;
+}
+
+.collaboratorImg {
+  border-radius: 50%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.subTitle {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 2.375rem;
+  padding-top: 2.5rem;
+}
+
+.carouselContainer {
+  height: 500px;
+}
