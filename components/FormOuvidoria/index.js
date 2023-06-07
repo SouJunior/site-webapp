@@ -1,15 +1,43 @@
-import React from 'react';
+import {useEffect, useState} from 'react';
 import styles from './FormOuvidoria.module.css'
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 const OuvidoriaForm = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  useEffect(() => {
+    const handleUnload = (event) => {
+      if (!isSubmitting) {
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    };
+
+    window.onbeforeunload = handleUnload;
+
+    return () => {
+      window.onbeforeunload = null;
+    };
+  }, [isSubmitting]);
+
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
       alert('Obrigado por ajudar a SouJunior a crescer');
       resetForm();
       setSubmitting(false);
+      setIsSubmitting(true);
     }, 500);
+  };
+
+  const handleCancel = () => {
+    const confirmed = window.confirm('Você deseja mesmo cancelar?');
+
+    if (confirmed) {
+      setIsSubmitting(true);
+      // Redirecionar para a "home"
+      window.location.href = '/';
+    }
   };
 
   const validationSchema = Yup.object().shape({
