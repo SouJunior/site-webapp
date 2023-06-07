@@ -1,0 +1,59 @@
+.depositionCard {
+  background: #EDEDED;
+  border-radius: 24px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px 38px;
+  border-bottom: 8px solid rgba(4, 106, 208, 0.5);
+}
+
+.headerDepositionInfo {
+  display: flex;
+  align-items:center;
+  gap: 29px;
+}
+
+.headerDepositionInfo > div{
+  width: 350px;
+}
+
+.name {
+  color: #046AD0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.role {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3D3D3D;
+}
+
+.depositionImg {
+  display: block;
+  border-radius: 50%;
+}
+
+
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  text-overflow: ellipsis;
+  color: #3D3D3D;
+  padding: 38px;
+}
