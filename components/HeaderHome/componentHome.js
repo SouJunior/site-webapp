@@ -19,7 +19,7 @@ const HomeComponent = ({
           ))}
         </div>
       </div>
-      <img src={image} alt="teste" className={imgStyles} />
+      <img src={image} alt={tittle} className={imgStyles} />
     </div>
   );
 };
