@@ -6,6 +6,9 @@ const Card = ({ title, subtitle, description, image, type }) => (
   <section className={type === "type-1" ? style.card : style.card2}>
     <h1 className={style.title}>{title}</h1>
     <div className={style.container}>
+
+   
+            
       <div className={style.content}>
         <h2>{subtitle}</h2>
 

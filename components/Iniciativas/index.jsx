@@ -39,7 +39,7 @@ export default function App() {
       <Swiper
         className={styles.teste}
         autoplay={{
-          delay: 7000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
        
