@@ -1,6 +1,6 @@
 import styles from "./HeaderHome.module.css";
 
-const HomeComponent = ({
+const HeroHomeComponent = ({
   tittle,
   content,
   image,
@@ -9,11 +9,11 @@ const HomeComponent = ({
 }) => {
   return (
     <div className={containerStyle}>
-      <div className={styles.headerTextContainer}>
+      <div className={styles.TextContent}>
         <h1 className={styles.tittle}>{tittle}</h1>
         <div>
           {content.split("\n").map((linha, index) => (
-            <p key={index} className={styles.content}>
+            <p key={index} className={styles.paragraph}>
               {linha}
             </p>
           ))}
@@ -24,4 +24,4 @@ const HomeComponent = ({
   );
 };
 
-export default HomeComponent;
+export default HeroHomeComponent;
