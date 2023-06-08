@@ -1,44 +1,43 @@
-.headerHomeContainer {
+.HeroHomeContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  padding: 0px 32px;
 }
 
 .skillsContainer {
+  max-width: 140rem;
   display: flex;
-  gap: 5.4rem;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 72px 32px;
-  max-width: 140rem;
-  width: 100%;
+  gap: 5.4rem;
 }
 
 .careerContainer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
-  max-width: 140rem;
   align-items: center;
+  max-width: 140rem;
   padding: 72px 32px;
+}
+
+.headerTextContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .image1 {
   flex: 1;
 }
 
-.headerTextContainer {
-  width: 100%;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 .tittle,
 .content {
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   text-align: start;
 }
@@ -52,6 +51,7 @@
 
 .content {
   font-weight: 400;
+  line-height: 2.9rem;
   font-size: 2.4rem;
   margin-bottom: 4.2rem;
 }

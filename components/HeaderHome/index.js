@@ -5,11 +5,8 @@ const HeaderHome = () => {
   const contentText =
     "A SouJunior oferece a oportunidade de trabalhar com produtos digitais e adquirir habilidade valiosas para a sua transição de carreira. \n Com o nosso apoio, você terá chance de desenvolver suas competências e aprofundar o seu conhecimento em áreas de seu interesse, aumentando assim suas chances de sucesso na sua trajetoria profissional";
 
-  const imgStyle1 = styles.image1;
-  const imgStyle2 = styles.image2;
-
   return (
-    <section className={styles.headerHomeContainer}>
+    <section className={styles.HeroHomeContainer}>
       <HomeComponent
         tittle="Desenvolva habilidades no mercado de tecnologia com a SouJunior."
         content={contentText}
@@ -24,7 +21,7 @@ const HeaderHome = () => {
         desenvolvimento de futuros profissionais do mercado de tecnologia.
         Junte-se a nós e faça a diferença no mundo"
         image={"/assets/career-home.svg"}
-        imgStyles={imgStyle2}
+        imgStyles={styles.image2}
         containerStyle={styles.careerContainer}
       />
     </section>
