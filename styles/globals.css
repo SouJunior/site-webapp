@@ -43,14 +43,14 @@ a {
 .swiper-pagination-bullet {
   background-color: #d9d9d9 !important;
   border: 2px solid #083cf5;
-  width: 34px !important;
-  height: 34px !important;
+  width: 26px !important;
+  height: 26px !important;
   display: inline-block;
   opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #083cf5 !important;
-  width: 46px !important;
-  height: 46px !important;
+  width: 26px !important;
+  height: 26px !important;
 }

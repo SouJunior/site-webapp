@@ -21,9 +21,40 @@ const OuvidoriaForm = () => {
     };
   }, [isSubmitting]);
 
+  // const handleSubmit = (values, { setSubmitting, resetForm }) => {
+  //   setTimeout(() => {
+  //     alert('Obrigado por ajudar a SouJunior a crescer');
+  //     resetForm();
+  //     setSubmitting(false);
+  //     setIsSubmitting(true);
+  //   }, 500);
+  // };
+
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
-      alert('Obrigado por ajudar a SouJunior a crescer');
+      const popup = document.createElement('div');
+      popup.textContent = 'Obrigado por ajudar a SouJunior a crescer';
+  
+      const closeButton = document.createElement('button');
+      closeButton.textContent = 'Fechar';
+      closeButton.addEventListener('click', () => {
+        document.body.removeChild(popup);
+        // window.location.href = '/Home'; // Redireciona para a página inicial
+      });
+  
+      popup.appendChild(closeButton);
+      popup.style.position = 'fixed';
+      popup.style.top = '50%';
+      popup.style.left = '50%';
+      popup.style.transform = 'translate(-50%, -50%)';
+      popup.style.backgroundColor = '#ffffff';
+      popup.style.padding = '20px';
+      popup.style.color = '#000000';
+      popup.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.3)';
+      popup.style.zIndex = '9999';
+  
+      document.body.appendChild(popup);
+  
       resetForm();
       setSubmitting(false);
       setIsSubmitting(true);
