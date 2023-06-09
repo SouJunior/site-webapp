@@ -5,35 +5,54 @@
   align-items: center;
   width: 100%;
   padding: 0px 32px;
+  overflow: hidden;
 }
 
-.skillsContainer {
+.skillsContainer,
+.careerContainer {
   max-width: 140rem;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  gap: 5.4rem;
+}
+/* flex: 1; */
+
+.skillsContainer {
+  justify-content: center;
+  gap: 3.2rem;
 }
 
 .careerContainer {
-  display: flex;
-  flex-wrap: wrap;
   flex-direction: row-reverse;
-  align-items: center;
-  max-width: 140rem;
-  padding: 72px 0px;
 }
 
-.TextContent {
+.textContent {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
+.imageContainer {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin-right: -120px;
+}
+
+.image1 {
+  position: relative;
+  max-width: 120%;
+  width: 816.37px;
+  height: 422.5px;
+}
+
 .image1,
 .image2 {
-  flex: 1;
+  /* flex: 1; */
 }
 
 .tittle,
@@ -58,9 +77,19 @@
 }
 
 @media (max-width: 960px) {
+  .HeroHomeContainer {
+    /* overflow: hidden; */
+  }
   .skillsContainer {
     align-items: center;
   }
+
+  .textContent {
+  }
+
+  .imageContainer {
+  }
+
   .tittle,
   .paragraph {
     text-align: center;
@@ -68,5 +97,9 @@
   .tittle {
     font-size: 3.2rem;
     line-height: 3.8rem;
+  }
+
+  .image1 {
+    min-width: 100%;
   }
 }
