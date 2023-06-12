@@ -21,14 +21,14 @@ const HeroHomeComponent = ({
         </div>
       </div>
       <div className={styles.imageContainer}>
-        {/* <img src={image} alt={tittle} className={imgStyles} /> */}
-        <Image
+        <img src={image} alt={tittle} className={imgStyles} />
+        {/* <Image
           src={image}
           // sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, 100vw"
           width={817}
           height={423}
           loading="lazy"
-        />
+        /> */}
       </div>
     </div>
   );
