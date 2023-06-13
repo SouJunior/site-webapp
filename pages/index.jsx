@@ -3,7 +3,7 @@ import { AboutSection } from "../components/AboutSection";
 import { ParticipationSection } from "../components/Participation";
 import HeaderHome from "../components/HeaderHome";
 import Iniciativas from "../components/Iniciativas";
-import HeaderComponent from "../components/commons/HeaderComponent/HerderC";
+import HeaderComponent from "../components/commons/HeaderComponent";
 
 function Home() {
   return (
