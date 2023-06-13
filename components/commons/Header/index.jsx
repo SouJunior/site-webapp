@@ -4,8 +4,8 @@ import Link from "next/link";
 
 import { Navbar } from "../../commons/Navbar";
 import { MenuMobile } from "../../commons/MenuMobile";
-import styles from "./Header.module.css";
 import { keyWords } from "../../../utils/keyWords";
+import styles from "./Header.module.css";
 
 export const Header = () => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
@@ -25,18 +25,15 @@ export const Header = () => {
         <meta name="robots" content="index, follow" />
       </Head>
       <div className={styles.container}>
-        {/* <div> */}
         <Link href="/" className={styles.logo}>
-          {/* <a> */}
           <Image
             src="/assets/icons/Logo.svg"
             alt="logo SouJunior"
             width={216}
             height={33}
           />
-          {/* </a> */}
         </Link>
-        {/* </div> */}
+
         <div className={styles.menu}>
           <Navbar />
         </div>
@@ -44,16 +41,6 @@ export const Header = () => {
           <MenuMobile />
         </div>
       </div>
-      {/* <div className={styles.frontBottom}>
-          <div className={styles.bannerArea}>
-            <div className={styles.banner}></div>
-            <div className={styles.stars}>
-              <div className={styles.starOne}></div>
-              <div className={styles.starTwo}></div>
-            </div>
-          </div>
-          <div className={styles.textArea}></div>
-        </div> */}
     </header>
   );
 };
