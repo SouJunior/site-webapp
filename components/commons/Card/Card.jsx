@@ -1,16 +1,14 @@
-import React from 'react';
-import style from "./Card.module.css"
-
+import React from "react";
+import style from "./Card.module.css";
 
 const Card = ({ title, subtitle, description, image, type }) => (
   <section className={type === "type-1" ? style.card : style.card2}>
     <h1 className={style.title}>{title}</h1>
     <div className={style.container}>
       <div className={style.content}>
-        <h2>{subtitle}</h2>
+        <h2 className={style.subtitle}>{subtitle}</h2>
 
-        <h3>{description}</h3>
-        <p>{type}</p>
+        <p className={style.paragraph}>{description}</p>
         <button className={style.button}>
           <a
             href="https://discord.com/channels/759176734460346423/1009798805459304540"

@@ -9,7 +9,7 @@ export const data = [
     imgPath: '/assets/collaborators/anderson-nunes.svg',
     name: 'Anderson Nunes',
     role: 'Front-end',
-    description: 'Participei da comunidade SouJunior por mais ou menos 6 meses, durante esse período, aprendi e desenvolvi minhas habilidades como desenvolvedor Front-End, onde atuei na primeira versão do site da SouJunior. Durante esse período que fui voluntário pude aprender sobre diversos aspectos da área de desenvolvimento e empregabilidade, o que acabou me auxiliando em processos seletivos, construção do perfil profissional e como ser encontrado pelos tech recruiters, após 6 meses de participação meu "sim" chegou.'
+    description: "Participei da comunidade SouJunior por mais ou menos 6 meses, durante esse período, aprendi e desenvolvi minhas habilidades como desenvolvedor Front-End, onde atuei na primeira versão do site da SouJunior. Durante esse período que fui voluntário pude aprender sobre diversos aspectos da área de desenvolvimento e empregabilidade, o que acabou me auxiliando em processos seletivos, construção do perfil profissional e como ser encontrado pelos tech recruiters, após 6 meses de participação meu sim chegou."
   },
   {
     imgPath: '/assets/collaborators/ana-santos.svg',

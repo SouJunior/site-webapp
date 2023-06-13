@@ -22,17 +22,18 @@ body {
 }
 
 body {
-  background: url("/assets/hero-background.svg") no-repeat top center,
-    linear-gradient(180deg, #046ad0 8%, rgba(23, 17, 35, 0.78) 28%);
+  background: /*url("/assets/hero-background.svg") no-repeat top center,*/ linear-gradient(
+    180deg,
+    #046ad0 8%,
+    rgba(23, 17, 35, 0.78) 28%
+  );
   background-position: 10px;
   /* background-blend-mode: overlay, normal;
-
+  
   /* background: url("/assets/hero-background.svg") no-repeat top center,
-    linear-gradient(180deg, #046ad0 8.33%, rgba(33, 33, 33, 0.78) 91.75%);
+  linear-gradient(180deg, #046ad0 8.33%, rgba(33, 33, 33, 0.78) 91.75%);
   background-blend-mode: overlay, normal;
   filter: blur(164px); */
-
-  /* filter: blur(164px); */
 }
 
 a {
@@ -45,10 +46,7 @@ img {
   max-width: 100%;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+.swiper-pagination-custom {
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -57,14 +55,15 @@ img {
 .swiper-pagination-bullet {
   background-color: #d9d9d9 !important;
   border: 2px solid #083cf5;
-  width: 34px !important;
-  height: 34px !important;
+  width: 26px !important;
+  height: 26px !important;
   display: inline-block;
   opacity: 1 !important;
+  margin-bottom: 32px !important;
 }
 
 .swiper-pagination-bullet-active {
   background-color: #083cf5 !important;
-  width: 46px !important;
-  height: 46px !important;
+  width: 26px !important;
+  height: 26px !important;
 }

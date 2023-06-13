@@ -4,6 +4,7 @@ import Image from "next/image"
 import { DepositionCard } from "../commons/DepositionCard"
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { Swiper, SwiperSlide } from "swiper/react"
+import { Navigation } from "swiper";
 import { useRef } from "react";
 import arrowLeft from "../../public/assets/arrow-left.svg"
 import arrowright from "../../public/assets/arrow-right.svg"
@@ -38,6 +39,7 @@ export function Depositions() {
         </div>
         <p className={style.subTitle}>O que dizem sobre nós</p>
         </div>
+       
       
       <div className={style.carouselWrapper}>
         <Swiper 
@@ -50,7 +52,7 @@ export function Depositions() {
             <SwiperSlide key={collaborator.imgPath}>
               <DepositionCard imgPath={collaborator.imgPath} title={collaborator.title} description={collaborator.description} role={collaborator.role} name={collaborator.name}/>
             </SwiperSlide>
-          ))}
+          ))} 
         </Swiper>
           <span onClick={handleLeftSide} className={style.leftArrow}>
             <Image src={arrowLeft}/>

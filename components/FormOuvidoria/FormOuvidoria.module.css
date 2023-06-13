@@ -1,0 +1,158 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ 
+  margin-bottom: 60px;
+  padding-bottom: 200px;
+ 
+}
+
+.content{
+  display: flex;
+  width: 1204px;
+  height: 717.95px;
+  left: calc(50% - 1204px/2);
+  justify-content: center;
+  align-items: center;
+
+}
+
+.left{
+  flex-direction: column;
+  width: 602px;
+  height: 293px;
+
+}
+
+.left h1{
+ font-weight: 600;
+font-size: 48px;
+line-height: 120%;
+color: #EDEDED;
+padding-bottom: 3rem;
+}
+
+.left p{
+  font-weight: 600;
+font-size: 24px;
+line-height: 29px;
+color: #EDEDED;
+}
+
+.rigth{
+  width: 848.06px;
+height: 717.95px;
+}
+
+.rigth img{
+  width: 100%;
+  padding-top: 100px;
+}
+
+
+.form h2{
+  font-weight: 600;
+font-size: 48px;
+line-height: 120%;
+text-align: center;
+color: #046AD0;
+padding-bottom: 50px;
+}
+
+/*Formulário*/
+
+.form{
+  width: 1201px;
+  height: 856px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.form div{
+  margin-bottom: 20px;
+}
+
+
+
+.form label{
+  font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+color: #FFFFFF;
+margin-top: 35px;
+
+}
+
+.form .input{
+  padding: 18px 32px;
+  gap: 10px;
+  width: 1198px;
+  height: 65px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  outline: none;
+}
+
+
+
+.form .select{
+  
+  width: 293px;
+  height: 62px;
+left: 269px;
+top: 26px;
+font-weight: 400;
+font-size: 24px;
+line-height: 18px;
+border: none;
+border-bottom: 1px solid #858C93;
+background: #171123;
+color: #FFFFFF;
+outline: none;
+}
+
+.form .select option{
+  width: 1306px;
+  height: 917px;
+  
+}
+
+.form .textarea{
+  width: 1197px;
+height: 330px;
+margin-top: 5px;
+padding: 15px;
+outline: none;
+}
+
+.form button{
+display: flex; 
+justify-content: center;
+align-items: center;
+padding: 16px 32px;
+gap: 10px;
+width: 510px;
+height: 66px;
+background: #046AD0;
+font-weight: 700;
+font-size: 24px;
+line-height: 18px;
+color: #EDEDED;
+margin: 20px auto;
+}
+
+.count{
+  font-size: 18px;
+ 
+}
+
+.errorMessage{
+  color: red;
+  font-size:18px;
+}
+
