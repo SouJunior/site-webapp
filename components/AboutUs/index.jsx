@@ -20,7 +20,11 @@ export const SobreNos = () => {
 
   return (
     <>
-      <div className={styles.textInner}>
+      <div className={styles.bannerContainer}>
+        <img
+          src="/assets/default-banner-group.svg"
+          alt="Uma experiência real de trabalho em uma empresa de tecnologia."
+        />
         <h2>Uma experiência real de trabalho em uma empresa de tecnologia.</h2>
       </div>
       <section className={styles.container}>

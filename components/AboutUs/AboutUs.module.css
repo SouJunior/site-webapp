@@ -1,4 +1,4 @@
-.textInner {
+.bannerContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,13 +9,13 @@
   margin-bottom: 100px;
 }
 
-.textInner p {
+.bannerContainer p {
   font-weight: 400;
   font-size: 24px;
   line-height: 28px;
 }
 
-.textInner h2 {
+.bannerContainer h2 {
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
