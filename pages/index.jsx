@@ -5,7 +5,7 @@ import Iniciativas from "../components/Iniciativas";
 import PrivacyPolicy from "../components/commons/PrivacyPolicy/PrivacyPolicy";
 import { Depositions } from "../components/Depositions";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <HeroHome />
@@ -16,6 +16,6 @@ function Home() {
       <PrivacyPolicy />
     </>
   );
-}
+};
 
 export default Home;

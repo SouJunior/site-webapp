@@ -1,17 +1,17 @@
-.textInner {
+.bannerContainer {
   font-family: "Radio Canada";
   font-style: normal;
   text-align: center;
 }
 
-.textInner p {
+.bannerContainer p {
   font-weight: 400;
   font-size: 32px;
   line-height: 28px;
   margin-bottom: 24px;
 }
 
-.textInner h2 {
+.bannerContainer h2 {
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;

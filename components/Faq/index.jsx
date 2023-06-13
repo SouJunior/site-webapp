@@ -66,7 +66,11 @@ export const Faq = () => {
 
   return (
     <>
-      <div className={styles.textInner}>
+      <div className={styles.bannerContainer}>
+        <img
+          src="/assets/default-banner-group.svg"
+          alt="Uma experiência real de trabalho em uma empresa de tecnologia."
+        />
         <p>Perguntas frequentes</p>
         <h2>Olá! Como podemos de ajudar?</h2>
       </div>
