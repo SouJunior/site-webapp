@@ -14,9 +14,8 @@ import { Autoplay, Pagination } from "swiper";
 
 export default function App() {
   return (
-    <>
+    <section className={styles.swiperContainer}>
       <Swiper
-        className={styles.swiperContainer}
         autoplay={{
           delay: 225000,
           disableOnInteraction: false,
@@ -27,7 +26,7 @@ export default function App() {
         modules={[Autoplay, Pagination]}>
         {iniciativasSouJunior.map(
           ({ title, subtitle, description, image, type }, id) => (
-            <SwiperSlide key={id} className={`${styles["swiper-slide"]}`}>
+            <SwiperSlide key={id}>
               <Card
                 type={type}
                 title={title}
@@ -40,6 +39,6 @@ export default function App() {
           )
         )}
       </Swiper>
-    </>
+    </section>
   );
 }

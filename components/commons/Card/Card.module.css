@@ -99,12 +99,17 @@
 }
 
 @media (max-width: 960px) {
+  .card,
+  .card2 {
+    gap: 0;
+  }
   .container {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    padding: 0 32px;
+    /* padding: 0 32px; */
     margin-top: 72px;
+    gap: 0;
   }
   .content {
     align-items: center;
@@ -117,9 +122,16 @@
     line-height: 120%;
   }
 
+  .subtitle {
+    padding-top: 0;
+  }
+
   .paragraph {
     font-size: 2.4rem;
     line-height: 2.8rem;
     padding-bottom: 58px;
+  }
+  .button {
+    width: 100%;
   }
 }
