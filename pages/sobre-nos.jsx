@@ -4,12 +4,12 @@ import HeaderComponent from "../components/commons/HeaderComponent";
 const sobreNos = () => {
   return (
     <>
-      <HeaderComponent
+      {/* <HeaderComponent
         tittle={
           "Uma experiência real de trabalho em uma empresa de tecnologia."
         }
         subtitle={""}
-      />
+      /> */}
       <SobreNos />
     </>
   );
