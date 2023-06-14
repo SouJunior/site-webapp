@@ -75,7 +75,8 @@ export const Faq = () => {
         <h2>Olá! Como podemos de ajudar?</h2>
       </div>
       <section className={styles.FaqSection}>
-        <div className={styles.tabContainer}>
+        {/* <div className={styles.tabContainer}> */}
+        <div className={styles.container}>
           <Tabs>
             <TabList className={styles.tabList}>
               <Tab className={styles.tab}>
@@ -155,61 +156,63 @@ export const Faq = () => {
       </div>
 
       <section className={styles.formSection}>
-        <form className={styles.form}>
-          <div className={styles.radios}>
-            <RadioButton
-              options={[
-                "Sou Junior",
-                "Voluntário",
-                "Mentor/Apoiador",
-                "Outros",
-              ]}
-              value={radioOption}
-              setValue={setRadioOption}
-            />
-          </div>
+        <div className={styles.container}>
+          <form className={styles.form}>
+            <div className={styles.radios}>
+              <RadioButton
+                options={[
+                  "Sou Junior",
+                  "Voluntário",
+                  "Mentor/Apoiador",
+                  "Outros",
+                ]}
+                value={radioOption}
+                setValue={setRadioOption}
+              />
+            </div>
 
-          <div className={styles.labelInput}>
-            <Input
-              type="text"
-              text="Qual o seu nome?*"
-              placeholder="Digite seu nome completo"
-              label="Nome"
-              value={name}
-              onChange={handleNameChange}
-              isValid={!nameTouched || isNameValid}
-            />
-          </div>
+            <div className={styles.labelInput}>
+              <Input
+                type="text"
+                text="Qual o seu nome?*"
+                placeholder="Digite seu nome completo"
+                label="Nome"
+                value={name}
+                onChange={handleNameChange}
+                isValid={!nameTouched || isNameValid}
+              />
+            </div>
 
-          <div>
-            <Input
-              type="email"
-              text="Qual o seu e-mail?*"
-              placeholder="Digite o seu e-mail"
-              label="E-mail"
-              value={email}
-              onChange={handleEmailChange}
-              isValid={!emailTouched || isEmailValid}
-            />
-          </div>
+            <div>
+              <Input
+                type="email"
+                text="Qual o seu e-mail?*"
+                placeholder="Digite o seu e-mail"
+                label="E-mail"
+                value={email}
+                onChange={handleEmailChange}
+                isValid={!emailTouched || isEmailValid}
+              />
+            </div>
 
-          <div className={styles.area}>
-            <Textarea
-              name="description"
-              value={message}
-              isValid={!messageTouched || validateMessage(message)}
-              onChange={handleMessageChange}
-              text="Fale-nos sobre sua dúvida*"
-            />
+            <div className={styles.area}>
+              <Textarea
+                name="description"
+                value={message}
+                isValid={!messageTouched || validateMessage(message)}
+                onChange={handleMessageChange}
+                text="Fale-nos sobre sua dúvida*"
+              />
 
-            <button
-              className={styles.button}
-              type="submit"
-              disabled={!isNameValid || !isEmailValid || !isTextValid}>
-              Enviar
-            </button>
-          </div>
-        </form>
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={!isNameValid || !isEmailValid || !isTextValid}>
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </>
   );
