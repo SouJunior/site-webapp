@@ -131,14 +131,14 @@ export const Apoiador = () => {
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <h2>Sou Apoaidor</h2>
-        <p>
+        <p className={styles.paragraph}>
           Olá! Preenchendo as informações abaixo, você receberá um contato do
           nosso time, para te conhecer um pouco mais e entender como você
           gostaria de apoiar a Sou Junior
         </p>
       </div>
       <section className={styles.ApoiadorSection}>
-        <section className={styles.formContainer}>
+        <div className={styles.container}>
           <form className={styles.form}>
             <div className={styles.radios}>
               <RadioButton
@@ -244,7 +244,7 @@ export const Apoiador = () => {
               </button>
             </div>
           </form>
-        </section>
+        </div>
       </section>
     </>
   );
