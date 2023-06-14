@@ -75,7 +75,6 @@ export const Faq = () => {
         <h2>Olá! Como podemos de ajudar?</h2>
       </div>
       <section className={styles.FaqSection}>
-        {/* <div className={styles.tabContainer}> */}
         <div className={styles.container}>
           <Tabs>
             <TabList className={styles.tabList}>
@@ -135,11 +134,7 @@ export const Faq = () => {
                     header={
                       <div className={styles.headerTitle}>
                         <h2 className={styles.accordionTitle}>{titulo}</h2>
-                        <img
-                          src="../assets/icons/chevron-up.svg"
-                          alt=""
-                          srcset=""
-                        />
+                        <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }>
                     <p className={styles.accordionP}>{descricao} </p>
