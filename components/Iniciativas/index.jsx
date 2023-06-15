@@ -17,7 +17,7 @@ export default function App() {
     <section className={styles.swiperContainer}>
       <Swiper
         autoplay={{
-          delay: 225000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
