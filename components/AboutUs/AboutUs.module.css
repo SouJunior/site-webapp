@@ -200,4 +200,7 @@
   .paragraph {
     text-align: center;
   }
+  .bannerContainer {
+    flex-direction: column-reverse;
+  }
 }
