@@ -39,7 +39,7 @@ const OuvidoriaForm = () => {
       closeButton.textContent = "Fechar";
       closeButton.addEventListener("click", () => {
         document.body.removeChild(popup);
-        // window.location.href = '/Home'; // Redireciona para a página inicial
+        window.location.href = "/"; // Redireciona para a página inicial
       });
 
       popup.appendChild(closeButton);
@@ -47,11 +47,19 @@ const OuvidoriaForm = () => {
       popup.style.top = "50%";
       popup.style.left = "50%";
       popup.style.transform = "translate(-50%, -50%)";
-      popup.style.backgroundColor = "#ffffff";
+      popup.style.backgroundColor = "#000000";
       popup.style.padding = "20px";
-      popup.style.color = "#000000";
+      popup.style.color = "#FFF";
       popup.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
       popup.style.zIndex = "9999";
+      popup.style.fontSize = "22px";
+      closeButton.style.background = "#046AD0";
+      closeButton.style.color = "#FFF";
+      closeButton.style.width = "100px";
+      closeButton.style.height = "50px";
+      closeButton.style.padding = " 10px";
+      closeButton.style.marginLeft = "18px";
+      closeButton.style.border = "none";
 
       document.body.appendChild(popup);
 
@@ -101,12 +109,10 @@ const OuvidoriaForm = () => {
             </div>
 
             <div className={styles.rigth}>
-              {/* <div className={styles.imageContainer}> */}
               <img
                 src="/assets/ouvidoria.png"
                 alt="imagem de uma atendente ao telefone"
               />
-              {/* </div> */}
             </div>
           </div>
         </div>
