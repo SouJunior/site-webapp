@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-  --desktop-screen: 1040px
+  --desktop-screen: 1040px;
 }
 
 * {
@@ -22,8 +22,18 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, #046ad0 8%, rgba(23, 17, 35, 0.78) 28%);
+  background: /*url("/assets/hero-background.svg") no-repeat top center,*/ linear-gradient(
+    180deg,
+    #046ad0 8%,
+    rgba(23, 17, 35, 0.78) 28%
+  );
   background-position: 10px;
+  /* background-blend-mode: overlay, normal;
+  
+  /* background: url("/assets/hero-background.svg") no-repeat top center,
+  linear-gradient(180deg, #046ad0 8.33%, rgba(33, 33, 33, 0.78) 91.75%);
+  background-blend-mode: overlay, normal;
+  filter: blur(164px); */
 }
 
 a {
@@ -31,10 +41,12 @@ a {
   text-decoration: none;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets,
-.swiper-pagination-bullets.swiper-pagination-horizontal,
-.swiper-pagination-custom,
-.swiper-pagination-fraction {
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.swiper-pagination-custom {
   display: flex !important;
   justify-content: center;
   align-items: center;
@@ -47,6 +59,7 @@ a {
   height: 26px !important;
   display: inline-block;
   opacity: 1 !important;
+  margin-bottom: 32px !important;
 }
 
 .swiper-pagination-bullet-active {

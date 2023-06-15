@@ -1,21 +1,23 @@
-.textInner {
+.AboutSection,
+.InterviewSection,
+.HeadersSection,
+.bannerContainer {
+  width: 100%;
+  padding: 0 3.2rem;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bannerContainer {
   gap: 88px;
-  font-family: "Radio Canada";
   font-style: normal;
   text-align: center;
-  margin-bottom: 100px;
+  padding-bottom: 100px;
 }
 
-.textInner p {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.textInner h2 {
+.bannerContainer h2 {
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
@@ -24,118 +26,100 @@
 }
 
 .container {
+  max-width: 108.4rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  padding-bottom: 6.8rem;
 }
 
-.container h1 {
+.paragraphWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5.2rem;
+  text-align: center;
+}
+
+.title {
   color: #046ad0;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
+  font-size: 3.2rem;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 3.2rem;
 }
 
-.container p {
+.paragraph {
   color: #ffffff;
-  width: 1204px;
-  height: 352px;
-  left: 243px;
-  top: 997px;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 50px;
 }
 
-.border {
-  border-bottom: 2px solid #ffffff;
-}
-
-.interview {
+.ceo {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  max-width: 73rem;
   justify-content: center;
-  flex-direction: column;
-  margin-top: 80px;
+  gap: 16rem;
+  align-items: center;
+  padding: 9rem 0 8.2rem 0;
 }
 
-.interview h1 {
-  color: #046ad0;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.brandao {
+.avatar {
+  flex: 1;
   display: flex;
-  width: 328px;
-  margin: 50px;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
 }
 
-.brandao img {
-  width: 232.6px;
-  height: 235.92px;
+.ceo img {
   border-radius: 50%;
 }
 
-.brandao div {
+.ceoContent {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin-left: 50px;
   justify-content: center;
   align-items: center;
-  padding-top: 20px;
 }
 
-.brandao h2 {
+.ceo h2 {
   font-weight: 700;
   font-size: 20px;
   line-height: 22px;
-  text-align: center;
-  padding-bottom: 10px;
+  padding-bottom: 2.5rem;
 }
 
-.brandao p {
-  width: 328px;
-  height: 110px;
+.ceo p {
   text-align: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  padding-top: 5px;
+  padding-bottom: 17px;
 }
 
-.brandao ul {
+.ceo ul {
   display: flex;
-  padding-top: 5px;
+  gap: 30px;
 }
 
-.brandao ul li {
-  padding: 15px;
+.ceo li {
+  list-style: none;
 }
 
-.brandao a {
+.ceo a {
   text-decoration: none;
 }
 
-.brandao a svg {
+.ceo svg {
   width: 40px;
   height: 40px;
   fill: #046ad0;
-}
-
-.brandao li {
-  list-style: none;
 }
 
 /*Accordion*/
@@ -147,14 +131,6 @@
 .question {
   font-weight: 600;
   font-size: 20px;
-  line-height: 24px;
-}
-
-.paragraphy {
-  font-weight: 300;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 6px 4px;
 }
 
 .icon {
@@ -164,56 +140,64 @@
 
 /*headers*/
 
-.perfil {
+.headersContainer {
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  justify-content: space-around;
-  width: 1000px;
-  height: 600px;
-  margin-top: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(154px, 200px));
+  max-width: 108.4rem;
+  width: 100%;
+  place-content: center;
+  gap: 5.6rem 1.6rem;
 }
 
-.headers {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-  flex-direction: column;
-}
-
-.headers h1 {
+.HeadersSection h1 {
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
   line-height: 120%;
+  text-align: center;
+  padding: 6rem 0;
 }
 
-.headersContainers {
+.headerWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding-bottom: 5.6rem;
 }
 
-.headersContainers img {
-  width: 100px;
-  height: 100px;
+.headerWrapper div {
+  text-align: center;
+}
+
+.headersContainer img {
   border-radius: 50%;
-  margin-bottom: 10px;
   object-fit: cover;
 }
 
-.headersContainers ul {
+.headersContainer ul {
   display: flex;
-}
-
-.headersContainers ul li {
+  gap: 1rem;
   list-style: none;
-  padding: 10px;
 }
 
-.headersContainers a svg {
+.headersContainer svg {
   width: 25px;
   height: 25px;
   fill: #046ad0;
+}
+
+@media (max-width: 960px) {
+  .ceo {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+  }
+  .question,
+  .paragraph {
+    text-align: center;
+  }
 }

@@ -15,66 +15,80 @@ export const SobreNos = () => {
     color: "#FFF",
     borderBottom: "1px solid #FFF",
     borderShadow: "0px",
-    padding: "15px",
+    padding: "2.6rem 1.5rem",
   };
 
   return (
     <>
-      <div className={styles.textInner}>
+      <div className={styles.bannerContainer}>
+        <img
+          src="/assets/default-banner-group.svg"
+          alt="Uma experiência real de trabalho em uma empresa de tecnologia."
+        />
         <h2>Uma experiência real de trabalho em uma empresa de tecnologia.</h2>
       </div>
-      <section className={styles.container}>
-        <h1>Sobre Nós</h1>
-        <div className={styles.border}>
-          <p>
-            O projeto SouJunior surgiu em 01 de Julho de 2019, a partir da
-            insatisfação do idealizador Wouerner Brandão com o mercado tech,
-            quando percebeu que poucas pessoas tinham conhecimento ou
-            experiência na área da tecnologia. Atualmente contamos com mais de
-            120 voluntários.
-            <br />
-            <br />
-            Com o intuito de fomentar a ideia de levar conhecimento e
-            aprendizado numa área em ascensão, Wouerner reuniu algumas pessoas
-            com o mesmo propósito de criar o projeto SouJunior. Preparando assim
-            os profissionais juniores para o mercado por meio da construção de
-            produtos e do conhecimento prático do dia a dia de uma empresa de
-            tecnologia, desde o início, colocando a “mão na massa”.
-            <br />
-            <br />
-            Para que essa iniciativa se torne real, contamos com um time de
-            voluntários, desde iniciantes no mercado de tecnologia até
-            profissionais experientes, que atuam como mentores e lideram os
-            times.
-            <br />
-            <br />
-            A SouJunior contará com um portfólio de produtos que proporcionará
-            visibilidade aos juniores, os conectando tanto aos profissionais de
-            recrutamento, para que a tão almejada primeira experiência seja
-            alcançada, quanto aos mentores que irão orientá-los em sua jornada
-            profissional que está apenas começando.
-            <br />
-            <br />
-            Portanto, participar da SouJunior é uma grande chance de adquirir
-            experiência e de participar de um projeto de alta visibilidade, com
-            o amparo de uma rede de apoio, além do networking e conexão com
-            novas oportunidades.
-          </p>
+      <section className={styles.AboutSection}>
+        <h1 className={styles.title}>Sobre Nós</h1>
+        <div className={styles.container}>
+          <div className={styles.paragraphWrapper}>
+            <p className={styles.paragraph}>
+              O projeto SouJunior surgiu em 01 de Julho de 2019, a partir da
+              insatisfação do idealizador Wouerner Brandão com o mercado tech,
+              quando percebeu que poucas pessoas tinham conhecimento ou
+              experiência na área da tecnologia. Atualmente contamos com mais de
+              120 voluntários.
+            </p>
+            <p className={styles.paragraph}>
+              Com o intuito de fomentar a ideia de levar conhecimento e
+              aprendizado numa área em ascensão, Wouerner reuniu algumas pessoas
+              com o mesmo propósito de criar o projeto SouJunior. Preparando
+              assim os profissionais juniores para o mercado por meio da
+              construção de produtos e do conhecimento prático do dia a dia de
+              uma empresa de tecnologia, desde o início, colocando a “mão na
+              massa”.
+            </p>
+            <p className={styles.paragraph}>
+              Para que essa iniciativa se torne real, contamos com um time de
+              voluntários, desde iniciantes no mercado de tecnologia até
+              profissionais experientes, que atuam como mentores e lideram os
+              times.
+            </p>
+            <p className={styles.paragraph}>
+              A SouJunior contará com um portfólio de produtos que proporcionará
+              visibilidade aos juniores, os conectando tanto aos profissionais
+              de recrutamento, para que a tão almejada primeira experiência seja
+              alcançada, quanto aos mentores que irão orientá-los em sua jornada
+              profissional que está apenas começando.
+            </p>
+            <p className={styles.paragraph}>
+              Portanto, participar da SouJunior é uma grande chance de adquirir
+              experiência e de participar de um projeto de alta visibilidade,
+              com o amparo de uma rede de apoio, além do networking e conexão
+              com novas oportunidades.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className={styles.interview}>
-        <h1>Entrevista o CEO da Sou Junior - Wouerner Brandão</h1>
+      <section className={styles.InterviewSection}>
+        <h2 className={styles.title}>
+          Entrevista o CEO da Sou Junior - Wouerner Brandão
+        </h2>
 
-        <div className={styles.brandao}>
-          <img
-            src="https://avatars.githubusercontent.com/u/287287?v=4"
-            alt="foto de perfil Wouerner Brandão"
-          />
+        <div className={styles.ceo}>
+          <div className={styles.avatar}>
+            <Image
+              src="https://avatars.githubusercontent.com/u/287287?v=4"
+              alt="foto de perfil Wouerner Brandão"
+              width={232}
+              height={232}
+            />
+          </div>
 
-          <div>
+          <div className={styles.ceoContent}>
             <h2>
-              Wouerner Brandão <br /> CEO SouJunior
+              Wouerner Brandão
+              <p>CEO SouJunior</p>
             </h2>
             <p>
               Wouerner Brandão é natural de Brasília, casado, pai do Erik,
@@ -106,7 +120,7 @@ export const SobreNos = () => {
           </div>
         </div>
 
-        <div className={styles.accordion}>
+        <div className={styles.container}>
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel1a-content"
@@ -116,7 +130,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="string" className={styles.paragraphy}>
+              <Typography variant="string" className={styles.paragraph}>
                 Iniciei a carreira na área de tecnologia no ano de 2010 como
                 estagiário, permanecendo 1 ano e 2 meses. Após essa experiência,
                 conquistei uma colocação de contrato CLT. Estudei bacharelado na
@@ -136,7 +150,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 Depois de 5 - 6 anos de carreira já com uma boa bagagem de
                 conhecimentos, via que em alguns lugares que trabalhei tinham
                 estagiários. Mas estas empresas, geralmente não contratavam
@@ -168,7 +182,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 O diferencial é que as pessoas migram para a SouJunior para
                 ganhar experiência, criando projetos reais em grupo, em equipe e
                 as outras comunidades são voltadas para cursos ou para tirar
@@ -195,7 +209,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 A SouJunior está presente nas maiores Redes Sociais, mas na
                 maioria delas percebemos que o conteúdo se perde no meio da
                 diversidade de informações, como postagens, imagens e vídeos.
@@ -222,7 +236,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 Sim. Em relação a ideia do projeto eu sempre tive o propósito de
                 entregar duas coisas: a primeira era promover a experiência
                 prática para os juniores, que mesmo sendo difícil mensurar
@@ -245,7 +259,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 Com certeza eu evolui profissionalmente após a SouJunior. Na
                 verdade, eu não tinha liderado equipes tão grandes, como as que
                 a SouJunior tem hoje. As equipes que eu liderava anteriormente
@@ -267,7 +281,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 O maior desafio foi o recrutamento em alguns aspectos, por ser
                 voluntariado. Outra questão é o desafio financeiro em colocar os
                 projetos on-line, já que tudo se baseia em dólar, como
@@ -289,7 +303,7 @@ export const SobreNos = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography variant="p" className={styles.paragraphy}>
+              <Typography variant="p" className={styles.paragraph}>
                 Provavelmente não. Acredito que a SouJunior terá pequenos
                 negócios para se sustentar, mas não a transformarei em uma
                 empresa no formato total, com profissionais remunerados ou algo
@@ -301,19 +315,21 @@ export const SobreNos = () => {
         </div>
       </section>
 
-      <section className={styles.headers}>
+      <section className={styles.HeadersSection}>
         <h1>
           Essa é a equipe de heads que, junto com o Brandão, gerenciam os
           produtos do projeto!
         </h1>
 
-        <section className={styles.perfil}>
+        <div className={styles.headersContainer}>
           {headers.map(({ id, nome, cargo, img, linkedin, discord }) => {
             return (
-              <div key={id} className={styles.headersContainers}>
+              <div key={id} className={styles.headerWrapper}>
                 <Image src={img} width={100} height={100} />
-                <h2>{nome}</h2>
-                <h3>{cargo}</h3>
+                <div>
+                  <h2>{nome}</h2>
+                  <h3>{cargo}</h3>
+                </div>
                 <ul>
                   <li>
                     <a
@@ -333,7 +349,7 @@ export const SobreNos = () => {
               </div>
             );
           })}
-        </section>
+        </div>
       </section>
     </>
   );

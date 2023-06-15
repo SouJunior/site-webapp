@@ -1,31 +1,11 @@
-/* .mySwiper{
-  width: 100%; 
- height: 80vh;
-  background: grey;
-} */
-
-.swiper {
-  width: 100%;
-  /* height:10vh; */
-  
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 150px;
-  background: #FFF;
-  width: 100%;
-  height: 879px;
-  /* Center slide text vertically */
+.swiperContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
- 
+  margin: 72px 0;
+  height: 100vh;
 }
 
-
-
-
-
-
-
+@media (max-width: 960px) {
+  .swiperContainer {
+    height: auto;
+  }
+}
