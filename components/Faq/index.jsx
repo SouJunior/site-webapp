@@ -67,10 +67,22 @@ export const Faq = () => {
   return (
     <>
       <div className={styles.bannerContainer}>
-        <img
-          src="/assets/default-banner-group.svg"
-          alt="Uma experiência real de trabalho em uma empresa de tecnologia."
-        />
+        <picture>
+          <source
+            media="(max-width: 960px)"
+            srcSet="/assets/default-banner-group-mobile.svg 768w"
+            sizes="960px"
+          />
+          <source
+            srcSet="/assets/default-banner-group.svg 1280w"
+            sizes="1440px"
+          />
+
+          <img
+            src="/assets/default-banner-group.svg"
+            alt="Uma experiência real de trabalho em uma empresa de tecnologia."
+          />
+        </picture>
         <p>Perguntas frequentes</p>
         <h2>Olá! Como podemos de ajudar?</h2>
       </div>

@@ -1,0 +1,69 @@
+.PoliticasSection,
+.formSection,
+.bannerContainer {
+  width: 100%;
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 6.2rem;
+  padding: 0 32px;
+}
+
+.bannerContainer {
+  padding: 72px 32px;
+  text-align: center;
+}
+
+.bannerContainer h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  justify-self: center;
+}
+
+.container {
+  max-width: 108.4rem;
+  width: 100%;
+  display: flex;
+  /* align-items: center; */
+  /* justify-content: center; */
+  flex-direction: column;
+  /* padding-bottom: 6.8rem; */
+  gap: 3.2rem;
+}
+
+.container ul,
+.container li {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  list-style-type: circle;
+}
+
+.list {
+  list-style-type: circle;
+}
+
+.container li p:first-child {
+  font-weight: bold;
+}
+
+.title {
+  color: #046ad0;
+  font-weight: 700;
+  font-size: 3.2rem;
+  /* text-align: center; */
+  /* justify-self: center; */
+  padding-bottom: 3.2rem;
+}
+
+.paragraph,
+.container li {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
