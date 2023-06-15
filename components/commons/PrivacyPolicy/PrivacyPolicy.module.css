@@ -52,10 +52,6 @@
   font-size: 20px;
 }
 
-.privacyContent {
-  display: none;
-}
-
 @media (max-width: 960px) {
   .privacyNotice {
     flex-direction: column;
