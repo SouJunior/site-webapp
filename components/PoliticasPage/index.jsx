@@ -23,6 +23,7 @@ export const PoliticasPage = () => {
 
         <h2>Política Privacidade SouJunior</h2>
       </div>
+      
 
       <section className={styles.PoliticasSection}>
         <div className={styles.container}>
