@@ -14,7 +14,7 @@ import { Autoplay, Pagination } from "swiper";
 
 export default function App() {
   return (
-    <section className={styles.swiperContainer}>
+    <section className={styles.swiperContainer} id="iniciativas">
       <Swiper
         autoplay={{
           delay: 225000,
