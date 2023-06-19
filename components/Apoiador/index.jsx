@@ -130,7 +130,7 @@ export const Apoiador = () => {
           src="/assets/sou-apoiador-cover.svg"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
-        <h2>Sou Apoaidor</h2>
+        <h2>Sou Apoiador</h2>
         <p className={styles.paragraph}>
           Olá! Preenchendo as informações abaixo, você receberá um contato do
           nosso time, para te conhecer um pouco mais e entender como você
