@@ -168,7 +168,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 25px 0;
   font-size: 18px;
   color: #fff;
