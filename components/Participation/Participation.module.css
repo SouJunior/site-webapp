@@ -17,7 +17,7 @@
 
 .headerContainer h1 {
   margin-bottom: 125px;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
