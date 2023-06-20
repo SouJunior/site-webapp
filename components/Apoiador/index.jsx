@@ -211,7 +211,7 @@ export const Apoiador = () => {
             <div>
               <Input
                 type="email"
-                text="Confirme seu e-mail*"
+                text="Confirme seu e-mail.*"
                 label="Confirmar Email"
                 placeholder="Digite o seu e-mail"
                 value={confirmEmail}

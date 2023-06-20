@@ -133,7 +133,7 @@ const OuvidoriaForm = () => {
               {({ isSubmitting, values }) => (
                 <Form>
                   <div>
-                    <label>Nome completo:</label>
+                    <label>Nome completo: *</label>
                     <Field
                       type="text"
                       name="nome"
@@ -147,7 +147,7 @@ const OuvidoriaForm = () => {
                     />
                   </div>
                   <div>
-                    <label>E-mail:</label>
+                    <label>E-mail: *</label>
                     <Field type="email" name="email" className={styles.input} />
                     <ErrorMessage
                       name="email"
@@ -177,7 +177,7 @@ const OuvidoriaForm = () => {
                     />
                   </div>
                   <div>
-                    <label>Mensagem:</label>
+                    <label>Mensagem: *</label>
                     <Field
                       as="textarea"
                       name="mensagem"
