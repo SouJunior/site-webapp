@@ -14,7 +14,7 @@ export const ParticipationSection = () => {
 
   return (
     <>
-      <div className={styles.headerContainer}>
+      <div className={styles.headerContainer} id="participation">
         <h1 className={styles.h1}>
           Faça você também parte da nossa comunidade!
         </h1>

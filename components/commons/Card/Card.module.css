@@ -14,9 +14,11 @@
 
 .card {
   background-image: url("/assets/iniciativa/fundoVerde.png");
+  
 }
 .card2 {
   background-image: url("/assets/iniciativa/estrelas.png");
+  opacity: 0.8;
 }
 
 .container {
