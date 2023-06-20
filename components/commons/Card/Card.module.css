@@ -1,167 +1,136 @@
-.card{
-background: linear-gradient(180deg, rgba(10, 168, 126, 0.75) 26.48%, rgba(0, 0, 0, 0.6375) 113.99%);
-width: 100%;
-height: 100%;
-}
-
-.card h1{
-  color:  #EDEDED;
- font-weight: 700;
- font-size: 48px;
- line-height: 58px;
- text-align: center;
- padding-top: 100px;
- 
- }
- 
- 
- .container{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   margin-top: 150px;
- }
- 
- .content{
-   text-align: flex-start;
-   justify-content: center;
-   padding-left: 50px;
-   /* padding-top: 100px; */
-   margin-bottom: 100px;
- }
- 
-.content h2{
-   
- color:#EDEDED;
- left: 14.5%;
- right: 50%;
- margin-top: 10%;
- bottom: 57.22%;
- font-style: normal;
- font-weight: 700;
- font-size: 48px;
- line-height: 58px;
- padding-top: 40px;
- }
- 
- 
- .content h3{
-  Width:  602px;
- Height: 114px;
- font-style: normal;
- font-weight: 400;
- font-size: 32px;
- line-height: 38px;
- color: #EDEDED;
- padding-top: 60px;
- }
- 
-.image img{
-   border-radius: 50%;
-   Width:500.02px;
- Height:498px;
- }
- 
- .card .button{
- left: 1849px;
- margin-top: 240px;
- Width:544px;
- Height:75px;
- Padding:16px, 32px, 16px, 32px;
- Gap:10px;
- background: #046AD0;
- color: #EDEDED;
- border: none;
- outline: none;
- text-align: center;
- font-style: normal;
- font-weight: 600;
- font-size: 32px;
- line-height: 18px;
- }
- 
-/*Card2*/
-
-.card2{
-  background: linear-gradient(180deg, rgba(233, 0, 0, 0.75) 37.32%, rgba(161, 98, 210, 0.375) 97.89%, rgba(4, 106, 208, 0.75) 149.15%);
-  mix-blend-mode: normal;
+.card,
+.card2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3.2rem;
   width: 100%;
   height: 100%;
+  padding: 0 32px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.card2 h1{
-  color:  #EDEDED;
- font-weight: 700;
- font-size: 48px;
- line-height: 58px;
- text-align: center;
- padding-top: 100px;
- 
- }
- 
- 
- .card2 .container{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-around;
-   margin-top: 150px;
- }
- 
- .card2 .content{
-   text-align: flex-start;
-   justify-content: center;
-   padding-left: 50px;
-   /* padding-top: 100px; */
-   margin-bottom: 100px;
- }
- 
- .card2 .content h2{
-   
- color:#EDEDED;
- left: 14.5%;
- right: 50%;
- margin-top: 10%;
- bottom: 57.22%;
- font-style: normal;
- font-weight: 700;
- font-size: 48px;
- line-height: 58px;
- padding-top: 40px;
- }
- 
- 
- .card2 .content h3{
-  Width:  602px;
- Height: 114px;
- font-style: normal;
- font-weight: 400;
- font-size: 32px;
- line-height: 38px;
- color: #EDEDED;
- padding-top: 60px;
- }
- 
- .card2 .image img{
-   border-radius: 50%;
-   Width:500.02px;
- Height:498px;
- }
- 
- .card2 .button{
- left: 1849px;
- margin-top: 240px;
- Width:544px;
- Height:75px;
- Padding:16px, 32px, 16px, 32px;
- Gap:10px;
- background: #046AD0;
- color: #EDEDED;
- border: none;
- outline: none;
- text-align: center;
- font-style: normal;
- font-weight: 600;
- font-size: 32px;
- line-height: 18px;
- }
- 
+.card {
+  background-image: url("/assets/iniciativa/fundoVerde.png");
+}
+.card2 {
+  background-image: url("/assets/iniciativa/estrelas.png");
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
+  justify-content: space-between;
+  max-width: 144rem;
+  width: 100%;
+}
+
+.content {
+  width: 100%;
+  flex: 1 1 0;
+  flex-direction: column;
+  display: flex;
+  text-align: initial;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image {
+  width: 100%;
+  flex: 1 1 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  border-radius: 50%;
+  width: 500px;
+}
+
+.title {
+  color: #ededed;
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 58px;
+  text-align: center;
+}
+
+.subtitle {
+  color: #ededed;
+  left: 14.5%;
+  right: 50%;
+  margin-top: 10%;
+  bottom: 57.22%;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  padding-top: 40px;
+}
+
+.paragraph {
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ededed;
+  padding-top: 60px;
+  padding-bottom: 134px;
+}
+
+.button {
+  width: 544px;
+  height: 75px;
+  padding: 16px 32px;
+  background: #046ad0;
+  color: #ededed;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 18px;
+}
+
+@media (max-width: 960px) {
+  .card,
+  .card2 {
+    gap: 0;
+  }
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    margin-top: 72px;
+    gap: 0;
+  }
+  .content {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 120%;
+  }
+
+  .subtitle {
+    padding-top: 0;
+  }
+
+  .paragraph {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    padding-bottom: 58px;
+  }
+  .button {
+    width: 100%;
+  }
+}

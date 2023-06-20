@@ -16,43 +16,43 @@ export const OccupationSection = () => {
   };
 
   return (
-    <section className={styles.OccupationSection}>
-      <div className={styles.OccupationContainer}>
-        <h2 className={styles.titlePrimary}>Áreas de atuação</h2>
-        <p className={styles.paragraph}>
-          Aqui na SouJunior, atuam profissionais iniciantes das diversas áreas
-          que compõem uma empresa de tecnologia. Confira abaixo as áreas de
-          atuação que temos em nosso quadro atualmente:
-        </p>
-
-        <div className={styles.itemContainer} ref={carousel}>
-          {carouselItems.map(({ title, icon }) => (
-            <div key={title} className={styles.item}>
-              <Image src={icon} alt={title} width={61} height={61} />
-              <p>{title}</p>
-            </div>
-          ))}
+    <>
+      <h2 className={styles.titlePrimary}>Áreas de atuação</h2>
+      <p className={styles.paragraph}>
+        Aqui na SouJunior, atuam profissionais iniciantes das diversas áreas que
+        compõem uma empresa de tecnologia. Confira abaixo as áreas de atuação
+        que temos em nosso quadro atualmente:
+      </p>
+      <section className={styles.OccupationSection}>
+        <div className={styles.OccupationContainer}>
+          <div className={styles.itemContainer} ref={carousel}>
+            {carouselItems.map(({ title, icon }) => (
+              <div key={title} className={styles.item}>
+                <Image src={icon} alt={title} width={61} height={61} />
+                <p>{title}</p>
+              </div>
+            ))}
+          </div>
         </div>
-
-        <div className={styles.arrowContainer}>
-          <button onClick={handleLeftSide}>
-            <Image
-              src="/assets/button-directional-dark-caroussel.svg"
-              width={34}
-              height={34}
-              alt="Anterior"
-            />
-          </button>
-          <button onClick={handleRightSide}>
-            <Image
-              src="/assets/button-directional-dark-caroussel.svg"
-              width={34}
-              height={34}
-              alt="Próximo"
-            />
-          </button>
-        </div>
+      </section>
+      <div className={styles.arrowContainer}>
+        <button onClick={handleLeftSide}>
+          <Image
+            src="/assets/button-directional-dark-caroussel.svg"
+            width={34}
+            height={34}
+            alt="Anterior"
+          />
+        </button>
+        <button onClick={handleRightSide}>
+          <Image
+            src="/assets/button-directional-dark-caroussel.svg"
+            width={34}
+            height={34}
+            alt="Próximo"
+          />
+        </button>
       </div>
-    </section>
+    </>
   );
 };

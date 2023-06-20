@@ -31,15 +31,15 @@
   justify-content: center;
 }
 
-.headers img {
-  border-radius: 50%;
-  object-fit: cover;
+.headersImg {
+  margin: 0 -8px;
 }
 
-.headersImg {
-  border-radius: 50%;
+.image {
+  width: 154px;
+  height: 154px;
   object-fit: cover;
-  margin: 0 -8px;
+  border-radius: 50%;
 }
 
 .container {
@@ -202,6 +202,9 @@
 /*Responsividade*/
 
 @media (max-width: 960px) {
+  .ParticipationSection {
+    padding: 52px 32px;
+  }
   .container {
     flex-direction: column;
     width: 100%;
@@ -226,5 +229,21 @@
   .leftSide .hidden {
     display: flex;
     font-size: 1.4rem;
+  }
+
+  .headerContainer {
+    padding: 52px 32px;
+  }
+
+  .headerContainer h1 {
+    margin-bottom: 80px;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+  }
+
+  .headersImg {
+    width: 9rem;
+    height: 9rem;
   }
 }
