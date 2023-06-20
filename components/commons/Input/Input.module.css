@@ -6,7 +6,7 @@
 
 .formControl label {
   padding-bottom: 1rem;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -17,14 +17,12 @@
   width: 100%;
   height: 58px;
   padding-left: 2rem;
-  /* margin-bottom: 3.5rem; */
   font-size: 18px;
   border-radius: 3px;
-  /* position: absolute; */
 }
 
 .formControl input::placeholder {
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -36,6 +34,4 @@
   color: #ff6863;
   padding: 10px 0;
   font-size: 14px;
-  /* top: -38px;
-  position: relative; */
 }

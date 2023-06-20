@@ -84,7 +84,7 @@ export const Faq = () => {
           />
         </picture>
         <p>Perguntas frequentes</p>
-        <h2>Olá! Como podemos de ajudar?</h2>
+        <h2>Olá! Como podemos te ajudar?</h2>
       </div>
       <section className={styles.FaqSection}>
         <div className={styles.container}>

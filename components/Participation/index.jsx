@@ -20,7 +20,7 @@ export const ParticipationSection = () => {
         </h1>
         <div className={styles.headers}>
           {headers
-            .filter((header) => header.id <= 7)
+            .filter((header) => header.id <= 9)
             .map(({ id, img }) => (
               <div key={id} className={styles.headersImg}>
                 <Image

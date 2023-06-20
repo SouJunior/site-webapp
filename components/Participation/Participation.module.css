@@ -17,7 +17,7 @@
 
 .headerContainer h1 {
   margin-bottom: 125px;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   font-weight: 600;
   font-size: 48px;
@@ -46,7 +46,7 @@
   display: flex;
   max-width: 109.9rem;
   gap: 4rem;
-  font-family: "Radio Canada", sans-serif;
+  font-family: inherit;
 }
 
 .leftSide {
@@ -71,7 +71,7 @@
   font-size: 2.4rem;
   font-weight: 300;
   line-height: 2.7rem;
-  font-family: "Radio Canada", sans-serif;
+  font-family: inherit;
   color: rgba(249, 249, 249, 1);
   max-width: 55ch;
 }
@@ -113,7 +113,7 @@
   font-weight: 600;
   font-size: 3.2rem;
   line-height: 2.6rem;
-  font-family: "Radio Canada";
+  font-family: inherit;
 }
 
 .hide {

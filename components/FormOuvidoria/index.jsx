@@ -157,7 +157,7 @@ const OuvidoriaForm = () => {
                   </div>
                   <div className={styles.options}>
                     <Field as="select" name="assunto" className={styles.select}>
-                      <option label="Seleciona o assunto *" value="" disabled>
+                      <option label="Selecione o assunto" value="" disabled>
                         Selecione o assunto
                       </option>
                       <option label="Sugestão" value="Sugestão">
