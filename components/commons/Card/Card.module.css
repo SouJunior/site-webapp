@@ -83,6 +83,7 @@
   color: #ededed;
   padding-top: 60px;
   padding-bottom: 134px;
+  filter: brightness(10);
 }
 
 .button {
