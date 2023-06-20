@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Card.module.css";
 
-const Card = ({ title, subtitle, description, image, type }) => (
+const Card = ({ title, subtitle, description, image, type, path }) => (
   <section className={type === "type-1" ? style.card : style.card2}>
     <h1 className={style.title}>{title}</h1>
     <div className={style.container}>
@@ -11,7 +11,7 @@ const Card = ({ title, subtitle, description, image, type }) => (
         <p className={style.paragraph}>{description}</p>
         <button className={style.button}>
           <a
-            href="https://discord.com/channels/759176734460346423/1009798805459304540"
+            href={path}
             target="_blank"
             rel="noreferrer">
             Clique aqui e Confira!

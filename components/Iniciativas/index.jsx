@@ -9,6 +9,7 @@ import styles from "./Iniciativa.module.css";
 import Card from "../commons/Card/Card";
 import { iniciativasSouJunior } from "../../utils/iniciativasSwipe";
 
+
 // import required modules
 import { Autoplay, Pagination } from "swiper";
 
@@ -16,16 +17,16 @@ export default function App() {
   return (
     <section className={styles.swiperContainer} id="iniciativas">
       <Swiper
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
         modules={[Autoplay, Pagination]}>
         {iniciativasSouJunior.map(
-          ({ title, subtitle, description, image, type }, id) => (
+          ({ title, subtitle, description, image, type, path }, id) => (
             <SwiperSlide key={id}>
               <Card
                 type={type}
@@ -33,6 +34,7 @@ export default function App() {
                 subtitle={subtitle}
                 description={description}
                 image={image}
+                path={path}
                 className={styles.swiperSlide}
               />
             </SwiperSlide>

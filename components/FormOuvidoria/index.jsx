@@ -133,7 +133,7 @@ const OuvidoriaForm = () => {
               {({ isSubmitting, values }) => (
                 <Form>
                   <div>
-                    <label>Nome completo:</label>
+                    <label>Nome completo: *</label>
                     <Field
                       type="text"
                       name="nome"
@@ -147,7 +147,7 @@ const OuvidoriaForm = () => {
                     />
                   </div>
                   <div>
-                    <label>E-mail:</label>
+                    <label>E-mail: *</label>
                     <Field type="email" name="email" className={styles.input} />
                     <ErrorMessage
                       name="email"
@@ -157,7 +157,7 @@ const OuvidoriaForm = () => {
                   </div>
                   <div className={styles.options}>
                     <Field as="select" name="assunto" className={styles.select}>
-                      <option label="Seleciona o assunto" value="" disabled>
+                      <option label="Seleciona o assunto *" value="" disabled>
                         Selecione o assunto
                       </option>
                       <option label="Sugestão" value="Sugestão">
@@ -177,7 +177,7 @@ const OuvidoriaForm = () => {
                     />
                   </div>
                   <div>
-                    <label>Mensagem:</label>
+                    <label>Mensagem: *</label>
                     <Field
                       as="textarea"
                       name="mensagem"
