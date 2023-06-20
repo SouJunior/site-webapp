@@ -22,7 +22,7 @@ export function Depositions() {
                 {data
                   .filter((collaborator) => collaborator.id <= 7)
                   .map(({ imgPath }) => (
-                    <div className={style.collaboratorImg}>
+                    <div className={style.collaboratorImg} key={imgPath}>
                       <Image
                         key={imgPath}
                         src={imgPath}
