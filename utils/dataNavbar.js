@@ -1,7 +1,10 @@
 export const dataNavbar = [
-  { title: "Home", path: "/" },
   { title: "Sobre Nós", path: "/sobre-nos" },
-  { title: "Participar", path: "/apoiar" },
-  { title: "Redes Sociais", path: "#redes-sociais" },
+  { title: "Áreas de Atuação", path: "/areas-atuacao" },
+  { title: "Nossas Iniciativas", path: "/#iniciativas" },
+  { title: "Depoimentos", path: "/#depoimentos" },
+  { title: "Faça Parte", path: "/#participation" },
+  { title: "Redes Sociais", path: "/#redes-sociais" },
+  { title: "Ouvidoria", path: "/ouvidoria" },
   { title: "Faq", path: "/faq" },
 ];

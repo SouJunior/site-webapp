@@ -66,12 +66,28 @@ export const Faq = () => {
 
   return (
     <>
-      <div className={styles.textInner}>
+      <div className={styles.bannerContainer}>
+        <picture>
+          <source
+            media="(max-width: 960px)"
+            srcSet="/assets/default-banner-group-mobile.svg 768w"
+            sizes="960px"
+          />
+          <source
+            srcSet="/assets/default-banner-group.svg 1280w"
+            sizes="1440px"
+          />
+
+          <img
+            src="/assets/default-banner-group.svg"
+            alt="Uma experiência real de trabalho em uma empresa de tecnologia."
+          />
+        </picture>
         <p>Perguntas frequentes</p>
-        <h2>Olá! Como podemos de ajudar?</h2>
+        <h2>Olá! Como podemos te ajudar?</h2>
       </div>
       <section className={styles.FaqSection}>
-        <div className={styles.tabContainer}>
+        <div className={styles.container}>
           <Tabs>
             <TabList className={styles.tabList}>
               <Tab className={styles.tab}>
@@ -130,11 +146,7 @@ export const Faq = () => {
                     header={
                       <div className={styles.headerTitle}>
                         <h2 className={styles.accordionTitle}>{titulo}</h2>
-                        <img
-                          src="../assets/icons/chevron-up.svg"
-                          alt=""
-                          srcset=""
-                        />
+                        <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }>
                     <p className={styles.accordionP}>{descricao} </p>
@@ -151,61 +163,63 @@ export const Faq = () => {
       </div>
 
       <section className={styles.formSection}>
-        <form className={styles.form}>
-          <div className={styles.radios}>
-            <RadioButton
-              options={[
-                "Sou Junior",
-                "Voluntário",
-                "Mentor/Apoiador",
-                "Outros",
-              ]}
-              value={radioOption}
-              setValue={setRadioOption}
-            />
-          </div>
+        <div className={styles.container}>
+          <form className={styles.form}>
+            <div className={styles.radios}>
+              <RadioButton
+                options={[
+                  "Sou Junior",
+                  "Voluntário",
+                  "Mentor/Apoiador",
+                  "Outros",
+                ]}
+                value={radioOption}
+                setValue={setRadioOption}
+              />
+            </div>
 
-          <div className={styles.labelInput}>
-            <Input
-              type="text"
-              text="Qual o seu nome?*"
-              placeholder="Digite seu nome completo"
-              label="Nome"
-              value={name}
-              onChange={handleNameChange}
-              isValid={!nameTouched || isNameValid}
-            />
-          </div>
+            <div className={styles.labelInput}>
+              <Input
+                type="text"
+                text="Qual o seu nome?*"
+                placeholder="Digite seu nome completo"
+                label="Nome"
+                value={name}
+                onChange={handleNameChange}
+                isValid={!nameTouched || isNameValid}
+              />
+            </div>
 
-          <div>
-            <Input
-              type="email"
-              text="Qual o seu e-mail?*"
-              placeholder="Digite o seu e-mail"
-              label="E-mail"
-              value={email}
-              onChange={handleEmailChange}
-              isValid={!emailTouched || isEmailValid}
-            />
-          </div>
+            <div>
+              <Input
+                type="email"
+                text="Qual o seu e-mail?*"
+                placeholder="Digite o seu e-mail"
+                label="E-mail"
+                value={email}
+                onChange={handleEmailChange}
+                isValid={!emailTouched || isEmailValid}
+              />
+            </div>
 
-          <div className={styles.area}>
-            <Textarea
-              name="description"
-              value={message}
-              isValid={!messageTouched || validateMessage(message)}
-              onChange={handleMessageChange}
-              text="Fale-nos sobre sua dúvida*"
-            />
+            <div className={styles.area}>
+              <Textarea
+                name="description"
+                value={message}
+                isValid={!messageTouched || validateMessage(message)}
+                onChange={handleMessageChange}
+                text="Fale-nos sobre sua dúvida*"
+              />
 
-            <button
-              className={styles.button}
-              type="submit"
-              disabled={!isNameValid || !isEmailValid || !isTextValid}>
-              Enviar
-            </button>
-          </div>
-        </form>
+              <button
+                className={styles.button}
+                type="submit"
+                disabled={!isNameValid || !isEmailValid || !isTextValid}>
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
       </section>
     </>
   );

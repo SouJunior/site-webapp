@@ -1,39 +1,42 @@
-.textInner {
-  font-family: "Radio Canada";
-  font-style: normal;
+.FaqSection,
+.formSection,
+.bannerContainer {
+  width: 100%;
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 6.2rem;
+  padding: 0 32px;
+}
+
+.bannerContainer {
+  padding: 72px 32px;
   text-align: center;
 }
 
-.textInner p {
+.bannerContainer p {
   font-weight: 400;
   font-size: 32px;
   line-height: 28px;
-  margin-bottom: 24px;
 }
 
-.textInner h2 {
+.bannerContainer h2 {
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
 }
 
-.FaqSection,
-.formSection {
+.container {
+  max-width: 108.4rem;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  padding: 72px 32px;
-}
-
-.tabContainer {
-  display: flex;
-  max-width: 1084px;
-  justify-content: center;
-  display: flex;
-  max-width: 109.9rem;
-  gap: 4rem;
-  font-family: "Radio Canada", sans-serif;
+  flex-direction: column;
+  padding-bottom: 6.8rem;
 }
 
 .tabList {
@@ -45,14 +48,14 @@
   text-align: center;
 }
 
-.tabContainer div ul li {
+.container li {
   background-color: transparent;
   border: none;
   color: #fff;
   list-style: none;
 }
 
-.tabContainer div ul li[aria-selected="true"] ::after {
+.container li[aria-selected="true"] ::after {
   display: block;
   position: relative;
   width: 380px;
@@ -66,7 +69,7 @@
   background-color: #1165ba;
 }
 
-.tabContainer div ul li[aria-selected="true"]::after {
+.container li[aria-selected="true"]::after {
   display: none;
   border: none;
 }
@@ -76,44 +79,40 @@
 }
 
 .headerTitle {
-  /* background-color: red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
   width: 100%;
+  gap: 3.2rem;
 }
 
-.accordion div button[aria-expanded="true"] img {
+.accordion button[aria-expanded="true"] img {
   transition: all 0.4s;
 }
 
-.accordion div button[aria-expanded="false"] img {
+.accordion button[aria-expanded="false"] img {
   transition: all 0.4s;
   transform: rotate(180deg);
 }
 
-.accordion {
-  padding: 80px 0;
-}
-
 .accordion button {
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   margin: 0;
   font-size: 1rem;
+  font-weight: 600;
   text-align: left;
-  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
   border: none;
+  background-color: transparent;
 }
 
 .accordionItem {
-  padding: 45px 80px;
+  padding: 4.7rem;
   border-bottom: 1px solid #fff;
   color: #ededed;
 }
@@ -140,7 +139,7 @@
 /*FORM*/
 
 .form {
-  width: 1084px;
+  width: 100%;
 }
 
 .labelInput {
@@ -169,7 +168,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
-  justify-content: flex-start;
+  justify-content: center;
   padding: 25px 0;
   font-size: 18px;
   color: #fff;
@@ -185,7 +184,7 @@
 }
 
 .description {
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   text-align: center;
 }
@@ -210,18 +209,20 @@
 }
 
 .button {
+  display: flex;
   width: 155px;
   height: 50px;
+  border-radius: 10px;
+  border: 1px solid #FFF;
   text-transform: uppercase;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-size: 24px;
   line-height: 18px;
   font-weight: 300;
   background: #046ad0;
-  border: 2px solid #ededed;
   color: #ededed;
   padding: 16px 32px;
-  margin-top: 2rem;
+  margin: 2rem auto;
   cursor: pointer;
 }
 
@@ -237,5 +238,26 @@
 @media (max-width: 920px) {
   .tabList {
     justify-content: center;
+    gap: 3.2rem;
+  }
+  .button {
+    width: 100%;
+  }
+
+  .bannerContainer {
+    gap: 3.2rem;
+    padding: 0 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .bannerContainer h2,
+  .description h2 {
+    font-size: 32px;
+    line-height: 3.8rem;
+    padding-bottom: 3.2rem;
+  }
+  .bannerContainer p,
+  .description h3 {
+    font-size: 2.6rem;
   }
 }

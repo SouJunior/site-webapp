@@ -14,13 +14,13 @@ export const ParticipationSection = () => {
 
   return (
     <>
-      <div className={styles.headerContainer}>
+      <div className={styles.headerContainer} id="participation">
         <h1 className={styles.h1}>
           Faça você também parte da nossa comunidade!
         </h1>
         <div className={styles.headers}>
           {headers
-            .filter((header) => header.id <= 7)
+            .filter((header) => header.id <= 9)
             .map(({ id, img }) => (
               <div key={id} className={styles.headersImg}>
                 <Image

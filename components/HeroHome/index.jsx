@@ -1,5 +1,5 @@
-import styles from "./HeaderHome.module.css";
-import HeroHomeComponent from "./componentHome";
+import styles from "./HeroHome.module.css";
+import ContentHero from "./contentHero";
 
 const HeaderHome = () => {
   const contentText =
@@ -7,14 +7,14 @@ const HeaderHome = () => {
 
   return (
     <section className={styles.HeroHomeContainer}>
-      <HeroHomeComponent
+      <ContentHero
         tittle="Desenvolva habilidades no mercado de tecnologia com a SouJunior."
         content={contentText}
         image={"/assets/skills-home.svg"}
         imgStyles={styles.image1}
         containerStyle={styles.skillsContainer}
       />
-      <HeroHomeComponent
+      <ContentHero
         tittle="Ajude a impulsionar carreiras!"
         content="Na SouJunior, você terá a oportunidade de fornecer mentorias ou
         apoiar a organização de outras formas, contribuindo para o

@@ -1,17 +1,12 @@
-import React from 'react';
-import HeaderComponent from "../components/commons/HeaderComponent";
-import FormOuvidoria from '../components/FormOuvidoria';
-
+import React from "react";
+import FormOuvidoria from "../components/FormOuvidoria";
 
 const OuvidoriaPage = () => {
   return (
     <>
-    <HeaderComponent  />
-    
-    <div>
-    <FormOuvidoria />
-    </div>
-
+      <div>
+        <FormOuvidoria />
+      </div>
     </>
   );
 };

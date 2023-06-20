@@ -23,7 +23,7 @@ const Input = ({
         value={value}
         onChange={onChange}
       />
-      {!isValid && <p className={styles.errorMessage}>{label} inválido</p>}
+      {!isValid && <p className={styles.errorMessage}>{label}</p>}
     </div>
   );
 };

@@ -1,12 +1,48 @@
-.depositionsSectionWrapper {
-  height: var(--desktop-screen);
-  background: rgb(24,17,35);
-  background: linear-gradient(180deg, rgba(24,17,35,1) 11%, rgba(0,0,0,0.865983893557423) 38%, rgba(24,17,35,1) 91%);
+.DepositionsSection,
+.container,
+.wrapper,
+.depositionsCollaborators {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.depositionsHeader {
-  text-align: center;
-  padding-top: 11rem;
+.DepositionsSection {
+  padding: 0 3.2rem;
+  flex-direction: column;
+  gap: 6.2rem;
+  padding: 0 32px;
+}
+
+.container {
+  max-width: 144rem;
+  flex-direction: column;
+  padding-bottom: 6.8rem;
+}
+
+.wrapper {
+  gap: 5.4rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cardWrapper {
+  padding: 0 6rem;
+  width: 100%;
+}
+
+.depositionsCollaborators {
+  flex: 1;
+  flex-direction: column;
+}
+.depositionsCards {
+  flex: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  width: 480px;
+  flex-direction: column;
 }
 
 .depositionsTitle {
@@ -14,26 +50,21 @@
   font-weight: 600;
   font-size: 48px;
   line-height: 3.625rem;
+  text-align: center;
+  padding-bottom: 7.2rem;
 }
 
-.depositionsContainer {
+.collaborator {
+  width: 100%;
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  margin: 0 6.8rem;
-  padding-top: 97px;
-}
-
-.depositionsContainerWrapper {
-  display: flex;
-}
-
-.depositionsContainerWrapper > div {
-  margin-left: -28px;
+  justify-content: center;
+  margin-left: 28px;
 }
 
 .collaboratorImg {
   border-radius: 50%;
+  margin-left: -28px;
   object-fit: cover;
   border-radius: 50%;
 }
@@ -45,29 +76,3 @@
   line-height: 2.375rem;
   padding-top: 2.5rem;
 }
-
-.carouselContainer {
-  width: 800px;
-}
-
-
-
-.carouselWrapper {
-  position: relative;
-}
- 
-.leftArrow {
-  position: absolute;
-  left: -90px;
-  top: 30%;
-  cursor: pointer;
-}
-
-.rightArrow {
-  position: absolute;
-  right: -70px;
-  z-index: 10000;
-  top: 30%;
-  cursor: pointer;
-}
-

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

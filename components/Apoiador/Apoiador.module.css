@@ -1,38 +1,48 @@
-.textInner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 88px;
-  font-family: "Radio Canada";
-  font-style: normal;
-  text-align: center;
-}
-
-.textInner p {
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 28px;
-  margin-bottom: 24px;
-  max-width: 67ch;
-}
-
-.textInner h2 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-}
-
-.ApoiadorSection {
+.ApoiadorSection,
+.bannerContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* max-width: 1084px; */
+  flex-direction: column;
   width: 100%;
+  gap: 6.2rem;
+  padding: 0 32px;
+  font-family: inherit;
+}
+
+.bannerContainer {
   padding: 72px 32px;
 }
 
+.bannerContainer h2 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  max-width: 28ch;
+  text-align: center;
+}
+
+.paragraph {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  max-width: 67ch;
+}
+
+.container {
+  max-width: 108.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .form {
-  width: 1084px;
+  width: 100%;
+  font-family: inherit;
 }
 
 .radios {
@@ -54,7 +64,7 @@
   width: 155px;
   height: 50px;
   text-transform: uppercase;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-size: 24px;
   line-height: 18px;
   font-weight: 300;
@@ -63,4 +73,23 @@
   color: #ededed;
   padding: 16px 32px;
   margin-top: 2rem;
+}
+
+@media (max-width: 960px) {
+  .ApoiadorSection,
+  .bannerContainer {
+    padding: 3.2rem;
+    gap: 3.2rem;
+  }
+  .ApoiadorSection {
+    padding: 0 3.2rem;
+  }
+
+  .radios {
+    gap: 2.4rem;
+    padding-bottom: 3.2rem;
+  }
+  .button {
+    width: 100%;
+  }
 }

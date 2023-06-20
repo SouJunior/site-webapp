@@ -1,13 +1,7 @@
-import styles from "./HeaderHome.module.css";
+import styles from "./HeroHome.module.css";
 import Image from "next/image";
 
-const HeroHomeComponent = ({
-  tittle,
-  content,
-  image,
-  imgStyles,
-  containerStyle,
-}) => {
+const ContentHero = ({ tittle, content, image, imgStyles, containerStyle }) => {
   return (
     <div className={containerStyle}>
       <div className={styles.textContent}>
@@ -34,4 +28,4 @@ const HeroHomeComponent = ({
   );
 };
 
-export default HeroHomeComponent;
+export default ContentHero;
