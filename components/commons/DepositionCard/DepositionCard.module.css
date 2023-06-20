@@ -1,33 +1,31 @@
 .depositionCard {
-  background: #EDEDED;
-  border-radius: 24px;
-  width: 800px;
+  width: 100%;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  background: #ededed;
 }
 
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
-  padding: 40px 38px;
+  padding: 4rem 3.8rem 1.5rem 3.8rem;
   border-bottom: 8px solid rgba(4, 106, 208, 0.5);
+  background: url("/assets/mini-logo.svg") no-repeat bottom 30px right 30px;
 }
 
 .headerDepositionInfo {
   display: flex;
-  align-items:center;
-  gap: 29px;
-}
-
-.headerDepositionInfo > div{
-  width: 350px;
+  align-items: center;
+  gap: 3.2rem;
+  flex: 1;
 }
 
 .name {
-  color: #046AD0;
+  color: #046ad0;
   font-style: normal;
   font-weight: 600;
   font-size: 32px;
@@ -39,21 +37,36 @@
   font-weight: 500;
   font-size: 24px;
   line-height: 29px;
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .depositionImg {
   display: block;
   border-radius: 50%;
+  object-fit: cover;
 }
-
 
 .description {
   font-style: normal;
   font-weight: 400;
   font-size: 24px;
   line-height: 29px;
+  color: #3d3d3d;
+  padding: 38px 46px;
+  display: flex;
+  flex-direction: column;
   text-overflow: ellipsis;
-  color: #3D3D3D;
-  padding: 38px;
+}
+
+@media (max-width: 1300px) {
+  .header {
+    background: transparent;
+  }
+}
+
+@media (max-width: 960px) {
+  .depositionCard,
+  .description {
+    min-height: 480px;
+  }
 }
