@@ -46,6 +46,10 @@ img {
   max-width: 100%;
 }
 
+.swiper-wrapper {
+  align-items: center;
+}
+
 .swiper-pagination-custom {
   display: flex !important;
   justify-content: center;
