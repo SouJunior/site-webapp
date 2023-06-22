@@ -13,6 +13,23 @@
   flex-direction: column;
   gap: 6.2rem;
   padding: 0 32px;
+  position: relative;
+  height: 100vh;
+}
+
+.DepositionsSection::before {
+  content: "";
+  /* display: block;  */
+  /* width: 100vw; */
+  background: url("/assets/logo-background.svg") no-repeat;
+  background-size: contain;
+  /* background-color: #171123; */
+  /* background-blend-mode: ; */
+  /* filter: blur(1); */
+  position: absolute;
+  inset: 0;
+  left: 79px;
+  opacity: 0.5;
 }
 
 .container {
@@ -77,6 +94,9 @@
 }
 
 @media (max-width: 960px) {
+  .DepositionsSection {
+    height: auto;
+  }
   .depositionsCards {
     flex: 2;
     display: flex;
