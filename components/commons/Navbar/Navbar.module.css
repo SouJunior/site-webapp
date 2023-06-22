@@ -49,4 +49,9 @@
   .linkNav:not(:last-child) {
     box-shadow: 0 2px 0px 0 white;
   }
+  .linkNav .active {
+    border-bottom: 0px;
+    /* padding: 1.2rem 0; */
+    color: #021a55;
+  }
 }
