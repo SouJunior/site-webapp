@@ -12,7 +12,7 @@ export const Navbar = () => {
       {dataNavbar.map((link, index) => (
         <li className={styles.linkNav} key={index}>
           <Link href={link.path} passHref>
-            <a className={router.pathname === link.path ? styles.active : ""}>
+            <a className={router.asPath === link.path ? styles.active : ""}>
               {link.title}
             </a>
           </Link>
