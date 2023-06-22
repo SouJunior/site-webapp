@@ -4,20 +4,18 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3.2rem;
+  gap: 7.9rem;
   width: 100%;
-  height: 100%;
-  padding: 0 32px;
+  padding: 100px 32px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .card {
-  background-image: url("/assets/iniciativa/fundoVerde.png");
-  
+  background-image: url("/assets/iniciativa/fundo-verde.svg");
 }
 .card2 {
-  background-image: url("/assets/iniciativa/estrelas.png");
+  background-image: url("/assets/iniciativa/fundo-estrelas.svg");
   opacity: 0.8;
 }
 
@@ -33,6 +31,7 @@
 .content {
   width: 100%;
   flex: 1 1 0;
+  gap: 3.2rem;
   flex-direction: column;
   display: flex;
   text-align: initial;
@@ -50,7 +49,7 @@
 
 .image img {
   border-radius: 50%;
-  width: 500px;
+  width: 492px;
 }
 
 .title {
@@ -63,15 +62,10 @@
 
 .subtitle {
   color: #ededed;
-  left: 14.5%;
-  right: 50%;
-  margin-top: 10%;
-  bottom: 57.22%;
   font-style: normal;
   font-weight: 700;
   font-size: 48px;
   line-height: 58px;
-  padding-top: 40px;
 }
 
 .paragraph {
@@ -81,8 +75,7 @@
   font-size: 32px;
   line-height: 38px;
   color: #ededed;
-  padding-top: 60px;
-  padding-bottom: 134px;
+  padding-bottom: 4rem;
   filter: brightness(10);
 }
 
@@ -99,18 +92,19 @@
   font-weight: 600;
   font-size: 32px;
   line-height: 18px;
+  margin-bottom: 30px;
 }
 
 @media (max-width: 960px) {
   .card,
   .card2 {
+    height: 150vh;
     gap: 0;
   }
   .container {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
-    margin-top: 72px;
     gap: 0;
   }
   .content {
@@ -122,6 +116,7 @@
   .title {
     font-size: 3.2rem;
     line-height: 120%;
+    padding-bottom: 5.2rem;
   }
 
   .subtitle {
@@ -131,10 +126,13 @@
   .paragraph {
     font-size: 2.4rem;
     line-height: 2.8rem;
-    padding-bottom: 58px;
+    padding-bottom: 0rem;
   }
   .button {
     width: 100%;
     font-size: 2.3rem;
+  }
+  .image {
+    padding-bottom: 3.2rem;
   }
 }

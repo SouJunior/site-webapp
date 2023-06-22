@@ -9,6 +9,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  height: -webkit-fill-available;
+}
 
 html,
 body {
@@ -63,7 +66,7 @@ img {
   height: 26px !important;
   display: inline-block;
   opacity: 1 !important;
-  margin-bottom: 32px !important;
+  margin-bottom: 30px !important;
 }
 
 .swiper-pagination-bullet-active {
