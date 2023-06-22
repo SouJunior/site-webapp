@@ -11,7 +11,7 @@
 
 .skillsContainer,
 .careerContainer {
-  max-width: 140rem;
+  max-width: 144rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +20,6 @@
 
 .skillsContainer {
   justify-content: center;
-  gap: 3.2rem;
 }
 
 .careerContainer {
@@ -35,6 +34,7 @@
 .textContent {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
 }
 
 .imageContainer {
