@@ -76,3 +76,10 @@ img {
 .swiper-button-prev {
   color: white !important;
 }
+
+@media (max-width: 960px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #0e4385 !important;
+  }
+}

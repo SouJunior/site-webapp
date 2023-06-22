@@ -38,7 +38,6 @@
 }
 .depositionsCards {
   flex: 2;
-  width: 100%;
   display: flex;
   align-items: center;
   width: 480px;
@@ -75,4 +74,18 @@
   font-size: 30px;
   line-height: 2.375rem;
   padding-top: 2.5rem;
+}
+
+@media (max-width: 960px) {
+  .depositionsCards {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  .cardWrapper {
+    padding: 0;
+    width: 100%;
+  }
 }
