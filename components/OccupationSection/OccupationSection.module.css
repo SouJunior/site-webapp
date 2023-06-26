@@ -1,43 +1,47 @@
 .OccupationSection {
   display: flex;
+  flex-direction: column;
   align-items: center;
+
   justify-content: flex-end;
   width: 100%;
-  padding: 64px 3.2rem;
-  background-color: #212;
-  background: url("/assets/fill-effect.webp") no-repeat top 69px right -70px;
+  padding: 0 3.2rem;
+  height: 100vh;
+  background-color: transparent;
+  /* background: url("/assets/fill-effect.webp") no-repeat top -408px right -883px; */
+  position: relative;
+}
+
+.OccupationSection::before {
+  content: "";
+  background: url("/assets/logo-background.svg") no-repeat top -333px right -333px;
+  background-size: contain;
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.3;
 }
 
 .OccupationContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   max-width: 144rem;
   overflow-x: hidden;
 }
 
-.titlePrimary {
-  color: #ededed;
-  font-weight: 600;
-  font-size: 4.8rem;
-  text-align: center;
-  line-height: 3.8rem;
-  margin-top: 6.8rem;
-  margin-bottom: 3.8rem;
+.OccupationSection h2 {
+  margin-bottom: 5.2rem;
+  align-self: flex-start;
 }
 
-.paragraph {
-  max-width: 80ch;
-  font-size: 2.4rem;
-  font-weight: 400;
-  text-align: center;
-  line-height: 150%;
-  color: #f9f9f9;
-  margin: 0 auto;
+.OccupationSection p {
+  max-width: 85ch;
+  align-self: flex-start;
 }
 
-.itemContainer {
+.areasContainer {
   display: inline-flex;
   flex-direction: row;
   gap: 1.6rem;
@@ -45,13 +49,14 @@
   overflow: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
+  padding: 16.2rem 0;
 }
 
-.itemContainer::-webkit-scrollbar {
+.areasContainer::-webkit-scrollbar {
   display: none;
 }
 
-.item {
+.areaItem {
   display: flex;
   flex-direction: column;
   color: #fff;
@@ -60,23 +65,22 @@
   align-items: center;
   width: 15.9rem;
   height: 14.6rem;
+  gap: 1rem;
   background-color: hsl(210, 70%, 25%);
   border-radius: 1rem;
   transition: ease 5s;
 }
 
-.item p {
-  margin-top: 1rem;
+.areaItem p {
+  align-self: center;
 }
 
 .arrowContainer {
-  margin-top: 3rem;
-  padding: 2rem;
   display: flex;
   justify-content: center;
-  gap: 2.3rem;
+  gap: 4.2rem;
   position: relative;
-  top: -8rem;
+  top: -6rem;
 }
 
 .arrowContainer button {
@@ -86,42 +90,40 @@
 }
 
 .arrowContainer button:first-child img {
+  object-fit: cover;
   transition: ease-in 3s;
   transform: rotate(180deg);
   border: 0;
 }
 
 .arrowContainer button:hover:last-child {
-  background-image: url("/assets/button-directional-light-caroussel.png");
+  background-image: url("/assets/button-directional-light-caroussel.png")
+    no-repeat;
+  object-fit: cover;
 }
 
 .arrowContainer button:first-child:hover img {
-  background-image: url("/assets/button-directional-light-caroussel.png");
+  background-image: url("/assets/button-directional-light-caroussel.png")
+    no-repeat;
   transform: rotate(180deg);
 }
 
+@media (max-width: 1450px) {
+  .OccupationSection {
+    padding-top: 3.2rem;
+    position: relative;
+    align-items: stretch;
+  }
+}
 @media (max-width: 900px) {
   .OccupationSection {
-    padding: 4.7rem 1.5rem 9.7rem 1.5rem;
     position: relative;
+    align-items: stretch;
+    height: auto;
   }
 
-  .OccupationSection::before {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 212px;
-    bottom: 60px;
-    right: 0;
-    position: absolute;
-    z-index: 2;
-    background: linear-gradient(to left, #212121 0%, rgba(33, 33, 33, 0) 200%);
-    filter: blur(25.5px);
-  }
-
-  .OccupationContainer .titlePrimary {
-    align-self: flex-start;
-    font-size: 3.2rem;
+  .OccupationContainer {
+    align-items: flex-start;
   }
 
   .paragraph {
@@ -130,14 +132,9 @@
     max-width: 100%;
   }
 
-  .itemContainer {
+  .areasContainer {
     gap: 1.4rem;
-    max-width: 90vw;
-    display: flex;
-    overflow: auto;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
+    padding: 6.2rem 0;
   }
   .arrowContainer {
     display: none;
