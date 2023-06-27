@@ -81,7 +81,7 @@ export const Apoiador = () => {
   }
 
   function validateSurname(name) {
-    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]*$/;
     return nameRegex.test(name);
   }
 
@@ -95,7 +95,7 @@ export const Apoiador = () => {
   }
 
   function validatePhone(phone) {
-    const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
+    const phoneRegex = /^\(\d{2}\)(\s)?\d{4,5}\d{4}$/;
     return phoneRegex.test(phone);
   }
 
@@ -173,7 +173,7 @@ export const Apoiador = () => {
             <div className={styles.labelInput}>
               <Input
                 type="text"
-                text="Telefone/Whats*"
+                text="Telefone*"
                 placeholder="(xx) xxxxxxxxx"
                 label="Telefone (com DDD)"
                 value={phone}
@@ -184,7 +184,7 @@ export const Apoiador = () => {
 
             <div className={styles.labelInput}>
               <Input
-                text="Confirme seu telefone/whats*"
+                text="Confirme seu telefone*"
                 label="Confirmar Telefone"
                 type="tel"
                 placeholder="(xx) xxxxxxxxx"

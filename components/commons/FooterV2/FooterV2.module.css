@@ -3,18 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(5, 117, 231, 1);
-  padding-top: 20px;
-  padding-bottom: 50px;
+  background: linear-gradient(to bottom, #046ad0, #011e3a);
+  padding-top: 98px;
+  padding-bottom: 98px;
+  padding-left: 121px;
+  padding-right: 125px;
 }
 
 .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-left: 200px;
-  margin-right: 150px;
-  width: 90%;
+  width: 1696px;
 }
 
 .listContainer {
@@ -34,7 +34,8 @@
 
 .link {
   margin-bottom: 1rem;
-  font-size: 16px;
+  font-size: 24px;
+  color: #ededed;
 }
 
 .imageContainer {
@@ -52,4 +53,26 @@
 
 .tittle {
   margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.iconsContainer {
+  height: 166px;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  object-fit: contain;
+  height: 100%;
+}
+
+.icon a {
+  font-size: 36px; /*Tamanho dos icones*/
+  color: white;
+  padding: 5px;
+  margin: 0;
+  height: 36px;
 }
