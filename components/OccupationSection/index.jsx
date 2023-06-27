@@ -2,8 +2,8 @@ import { useRef } from "react";
 import Image from "next/image";
 import styles from "../OccupationSection/OccupationSection.module.css";
 import { carouselItems } from "../../utils/carouselItems";
-import { Subtitle } from "../commons/Subtitle";
 import { Paragraph } from "../commons/Paragraph";
+import { Heading } from "../commons/Heading";
 
 export const OccupationSection = () => {
   const carousel = useRef(null);
@@ -21,7 +21,7 @@ export const OccupationSection = () => {
     <>
       <section className={styles.OccupationSection}>
         <div className={styles.OccupationContainer}>
-          <Subtitle>Áreas de atuação</Subtitle>
+          <Heading level={"h2"}>Áreas de atuação</Heading>
           <Paragraph>
             Aqui na SouJunior, atuam profissionais iniciantes das diversas áreas
             que compõem uma empresa de tecnologia. Confira abaixo as áreas de

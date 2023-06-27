@@ -1,18 +1,15 @@
 import styles from "./HeroHome.module.css";
 import Image from "next/image";
-import Title from "../commons/Title";
 import { Paragraph } from "../commons/Paragraph";
+import { Heading } from "../commons/Heading";
 
 const ContentHero = ({ title, content, image, imgStyles, containerStyle }) => {
   return (
     <div className={containerStyle}>
       <div className={styles.textContent}>
-        <Title>{title}</Title>
+        <Heading level={"h1"}>{title}</Heading>
         <div>
           {content.split("\n").map((linha, index) => (
-            // <p key={index} className={styles.paragraph}>
-            //   {linha}
-            // </p>
             <Paragraph key={index}>{linha}</Paragraph>
           ))}
         </div>
