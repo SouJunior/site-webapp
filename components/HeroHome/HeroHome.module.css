@@ -6,7 +6,6 @@
   width: 100%;
   padding: 0px 32px;
   overflow: hidden;
-  /* filter: blur(164px); */
 }
 
 .skillsContainer,
@@ -15,7 +14,7 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .skillsContainer {
@@ -39,7 +38,7 @@
 .textContent {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-self: center;
 }
 
 .imageContainer {
