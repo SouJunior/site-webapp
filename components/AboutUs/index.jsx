@@ -50,7 +50,7 @@ export const SobreNos = () => {
         <div className={styles.container}>
           <div className={styles.paragraphWrapper}>
             <Paragraph>
-              O projeto SouJunior surgiu em 01 de Julho de 2019, a partir da
+              O projeto SouJunior surgiu em 01 de Julho de 2022, a partir da
               insatisfação do idealizador <strong>Wouerner Brandão</strong> com
               o mercado tech, quando percebeu que poucas pessoas tinham
               conhecimento ou experiência na área da tecnologia. Atualmente

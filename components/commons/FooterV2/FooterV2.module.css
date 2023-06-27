@@ -6,6 +6,8 @@
   background-color: rgba(5, 117, 231, 1);
   padding-top: 20px;
   padding-bottom: 50px;
+ 
+
 }
 
 .container {
@@ -14,7 +16,7 @@
   align-items: center;
   margin-left: 200px;
   margin-right: 150px;
-  width: 90%;
+  width: 1450px;
 }
 
 .listContainer {
@@ -38,11 +40,12 @@
 }
 
 .imageContainer {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   width: 200px;
   height: 100px;
+  gap: 80px;
 }
 
 .image {
@@ -52,4 +55,24 @@
 
 .tittle {
   margin-bottom: 2rem;
+}
+
+/*Icones*/
+
+.iconsConatiner{
+  width: 399px;
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0px 40px;
+  flex-wrap: wrap;
+}
+
+.iconsConatiner a{
+  font-size: 37px;
+  border-radius: 5px;
+  
+  
 }
