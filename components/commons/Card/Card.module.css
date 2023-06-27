@@ -17,7 +17,7 @@
   
 }
 .card2 {
-  background-image: url("/assets/iniciativa/estrelas.png");
+  background-image: url("/assets/iniciativa/estrelas.svg");
   opacity: 0.8;
 }
 
@@ -83,7 +83,7 @@
   color: #ededed;
   padding-top: 60px;
   padding-bottom: 134px;
-  filter: brightness(10);
+  
 }
 
 .button {

@@ -13,8 +13,17 @@ export const iniciativasSouJunior = [
     id: 2,
     title: "Conheça outras iniciativas da SouJunior",
     subtitle: "SouJunior Talk",
-    description:
-      "Se você está procurando uma maneira de aprimorar seu inglês com pessoas reais, temos uma excelente notícia para você! A SouJunior Talk é um ambiente de treino de inglês que oferece uma plataforma interativa onde você pode praticar suas habilidades linguísticas.",
+    description: (
+      <div>
+        <p>
+          Se você está procurando uma maneira de aprimorar seu inglês com pessoas reais, temos uma excelente notícia para você!
+        </p>
+        <p>
+          <br/>
+          A SouJunior Talk é um ambiente de treino de inglês que oferece uma plataforma interativa onde você pode praticar suas habilidades linguísticas.
+        </p>
+      </div>
+    ),
     image: "assets/iniciativa/talk.svg",
     type: "type-2",
     path: "https://discord.gg/564CDre9F3"
