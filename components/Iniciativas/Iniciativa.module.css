@@ -1,11 +1,3 @@
-.swiperContainer {
-  display: flex;
-  margin: 72px 0;
-  height: 100vh;
-}
-
-@media (max-width: 960px) {
-  .swiperContainer {
-    height: auto;
-  }
+.SectionIniciativas {
+  padding: 7.2rem 0;
 }

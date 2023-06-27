@@ -14,30 +14,20 @@
   width: 100%;
 }
 
-.navbar {
-  /* width: 100%;
-  margin: 5rem 0rem 0.5rem 0rem;
-  display: flex;
-  align-items: center; */
-}
-
 .mobileMenu {
   display: none;
 }
 
 .logo {
   flex: 1;
+  cursor: pointer;
 }
 
 .menu {
   flex: 2;
 }
 
-@media (max-width: 900px) {
-  .navbar {
-    margin: 5rem auto 0.5rem auto;
-  }
-
+@media (max-width: 1180px) {
   .textArea {
     justify-content: space-evenly;
   }

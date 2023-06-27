@@ -41,23 +41,19 @@
   gap: 2.6rem;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 5.2rem;
-  text-align: center;
+  text-align: left;
+}
+
+.paragraphWrapper p {
+  padding: 8px 16px 16px;
 }
 
 .title {
-  color:#FFF;
+  color: #fff;
   font-weight: 700;
   font-size: 3.2rem;
   text-align: center;
   padding-bottom: 3.2rem;
-}
-
-.paragraph {
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 22px;
-  
 }
 
 .ceo {
@@ -89,11 +85,8 @@
   align-items: center;
 }
 
-.ceo h2 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 22px;
-  padding-bottom: 2.5rem;
+.ceo h4 {
+  padding-bottom: 0;
 }
 
 .ceo p {
