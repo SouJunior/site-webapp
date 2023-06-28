@@ -111,7 +111,6 @@ export const SobreNos = () => {
               reside no Recanto das Emas e recentemente trabalhou em órgãos
               federais em Brasília.
             </Paragraph>
-            <p></p>
 
             <ul>
               <li>
@@ -132,8 +131,6 @@ export const SobreNos = () => {
                 </a>
               </li>
             </ul>
-
-            <p></p>
           </div>
         </div>
 
