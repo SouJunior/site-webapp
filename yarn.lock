@@ -4677,7 +4677,7 @@
   optionalDependencies:
     "source-map" "~0.6.1"
 
-"eslint-config-next@12.3.1":
+"eslint-config-next@^12.3.1":
   "integrity" "sha512-EN/xwKPU6jz1G0Qi6Bd/BqMnHLyRAL0VsaQaWA7F3KkjAgZHi4f1uL1JKGWNxdQpHTW/sdGONBd0bzxUka/DJg=="
   "resolved" "https://registry.npmjs.org/eslint-config-next/-/eslint-config-next-12.3.1.tgz"
   "version" "12.3.1"
