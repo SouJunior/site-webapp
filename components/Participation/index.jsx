@@ -39,16 +39,24 @@ export const ParticipationSection = () => {
         <div className={styles.container}>
           <div className={styles.leftSide}>
             <Paragraph>
-              Na SouJunior, há diversas maneiras de participar do projeto, tanto
-              para juniores como para mentores ou apoiadores.
+              A SouJunior, há diversas maneiras de participar:
             </Paragraph>
+            <ul className={styles.list}>
+              <li>
+                <Paragraph>
+                  Como juniores ou mentores, ajudando diretamente na construção
+                  do projeto
+                </Paragraph>
+              </li>
+              <li>
+                <Paragraph>
+                  Como apoiadores ajudando com a divulgação, recrutamento e
+                  patrocínio, por exemplo.
+                </Paragraph>
+              </li>
+            </ul>
             <Paragraph>
-              Os interessados em colaborar podem ajudar na construção do projeto
-              ou patrocinar a iniciativa como apoiadores ou parceiros.
-            </Paragraph>
-            <Paragraph>
-              Há várias formas de participar e os interessados podem clicar em
-              uma das categorias abaixo e preencher as informações solicitadas.
+              Clique nas categorias ao lado para saber mais."
             </Paragraph>
           </div>
 

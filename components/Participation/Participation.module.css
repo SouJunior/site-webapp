@@ -98,6 +98,16 @@
   margin-top: 2rem;
 }
 
+.list {
+  list-style: circle;
+}
+
+.list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .rightSide {
   display: flex;
   flex-direction: column;
