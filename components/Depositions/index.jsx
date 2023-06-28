@@ -41,6 +41,7 @@ export function Depositions() {
                 className={style.cardWrapper}
                 spaceBetween={60}
                 slidesPerView={1}
+                rewind={true}
                 navigation={true}
                 controller={true}
                 modules={[Controller, Navigation]}>
