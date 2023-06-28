@@ -8,6 +8,7 @@ import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { RadioButton } from "../commons/RadioButton";
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
+import Popup from "../commons/Popup/Popup";
 
 export const Faq = () => {
   const [radioOption, setRadioOption] = useState("Sou Junior");
@@ -20,6 +21,20 @@ export const Faq = () => {
   const [nameTouched, setNameTouched] = useState(false);
   const [emailTouched, setEmailTouched] = useState(false);
   const [messageTouched, setMessageTouched] = useState(false);
+
+  const [showPopup, setShowPopup] = useState(false);
+
+  function openPopup() {
+    setShowPopup(true);
+  }
+  
+  function closePopup() {
+    setShowPopup(false);
+    setName("");
+    setEmail("");
+    setMessage("");
+ 
+  }
 
   const handleNameChange = (event) => {
     const newName = event.target.value;
@@ -57,12 +72,20 @@ export const Faq = () => {
     if (isNameValid && isEmailValid && isTextValid) {
       console.log(`Nome: ${name}`);
       console.log(`Email: ${email}`);
+      openPopup();
+      setName(""); // Limpa o campo de nome
+      setEmail(""); // Limpa o campo de email
+      setMessage(""); // Limpa o campo de mensagem
+      
     }
+    
   }
-
+  
   function validateMessage(message) {
     return message.trim() !== "";
   }
+
+ 
 
   return (
     <>
@@ -166,7 +189,7 @@ export const Faq = () => {
 
       <section className={styles.formSection}>
         <div className={styles.container}>
-          <form className={styles.form}>
+          <form className={styles.form}  onSubmit={handleSubmit}>
             <div className={styles.radios}>
               <RadioButton
                 options={[
@@ -220,9 +243,18 @@ export const Faq = () => {
                 Enviar
               </button>
             </div>
-          </form>
+            </form>
+            {showPopup && (
+            <Popup onClose={closePopup}
+            message="Pergunta enviada com sucesso!"
+            >
+              <img src="/assets/popup.svg" alt="Imagem de sucesso" />
+              <button onClick={closePopup}>Fechar</button>
+            </Popup>
+      )}
         </div>
       </section>
+
     </>
   );
 };
