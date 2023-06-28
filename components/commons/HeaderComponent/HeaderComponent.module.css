@@ -6,6 +6,7 @@
   width: 100%;
   padding: 72px 32px;
   color: white;
+  /* background-color: red; */
 }
 
 .navbar {
@@ -60,7 +61,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  font-family: "Radio Canada";
+  font-family: inherit;
   font-weight: 700;
   font-size: 48px;
   text-align: center;

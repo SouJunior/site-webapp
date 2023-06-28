@@ -8,14 +8,14 @@ const HeaderHome = () => {
   return (
     <section className={styles.HeroHomeContainer}>
       <ContentHero
-        tittle="Desenvolva habilidades no mercado de tecnologia com a SouJunior."
+        title="Desenvolva habilidades no mercado de tecnologia com a SouJunior."
         content={contentText}
         image={"/assets/skills-home.svg"}
         imgStyles={styles.image1}
         containerStyle={styles.skillsContainer}
       />
       <ContentHero
-        tittle="Ajude a impulsionar carreiras!"
+        title="Ajude a impulsionar carreiras!"
         content="Na SouJunior, você terá a oportunidade de fornecer mentorias ou
         apoiar a organização de outras formas, contribuindo para o
         desenvolvimento de futuros profissionais do mercado de tecnologia.

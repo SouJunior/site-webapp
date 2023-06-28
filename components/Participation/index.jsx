@@ -4,6 +4,8 @@ import { IoMdAdd, IoMdClose } from "react-icons/io";
 
 import styles from "./Participation.module.css";
 import { headers } from "../../utils/headers";
+import { Heading } from "../commons/Heading";
+import { Paragraph } from "../commons/Paragraph";
 
 export const ParticipationSection = () => {
   const [textJr, setTextJr] = useState(false);
@@ -15,9 +17,9 @@ export const ParticipationSection = () => {
   return (
     <>
       <div className={styles.headerContainer} id="participation">
-        <h1 className={styles.h1}>
+        <Heading level={"h1"}>
           Faça você também parte da nossa comunidade!
-        </h1>
+        </Heading>
         <div className={styles.headers}>
           {headers
             .filter((header) => header.id <= 9)
@@ -36,18 +38,22 @@ export const ParticipationSection = () => {
       <section className={styles.ParticipationSection} id={"participar"}>
         <div className={styles.container}>
           <div className={styles.leftSide}>
-            <p className={styles.paragraph}>
-              Na SouJunior, há diversas maneiras de participar do projeto, tanto
-              para juniores como para mentores ou apoiadores.
-            </p>
-            <p className={styles.paragraph}>
-              Os interessados em colaborar podem ajudar na construção do projeto
-              ou patrocinar a iniciativa como apoiadores ou parceiros.
-            </p>
-            <p className={styles.paragraph}>
-              Há várias formas de participar e os interessados podem clicar em
-              uma das categorias abaixo e preencher as informações solicitadas.
-            </p>
+            <Paragraph>
+              Na SouJunior, há diversas maneiras de participar:
+            </Paragraph>
+
+            <Paragraph>
+              Como juniores ou mentores, ajudando diretamente na construção do
+              projeto
+            </Paragraph>
+            <Paragraph>
+              Como apoiadores ajudando com a divulgação, recrutamento e
+              patrocínio, por exemplo.
+            </Paragraph>
+
+            <Paragraph>
+              Clique nas categorias ao lado para saber mais.
+            </Paragraph>
           </div>
 
           <div className={styles.rightSide}>
@@ -56,7 +62,7 @@ export const ParticipationSection = () => {
                 className={styles.btn}
                 onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}>
                 {textJr ? <IoMdClose /> : <IoMdAdd />}
-                <h2>Sou Júnior</h2>
+                <Heading level={"h3"}>Sou Júnior</Heading>
               </button>
 
               {textJr && (
@@ -97,7 +103,7 @@ export const ParticipationSection = () => {
                   setTextMentor(!textMentor) && setIcon(IoMdClose)
                 }>
                 {textMentor ? <IoMdClose /> : <IoMdAdd />}
-                <h2 className={styles.border}>Sou Mentor</h2>
+                <Heading level={"h3"}>Sou Mentor</Heading>
               </button>
 
               {textMentor && (
@@ -130,7 +136,7 @@ export const ParticipationSection = () => {
                   setTextSupporter(!textSupporter) && setIcon(IoMdClose)
                 }>
                 {textSupporter ? <IoMdClose /> : <IoMdAdd />}
-                <h2 className={styles.border}> Sou Apoiador</h2>
+                <Heading level={"h3"}>Sou Apoiador</Heading>
               </button>
 
               {textSupporter && (

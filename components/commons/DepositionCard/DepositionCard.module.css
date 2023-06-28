@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 24px;
+  border-radius: 2.4rem;
   background: #ededed;
 }
 
@@ -38,6 +38,7 @@
   font-size: 24px;
   line-height: 29px;
   color: #3d3d3d;
+  padding-top: 1.6rem;
 }
 
 .depositionImg {
@@ -74,18 +75,18 @@
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 2.6rem;
-    padding: 38px;
+    padding: 3.8rem 5.2rem;
   }
   .name {
     font-size: 2.4rem;
-    line-height: 38px;
+    line-height: 2.8rem;
   }
 
   .role {
     font-style: normal;
     font-weight: 500;
     font-size: 1.8rem;
-    line-height: 29px;
+    line-height: 2.4rem;
     color: #3d3d3d;
   }
 }

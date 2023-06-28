@@ -11,8 +11,19 @@
 .DepositionsSection {
   padding: 0 3.2rem;
   flex-direction: column;
-  gap: 6.2rem;
   padding: 0 32px;
+  position: relative;
+  height: 100vh;
+}
+
+.DepositionsSection::before {
+  content: "";
+  background: url("/assets/logo-background.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  inset: 0;
+  left: 79px;
+  opacity: 0.3;
 }
 
 .container {
@@ -38,7 +49,6 @@
 }
 .depositionsCards {
   flex: 2;
-  width: 100%;
   display: flex;
   align-items: center;
   width: 480px;
@@ -51,7 +61,7 @@
   font-size: 48px;
   line-height: 3.625rem;
   text-align: center;
-  padding-bottom: 7.2rem;
+  padding-bottom: 9.1rem;
 }
 
 .collaborator {
@@ -75,4 +85,21 @@
   font-size: 30px;
   line-height: 2.375rem;
   padding-top: 2.5rem;
+}
+
+@media (max-width: 960px) {
+  .DepositionsSection {
+    height: auto;
+  }
+  .depositionsCards {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  .cardWrapper {
+    padding: 0;
+    width: 100%;
+  }
 }

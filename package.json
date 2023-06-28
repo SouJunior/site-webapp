@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf build"
   },
   "dependencies": {
     "@coreui/react": "^4.8.0",
@@ -24,13 +25,22 @@
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.43.9",
     "react-icons": "^4.6.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^2.1.3",
     "react-tabs": "^6.0.0",
     "swiper": "^9.3.2",
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1"
+    "eslint": "^8.25.0",
+    "eslint-config-next": "^12.3.4"
+  },
+  "eslint.workingDirectories": {
+    "pattern": "packages/*/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/babel",
+      "next/core-web-vitals"
+    ]
   }
 }

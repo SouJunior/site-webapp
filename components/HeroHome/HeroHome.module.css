@@ -6,25 +6,28 @@
   width: 100%;
   padding: 0px 32px;
   overflow: hidden;
-  /* filter: blur(164px); */
 }
 
 .skillsContainer,
 .careerContainer {
-  max-width: 140rem;
+  max-width: 144rem;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .skillsContainer {
   justify-content: center;
-  gap: 3.2rem;
 }
 
 .careerContainer {
   flex-direction: row-reverse;
+}
+
+.skillsContainer h1,
+.careerContainer h1 {
+  margin-bottom: 5.2rem;
 }
 
 .textContent,
@@ -35,6 +38,7 @@
 .textContent {
   display: flex;
   flex-direction: column;
+  align-self: center;
 }
 
 .imageContainer {
@@ -55,27 +59,9 @@
   max-width: 120%;
 }
 
-.tittle,
-.paragraph {
-  font-family: inherit;
-  font-style: normal;
-  text-align: start;
+.HeroHomeContainer p {
+  margin-bottom: 4rem;
   max-width: 42ch;
-}
-
-.tittle {
-  font-weight: 600;
-  font-size: 4.8rem;
-  line-height: 5.8rem;
-  margin-bottom: 5rem;
-  max-width: 21ch;
-}
-
-.paragraph {
-  font-weight: 400;
-  line-height: 2.9rem;
-  font-size: 2.4rem;
-  margin-bottom: 4.2rem;
 }
 
 @media (max-width: 960px) {
@@ -89,11 +75,12 @@
     margin: 0;
   }
 
-  .tittle,
-  .paragraph {
+  .HeroHomeContainer h1,
+  .HeroHomeContainer p {
     text-align: center;
     max-width: 100%;
   }
+
   .tittle {
     font-size: 3.2rem;
     line-height: 3.8rem;

@@ -8,13 +8,12 @@ import { data } from "../../utils/depositionCarouselInfo";
 export function Depositions() {
   return (
     <>
-      <header className={style.depositionsHeader}>
-        <h2 className={style.depositionsTitle} id="depoimentos">
-          Depoimentos
-        </h2>
-      </header>
-
       <section className={style.DepositionsSection}>
+        <header className={style.depositionsHeader}>
+          <h2 className={style.depositionsTitle} id="depoimentos">
+            Depoimentos
+          </h2>
+        </header>
         <div className={style.container}>
           <div className={style.wrapper}>
             <div className={style.depositionsCollaborators}>
@@ -42,6 +41,7 @@ export function Depositions() {
                 className={style.cardWrapper}
                 spaceBetween={60}
                 slidesPerView={1}
+                rewind={true}
                 navigation={true}
                 controller={true}
                 modules={[Controller, Navigation]}>

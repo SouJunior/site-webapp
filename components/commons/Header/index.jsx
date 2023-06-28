@@ -25,8 +25,9 @@ export const Header = () => {
         <meta name="robots" content="index, follow" />
       </Head>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" passHref>
           <Image
+            className={styles.logo}
             src="/assets/icons/Logo.svg"
             alt="logo SouJunior"
             width={216}
