@@ -18,7 +18,7 @@ const FooterV2 = () => {
               <a href="#">Missão visão e valores</a>
             </li>
             <li className={style.link}>
-              <a href="#">Nossas iniciativas</a>
+              <a href="/#iniciativas">Nossas iniciativas</a>
             </li>
           </ul>
         </div>
@@ -29,7 +29,7 @@ const FooterV2 = () => {
               <a href="/faq">Faq</a>
             </li>
             <li className={style.link}>
-              <a href="#">Ouvidoria</a>
+              <a href="/ouvidoria">Ouvidoria</a>
             </li>
             <li className={style.link}>
               <a href="/apoiar">Faça parte</a>

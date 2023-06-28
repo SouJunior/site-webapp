@@ -13,7 +13,6 @@ export const Footer = () => {
             {dataSocial.map(({ name, icon, path, id }) => (
               <a
                 href={path}
-                className={styles.socialBtn}
                 id={id}
                 key={name}
                 target="_blank"

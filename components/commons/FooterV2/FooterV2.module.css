@@ -59,12 +59,20 @@
 
 .iconsContainer {
   height: 166px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .icon {
   width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 20px;
+  width: 350px;
   object-fit: contain;
   height: 100%;
 }
