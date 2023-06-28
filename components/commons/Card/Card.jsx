@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./Card.module.css";
+import { Paragraph } from "../Paragraph";
 
 const Card = ({ title, subtitle, description, image, type, path }) => (
   <section className={type === "type-1" ? style.card : style.card2}>
@@ -8,12 +9,11 @@ const Card = ({ title, subtitle, description, image, type, path }) => (
       <div className={style.content}>
         <h2 className={style.subtitle}>{subtitle}</h2>
 
-        <p className={style.paragraph}>{description}</p>
+        {description.map((paragraph) => (
+          <Paragraph key={paragraph}>{paragraph}</Paragraph>
+        ))}
         <button className={style.button}>
-          <a
-            href={path}
-            target="_blank"
-            rel="noreferrer">
+          <a href={path} target="_blank" rel="noreferrer">
             Clique aqui e Confira!
           </a>
         </button>
