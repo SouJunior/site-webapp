@@ -10,7 +10,7 @@ const Card = ({ title, subtitle, description, image, type, path }) => (
         <h2 className={style.subtitle}>{subtitle}</h2>
 
         {description.map((paragraph) => (
-          <Paragraph>{paragraph}</Paragraph>
+          <Paragraph key={paragraph}>{paragraph}</Paragraph>
         ))}
         <button className={style.button}>
           <a href={path} target="_blank" rel="noreferrer">
