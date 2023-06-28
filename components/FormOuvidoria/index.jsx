@@ -21,19 +21,38 @@ const OuvidoriaForm = () => {
     };
   }, [isSubmitting]);
 
-  // const handleSubmit = (values, { setSubmitting, resetForm }) => {
-  //   setTimeout(() => {
-  //     alert('Obrigado por ajudar a SouJunior a crescer');
-  //     resetForm();
-  //     setSubmitting(false);
-  //     setIsSubmitting(true);
-  //   }, 500);
-  // };
-
   const handleSubmit = (values, { setSubmitting, resetForm }) => {
     setTimeout(() => {
       const popup = document.createElement("div");
-      popup.textContent = "Obrigado por ajudar a SouJunior a crescer";
+      popup.style.display = "flex";
+      popup.style.justifyContent="center";
+      popup.style.alignItems="center";
+      popup.style.width = "600px";
+      popup.style.height = "350px";
+      popup.style.flexDirection = "column";
+      popup.style.position = "fixed";
+      popup.style.top = "50%";
+      popup.style.left = "50%";
+      popup.style.transform = "translate(-50%, -50%)";
+      popup.style.backgroundColor = "#046AD0";
+      popup.style.padding = "20px";
+      popup.style.color = "#EDEDED";
+      popup.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
+      popup.style.zIndex = "9999";
+      popup.style.fontSize = "24px";
+      popup.style.fontWeight="600"
+      popup.style.gap="10px"
+
+      const message = document.createElement("div");
+      message.textContent = "Obrigado por ajudar a SouJunior a crescer!";
+      popup.appendChild(message);
+
+      const image = document.createElement("img");
+      image.src = "/assets/popup.svg";
+      image.width = 70;
+      image.height = 70;
+      image.alt = "Picture of the author";
+      popup.appendChild(image);
 
       const closeButton = document.createElement("button");
       closeButton.textContent = "Fechar";
@@ -42,24 +61,19 @@ const OuvidoriaForm = () => {
         window.location.href = "/"; // Redireciona para a página inicial
       });
 
-      popup.appendChild(closeButton);
-      popup.style.position = "fixed";
-      popup.style.top = "50%";
-      popup.style.left = "50%";
-      popup.style.transform = "translate(-50%, -50%)";
-      popup.style.backgroundColor = "#000000";
-      popup.style.padding = "20px";
-      popup.style.color = "#FFF";
-      popup.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
-      popup.style.zIndex = "9999";
-      popup.style.fontSize = "22px";
-      closeButton.style.background = "#046AD0";
+      closeButton.style.backgroundColor = "#046AD0";
+      closeButton.style.borderRadius= "10px";
+      closeButton.style.border= "2px solid #EDEDED";
       closeButton.style.color = "#FFF";
-      closeButton.style.width = "100px";
-      closeButton.style.height = "50px";
-      closeButton.style.padding = " 10px";
-      closeButton.style.marginLeft = "18px";
-      closeButton.style.border = "none";
+      closeButton.style.width = "152px";
+      closeButton.style.height = "36px";
+      // closeButton.style.padding = " 52px";
+      // closeButton.style.marginLeft = "24px";
+      closeButton.style.marginTop="15px"
+      closeButton.style.justifyContent="center";
+      closeButton.style.alignItems="center";
+
+      popup.appendChild(closeButton);
 
       document.body.appendChild(popup);
 
