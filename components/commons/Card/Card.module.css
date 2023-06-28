@@ -15,7 +15,7 @@
   background-image: url("/assets/iniciativa/fundo-verde.svg");
 }
 .card2 {
-  background-image: url("/assets/iniciativa/fundo-estrelas.svg");
+  background-image: url("/assets/iniciativa/estrelas.svg");
   opacity: 0.8;
 }
 
@@ -75,8 +75,9 @@
   font-size: 32px;
   line-height: 38px;
   color: #ededed;
-  padding-bottom: 4rem;
-  filter: brightness(10);
+  padding-top: 60px;
+  padding-bottom: 134px;
+  
 }
 
 .button {

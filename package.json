@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf build"
   },
   "dependencies": {
     "@coreui/react": "^4.8.0",
@@ -30,7 +31,16 @@
     "yup": "^1.2.0"
   },
   "devDependencies": {
-    "eslint": "8.25.0",
-    "eslint-config-next": "12.3.1"
+    "eslint": "^8.25.0",
+    "eslint-config-next": "^12.3.4"
+  },
+  "eslint.workingDirectories": {
+    "pattern": "packages/*/"
+  },
+  "eslintConfig": {
+    "extends": [
+      "next/babel",
+      "next/core-web-vitals"
+    ]
   }
 }
