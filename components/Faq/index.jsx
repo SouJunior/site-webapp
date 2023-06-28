@@ -3,7 +3,7 @@ import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import styles from "./Faq.module.css";
-import Title from "../commons/Title";
+import { Heading } from "../commons/Heading";
 import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { RadioButton } from "../commons/RadioButton";
@@ -91,13 +91,13 @@ export const Faq = () => {
           <Tabs>
             <TabList className={styles.tabList}>
               <Tab className={styles.tab}>
-                <Title> Sou Junior</Title>
+                <Heading level={"h3"}> Sou Junior</Heading>
               </Tab>
               <Tab>
-                <Title>Voluntário</Title>
+                <Heading level={"h3"}>Voluntário</Heading>
               </Tab>
               <Tab>
-                <Title>Mentor/Apoiador</Title>
+                <Heading level={"h3"}>Mentor/Apoiador</Heading>
               </Tab>
             </TabList>
             <TabPanel className={styles.tabPanel}>
@@ -158,8 +158,10 @@ export const Faq = () => {
         </div>
       </section>
       <div className={styles.description}>
-        <h2>Não encontrou sua dúvida, fale conosco! </h2>
-        <h3>Preencha o formulário e entraremos em contato!</h3>
+        <div className={styles.container}>
+          <h2>Não encontrou sua dúvida, fale conosco! </h2>
+          <h3>Preencha o formulário e entraremos em contato!</h3>
+        </div>
       </div>
 
       <section className={styles.formSection}>

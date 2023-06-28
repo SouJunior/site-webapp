@@ -22,7 +22,7 @@ export default function App() {
         modules={[Autoplay, Pagination]}>
         {iniciativasSouJunior.map(
           ({ title, subtitle, description, image, type, path }) => (
-            <SwiperSlide key={title}>
+            <SwiperSlide key={type}>
               <Card
                 type={type}
                 title={title}

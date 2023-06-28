@@ -8,7 +8,6 @@ import Typography from "@mui/material/Typography";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
 import { headers } from "../../utils/headers";
-import { Subtitle } from "../commons/Subtitle";
 import { Paragraph } from "../commons/Paragraph";
 import { Heading } from "../commons/Heading";
 
