@@ -39,24 +39,20 @@ export const ParticipationSection = () => {
         <div className={styles.container}>
           <div className={styles.leftSide}>
             <Paragraph>
-              A SouJunior, há diversas maneiras de participar:
+              Na SouJunior, há diversas maneiras de participar:
             </Paragraph>
-            <ul className={styles.list}>
-              <li>
-                <Paragraph>
-                  Como juniores ou mentores, ajudando diretamente na construção
-                  do projeto
-                </Paragraph>
-              </li>
-              <li>
-                <Paragraph>
-                  Como apoiadores ajudando com a divulgação, recrutamento e
-                  patrocínio, por exemplo.
-                </Paragraph>
-              </li>
-            </ul>
+
             <Paragraph>
-              Clique nas categorias ao lado para saber mais."
+              Como juniores ou mentores, ajudando diretamente na construção do
+              projeto
+            </Paragraph>
+            <Paragraph>
+              Como apoiadores ajudando com a divulgação, recrutamento e
+              patrocínio, por exemplo.
+            </Paragraph>
+
+            <Paragraph>
+              Clique nas categorias ao lado para saber mais.
             </Paragraph>
           </div>
 
