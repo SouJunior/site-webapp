@@ -1,13 +1,15 @@
 import React from "react";
 import style from "./Card.module.css";
 import { Paragraph } from "../Paragraph";
+import { Heading } from "../Heading";
 
 const Card = ({ title, subtitle, description, image, type, path }) => (
   <section className={type === "type-1" ? style.card : style.card2}>
-    <h1 className={style.title}>{title}</h1>
+    {/* <h1 className={style.title}>{title}</h1> */}
+    <Heading level={"h2"}>{title}</Heading>
     <div className={style.container}>
       <div className={style.content}>
-        <h2 className={style.subtitle}>{subtitle}</h2>
+        <Heading level={"h2"}>{subtitle}</Heading>
 
         {description.map((paragraph) => (
           <Paragraph key={paragraph}>{paragraph}</Paragraph>

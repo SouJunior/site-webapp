@@ -25,8 +25,8 @@ const OuvidoriaForm = () => {
     setTimeout(() => {
       const popup = document.createElement("div");
       popup.style.display = "flex";
-      popup.style.justifyContent="center";
-      popup.style.alignItems="center";
+      popup.style.justifyContent = "center";
+      popup.style.alignItems = "center";
       popup.style.width = "600px";
       popup.style.height = "350px";
       popup.style.flexDirection = "column";
@@ -40,8 +40,8 @@ const OuvidoriaForm = () => {
       popup.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
       popup.style.zIndex = "9999";
       popup.style.fontSize = "24px";
-      popup.style.fontWeight="600"
-      popup.style.gap="10px"
+      popup.style.fontWeight = "600";
+      popup.style.gap = "10px";
 
       const message = document.createElement("div");
       message.textContent = "Obrigado por ajudar a SouJunior a crescer!";
@@ -62,16 +62,16 @@ const OuvidoriaForm = () => {
       });
 
       closeButton.style.backgroundColor = "#046AD0";
-      closeButton.style.borderRadius= "10px";
-      closeButton.style.border= "2px solid #EDEDED";
+      closeButton.style.borderRadius = "10px";
+      closeButton.style.border = "2px solid #EDEDED";
       closeButton.style.color = "#FFF";
       closeButton.style.width = "152px";
       closeButton.style.height = "36px";
       // closeButton.style.padding = " 52px";
       // closeButton.style.marginLeft = "24px";
-      closeButton.style.marginTop="15px"
-      closeButton.style.justifyContent="center";
-      closeButton.style.alignItems="center";
+      closeButton.style.marginTop = "15px";
+      closeButton.style.justifyContent = "center";
+      closeButton.style.alignItems = "center";
 
       popup.appendChild(closeButton);
 
