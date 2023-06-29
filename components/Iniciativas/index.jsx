@@ -15,26 +15,28 @@ import { Autoplay, Pagination } from "swiper";
 export default function App() {
   return (
     <section className={styles.SectionIniciativas} id="iniciativas">
-      <Swiper
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Autoplay, Pagination]}>
-        {iniciativasSouJunior.map(
-          ({ title, subtitle, description, image, type, path }) => (
-            <SwiperSlide key={type}>
-              <Card
-                type={type}
-                title={title}
-                subtitle={subtitle}
-                description={description}
-                image={image}
-                path={path}
-              />
-            </SwiperSlide>
-          )
-        )}
-      </Swiper>
+      <div className={styles.swiperContainer}>
+        <Swiper
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Autoplay, Pagination]}>
+          {iniciativasSouJunior.map(
+            ({ title, subtitle, description, image, type, path }) => (
+              <SwiperSlide key={type}>
+                <Card
+                  type={type}
+                  title={title}
+                  subtitle={subtitle}
+                  description={description}
+                  image={image}
+                  path={path}
+                />
+              </SwiperSlide>
+            )
+          )}
+        </Swiper>
+      </div>
     </section>
   );
 }

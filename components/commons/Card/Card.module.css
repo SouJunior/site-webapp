@@ -6,11 +6,15 @@
   flex-direction: column;
   gap: 7.9rem;
   width: 100%;
+  max-height: 100%;
   padding: 100px 32px;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.card {
+  height: calc(100vh+ 20px);
+}
 .card {
   background-image: url("/assets/iniciativa/fundo-verde.svg");
 }
@@ -23,7 +27,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
-  justify-content: space-between;
   max-width: 144rem;
   width: 100%;
 }
@@ -35,7 +38,6 @@
   flex-direction: column;
   display: flex;
   text-align: initial;
-  justify-content: center;
   align-items: flex-start;
 }
 
@@ -52,32 +54,12 @@
   width: 492px;
 }
 
-.title {
-  color: #ededed;
-  font-weight: 700;
-  font-size: 4.8rem;
-  line-height: 58px;
+.card h2 {
   text-align: center;
 }
 
-.subtitle {
-  color: #ededed;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
-}
-
-.paragraph {
-  width: 100%;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 38px;
-  color: #ededed;
-  padding-top: 60px;
-  padding-bottom: 134px;
-  
+.container p {
+  max-width: 32ch;
 }
 
 .button {
@@ -93,13 +75,11 @@
   font-weight: 600;
   font-size: 32px;
   line-height: 18px;
-  margin-bottom: 30px;
 }
 
 @media (max-width: 960px) {
   .card,
   .card2 {
-    height: 150vh;
     gap: 0;
   }
   .container {
@@ -111,24 +91,16 @@
   .content {
     align-items: center;
     text-align: center;
-    padding-left: 0;
   }
 
-  .title {
-    font-size: 3.2rem;
-    line-height: 120%;
+  .card h2,
+  .card2 h2,
+  .container h2 {
     padding-bottom: 5.2rem;
+    text-align: center;
+    line-height: 120%;
   }
 
-  .subtitle {
-    padding-top: 0;
-  }
-
-  .paragraph {
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-    padding-bottom: 0rem;
-  }
   .button {
     width: 100%;
     font-size: 2.3rem;

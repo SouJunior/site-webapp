@@ -4,6 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import styles from "./Faq.module.css";
 import { Heading } from "../commons/Heading";
+import { Paragraph } from "../commons/Paragraph";
 import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { RadioButton } from "../commons/RadioButton";
@@ -27,13 +28,12 @@ export const Faq = () => {
   function openPopup() {
     setShowPopup(true);
   }
-  
+
   function closePopup() {
     setShowPopup(false);
     setName("");
     setEmail("");
     setMessage("");
- 
   }
 
   const handleNameChange = (event) => {
@@ -72,20 +72,17 @@ export const Faq = () => {
     if (isNameValid && isEmailValid && isTextValid) {
       console.log(`Nome: ${name}`);
       console.log(`Email: ${email}`);
+      console.log(`Message: ${message}`);
       openPopup();
       setName(""); // Limpa o campo de nome
       setEmail(""); // Limpa o campo de email
       setMessage(""); // Limpa o campo de mensagem
-      
     }
-    
   }
-  
+
   function validateMessage(message) {
     return message.trim() !== "";
   }
-
- 
 
   return (
     <>
@@ -106,8 +103,8 @@ export const Faq = () => {
             alt="Uma experiência real de trabalho em uma empresa de tecnologia."
           />
         </picture>
-        <p>Perguntas frequentes</p>
-        <h2>Olá! Como podemos te ajudar?</h2>
+        <Paragraph>Perguntas frequentes</Paragraph>
+        <Heading level={"h2"}>Olá! Como podemos te ajudar?</Heading>
       </div>
       <section className={styles.FaqSection}>
         <div className={styles.container}>
@@ -136,7 +133,7 @@ export const Faq = () => {
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }>
-                    <p className={styles.accordionP}>{descricao} </p>
+                    <Paragraph>{descricao}</Paragraph>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -182,14 +179,18 @@ export const Faq = () => {
       </section>
       <div className={styles.description}>
         <div className={styles.container}>
-          <h2>Não encontrou sua dúvida, fale conosco! </h2>
-          <h3>Preencha o formulário e entraremos em contato!</h3>
+          <Heading level={"h2"}>
+            Não encontrou sua dúvida, fale conosco!{" "}
+          </Heading>
+          <Heading level={"h3"}>
+            Preencha o formulário e entraremos em contato!
+          </Heading>
         </div>
       </div>
 
       <section className={styles.formSection}>
         <div className={styles.container}>
-          <form className={styles.form}  onSubmit={handleSubmit}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.radios}>
               <RadioButton
                 options={[
@@ -243,18 +244,15 @@ export const Faq = () => {
                 Enviar
               </button>
             </div>
-            </form>
-            {showPopup && (
-            <Popup onClose={closePopup}
-            message="Pergunta enviada com sucesso!"
-            >
+          </form>
+          {showPopup && (
+            <Popup onClose={closePopup} message="Pergunta enviada com sucesso!">
               <img src="/assets/popup.svg" alt="Imagem de sucesso" />
               <button onClick={closePopup}>Fechar</button>
             </Popup>
-      )}
+          )}
         </div>
       </section>
-
     </>
   );
 };
