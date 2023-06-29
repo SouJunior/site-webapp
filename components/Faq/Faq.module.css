@@ -224,6 +224,8 @@
 
 .button {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 155px;
   height: 50px;
   border-radius: 10px;
@@ -235,7 +237,6 @@
   font-weight: 300;
   background: #046ad0;
   color: #ededed;
-  padding: 16px 32px;
   margin: 2rem auto;
   cursor: pointer;
 }
@@ -245,7 +246,7 @@
 }
 
 .button:disabled {
-  opacity: 0.5;
+  filter: opacity(50%);
   cursor: not-allowed;
 }
 
@@ -256,6 +257,7 @@
   }
   .button {
     width: 100%;
+    margin: 5rem 0;
   }
 
   .bannerContainer {
