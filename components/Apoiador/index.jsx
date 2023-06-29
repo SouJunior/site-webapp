@@ -3,6 +3,8 @@ import styles from "./Apoiador.module.css";
 import { RadioButton } from "../commons/RadioButton";
 import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
+import { Heading } from "../commons/Heading";
+import { Paragraph } from "../commons/Paragraph";
 
 export const Apoiador = () => {
   const [radioOption, setRadioOption] = useState("Sou Pessoa Física");
@@ -130,12 +132,14 @@ export const Apoiador = () => {
           src="/assets/sou-apoiador-cover.svg"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
-        <h2>Sou Apoiador</h2>
-        <p className={styles.paragraph}>
-          Olá! Preenchendo as informações abaixo, você receberá um contato do
-          nosso time, para te conhecer um pouco mais e entender como você
-          gostaria de apoiar a Sou Junior
-        </p>
+        <div>
+          <Heading level={"h2"}>Sou Apoiador</Heading>
+          <Paragraph>
+            Olá! Preenchendo as informações abaixo, você receberá um contato do
+            nosso time, para te conhecer um pouco mais e entender como você
+            gostaria de apoiar a Sou Junior.
+          </Paragraph>
+        </div>
       </div>
       <section className={styles.ApoiadorSection}>
         <div className={styles.container}>

@@ -1,5 +1,4 @@
 .overlay {
-  
   position: fixed;
   top: 0;
   left: 0;
@@ -16,7 +15,7 @@
   justify-content: center;
   align-items: center;
   gap: 28px;
-  background-color:#046AD0;
+  background-color: #046ad0;
   width: 600px;
   height: 350px;
   padding: 20px;
@@ -24,21 +23,16 @@
   text-align: center;
 }
 
-.popup p {
-    color: #EDEDED;
-    font-size: 24px;
-}
-
-.popup img{
+.popup img {
   width: 70px;
   height: 70px;
 }
 
-.popup button{
-  border: 2px solid #EDEDED;
+.popup button {
+  border: 2px solid #ededed;
   height: 36px;
-  width:152px;
-  color: #FFF;
+  width: 152px;
+  color: #fff;
   border-radius: 10px;
-  background-color: #046AD0;
+  background-color: #046ad0;
 }
