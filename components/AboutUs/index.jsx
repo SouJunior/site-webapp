@@ -106,7 +106,7 @@ export const SobreNos = () => {
             <Heading level={"h4"}>Wouerner Brandão</Heading>
             <Paragraph>CEO SouJunior</Paragraph>
             <Paragraph>
-              Wouerner Brandão é natural de Brasília, casado, pai do Erik,
+              Wouerner Brandão é natural de Brasília, casado, pai do Erik e do Gael,
               reside no Recanto das Emas e recentemente trabalhou em órgãos
               federais em Brasília.
             </Paragraph>
@@ -167,7 +167,7 @@ export const SobreNos = () => {
             <AccordionDetails>
               <Typography variant="p" className={styles.paragraph}>
                 <Paragraph>
-                  Depois de 5 - 6 anos de carreira já com uma boa bagagem de
+                  Depois de 6 anos de carreira já com uma boa bagagem de
                   conhecimentos, via que em alguns lugares que trabalhei tinham
                   estagiários. Mas estas empresas, geralmente não contratavam
                   juniores, e eu estava sempre envolvido com a complementação de

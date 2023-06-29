@@ -224,13 +224,13 @@
 
 .button {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 155px;
-  height: 50px;
+  align-items: center;
+  gap: 10px;
+  width: 352px;
+  height: 66px;
+  padding: 24px 32px;
   border-radius: 10px;
-  border: 1px solid #fff;
-  text-transform: uppercase;
   font-family: inherit;
   font-size: 24px;
   line-height: 18px;

@@ -59,18 +59,21 @@
 
 .button {
   display: flex;
-  width: 155px;
-  height: 50px;
+  width: 352px;
+  height: 66px;
   text-transform: uppercase;
   font-family: inherit;
   font-size: 24px;
   line-height: 18px;
   font-weight: 300;
   background: #046ad0;
-  border: 2px solid #ededed;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
   color: #ededed;
-  padding: 16px 32px;
+  padding: 24px 32px;
   margin: 2rem auto;
+  gap: 10px;
 }
 
 @media (max-width: 960px) {

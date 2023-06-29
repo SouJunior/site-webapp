@@ -30,7 +30,7 @@ export const Apoiador = () => {
   const [confirmEmailTouched, setConfirmEmailTouched] = useState(false);
   const [confirmPhoneTouched, setConfirmPhoneTouched] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const imageUrl = "/assets/voluntario.png";
+  const imageUrl = "/assets/voluntario.png"; //imagem do popup
 
   function handleNameChange(event) {
     const newName = event.target.value;
