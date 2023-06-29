@@ -7,22 +7,6 @@ import { Heading } from "../../commons/Heading";
 export const Footer = () => {
   return (
     <>
-<<<<<<< HEAD
-      <footer className={styles.footerContainer} id={"redes-sociais"}>
-        <div className={styles.align}>
-          <h2 className={styles.title}>Faça parte da nossa comunidade!</h2>
-          <div className={styles.icons}>
-            {dataSocial.map(({ name, icon, path, id }) => (
-              <a
-                href={path}
-                id={id}
-                key={name}
-                target="_blank"
-                rel="noreferrer">
-                {icon}
-              </a>
-            ))}
-=======
       <footer className={styles.Footer} id={"redes-sociais"}>
         <div className={styles.container}>
           <div className={styles.logoWrapper}>
@@ -79,7 +63,6 @@ export const Footer = () => {
                 ))}
               </div>
             </div>
->>>>>>> 65cc8c8176aed3b68201544f8aae9501d6e45c78
           </div>
         </div>
       </footer>

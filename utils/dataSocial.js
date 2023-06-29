@@ -63,10 +63,6 @@ export const dataSocial = [
     id: "twitch",
     name: "twitch",
     icon: <FaTwitch />,
-<<<<<<< HEAD
     path: "https://www.twitch.tv/soujuniortech",
-=======
-    path: "https://t.me/soujuniortech",
->>>>>>> 65cc8c8176aed3b68201544f8aae9501d6e45c78
   },
 ];
