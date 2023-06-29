@@ -4,6 +4,7 @@
   place-content: center;
   padding: 112px 32px;
   position: relative;
+  margin-top: 12rem;
 }
 
 .Footer::before {
