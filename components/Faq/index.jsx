@@ -248,7 +248,7 @@ export const Faq = () => {
             <Popup onClose={closePopup}
             message="Pergunta enviada com sucesso!"
             >
-              <img src="/assets/popup.svg" alt="Imagem de sucesso" />
+              <img src="assets/voluntario.svg" alt="Imagem de voluntariado" />
               <button onClick={closePopup}>Fechar</button>
             </Popup>
       )}

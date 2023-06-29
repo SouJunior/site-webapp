@@ -61,6 +61,7 @@
 }
 
 .button {
+  display: flex;
   width: 155px;
   height: 50px;
   text-transform: uppercase;
@@ -72,7 +73,7 @@
   border: 2px solid #ededed;
   color: #ededed;
   padding: 16px 32px;
-  margin-top: 2rem;
+  margin: 2rem auto;
 }
 
 @media (max-width: 960px) {

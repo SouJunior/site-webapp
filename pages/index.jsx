@@ -14,7 +14,7 @@ const Home = () => {
       <Iniciativas />
       <Depositions />
       <ParticipationSection />
-      
+      <PrivacyPolicy />
     </>
   );
 };

@@ -7,7 +7,7 @@ const Popup = ({ message, onClose }) => {
       <div className={styles.popup}>
         <p>{message}</p>
 
-        <img src="/assets/popup.svg" alt="Imagem de sucesso" />
+        <img src="" alt="Imagem de sucesso" />
        
         <button onClick={onClose}>Fechar</button>
       </div>
