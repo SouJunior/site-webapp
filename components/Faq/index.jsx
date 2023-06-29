@@ -31,7 +31,6 @@ export const Faq = () => {
 
   function closePopup() {
     setShowPopup(false);
-
     setName("");
     setEmail("");
     setMessage("");
@@ -75,7 +74,6 @@ export const Faq = () => {
       console.log(`Email: ${email}`);
       console.log(`Message: ${message}`);
       openPopup();
-      setActive(true);
       setName(""); // Limpa o campo de nome
       setEmail(""); // Limpa o campo de email
       setMessage(""); // Limpa o campo de mensagem
