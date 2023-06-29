@@ -37,6 +37,11 @@
   font-family: inherit;
 }
 
+
+.form div{
+  padding-top: 2rem;
+}
+
 .radios {
   display: flex;
   flex-wrap: wrap;

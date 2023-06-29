@@ -5,6 +5,7 @@ import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
+import Popup from "../commons/Popup/Popup"
 
 export const Apoiador = () => {
   const [radioOption, setRadioOption] = useState("Sou Pessoa Física");
@@ -28,6 +29,8 @@ export const Apoiador = () => {
   const [surnameTouched, setSurnameTouched] = useState(false);
   const [confirmEmailTouched, setConfirmEmailTouched] = useState(false);
   const [confirmPhoneTouched, setConfirmPhoneTouched] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const imageUrl = "/assets/voluntario.png";
 
   function handleNameChange(event) {
     const newName = event.target.value;
@@ -70,6 +73,13 @@ export const Apoiador = () => {
     setConfirmPhoneTouched(validateConfirmPhone(newConfirmPhone));
   }
 
+  function handleConfirmPhoneChange(event) {
+    const newConfirmPhone = event.target.value;
+    setConfirmPhone(newConfirmPhone);
+    setConfirmPhoneTouched(true);
+    setIsPhoneValid(validateConfirmPhone(newConfirmPhone));
+  }
+
   function handleMessageChange(event) {
     const newText = event.target.value;
     setMessage(newText);
@@ -98,20 +108,21 @@ export const Apoiador = () => {
 
   function validatePhone(phone) {
     const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-    return phoneRegex.test(phone);
+       return phoneRegex.test(phone);
   }
 
   function validateConfirmPhone(confirmPhone) {
     return confirmPhone === phone;
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
-    if (isNameValid && isEmailValid && isTextValid && isPhoneValid) {
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-    }
-  }
+  // function handleSubmit(event) {
+  //   event.preventDefault();
+  //   if (isNameValid && isEmailValid && isTextValid && isPhoneValid) {
+  //     console.log(`Nome: ${name}`);
+  //     console.log(`Email: ${email}`);
+      
+  //   }
+  // }
 
   function validateMessage(message) {
     return message.trim() !== "";
@@ -122,7 +133,18 @@ export const Apoiador = () => {
     if (isNameValid && isEmailValid && isTextValid) {
       console.log(`Nome: ${name}`);
       console.log(`Email: ${email}`);
+      openPopup();
     }
+  }
+
+ 
+  function openPopup() {
+    setShowPopup(true);
+  }
+
+  function closePopup() {
+    setShowPopup(false);
+   
   }
 
   return (
@@ -143,7 +165,7 @@ export const Apoiador = () => {
       </div>
       <section className={styles.ApoiadorSection}>
         <div className={styles.container}>
-          <form className={styles.form}>
+          <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.radios}>
               <RadioButton
                 options={["Sou Pessoa Física", "Sou Pessoa Jurídica"]}
@@ -165,7 +187,7 @@ export const Apoiador = () => {
             <div className={styles.labelInput}>
               <Input
                 type="text"
-                text="Como prefere ser chamado?*"
+                text="Como prefere ser chamado?"
                 placeholder="Como prefere ser chamado"
                 label="Surname"
                 value={surname}
@@ -234,20 +256,29 @@ export const Apoiador = () => {
               />
 
               <button
-                className={styles.button}
-                type="submit"
-                disabled={
-                  !isNameValid ||
-                  !isEmailValid ||
-                  !isTextValid ||
-                  !isPhoneValid ||
-                  !isSurnameValid ||
-                  !isConfirmEmailValid
-                }>
-                Enviar
-              </button>
+                    className={styles.button}
+                    type="submit"
+                    disabled={
+                      !isNameValid ||
+                      !isEmailValid ||
+                      !isTextValid ||
+                      !isPhoneValid ||
+                      // !isSurnameValid ||
+                      !isConfirmEmailValid
+                    }
+                  >
+                    Enviar
+                  </button>
+              {showPopup && (
+              <Popup onClose={closePopup} message="Seu formulário foi enviado com sucesso!" imageUrl={imageUrl}>
+              
+              <button onClick={closePopup}>Fechar</button>
+            </Popup>
+          )}
             </div>
+
           </form>
+         
         </div>
       </section>
     </>

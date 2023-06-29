@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
@@ -24,6 +24,8 @@ export const Faq = () => {
   const [messageTouched, setMessageTouched] = useState(false);
 
   const [showPopup, setShowPopup] = useState(false);
+
+  const imageUrl = "/assets/faq.png";
 
   function openPopup() {
     setShowPopup(true);
@@ -79,6 +81,7 @@ export const Faq = () => {
       setMessage(""); // Limpa o campo de mensagem
     }
   }
+
 
   function validateMessage(message) {
     return message.trim() !== "";
@@ -240,14 +243,15 @@ export const Faq = () => {
               <button
                 className={styles.button}
                 type="submit"
-                disabled={!isNameValid || !isEmailValid || !isTextValid}>
+                disabled={!isNameValid && !isEmailValid && !isTextValid}
+              >
                 Enviar
               </button>
             </div>
           </form>
           {showPopup && (
-            <Popup onClose={closePopup} message="Pergunta enviada com sucesso!">
-              <img src="assets/voluntario.svg" alt="Imagem de voluntariado" />
+            <Popup onClose={closePopup} message="Pergunta enviada com sucesso!" imageUrl={imageUrl}>
+              
               <button onClick={closePopup}>Fechar</button>
             </Popup>
           )}

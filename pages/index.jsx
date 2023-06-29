@@ -3,6 +3,7 @@ import { ParticipationSection } from "../components/Participation";
 import HeroHome from "../components/HeroHome";
 import Iniciativas from "../components/Iniciativas";
 import { Depositions } from "../components/Depositions";
+import PrivacyPolicy from "../components/commons/PrivacyPolicy/PrivacyPolicy"
 
 const Home = () => {
   return (
