@@ -3,32 +3,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   background: linear-gradient(to bottom, #046ad0, #011e3a);
   padding-top: 98px;
   padding-bottom: 98px;
   padding-left: 121px;
   padding-right: 125px;
-=======
-  background-color: rgba(5, 117, 231, 1);
-  padding-top: 20px;
-  padding-bottom: 50px;
- 
-
->>>>>>> 817c6a7f9446a3a51d255472cc12b4ed9cfb919c
 }
 
 .container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-<<<<<<< HEAD
   width: 1696px;
-=======
-  margin-left: 200px;
-  margin-right: 150px;
-  width: 1450px;
->>>>>>> 817c6a7f9446a3a51d255472cc12b4ed9cfb919c
 }
 
 .listContainer {
@@ -102,7 +88,7 @@
 
 /*Icones*/
 
-.iconsConatiner{
+.iconsConatiner {
   width: 399px;
   height: auto;
   display: inline-flex;
@@ -113,9 +99,7 @@
   flex-wrap: wrap;
 }
 
-.iconsConatiner a{
+.iconsConatiner a {
   font-size: 37px;
   border-radius: 5px;
-  
-  
 }
