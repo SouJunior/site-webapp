@@ -1,7 +1,7 @@
 import Script from "next/script";
 import "../styles/globals.css";
-import { Layout } from "../components/Layout";
-import PrivacyPolicy from "../components/commons/PrivacyPolicy/PrivacyPolicy";
+import {Layout} from '../components/Layout'
+
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <Component {...pageProps} />
-      <PrivacyPolicy />
+      
     </Layout>
   );
 }
