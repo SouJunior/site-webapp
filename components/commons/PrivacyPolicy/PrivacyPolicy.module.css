@@ -50,12 +50,10 @@
   height: 66px;
   padding: 24px 32px;
   border-radius: 10px;
-   background-color: #046ad0;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 2px;
+  background-color: #046ad0;
   font-size: 24px;
   color: #ededed;
+  border: none;
 }
 
 @media (max-width: 960px) {

@@ -239,6 +239,7 @@
   color: #ededed;
   margin: 2rem auto;
   cursor: pointer;
+  border: none;
 }
 
 .button:hover {

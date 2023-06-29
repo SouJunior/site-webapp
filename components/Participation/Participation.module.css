@@ -176,6 +176,7 @@
   align-self: flex-end;
   transition: ease 0.15s;
   font-size: 24px;
+  border: none;
   /* width: 262px;
   height: 50px; */
   /* background-color: transparent;
