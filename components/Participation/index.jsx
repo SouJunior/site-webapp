@@ -151,7 +151,7 @@ export const ParticipationSection = () => {
                   </p>
                   <p className={styles.p}>
                     Interessados devem se inscrever através do formulário e,
-                    posteriormente, contatados pela equipe responsável.
+                    posteriormente, contatados pela equipe responsável. <br/><br/>
                   </p>
 
                   <button className={styles.button}>

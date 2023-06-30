@@ -169,15 +169,14 @@
   border-radius: 10px;
   background: #046ad0;
   color: #fff;
-  padding: 1rem 1.2rem;
   margin-left: 2.5rem;
-  font-size: 1.6rem;
+  font-size: 24px;
   flex-direction: row;
   align-self: flex-end;
   transition: ease 0.15s;
   font-size: 24px;
   border: none;
-  /* width: 262px;
+    /* width: 262px;
   height: 50px; */
   /* background-color: transparent;
   border: 0.2rem solid #ededed;

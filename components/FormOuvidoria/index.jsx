@@ -89,7 +89,7 @@ const OuvidoriaForm = () => {
     if (confirmed) {
       setIsSubmitting(true);
       // Redirecionar para a "home"
-      window.location.href = "/";
+      // window.location.href = "/";
     }
   };
 
