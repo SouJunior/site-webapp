@@ -57,8 +57,8 @@ const OuvidoriaForm = () => {
       const closeButton = document.createElement("button");
       closeButton.textContent = "Fechar";
       closeButton.addEventListener("click", () => {
-        document.body.removeChild(popup);
-        window.location.href = "/"; // Redireciona para a página inicial
+       document.body.removeChild(popup);
+        // window.location.href = "/"; // Redireciona para a página inicial
       });
 
       closeButton.style.backgroundColor = "#046AD0";
@@ -86,11 +86,11 @@ const OuvidoriaForm = () => {
   const handleCancel = () => {
     const confirmed = window.confirm("Você deseja mesmo cancelar?");
 
-    if (confirmed) {
-      setIsSubmitting(true);
-      // Redirecionar para a "home"
-      // window.location.href = "/";
-    }
+    // if (confirmed) {
+    //   setIsSubmitting(true);
+    //   // Redirecionar para a "home"
+    //   // window.location.href = "/";
+    // }
   };
 
   const validationSchema = Yup.object().shape({
