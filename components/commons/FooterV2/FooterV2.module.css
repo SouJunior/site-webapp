@@ -1,0 +1,105 @@
+.masterContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #046ad0, #011e3a);
+  padding-top: 98px;
+  padding-bottom: 98px;
+  padding-left: 121px;
+  padding-right: 125px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1696px;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.link {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #ededed;
+}
+
+.imageContainer {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 100px;
+  gap: 80px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.tittle {
+  margin-bottom: 2rem;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.iconsContainer {
+  height: 166px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 350px;
+  object-fit: contain;
+  height: 100%;
+}
+
+.icon a {
+  font-size: 36px; /*Tamanho dos icones*/
+  color: white;
+  padding: 5px;
+  margin: 0;
+  height: 36px;
+}
+
+/*Icones*/
+
+.iconsConatiner {
+  width: 399px;
+  height: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 0px 40px;
+  flex-wrap: wrap;
+}
+
+.iconsConatiner a {
+  font-size: 37px;
+  border-radius: 5px;
+}

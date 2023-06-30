@@ -5,7 +5,7 @@ import Input from "../commons/Input";
 import Textarea from "../commons/Textarea";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
-import Popup from "../commons/Popup/Popup"
+import Popup from "../commons/Popup/Popup";
 
 export const Apoiador = () => {
   const [radioOption, setRadioOption] = useState("Sou Pessoa Física");
@@ -93,7 +93,7 @@ export const Apoiador = () => {
   }
 
   function validateSurname(name) {
-    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/;
+    const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s]*$/;
     return nameRegex.test(name);
   }
 
@@ -107,8 +107,8 @@ export const Apoiador = () => {
   }
 
   function validatePhone(phone) {
-    const phoneRegex = /^\(\d{2}\)\s\d{4,5}-\d{4}$/;
-       return phoneRegex.test(phone);
+    const phoneRegex = /^\(\d{2}\)(\s)?\d{4,5}-*\d{4}$/;
+    return phoneRegex.test(phone);
   }
 
   function validateConfirmPhone(confirmPhone) {
@@ -120,7 +120,7 @@ export const Apoiador = () => {
   //   if (isNameValid && isEmailValid && isTextValid && isPhoneValid) {
   //     console.log(`Nome: ${name}`);
   //     console.log(`Email: ${email}`);
-      
+
   //   }
   // }
 
@@ -137,14 +137,12 @@ export const Apoiador = () => {
     }
   }
 
- 
   function openPopup() {
     setShowPopup(true);
   }
 
   function closePopup() {
     setShowPopup(false);
-   
   }
 
   return (
@@ -199,7 +197,7 @@ export const Apoiador = () => {
             <div className={styles.labelInput}>
               <Input
                 type="text"
-                text="Telefone/Whats*"
+                text="Telefone*"
                 placeholder="(xx) xxxxxxxxx"
                 label="Telefone (com DDD)"
                 value={phone}
@@ -210,7 +208,7 @@ export const Apoiador = () => {
 
             <div className={styles.labelInput}>
               <Input
-                text="Confirme seu telefone/whats*"
+                text="Confirme seu telefone*"
                 label="Confirmar Telefone"
                 type="tel"
                 placeholder="(xx) xxxxxxxxx"
@@ -256,29 +254,28 @@ export const Apoiador = () => {
               />
 
               <button
-                    className={styles.button}
-                    type="submit"
-                    disabled={
-                      !isNameValid ||
-                      !isEmailValid ||
-                      !isTextValid ||
-                      !isPhoneValid ||
-                      // !isSurnameValid ||
-                      !isConfirmEmailValid
-                    }
-                  >
-                    Enviar
-                  </button>
+                className={styles.button}
+                type="submit"
+                disabled={
+                  !isNameValid ||
+                  !isEmailValid ||
+                  !isTextValid ||
+                  !isPhoneValid ||
+                  // !isSurnameValid ||
+                  !isConfirmEmailValid
+                }>
+                Enviar
+              </button>
               {showPopup && (
-              <Popup onClose={closePopup} message="Seu formulário foi enviado com sucesso!" imageUrl={imageUrl}>
-              
-              <button onClick={closePopup}>Fechar</button>
-            </Popup>
-          )}
+                <Popup
+                  onClose={closePopup}
+                  message="Seu formulário foi enviado com sucesso!"
+                  imageUrl={imageUrl}>
+                  <button onClick={closePopup}>Fechar</button>
+                </Popup>
+              )}
             </div>
-
           </form>
-         
         </div>
       </section>
     </>
