@@ -149,7 +149,7 @@ export const Apoiador = () => {
     <>
       <div className={styles.bannerContainer}>
         <img
-          src="/assets/sou-apoiador-cover.svg"
+          src="/assets/apoiadorHero.png"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div>
