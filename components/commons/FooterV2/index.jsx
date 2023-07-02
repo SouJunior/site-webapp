@@ -15,7 +15,7 @@ const FooterV2 = () => {
               <a href="/sobre-nos">Sobre nós</a>
             </li>
             <li className={style.link}>
-              <a href="#">Missão visão e valores</a>
+              <a href="/#mission">Missão visão e valores</a>
             </li>
             <li className={style.link}>
               <a href="/#iniciativas">Nossas iniciativas</a>
