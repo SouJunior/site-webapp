@@ -127,7 +127,7 @@ export const Faq = () => {
                     key={id}
                     header={
                       <div className={styles.headerTitle}>
-                        <h2 className={styles.accordionTitle}>{titulo}</h2>
+                        <Heading level={'h4'}>{titulo}</Heading>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }
@@ -146,12 +146,12 @@ export const Faq = () => {
                     key={id}
                     header={
                       <div className={styles.headerTitle}>
-                        <h2 className={styles.accordionTitle}>{titulo}</h2>
+                        <Heading level={"h4"}>{titulo}</Heading>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }
                   >
-                    <p className={styles.accordionP}>{descricao}</p>
+                    <Paragraph>{descricao}</Paragraph>
                   </AccordionItem>
                 ))}
               </Accordion>
@@ -165,12 +165,12 @@ export const Faq = () => {
                     key={id}
                     header={
                       <div className={styles.headerTitle}>
-                        <h2 className={styles.accordionTitle}>{titulo}</h2>
+                        <Heading level={"h4"}>{titulo}</Heading>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }
                   >
-                    <p className={styles.accordionP}>{descricao} </p>
+                    <Paragraph>{descricao}</Paragraph>
                   </AccordionItem>
                 ))}
               </Accordion>
