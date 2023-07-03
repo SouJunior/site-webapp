@@ -5,6 +5,7 @@
   padding: 112px 32px;
   position: relative;
   margin-top: 12rem;
+  background-color: #046ad0;
 }
 
 .Footer::before {
@@ -27,8 +28,10 @@
 }
 
 .logoWrapper {
+  flex: 1;
   align-self: center;
-  min-width: max-content;
+  max-width: max-content;
+  min-width: fit-content;
 }
 
 .footerContent {
@@ -40,16 +43,18 @@
 .about,
 .contact,
 .social {
-  /* flex: 1; */
   display: flex;
   flex-direction: column;
-  gap: 2.8rem;
+  gap: 3rem;
 }
 
 .social {
-  flex: 1;
+  flex: 1 0 300px;
   width: 100%;
   align-items: center;
+}
+.social h4 {
+  text-align: center;
 }
 
 .socialIcons {
@@ -65,7 +70,7 @@
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
-  max-width: 60%;
+  max-width: 65%;
 }
 .icons a {
   font-size: 3.7rem;
@@ -80,7 +85,7 @@
   width: max-content;
   justify-content: flex-start;
   list-style: none;
-  gap: 2.8rem;
+  gap: 2.4rem;
   font-weight: 500;
   font-size: 2.4rem;
   font-family: inherit;
@@ -95,10 +100,11 @@
   opacity: 0.8;
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     gap: 5.2rem;
+    flex-wrap: wrap;
   }
 
   .logoWrapper {
@@ -106,12 +112,11 @@
   }
 
   .social {
-    flex: 2;
+    flex: 1;
   }
 
   .icons {
     gap: 22px;
-    max-width: 60%;
     flex-wrap: nowrap;
   }
 }
@@ -128,22 +133,28 @@
   .container {
     width: 100%;
     flex-direction: column;
+    align-self: center;
     padding: 7.2rem 0;
+    gap: 4rem;
   }
   .footerContent {
     width: 100%;
+    gap: 4rem;
+    flex-direction: column;
   }
 
   .about,
   .contact,
   .social {
+    flex: 1;
     width: 100%;
-    justify-content: flex-start;
+    gap: 1.8rem;
   }
-  .title {
-    font-size: 20px;
-    margin-bottom: 16px;
+
+  .list {
+    gap: 1.5rem;
   }
+
   .icons {
     font-size: 1.6px;
     flex-wrap: wrap;
