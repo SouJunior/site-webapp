@@ -13,7 +13,7 @@
 }
 
 .bannerContainer {
-  padding-bottom: 5.2rem;
+  padding-bottom: 8.2rem;
   text-align: center;
   gap: 2.4rem;
 }
@@ -41,7 +41,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 6.8rem;
+  gap: 2.4rem;
+  padding-bottom: 8.2rem;
 }
 
 .tabList {
@@ -157,11 +158,10 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 2.1rem;
+  gap: 2.2rem;
 }
 
 .labelInput {
-  padding-bottom: 20px;
   width: 100%;
 }
 
@@ -194,10 +194,6 @@
 .radiosContainer {
   display: flex;
   gap: 10px;
-}
-
-.area {
-  margin-top: 20px;
 }
 
 .description {
@@ -241,7 +237,7 @@
   font-weight: 300;
   background: #046ad0;
   color: #ededed;
-  margin: 2rem auto;
+  margin: 4rem auto;
   cursor: pointer;
   border: none;
 }
