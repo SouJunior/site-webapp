@@ -24,7 +24,7 @@ export const Footer = () => {
                   <Link href={"/sobre-nos"}>Sobre nós</Link>
                 </li>
                 <li className={styles.link}>
-                  <Link href={"/"}>Missão visão e valores</Link>
+                  <Link href={"/mission"}>Missão visão e valores</Link>
                 </li>
                 <li className={styles.link}>
                   <Link href={"/#iniciativas"}>Nossas iniciativas</Link>
