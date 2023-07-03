@@ -9,16 +9,16 @@ export const MissionValues = () => {
         <picture>
           <source
             media="(max-width: 960px)"
-            srcSet="/assets/default-banner-group-mobile.svg 768w"
+            srcSet="/assets/apoiadorHero.png 768w"
             sizes="960px"
           />
           <source
-            srcSet="/assets/default-banner-group.svg 1280w"
+            srcSet="/assets/apoiadorHero.png 1280w"
             sizes="1440px"
           />
 
           <img
-            src="/assets/default-banner-group.svg"
+            src="/assets/apoiadorHero.png"
             alt="Uma experiência real de trabalho em uma empresa de tecnologia."
           />
         </picture>
