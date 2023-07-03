@@ -10,12 +10,16 @@
   flex-direction: column;
   width: 100%;
   gap: 6.2rem;
-  padding: 0 32px;
 }
 
 .bannerContainer {
-  padding: 72px 32px;
+  padding-bottom: 5.2rem;
   text-align: center;
+  gap: 2.4rem;
+}
+
+.bannerContainer img {
+  padding-bottom: 2.8rem;
 }
 
 .bannerContainer p {

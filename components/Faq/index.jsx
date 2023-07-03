@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState } from "react";
 import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
@@ -82,7 +82,6 @@ export const Faq = () => {
     }
   }
 
-
   function validateMessage(message) {
     return message.trim() !== "";
   }
@@ -92,17 +91,13 @@ export const Faq = () => {
       <div className={styles.bannerContainer}>
         <picture>
           <source
-            media="(max-width: 960px)"
-            srcSet="/assets/heroFaq.png 768w"
-            sizes="960px"
-          />
-          <source
-            srcSet="/assets/heroFaq.png 1280w"
+            alt="Uma experiência real de trabalho em uma empresa de tecnologia."
+            srcSet="/assets/hero-faq.svg 1280w"
             sizes="1440px"
           />
 
           <img
-            src="/assets/heroFaq.png"
+            src="/assets/hero-faq.svg"
             alt="Uma experiência real de trabalho em uma empresa de tecnologia."
           />
         </picture>
@@ -135,7 +130,8 @@ export const Faq = () => {
                         <h2 className={styles.accordionTitle}>{titulo}</h2>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
-                    }>
+                    }
+                  >
                     <Paragraph>{descricao}</Paragraph>
                   </AccordionItem>
                 ))}
@@ -153,7 +149,8 @@ export const Faq = () => {
                         <h2 className={styles.accordionTitle}>{titulo}</h2>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
-                    }>
+                    }
+                  >
                     <p className={styles.accordionP}>{descricao}</p>
                   </AccordionItem>
                 ))}
@@ -171,7 +168,8 @@ export const Faq = () => {
                         <h2 className={styles.accordionTitle}>{titulo}</h2>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
-                    }>
+                    }
+                  >
                     <p className={styles.accordionP}>{descricao} </p>
                   </AccordionItem>
                 ))}
@@ -250,8 +248,11 @@ export const Faq = () => {
             </div>
           </form>
           {showPopup && (
-            <Popup onClose={closePopup} message="Pergunta enviada com sucesso!" imageUrl={imageUrl}>
-              
+            <Popup
+              onClose={closePopup}
+              message="Pergunta enviada com sucesso!"
+              imageUrl={imageUrl}
+            >
               <button onClick={closePopup}>Fechar</button>
             </Popup>
           )}
