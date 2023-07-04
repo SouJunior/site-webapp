@@ -234,7 +234,7 @@ export const Faq = () => {
               <Textarea
                 name="description"
                 value={message}
-                isValid={!messageTouched || validateMessage(message)}
+                isValid={!messageTouched || isTextValid}
                 onChange={handleMessageChange}
                 text="Fale-nos sobre sua dúvida*"
               />
