@@ -77,7 +77,7 @@ export const headers = [
     id: 10,
     nome: "Wanderson Santos",
     cargo: "Head de Back End",
-    img: "https://user-images.githubusercontent.com/91374502/222701634-2c4376da-a8b9-4e5a-ba83-d33cf3bf7108.png",
+    img: "https://user-images.githubusercontent.com/81826043/250998059-b19e5349-9935-4b4e-a36a-712f50b343d9.png",
     linkedin: "https://www.linkedin.com/in/wandersongsantos/",
     discord: "https://discordapp.com/users/",
   },
