@@ -35,6 +35,10 @@
   padding-bottom: 6.8rem;
 }
 
+.container p {
+  text-align: left;
+}
+
 .paragraphWrapper {
   display: flex;
   flex-direction: column;
@@ -191,10 +195,7 @@
     gap: 2rem;
     padding: 0;
   }
-  .question,
-  .paragraph {
-    text-align: center;
-  }
+
   .bannerContainer {
     flex-direction: column-reverse;
   }
