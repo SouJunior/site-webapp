@@ -124,6 +124,8 @@ export const Apoiador = () => {
   //   }
   // }
 
+ 
+
   function validateMessage(message) {
     return message.trim() !== "";
   }
@@ -134,6 +136,29 @@ export const Apoiador = () => {
       console.log(`Nome: ${name}`);
       console.log(`Email: ${email}`);
       openPopup();
+      setRadioOption("Sou Pessoa Física");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setPhone("");
+      setSurname("");
+      setConfirmEmail("");
+      setConfirmPhone("");
+      setIsNameValid("");
+      setIsEmailValid("");
+      setIsTextValid("");
+      setIsPhoneValid("");
+      setIsSurnameValid("");
+      setIsConfirmEmailValid("");
+      setPhoneTouched("");
+      setNameTouched("");
+      setEmailTouched("");
+      setMessageTouched("");
+      setSurnameTouched("");
+      setConfirmEmailTouched("");
+      setConfirmPhoneTouched("");
+      
+
     }
   }
 
@@ -144,12 +169,13 @@ export const Apoiador = () => {
   function closePopup() {
     setShowPopup(false);
   }
-
+    
+ 
   return (
     <>
       <div className={styles.bannerContainer}>
         <img
-          src="/assets/apoiadorHero.png"
+          src="/assets/apoiar.png"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div>
@@ -197,7 +223,7 @@ export const Apoiador = () => {
             <div className={styles.labelInput}>
               <Input
                 type="text"
-                text="Telefone/ Whats*"
+                text="Telefone*"
                 placeholder="(xx) xxxxxxxxx"
                 label="Telefone (com DDD)"
                 value={phone}
@@ -208,7 +234,7 @@ export const Apoiador = () => {
 
             <div className={styles.labelInput}>
               <Input
-                text="Confirme seu telefone/whats*"
+                text="Confirme seu telefone*"
                 label="Confirmar Telefone"
                 type="tel"
                 placeholder="(xx) xxxxxxxxx"

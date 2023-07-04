@@ -142,7 +142,7 @@ export const ParticipationSection = () => {
               {textSupporter && (
                 <>
                   <p className={styles.p}>
-                    O projeto SouJunior busca pessoas interessadas em contribuir
+                  A SouJunior busca pessoas interessadas em contribuir
                     para o projeto de alguma forma, incluindo financiadores da
                     iniciativa, divulgadores com canais no YouTube, podcast ou
                     blog sobre tecnologia, especialistas dispostos a palestrar
