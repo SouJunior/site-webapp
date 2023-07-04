@@ -197,7 +197,7 @@ export const Apoiador = () => {
             <div className={styles.labelInput}>
               <Input
                 type="text"
-                text="Telefone/ Whats*"
+                text="Telefone*"
                 placeholder="(xx) xxxxxxxxx"
                 label="Telefone (com DDD)"
                 value={phone}
@@ -208,7 +208,7 @@ export const Apoiador = () => {
 
             <div className={styles.labelInput}>
               <Input
-                text="Confirme seu telefone/whats*"
+                text="Confirme seu telefone*"
                 label="Confirmar Telefone"
                 type="tel"
                 placeholder="(xx) xxxxxxxxx"
