@@ -74,10 +74,6 @@ export const Faq = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     if (isNameValid && isEmailValid && isTextValid) {
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-      console.log(`Message: ${message}`);
-
       try {
         const response = await api.sendMailAdmin("/mail", {
           subject: radioOption,
@@ -204,7 +200,7 @@ export const Faq = () => {
       <div className={styles.description}>
         <div className={styles.container}>
           <Heading level={"h2"}>
-            Não encontrou sua dúvida, fale conosco!{" "}
+            Não encontrou sua dúvida, fale conosco!
           </Heading>
           <Heading level={"h3"}>
             Preencha o formulário e entraremos em contato!
