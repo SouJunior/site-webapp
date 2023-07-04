@@ -109,8 +109,8 @@
 
 .backToTop {
   position: fixed;
-  bottom: 20px; /* Ajuste a posição conforme necessário */
-  right: 20px; /* Ajuste a posição conforme necessário */
+  bottom: 20px;
+  right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,6 +120,7 @@
   border-radius: 10%;
   cursor: pointer;
 }
+
 
 .arrowIcon {
   font-size: 25px;
