@@ -22,8 +22,8 @@ export const headers = [
     nome: "Daniele Oliveira",
     cargo: "Head de Tech Recruiting",
     img: "https://user-images.githubusercontent.com/115566254/250676056-f40db53f-bf9c-48d6-90bc-37125e2c29c5.jpg",
-    linkedin: "https://www.linkedin.com/in/rariellyjanuario/",
-    discord: "https://discordapp.com/users/762805481546317835",
+    linkedin: "https://www.linkedin.com/in/daniele-oliveirapsi/",
+    discord: "https://discordapp.com/users/781888047289466910",
   },
   {
     id: 4,

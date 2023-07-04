@@ -1,12 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import { FaArrowUp } from "react-icons/fa";
 import styles from "./Footer.module.css";
 import { dataSocial } from "../../../utils/dataSocial";
 import { Heading } from "../../commons/Heading";
 
 export const Footer = () => {
+
+  //função voltar para o topo
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
+         
       <footer className={styles.Footer} id={"redes-sociais"}>
         <div className={styles.container}>
           <div className={styles.logoWrapper}>
@@ -65,7 +75,12 @@ export const Footer = () => {
             </div>
           </div>
         </div>
+        <div className={styles.backToTop} onClick={handleScrollToTop}>
+        <FaArrowUp className={styles.arrowIcon} />
+        Voltar para o topo
+      </div>
       </footer>
+      
     </>
   );
 };
