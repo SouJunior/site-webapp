@@ -72,9 +72,6 @@ export const Faq = () => {
   function handleSubmit(event) {
     event.preventDefault();
     if (isNameValid && isEmailValid && isTextValid) {
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-      console.log(`Message: ${message}`);
       openPopup();
       setName(""); // Limpa o campo de nome
       setEmail(""); // Limpa o campo de email
@@ -127,7 +124,7 @@ export const Faq = () => {
                     key={id}
                     header={
                       <div className={styles.headerTitle}>
-                        <Heading level={'h4'}>{titulo}</Heading>
+                        <Heading level={"h4"}>{titulo}</Heading>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }
