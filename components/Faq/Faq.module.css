@@ -45,6 +45,10 @@
   padding-bottom: 8.2rem;
 }
 
+.container h2 {
+  text-align: center;
+}
+
 .tabList {
   flex: 1;
   display: flex;
@@ -220,19 +224,9 @@
     padding-bottom: 3.2rem;
   }
 
-  .description h2 {
-    font-size: 32px;
-    line-height: 3.8rem;
-    /* padding-bottom: 3.2rem; */
-    /* max-width: 22ch; */
-    /* margin: 0; */
-  }
-
   .bannerContainer p,
   .description h3 {
     font-size: 2.6rem;
-    /* max-width: 30ch; */
-    /* margin: 0 auto; */
   }
 }
 
