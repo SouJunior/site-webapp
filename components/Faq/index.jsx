@@ -211,7 +211,7 @@ export const Faq = () => {
                 type="text"
                 text="Qual o seu nome?*"
                 placeholder="Digite seu nome completo"
-                label="Nome"
+                label={nameTouched ? "O campo nome é obrigatório." : "Nome"}
                 value={name}
                 onChange={handleNameChange}
                 isValid={!nameTouched || isNameValid}
@@ -223,7 +223,7 @@ export const Faq = () => {
                 type="email"
                 text="Qual o seu e-mail?*"
                 placeholder="Digite o seu e-mail"
-                label="E-mail"
+                label={emailTouched ? "O campo E-mail é obrigatório." : "E-mail"}
                 value={email}
                 onChange={handleEmailChange}
                 isValid={!emailTouched || isEmailValid}
