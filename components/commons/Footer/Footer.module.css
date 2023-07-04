@@ -125,6 +125,7 @@
 .arrowIcon {
   font-size: 25px;
   margin-right: 5px;
+  z-index: 10000;
 }
 
 @media (max-width: 1024px) {
