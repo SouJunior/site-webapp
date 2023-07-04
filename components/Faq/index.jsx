@@ -74,16 +74,6 @@ export const Faq = () => {
   async function handleSubmit(event) {
     event.preventDefault();
     if (isNameValid && isEmailValid && isTextValid) {
-<<<<<<< HEAD
-      openPopup();
-      setName(""); // Limpa o campo de nome
-      setEmail(""); // Limpa o campo de email
-      setMessage(""); // Limpa o campo de mensagem
-=======
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-      console.log(`Message: ${message}`);
-
       try {
         const response = await api.sendMailAdmin("/mail", {
           subject: radioOption,
@@ -108,7 +98,6 @@ export const Faq = () => {
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
         openPopup();
       }
->>>>>>> api
     }
   }
 
