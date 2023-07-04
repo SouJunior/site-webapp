@@ -173,7 +173,7 @@ export const Apoiador = () => {
  
   return (
     <>
-      <div className={styles.bannerContainer}>
+      <div className={styles.bannerContainer} id="apoiador">
         <img
           src="/assets/apoiar.png"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."

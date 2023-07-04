@@ -97,8 +97,8 @@ export const SobreNos = () => {
             <Image
               src="/assets/brandao.png"
               alt="foto de perfil Wouerner Brandão"
-              width={232}
-              height={232}
+              width={532}
+              height={532}
             />
           </div>
 
