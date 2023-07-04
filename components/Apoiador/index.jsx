@@ -107,7 +107,7 @@ export const Apoiador = () => {
   }
 
   function validatePhone(phone) {
-    const phoneRegex = /^\(\d{2}\)(\s)?\d{4,5}-*\d{4}$/;
+    const phoneRegex = /^\(*\d{2}\)*(\s)?\d{4,5}-*\d{4}$/;
     return phoneRegex.test(phone);
   }
 
@@ -124,6 +124,8 @@ export const Apoiador = () => {
   //   }
   // }
 
+ 
+
   function validateMessage(message) {
     return message.trim() !== "";
   }
@@ -134,6 +136,29 @@ export const Apoiador = () => {
       console.log(`Nome: ${name}`);
       console.log(`Email: ${email}`);
       openPopup();
+      setRadioOption("Sou Pessoa Física");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setPhone("");
+      setSurname("");
+      setConfirmEmail("");
+      setConfirmPhone("");
+      setIsNameValid("");
+      setIsEmailValid("");
+      setIsTextValid("");
+      setIsPhoneValid("");
+      setIsSurnameValid("");
+      setIsConfirmEmailValid("");
+      setPhoneTouched("");
+      setNameTouched("");
+      setEmailTouched("");
+      setMessageTouched("");
+      setSurnameTouched("");
+      setConfirmEmailTouched("");
+      setConfirmPhoneTouched("");
+      
+
     }
   }
 
@@ -144,12 +169,13 @@ export const Apoiador = () => {
   function closePopup() {
     setShowPopup(false);
   }
-
+    
+ 
   return (
     <>
-      <div className={styles.bannerContainer}>
+      <div className={styles.bannerContainer} id="apoiador">
         <img
-          src="/assets/apoiadorHero.png"
+          src="/assets/apoiar.png"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div>

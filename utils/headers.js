@@ -19,11 +19,11 @@ export const headers = [
   },
   {
     id: 3,
-    nome: "Rarielly Januário",
+    nome: "Daniele Oliveira",
     cargo: "Head de Tech Recruiting",
-    img: "https://user-images.githubusercontent.com/104070821/229590193-5786440f-5a02-450f-8945-af523d6af2f9.png",
-    linkedin: "https://www.linkedin.com/in/rariellyjanuario/",
-    discord: "https://discordapp.com/users/762805481546317835",
+    img: "https://user-images.githubusercontent.com/115566254/250676056-f40db53f-bf9c-48d6-90bc-37125e2c29c5.jpg",
+    linkedin: "https://www.linkedin.com/in/daniele-oliveirapsi/",
+    discord: "https://discordapp.com/users/781888047289466910",
   },
   {
     id: 4,

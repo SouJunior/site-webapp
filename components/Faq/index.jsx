@@ -33,9 +33,9 @@ export const Faq = () => {
 
   function closePopup() {
     setShowPopup(false);
-    setName("");
-    setEmail("");
-    setMessage("");
+    // setName("");
+    // setEmail("");
+    // setMessage("");
   }
 
   const handleNameChange = (event) => {
@@ -84,6 +84,7 @@ export const Faq = () => {
 
   function validateMessage(message) {
     return message.trim() !== "";
+    
   }
 
   return (
