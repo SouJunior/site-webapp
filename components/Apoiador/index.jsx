@@ -107,7 +107,7 @@ export const Apoiador = () => {
   }
 
   function validatePhone(phone) {
-    const phoneRegex = /^\(\d{2}\)(\s)?\d{4,5}-*\d{4}$/;
+    const phoneRegex = /^\(*\d{2}\)*(\s)?\d{4,5}-*\d{4}$/;
     return phoneRegex.test(phone);
   }
 
