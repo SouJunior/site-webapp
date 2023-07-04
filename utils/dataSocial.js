@@ -7,16 +7,14 @@ import {
   FaTwitter,
   FaYoutube,
   FaTelegram,
-  FaTwitch,
 } from "react-icons/fa";
 
 export const dataSocial = [
-  {
-    id: "github",
-    name: "github",
-    icon: <FaGithub />,
-    path: "https://github.com/SouJunior",
-  },
+
+  {id: "github",
+  name: "github",
+   icon: <FaGithub />,
+    path: "https://github.com/SouJunior"},
   {
     id: "discord",
     name: "discord",
@@ -29,7 +27,7 @@ export const dataSocial = [
     icon: <FaLinkedinIn />,
     path: "https://www.linkedin.com/company/soujunior/",
   },
-  {
+   {
     id: "instangram",
     name: "instagram",
     icon: <FaInstagram />,
@@ -40,7 +38,8 @@ export const dataSocial = [
     name: "youtube",
     icon: <FaYoutube />,
     path: "https://www.youtube.com/@soujuniortech",
-  },
+    
+  }, 
   {
     id: "twitter",
     name: "twitter",
@@ -58,11 +57,5 @@ export const dataSocial = [
     name: "telegram",
     icon: <FaTelegram />,
     path: "https://t.me/soujuniortech",
-  },
-  {
-    id: "twitch",
-    name: "twitch",
-    icon: <FaTwitch />,
-    path: "https://www.twitch.tv/soujuniortech",
   },
 ];
