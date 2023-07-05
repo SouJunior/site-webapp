@@ -6,6 +6,7 @@ import Textarea from "../commons/Textarea";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
 import Popup from "../commons/Popup/Popup";
+import { api } from "../../services/api";
 
 export const Apoiador = () => {
   const [radioOption, setRadioOption] = useState("Sou Pessoa Física");
@@ -30,6 +31,7 @@ export const Apoiador = () => {
   const [confirmEmailTouched, setConfirmEmailTouched] = useState(false);
   const [confirmPhoneTouched, setConfirmPhoneTouched] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState(null);
   const imageUrl = "/assets/voluntario.png"; //imagem do popup
 
   function handleNameChange(event) {
@@ -128,33 +130,50 @@ export const Apoiador = () => {
     return message.trim() !== "";
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
+
     if (isNameValid && isEmailValid && isTextValid) {
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-      openPopup();
-      setRadioOption("Sou Pessoa Física");
-      setName("");
-      setEmail("");
-      setMessage("");
-      setPhone("");
-      setSurname("");
-      setConfirmEmail("");
-      setConfirmPhone("");
-      setIsNameValid("");
-      setIsEmailValid("");
-      setIsTextValid("");
-      setIsPhoneValid("");
-      setIsSurnameValid("");
-      setIsConfirmEmailValid("");
-      setPhoneTouched("");
-      setNameTouched("");
-      setEmailTouched("");
-      setMessageTouched("");
-      setSurnameTouched("");
-      setConfirmEmailTouched("");
-      setConfirmPhoneTouched("");
+      try {
+        const response = await api.sendMailAdmin("/sponsor", {
+          name,
+          nickname: surname,
+          phone,
+          email,
+          description: message,
+        });
+
+        if (response.status !== 200) {
+          throw new Error("Não foi possível enviar a requisição");
+        }
+
+        setPopupMessage("Enviado com sucesso");
+        openPopup();
+        setRadioOption("Sou Pessoa Física");
+        setName("");
+        setEmail("");
+        setMessage("");
+        setPhone("");
+        setSurname("");
+        setConfirmEmail("");
+        setConfirmPhone("");
+        setIsNameValid("");
+        setIsEmailValid("");
+        setIsTextValid("");
+        setIsPhoneValid("");
+        setIsSurnameValid("");
+        setIsConfirmEmailValid("");
+        setPhoneTouched("");
+        setNameTouched("");
+        setEmailTouched("");
+        setMessageTouched("");
+        setSurnameTouched("");
+        setConfirmEmailTouched("");
+        setConfirmPhoneTouched("");
+      } catch (error) {
+        setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        openPopup();
+      }
     }
   }
 
@@ -297,7 +316,7 @@ export const Apoiador = () => {
               {showPopup && (
                 <Popup
                   onClose={closePopup}
-                  message="Seu formulário foi enviado com sucesso!"
+                  message={popupMessage}
                   imageUrl={imageUrl}
                 >
                   <button onClick={closePopup}>Fechar</button>
