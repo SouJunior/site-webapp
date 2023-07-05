@@ -150,6 +150,15 @@
   border: none;
 }
 
+form .buttons{
+  display: flex;
+  flex-direction: row;
+  width:90%;
+  justify-content:center;
+  align-items:center;
+  padding-left: 150px;
+}
+
 .count {
   font-size: 18px;
 }
