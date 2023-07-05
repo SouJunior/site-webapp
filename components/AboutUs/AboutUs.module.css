@@ -18,9 +18,6 @@
 }
 
 .bannerContainer h2 {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 58px;
   max-width: 28ch;
   padding-bottom: 30px;
 }
@@ -189,6 +186,23 @@
 }
 
 @media (max-width: 960px) {
+  .bannerContainer {
+    gap: 66px;
+    padding-bottom: 50px;
+  }
+
+  .bannerContainer h2 {
+    max-width: 28ch;
+    padding-bottom: 30px;
+  }
+
+  .container {
+    padding-bottom: 0rem;
+  }
+  .InterviewSection h3 {
+    padding: 6.2rem 0;
+    text-align: center;
+  }
   .ceo {
     flex-direction: column;
     justify-content: center;

@@ -28,6 +28,9 @@
 }
 
 @media (max-width: 1180px) {
+  .header {
+    padding: 5.6rem 3.2rem;
+  }
   .textArea {
     justify-content: space-evenly;
   }
@@ -47,10 +50,6 @@
 }
 
 @media (max-width: 414px) {
-  .header {
-    padding: 2rem;
-  }
-
   .header,
   .textArea {
     flex-direction: column;

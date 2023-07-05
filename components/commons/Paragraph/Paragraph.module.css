@@ -5,3 +5,10 @@
   font-weight: lighter;
   line-height: 150%;
 }
+
+@media (max-width: 960px) {
+  .Paragraph {
+    font-size: 1.8rem;
+    line-height: 150%;
+  }
+}

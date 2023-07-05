@@ -4,6 +4,12 @@
 
 .swiperContainer {
   background-color: transparent;
-  padding: 100px 0;
   width: 100%;
+}
+
+@media (max-width: 960px) {
+  .SectionIniciativas {
+    padding: 0;
+    padding-bottom: 7.2rem;
+  }
 }
