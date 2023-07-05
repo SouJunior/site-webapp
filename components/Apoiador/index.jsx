@@ -124,8 +124,6 @@ export const Apoiador = () => {
   //   }
   // }
 
- 
-
   function validateMessage(message) {
     return message.trim() !== "";
   }
@@ -157,8 +155,6 @@ export const Apoiador = () => {
       setSurnameTouched("");
       setConfirmEmailTouched("");
       setConfirmPhoneTouched("");
-      
-
     }
   }
 
@@ -169,13 +165,12 @@ export const Apoiador = () => {
   function closePopup() {
     setShowPopup(false);
   }
-    
- 
+
   return (
     <>
       <div className={styles.bannerContainer} id="apoiador">
         <img
-          src="/assets/apoiar.png"
+          src="/assets/sou-apoiador-cover.svg"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div>
