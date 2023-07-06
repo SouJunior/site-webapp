@@ -42,8 +42,8 @@ export const OccupationSection = () => {
               }}
             >
               {carouselItems.map(({ title, icon }) => (
-                <SwiperSlide>
-                  <div key={title} className={styles.areaItem}>
+                <SwiperSlide key={title}>
+                  <div className={styles.areaItem}>
                     <Image src={icon} alt={title} width={62} height={62} />
                     <p>{title}</p>
                   </div>
