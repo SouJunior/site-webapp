@@ -79,7 +79,7 @@
 @media (max-width: 1200px) {
   .card,
   .card2 {
-    justify-content: flex-start;
+    justify-content: space-evenly;
     gap: 0;
     min-height: 1200px;
     padding: 7.2rem 3.2rem;
@@ -99,7 +99,7 @@
   .card h2,
   .card2 h2,
   .container h2 {
-    padding-bottom: 3.2rem;
+    padding-bottom: 2.2rem;
     text-align: center;
     line-height: 120%;
   }
@@ -110,6 +110,6 @@
     border-radius: 10px;
   }
   .image {
-    padding-bottom: 3.2rem;
+    padding-bottom: 6rem;
   }
 }

@@ -12,14 +12,14 @@
   position: relative;
 }
 
-/* .OccupationSection::before {
+.OccupationSection::before {
   content: "";
   background: url("/assets/logo-background.svg") no-repeat top -333px right -333px;
   background-size: contain;
   position: absolute;
   inset: 0;
   opacity: 0.3;
-} */
+}
 
 .OccupationContainer {
   display: flex;
@@ -40,9 +40,8 @@
 }
 
 .areasContainer {
-  display: inline-flex;
-  flex-direction: row;
-  gap: 1.6rem;
+  display: flex;
+  align-items: center;
   max-width: inherit;
   overflow: scroll;
   scroll-behavior: smooth;
