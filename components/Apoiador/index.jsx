@@ -6,6 +6,8 @@ import Textarea from "../commons/Textarea";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
 import Popup from "../commons/Popup/Popup";
+import { Loading } from "../commons/Loading";
+
 import { api } from "../../services/api";
 
 export const Apoiador = () => {
@@ -32,6 +34,7 @@ export const Apoiador = () => {
   const [confirmPhoneTouched, setConfirmPhoneTouched] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
   const imageUrl = "/assets/voluntario.png"; //imagem do popup
 
   function handleNameChange(event) {
@@ -132,14 +135,17 @@ export const Apoiador = () => {
 
   async function handleSubmit(event) {
     event.preventDefault();
-
+    openPopup();
+    setLoading(true);
     if (isNameValid && isEmailValid && isTextValid) {
       try {
-        const response = await api.sendMailAdmin("/sponsor", {
+        const response = await api.sendMailAdmin("/mail/collaborator", {
+          subject: "Apoiador",
           name,
           nickname: surname,
           phone,
           email,
+          type: radioOption,
           description: message,
         });
 
@@ -147,8 +153,7 @@ export const Apoiador = () => {
           throw new Error("Não foi possível enviar a requisição");
         }
 
-        setPopupMessage("Enviado com sucesso");
-        openPopup();
+        setPopupMessage("Enviado com sucesso! Obrigado por apoiar a SouJunior");
         setRadioOption("Sou Pessoa Física");
         setName("");
         setEmail("");
@@ -171,9 +176,10 @@ export const Apoiador = () => {
         setConfirmEmailTouched("");
         setConfirmPhoneTouched("");
       } catch (error) {
-        setPopupMessage("Erro inesperado, tente novamente mais tarde");
         openPopup();
+        setPopupMessage("Erro inesperado, tente novamente mais tarde");
       }
+      setLoading(false);
     }
   }
 
@@ -314,12 +320,13 @@ export const Apoiador = () => {
                 Enviar
               </button>
               {showPopup && (
-                <Popup
-                  onClose={closePopup}
-                  message={popupMessage}
-                  imageUrl={imageUrl}
-                >
-                  <button onClick={closePopup}>Fechar</button>
+                <Popup onClose={closePopup} imageUrl={imageUrl}>
+                  {loading && <Loading />}
+                  {!loading && popupMessage !== null && (
+                    <>
+                      <Paragraph>{popupMessage}</Paragraph>
+                    </>
+                  )}
                 </Popup>
               )}
             </div>
