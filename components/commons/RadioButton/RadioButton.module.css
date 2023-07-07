@@ -1,0 +1,44 @@
+.radioLabel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.radioInput {
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.radioInput:checked + span:after {
+  opacity: 1;
+}
+
+.customRadio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+
+.radioInput:checked + span.customRadio:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transition: opacity 0.2s;
+}

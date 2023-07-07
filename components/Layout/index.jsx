@@ -1,12 +1,12 @@
 import React from "react";
 
-import {Header} from "../Header";
-import {Footer} from "../Footer";
+import { Header } from "../commons/Header";
+import { Footer } from "../commons/Footer";
 
-export const Layout = ({children}) => {
+export const Layout = ({ children }) => {
   return (
     <>
-      <Header>{children}</Header>
+      <Header />
       <main>{children}</main>
       <Footer />
     </>

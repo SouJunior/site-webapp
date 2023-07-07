@@ -1,0 +1,185 @@
+.bannerContainer,
+.formSection {
+  width: 100%;
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 6.2rem;
+}
+
+.container {
+  max-width: 120.4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 6.8rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  flex: 1 1 300px;
+  display: flex;
+  gap: 4.2rem;
+  flex-direction: column;
+}
+
+.left h1,
+.formSection h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  color: #ededed;
+  padding-bottom: 1.3rem;
+}
+
+.left p {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ededed;
+  max-width: 39ch;
+}
+
+.rigth {
+  flex: 1 1 300px;
+}
+
+.imageContainer {
+  flex: 1 1 0;
+}
+
+.rigth img {
+  width: 100%;
+  padding-top: 100px;
+}
+
+/*Formulário*/
+
+.form {
+  width: 100%;
+}
+
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+}
+
+.formSection h2 {
+  padding-bottom: 5.2rem;
+}
+
+.form div {
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+}
+
+.form label {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.form .input {
+  padding: 18px 32px;
+  gap: 10px;
+  width: 100%;
+  height: 65px;
+  background: #ffffff;
+  border-radius: 3px;
+  outline: none;
+}
+
+.form .select {
+  width: 293px;
+  height: 62px;
+  left: 269px;
+  top: 26px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 18px;
+  border: none;
+  border-bottom: 1px solid #858c93;
+  background: #171123;
+  color: #ffffff;
+  outline: none;
+}
+
+.form .select option {
+  width: 1306px;
+  height: 917px;
+}
+
+.form .textarea {
+  width: 100%;
+  height: 330px;
+  padding: 15px;
+  outline: none;
+}
+
+.form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 352px;
+  height: 66px;
+  padding: 24px 32px;
+  border-radius: 10px;
+  background: #046ad0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+  color: #ededed;
+  margin: 20px auto;
+  border: none;
+}
+
+.count {
+  font-size: 18px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
+}
+
+@media (max-width: 960px) {
+  .left {
+    align-items: center;
+    text-align: center;
+    gap: 2.2rem;
+  }
+
+  .left h1 {
+    padding-bottom: 0;
+  }
+
+  .left h1,
+  .formSection h2 {
+    text-align: center;
+  }
+
+  .form .select {
+    width: 100%;
+  }
+
+  .form button {
+    width: 100%;
+  }
+}
