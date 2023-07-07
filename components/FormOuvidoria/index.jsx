@@ -83,6 +83,12 @@ const OuvidoriaForm = () => {
     }, 500);
   };
 
+  //Função para o botão limpar
+
+  const handleClear = (resetForm) => {
+    resetForm();
+  };
+
   const handleCancel = () => {
     const confirmed = window.confirm("Você deseja mesmo cancelar?");
 
@@ -144,7 +150,7 @@ const OuvidoriaForm = () => {
               }}
               validationSchema={validationSchema}
               onSubmit={handleSubmit}>
-              {({ isSubmitting, values }) => (
+              {({ isSubmitting, values, resetForm }) => (
                 <Form>
                   <div>
                     <label>Nome completo: *</label>
@@ -212,8 +218,9 @@ const OuvidoriaForm = () => {
                       className={styles.errorMessage}
                     />
                   </div>
-                  <div>
+                  <div className={styles.buttons}>
                     <button type="submit">Enviar</button>
+                    <button type="button" onClick={() => handleClear(resetForm)}>Limpar</button>
                   </div>
                 </Form>
               )}

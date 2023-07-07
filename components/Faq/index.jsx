@@ -10,6 +10,7 @@ import Textarea from "../commons/Textarea";
 import { RadioButton } from "../commons/RadioButton";
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 import Popup from "../commons/Popup/Popup";
+import { api } from "../../services/api";
 
 export const Faq = () => {
   const [radioOption, setRadioOption] = useState("Sou Junior");
@@ -24,6 +25,7 @@ export const Faq = () => {
   const [messageTouched, setMessageTouched] = useState(false);
 
   const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState(null);
 
   const imageUrl = "/assets/faq.png";
 
@@ -69,22 +71,38 @@ export const Faq = () => {
     return emailRegex.test(email);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
     if (isNameValid && isEmailValid && isTextValid) {
-      console.log(`Nome: ${name}`);
-      console.log(`Email: ${email}`);
-      console.log(`Message: ${message}`);
-      openPopup();
-      setName(""); // Limpa o campo de nome
-      setEmail(""); // Limpa o campo de email
-      setMessage(""); // Limpa o campo de mensagem
+      try {
+        const response = await api.sendMailAdmin("/mail", {
+          subject: radioOption,
+          data: {
+            name,
+            email,
+            type: radioOption,
+            description: message,
+          },
+        });
+
+        if (response.status !== 200) {
+          throw new Error("Não foi possível enviar a requisição");
+        }
+
+        setPopupMessage("Enviado com sucesso");
+        openPopup();
+        setName(""); // Limpa o campo de nome
+        setEmail(""); // Limpa o campo de email
+        setMessage(""); // Limpa o campo de mensagem
+      } catch (error) {
+        setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        openPopup();
+      }
     }
   }
 
   function validateMessage(message) {
     return message.trim() !== "";
-    
   }
 
   return (
@@ -128,7 +146,7 @@ export const Faq = () => {
                     key={id}
                     header={
                       <div className={styles.headerTitle}>
-                        <Heading level={'h4'}>{titulo}</Heading>
+                        <Heading level={"h4"}>{titulo}</Heading>
                         <img src="../assets/icons/chevron-up.svg" alt="" />
                       </div>
                     }
@@ -182,7 +200,7 @@ export const Faq = () => {
       <div className={styles.description}>
         <div className={styles.container}>
           <Heading level={"h2"}>
-            Não encontrou sua dúvida, fale conosco!{" "}
+            Não encontrou sua dúvida, fale conosco!
           </Heading>
           <Heading level={"h3"}>
             Preencha o formulário e entraremos em contato!
@@ -223,7 +241,9 @@ export const Faq = () => {
                 type="email"
                 text="Qual o seu e-mail?*"
                 placeholder="Digite o seu e-mail"
-                label={emailTouched ? "O campo E-mail é obrigatório." : "E-mail"}
+                label={
+                  emailTouched ? "O campo E-mail é obrigatório." : "E-mail"
+                }
                 value={email}
                 onChange={handleEmailChange}
                 isValid={!emailTouched || isEmailValid}
@@ -251,7 +271,7 @@ export const Faq = () => {
           {showPopup && (
             <Popup
               onClose={closePopup}
-              message="Pergunta enviada com sucesso!"
+              message={popupMessage}
               imageUrl={imageUrl}
             >
               <button onClick={closePopup}>Fechar</button>

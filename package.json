@@ -16,6 +16,7 @@
     "@hookform/resolvers": "^3.0.1",
     "@mui/material": "^5.11.15",
     "@szhsin/react-accordion": "^1.2.0",
+    "axios": "^1.4.0",
     "formik": "^2.4.1",
     "hamburger-react": "^2.5.0",
     "js-cookie": "^3.0.5",

@@ -29,10 +29,7 @@ export const SobreNos = () => {
             srcSet="/assets/apoiadorHero.png 768w"
             sizes="960px"
           />
-          <source
-            srcSet="/assets/apoiadorHero.png 1280w"
-            sizes="1440px"
-          />
+          <source srcSet="/assets/apoiadorHero.png 1280w" sizes="1440px" />
 
           <img
             src="/assets/apoiadorHero.png"
@@ -106,9 +103,9 @@ export const SobreNos = () => {
             <Heading level={"h4"}>Wouerner Brandão</Heading>
             <Paragraph>CEO SouJunior</Paragraph>
             <Paragraph>
-              Wouerner Brandão é natural de Brasília, casado, pai do Erik e do Gael,
-              reside no Recanto das Emas e recentemente trabalhou em órgãos
-              federais em Brasília.
+              Wouerner Brandão é natural de Brasília, casado, pai do Erik e do
+              Gael, reside no Recanto das Emas e recentemente trabalhou em
+              órgãos federais em Brasília.
             </Paragraph>
 
             <ul>
@@ -116,7 +113,8 @@ export const SobreNos = () => {
                 <a
                   href="https://www.linkedin.com/in/wouerner/"
                   target="_blank"
-                  rel="noreferrer">
+                  rel="noreferrer"
+                >
                   <AiFillLinkedin />
                 </a>
               </li>
@@ -125,7 +123,8 @@ export const SobreNos = () => {
                 <a
                   href="https://discordapp.com/users/502651078685360129"
                   target="_blank"
-                  rel="noreferrer">
+                  rel="noreferrer"
+                >
                   <FaDiscord />
                 </a>
               </li>
@@ -137,7 +136,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel1a-content"
-              id="panel1a-header">
+              id="panel1a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 Como e quando foi iniciar na carreira de tecnologia?
               </Typography>
@@ -159,7 +159,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 O que te motivou a criar a Open Source SouJunior?
               </Typography>
@@ -193,7 +194,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 O que você considera um diferencial da SouJunior em relação às
                 outras comunidades de trabalho voluntário?
@@ -220,7 +222,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 Qual o seu plano para estimular o interesse das pessoas em
                 relação a SouJunior e impactar tanto os curiosos quanto os
@@ -252,7 +255,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 Você acredita que a SouJunior é o que você idealizou?
               </Typography>
@@ -277,7 +281,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 Você acredita que a SouJunior te ajudou a evoluir
                 profissionalmente?
@@ -302,7 +307,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 Qual o maior desafio para você em ser o CEO da SouJunior?
               </Typography>
@@ -325,7 +331,8 @@ export const SobreNos = () => {
           <Accordion defaultExpanded={true} style={inlineStyle}>
             <AccordionSummary
               aria-controls="panel2a-content"
-              id="panel2a-header">
+              id="panel2a-header"
+            >
               <Typography variant="string" className={styles.question}>
                 Você pretende futuramente transformar a SouJunior numa empresa
                 jurídica?
@@ -367,7 +374,8 @@ export const SobreNos = () => {
                       href={linkedin}
                       key={id}
                       target="_blank"
-                      rel="noreferrer">
+                      rel="noreferrer"
+                    >
                       <AiFillLinkedin />
                     </a>
                   </li>
