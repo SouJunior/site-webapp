@@ -4,85 +4,52 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
+import Popup from "../commons/Popup/Popup";
+import { Loading } from "../commons/Loading";
+import { api } from "../../services/api";
 
 const OuvidoriaForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [popupMessage, setPopupMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const handleUnload = (event) => {
-      if (!isSubmitting) {
-        event.preventDefault();
-        event.returnValue = "";
+  const imageUrl = "/assets/popup.svg";
+
+  const openPopup = () => setShowPopup(true);
+  const closePopup = () => setShowPopup(false);
+
+  const onSubmit = async (values, { resetForm }) => {
+    console.log(values);
+    setLoading(true);
+    setIsSubmitting(true);
+
+    if (isSubmitting) {
+      console.log(isSubmitting);
+      openPopup();
+      setLoading(true);
+      try {
+        const response = await api.sendMailAdmin("/mail/collaborator", {
+          subject: "Ouvidoria",
+          ...values,
+        });
+
+        if (response.status !== 200) {
+          throw new Error("Não foi possível enviar a requisição");
+        }
+        setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
+
+        resetForm();
+      } catch (error) {
+        openPopup();
+        setPopupMessage("Erro inesperado, tente novamente mais tarde");
       }
-    };
+      setLoading(false);
+    }
 
-    window.onbeforeunload = handleUnload;
+    // resetForm();
 
-    return () => {
-      window.onbeforeunload = null;
-    };
-  }, [isSubmitting]);
-
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
-    setTimeout(() => {
-      const popup = document.createElement("div");
-      popup.style.display = "flex";
-      popup.style.justifyContent = "center";
-      popup.style.alignItems = "center";
-      popup.style.width = "600px";
-      popup.style.height = "350px";
-      popup.style.flexDirection = "column";
-      popup.style.position = "fixed";
-      popup.style.top = "50%";
-      popup.style.left = "50%";
-      popup.style.transform = "translate(-50%, -50%)";
-      popup.style.backgroundColor = "#046AD0";
-      popup.style.padding = "20px";
-      popup.style.color = "#EDEDED";
-      popup.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.3)";
-      popup.style.zIndex = "9999";
-      popup.style.fontSize = "24px";
-      popup.style.fontWeight = "600";
-      popup.style.gap = "10px";
-
-      const message = document.createElement("div");
-      message.textContent = "Obrigado por ajudar a SouJunior a crescer!";
-      popup.appendChild(message);
-
-      const image = document.createElement("img");
-      image.src = "/assets/popup.svg";
-      image.width = 70;
-      image.height = 70;
-      image.alt = "Picture of the author";
-      popup.appendChild(image);
-
-      const closeButton = document.createElement("button");
-      closeButton.textContent = "Fechar";
-      closeButton.addEventListener("click", () => {
-        document.body.removeChild(popup);
-        // window.location.href = "/"; // Redireciona para a página inicial
-      });
-
-      closeButton.style.backgroundColor = "#046AD0";
-      closeButton.style.borderRadius = "10px";
-      closeButton.style.border = "2px solid #EDEDED";
-      closeButton.style.color = "#FFF";
-      closeButton.style.width = "152px";
-      closeButton.style.height = "36px";
-      // closeButton.style.padding = " 52px";
-      // closeButton.style.marginLeft = "24px";
-      closeButton.style.marginTop = "15px";
-      closeButton.style.justifyContent = "center";
-      closeButton.style.alignItems = "center";
-
-      popup.appendChild(closeButton);
-
-      document.body.appendChild(popup);
-
-      resetForm();
-      setSubmitting(false);
-      setIsSubmitting(true);
-    }, 500);
+    // setIsSubmitting(true);
   };
 
   //Função para o botão limpar
@@ -118,7 +85,6 @@ const OuvidoriaForm = () => {
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.left}>
-              {/* <h1></h1> */}
               <Heading level={"h1"}>Ouvidoria!</Heading>
 
               <Paragraph>Seja bem-vindo(a) à nossa Ouvidoria!</Paragraph>
@@ -153,7 +119,7 @@ const OuvidoriaForm = () => {
                 mensagem: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={handleSubmit}
+              onSubmit={onSubmit}
             >
               {({ isSubmitting, values, resetForm }) => (
                 <Form>
@@ -235,6 +201,16 @@ const OuvidoriaForm = () => {
                 </Form>
               )}
             </Formik>
+            {showPopup && (
+              <Popup onClose={closePopup} imageUrl={imageUrl}>
+                {loading && <Loading />}
+                {!loading && popupMessage !== null && (
+                  <>
+                    <Paragraph>{popupMessage}</Paragraph>
+                  </>
+                )}
+              </Popup>
+            )}
           </div>
         </div>
       </section>
