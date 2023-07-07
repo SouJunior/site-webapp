@@ -1,0 +1,191 @@
+
+
+.Footer {
+  font-family: inherit;
+  display: flex;
+  place-content: center;
+  padding: 112px 32px;
+  position: relative;
+  margin-top: 12rem;
+  background-color: #046ad0;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+
+
+.Footer::before {
+  content: "";
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  background: url("/assets/footer-background.svg") repeat,
+    linear-gradient(180deg, #046ad0 0%, #0575e7 100%);
+  background-size: contain;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  max-width: 144rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.logoWrapper {
+  flex: 1;
+  align-self: center;
+  max-width: max-content;
+  min-width: fit-content;
+}
+
+.footerContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.about,
+.contact,
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.social {
+  flex: 1 0 300px;
+  width: 100%;
+  align-items: center;
+}
+.social h4 {
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 39px;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  max-width: 65%;
+}
+.icons a {
+  font-size: 3.7rem;
+  padding: 0;
+  margin: 0;
+  object-fit: contain;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  justify-content: flex-start;
+  list-style: none;
+  gap: 2.4rem;
+  font-weight: 500;
+  font-size: 2.4rem;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+.list a {
+  cursor: pointer;
+}
+
+.list a:hover,
+.icons svg:hover {
+  opacity: 0.8;
+}
+
+
+.backToTop {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #046ad0;
+  color: #fff;
+  border-radius: 10%;
+  cursor: pointer;
+}
+
+
+.arrowIcon {
+  font-size: 25px;
+  margin-right: 5px;
+  z-index: 10000;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    gap: 5.2rem;
+    flex-wrap: wrap;
+  }
+
+  .logoWrapper {
+    align-self: self-start;
+  }
+
+  .social {
+    flex: 1;
+  }
+
+  .icons {
+    gap: 22px;
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .Footer {
+    padding: 0 32px;
+  }
+  .Footer::before {
+    background: url("/assets/footer-background.svg") repeat bottom,
+      linear-gradient(180deg, #046ad0 0%, #0575e7 100%);
+    background-size: cover;
+  }
+  .container {
+    width: 100%;
+    flex-direction: column;
+    align-self: center;
+    padding: 7.2rem 0;
+    gap: 4rem;
+  }
+  .footerContent {
+    width: 100%;
+    gap: 4rem;
+    flex-direction: column;
+  }
+
+  .about,
+  .contact,
+  .social {
+    flex: 1;
+    width: 100%;
+    gap: 1.8rem;
+  }
+
+  .list {
+    gap: 1.5rem;
+  }
+
+  .icons {
+    font-size: 1.6px;
+    flex-wrap: wrap;
+    max-width: 70%;
+  }
+}

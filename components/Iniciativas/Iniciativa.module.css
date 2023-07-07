@@ -1,0 +1,15 @@
+.SectionIniciativas {
+  padding: 7.2rem 0;
+}
+
+.swiperContainer {
+  background-color: transparent;
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .SectionIniciativas {
+    padding: 0;
+    padding-bottom: 7.2rem;
+  }
+}

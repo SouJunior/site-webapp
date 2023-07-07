@@ -1,0 +1,92 @@
+.depositionCard {
+  width: 100%;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2.4rem;
+  background: #ededed;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 4rem 3.8rem 1.5rem 3.8rem;
+  border-bottom: 8px solid rgba(4, 106, 208, 0.5);
+  background: url("/assets/mini-logo.svg") no-repeat bottom 30px right 30px;
+}
+
+.headerDepositionInfo {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  flex: 1;
+}
+
+.name {
+  color: #046ad0;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.role {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  color: #3d3d3d;
+  padding-top: 1.6rem;
+}
+
+.depositionImg {
+  display: block;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: normal;
+  color: #3d3d3d;
+  padding: 38px 46px;
+  display: flex;
+  flex-direction: column;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1300px) {
+  .header {
+    background: transparent;
+  }
+}
+
+@media (max-width: 960px) {
+  .depositionCard,
+  .description {
+    min-height: 480px;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    padding: 3.8rem 5.2rem;
+  }
+  .name {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+
+  .role {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #3d3d3d;
+  }
+}

@@ -1,0 +1,47 @@
+.h1,
+.h2,
+.h3,
+.h4 {
+  color: #ede;
+  line-height: 150%;
+  --webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.h1 {
+  font-size: 5.6rem;
+  line-height: 120%;
+}
+
+.h2 {
+  font-family: inherit;
+  font-size: 4.8rem;
+}
+
+.h3 {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .h1,
+  .h2 {
+    font-size: 3.4rem;
+    line-height: 120%;
+  }
+
+  .h3 {
+    font-size: 3.6rem;
+    font-weight: 700;
+  }
+
+  .h4 {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+}
