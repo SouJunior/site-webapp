@@ -10,6 +10,7 @@ import Textarea from "../commons/Textarea";
 import { RadioButton } from "../commons/RadioButton";
 import { souJunior, mentor, voluntario } from "../../utils/faqItems";
 import Popup from "../commons/Popup/Popup";
+import { Loading } from "../commons/Loading";
 import { api } from "../../services/api";
 
 export const Faq = () => {
@@ -26,6 +27,7 @@ export const Faq = () => {
 
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const imageUrl = "/assets/faq.png";
 
@@ -72,11 +74,15 @@ export const Faq = () => {
   }
 
   async function handleSubmit(event) {
+    setLoading(true);
+
     event.preventDefault();
     if (isNameValid && isEmailValid && isTextValid) {
+      openPopup();
+      setLoading(true);
       try {
         const response = await api.sendMailAdmin("/mail", {
-          subject: radioOption,
+          subject: "FAQ",
           data: {
             name,
             email,
@@ -88,16 +94,15 @@ export const Faq = () => {
         if (response.status !== 200) {
           throw new Error("Não foi possível enviar a requisição");
         }
-
         setPopupMessage("Enviado com sucesso");
-        openPopup();
         setName(""); // Limpa o campo de nome
         setEmail(""); // Limpa o campo de email
         setMessage(""); // Limpa o campo de mensagem
       } catch (error) {
-        setPopupMessage("Erro inesperado, tente novamente mais tarde");
         openPopup();
+        setPopupMessage("Erro inesperado, tente novamente mais tarde");
       }
+      setLoading(false);
     }
   }
 
@@ -269,12 +274,13 @@ export const Faq = () => {
             </div>
           </form>
           {showPopup && (
-            <Popup
-              onClose={closePopup}
-              message={popupMessage}
-              imageUrl={imageUrl}
-            >
-              <button onClick={closePopup}>Fechar</button>
+            <Popup onClose={closePopup} imageUrl={imageUrl}>
+              {loading && <Loading />}
+              {!loading && popupMessage !== null && (
+                <>
+                  <Paragraph>{popupMessage}</Paragraph>
+                </>
+              )}
             </Popup>
           )}
         </div>
