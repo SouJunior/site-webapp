@@ -9,7 +9,7 @@ Projeto Opensource que visa melhorar o match entre os profissionais Juniors e Em
 
 ## Instalação
 
-Clone o projeto
+Clone o projeto.
 
 ```bash
   git clone https://github.com/SouJunior/Site
