@@ -33,13 +33,11 @@
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
   width: 100%;
   font-family: inherit;
-}
-
-
-.form div{
-  padding-top: 2rem;
 }
 
 .radios {
@@ -47,7 +45,7 @@
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
-  padding: 6rem 0;
+  padding: 6rem 0 4rem 0;
   font-size: 18px;
   color: #fff;
 }

@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   justify-content: flex-end;
   width: 100%;
   padding: 0 3.2rem;
+  padding-right: 0;
   height: 100vh;
   background-color: transparent;
   /* background: url("/assets/fill-effect.webp") no-repeat top -408px right -883px; */
@@ -18,7 +18,6 @@
   background-size: contain;
   position: absolute;
   inset: 0;
-
   opacity: 0.3;
 }
 
@@ -36,20 +35,19 @@
   align-self: flex-start;
 }
 
-.OccupationSection p {
-  max-width: 85ch;
-  align-self: flex-start;
+.OccupationContainer > p {
+  padding-right: 3.2rem;
 }
 
 .areasContainer {
-  display: inline-flex;
-  flex-direction: row;
-  gap: 1.6rem;
+  display: flex;
+  align-items: center;
   max-width: inherit;
   overflow: scroll;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-  padding: 16.2rem 0;
+  padding-top: 16.2rem;
+  padding-bottom: 5.8rem;
 }
 
 .areasContainer::-webkit-scrollbar {
@@ -81,6 +79,7 @@
   gap: 4.2rem;
   position: relative;
   top: -6rem;
+  margin-top: 5.8rem;
 }
 
 .arrowContainer button {
@@ -120,8 +119,12 @@
     position: relative;
     align-items: stretch;
     height: auto;
+    padding-right: 0;
   }
 
+  .OccupationSection h2 {
+    margin-bottom: 3.2rem;
+  }
   .OccupationContainer {
     align-items: flex-start;
   }

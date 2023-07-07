@@ -9,7 +9,6 @@ const localStyle = {
 
 const Card = ({ title, subtitle, description, image, type, path }) => (
   <section className={type === "type-1" ? style.card : style.card2}>
-    {/* <h1 className={style.title}>{title}</h1> */}
     <Heading level={"h2"}>
       <span style={localStyle}>{title}</span>
     </Heading>

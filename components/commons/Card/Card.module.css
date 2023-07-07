@@ -6,15 +6,12 @@
   flex-direction: column;
   gap: 7.9rem;
   width: 100%;
-  max-height: 100%;
-  padding: 100px 32px;
+  min-height: max-content;
+  padding: 10rem 3.2rem;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.card {
-  height: calc(100vh+ 20px);
-}
 .card {
   background-image: url("/assets/iniciativa/fundo-verde.svg");
 }
@@ -79,26 +76,30 @@
   border-radius: 10px;
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1200px) {
   .card,
   .card2 {
+    justify-content: space-evenly;
     gap: 0;
+    min-height: 1200px;
+    padding: 7.2rem 3.2rem;
   }
   .container {
     flex-direction: column-reverse;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 0;
   }
   .content {
     align-items: center;
     text-align: center;
+    gap: 1.2rem;
   }
 
   .card h2,
   .card2 h2,
   .container h2 {
-    padding-bottom: 5.2rem;
+    padding-bottom: 2.2rem;
     text-align: center;
     line-height: 120%;
   }
@@ -109,6 +110,6 @@
     border-radius: 10px;
   }
   .image {
-    padding-bottom: 3.2rem;
+    padding-bottom: 6rem;
   }
 }

@@ -11,9 +11,7 @@
 .DepositionsSection {
   padding: 0 3.2rem;
   flex-direction: column;
-  padding: 0 32px;
   position: relative;
-  height: 100vh;
 }
 
 .DepositionsSection::before {
@@ -55,11 +53,7 @@
   flex-direction: column;
 }
 
-.depositionsTitle {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 3.625rem;
+.DepositionsSection header h1 {
   text-align: center;
   padding-bottom: 9.1rem;
 }
@@ -90,6 +84,10 @@
 @media (max-width: 960px) {
   .DepositionsSection {
     height: auto;
+  }
+
+  .DepositionsSection header h1 {
+    padding-bottom: 5.1rem;
   }
   .depositionsCards {
     flex: 2;

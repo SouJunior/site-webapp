@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import styles from "./FormOuvidoria.module.css";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { Heading } from "../commons/Heading";
+import { Paragraph } from "../commons/Paragraph";
 
 const OuvidoriaForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,7 +59,7 @@ const OuvidoriaForm = () => {
       const closeButton = document.createElement("button");
       closeButton.textContent = "Fechar";
       closeButton.addEventListener("click", () => {
-       document.body.removeChild(popup);
+        document.body.removeChild(popup);
         // window.location.href = "/"; // Redireciona para a página inicial
       });
 
@@ -116,16 +118,17 @@ const OuvidoriaForm = () => {
         <div className={styles.container}>
           <div className={styles.content}>
             <div className={styles.left}>
-              <h1>Ouvidoria!</h1>
+              {/* <h1></h1> */}
+              <Heading level={"h1"}>Ouvidoria!</Heading>
 
-              <p>Seja bem-vindo(a) à nossa Ouvidoria!</p>
+              <Paragraph>Seja bem-vindo(a) à nossa Ouvidoria!</Paragraph>
 
-              <p>
+              <Paragraph>
                 Estamos sempre buscando maneiras de melhorar nossos produtos e
                 serviços, e sua opinião é extremamente importante. <br />
                 Por isso, criamos um canal exclusivo para que você possa
                 registrar suas reclamações e sugestões.
-              </p>
+              </Paragraph>
             </div>
 
             <div className={styles.rigth}>
@@ -139,7 +142,8 @@ const OuvidoriaForm = () => {
       </section>
       <section className={styles.formSection}>
         <div className={styles.container}>
-          <h2>Conte sua opinião pra gente!</h2>
+          <Heading level={"h2"}>Conte sua opinião pra gente!</Heading>
+
           <div className={styles.form}>
             <Formik
               initialValues={{
@@ -149,7 +153,8 @@ const OuvidoriaForm = () => {
                 mensagem: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={handleSubmit}>
+              onSubmit={handleSubmit}
+            >
               {({ isSubmitting, values, resetForm }) => (
                 <Form>
                   <div>
@@ -219,8 +224,13 @@ const OuvidoriaForm = () => {
                     />
                   </div>
                   <div className={styles.buttons}>
+                    <button
+                      type="button"
+                      onClick={() => handleClear(resetForm)}
+                    >
+                      Limpar
+                    </button>
                     <button type="submit">Enviar</button>
-                    <button type="button" onClick={() => handleClear(resetForm)}>Limpar</button>
                   </div>
                 </Form>
               )}

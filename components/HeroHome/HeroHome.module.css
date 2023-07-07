@@ -71,13 +71,22 @@
     flex-direction: column;
   }
 
+  .skillsContainer h1,
+  .careerContainer h1 {
+    margin-bottom: 3.2rem;
+  }
+
+  .HeroHomeContainer p {
+    margin-bottom: 2rem;
+  }
+
   .imageContainer {
     margin: 0;
   }
 
   .HeroHomeContainer h1,
   .HeroHomeContainer p {
-    text-align: center;
+    /* text-align: center; */
     max-width: 100%;
   }
 

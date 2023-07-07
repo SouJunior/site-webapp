@@ -60,42 +60,19 @@
   align-self: flex-start;
 }
 
-.h1 {
-  font-size: 3.2rem;
-}
-
-.h1,
-.p {
-  color: rgba(249, 249, 249, 1);
-}
-
-.paragraph {
-  font-size: 2.4rem;
-  font-weight: 300;
-  line-height: 2.7rem;
-  font-family: inherit;
-  color: rgba(249, 249, 249, 1);
-  max-width: 55ch;
-}
-
 .hidden {
   display: none;
   color: #fff;
   width: 100%;
 }
 
-.p {
-  display: inline-block;
+.ParagraphWrapper {
+  background-color: transparent;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  padding: 1rem;
-  gap: 0.8rem;
-  font-size: 2.4rem;
-  line-height: 2.8rem;
-  margin-left: 2rem;
-  font-weight: 40rem;
-  margin-top: 2rem;
+  text-align: left;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .rightSide {
@@ -105,17 +82,6 @@
   padding: 0px;
   width: 58.9rem;
   height: auto;
-  color: rgba(4, 106, 208, 1);
-}
-
-.rightSide h2 {
-  position: relative;
-  color: rgba(249, 249, 249, 1);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 3.2rem;
-  line-height: 2.6rem;
-  font-family: inherit;
 }
 
 .hide {
@@ -136,7 +102,7 @@
   margin-bottom: 12rem;
 }
 
-.btn {
+.btnCross {
   border: none;
   background: none;
   color: rgba(249, 249, 249, 1);
@@ -154,14 +120,14 @@
   cursor: pointer;
 }
 
-.btn svg {
-  width: 2rem;
-  height: 2rem;
+.btnCross svg {
+  width: 3.8rem;
+  height: 3.8rem;
 }
 
 .button {
   display: flex;
-  width: 352px;
+  width: 100%;
   height: 66px;
   padding: 24px 32px;
   justify-content: center;
@@ -169,18 +135,13 @@
   border-radius: 10px;
   background: #046ad0;
   color: #fff;
-  margin-left: 2.5rem;
   font-size: 24px;
   flex-direction: row;
-  align-self: flex-end;
+  align-self: center;
   transition: ease 0.15s;
   font-size: 24px;
   border: none;
-    /* width: 262px;
-  height: 50px; */
-  /* background-color: transparent;
-  border: 0.2rem solid #ededed;
-  color: rgba(249, 249, 249, 1); */
+  margin-top: 2rem;
 }
 
 .button:hover {
@@ -189,7 +150,7 @@
   border: 0.1rem solid transparent;
 }
 
-.p,
+.ParagraphWrapper,
 .button {
   opacity: 0;
   transform: translateY(-10px);
@@ -227,7 +188,7 @@
 
   .leftSide p {
     text-align: left;
-    padding-bottom: 4rem;
+    padding-bottom: 0;
     line-height: 2.1rem;
   }
 
@@ -247,11 +208,11 @@
   }
 
   .headerContainer {
-    padding: 52px 32px;
+    padding: 0px 32px;
   }
 
   .headerContainer h1 {
-    margin-bottom: 80px;
+    margin-bottom: 46px;
     font-size: 32px;
     line-height: 120%;
     text-align: center;
