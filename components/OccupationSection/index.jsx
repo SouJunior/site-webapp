@@ -26,7 +26,6 @@ export const OccupationSection = () => {
 
           <div className={styles.areasContainer}>
             <Swiper
-              spaceBetween={0}
               slidesPerView={8}
               freeMode={true}
               loop={true}
