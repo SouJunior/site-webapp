@@ -7,6 +7,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 20;
+  overflow: hidden;
+  background-color: rgba(1, 1, 1, 0.8);
 }
 
 .popup {
@@ -36,4 +39,10 @@
   color: #fff;
   border-radius: 10px;
   background-color: #046ad0;
+}
+
+@media (max-width: 540px) {
+  .popup {
+    width: 100%;
+  }
 }

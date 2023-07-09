@@ -20,7 +20,6 @@ const OuvidoriaForm = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    console.log(values);
     setLoading(true);
     setIsSubmitting(true);
 
@@ -46,10 +45,6 @@ const OuvidoriaForm = () => {
       }
       setLoading(false);
     }
-
-    // resetForm();
-
-    // setIsSubmitting(true);
   };
 
   //Função para o botão limpar
@@ -201,17 +196,17 @@ const OuvidoriaForm = () => {
                 </Form>
               )}
             </Formik>
-            {showPopup && (
-              <Popup onClose={closePopup} imageUrl={imageUrl}>
-                {loading && <Loading />}
-                {!loading && popupMessage !== null && (
-                  <>
-                    <Paragraph>{popupMessage}</Paragraph>
-                  </>
-                )}
-              </Popup>
-            )}
           </div>
+          {showPopup && (
+            <Popup onClose={closePopup} imageUrl={imageUrl}>
+              {loading && <Loading />}
+              {!loading && popupMessage !== null && (
+                <>
+                  <Paragraph>{popupMessage}</Paragraph>
+                </>
+              )}
+            </Popup>
+          )}
         </div>
       </section>
     </>
