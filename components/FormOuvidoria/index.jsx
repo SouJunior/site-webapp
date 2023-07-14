@@ -85,7 +85,7 @@ const OuvidoriaForm = () => {
     }, 500);
   };
 
-  //Função para o botão limpar
+  
 
   const handleClear = (resetForm) => {
     resetForm();
@@ -225,8 +225,7 @@ const OuvidoriaForm = () => {
                   </div>
                   <div className={styles.buttons}>
                     <button
-                      type="button"
-                      onClick={() => handleClear(resetForm)}
+                      type="button" onClick={() => handleClear(resetForm)}
                     >
                       Limpar
                     </button>
