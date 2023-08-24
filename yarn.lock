@@ -5613,10 +5613,10 @@
     "combined-stream" "^1.0.6"
     "mime-types" "^2.1.12"
 
-"formik@^2.4.1":
-  "integrity" "sha512-C6nx0hifW2uENP3M6HpPmnAE6HFWCcd8/sqBZEOHZY6lpHJ5qehsfAy43ktpFLEmkBmhiZDei726utcUB9leqg=="
-  "resolved" "https://registry.npmjs.org/formik/-/formik-2.4.2.tgz"
-  "version" "2.4.2"
+"formik@^2.4.3":
+  "integrity" "sha512-2Dy79Szw3zlXmZiokUdKsn+n1ow4G8hRrC/n92cOWHNTWXCRpQXlyvz6HcjW7aSQZrldytvDOavYjhfmDnUq8Q=="
+  "resolved" "https://registry.npmjs.org/formik/-/formik-2.4.3.tgz"
+  "version" "2.4.3"
   dependencies:
     "deepmerge" "^2.1.1"
     "hoist-non-react-statics" "^3.3.0"

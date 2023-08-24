@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 
 import styles from "./Participation.module.css";
@@ -12,7 +13,6 @@ export const ParticipationSection = () => {
   const [textMentor, setTextMentor] = useState(false);
   const [textSupporter, setTextSupporter] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
-  // const [action, setAction] = useState(false);
 
   return (
     <>
@@ -120,13 +120,7 @@ export const ParticipationSection = () => {
                       atuação.”
                     </Paragraph>
                     <button className={styles.button}>
-                      <a
-                        href="https://forms.gle/d7yFWXjCPj9CLFFN9"
-                        target="_blank"
-                        rel="noopener noreferrer "
-                      >
-                        Quero Participar!
-                      </a>
+                      <Link href="/seja-mentor">Quero Participar!</Link>
                     </button>
                   </div>
                 </>
