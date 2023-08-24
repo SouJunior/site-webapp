@@ -1,4 +1,5 @@
 import axios from "axios";
+import { areas } from "../utils/areas";
 
 const http = axios.create({
   baseURL: "https://site-backend-67zq.onrender.com",
@@ -6,4 +7,12 @@ const http = axios.create({
 
 export const api = {
   sendMailAdmin: (endpoint, payload) => http.post(endpoint, payload),
+};
+
+const tempInstance = axios.create({
+  baseURL: "/assets/areas.json",
+});
+
+export const apiArea = {
+  getArea: () => tempInstance.get(),
 };

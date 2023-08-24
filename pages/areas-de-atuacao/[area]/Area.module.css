@@ -18,12 +18,30 @@
 
 .bannerContainer h2 {
   max-width: 28ch;
-  padding-bottom: 30px;
+  text-transform: capitalize;
 }
 
 .bannerContainer h3 {
   font-weight: 400;
   padding: 16px 0;
+}
+
+.arrowWrapper {
+  width: 100%;
+  max-width: 144rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrowWrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrowWrapper button:last-child {
+  rotate: 180deg;
 }
 
 .container {
@@ -35,6 +53,10 @@
   justify-content: center;
   flex-direction: column;
   padding-bottom: 6.8rem;
+}
+
+.container div {
+  width: 100%;
 }
 
 .container p {
@@ -208,7 +230,10 @@
 
   .bannerContainer h2 {
     max-width: 28ch;
-    padding-bottom: 30px;
+  }
+
+  .arrowWrapper img {
+    width: 80%;
   }
 
   .container {

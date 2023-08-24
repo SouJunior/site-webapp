@@ -1,0 +1,500 @@
+[
+  {
+    "id": 1,
+    "title": "Produtos",
+    "url": "produtos",
+    "image-hero": "/assets/hero-produtos.svg",
+    "head": {
+      "name": "Vanêssa Santana",
+      "role": "Head de Produtos",
+      "image-profile": "https://user-images.githubusercontent.com/104070821/229590190-be5c776e-9715-4758-be2a-b0fe693959d9.png",
+      "descripition": [
+        "A área Produtos dentro da SouJunior tem como objetivo assegurar que a tecnologia desenvolvida atenda às necessidades e expectativas dos clientes. Isso envolve a estratégia de Produtos, a avaliação de viabilidade técnica e financeira, a liderança do desenvolvimento e a entrega de soluções de alta qualidade.",
+        "O objetivo da equipe de Produtos é garantir que o software Open source SouJunior, seja desenvolvido de forma colaborativa e atenda às necessidades e expectativas da comunidade de usuários. Além disso, a Equipe de Produtos também interage com todas as áreas da SouJunior, para garantir a adoção e o sucesso do produto no mercado."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/vanessa-patricia/",
+        "discord": ""
+      },
+      "resume": "Atua na área da TI há 17 anos, assumindo papéis de Gerente de Projetos, Head de Produtos e Agile Coach. Atualmente trabalha com o Agile Project Manager na Bayer."
+    },
+    "interview": {
+      "introduction": [
+        "A nossa Head de Produtos é a Vanêssa Santana, nascida em Recife mas residente em São Paulo. Formada em Sistemas de Informação e pós graduada em Gerenciamento de Projetos e Gerenciamento de Produtos. Atua na área da TI há 17 anos, assumindo papéis de Gerente de Projetos, Head de Produtos e Agile Coach. Atualmente trabalha com o Agile Project Manager na Bayer. Engajada na comunidade tecnológica, ela mentora pessoas em transição de carreira, ministra cursos voltados para a agilidade e atua como trainee da Certificadora PeopleCert, preparando os interessados para as provas de certificações do universo Ágil.",
+        "Também foi co-autora do livro “Jornada Ágil do Produto” e participa como escritora líder de mais quatro livros da “Jornada Colaborativa”, onde também faz parte da equipe de curadores do livro “Ágil além da TI” Na SouJunior ela ocupa o cargo de Head de Produtos e lidera uma equipe entre mentores e juninhos, para a construção de 6 produtos, além de apoiar a comunidade da SouJunior Lab, selecionando e orientando os PMs e Agilistas juniores na condução de suas atividades.",
+        "Porém, como não só de TI vive o ser humano, nas horas vagas (que todos nós queremos saber quais são), ela gosta de viajar para conhecer novos lugares e culturas, ler, escrever livros sobre temas não relacionados à tecnologia, assistir filmes, conversar com os seus amigos e mimar suas sobrinhas. Confira a seguir a entrevista que a equipe de produtos do site SouJunior fez com a Vanêssa Santana, para conhecer um pouco mais sobre sua jornada profissional e opinião a respeito da área que atua:"
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Sempre gostei de tecnologia e de cálculo. Acompanhando a trajetória do trabalho de meu pai, ingressei no curso de Engenharia Química, onde fiz parte de um grupo que estudava uma linguagem de programação chamada Fortran. Fui conhecendo e me apaixonei por desenvolvimento de software, quando resolvi prestar outro vestibular para tecnologia, do qual fui aprovada e mudei de curso. Desde então segui uma trajetória voltadas para projetos, iniciando na análise de negócios com a análise da qualidade, depois líder de projetos, gerente de projetos e, com o surgimento da agilidade, tive oportunidade de trabalhar como Head de Produtos e Agile Coach, mas atualmente sou Agile Project Manager"
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Ensinar pessoas, disseminar conhecimento e trabalhar em iniciativas de capacitação sempre foi o meu intuito e por isso participo de algumas comunidades como Mulheres de Produtos, Mulheres Agilitas, Mentora e tento ajudar as pessoas na sua evolução profissional. Durante algumas visitas ao LinkedIn, comecei a ver bastante postagens da SouJunior e achei a proposta bem bacana. Pesquisando um pouco mais, notei que eles ainda não tinham a área do Produtos, então chamei o Brandão para conversar, fiz uma proposta de inclusão de APMs no movimento, ele gostou da ideia e desde então atuo como Head de área, onde tive a oportunidade de estruturá-la e vê-la crescer cada vez mais."
+        },
+        {
+          "question": "Como você acompanha e mensura o sucesso do produto?",
+          "awnser": "O critério de sucesso do Produto depende muito de cada organização. Portanto, após conhecer e avaliar o contexto organizacional, podermos criar as nossas métricas, que vai de uma massa estratégica de dados até um bate papo com os Usuários, para que possamos garantir que o produto represente o que a organização acredita que é sucesso."
+        },
+        {
+          "question": "Como você envolve sua equipe no processo de desenvolvimento de produtos?",
+          "awnser": "Procuro envolver a equipe em todo as fases do processo de desenvolvimento do produto. Em alguns casos eu tenho uma conversa anterior com o sponsor/stakeholder para avaliarmos alguns pontos e verificarmos uma viabilidade de construção ou prioridade de início, mas após isso a equipe já é informada que temos um grande trabalho pela frente. Nós analisamos em conjunto, definimos atividades de discovery que serão executadas, trabalhamos na ideação, desenho, acompanhamento da construção e entrega de valor, onde os APMs tenham a capacidade de aprender e participar de maneira prática em todas as fases desse processo."
+        },
+        {
+          "question": "Como você lida com o equilíbrio entre adicionar novas funcionalidades e manter a simplicidade e facilidade de uso do produto?",
+          "awnser": "Essas duas questões estão muito alinhadas e descreve basicamente o nosso trabalho como profissional de produtos. Constantemente precisamos verificar se o nosso produto necessita de novas funcionalidades, sejam provenientes da dor do usuário ou falta de engajamento destes, onde temos que entender o motivo e propor soluções estratégicas e até criativas para o problema encontrado, mas ao mesmo tempo temos que fazer com que essa jornada do usuário dentro do produto seja fluida, fácil, intuitiva e simples, pois tudo que é complexo para ser executado pode causar frustração, fazendo com que a possibilidade de abandono seja alta e que o nosso esforço não gere valor. Em síntese, para que possamos ter o equilíbrio dessas duas frentes, incrementar o produto e mantê-lo simples, é fundamental conhecermos o nosso Usuário e sabermos o que ele precisa. Para isso, além de sabermos priorizar e definir o que é mais importante naquele momento, também devemos trabalhar com outros profissionais do time, como por exemplo UX Resercher e UI, que podem nos auxiliar a termos um olhar mais próximo do nosso cliente final e construirmos algo especialmente para ele."
+        },
+        {
+          "question": "Sabemos que a área de TI está em constante inovação. Portanto, como você acredita que as pessoas podem se manter atualizadas para essas novas oportunidades que surgem e mudanças que ocorrem diariamente nesse universo tecnológico?",
+          "awnser": "Temos que ter consciência que na área de TI tudo mudará, pois é um universo onde sempre estamos atualizando, transformando, deletando ideias e recomeçando. Aconselho que você se atualize da maneira que conseguir, seja lendo livros, promovendo networking, conversando e conhecendo as pessoas e buscando cursos gratuitos. Costumo incentivar as pessoas a gastar menos, porque às vezes elas não podem, mas quando falamos de TI, não é porque algo é gratuito que não vai te ajudar fortemente na sua transição de carreira. Evolui bastante nesses 17 anos de jornada profissional, mas só consegui fazer isso porque estava constantemente buscando me manter atualizada com as tendências do mercado, falando com pessoas, estudando e fazendo cursos (até os gratuitos). O que não podemos fazer é nos acomodarmos e acreditarmos que não temos mais nada a aprender."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento do produto?",
+          "awnser": "Podemos ser os maiores e melhores promotores de engajamento, colaboração, vontade de participação das pessoas, mas mesmo assim não garantimos que tenhamos uma comunicação efetiva, pois isso também depende de cada uma delas. Mas, para driblar esse desafio e tornar as pessoas mais envolvidas, falando especificamente da SouJunior, sempre tento promover a transparência, mostrando o que estamos fazendo. Além disso, tentamos reunir ao máximo com as pessoas, buscar a opinião e solicitar a participação delas, para que elas se sintam pertencentes aquela construção, além de promover um ambiente seguro e de espaço aberto ao diálogo."
+        },
+        {
+          "question": "Como você resolve conflitos de interesses entre equipes de produto e outras áreas?",
+          "awnser": "Estamos lidando com pessoas e cada uma tem um conceito de valor diferente, onde o que uma pode ver algo como empecilho, outra pode ver como um ganho ou um bônus. Acho que não é só sobre resolver conflitos, mas como poder mitigá-los. Então, muitas vezes, se antecipar aos conflitos vem muito sobre você explicar o valor da área de produtos para as outras áreas, equalizando o entendimento de que estamos ali para contribuir. Trazendo esse conceito para a SouJunior, promovemos uma live onde eu e o Brandão falamos um pouco sobre a área de Produtos e como ela poderia servir positivamente as outras áreas de uma organização, além de dar voz ao Usuário e favorecer também a empresa através de uma entrega de valor. Com isso disso acredito que as pessoas conseguiram compreender porque estamos querendo saber de tudo e até se envolver em todos os processos que estejam associados a construção do nosso incremento, evitando alguns problemas de comunicação ou conflitos entre as pessoas."
+        },
+        {
+          "question": "Como você garante que o produto atenda às necessidades e expectativas dos usuários e clientes?",
+          "awnser": "Uma das maiores responsabilidades do produto é entregar valor, maximizar o seu valor, tendo em vista que ele é sempre feito para sanar uma dor e atender a uma necessidade. Como podemos garantir que o que estou entregando realmente atenderá as necessidades e expectativas do meu usuário? É preciso conhecê-los, entendê-los e ouvi-los. Se nosso produto é global ou nacional não temos como alcançar a todos, por isso a importância de se trabalhar bem com pesquisa. Sendo assim, não adianta simplesmente tentar adivinhar o que o seu cliente deseja para poder lançar um produto, você tem que realmente saber o que ele deseja. Existem várias ferramentas que facilitam esse jornada, mas sem dúvidas os dados ajudam bastante nesse processo de ver onde o cliente está, onde ele desiste e abandona a jornada no nosso produto. A partir disso vamos atrás para fazer entrevistas e entender o motivo deles desistirem. Com essas informações é possível que possamos entregar sempre algo que não só atenda ou supere as expectativas no nosso Usuário."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Fábio Escanfella",
+          "img": "https://user-images.githubusercontent.com/115566254/252688918-204ca85c-3533-4c36-a421-4a45c7f7f73f.png",
+          "role": "Mentor",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 2,
+          "nome": "Adriano Laurino",
+          "img": "https://user-images.githubusercontent.com/115566254/252687630-db04f1e1-28c6-4000-923a-cffe53d72a39.png",
+          "role": "Mentor",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Marcelo Bizarro",
+          "img": "https://user-images.githubusercontent.com/115566254/252680854-8c785c18-481c-4ef5-be23-bf1269d1b018.png",
+          "role": "Mentor",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 4,
+          "nome": "Leonardo Honório",
+          "img": "https://user-images.githubusercontent.com/91374502/221251751-f90507d6-f797-4bfb-abca-743d5f6ffecb.jpeg",
+          "role": "Mentor",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 5,
+          "nome": "Ramis Oliveira",
+          "img": "https://user-images.githubusercontent.com/115566254/252677134-c1d3f5e1-c0a5-4e38-841a-2bb08205142c.png",
+          "role": "Mentor",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 6,
+          "nome": "Tainá Wandelli",
+          "img": "https://user-images.githubusercontent.com/91374502/226066675-65f135db-eef3-4e91-afec-bdf2ebf4d848.png",
+          "role": "Mentor",
+          "linkedin": "",
+          "discord": ""
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Akira Shimazu",
+          "img": "https://user-images.githubusercontent.com/91374502/221252515-1f4e1294-b2a1-46ae-be9f-2f6c23cadf7c.jpeg",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 2,
+          "nome": "Marjorie Lebelein",
+          "img": "https://user-images.githubusercontent.com/115566254/252682734-49194bb5-8bac-499c-a45b-8303af867a41.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Leticia Oliveira",
+          "img": "https://user-images.githubusercontent.com/115566254/252684766-3fa52211-affe-4898-9550-8d3e7d9839fc.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 4,
+          "nome": "Alana Dias",
+          "img": "https://user-images.githubusercontent.com/115566254/252681765-9f51af8d-56cf-4f70-9b64-e15c6344ac45.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 5,
+          "nome": "Lúcio Flávio ",
+          "img": "https://user-images.githubusercontent.com/115566254/252677952-41c737d6-3899-4295-9386-34bd5325c2fa.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 6,
+          "nome": "Luiz Neves",
+          "img": "https://user-images.githubusercontent.com/124841403/230916883-497edba2-750c-4b94-8841-768254f12dfa.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 7,
+          "nome": "Savanne Soares",
+          "img": "https://user-images.githubusercontent.com/115566254/252675899-7c7724e8-e65d-412c-8ce9-b8848ff045d1.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 8,
+          "nome": "Laira Reis",
+          "img": "https://user-images.githubusercontent.com/115566254/252674885-40db06b7-ed88-49d5-83e4-995b1cf6bb66.jpeg",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 9,
+          "nome": "Renato Saturnino",
+          "img": "https://user-images.githubusercontent.com/91374502/221252516-1333a3f0-9202-4591-b19f-240afafc1100.jpeg",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 10,
+          "nome": "Everton Antonio",
+          "img": "https://user-images.githubusercontent.com/115566254/252679490-fbcc6ca1-6069-47b2-b0f5-7ca0b3c9a0fd.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 11,
+          "nome": "Talita Bitencourt",
+          "img": "https://user-images.githubusercontent.com/91374502/221252509-cec3e588-0c5f-4fcd-9993-721f1a7c12ff.jpg",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 12,
+          "nome": "Michel Alves",
+          "img": "https://user-images.githubusercontent.com/124841403/230917104-ee23ba5c-b800-482f-b9cd-62ac80430dd0.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 13,
+          "nome": "Steffany Martins",
+          "img": "https://user-images.githubusercontent.com/124841403/230917183-5d9baba3-d1e4-452e-a4c0-4329dee72221.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 14,
+          "nome": "Tatiane Alves",
+          "img": "https://user-images.githubusercontent.com/91374502/221252518-dbe5d3ee-247c-4851-ad74-cb8d4890a066.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 15,
+          "nome": "Thiago Silva",
+          "img": "https://user-images.githubusercontent.com/91374502/221252517-5f2590dc-3083-4eb4-ac3d-7c9df6750050.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 16,
+          "nome": "Jacqueline Moura",
+          "img": "https://user-images.githubusercontent.com/91374502/226074179-2b83d175-d985-4843-b97c-d9060a178511.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 17,
+          "nome": "Camila Rocha",
+          "img": "https://user-images.githubusercontent.com/115566254/252690218-704f9fcb-0cfa-4205-a461-0bc6d6832351.png",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        },
+        {
+          "id": 17,
+          "nome": "Jamir Salim",
+          "img": "https://user-images.githubusercontent.com/91374502/227714643-3bb7543b-0bc4-452f-9b71-82796b6618a2.jpeg",
+          "role": "Juninho",
+          "linkedin": "",
+          "discord": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "title": "UI & UX Design",
+    "url": "ui-ux-design",
+    "image-hero": "/assets/hero-ui-ux.svg",
+    "head": {
+      "name": "Vinicius L Miguel",
+      "role": "Head de UI & UX Design",
+      "image-profile": "https://user-images.githubusercontent.com/115566254/233649176-010b3962-037b-4565-9256-0e128fad3cad.jpg",
+      "descripition": [
+        "  User Experience (UX) é a área que desenha toda a experiência que o usuário tem com algum produto/serviço, o que acontece desde o momento em que ouve falar da marca, o atendimento, o uso do produto ou do serviço, até pós atendimentos. Todo e qualquer contato que o usuário tem com alguma marca faz parte da experiência dele.User Interface (UI) é, uma parte específica, dentro de tudo que envolve a experiência, é a interface pelo qual o usuário interage com o produto, seja um aplicativo, uma site, um controle, ou seja, qualquer meio que possibilite uma interação.",
+        "Um designer de Experiência do usuário é responsável, então, por desenhar a jornada que o usuário tem com o produto/serviço e fazer desse processo o mais funcional, fácil e intuitivo, considerando as boas práticas de usabilidade, acessibilidade e elementos gráficos.  O propósito da equipe de UX/UI Design aqui na Open source SouJunior, é garantir uma experiência intuitiva, fácil e agradável aos nossos usuários em todos os produtos, além de capacitar nossos juniores através da prática em conjunto com a equipe de desenvolvimento."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/vanessa-patricia/",
+        "discord": ""
+      },
+      "resume": "Sou Vinicius, tenho 26 anos, atualmente sou líder de UX na FortBrasil que é uma das 100 maiores fintechs do Brasil."
+    },
+    "interview": {
+      "introduction": [""],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Iniciei em 2014 como web designer, criando um blog de tecnologia no WordPress chamado TEC F5"
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Sempre gostei de participar de ONGs e projetos sociais, ajudar pessoas a conseguirem suas primeiras oportunidades é um desejo ardente no meu coração."
+        },
+        {
+          "question": "Qual a diferença entre UX/UI?",
+          "awnser": "UX é o termo que significa User Experience ou experiência do usuário, se trata de toda a experiência que o usuário tem com um determinado produto/serviço. UI é a abreviação de User Interface ou interface do usuário, é todas as telas em dispositivos visuais que o usuário tem alguma interação, é tudo aquilo que você consegue ver e interagir."
+        },
+        {
+          "question": "Qual é a maior responsabilidade em ser Head de tantos juniors que estão atrás de sua primeira oportunidade?",
+          "awnser": "É fazer com que eles entrem no mercado de trabalho sabendo bem como é o dia-a-dia de um profissional de UX Designer."
+        },
+        {
+          "question": "Quais são as principais soft skills que você considera essenciais para um UX/UI?",
+          "awnser": "Liderança, proatividade, pensamento crítico, resolução de problemas."
+        },
+        {
+          "question": "Qual processo da criação que você mais gosta?",
+          "awnser": "Discovery, principalmente validação com os usuários."
+        },
+        {
+          "question": "Como é a comunicação com a equipe envolvida no desenvolvimento?",
+          "awnser": "Precisa ser totalmente clara, objetiva e assíncrona. É necessário criar uma experiência boa para o usuário levando em conta o esforço do time de desenvolvimento para aquela solução. Focar sempre no maior impacto e menor esforco."
+        },
+        {
+          "question": "Como mensurar o processo do UX/UI (métricas?)?",
+          "awnser": "Definindo muito bem os objetivos no início do produto/feature, assim fica fácil definir as métricas que vão precisar acompanhar."
+        },
+        {
+          "question": "Dica para algum juninho?",
+          "awnser": "Estudem soft skills na mesma intensidade que vocês estudam sobre a área de UX."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Leonardo Germano",
+          "img": "https://user-images.githubusercontent.com/115566254/255912712-de169040-9f15-43c5-b79d-e7f4914763c9.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/oleonardogermano/",
+          "discord": ""
+        },
+        {
+          "id": 2,
+          "nome": "Edgar Penido",
+          "img": "https://user-images.githubusercontent.com/115566254/254366262-429b063b-219d-4173-9ab9-75543ad206bc.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/edgarpenido/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Pedro Rodigues",
+          "img": "https://user-images.githubusercontent.com/115566254/254276867-df26361d-2e01-4863-b24c-ace5ac4089f6.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/pedrohrs/",
+          "discord": ""
+        },
+        {
+          "id": 4,
+          "nome": "Dayvid Janhsen",
+          "img": "https://user-images.githubusercontent.com/115566254/254280875-5c58311f-877d-48c2-8626-8dab1a328288.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/djanhsen/",
+          "discord": ""
+        },
+        {
+          "id": 5,
+          "nome": "Leonardo Muller",
+          "img": "https://user-images.githubusercontent.com/115566254/254284063-980510f6-08a1-43f6-9a5e-60b36cd7ba99.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/leormuller/",
+          "discord": ""
+        },
+        {
+          "id": 6,
+          "nome": "Rony de Freitas",
+          "img": "https://user-images.githubusercontent.com/115566254/254591124-605282f0-4a84-42cf-8e2d-667364858e01.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/rony-de-freitas-757849104/",
+          "discord": ""
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Isabella Oliveira de Camargo",
+          "img": "https://user-images.githubusercontent.com/115566254/255913764-dc176d35-de7b-43f2-84e9-0db751d2073a.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/isabella0liver/",
+          "discord": ""
+        },
+        {
+          "id": 2,
+          "nome": "Graziela Maia",
+          "img": "https://user-images.githubusercontent.com/115566254/254365614-d05b0cb6-f6eb-4908-abd0-b57377607838.png",
+          "role": "Juninho",
+          "linkedin": " https://www.linkedin.com/in/grazielapatriciamaia/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Mariana Miguel",
+          "img": "https://user-images.githubusercontent.com/115566254/254616574-4e117462-9fcc-4a39-8ecd-2d84c0fe2c07.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/mariana-miguel/",
+          "discord": ""
+        },
+        {
+          "id": 4,
+          "nome": "Rafaela Coelho",
+          "img": "https://user-images.githubusercontent.com/115566254/254304379-5bff0bba-c633-41db-bfa4-3ef3fb0b48f9.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/rafaeladinizcoelho/",
+          "discord": ""
+        },
+        {
+          "id": 5,
+          "nome": "Cristopher Tomazini",
+          "img": "https://user-images.githubusercontent.com/115566254/254302196-bab91e3c-3ac1-4eed-9b2f-a8673b9f0ecd.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/cristophertomazini/",
+          "discord": ""
+        },
+        {
+          "id": 6,
+          "nome": "Vinicius Palhares",
+          "img": "https://user-images.githubusercontent.com/115566254/254301563-32ea3fcf-bfd7-40db-9c05-e7b4b0c32716.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/viniciuspalhares/",
+          "discord": ""
+        },
+        {
+          "id": 7,
+          "nome": "Vinicius Jardim",
+          "img": "https://user-images.githubusercontent.com/115566254/254300765-742ce540-fda6-41fb-afb9-c10fff57c0e7.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/vinijardim-ux/",
+          "discord": ""
+        },
+        {
+          "id": 8,
+          "nome": "Anna Claudia Andrade",
+          "img": "https://user-images.githubusercontent.com/115566254/222822255-b73285ec-4a27-4aff-881f-566b0e7773a0.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/annaclaudiaandradedesigner",
+          "discord": ""
+        },
+        {
+          "id": 9,
+          "nome": "Eduardo Bezerra",
+          "img": "https://user-images.githubusercontent.com/115566254/222822261-ec18bb2f-8773-4eec-9930-8555318142a5.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/eduardo-beserra-527514209",
+          "discord": ""
+        },
+        {
+          "id": 10,
+          "nome": "Gabriel Santos",
+          "img": "https://user-images.githubusercontent.com/115566254/222822256-9e06f1ee-ea4f-4a65-bf0e-6a7d02106b18.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabrielsantoswlk",
+          "discord": ""
+        },
+        {
+          "id": 11,
+          "nome": "Jayme Gabriel",
+          "img": "https://user-images.githubusercontent.com/115566254/222822260-43b83615-f715-403a-a38f-94751f32dab2.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jayme-gabriel",
+          "discord": ""
+        },
+        {
+          "id": 12,
+          "nome": "Luanda Clara",
+          "img": "https://user-images.githubusercontent.com/115566254/222822258-4e8ef704-1d11-4e8a-b8ca-f3923e5954ef.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/luandaclara",
+          "discord": ""
+        },
+        {
+          "id": 13,
+          "nome": "Lucas Oliveira",
+          "img": "https://user-images.githubusercontent.com/115566254/222822263-4b35682d-56e1-4a51-af8b-ff21cf46a525.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/lucasvonasc",
+          "discord": ""
+        },
+        {
+          "id": 14,
+          "nome": "Rhayssa Lima",
+          "img": "https://user-images.githubusercontent.com/115566254/222822262-b9e50d94-0098-43ae-8172-2524513c27b9.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/rhayssa-lima-097623230",
+          "discord": ""
+        },
+        {
+          "id": 15,
+          "nome": "Priscila Souza",
+          "img": "https://user-images.githubusercontent.com/115566254/222822259-e337eef7-69d8-49f5-b636-0569e16c42bc.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/priscilasansou/",
+          "discord": ""
+        }
+      ]
+    }
+  }
+]
