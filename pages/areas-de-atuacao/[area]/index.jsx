@@ -18,7 +18,9 @@ import { apiArea } from "../../../services/api";
 
 const AreaItem = () => {
   const [areaItem, setAreaItem] = useState(null);
+  const [areaData, setAreaData] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [index, setIndex] = useState(0);
   const router = useRouter();
   const { area } = router.query;
 
@@ -27,22 +29,43 @@ const AreaItem = () => {
       setLoading(true);
       return;
     }
-    console.log(area);
-    getArea(area);
+
+    getArea();
   }, [area]);
 
-  const getArea = async (area) => {
+  const getArea = async () => {
     const { data } = await apiArea.getArea();
-    const getData = await data.filter(({ url }) => url === area);
-
-    setAreaItem(getData);
+    setAreaData(data);
+    setAreaItem(...data.filter(({ url }) => url === area));
+    return data;
   };
 
   const previewArea = () => {
-    console.log("antes");
+    if (index < 0) {
+      setIndex(areaData.length - 1);
+    }
+
+    if (index > areaData.length - 1) {
+      setIndex(0);
+    }
+
+    setIndex(index + 1 > areaData.length - 1 ? 0 : index + 1);
+
+    router.push(`/areas-de-atuacao/${areaData[index].url}`);
   };
+
   const nextArea = () => {
-    console.log("depois");
+    if (index < 0) {
+      setIndex(areaData.length - 1);
+    }
+
+    if (index > areaData.length - 1) {
+      setIndex(0);
+    }
+
+    setIndex(index + 1 > areaData.length - 1 ? 0 : index + 1);
+
+    router.push(`/areas-de-atuacao/${areaData[index].url}`);
   };
 
   if (areaItem === null) {
@@ -63,16 +86,13 @@ const AreaItem = () => {
         <picture>
           <source
             media="(max-width: 960px)"
-            srcSet={`${areaItem[0]["image-hero"]} 768w`}
+            srcSet={`${areaItem["image-hero"]} 768w`}
             sizes="960px"
           />
-          <source
-            srcSet={`${areaItem[0]["image-hero"]} 1280w`}
-            sizes="1440px"
-          />
+          <source srcSet={`${areaItem["image-hero"]} 1280w`} sizes="1440px" />
 
           <img
-            src={`${areaItem[0]["image-hero"]}`}
+            src={`${areaItem["image-hero"]}`}
             alt="Uma experiência real de trabalho em uma empresa de tecnologia."
           />
         </picture>
@@ -81,17 +101,17 @@ const AreaItem = () => {
           <button onClick={previewArea}>
             <img src="/assets/arrow.svg" alt="" />
           </button>
-          <Heading level={"h2"}>{areaItem[0].title}</Heading>
+          <Heading level={"h2"}>{areaItem.title}</Heading>
           <button onClick={nextArea}>
             <img src="/assets/arrow.svg" alt="" />
           </button>
         </div>
       </div>
       <section className={styles.AboutSection}>
-        <h1 className={styles.title}>Sobre a Área de {areaItem[0].title}</h1>
+        <h1 className={styles.title}>Sobre a Área de {areaItem.title}</h1>
         <div className={styles.container}>
           <div className={styles.paragraphWrapper}>
-            {areaItem[0].head.descripition.map((paragraph) => (
+            {areaItem.head.descripition.map((paragraph) => (
               <Paragraph key={paragraph}>{paragraph}</Paragraph>
             ))}
           </div>
@@ -100,13 +120,13 @@ const AreaItem = () => {
 
       <section className={styles.InterviewSection}>
         <Heading level={"h3"}>
-          Entrevista com Head de {areaItem[0].title} da Sou Junior -{" "}
-          {areaItem[0].head.name}
+          Entrevista com Head de {areaItem.title} da Sou Junior -{" "}
+          {areaItem.head.name}
         </Heading>
-        {areaItem[0].interview.introduction.length > 1 ? (
+        {areaItem.interview.introduction.length > 1 ? (
           <div className={styles.container}>
             <div className={styles.paragraphWrapper}>
-              {areaItem[0].interview.introduction.map((paragraph) => (
+              {areaItem.interview.introduction.map((paragraph) => (
                 <Paragraph key={paragraph}>{paragraph}</Paragraph>
               ))}
             </div>
@@ -117,22 +137,22 @@ const AreaItem = () => {
         <div className={styles.ceo}>
           <div className={styles.avatar}>
             <Image
-              src={areaItem[0].head["image-profile"]}
-              alt={`foto de perfil ${areaItem[0].head.name}`}
+              src={areaItem.head["image-profile"]}
+              alt={`foto de perfil ${areaItem.head.name}`}
               width={532}
               height={532}
             />
           </div>
 
           <div className={styles.ceoContent}>
-            <Heading level={"h4"}>{areaItem[0].head.name}</Heading>
-            <Paragraph>{areaItem[0].head.role}</Paragraph>
-            <Paragraph>{areaItem[0].head.resume}</Paragraph>
+            <Heading level={"h4"}>{areaItem.head.name}</Heading>
+            <Paragraph>{areaItem.head.role}</Paragraph>
+            <Paragraph>{areaItem.head.resume}</Paragraph>
 
             <ul>
               <li>
                 <a
-                  href={areaItem[0].head.social.linkedin}
+                  href={areaItem.head.social.linkedin}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -142,7 +162,7 @@ const AreaItem = () => {
 
               <li>
                 <a
-                  href={areaItem[0].head.social.discord}
+                  href={areaItem.head.social.discord}
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -153,22 +173,22 @@ const AreaItem = () => {
           </div>
         </div>
         <div className={styles.container}>
-          {areaItem[0].interview.questions.map(({ question, awnser }) => (
+          {areaItem.interview.questions.map(({ question, awnser }) => (
             <>
-              <Accordion
-                key={question}
-                defaultExpanded={true}
-                style={inlineStyle}
-              >
+              <Accordion defaultExpanded={true} style={inlineStyle}>
                 <AccordionSummary
                   aria-controls="panel1a-content"
                   id="panel1a-header"
+                  key={question}
                 >
                   <Typography variant="string" className={styles.question}>
                     {question}
                   </Typography>
                 </AccordionSummary>
-                <AccordionDetails className={styles.AccordionDetails}>
+                <AccordionDetails
+                  className={styles.AccordionDetails}
+                  key={awnser}
+                >
                   <Typography variant="string">
                     <Paragraph>{awnser}</Paragraph>
                   </Typography>
@@ -181,21 +201,24 @@ const AreaItem = () => {
 
       <section className={styles.HeadersSection}>
         <Heading level={"h2"}>
-          Essa é a Equipe de {areaItem[0].title} da SouJunior
+          Essa é a Equipe de {areaItem.title} da SouJunior
         </Heading>
-        <div className={styles.titleDescripiton}>
-          <Heading level={"h3"}>Mentores</Heading>
-        </div>
-
+        {areaItem.team.mentores.length > 0 ? (
+          <div className={styles.titleDescripiton}>
+            <Heading level={"h3"}>Mentores</Heading>
+          </div>
+        ) : (
+          ""
+        )}
         <div className={styles.headersContainer}>
-          {[...areaItem[0].team.mentores]
+          {[...areaItem.team.mentores]
             .sort((a, b) => (a.nome > b.nome ? 1 : -1))
             .map(({ id, nome, role, img, linkedin, discord }) => (
               <div key={nome} className={styles.headerWrapper}>
                 <Image src={img} width={100} height={100} />
-                <div>
-                  <h2>{nome}</h2>
-                  <h3>{role}</h3>
+                <div className={styles.team}>
+                  <p>{nome}</p>
+                  <p>{role}</p>
                 </div>
                 <ul>
                   <li>
@@ -217,18 +240,23 @@ const AreaItem = () => {
               </div>
             ))}
         </div>
-        <div className={styles.titleDescripiton}>
-          <Heading level={"h3"}>Juninhos</Heading>
-        </div>
+        {areaItem.team.juninhos.length > 0 ? (
+          <div className={styles.titleDescripiton}>
+            <Heading level={"h3"}>Juninhos</Heading>
+          </div>
+        ) : (
+          ""
+        )}
+
         <div className={styles.headersContainer}>
-          {[...areaItem[0].team.juninhos]
+          {[...areaItem.team.juninhos]
             .sort((a, b) => (a.nome > b.nome ? 1 : -1))
             .map(({ id, nome, role, img, linkedin, discord }) => (
               <div key={nome} className={styles.headerWrapper}>
                 <Image src={img} width={100} height={100} />
-                <div>
-                  <h2>{nome}</h2>
-                  <h3>{role}</h3>
+                <div className={styles.team}>
+                  <p>{nome}</p>
+                  <p>{role}</p>
                 </div>
                 <ul>
                   <li>

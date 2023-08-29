@@ -157,7 +157,6 @@
 /*Accordion*/
 
 .accordion {
-  /* width: 1024px; */
   padding: 0;
 }
 
@@ -180,7 +179,6 @@
 .headersContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(154px, 200px));
-  /* max-width: 120.7rem; */
   max-width: 144rem;
   width: 100%;
   place-content: center;
@@ -222,7 +220,19 @@
   fill: #046ad0;
 }
 
+.team {
+  font-weight: bold;
+}
+
+.team p:first-child {
+  font-size: 1.8rem;
+}
+
 @media (max-width: 960px) {
+  .HeadersSection h2 {
+    padding-top: 10rem;
+  }
+
   .bannerContainer {
     gap: 66px;
     padding-bottom: 50px;
@@ -248,6 +258,11 @@
     justify-content: center;
     gap: 2rem;
     padding: 0;
+  }
+
+  .avatar {
+    padding: 5rem 0;
+    width: 60%;
   }
 
   .bannerContainer {
