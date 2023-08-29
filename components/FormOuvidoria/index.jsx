@@ -47,8 +47,6 @@ const OuvidoriaForm = () => {
     }
   };
 
-  
-
   const handleClear = (resetForm) => {
     resetForm();
   };
@@ -68,6 +66,9 @@ const OuvidoriaForm = () => {
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
+    confirmarEmail: Yup.string()
+      .oneOf([Yup.ref("email")], "O email deve ser o mesmo")
+      .required("O campo Confirmar e-mail é obrigatório."),
     assunto: Yup.string()
       .oneOf(["Sugestão", "Reclamação", "Elogio"], "")
       .required("*Escolha um opção por favor."),
@@ -114,8 +115,7 @@ const OuvidoriaForm = () => {
                 mensagem: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={onSubmit}
-            >
+              onSubmit={onSubmit}>
               {({ isSubmitting, values, resetForm }) => (
                 <Form>
                   <div>
@@ -137,6 +137,19 @@ const OuvidoriaForm = () => {
                     <Field type="email" name="email" className={styles.input} />
                     <ErrorMessage
                       name="email"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
+                  <div>
+                    <label>Confirmar e-mail: *</label>
+                    <Field
+                      type="email"
+                      name="confirmarEmail"
+                      className={styles.input}
+                    />
+                    <ErrorMessage
+                      name="confirmarEmail"
                       component="div"
                       className={styles.errorMessage}
                     />
@@ -186,8 +199,8 @@ const OuvidoriaForm = () => {
                   </div>
                   <div className={styles.buttons}>
                     <button
-                      type="button" onClick={() => handleClear(resetForm)}
-                    >
+                      type="button"
+                      onClick={() => handleClear(resetForm)}>
                       Limpar
                     </button>
                     <button type="submit">Enviar</button>
