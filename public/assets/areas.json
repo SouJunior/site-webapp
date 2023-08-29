@@ -263,7 +263,7 @@
     }
   },
   {
-    "id": 1,
+    "id": 2,
     "title": "UI & UX Design",
     "url": "ui-ux-design",
     "image-hero": "/assets/hero-ui-ux.svg",
@@ -492,6 +492,218 @@
           "img": "https://user-images.githubusercontent.com/115566254/222822259-e337eef7-69d8-49f5-b636-0569e16c42bc.jpg",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/priscilasansou/",
+          "discord": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "title": "Mobile",
+    "url": "mobile",
+    "image-hero": "/assets/hero-mobile.svg",
+    "head": {
+      "name": "Mateus Leonardo",
+      "role": "Head de Mobile",
+      "image-profile": "https://user-images.githubusercontent.com/98753928/256327572-2a4bb7cc-1e4d-4520-a82e-8c9e407581bc.jpeg",
+      "descripition": [
+        "O setor de Mobile é responsável pela criação e aprimoramento de aplicativos e sistemas para dispositivos móveis criando software específico para funcionar em plataformas móveis, como Android e IOS. A área tem como desafio a implementação de abordagens adaptativas proporcionando aos usuários experiências otimizadas em seus dispositivos, permitindo o acesso prático e rápido a informações, serviços e entretenimento."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/mateusmatosleonardo",
+        "discord": ""
+      },
+      "resume": "Atua na área de mobile há 4 anos tendo se especializado em React Native com experiência anterior em desenvolvimento Front-End."
+    },
+    "interview": {
+      "introduction": [
+        "Mateus é um desenvolvedor full stack especializado em desenvolvimento mobile com React Native, com 23 anos de idade e uma carreira sólida de quatro anos na área de tecnologia. Demonstrando um talento excepcional e uma paixão inegável pela tecnologia, ele tem se destacado como profissional nesse campo.",
+        "Sua trajetória como desenvolvedor revela uma dedicação incansável ao aprimoramento de suas habilidades técnicas e ao acompanhamento das tendências mais recentes no mundo da programação mobile. Ao longo dos anos, ele tem trabalhado em diversos projetos inovadores, mostrando-se adaptável a diferentes desafios e necessidades do mercado.",
+        "Mateus se destaca não apenas pela sua competência técnica, mas também pela sua habilidade em compartilhar conhecimento com os outros. Sua paixão por ensinar o impulsionou a assumir o papel de mentor, onde tem orientado e inspirado colegas de equipe e novos talentos a alcançarem seu pleno potencial na área de desenvolvimento mobile. Atualmente, Mateus ocupa uma posição de destaque na empresa SouJunior, atuando como Head Mobile. Nessa função, ele lidera a equipe responsável por projetar e desenvolver soluções mobile inovadoras, garantindo que todos os projetos estejam alinhados com as melhores práticas do setor.",
+        "Em resumo, Mateus é um apaixonado pela tecnologia e um talentoso mentor no campo do desenvolvimento mobile. Sua trajetória profissional é um testemunho de seu comprometimento e dedicação ao mundo da tecnologia, e sua capacidade de liderar e ensinar o tornam um profissional exemplar e inspirador na indústria."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Descobri minha paixão por tecnologia aos 10 anos de idade, com 12 anos já administrava uma lan house, e conforme os anos foram se passando, minha paixão continuou a crescrer.No ensino médio decidi fazer uma faculdade na área de tecnologia, especificamente ciência da computação.E assim, eu iniciei minha carreira como desenvolvedor front-end em 2019.Depois descobri uma nova paixão, o desenvolvimento mobile, e então foquei na área e estou nela até hoje."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Como devoto da tecnologia apaixonado por desvendar seus segredos e explorar suas possibilidades ilimitadas, encontro satisfação em compartilhar meus conhecimentos com outros iniciantes. Sou motivado pelo desejo de tornar a jornada tecnológica de cada pessoa mais fluida e emocionante."
+        },
+        {
+          "question": "Você poderia dar uma visão geral de como está estruturada a área de mobile na SouJunior?",
+          "awnser": "A área de Mobile na SouJunior é uma unidade dedicada ao desenvolvimento e inovação de soluções tecnológicas voltadas para dispositivos móveis. Nossa equipe é formada por entusiastas talentosos e comprometidos, apaixonados por explorar o potencial inexplorado do mundo mobile. Embora ainda estejamos em fase inicial de atividades práticas, nossa visão é promissora, e temos planos ambiciosos para nos tornarmos referência na SouJunior."
+        },
+        {
+          "question": "Quais são os principais desafios enfrentados em nosso ambiente tecnológico e como são abordados pelo setor de Mobile?",
+          "awnser": "No ambiente tecnológico em constante evolução, o setor de Mobile enfrenta diversos desafios que demandam abordagens inovadoras e adaptativas para garantir o desenvolvimento de soluções móveis eficientes e relevantes, como: Diversidade de Dispositivos e Plataformas, Segurança e privacidade, Experiência do Usuário, Atualização e Manutenção"
+        },
+        {
+          "question": "Como é seu dia a dia trabalhando como Mobile?",
+          "awnser": "No meu dia a dia como profissional de Mobile, tenho o privilégio de liderar e orientar uma equipe talentosa de desenvolvedores dedicados a criar soluções inovadoras para dispositivos móveis. Como líder, minha jornada começa com um planejamento cuidadoso, onde defino as metas e prioridades do projeto em colaboração com a equipe."
+        },
+        {
+          "question": "Na sua opinião, quais são as qualidades que tornam um profissional de Mobile bem-sucedido na indústria de tecnologia?",
+          "awnser": "Um profissional de Mobile bem-sucedido na indústria de tecnologia possui um conjunto diversificado de qualidades e habilidades que o destacam em meio ao cenário competitivo e em constante evolução. Algumas dessas qualidades cruciais incluem: conhecimento técnico sólido, curiosidade e aprendizado contínuo, habilidades para resolver problemas, trabalho em equipe e comunicação, capacidade de adaptabilidade e comprometimento e responsabilidade."
+        },
+        {
+          "question": "Como o setor de Mobile colabora com outras áreas para garantir as entregas da SouJunior?",
+          "awnser": "O setor de Mobile na SouJunior colabora ativamente com outras áreas da empresa para garantir entregas eficientes e de alta qualidade. Essa colaboração é essencial para garantir que os aplicativos móveis desenvolvidos atendam às necessidades dos clientes e dos usuários, além de estarem alinhados com a estratégia geral da empresa.Abaixo estão algumas maneiras pelas quais o setor de Mobile colabora com outras áreas:Equipe de design, Gerenciadores de projetos, Equipe de produtos."
+        },
+        {
+          "question": "Quais ferramentas e tecnologias são fundamentais para o setor de Mobile em nossa empresa?",
+          "awnser": "No setor de Mobile da nossa empresa, algumas ferramentas e tecnologias fundamentais são essenciais para o desenvolvimento eficiente e aprimorado de aplicativos móveis. Abaixo estão algumas das principais ferramentas e tecnologias que são utilizadas para impulsionar o sucesso do setor de Mobile na SouJunior: Ambientes de Desenvolvimento Integrado (IDEs), Linguagens de Programação, Frameworks e Bibliotecas, Versionamento de Código, Plataformas de Comunicação"
+        },
+        {
+          "question": "Quais orientações você daria para quem está começando ou fazendo transição de carreira para a área de Mobile?",
+          "awnser": "Aprenda as Fundamentais: Comece com o aprendizado das linguagens de programação fundamentais para o desenvolvimento mobile, como Java e Kotlin para Android e Swift para iOS. Além disso, compreenda os conceitos básicos de desenvolvimento mobile, como arquiteturas de aplicativos e padrões de design.Construa Projetos Práticos: A teoria é importante, mas a prática é fundamental para o desenvolvimento de habilidades sólidas. Construa projetos pessoais ou participe de projetos de código aberto para aplicar o que aprendeu e construir um portfólio.Conheça as Plataformas: Familiarize-se com as principais plataformas móveis, como Android e iOS. Entenda suas diferenças e peculiaridades, bem como as diretrizes de design e as boas práticas para cada uma delas.Explore Desenvolvimento Multiplataforma: Considere aprender frameworks de desenvolvimento multiplataforma, como React Native ou Flutter. Eles permitem criar aplicativos para várias plataformas usando uma única base de código.Participe de Comunidades e Eventos: Envolver-se em comunidades de desenvolvedores mobile, participar de eventos, meetups e conferências é uma ótima maneira de aprender com os outros, compartilhar experiências e estar atualizado sobre as últimas tendências.Seja Curioso e Aventure-se: A tecnologia móvel está em constante evolução, por isso, esteja sempre curioso e aberto a explorar novas tecnologias e tendências emergentes. Experimente coisas novas e esteja disposto a aprender continuamente.Seja Paciente e Persistente: Aprender e desenvolver habilidades na área de Mobile pode levar tempo e exigir paciência e persistência. Não tenha medo de enfrentar desafios e continuar aprendendo, mesmo diante de obstáculos."
+        },
+        {
+          "question": "Quais soft Skills você considera importantes para trabalhar na área?",
+          "awnser": "Além das habilidades técnicas, as soft skills (habilidades comportamentais) são extremamente importantes para trabalhar na área de Mobile. Elas ajudam a aprimorar a comunicação, a colaboração e o relacionamento interpessoal, tornando os profissionais mais eficientes e bem-sucedidos em suas atividades.Abaixo estão algumas das soft skills essenciais para trabalhar na área de Mobile:Comunicação Efetiva: Saber se comunicar de forma clara e concisa é fundamental para trabalhar em equipe e para garantir que as informações sejam transmitidas com precisão.Trabalho em Equipe: O desenvolvimento mobile geralmente envolve colaboração com outras áreas, como design, análise de negócios e testes. Saber trabalhar em equipe, ouvir ideias dos outros e contribuir de forma construtiva é essencial para alcançar resultados bem-sucedidos.Resolução de Problemas: A habilidade de resolver problemas de forma ágil e eficiente é essencial no desenvolvimento mobile, onde desafios técnicos e imprevistos podem surgir. A capacidade de analisar problemas e encontrar soluções criativas é altamente valorizada.Adaptabilidade: A tecnologia mobile está em constante evolução, e profissionais nessa área devem ser adaptáveis para se ajustarem às mudanças de plataforma, linguagens de programação e tecnologias emergentes.Curiosidade e Aprendizado Contínuo: Profissionais de Mobile bem-sucedidos são curiosos e sempre buscam aprender novas habilidades, tendências e melhores práticas. A busca constante por conhecimento é essencial em uma área tecnológica em constante transformação.Organização e Gerenciamento de Tempo: Desenvolvimento mobile pode envolver várias tarefas e prazos. Ser organizado e gerenciar efetivamente o tempo é importante para garantir que os projetos sejam concluídos dentro do cronograma.Foco no Usuário: Colocar o usuário no centro do processo de desenvolvimento é uma soft skill importante. Compreender as necessidades e expectativas dos usuários e projetar aplicativos com foco na experiência do usuário é fundamental para o sucesso dos aplicativos.Pensamento Criativo: Ser criativo ao desenvolver soluções e ideias inovadoras é valorizado no setor de Mobile. O pensamento criativo ajuda a desenvolver aplicativos únicos e diferenciados.Essas soft skills complementam as habilidades técnicas, permitindo que profissionais de Mobile se destaquem em suas funções e alcancem um alto nível de desempenho, contribuindo positivamente para o sucesso dos projetos e para a satisfação dos usuários."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Werles Simeone",
+          "img": "https://user-images.githubusercontent.com/98753928/256020884-8375aa93-1e6e-4e93-86a4-d196394cd5a8.jpeg",
+          "role": "Juninho",
+          "linkedin": "http://www.linkedin.com/in/simeone08",
+          "discord": ""
+        },
+        {
+          "id": 2,
+          "nome": "Adriel Rodrigues",
+          "img": "https://user-images.githubusercontent.com/98753928/256021017-b2ef8bed-8383-401b-b591-7d6ca95180c5.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/adriel-rodrigues",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Levy Bezerra",
+          "img": "https://user-images.githubusercontent.com/98753928/256021056-9cc6a0bc-31f7-420b-8fe9-9340a8466e09.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/levy-bezerra-holanda/",
+          "discord": ""
+        },
+        {
+          "id": 4,
+          "nome": "Keliton Santos",
+          "img": "https://user-images.githubusercontent.com/98753928/257894748-ec171643-0ad7-46c9-8a42-1ce154b508e2.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/keliton-santos-desenvolvedor",
+          "discord": ""
+        }
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "title": "Front-end",
+    "url": "front-end",
+    "image-hero": "/assets/hero-ui-ux.svg",
+    "head": {
+      "name": "Ricardo Lima",
+      "role": "Head de Front end",
+      "image-profile": "https://user-images.githubusercontent.com/115566254/238658185-610d2cfc-e15f-4f47-ab02-885da2ea6b98.jpg",
+      "descripition": [
+        "O setor de Mobile é responsável pela criação e aprimoramento de aplicativos e sistemas para dispositivos móveis criando software específico para funcionar em plataformas móveis, como Android e IOS. A área tem como desafio a implementação de abordagens adaptativas proporcionando aos usuários experiências otimizadas em seus dispositivos, permitindo o acesso prático e rápido a informações, serviços e entretenimento."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/ricardo-pereira-lima",
+        "discord": ""
+      },
+      "resume": "Atua na área de mobile há 4 anos tendo se especializado em React Native com experiência anterior em desenvolvimento Front-End."
+    },
+    "interview": {
+      "introduction": [
+        "Mateus é um desenvolvedor full stack especializado em desenvolvimento mobile com React Native, com 23 anos de idade e uma carreira sólida de quatro anos na área de tecnologia. Demonstrando um talento excepcional e uma paixão inegável pela tecnologia, ele tem se destacado como profissional nesse campo.",
+        "Sua trajetória como desenvolvedor revela uma dedicação incansável ao aprimoramento de suas habilidades técnicas e ao acompanhamento das tendências mais recentes no mundo da programação mobile. Ao longo dos anos, ele tem trabalhado em diversos projetos inovadores, mostrando-se adaptável a diferentes desafios e necessidades do mercado.",
+        "Mateus se destaca não apenas pela sua competência técnica, mas também pela sua habilidade em compartilhar conhecimento com os outros. Sua paixão por ensinar o impulsionou a assumir o papel de mentor, onde tem orientado e inspirado colegas de equipe e novos talentos a alcançarem seu pleno potencial na área de desenvolvimento mobile. Atualmente, Mateus ocupa uma posição de destaque na empresa SouJunior, atuando como Head Mobile. Nessa função, ele lidera a equipe responsável por projetar e desenvolver soluções mobile inovadoras, garantindo que todos os projetos estejam alinhados com as melhores práticas do setor.",
+        "Em resumo, Mateus é um apaixonado pela tecnologia e um talentoso mentor no campo do desenvolvimento mobile. Sua trajetória profissional é um testemunho de seu comprometimento e dedicação ao mundo da tecnologia, e sua capacidade de liderar e ensinar o tornam um profissional exemplar e inspirador na indústria."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Descobri minha paixão por tecnologia aos 10 anos de idade, com 12 anos já administrava uma lan house, e conforme os anos foram se passando, minha paixão continuou a crescrer.No ensino médio decidi fazer uma faculdade na área de tecnologia, especificamente ciência da computação.E assim, eu iniciei minha carreira como desenvolvedor front-end em 2019.Depois descobri uma nova paixão, o desenvolvimento mobile, e então foquei na área e estou nela até hoje."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Como devoto da tecnologia apaixonado por desvendar seus segredos e explorar suas possibilidades ilimitadas, encontro satisfação em compartilhar meus conhecimentos com outros iniciantes. Sou motivado pelo desejo de tornar a jornada tecnológica de cada pessoa mais fluida e emocionante."
+        },
+        {
+          "question": "Você poderia dar uma visão geral de como está estruturada a área de mobile na SouJunior?",
+          "awnser": "A área de Mobile na SouJunior é uma unidade dedicada ao desenvolvimento e inovação de soluções tecnológicas voltadas para dispositivos móveis. Nossa equipe é formada por entusiastas talentosos e comprometidos, apaixonados por explorar o potencial inexplorado do mundo mobile. Embora ainda estejamos em fase inicial de atividades práticas, nossa visão é promissora, e temos planos ambiciosos para nos tornarmos referência na SouJunior."
+        },
+        {
+          "question": "Quais são os principais desafios enfrentados em nosso ambiente tecnológico e como são abordados pelo setor de Mobile?",
+          "awnser": "No ambiente tecnológico em constante evolução, o setor de Mobile enfrenta diversos desafios que demandam abordagens inovadoras e adaptativas para garantir o desenvolvimento de soluções móveis eficientes e relevantes, como: Diversidade de Dispositivos e Plataformas, Segurança e privacidade, Experiência do Usuário, Atualização e Manutenção"
+        },
+        {
+          "question": "Como é seu dia a dia trabalhando como Mobile?",
+          "awnser": "No meu dia a dia como profissional de Mobile, tenho o privilégio de liderar e orientar uma equipe talentosa de desenvolvedores dedicados a criar soluções inovadoras para dispositivos móveis. Como líder, minha jornada começa com um planejamento cuidadoso, onde defino as metas e prioridades do projeto em colaboração com a equipe."
+        },
+        {
+          "question": "Na sua opinião, quais são as qualidades que tornam um profissional de Mobile bem-sucedido na indústria de tecnologia?",
+          "awnser": "Um profissional de Mobile bem-sucedido na indústria de tecnologia possui um conjunto diversificado de qualidades e habilidades que o destacam em meio ao cenário competitivo e em constante evolução. Algumas dessas qualidades cruciais incluem: conhecimento técnico sólido, curiosidade e aprendizado contínuo, habilidades para resolver problemas, trabalho em equipe e comunicação, capacidade de adaptabilidade e comprometimento e responsabilidade."
+        },
+        {
+          "question": "Como o setor de Mobile colabora com outras áreas para garantir as entregas da SouJunior?",
+          "awnser": "O setor de Mobile na SouJunior colabora ativamente com outras áreas da empresa para garantir entregas eficientes e de alta qualidade. Essa colaboração é essencial para garantir que os aplicativos móveis desenvolvidos atendam às necessidades dos clientes e dos usuários, além de estarem alinhados com a estratégia geral da empresa.Abaixo estão algumas maneiras pelas quais o setor de Mobile colabora com outras áreas:Equipe de design, Gerenciadores de projetos, Equipe de produtos."
+        },
+        {
+          "question": "Quais ferramentas e tecnologias são fundamentais para o setor de Mobile em nossa empresa?",
+          "awnser": "No setor de Mobile da nossa empresa, algumas ferramentas e tecnologias fundamentais são essenciais para o desenvolvimento eficiente e aprimorado de aplicativos móveis. Abaixo estão algumas das principais ferramentas e tecnologias que são utilizadas para impulsionar o sucesso do setor de Mobile na SouJunior: Ambientes de Desenvolvimento Integrado (IDEs), Linguagens de Programação, Frameworks e Bibliotecas, Versionamento de Código, Plataformas de Comunicação"
+        },
+        {
+          "question": "Quais orientações você daria para quem está começando ou fazendo transição de carreira para a área de Mobile?",
+          "awnser": "Aprenda as Fundamentais: Comece com o aprendizado das linguagens de programação fundamentais para o desenvolvimento mobile, como Java e Kotlin para Android e Swift para iOS. Além disso, compreenda os conceitos básicos de desenvolvimento mobile, como arquiteturas de aplicativos e padrões de design.Construa Projetos Práticos: A teoria é importante, mas a prática é fundamental para o desenvolvimento de habilidades sólidas. Construa projetos pessoais ou participe de projetos de código aberto para aplicar o que aprendeu e construir um portfólio.Conheça as Plataformas: Familiarize-se com as principais plataformas móveis, como Android e iOS. Entenda suas diferenças e peculiaridades, bem como as diretrizes de design e as boas práticas para cada uma delas.Explore Desenvolvimento Multiplataforma: Considere aprender frameworks de desenvolvimento multiplataforma, como React Native ou Flutter. Eles permitem criar aplicativos para várias plataformas usando uma única base de código.Participe de Comunidades e Eventos: Envolver-se em comunidades de desenvolvedores mobile, participar de eventos, meetups e conferências é uma ótima maneira de aprender com os outros, compartilhar experiências e estar atualizado sobre as últimas tendências.Seja Curioso e Aventure-se: A tecnologia móvel está em constante evolução, por isso, esteja sempre curioso e aberto a explorar novas tecnologias e tendências emergentes. Experimente coisas novas e esteja disposto a aprender continuamente.Seja Paciente e Persistente: Aprender e desenvolver habilidades na área de Mobile pode levar tempo e exigir paciência e persistência. Não tenha medo de enfrentar desafios e continuar aprendendo, mesmo diante de obstáculos."
+        },
+        {
+          "question": "Quais soft Skills você considera importantes para trabalhar na área?",
+          "awnser": "Além das habilidades técnicas, as soft skills (habilidades comportamentais) são extremamente importantes para trabalhar na área de Mobile. Elas ajudam a aprimorar a comunicação, a colaboração e o relacionamento interpessoal, tornando os profissionais mais eficientes e bem-sucedidos em suas atividades.Abaixo estão algumas das soft skills essenciais para trabalhar na área de Mobile:Comunicação Efetiva: Saber se comunicar de forma clara e concisa é fundamental para trabalhar em equipe e para garantir que as informações sejam transmitidas com precisão.Trabalho em Equipe: O desenvolvimento mobile geralmente envolve colaboração com outras áreas, como design, análise de negócios e testes. Saber trabalhar em equipe, ouvir ideias dos outros e contribuir de forma construtiva é essencial para alcançar resultados bem-sucedidos.Resolução de Problemas: A habilidade de resolver problemas de forma ágil e eficiente é essencial no desenvolvimento mobile, onde desafios técnicos e imprevistos podem surgir. A capacidade de analisar problemas e encontrar soluções criativas é altamente valorizada.Adaptabilidade: A tecnologia mobile está em constante evolução, e profissionais nessa área devem ser adaptáveis para se ajustarem às mudanças de plataforma, linguagens de programação e tecnologias emergentes.Curiosidade e Aprendizado Contínuo: Profissionais de Mobile bem-sucedidos são curiosos e sempre buscam aprender novas habilidades, tendências e melhores práticas. A busca constante por conhecimento é essencial em uma área tecnológica em constante transformação.Organização e Gerenciamento de Tempo: Desenvolvimento mobile pode envolver várias tarefas e prazos. Ser organizado e gerenciar efetivamente o tempo é importante para garantir que os projetos sejam concluídos dentro do cronograma.Foco no Usuário: Colocar o usuário no centro do processo de desenvolvimento é uma soft skill importante. Compreender as necessidades e expectativas dos usuários e projetar aplicativos com foco na experiência do usuário é fundamental para o sucesso dos aplicativos.Pensamento Criativo: Ser criativo ao desenvolver soluções e ideias inovadoras é valorizado no setor de Mobile. O pensamento criativo ajuda a desenvolver aplicativos únicos e diferenciados.Essas soft skills complementam as habilidades técnicas, permitindo que profissionais de Mobile se destaquem em suas funções e alcancem um alto nível de desempenho, contribuindo positivamente para o sucesso dos projetos e para a satisfação dos usuários."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Werles Simeone",
+          "img": "https://user-images.githubusercontent.com/98753928/256020884-8375aa93-1e6e-4e93-86a4-d196394cd5a8.jpeg",
+          "role": "Juninho",
+          "linkedin": "http://www.linkedin.com/in/simeone08",
+          "discord": ""
+        },
+        {
+          "id": 2,
+          "nome": "Adriel Rodrigues",
+          "img": "https://user-images.githubusercontent.com/98753928/256021017-b2ef8bed-8383-401b-b591-7d6ca95180c5.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/adriel-rodrigues",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Levy Bezerra",
+          "img": "https://user-images.githubusercontent.com/98753928/256021056-9cc6a0bc-31f7-420b-8fe9-9340a8466e09.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/levy-bezerra-holanda/",
+          "discord": ""
+        },
+        {
+          "id": 4,
+          "nome": "Keliton Santos",
+          "img": "https://user-images.githubusercontent.com/98753928/257894748-ec171643-0ad7-46c9-8a42-1ce154b508e2.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/keliton-santos-desenvolvedor",
           "discord": ""
         }
       ]
