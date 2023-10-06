@@ -613,97 +613,198 @@
       "role": "Head de Front end",
       "image-profile": "https://user-images.githubusercontent.com/115566254/238658185-610d2cfc-e15f-4f47-ab02-885da2ea6b98.jpg",
       "descripition": [
-        "O setor de Mobile é responsável pela criação e aprimoramento de aplicativos e sistemas para dispositivos móveis criando software específico para funcionar em plataformas móveis, como Android e IOS. A área tem como desafio a implementação de abordagens adaptativas proporcionando aos usuários experiências otimizadas em seus dispositivos, permitindo o acesso prático e rápido a informações, serviços e entretenimento."
+        "Front-end é a camada de um programa que interage diretamente com os usuários. Os desenvolvedores front-end traduzem o design em código, utilizando linguagens de marcação, folhas de estilo e programação para criar a interface e funcionalidades interativas. Eles também garantem que o site ou aplicativo seja responsivo, ajustando-se a diferentes dispositivos para proporcionar uma experiência consistente. Em resumo, a função front-end envolve a criação de uma interface atraente e interativa para oferecer uma ótima experiência ao usuário final.",
+        "Na SouJunior, os desenvolvedores juniores de Front-end têm a responsabilidade de implementar e manter as tecnologias essenciais para garantir a eficiência dos sistemas, sempre contando com o auxílio de mentores e do Head. Além disso, é de extrema importância que haja uma integração sólida com outras áreas, como Produto, UX & UI design e back-end, a fim de assegurar a melhor experiência possível para o cliente final. Estamos comprometidos em criar soluções que unam conhecimento técnico e colaboração em equipe, com o objetivo de entregar produtos de alta qualidade."
       ],
       "social": {
         "linkedin": "https://www.linkedin.com/in/ricardo-pereira-lima",
         "discord": ""
       },
-      "resume": "Atua na área de mobile há 4 anos tendo se especializado em React Native com experiência anterior em desenvolvimento Front-End."
+      "resume": "Ricardo Lima, nascido e criado em Volta Redonda, hoje mora em Jacarepaguá RJ. Formado em Engenharia Mecânica mas atraído pela paixão por tecnologia foi se aventurar pelos caminhos de desenvolvedor."
     },
     "interview": {
-      "introduction": [
-        "Mateus é um desenvolvedor full stack especializado em desenvolvimento mobile com React Native, com 23 anos de idade e uma carreira sólida de quatro anos na área de tecnologia. Demonstrando um talento excepcional e uma paixão inegável pela tecnologia, ele tem se destacado como profissional nesse campo.",
-        "Sua trajetória como desenvolvedor revela uma dedicação incansável ao aprimoramento de suas habilidades técnicas e ao acompanhamento das tendências mais recentes no mundo da programação mobile. Ao longo dos anos, ele tem trabalhado em diversos projetos inovadores, mostrando-se adaptável a diferentes desafios e necessidades do mercado.",
-        "Mateus se destaca não apenas pela sua competência técnica, mas também pela sua habilidade em compartilhar conhecimento com os outros. Sua paixão por ensinar o impulsionou a assumir o papel de mentor, onde tem orientado e inspirado colegas de equipe e novos talentos a alcançarem seu pleno potencial na área de desenvolvimento mobile. Atualmente, Mateus ocupa uma posição de destaque na empresa SouJunior, atuando como Head Mobile. Nessa função, ele lidera a equipe responsável por projetar e desenvolver soluções mobile inovadoras, garantindo que todos os projetos estejam alinhados com as melhores práticas do setor.",
-        "Em resumo, Mateus é um apaixonado pela tecnologia e um talentoso mentor no campo do desenvolvimento mobile. Sua trajetória profissional é um testemunho de seu comprometimento e dedicação ao mundo da tecnologia, e sua capacidade de liderar e ensinar o tornam um profissional exemplar e inspirador na indústria."
-      ],
+      "introduction": [""],
       "questions": [
         {
           "question": "Como você iniciou na área da tecnologia?",
-          "awnser": "Descobri minha paixão por tecnologia aos 10 anos de idade, com 12 anos já administrava uma lan house, e conforme os anos foram se passando, minha paixão continuou a crescrer.No ensino médio decidi fazer uma faculdade na área de tecnologia, especificamente ciência da computação.E assim, eu iniciei minha carreira como desenvolvedor front-end em 2019.Depois descobri uma nova paixão, o desenvolvimento mobile, e então foquei na área e estou nela até hoje."
+          "awnser": "Iniciei no começo da pandemia fazendo a transição da Engenharia para tecnologia. Após algum tempo de estudo, consegui realizar 2 freelas que me deram experiência suficiente pra minha primeira vaga como Desenvolvedor Front-End e Professor Full Stack assistente. Hoje trabalho como Dev Full Stack nas empresas Tree Inova e Ágape Consultoria."
         },
         {
           "question": "O que te motivou a fazer parte da SouJunior?",
-          "awnser": "Como devoto da tecnologia apaixonado por desvendar seus segredos e explorar suas possibilidades ilimitadas, encontro satisfação em compartilhar meus conhecimentos com outros iniciantes. Sou motivado pelo desejo de tornar a jornada tecnológica de cada pessoa mais fluida e emocionante."
+          "awnser": "Quando iniciei na área de tecnologia tive amigos próximos que me ajudaram, pegando na mão e ensinando tudo que precisava. Vi que era algo extremamente necessário pra quem está começando, pois encurtei o caminho do conhecimento, até chegar na primeira oportunidade. Entrei na SouJunior para retribuir o que eu recebi quando iniciei na área e por amar compartilhar conhecimento."
         },
         {
-          "question": "Você poderia dar uma visão geral de como está estruturada a área de mobile na SouJunior?",
-          "awnser": "A área de Mobile na SouJunior é uma unidade dedicada ao desenvolvimento e inovação de soluções tecnológicas voltadas para dispositivos móveis. Nossa equipe é formada por entusiastas talentosos e comprometidos, apaixonados por explorar o potencial inexplorado do mundo mobile. Embora ainda estejamos em fase inicial de atividades práticas, nossa visão é promissora, e temos planos ambiciosos para nos tornarmos referência na SouJunior."
+          "question": "Qual é a maior responsabilidade em ser Head de tantos juniores que estão atrás de sua primeira oportunidade?",
+          "awnser": "A maior responsabilidade é saber dar direcionamento para os Juniors, tanto direcionamento técnico como comportamental. Saber que às vezes um conselho pode modificar o trilho de cada um, faz com que cada ação que tomamos seja muito bem pensada e planejada, visando sempre o crescimento e evolução dos juninhos."
         },
         {
-          "question": "Quais são os principais desafios enfrentados em nosso ambiente tecnológico e como são abordados pelo setor de Mobile?",
-          "awnser": "No ambiente tecnológico em constante evolução, o setor de Mobile enfrenta diversos desafios que demandam abordagens inovadoras e adaptativas para garantir o desenvolvimento de soluções móveis eficientes e relevantes, como: Diversidade de Dispositivos e Plataformas, Segurança e privacidade, Experiência do Usuário, Atualização e Manutenção"
+          "question": "Como é a atuação da equipe de Front-end dentro da SouJunior?",
+          "awnser": "A atuação da equipe é bem dividida e todos participam da construção completa do projeto. Os juninhos ficam com a parte do código, participam de reuniões de sprint planning, sprint review, comunicação com outras áreas como APM, UX, UI, Backend, entre outras. E temos mentores que auxiliam os juninhos nas dúvidas que surgem durante o processo de desenvolvimento."
         },
         {
-          "question": "Como é seu dia a dia trabalhando como Mobile?",
-          "awnser": "No meu dia a dia como profissional de Mobile, tenho o privilégio de liderar e orientar uma equipe talentosa de desenvolvedores dedicados a criar soluções inovadoras para dispositivos móveis. Como líder, minha jornada começa com um planejamento cuidadoso, onde defino as metas e prioridades do projeto em colaboração com a equipe."
+          "question": "Como é seu dia a dia como Front-end?",
+          "awnser": "Como desenvolvedor, o dia é sempre cheio de entregas e bugs para resolver. O que nossos juninhos podem esperar são problemas com layouts desatualizados, integração com APIS, conexão com banco de dados, inserção de novas ferramentas e funcionalidades, além de correção de bugs que fazem com que o software do cliente fique fora do ar."
         },
         {
-          "question": "Na sua opinião, quais são as qualidades que tornam um profissional de Mobile bem-sucedido na indústria de tecnologia?",
-          "awnser": "Um profissional de Mobile bem-sucedido na indústria de tecnologia possui um conjunto diversificado de qualidades e habilidades que o destacam em meio ao cenário competitivo e em constante evolução. Algumas dessas qualidades cruciais incluem: conhecimento técnico sólido, curiosidade e aprendizado contínuo, habilidades para resolver problemas, trabalho em equipe e comunicação, capacidade de adaptabilidade e comprometimento e responsabilidade."
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Resolução de problemas, acredito que isso vem desde a época que trabalhava na indústria automotiva."
         },
         {
-          "question": "Como o setor de Mobile colabora com outras áreas para garantir as entregas da SouJunior?",
-          "awnser": "O setor de Mobile na SouJunior colabora ativamente com outras áreas da empresa para garantir entregas eficientes e de alta qualidade. Essa colaboração é essencial para garantir que os aplicativos móveis desenvolvidos atendam às necessidades dos clientes e dos usuários, além de estarem alinhados com a estratégia geral da empresa.Abaixo estão algumas maneiras pelas quais o setor de Mobile colabora com outras áreas:Equipe de design, Gerenciadores de projetos, Equipe de produtos."
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Como fazemos reuniões semanais, busco entender o perfil de cada membro para ter uma comunicação mais assertiva. Acredito que cada indivíduo tem uma vivência e recebe feedbacks de forma diferente, assim como a forma de falar."
         },
         {
-          "question": "Quais ferramentas e tecnologias são fundamentais para o setor de Mobile em nossa empresa?",
-          "awnser": "No setor de Mobile da nossa empresa, algumas ferramentas e tecnologias fundamentais são essenciais para o desenvolvimento eficiente e aprimorado de aplicativos móveis. Abaixo estão algumas das principais ferramentas e tecnologias que são utilizadas para impulsionar o sucesso do setor de Mobile na SouJunior: Ambientes de Desenvolvimento Integrado (IDEs), Linguagens de Programação, Frameworks e Bibliotecas, Versionamento de Código, Plataformas de Comunicação"
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Acredito que não tenha uma linguagem mais importante, tudo vai depender do que o desenvolvedor quiser seguir. O mais importante é entender os conceitos da programação, que depois a linguagem fica menos complexa de se aprender."
         },
         {
-          "question": "Quais orientações você daria para quem está começando ou fazendo transição de carreira para a área de Mobile?",
-          "awnser": "Aprenda as Fundamentais: Comece com o aprendizado das linguagens de programação fundamentais para o desenvolvimento mobile, como Java e Kotlin para Android e Swift para iOS. Além disso, compreenda os conceitos básicos de desenvolvimento mobile, como arquiteturas de aplicativos e padrões de design.Construa Projetos Práticos: A teoria é importante, mas a prática é fundamental para o desenvolvimento de habilidades sólidas. Construa projetos pessoais ou participe de projetos de código aberto para aplicar o que aprendeu e construir um portfólio.Conheça as Plataformas: Familiarize-se com as principais plataformas móveis, como Android e iOS. Entenda suas diferenças e peculiaridades, bem como as diretrizes de design e as boas práticas para cada uma delas.Explore Desenvolvimento Multiplataforma: Considere aprender frameworks de desenvolvimento multiplataforma, como React Native ou Flutter. Eles permitem criar aplicativos para várias plataformas usando uma única base de código.Participe de Comunidades e Eventos: Envolver-se em comunidades de desenvolvedores mobile, participar de eventos, meetups e conferências é uma ótima maneira de aprender com os outros, compartilhar experiências e estar atualizado sobre as últimas tendências.Seja Curioso e Aventure-se: A tecnologia móvel está em constante evolução, por isso, esteja sempre curioso e aberto a explorar novas tecnologias e tendências emergentes. Experimente coisas novas e esteja disposto a aprender continuamente.Seja Paciente e Persistente: Aprender e desenvolver habilidades na área de Mobile pode levar tempo e exigir paciência e persistência. Não tenha medo de enfrentar desafios e continuar aprendendo, mesmo diante de obstáculos."
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor Front-end?",
+          "awnser": "Uma das mais importantes é a comunicação. Conseguir interagir com membros da equipe e de outras áreas do projeto é primordial. Saber pedir ajuda, definir o que consegue ou não ser realizado em determinado tempo, além de ajudar a todos da equipe. Isso também vai de encontro ao trabalho em equipe, saber trabalhar com pessoas com diferentes vivências e pensamento é fundamental."
         },
         {
-          "question": "Quais soft Skills você considera importantes para trabalhar na área?",
-          "awnser": "Além das habilidades técnicas, as soft skills (habilidades comportamentais) são extremamente importantes para trabalhar na área de Mobile. Elas ajudam a aprimorar a comunicação, a colaboração e o relacionamento interpessoal, tornando os profissionais mais eficientes e bem-sucedidos em suas atividades.Abaixo estão algumas das soft skills essenciais para trabalhar na área de Mobile:Comunicação Efetiva: Saber se comunicar de forma clara e concisa é fundamental para trabalhar em equipe e para garantir que as informações sejam transmitidas com precisão.Trabalho em Equipe: O desenvolvimento mobile geralmente envolve colaboração com outras áreas, como design, análise de negócios e testes. Saber trabalhar em equipe, ouvir ideias dos outros e contribuir de forma construtiva é essencial para alcançar resultados bem-sucedidos.Resolução de Problemas: A habilidade de resolver problemas de forma ágil e eficiente é essencial no desenvolvimento mobile, onde desafios técnicos e imprevistos podem surgir. A capacidade de analisar problemas e encontrar soluções criativas é altamente valorizada.Adaptabilidade: A tecnologia mobile está em constante evolução, e profissionais nessa área devem ser adaptáveis para se ajustarem às mudanças de plataforma, linguagens de programação e tecnologias emergentes.Curiosidade e Aprendizado Contínuo: Profissionais de Mobile bem-sucedidos são curiosos e sempre buscam aprender novas habilidades, tendências e melhores práticas. A busca constante por conhecimento é essencial em uma área tecnológica em constante transformação.Organização e Gerenciamento de Tempo: Desenvolvimento mobile pode envolver várias tarefas e prazos. Ser organizado e gerenciar efetivamente o tempo é importante para garantir que os projetos sejam concluídos dentro do cronograma.Foco no Usuário: Colocar o usuário no centro do processo de desenvolvimento é uma soft skill importante. Compreender as necessidades e expectativas dos usuários e projetar aplicativos com foco na experiência do usuário é fundamental para o sucesso dos aplicativos.Pensamento Criativo: Ser criativo ao desenvolver soluções e ideias inovadoras é valorizado no setor de Mobile. O pensamento criativo ajuda a desenvolver aplicativos únicos e diferenciados.Essas soft skills complementam as habilidades técnicas, permitindo que profissionais de Mobile se destaquem em suas funções e alcancem um alto nível de desempenho, contribuindo positivamente para o sucesso dos projetos e para a satisfação dos usuários."
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Primeiro passo é começar a estudar e saber que o estudo será constante. Não se apegar a tecnologias nem frameworks. É interessante sim escolher uma para se aperfeiçoar no início, porém se surgir oportunidade para outras linguagens, não deixe passar. Além disso, realizar projetos, participar de voluntários como o SouJunior, ter um LinkedIn bem estruturado e currículo sempre atualizado são essenciais. E o mais importante, networking. Ter uma rede de contatos reais é fundamental para conseguir a primeira oportunidade, participe de grupos de estudo, hackathon, projetos em geral, conecte-se com recrutadores no LinkedIn, interaja nas postagens e SEJA VISTO."
         }
       ]
     },
     "team": {
-      "mentores": [],
-      "juninhos": [
+      "mentores": [
         {
           "id": 1,
-          "nome": "Werles Simeone",
-          "img": "https://user-images.githubusercontent.com/98753928/256020884-8375aa93-1e6e-4e93-86a4-d196394cd5a8.jpeg",
-          "role": "Juninho",
-          "linkedin": "http://www.linkedin.com/in/simeone08",
+          "nome": "Adson Amorim",
+          "img": "https://user-images.githubusercontent.com/115566254/238659843-d3152215-7a4a-4315-9de9-59c41b2f1a4d.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/adson-amorim/",
           "discord": ""
         },
         {
           "id": 2,
-          "nome": "Adriel Rodrigues",
-          "img": "https://user-images.githubusercontent.com/98753928/256021017-b2ef8bed-8383-401b-b591-7d6ca95180c5.jpeg",
-          "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/adriel-rodrigues",
+          "nome": "Denis Fernando",
+          "img": "https://user-images.githubusercontent.com/115566254/238661524-489a2e16-e6cb-4b3d-aca1-e272339304cc.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/denisjr/",
           "discord": ""
         },
         {
           "id": 3,
-          "nome": "Levy Bezerra",
-          "img": "https://user-images.githubusercontent.com/98753928/256021056-9cc6a0bc-31f7-420b-8fe9-9340a8466e09.jpeg",
+          "nome": "Gustavo Roberto",
+          "img": "https://user-images.githubusercontent.com/31568030/271138176-001eadc6-10d8-4d5c-ae35-0ed46a579c50.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/gustavo-a-roberto/",
+          "discord": ""
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Edvaldo Cabral",
+          "img": "https://user-images.githubusercontent.com/115566254/238750573-f172b603-8ec1-4a1d-a5c7-20b935c478ca.png",
           "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/levy-bezerra-holanda/",
+          "linkedin": "https://www.linkedin.com/in/edcabralc/",
+          "discord": "https://discordapp.com/users/637990415299117086"
+        },
+        {
+          "id": 2,
+          "nome": "Filipe Reis",
+          "img": "https://user-images.githubusercontent.com/115566254/238744749-cbc18220-4e64-4407-be7a-aff5f0389c7b.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/filipe-leoni-5745551a8/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Geovana Salamanca",
+          "img": "https://user-images.githubusercontent.com/31568030/271138641-fd7e966f-8025-44ed-98ae-9e1fb2af7017.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/geovana-salamanca-da-silva/",
           "discord": ""
         },
         {
           "id": 4,
-          "nome": "Keliton Santos",
-          "img": "https://user-images.githubusercontent.com/98753928/257894748-ec171643-0ad7-46c9-8a42-1ce154b508e2.jpg",
+          "nome": "Hércules Machado",
+          "img": "https://user-images.githubusercontent.com/31568030/271619784-42aa71f5-f95e-4ff4-87d6-581a23d36930.png",
           "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/keliton-santos-desenvolvedor",
+          "linkedin": "https://www.linkedin.com/in/herculesmachado/",
+          "discord": ""
+        },
+        {
+          "id": 5,
+          "nome": "Hiago Murilo",
+          "img": "https://user-images.githubusercontent.com/31568030/271141817-49d89c75-565b-42ff-a7b2-f3dc3cb32861.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/hiago-murilo/",
+          "discord": ""
+        },
+        {
+          "id": 6,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/115566254/238664373-197e55e1-c0ad-42e5-8214-97f18e8847b5.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": ""
+        },
+        {
+          "id": 6,
+          "nome": "Isabela Hyeda",
+          "img": "https://user-images.githubusercontent.com/115566254/238662442-b6c18ab7-a028-41d0-a72e-99414d481ec2.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/isabelahyeda",
+          "discord": ""
+        },
+        {
+          "id": 7,
+          "nome": "Isaque de Souza",
+          "img": "https://user-images.githubusercontent.com/31568030/271141770-31ae6678-7cdf-4c51-8dbf-905307c38b6c.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/isaque-de-sousa/",
+          "discord": ""
+        },
+        {
+          "id": 7,
+          "nome": "João Victor",
+          "img": "https://user-images.githubusercontent.com/31568030/271138667-43c20c74-b021-4f74-bb7a-7154b2ff861f.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/joaovictorps/",
+          "discord": ""
+        },
+        {
+          "id": 8,
+          "nome": "Leonardo Monteiro",
+          "img": "https://user-images.githubusercontent.com/31568030/271621590-ed70862f-0c91-4d64-b576-4395825642e8.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/leonardo-dias-monteiro-54642264/",
+          "discord": ""
+        },
+        {
+          "id": 9,
+          "nome": "Luiz Belo",
+          "img": "https://user-images.githubusercontent.com/31568030/271620281-37f205d2-b529-4cce-9828-6fb32dfa07df.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/luiz-paulo-a98a61238/",
+          "discord": ""
+        },
+        {
+          "id": 10,
+          "nome": "Nicolas Braga",
+          "img": "https://user-images.githubusercontent.com/31568030/271138831-8ae6b3f7-671f-401d-9b38-5237a361d924.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/devbraga/",
+          "discord": ""
+        },
+        {
+          "id": 11,
+          "nome": "Uendel Martins",
+          "img": "https://user-images.githubusercontent.com/31568030/271138695-f3faf3dc-78fa-4040-8837-94295f01eb52.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/uendel-martins-5471a1153/",
+          "discord": ""
+        },
+        {
+          "id": 11,
+          "nome": "Vitor Silva",
+          "img": "https://user-images.githubusercontent.com/31568030/271138507-01656138-d09a-451d-b91c-dcf0dafb9fb6.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/mooncoded/",
           "discord": ""
         }
       ]

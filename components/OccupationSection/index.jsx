@@ -19,7 +19,7 @@ export const OccupationSection = () => {
 
   return (
     <>
-      <section className={styles.OccupationSection}>
+      <section className={styles.OccupationSection} id="areas-de-atuacao">
         <div className={styles.OccupationContainer}>
           <Heading level={"h2"}>Áreas de atuação</Heading>
           <Paragraph>

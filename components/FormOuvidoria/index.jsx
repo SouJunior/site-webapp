@@ -30,7 +30,7 @@ const OuvidoriaForm = () => {
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Ouvidoria",
-          ...values,
+          data: { ...values },
         });
 
         if (response.status !== 200) {
@@ -46,8 +46,6 @@ const OuvidoriaForm = () => {
       setLoading(false);
     }
   };
-
-  
 
   const handleClear = (resetForm) => {
     resetForm();
@@ -186,7 +184,8 @@ const OuvidoriaForm = () => {
                   </div>
                   <div className={styles.buttons}>
                     <button
-                      type="button" onClick={() => handleClear(resetForm)}
+                      type="button"
+                      onClick={() => handleClear(resetForm)}
                     >
                       Limpar
                     </button>
