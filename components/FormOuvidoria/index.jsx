@@ -30,7 +30,7 @@ const OuvidoriaForm = () => {
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Ouvidoria",
-          ...values,
+          data: { ...values },
         });
 
         if (response.status !== 200) {
@@ -115,7 +115,8 @@ const OuvidoriaForm = () => {
                 mensagem: "",
               }}
               validationSchema={validationSchema}
-              onSubmit={onSubmit}>
+              onSubmit={onSubmit}
+            >
               {({ isSubmitting, values, resetForm }) => (
                 <Form>
                   <div>
@@ -200,7 +201,8 @@ const OuvidoriaForm = () => {
                   <div className={styles.buttons}>
                     <button
                       type="button"
-                      onClick={() => handleClear(resetForm)}>
+                      onClick={() => handleClear(resetForm)}
+                    >
                       Limpar
                     </button>
                     <button type="submit">Enviar</button>

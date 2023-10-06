@@ -40,13 +40,15 @@ export const Mentor = () => {
     setLoading(true);
     setIsSubmitting(true);
 
+    const { confirmarEmail, ...data } = values;
+
     if (isSubmitting) {
       openPopup();
       setLoading(true);
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Quero ser Mentor",
-          ...values,
+          data: { ...data },
         });
 
         if (response.status !== 200) {
