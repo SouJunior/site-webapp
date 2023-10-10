@@ -30,7 +30,7 @@ const OuvidoriaForm = () => {
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Ouvidoria",
-          ...values,
+          data: { ...values },
         });
 
         if (response.status !== 200) {
@@ -46,8 +46,6 @@ const OuvidoriaForm = () => {
       setLoading(false);
     }
   };
-
-  
 
   const handleClear = (resetForm) => {
     resetForm();
@@ -68,6 +66,9 @@ const OuvidoriaForm = () => {
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
+    confirmarEmail: Yup.string()
+      .oneOf([Yup.ref("email")], "O email deve ser o mesmo")
+      .required("O campo Confirmar e-mail é obrigatório."),
     assunto: Yup.string()
       .oneOf(["Sugestão", "Reclamação", "Elogio"], "")
       .required("*Escolha um opção por favor."),
@@ -141,6 +142,19 @@ const OuvidoriaForm = () => {
                       className={styles.errorMessage}
                     />
                   </div>
+                  <div>
+                    <label>Confirmar e-mail: *</label>
+                    <Field
+                      type="email"
+                      name="confirmarEmail"
+                      className={styles.input}
+                    />
+                    <ErrorMessage
+                      name="confirmarEmail"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
                   <div className={styles.options}>
                     <Field as="select" name="assunto" className={styles.select}>
                       <option label="Selecione o assunto" value="" disabled>
@@ -186,7 +200,8 @@ const OuvidoriaForm = () => {
                   </div>
                   <div className={styles.buttons}>
                     <button
-                      type="button" onClick={() => handleClear(resetForm)}
+                      type="button"
+                      onClick={() => handleClear(resetForm)}
                     >
                       Limpar
                     </button>

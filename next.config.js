@@ -20,6 +20,16 @@ const nextConfig = {
     ],
     minimumCacheTTL: 1500000,
   },
+
+  async redirects() {
+    return [
+      {
+        source: "/areas-de-atuacao",
+        destination: "/#areas-de-atuacao",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

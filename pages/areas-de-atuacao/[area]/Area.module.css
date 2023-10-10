@@ -1,0 +1,271 @@
+.AboutSection,
+.InterviewSection,
+.HeadersSection,
+.bannerContainer {
+  width: 100%;
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.bannerContainer {
+  font-style: normal;
+  text-align: center;
+  padding-bottom: 66px;
+}
+
+.bannerContainer h2 {
+  max-width: 28ch;
+  text-transform: capitalize;
+}
+
+.bannerContainer h3 {
+  font-weight: 400;
+  padding: 16px 0;
+}
+
+.arrowWrapper {
+  width: 100%;
+  max-width: 144rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrowWrapper button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.arrowWrapper button:last-child {
+  rotate: 180deg;
+}
+
+.container {
+  /* max-width: 144rem; */
+  max-width: 120.7rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 6.8rem;
+}
+
+.container div {
+  width: 100%;
+}
+
+.container p {
+  text-align: left;
+}
+
+.paragraphWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2.6rem;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 5.2rem;
+  text-align: left;
+}
+
+.paragraphWrapper p {
+  padding: 8px 16px 16px;
+}
+
+.title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 3.2rem;
+  text-align: center;
+  padding-bottom: 3.2rem;
+}
+
+.InterviewSection h3 {
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+.ceo {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 73rem;
+  justify-content: center;
+  gap: 16rem;
+  align-items: center;
+  padding: 9rem 0 8.2rem 0;
+}
+
+.avatar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ceo img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.ceoContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ceo h4 {
+  padding-bottom: 0;
+}
+
+.ceo p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 17px;
+}
+
+.ceo ul {
+  display: flex;
+  gap: 30px;
+}
+
+.ceo li {
+  list-style: none;
+}
+
+.ceo a {
+  text-decoration: none;
+}
+
+.ceo svg {
+  width: 40px;
+  height: 40px;
+  fill: #046ad0;
+}
+
+.titleDescripiton h3 {
+  padding: 6rem 0;
+}
+
+/*Accordion*/
+
+.accordion {
+  padding: 0;
+}
+
+.question {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.AccordionDetails {
+  padding: 0 16px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 35px;
+}
+
+/*headers*/
+
+.headersContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(154px, 200px));
+  max-width: 144rem;
+  width: 100%;
+  place-content: center;
+  gap: 5.6rem 1.6rem;
+}
+
+.HeadersSection h2 {
+  text-align: center;
+}
+
+.headerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  padding-bottom: 5.6rem;
+}
+
+.headerWrapper div {
+  text-align: center;
+}
+
+.headersContainer img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.headersContainer ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.headersContainer svg {
+  width: 25px;
+  height: 25px;
+  fill: #046ad0;
+}
+
+.team {
+  font-weight: bold;
+}
+
+.team p:first-child {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 960px) {
+  .HeadersSection h2 {
+    padding-top: 10rem;
+  }
+
+  .bannerContainer {
+    gap: 66px;
+    padding-bottom: 50px;
+  }
+
+  .bannerContainer h2 {
+    max-width: 28ch;
+  }
+
+  .arrowWrapper img {
+    width: 80%;
+  }
+
+  .container {
+    padding-bottom: 0rem;
+  }
+  .InterviewSection h3 {
+    padding: 6.2rem 0;
+    text-align: center;
+  }
+  .ceo {
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+  }
+
+  .avatar {
+    padding: 5rem 0;
+    width: 60%;
+  }
+
+  .bannerContainer {
+    flex-direction: column-reverse;
+  }
+}

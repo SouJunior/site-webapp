@@ -1,13 +1,17 @@
 import { useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
+
 import styles from "../OccupationSection/OccupationSection.module.css";
-import { carouselItems } from "../../utils/carouselItems";
-import { Paragraph } from "../commons/Paragraph";
-import { Heading } from "../commons/Heading";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+
+import { carouselItems } from "../../utils/carouselItems";
+import { Paragraph } from "../commons/Paragraph";
+import { Heading } from "../commons/Heading";
 
 export const OccupationSection = () => {
   const navigationPrevRef = useRef(null);
@@ -15,7 +19,7 @@ export const OccupationSection = () => {
 
   return (
     <>
-      <section className={styles.OccupationSection}>
+      <section className={styles.OccupationSection} id="areas-de-atuacao">
         <div className={styles.OccupationContainer}>
           <Heading level={"h2"}>Áreas de atuação</Heading>
           <Paragraph>
@@ -40,12 +44,14 @@ export const OccupationSection = () => {
                 swiper.params.navigation.nextEl = navigationNextRef.current;
               }}
             >
-              {carouselItems.map(({ title, icon }) => (
+              {carouselItems.map(({ title, icon, url }) => (
                 <SwiperSlide key={title}>
-                  <div className={styles.areaItem}>
-                    <Image src={icon} alt={title} width={62} height={62} />
-                    <p>{title}</p>
-                  </div>
+                  <Link href={`/areas-de-atuacao/${url}`}>
+                    <div className={styles.areaItem}>
+                      <Image src={icon} alt={title} width={62} height={62} />
+                      <p>{title}</p>
+                    </div>
+                  </Link>
                 </SwiperSlide>
               ))}
             </Swiper>

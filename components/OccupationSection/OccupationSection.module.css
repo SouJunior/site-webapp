@@ -67,6 +67,7 @@
   background-color: hsl(210, 70%, 25%);
   border-radius: 1rem;
   transition: ease 5s;
+  cursor: pointer;
 }
 
 .areaItem p {

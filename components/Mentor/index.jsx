@@ -19,6 +19,20 @@ export const Mentor = () => {
 
   const imageUrl = "/assets/popup.svg";
 
+  const areasOption = [
+    "Back End",
+    "Business",
+    "Dados",
+    "Devops",
+    "Front End",
+    "Mobile",
+    "Produtos",
+    "Q&A",
+    "Scrum Master",
+    "Tech Recruiting",
+    "UX",
+  ];
+
   const openPopup = () => setShowPopup(true);
   const closePopup = () => setShowPopup(false);
 
@@ -26,13 +40,15 @@ export const Mentor = () => {
     setLoading(true);
     setIsSubmitting(true);
 
+    const { confirmarEmail, ...data } = values;
+
     if (isSubmitting) {
       openPopup();
       setLoading(true);
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Quero ser Mentor",
-          ...values,
+          data: { ...data },
         });
 
         if (response.status !== 200) {
@@ -65,22 +81,7 @@ export const Mentor = () => {
       .url("Link inválido.")
       .required("O campo Linkedin é obrigatório."),
     areas: Yup.string()
-      .oneOf(
-        [
-          "Back End",
-          "Business",
-          "Dados",
-          "Devops",
-          "Front End",
-          "Mobile",
-          "Produtos",
-          "Q&A",
-          "Scrum Master",
-          "Tech Recruiting",
-          "UX",
-        ],
-        ""
-      )
+      .oneOf([...areasOption], "")
       .required("* Escolha um opção por favor."),
     mensagem: Yup.string().required("O campo Mensagem é obrigatório."),
   });
@@ -134,7 +135,7 @@ export const Mentor = () => {
                     />
                   </div>
                   <div>
-                    <label>Em que área gostaria de atuar?*</label>
+                    <label>Em que área gostaria de atuar? *</label>
                     <Field as="select" name="areas" className={styles.select}>
                       <option
                         label="Selecione a área de atuação"
@@ -143,39 +144,15 @@ export const Mentor = () => {
                       >
                         Selecione a área de atuação
                       </option>
-                      <option label="Back End" value="Back End">
-                        Back End
-                      </option>
-                      <option label="Business" value="Business">
-                        Business
-                      </option>
-                      <option label="Dados" value="Dados">
-                        Dados
-                      </option>
-                      <option label="Devops" value="Devops">
-                        Devops
-                      </option>
-                      <option label="Front End" value="Front End">
-                        Front End
-                      </option>
-                      <option label="Mobile" value="Mobile">
-                        Mobile
-                      </option>
-                      <option label="Produtos" value="Produtos">
-                        Produtos
-                      </option>
-                      <option label="Q&A" value="Q&A">
-                        Q&A
-                      </option>
-                      <option label="Scrum Master" value="Scrum Master">
-                        Scrum Master
-                      </option>
-                      <option label="Tech Recruiting" value="Tech Recruiting">
-                        Tech Recruiting
-                      </option>
-                      <option label="UX" value="UX">
-                        UX
-                      </option>
+                      {areasOption.map((areaOption) => (
+                        <option
+                          label={areaOption}
+                          value={areaOption}
+                          key={areaOption}
+                        >
+                          {areaOption}
+                        </option>
+                      ))}
                     </Field>
                   </div>
                   <div>
