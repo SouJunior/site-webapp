@@ -14,19 +14,6 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <Head>
-        <Script
-          async
-          id="google-adsense"
-          src={
-            "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7597091185548852"
-          }
-          strategy="afterInteractive"
-          data-ad-client="ca-pub-7597091185548852"
-          crossorigin="anonymous"
-          onError={(e) => {
-            console.error("Erro ao carregar script", e);
-          }}
-        ></Script>
         <meta
           name="description"
           content="Experiência real de trabalho em projetos construída por uma empresa de tecnologia"
