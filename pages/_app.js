@@ -19,9 +19,13 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <Script
-        async
+        async="true"
+        id="Adsense-id"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7597091185548852"
-        crossOrigin="anonymous"
+        data-ad-client="ca-pub-7597091185548852"
+        crossorigin="anonymous"
+        strategy="afterInteractive"
+        onError={(e) => console.error("Erro ao carregar script", e)}
       ></Script>
       <Component {...pageProps} />
     </Layout>
