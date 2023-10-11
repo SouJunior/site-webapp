@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Head from "next/head";
 import Link from "next/link";
+import Script from "next/script";
 
 import { Navbar } from "../../commons/Navbar";
 import { MenuMobile } from "../../commons/MenuMobile";
@@ -23,6 +24,10 @@ export const Header = () => {
           content="bGguO_xpzk5qMD1itVipsY4J5FGDjMekPTHP_ZyU-D8"
         />
         <meta name="robots" content="index, follow" />
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-7597091185548852"
+        ></meta>
       </Head>
       <div className={styles.container}>
         <Link href="/" passHref>
