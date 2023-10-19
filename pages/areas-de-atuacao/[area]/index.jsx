@@ -31,6 +31,7 @@ const AreaItem = () => {
     }
 
     getArea();
+    setLoading(false);
   }, [area]);
 
   const getArea = async () => {
@@ -107,183 +108,199 @@ const AreaItem = () => {
           </button>
         </div>
       </div>
-      <section className={styles.AboutSection}>
-        <h1 className={styles.title}>Sobre a Área de {areaItem.title}</h1>
-        <div className={styles.container}>
-          <div className={styles.paragraphWrapper}>
-            {areaItem.head.descripition.map((paragraph) => (
-              <Paragraph key={paragraph}>{paragraph}</Paragraph>
-            ))}
+      {!loading && (
+          <div className={styles.containerLoading}>
+            <Loading />
           </div>
-        </div>
-      </section>
-
-      <section className={styles.InterviewSection}>
-        <Heading level={"h3"}>
-          Entrevista com Head de {areaItem.title} da Sou Junior -{" "}
-          {areaItem.head.name}
-        </Heading>
-        {areaItem.interview.introduction.length > 1 ? (
-          <div className={styles.container}>
-            <div className={styles.paragraphWrapper}>
-              {areaItem.interview.introduction.map((paragraph) => (
-                <Paragraph key={paragraph}>{paragraph}</Paragraph>
-              ))}
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
-        <div className={styles.ceo}>
-          <div className={styles.avatar}>
-            <Image
-              src={areaItem.head["image-profile"]}
-              alt={`foto de perfil ${areaItem.head.name}`}
-              width={532}
-              height={532}
-            />
-          </div>
-
-          <div className={styles.ceoContent}>
-            <Heading level={"h4"}>{areaItem.head.name}</Heading>
-            <Paragraph>{areaItem.head.role}</Paragraph>
-            <Paragraph>{areaItem.head.resume}</Paragraph>
-
-            <ul>
-              <li>
-                <a
-                  href={areaItem.head.social.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <AiFillLinkedin />
-                </a>
-              </li>
-
-              <li>
-                <a
-                  href={areaItem.head.social.discord}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaDiscord />
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className={styles.container}>
-          {areaItem.interview.questions.map(({ question, awnser }) => (
-            <>
-              <Accordion defaultExpanded={true} style={inlineStyle}>
-                <AccordionSummary
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                  key={question}
-                >
-                  <Typography variant="string" className={styles.question}>
-                    {question}
-                  </Typography>
-                </AccordionSummary>
-                <AccordionDetails
-                  className={styles.AccordionDetails}
-                  key={awnser}
-                >
-                  <Typography variant="string">
-                    <Paragraph>{awnser}</Paragraph>
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
-            </>
-          ))}
-        </div>
-      </section>
-
-      <section className={styles.HeadersSection}>
-        <Heading level={"h2"}>
-          Essa é a Equipe de {areaItem.title} da SouJunior
-        </Heading>
-        {areaItem.team.mentores.length > 0 ? (
-          <div className={styles.titleDescripiton}>
-            <Heading level={"h3"}>Mentores</Heading>
-          </div>
-        ) : (
-          ""
-        )}
-        <div className={styles.headersContainer}>
-          {[...areaItem.team.mentores]
-            .sort((a, b) => (a.nome > b.nome ? 1 : -1))
-            .map(({ id, nome, role, img, linkedin, discord }) => (
-              <div key={nome} className={styles.headerWrapper}>
-                <Image src={img} width={100} height={100} />
-                <div className={styles.team}>
-                  <p>{nome}</p>
-                  <p>{role}</p>
+        ) && (
+          <div>
+            <section className={styles.AboutSection}>
+              <h1 className={styles.title}>Sobre a Área de {areaItem.title}</h1>
+              <div className={styles.container}>
+                <div className={styles.paragraphWrapper}>
+                  {areaItem.head.descripition.map((paragraph) => (
+                    <Paragraph key={paragraph}>{paragraph}</Paragraph>
+                  ))}
                 </div>
-                <ul>
-                  <li>
-                    <a
-                      href={linkedin}
-                      key={linkedin}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <AiFillLinkedin />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href={discord}
-                      key={discord}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <FaDiscord />
-                    </a>
-                  </li>
-                </ul>
               </div>
-            ))}
-        </div>
-        {areaItem.team.juninhos.length > 0 ? (
-          <div className={styles.titleDescripiton}>
-            <Heading level={"h3"}>Juninhos</Heading>
-          </div>
-        ) : (
-          ""
-        )}
+            </section>
 
-        <div className={styles.headersContainer}>
-          {[...areaItem.team.juninhos]
-            .sort((a, b) => (a.nome > b.nome ? 1 : -1))
-            .map(({ id, nome, role, img, linkedin, discord }) => (
-              <div key={nome} className={styles.headerWrapper}>
-                <Image src={img} width={100} height={100} />
-                <div className={styles.team}>
-                  <p>{nome}</p>
-                  <p>{role}</p>
+            <section className={styles.InterviewSection}>
+              <Heading level={"h3"}>
+                Entrevista com Head de {areaItem.title} da Sou Junior -{" "}
+                {areaItem.head.name}
+              </Heading>
+              {areaItem.interview.introduction.length > 1 ? (
+                <div className={styles.container}>
+                  <div className={styles.paragraphWrapper}>
+                    {areaItem.interview.introduction.map((paragraph) => (
+                      <Paragraph key={paragraph}>{paragraph}</Paragraph>
+                    ))}
+                  </div>
                 </div>
-                <ul>
-                  <li>
-                    <a
-                      href={linkedin}
-                      key={nome}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <AiFillLinkedin />
-                    </a>
-                  </li>
-                  <li>
-                    <a href={discord} key={id} target="_blank" rel="noreferrer">
-                      <FaDiscord />
-                    </a>
-                  </li>
-                </ul>
+              ) : (
+                ""
+              )}
+              <div className={styles.ceo}>
+                <div className={styles.avatar}>
+                  <Image
+                    src={areaItem.head["image-profile"]}
+                    alt={`foto de perfil ${areaItem.head.name}`}
+                    width={532}
+                    height={532}
+                  />
+                </div>
+
+                <div className={styles.ceoContent}>
+                  <Heading level={"h4"}>{areaItem.head.name}</Heading>
+                  <Paragraph>{areaItem.head.role}</Paragraph>
+                  <Paragraph>{areaItem.head.resume}</Paragraph>
+
+                  <ul>
+                    <li>
+                      <a
+                        href={areaItem.head.social.linkedin}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <AiFillLinkedin />
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        href={areaItem.head.social.discord}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FaDiscord />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            ))}
-        </div>
-      </section>
+              <div className={styles.container}>
+                {areaItem.interview.questions.map(({ question, awnser }) => (
+                  <>
+                    <Accordion defaultExpanded={true} style={inlineStyle}>
+                      <AccordionSummary
+                        aria-controls="panel1a-content"
+                        id="panel1a-header"
+                        key={question}
+                      >
+                        <Typography
+                          variant="string"
+                          className={styles.question}
+                        >
+                          {question}
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails
+                        className={styles.AccordionDetails}
+                        key={awnser}
+                      >
+                        <Typography variant="string">
+                          <Paragraph>{awnser}</Paragraph>
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                  </>
+                ))}
+              </div>
+            </section>
+
+            <section className={styles.HeadersSection}>
+              <Heading level={"h2"}>
+                Essa é a Equipe de {areaItem.title} da SouJunior
+              </Heading>
+              {areaItem.team.mentores.length > 0 ? (
+                <div className={styles.titleDescripiton}>
+                  <Heading level={"h3"}>Mentores</Heading>
+                </div>
+              ) : (
+                ""
+              )}
+              <div className={styles.headersContainer}>
+                {[...areaItem.team.mentores]
+                  .sort((a, b) => (a.nome > b.nome ? 1 : -1))
+                  .map(({ id, nome, role, img, linkedin, discord }) => (
+                    <div key={nome} className={styles.headerWrapper}>
+                      <Image src={img} width={100} height={100} />
+                      <div className={styles.team}>
+                        <p>{nome}</p>
+                        <p>{role}</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <a
+                            href={linkedin}
+                            key={linkedin}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <AiFillLinkedin />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={discord}
+                            key={discord}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaDiscord />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  ))}
+              </div>
+              {areaItem.team.juninhos.length > 0 ? (
+                <div className={styles.titleDescripiton}>
+                  <Heading level={"h3"}>Juninhos</Heading>
+                </div>
+              ) : (
+                ""
+              )}
+
+              <div className={styles.headersContainer}>
+                {[...areaItem.team.juninhos]
+                  .sort((a, b) => (a.nome > b.nome ? 1 : -1))
+                  .map(({ id, nome, role, img, linkedin, discord }) => (
+                    <div key={nome} className={styles.headerWrapper}>
+                      <Image src={img} width={100} height={100} />
+                      <div className={styles.team}>
+                        <p>{nome}</p>
+                        <p>{role}</p>
+                      </div>
+                      <ul>
+                        <li>
+                          <a
+                            href={linkedin}
+                            key={nome}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <AiFillLinkedin />
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href={discord}
+                            key={id}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <FaDiscord />
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  ))}
+              </div>
+            </section>
+          </div>
+        )}
     </>
   );
 };
