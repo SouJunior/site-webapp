@@ -224,7 +224,7 @@ const AreaItem = () => {
                   <li>
                     <a
                       href={linkedin}
-                      key={id}
+                      key={linkedin}
                       target="_blank"
                       rel="noreferrer"
                     >
@@ -232,7 +232,12 @@ const AreaItem = () => {
                     </a>
                   </li>
                   <li>
-                    <a href={discord} key={id} target="_blank" rel="noreferrer">
+                    <a
+                      href={discord}
+                      key={discord}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <FaDiscord />
                     </a>
                   </li>
@@ -262,7 +267,7 @@ const AreaItem = () => {
                   <li>
                     <a
                       href={linkedin}
-                      key={id}
+                      key={nome}
                       target="_blank"
                       rel="noreferrer"
                     >
