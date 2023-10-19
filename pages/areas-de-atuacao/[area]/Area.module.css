@@ -1,13 +1,17 @@
 .AboutSection,
 .InterviewSection,
 .HeadersSection,
-.bannerContainer {
+.bannerContainer,
+.containerLoading {
   width: 100%;
   padding: 0 3.2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+.containerLoading {
+  height: 80vh;
 }
 
 .bannerContainer {
