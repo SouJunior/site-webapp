@@ -817,5 +817,130 @@
         }
       ]
     }
+  },
+  {
+    "id": 5,
+    "title": "Back-end",
+    "url": "back-end",
+    "image-hero": "/assets/hero-back-end.svg",
+    "head": {
+      "name": "Wanderson Santos",
+      "role": "Head de Back end",
+      "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
+      "descripition": [
+        "O desenvolvimento back-end é a criação e manutenção da parte \"não visível\" de uma aplicação, que geralmente consiste na lógica de negócios, banco de dados, servidores e infraestrutura que permitem que o programa funcione corretamente. É o que sustenta o programa ou aplicativo e fornece dados e funcionalidades para a interface do usuário.",
+        "Os desenvolvedores back-end geralmente trabalham com linguagens de programação como Java, Python, Ruby e JavaScript, além de frameworks como Node.js, Django, Flask, Ruby on Rails, entre outros. Eles também usam bancos de dados relacionais e não relacionais, como MySQL, PostgreSQL, MongoDB, Redis e Cassandra, para armazenar e gerenciar dados.",
+        "Dentro da SouJunior os desenvolvedores juniores de Back-end tem a função de implementar e manter as tecnologias necessárias para garantir a eficiência dos sistemas, com auxilio dos mentores e Head. Além disso, é fundamental que haja uma boa integração entre outras áreas, como a de Produto, UX & UI design e Front-end, para garantir a melhor experiencia possível para o cliente final."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/wandersongsantos/",
+        "discord": "https://discordapp.com/users/427653385123135490/"
+      },
+      "resume": "Wanderson Santos, desenvolvedor Back-end, gosta de participar de projetos onde contribui para solucionar problemas. É casado, pai de dois filhos, fez a sua transição de carreira no início do ano passado e não tem medo de encarar algo novo."
+    },
+    "interview": {
+      "introduction": [
+        "Wanderson Santos é um desenvolvedor Back-end casado e pai de dois filhos, que fez sua transição de carreira no início do ano passado. Ele gosta de participar de projetos desafiadores, onde pode contribuir para solucionar problemas, e não tem medo de encarar algo novo. Especializado em NodeJs, ele possui experiência em sistemas Linux e Windows, além de habilidades em versionamento com Git e documentação de software com Swagger, Postman e Insomnia.",
+        "Além disso, também tem conhecimentos em Typescript com express, Nestjs e tem familiaridade com bancos de dados não-relacionais, como Mongo DB e relacionais como MySql e Postgres.",
+        "É uma pessoa comunicativa e flexível, com forte gerenciamento de tempo e capacidade de trabalhar em equipe. Sempre motivado e comprometido em aprender e lidar com novas ferramentas de trabalho para continuar aprimorando suas habilidades."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhava e estudava ao mesmo tempo, acordava muito cedo 4h da manhã, e ficava estudando até a meia-noite, esse ponto fez com que eu aprendesse um pouco mais devagar. ainda mais por está em processo de migração de carreira, foi Bastante difícil e complicado, pois, não sabia o que estudar então consumia um pouco de tudo, até pegar firme no roadmap do Back-end."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Gosto de projetos Open source e de aprender, então na SouJunior eu consegui encontrar essas duas coisas."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Temos reuniões com as equipes para alinhamentos, o servidor evoluiu muito e a comunicação melhorou bastante, pois, cada equipe tem uma pessoa responsável por ela, assim podemos ter uma melhor colaboração."
+        },
+        {
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Entender que estamos resolvendo os problemas das pessoas, e isso é extremamente gratificante, nada melhor do que construir algo e ver alguém usando."
+        },
+        {
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Tento entender a dificuldade de cada um e separar as demandas para que todos possam colaborar e poder aprender. Fazemos call para alinhamentos, reuniões para \"pair programming\" e temos um servidor para ajudar os juniores no que eles precisarem. Porém a comunicação principal permanece o nosso canal na SouJunior."
+        },
+        {
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Cada uma tem suas qualidades, porém Javascript pode abrir um leque maior de opções, pois, com ele você pode ir para mobile, front-end e back-end."
+        },
+        {
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor back-end?",
+          "awnser": "Saber expressar suas dúvidas, não segurar problemas/impedimentos, buscar sempre tentar resolver, não conseguiu peça ajuda. Pois, impedimentos podem atrasar as entregas, além disso uma boa comunicação com o time é essencial."
+        },
+        {
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Extraia de cada entrevista um aprendizado, tudo o que é perguntado é o que você precisa aprender, fiz assim, quando me perguntavam algo que eu não sabia, depois da entrevista corria para aprender."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Edcleidson Júnior",
+          "img": "https://user-images.githubusercontent.com/31568030/274428726-70677ec4-cd75-4639-a2bc-6f3a234301ed.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/eddiescj/",
+          "discord": "https://discordapp.com/users/856534558229266461/"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Bruna Oliveira",
+          "img": "https://avatars.githubusercontent.com/u/102394235?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/bruoliveiraalves/",
+          "discord": "https://discordapp.com/users/966470010191118337/"
+        },
+        {
+          "id": 2,
+          "nome": "Gabriel Ferreira",
+          "img": "https://avatars.githubusercontent.com/u/98713459?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabriel-ferreira-2755b6164/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/31568030/273002546-e150151e-6bae-492c-8e6d-9163963c8df2.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": "https://discordapp.com/users/889953880576774204"
+        },
+        {
+          "id": 4,
+          "nome": "João Lucas Bugati",
+          "img": "https://avatars.githubusercontent.com/u/102599241?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-lucas-bugati-591009236/",
+          "discord": "https://discordapp.com/users/442345207342825472"
+        },
+        {
+          "id": 5,
+          "nome": "Patrick da Rocha Otero",
+          "img": "https://avatars.githubusercontent.com/u/83041269?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/patrick-da-rocha-otero/",
+          "discord": "https://discordapp.com/users/487789753916456981"
+        },
+        {
+          "id": 6,
+          "nome": "Ytallo Cesar",
+          "img": "https://user-images.githubusercontent.com/81826043/262431538-a3721978-99b7-4e95-903d-e5c2971390d7.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ytallocesar/",
+          "discord": "https://discordapp.com/users/457845559609262081"
+        }
+      ]
+    }
   }
 ]
+
