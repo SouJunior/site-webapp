@@ -623,7 +623,12 @@
       "resume": "Ricardo Lima, nascido e criado em Volta Redonda, hoje mora em Jacarepaguá RJ. Formado em Engenharia Mecânica mas atraído pela paixão por tecnologia foi se aventurar pelos caminhos de desenvolvedor."
     },
     "interview": {
-      "introduction": [""],
+      "introduction": [
+        "Ricardo Lima é natural de Volta Redonda, mas escolheu a capital carioca como residência atual. Com um diploma em engenharia mecânica e uma pós-graduação em Análise e Desenvolvimento de Programas, ele se encontrou no mundo da TI, onde já atua por cerca de cinco anos.",
+        "No seu dia a dia, Ricardo é um Desenvolvedor Full Stack na Tree Inova e na Ágape Consultoria. Também foi professor na Blue EdTech, dando aulas de Full Stack e ajudando os alunos nos processos de seleção.",
+        "Mas a jornada de Ricardo vai além do código. Na SouJunior, ele lidera uma equipe talentosa, orientando mentores e juninhos na criação de projetos empolgantes. Fora do mundo profissional, ele se revela um artista em formação: bateria é sua paixão, mas também está se aventurando no violão e na gaita. Nos momentos de lazer Ricardo curte viajar, explorar novas culturas e praticar atividades físicas. E por falar em novas culturas, ele decidiu aprender o idioma alemão."
+      ],
+
       "questions": [
         {
           "question": "Como você iniciou na área da tecnologia?",
@@ -683,18 +688,10 @@
           "img": "https://user-images.githubusercontent.com/115566254/238661524-489a2e16-e6cb-4b3d-aca1-e272339304cc.jpg",
           "role": "Mentor",
           "linkedin": "https://www.linkedin.com/in/denisjr/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/880613176994054234"
         },
         {
-          "id": 3,
-          "nome": "Gustavo Roberto",
-          "img": "https://user-images.githubusercontent.com/31568030/271138176-001eadc6-10d8-4d5c-ae35-0ed46a579c50.png",
-          "role": "Mentor",
-          "linkedin": "https://www.linkedin.com/in/gustavo-a-roberto/",
-          "discord": ""
-        },
-        {
-          "id": 3,
+          "id": 4,
           "nome": "Allan Oliveira",
           "img": "https://user-images.githubusercontent.com/31568030/274933401-bf17dd8a-6869-4837-a4b6-9b138226cf59.png",
           "role": "Mentor",
@@ -702,12 +699,20 @@
           "discord": "https://discordapp.com/users/297514611874332673"
         },
         {
-          "id": 3,
+          "id": 5,
           "nome": "Breno Pereira",
           "img": "https://user-images.githubusercontent.com/31568030/275021127-f9aa9664-8e3f-45ba-8221-5b1668e5e792.png",
           "role": "Mentor",
           "linkedin": "https://www.linkedin.com/in/brenohaidar/",
           "discord": "https://discordapp.com/users/601593238993764362"
+        },
+        {
+          "id": 6,
+          "nome": "Marília Augusta",
+          "img": "https://user-images.githubusercontent.com/31568030/275026149-8b88cec4-4616-4819-9834-953531db78cd.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/mar%C3%ADlia-augusta/",
+          "discord": "https://discordapp.com/users/597755223695425540"
         }
       ],
       "juninhos": [
@@ -719,109 +724,88 @@
           "linkedin": "https://www.linkedin.com/in/edcabralc/",
           "discord": "https://discordapp.com/users/637990415299117086"
         },
+
         {
-          "id": 2,
-          "nome": "Filipe Reis",
-          "img": "https://user-images.githubusercontent.com/115566254/238744749-cbc18220-4e64-4407-be7a-aff5f0389c7b.jpeg",
-          "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/filipe-leoni-5745551a8/",
-          "discord": ""
-        },
-        {
-          "id": 3,
+          "id": 1,
           "nome": "Geovana Salamanca",
           "img": "https://user-images.githubusercontent.com/31568030/271138641-fd7e966f-8025-44ed-98ae-9e1fb2af7017.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/geovana-salamanca-da-silva/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/702252488803221638"
         },
+
         {
-          "id": 4,
-          "nome": "Hércules Machado",
-          "img": "https://user-images.githubusercontent.com/31568030/271619784-42aa71f5-f95e-4ff4-87d6-581a23d36930.png",
-          "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/herculesmachado/",
-          "discord": ""
-        },
-        {
-          "id": 5,
+          "id": 3,
           "nome": "Hiago Murilo",
           "img": "https://user-images.githubusercontent.com/31568030/271141817-49d89c75-565b-42ff-a7b2-f3dc3cb32861.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/hiago-murilo/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/416024178110627840"
         },
+
         {
-          "id": 6,
-          "nome": "Igor Gonçalves",
-          "img": "https://user-images.githubusercontent.com/115566254/238664373-197e55e1-c0ad-42e5-8214-97f18e8847b5.jpg",
-          "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
-          "discord": ""
-        },
-        {
-          "id": 6,
+          "id": 4,
           "nome": "Isabela Hyeda",
           "img": "https://user-images.githubusercontent.com/115566254/238662442-b6c18ab7-a028-41d0-a72e-99414d481ec2.jpg",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/isabelahyeda",
-          "discord": ""
+          "discord": "https://discordapp.com/users/1009463245293244466"
         },
         {
-          "id": 7,
+          "id": 5,
           "nome": "Isaque de Souza",
           "img": "https://user-images.githubusercontent.com/31568030/271141770-31ae6678-7cdf-4c51-8dbf-905307c38b6c.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/isaque-de-sousa/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/335948221052485632"
         },
         {
-          "id": 7,
+          "id": 6,
           "nome": "João Victor",
           "img": "https://user-images.githubusercontent.com/31568030/271138667-43c20c74-b021-4f74-bb7a-7154b2ff861f.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/joaovictorps/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/508444340020838401"
         },
         {
-          "id": 8,
+          "id": 7,
           "nome": "Leonardo Monteiro",
           "img": "https://user-images.githubusercontent.com/31568030/271621590-ed70862f-0c91-4d64-b576-4395825642e8.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/leonardo-dias-monteiro-54642264/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/982422326182297610"
         },
         {
-          "id": 9,
+          "id": 8,
           "nome": "Luiz Belo",
           "img": "https://user-images.githubusercontent.com/31568030/271620281-37f205d2-b529-4cce-9828-6fb32dfa07df.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/luiz-paulo-a98a61238/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/933744585618898995"
         },
         {
-          "id": 10,
+          "id": 9,
           "nome": "Nicolas Braga",
           "img": "https://user-images.githubusercontent.com/31568030/271138831-8ae6b3f7-671f-401d-9b38-5237a361d924.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/devbraga/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/1078034009742913666"
         },
         {
-          "id": 11,
+          "id": 10,
           "nome": "Uendel Martins",
           "img": "https://user-images.githubusercontent.com/31568030/271138695-f3faf3dc-78fa-4040-8837-94295f01eb52.png",
           "role": "Juninho",
           "linkedin": "https://www.linkedin.com/in/uendel-martins-5471a1153/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/567500180900020225"
         },
         {
           "id": 11,
-          "nome": "Vitor Silva",
-          "img": "https://user-images.githubusercontent.com/31568030/271138507-01656138-d09a-451d-b91c-dcf0dafb9fb6.png",
+          "nome": "Max Faria",
+          "img": "https://user-images.githubusercontent.com/31568030/273599825-708ca687-8bbe-4ec7-9803-cf7588a7a3e6.png",
           "role": "Juninho",
-          "linkedin": "https://www.linkedin.com/in/mooncoded/",
-          "discord": ""
+          "linkedin": "https://www.linkedin.com/in/maxfariaa/",
+          "discord": "https://discordapp.com/users/1078034009742913666"
         }
       ]
     }
