@@ -618,7 +618,7 @@
       ],
       "social": {
         "linkedin": "https://www.linkedin.com/in/ricardo-pereira-lima",
-        "discord": ""
+        "discord": "https://discordapp.com/users/219642355005784064"
       },
       "resume": "Ricardo Lima, nascido e criado em Volta Redonda, hoje mora em Jacarepaguá RJ. Formado em Engenharia Mecânica mas atraído pela paixão por tecnologia foi se aventurar pelos caminhos de desenvolvedor."
     },
@@ -675,7 +675,7 @@
           "img": "https://user-images.githubusercontent.com/115566254/238659843-d3152215-7a4a-4315-9de9-59c41b2f1a4d.png",
           "role": "Mentor",
           "linkedin": "https://www.linkedin.com/in/adson-amorim/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/643069973480079361"
         },
         {
           "id": 2,
@@ -692,6 +692,22 @@
           "role": "Mentor",
           "linkedin": "https://www.linkedin.com/in/gustavo-a-roberto/",
           "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Allan Oliveira",
+          "img": "https://user-images.githubusercontent.com/31568030/274933401-bf17dd8a-6869-4837-a4b6-9b138226cf59.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/allandlobr/",
+          "discord": "https://discordapp.com/users/297514611874332673"
+        },
+        {
+          "id": 3,
+          "nome": "Breno Pereira",
+          "img": "https://user-images.githubusercontent.com/31568030/275021127-f9aa9664-8e3f-45ba-8221-5b1668e5e792.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/brenohaidar/",
+          "discord": "https://discordapp.com/users/601593238993764362"
         }
       ],
       "juninhos": [
