@@ -1,29 +1,30 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { FaArrowUp } from "react-icons/fa";
 import styles from "./Footer.module.css";
 import { dataSocial } from "../../../utils/dataSocial";
 import { Heading } from "../../commons/Heading";
+import { Logo } from "../logo";
 
 export const Footer = () => {
-    //função voltar para o topo
-    const [showBackToTop, setShowBackToTop] = useState(false);
+  //função voltar para o topo
+  const [showBackToTop, setShowBackToTop] = useState(false);
 
-    useEffect(() => {
-      const handleScroll = () => {
-        const scrollHeight = document.documentElement.scrollHeight;
-        const windowHeight = window.innerHeight;
-        const scrollPosition = window.scrollY || window.pageYOffset;
-  
-        setShowBackToTop(scrollPosition > (scrollHeight - windowHeight) * 0.5);
-      };
-  
-      window.addEventListener("scroll", handleScroll);
-  
-      return () => {
-        window.removeEventListener("scroll", handleScroll);
-      };
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      const scrollPosition = window.scrollY || window.pageYOffset;
+
+      setShowBackToTop(scrollPosition > (scrollHeight - windowHeight) * 0.5);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   const handleScrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -32,15 +33,10 @@ export const Footer = () => {
   };
   return (
     <>
-         
       <footer className={styles.Footer} id={"redes-sociais"}>
         <div className={styles.container}>
           <div className={styles.logoWrapper}>
-            <img
-              className={styles.image}
-              src="/assets/icons/Logo.svg"
-              alt="#"
-            />
+            <Logo />
           </div>
           <div className={styles.footerContent}>
             <div className={styles.about}>
@@ -83,7 +79,8 @@ export const Footer = () => {
                     id={id}
                     key={name}
                     target="_blank"
-                    rel="noreferrer">
+                    rel="noreferrer"
+                  >
                     {icon}
                   </a>
                 ))}
@@ -92,11 +89,10 @@ export const Footer = () => {
           </div>
         </div>
         <div className={styles.backToTop} onClick={handleScrollToTop}>
-        <FaArrowUp className={styles.arrowIcon} />
-        Voltar para o topo
-      </div>
+          <FaArrowUp className={styles.arrowIcon} />
+          Voltar para o topo
+        </div>
       </footer>
-      
     </>
   );
 };
