@@ -941,6 +941,110 @@
         }
       ]
     }
+  },
+  {
+    "id": 6,
+    "title": "Tech Recruiter",
+    "url": "tech-recruiter",
+    "image-hero": "/assets/hero-tech-recruiter.svg",
+    "head": {
+      "name": "Daniele Oliveira",
+      "role": "Head de Tech Recruiter",
+      "image-profile": "https://user-images.githubusercontent.com/146049420/275667561-c23cd05f-680c-41e7-8a6b-03db6af0ac07.jpg",
+      "descripition": [
+        "A área de Tech Recruiter da SouJunior é responsável por encontrar e selecionar candidatos qualificados para posições dos Times. Os profissionais dessa área utilizam diversas técnicas para atrair talentos, como a criação de anúncios persuasivos e o uso de redes sociais. Além disso, eles são responsáveis por avaliar os currículos dos candidatos, conduzir entrevistas técnicas e analisar a compatibilidade dos candidatos com a cultura e os valores do Projeto.",
+        "Os profissionais desta área também desempenham um papel fundamental na construção da marca SouJunior, pois criam uma experiência positiva para os candidatos durante todo o processo de recrutamento e seleção. Além disso, a área de Tech Recruiter é altamente estratégica e exige profissionais que sejam proativos, flexíveis e capazes de se adaptar rapidamente às mudanças do mercado."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/daniele-oliveirapsi/",
+        "discord": "https://discordapp.com/users/781888047289466910"
+      },
+      "resume": "Mãe, psicóloga, mulher preta, nordestina, atua em diversas frentes de atração de talentos e também tem experiência com departamento pessoal. Ama construir legados e deixar um pedaço dela em tudo o que faz."
+    },
+    "interview": {
+      "introduction": [
+        "A nossa Head de Tech Recruiter, Daniele Oliveira, é mãe, psicóloga, mulher preta e uma Nordestina apaixonada por experiências! Trabalhando na área de Desenvolvimento de Pessoas e RH desde 2014, possui atuação em diversas frentes que envolvem Atração de talentos, Onboarding, Treinamento, Gestão da Cultura Organizacional, Desenvolvimento de Carreira, Jornada do colaborador e Offboarding.",
+        "Também tem algumas experiências em departamento pessoal, o que acrescentaram conhecimentos importantes sobre Legislação Trabalhista. Considera a carreira como uma jornada não linear cheia de possibilidades e descobertas, portanto ama construir legados e deixar um pedaço dela em tudo o que faz."
+      ],
+
+      "questions": [
+        {
+          "question": "Como foi sua trajetória profissional? E como você chegou ao cargo atual na SouJunior?",
+          "awnser": "Cheguei no cargo de mentora e em seguida assumi o papel de head do time de recrutamento."
+        },
+        {
+          "question": "Como você define o papel do Tech Recruiter em uma empresa de tecnologia?",
+          "awnser": "Seu principal papel é identificar, atrair, avaliar e selecionar candidatos qualificados para preencher posições técnicas. Seu papel inclui colaborar com os líderes de tecnologia e gestores de contratação para entender as necessidades da empresa, criar estratégias de recrutamento, conduzir entrevistas técnicas, avaliar as habilidades dos candidatos e garantir que os candidatos escolhidos se alinhem com a cultura da empresa."
+        },
+        {
+          "question": "Quais são as principais habilidades que você considera essenciais para um Tech Recruiter de sucesso?",
+          "awnser": "Conhecimento técnico: Um entendimento sólido das tecnologias, linguagens de programação e habilidades necessárias para as posições em aberto. Compreensão da cultura da empresa: A capacidade de compreender a cultura e os valores da empresa para encontrar candidatos que se encaixem bem. Habilidades de comunicação: Boas habilidades de comunicação são essenciais para interagir com candidatos e membros da equipe de tecnologia. Habilidade de avaliação: A capacidade de avaliar as habilidades técnicas dos candidatos de forma eficaz. Pensamento estratégico: Desenvolver estratégias de recrutamento eficazes para atender às necessidades da empresa. E o que considero mais importante, Foco em relacionamento: Construir relacionamentos sólidos com candidatos, equipes de tecnologia e gestores de contratação."
+        },
+        {
+          "question": "Como você avalia as competências técnicas dos candidatos durante o processo de recrutamento e que atendam às exigências técnicas e culturais da empresa?",
+          "awnser": "Avaliar projetos anteriores, portfólios e trabalhos práticos. Além disso, é importante destacar que a entrega técnica, o que eu sei fazer, é importante, mas como eu faço, como eu entrego a habilidade técnica é ainda mais importante. É aí onde entra a comunicação, a negociação, a inteligência emocional. Por isso, avaliar soft skills interessantes para o cargo também é uma estratégia para garantir que os candidatos demonstram uma compreensão profunda das tecnologias e habilidades necessárias."
+        },
+        {
+          "question": "Em sua opinião, qual é a melhor forma de atrair talentos para uma empresa de tecnologia?",
+          "awnser": "É importante desenvolver uma cultura de trabalho atraente, destacar os benefícios e vantagens que a empresa oferece, usar plataformas de recrutamento e redes sociais para promover oportunidades de emprego. Pensar em programas de indicação também contribui bastante."
+        },
+        {
+          "question": "Como você promove a diversidade e inclusão em um processo de recrutamento de uma empresa de tecnologia?",
+          "awnser": "Trabalhar diversidade sempre será um desafio, enquanto ainda possuímos uma estrutura social que impacta diretamente nesse recorte no mercado de tecnologia. Por isso é importante estabelecer conexão com programas, grupos e comunidades que formam essas pessoas para que o acesso às vagas estejam mais próximos. Acredito que o trabalho de vagas afirmativas também deve ser feito, mas exige um cuidado com a compreensão dos dados de mercado referente ao perfil dentro do recorte de diversidade. Além disso, não é possível trabalhar processos seletivos inclusivos se não houver uma cultura de inclusão na organização."
+        },
+        {
+          "question": "Quais as principais tendências e desafios que você enxerga no mercado de recrutamento de tecnologia nos próximos anos?",
+          "awnser": "A automação de recrutamento, a busca por candidatos remotos e globais, a crescente demanda por habilidades em áreas como inteligência artificial e segurança cibernética, bem como a concorrência acirrada por talentos. Além disso, a diversidade e inclusão continuarão a ser uma pauta importante no recrutamento."
+        },
+        {
+          "question": "Como você trabalha em conjunto com a área de tecnologia da empresa, visando garantir que as necessidades do negócio sejam atendidas por meio do recrutamento?",
+          "awnser": "É importante manter um relacionamento próximo com a equipe de tecnologia e líderes de negócios. Isso envolve a comunicação regular para entender as prioridades de contratação, as metas de negócios e as habilidades técnicas necessárias. Devemos atuar como um parceiro estratégico que atua como uma ponte entre as equipes de tecnologia as necessidades do negócio e as mudanças do mercado."
+        },
+        {
+          "question": "O que os juniores poderiam fazer no processo seletivo que os ajudariam a compensar a falta de experiência?",
+          "awnser": "Destacar projetos pessoais ou acadêmicos relevantes.Mostrar um histórico de aprendizado rápido e adaptação a novas tecnologias. Participar de estágios, programas de mentoria, voluntariado ou bootcamps. Destacar habilidades não técnicas, como comunicação e colaboração. Mostrar um forte desejo de contribuir para a empresa e aprender com colegas mais experientes. Além disso, sempre oriento que estudem e fortaleçam fundamentos, ter domínio da base é sempre muito importante. Caso não tenha muitos projetos reais para mostrar, uma dica interessante seria, trabalhar em casos fictícios utilizando sua stack principal, essa pode ser uma maneira criativa de preencher o seu repertório com relação a aplicação prática. Sobre o momento da entrevista, é fundamental organizar o histórico dessas experiências. Para isso, indico também que organize seu pensamento e as experiências que deseja compartilhar destacando as regras de negócio ou as ferramentas que já consegue utilizar. Manter atenção total às perguntas para garantir que as respostas estejam alinhadas com o que foi perguntado, evitando respostas genéricas desorganizadas. E o que sempre ressalto, senioridade também tem muito a ver com soft skills, por isso o trabalho de auto avaliação constante te ajudará a entender que pontos podem ser melhorados e trabalhar nisso."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Caroline Coelho",
+          "img": "https://user-images.githubusercontent.com/146049420/275532876-8e3cfa07-7b03-42ad-ae4e-4faf8d3a5c90.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/coelho-caroline/",
+          "discord": "https://discordapp.com/users/1047157935509360791"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Ana Macenaz",
+          "img": "https://user-images.githubusercontent.com/124841403/223892996-835723eb-9922-4970-adf8-d9ab82c1c205.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/anapaulasantoz/",
+          "discord": "https://discordapp.com/users/762408284065628170"
+        },
+
+        {
+          "id": 2,
+          "nome": "Isabele Freire",
+          "img": "https://user-images.githubusercontent.com/146049420/273725197-69694ce5-00c4-4a1d-9696-4564b3420701.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/isabellefs-psi/",
+          "discord": "https://discordapp.com/users/1083743439671275530"
+        },
+        {
+          "id": 3,
+          "nome": "Larissa Araujo",
+          "img": "https://user-images.githubusercontent.com/146049420/275665432-8a539bfe-144f-415e-b3cb-dd5925abdabf.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/larissafaraujo/",
+          "discord": "https://discordapp.com/users/98973005857718272"
+        }
+      ]
+    }
   }
 ]
 
