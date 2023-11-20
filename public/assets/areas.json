@@ -688,15 +688,7 @@
           "img": "https://user-images.githubusercontent.com/115566254/238661524-489a2e16-e6cb-4b3d-aca1-e272339304cc.jpg",
           "role": "Mentor",
           "linkedin": "https://www.linkedin.com/in/denisjr/",
-          "discord": ""
-        },
-        {
-          "id": 3,
-          "nome": "Gustavo Roberto",
-          "img": "https://user-images.githubusercontent.com/31568030/271138176-001eadc6-10d8-4d5c-ae35-0ed46a579c50.png",
-          "role": "Mentor",
-          "linkedin": "https://www.linkedin.com/in/gustavo-a-roberto/",
-          "discord": ""
+          "discord": "https://discordapp.com/users/880613176994054234"
         },
         {
           "id": 4,
@@ -820,6 +812,196 @@
   },
   {
     "id": 5,
+    "title": "Agilidade",
+    "url": "agilidade",
+    "image-hero": "/assets/hero-agilidade.svg",
+    "head": {
+      "name": "Alexandre Moura",
+      "role": "Head de Agilidade",
+      "image-profile": "https://user-images.githubusercontent.com/31568030/271143655-b632062d-c7b2-4536-a8e2-2bd835369c50.png",
+      "descripition": [
+        "Agilidade é uma prática relacionado a métodos de desenvolvimento de projetos e processos que buscam aumentar a eficiência na entrega de resultados. Agilidade é a capacidade de responder a mudanças, através da flexibilização de processos, da redução de burocracia e da comunicação mais próxima entre as equipes de trabalho. Para isso, a agilidade utiliza metodologias como Scrum, Kanban, Lean e outras. Assim valorizando a autonomia das equipes e a habilidade de auto-organização, onde são responsáveis pelo planejamento e execução dos seus próprios projetos, e têm a capacidade de tomar decisões rapidamente, sem depender de autorizações hierárquicas. Dessa forma, a agilidade permite que as empresas se adaptem rapidamente a mudanças, aumentando a sua competitividade no mercado.",
+        "Dentro da SouJunior os agilistas juniores acompanham o processo de delivery dos produtos, disseminando a cultura ágil, verificando se há impedimentos/gargalos para serem removidos e ajudando na transparência e melhoria contínua de toda equipe, tudo isso contando com a ajuda das mentoras e Head, para garantir a entrega do produto final."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/alexandre-moura-bandeira-36262b141/",
+        "discord": "https://discordapp.com/users/1123342909006155866"
+      },
+      "resume": "Cearense, com graduação em Engenharia de Produção e pós-graduação em Análise e Desenvolvimento de Programas, apaixonado pelo processo de transformar ideias em realidade."
+    },
+    "interview": {
+      "introduction": [
+        "Oi, eu sou o Alexandre! Um jovem idoso, cearense, pai de pet, o ano que nasci inicia com 19 e sou apaixonado pelo processo de transformar ideias em realidade, o que me levou a ter um relacionamento sério com a gestão de projetos. Sou graduado em Engenharia de Produção (e sim, já fiz uber), pós-graduado em Análise e Desenvolvimento de Programas, possuo algumas certificações daquelas letrinhas lá e já gastei várias horas de vida em treinamentos, workshops, WoW e CS 1.6.",
+        "Trabalho desde 2018 com gerenciamento de projetos, iniciando a carreira de forma generalista com metodologias tradicionais, já toquei projeto desde construção e implantação de novas unidades de negócios, eventos de marketing, reestruturações organizacionais e transformação de processos. Desde 2020 tive um surto e passei a atuar focado em modelo de consultoria e projetos de TI e transformação ágil."
+      ],
+
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhei uma boa parte da minha carreira com projetos de transformação de processos (BPM) e com isso todo processo TO BE acabava demandando uma melhoria de um sistema ou o desenvolvimento de um sistema novo, até porque hoje em dia nem a padaria da esquina ainda anota as coisas em papel. Como eu tocava o projeto desde o levantamento dos processos AS IS e implantação e operação assistida do processo TO BE, fui ficando cada vez mais íntimo da TI, até o momento em que realmente trabalhei em um PMO de TI."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Eu me conecto muito com o propósito da SouJunior, pois considero que eu mesmo poderia ter sido um juninho, já não “nasci” necessariamente no mundo ágil e nem na TI, então também passei por uma transição de carreira e querendo ou não, errei muito no começo por conta dessa falta de prática."
+        },
+        {
+          "question": "Qual é a maior responsabilidade em ser Head de tantos juniores que estão atrás de sua primeira oportunidade?",
+          "awnser": "São várias as responsabilidades, mas entendo que como Head você acaba sendo o exemplo para o restante do pessoal e precisa entender o ambiente específico de cada pessoa do time para saber o que poderia ser o melhor para cada um."
+        },
+        {
+          "question": "Como é seu dia a dia como agilista?",
+          "awnser": "Hoje eu atuo muito forte com Kanban e OKRs em um nível mais tático/estratégico, não estou diariamente com um time de desenvolvimento. Faço toda a gestão do processo de gestão de portfólio de projetos através do Kanban e esses projetos são todos conectados aos OKRs, o qual também sou responsável por monitorar o progresso e alcance dos resultados."
+        },
+        {
+          "question": " Como você acompanha e mensura o processos dos times ágeis(Métricas ágeis)",
+          "awnser": "O acompanhamento é realizado através de eventos específicos para a análise das métricas (que vai acabar dependendo da metodologia/framework que você utiliza). A mensuração acaba tendo uma forte influência da ferramenta que você utiliza, como atualmente eu utilizo o Planner no trabalho, que não é uma ferramenta que já demonstra os indicadores de forma nativa, eu faço a extração de uma planilha Excel que serve como base de dados para um BI específico para isso e com isso consigo medir principalmente WIP, customer lead time, system lead time e throughput."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Acredito que o principal ponto é garantir que estamos em um ambiente seguro para falar e simplesmente ter uma escuta ativa, seja na daily, numa retrospectiva ou até mesmo de forma assíncrona. Sem isso, as pessoas temerão se expressar e não há ferramenta/framework que salve."
+        },
+        {
+          "question": "Qual é o “valor” que você mais se identifica dentro da agilidade?",
+          "awnser": "Adaptabilidade é mais importante do que seguir um plano. Por ter vindo do tradicional, entendo bem o que é ter processo de gestão de mudanças “engessados” em um mundo em que tudo muda o tempo todo."
+        },
+        {
+          "question": "O gerenciamento de conflitos faz parte do dia a dia do agilista?",
+          "awnser": "Como lidar com isso? Com certeza! São muitas pessoas envolvidas na gestão de produto, não somente a squad em si, mas toda a organização e o agilista precisa servir a todos."
+        },
+        {
+          "question": "Dentro das metodologias e Framework ágeis, quais você acha mais eficiente?",
+          "awnser": "O que melhor se adequa a sua realidade e necessidade. Não adianta escolher uma metodologia ou framework específico sem entender por que ele vai atender suas necessidades específicas, que por vezes pode até ser a combinação de frameworks diferentes e/ou criação de um próprio."
+        },
+        {
+          "question": "Dica para algum juninho?",
+          "awnser": "Começar a praticar com o que já tem disponível. O primeiro kanban que implantei foi para gerenciar minha própria rotina, aplicava as boas práticas e extraia métricas. Planeja uma viagem e usa Scrum, determina seus OKRs pessoais. Não espera ter a oportunidade do mercado para começar a praticar, cria a sua."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Alex",
+          "img": "https://user-images.githubusercontent.com/31568030/278702270-2c9540b6-5d64-4870-9d41-dd447fb33b4a.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/alex-dias-ferreira/",
+          "discord": "https://discordapp.com/users/696120686380580997"
+        },
+        {
+          "id": 2,
+          "nome": "Camila Timm",
+          "img": "https://user-images.githubusercontent.com/31568030/275546760-88048db9-a77f-45d8-9b40-a785ae807e17.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/camilatimm/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "discord": "https://discordapp.com/users/1114240390984384675"
+        },
+        {
+          "id": 4,
+          "nome": "Mateus Bianchini",
+          "img": "https://user-images.githubusercontent.com/31568030/277329106-dae06eb4-2369-491f-9d4a-69335c107f67.png",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/mateusbianchini/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "discord": "https://discordapp.com/users/781585214262476820"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Caique Fonseca",
+          "img": "https://user-images.githubusercontent.com/115566254/227945509-ee491044-adaf-41d1-804c-04d03783da75.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/caiquefonseca/",
+          "discord": "https://discordapp.com/users/394151026153881603"
+        },
+
+        {
+          "id": 1,
+          "nome": "Carolina Almeida",
+          "img": "https://user-images.githubusercontent.com/31568030/275661060-e9950538-4524-4342-ab6c-f2188dd425f3.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ffcarolina/",
+          "discord": "https://discordapp.com/users/1159819290917224490"
+        },
+
+        {
+          "id": 3,
+          "nome": "Cristiane Alves",
+          "img": "https://user-images.githubusercontent.com/31568030/277328238-6bf1f786-6a72-47e0-b61a-9824706b3b7b.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/cristiane-f-alves-36937216/",
+          "discord": "https://discordapp.com/users/1157401705613373530"
+        },
+
+        {
+          "id": 4,
+          "nome": "Denise Soares",
+          "img": "https://user-images.githubusercontent.com/31568030/275575911-452f4e2e-beb1-4c31-87fe-cdcbe97df2f9.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/denisescarvalho",
+          "discord": "https://discordapp.com/users/900886050380087376"
+        },
+        {
+          "id": 5,
+          "nome": "Flávio Sinfroni",
+          "img": "https://user-images.githubusercontent.com/31568030/275576269-dbfb1b27-27a6-4d85-8183-bd1acdf4741a.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/flaviosinfroni/",
+          "discord": "https://discordapp.com/users/1022269031216066743"
+        },
+        {
+          "id": 6,
+          "nome": "Humberto Cabarit",
+          "img": "https://user-images.githubusercontent.com/31568030/275556993-86d0e67f-30f0-4961-90ae-48ab5b19ace3.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/cabarit/",
+          "discord": "https://discordapp.com/users/779068469769011212"
+        },
+        {
+          "id": 7,
+          "nome": "Jhonatan Costa",
+          "img": "https://user-images.githubusercontent.com/31568030/277328583-1c9c9825-7cd9-42c9-9ff6-36bfbc8b9f08.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jhonatancostaamaral/",
+          "discord": "https://discordapp.com/users/85850757168889856"
+        },
+        {
+          "id": 8,
+          "nome": "Letícia",
+          "img": "https://user-images.githubusercontent.com/31568030/276695651-c27674ad-60c1-4383-be70-d132429290a6.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/l13c11o/",
+          "discord": "https://discordapp.com/users/85850757168889856"
+        },
+        {
+          "id": 9,
+          "nome": "Mariana Montenegro",
+          "img": "https://user-images.githubusercontent.com/31568030/275663625-1299c684-855d-40c1-ac8f-61b6e555c431.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/mariana-montenegro-7a661b15a/",
+          "discord": "https://discordapp.com/users/690959073247756330"
+        },
+        {
+          "id": 10,
+          "nome": "Rafaela Suguiura",
+          "img": "https://user-images.githubusercontent.com/31568030/275556774-a033c186-0823-4c33-b4bb-d7ebe415b18a.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/rafaela-suguiura",
+          "discord": "https://discordapp.com/users/1014601337708748841"
+        },
+        {
+          "id": 11,
+          "nome": "Viviana Schmidt",
+          "img": "https://user-images.githubusercontent.com/31568030/275661384-d305e54b-8121-461e-a796-6aa22fa3dab2.jpg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/vivianaschmidt/",
+          "discord": "https://discordapp.com/users/761712861088448562"
+        }
+      ]
+    }
+  },
+  {
+    "id": 6,
     "title": "Back-end",
     "url": "back-end",
     "image-hero": "/assets/hero-back-end.svg",
@@ -943,7 +1125,7 @@
     }
   },
   {
-    "id": 6,
+    "id": 7,
     "title": "Tech Recruiter",
     "url": "tech-recruiter",
     "image-hero": "/assets/hero-tech-recruiter.svg",
@@ -1047,4 +1229,3 @@
     }
   }
 ]
-
