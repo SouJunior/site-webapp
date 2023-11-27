@@ -8,7 +8,7 @@ export const iniciativasSouJunior = [
     ],
     image: "assets/iniciativa/lab.jpg",
     type: "type-1",
-    path: "https://bit.ly/soujunior-labs",
+    path: "https://soujunior.bcns.ai/labs",
   },
   {
     id: 2,
