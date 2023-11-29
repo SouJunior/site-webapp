@@ -8,7 +8,7 @@ export const iniciativasSouJunior = [
     ],
     image: "assets/iniciativa/lab.jpg",
     type: "type-1",
-    path: "https://discord.gg/soujunior-community-759176734460346423",
+    path: "https://soujunior.bcns.ai/labs",
   },
   {
     id: 2,
