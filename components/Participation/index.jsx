@@ -85,13 +85,7 @@ export const ParticipationSection = () => {
                     </Paragraph>
 
                     <button className={styles.button}>
-                      <a
-                        href="https://forms.gle/d7yFWXjCPj9CLFFN9"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        Quero Participar!
-                      </a>
+                      <a href="/seja-junior">Quero Participar!</a>
                     </button>
                   </div>
                 </>
