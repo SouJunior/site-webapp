@@ -4,6 +4,7 @@ import { FaArrowUp } from "react-icons/fa";
 import styles from "./Footer.module.css";
 import { dataSocial } from "../../../utils/dataSocial";
 import { Heading } from "../../commons/Heading";
+import { Logo } from "../logo";
 
 export const Footer = () => {
   //função voltar para o topo
@@ -35,11 +36,7 @@ export const Footer = () => {
       <footer className={styles.Footer} id={"redes-sociais"}>
         <div className={styles.container}>
           <div className={styles.logoWrapper}>
-            <img
-              className={styles.image}
-              src="/assets/icons/Logo.svg"
-              alt="#"
-            />
+            <Logo />
           </div>
           <div className={styles.footerContent}>
             <div className={styles.about}>

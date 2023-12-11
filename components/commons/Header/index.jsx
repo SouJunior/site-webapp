@@ -1,12 +1,11 @@
-import Image from "next/image";
 import Head from "next/head";
-import Link from "next/link";
 import Script from "next/script";
 
 import { Navbar } from "../../commons/Navbar";
 import { MenuMobile } from "../../commons/MenuMobile";
 import { keyWords } from "../../../utils/keyWords";
 import styles from "./Header.module.css";
+import { Logo } from "../logo";
 
 export const Header = () => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
@@ -30,15 +29,7 @@ export const Header = () => {
         ></meta>
       </Head>
       <div className={styles.container}>
-        <Link href="/" passHref>
-          <Image
-            className={styles.logo}
-            src="/assets/icons/Logo.svg"
-            alt="logo SouJunior"
-            width={216}
-            height={33}
-          />
-        </Link>
+        <Logo />
 
         <div className={styles.menu}>
           <Navbar />
