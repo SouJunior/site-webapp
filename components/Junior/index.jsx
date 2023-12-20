@@ -48,7 +48,7 @@ export const Junior = () => {
       openPopup();
       setLoading(true);
       try {
-        const response = await api.sendMailAdmin("/mail/collaborato", {
+        const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Quero ser Junior",
           data: { ...data },
         });
