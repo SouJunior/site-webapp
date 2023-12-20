@@ -4,11 +4,11 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
   FaYoutube,
   FaTelegram,
   FaTwitch,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const dataSocial = [
   {
@@ -44,7 +44,7 @@ export const dataSocial = [
   {
     id: "twitter",
     name: "twitter",
-    icon: <FaTwitter />,
+    icon: <FaXTwitter />,
     path: "https://mobile.twitter.com/SouJunior_Tech",
   },
   {
