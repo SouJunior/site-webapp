@@ -48,7 +48,7 @@ export const Junior = () => {
       openPopup();
       setLoading(true);
       try {
-        const response = await api.sendMailAdmin("/mail/collaborator", {
+        const response = await api.sendMailAdmin("/mail/collaborato", {
           subject: "Quero ser Junior",
           data: { ...data },
         });
@@ -122,7 +122,7 @@ export const Junior = () => {
                 email: "",
                 linkedin: "",
                 areas: "",
-                disponibilidade: "",
+                disponibilidade: "Até 5 horas semanais",
                 mensagem: "",
               }}
               validationSchema={validationSchema}
@@ -282,6 +282,11 @@ export const Junior = () => {
                           </option>
                         ))}
                     </Field>
+                    <ErrorMessage
+                      name="areas"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
                   </div>
                   <div>
                     <label>
