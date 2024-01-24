@@ -44,7 +44,7 @@
   font-family: inherit;
 }
 
-.radioLabel {
+.optionsLabel {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 
-.customRadio {
+.customOptions {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,7 +65,7 @@
   height: 20px;
 }
 
-.radiosContainer {
+.optionsContainer {
   display: flex;
   gap: 10px;
 }
@@ -98,7 +98,7 @@
     padding: 0 3.2rem;
   }
 
-  .radios {
+  .options {
     gap: 2.4rem;
   }
   .button {

@@ -29,7 +29,6 @@ export const Junior = () => {
     "DevOps",
     "Front-end",
     "Marketing",
-    "Mobile",
     "Quality Assurance (QA)",
     "Scrum Master",
     "Tech Recruiter",
@@ -124,6 +123,8 @@ export const Junior = () => {
                 areas: "",
                 disponibilidade: "",
                 mensagem: "",
+                diasDaSemana: "",
+                periodo: "",
               }}
               validationSchema={validationSchema}
               onSubmit={onSubmit}
@@ -204,11 +205,11 @@ export const Junior = () => {
                       *
                     </label>
                     <label
-                      className={styles.radioLabel}
+                      className={styles.optionsLabel}
                       htmlFor="Até 5 horas semanais"
                     >
                       <Field
-                        className={styles.customRadio}
+                        className={styles.customOptions}
                         type="radio"
                         name="disponibilidade"
                         value="Até 5 horas semanais"
@@ -218,11 +219,11 @@ export const Junior = () => {
                       Até 5 horas semanais
                     </label>
                     <label
-                      className={styles.radioLabel}
+                      className={styles.optionsLabel}
                       htmlFor="5 a 10 horas semanais"
                     >
                       <Field
-                        className={styles.customRadio}
+                        className={styles.customOptions}
                         type="radio"
                         name="disponibilidade"
                         value="5 a 10 horas semanais"
@@ -231,11 +232,11 @@ export const Junior = () => {
                       5 a 10 horas semanais
                     </label>
                     <label
-                      className={styles.radioLabel}
+                      className={styles.optionsLabel}
                       htmlFor="10 a 15 horas semanais"
                     >
                       <Field
-                        className={styles.customRadio}
+                        className={styles.customOptions}
                         type="radio"
                         name="disponibilidade"
                         value="10 a 15 horas semanais"
@@ -244,11 +245,11 @@ export const Junior = () => {
                       10 a 15 horas semanais
                     </label>
                     <label
-                      className={styles.radioLabel}
+                      className={styles.optionsLabel}
                       htmlFor="Mais de 15 horas semanais"
                     >
                       <Field
-                        className={styles.customRadio}
+                        className={styles.customOptions}
                         type="radio"
                         name="disponibilidade"
                         value="Mais de 15 horas semanais"
@@ -256,11 +257,151 @@ export const Junior = () => {
                       />
                       Mais de 15 horas semanais
                     </label>
+                    <ErrorMessage
+                      name="disponibilidade"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
+                  <div
+                    role="diasDaSemanaGroup"
+                    id="diasDaSemanaGroup"
+                    name="diasDaSemanaGroup"
+                    className={styles}
+                  >
+                    <label>
+                      Quais são os dias da semana em que você tem disponibilidade para atuar na SouJunior?
+                      *
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Segunda-feira"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="diasDaSemana"
+                        value="Segunda-feira"
+                        id="Segunda-feira"
+                      />
+                      Segunda-feira
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Terça-feira"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="diasDaSemana"
+                        value="Terça-feira"
+                        id="Terça-feira"
+                      />
+                      Terça-feira
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="diasDaSemana"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="diasDaSemana"
+                        value="Quarta-feira"
+                        id="Quarta-feira"
+                      />
+                      Quarta-feira
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Quinta-feira"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="diasDaSemana"
+                        value="Quinta-feira"
+                        id="Quinta-feira"
+                      />
+                      Quinta-feira
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Sexta-feira"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="diasDaSemana"
+                        value="Sexta-feira"
+                        id="Sexta-feira"
+                      />
+                      Sexta-feira
+                    </label>
+                    <ErrorMessage
+                      name="diasDaSemana"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
+                  </div>
+                  <div
+                    role="periodoGroup"
+                    id="periodoGroup"
+                    name="periodoGroup"
+                    className={styles}
+                  >
+                    <label>
+                      Qual é o período do dia em que você geralmente tem disponibilidade para atuar na Sou Junior?
+                      *
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Matutino"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="periodo"
+                        value="Matutino"
+                        id="Matutino"
+                      />
+                      Matutino
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Vespertino"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="periodo"
+                        value="Vespertino"
+                        id="Vespertino"
+                      />
+                      Vespertino
+                    </label>
+                    <label
+                      className={styles.optionsLabel}
+                      htmlFor="Noturno"
+                    >
+                      <Field
+                        className={styles.customOptions}
+                        type="checkbox"
+                        name="periodo"
+                        value="Noturno"
+                        id="Noturno"
+                      />
+                      Noturno
+                    </label>
+                    <ErrorMessage
+                      name="periodo"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
                   </div>
                   <div>
                     <label>
-                      Qual das opções abaixo seria sua área de
-                      atuação/interesse? *
+                      Qual das opções abaixo seria sua área de interesse? *
                     </label>
                     <Field as="select" name="areas" className={styles.select}>
                       <option
@@ -282,11 +423,15 @@ export const Junior = () => {
                           </option>
                         ))}
                     </Field>
+                    <ErrorMessage
+                      name="areas"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
                   </div>
                   <div>
                     <label>
-                      Pode me contar um pouco sobre o motivo que o(a) levou a
-                      escolher essa área de atuação? *
+                      Conte-me um pouco sobre o motivo que o(a) levou a escolher essa área de atuação. *
                     </label>
                     <Field
                       as="textarea"
