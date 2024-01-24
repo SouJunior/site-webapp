@@ -84,11 +84,21 @@ export const Junior = () => {
       .required("O campo Linkedin é obrigatório."),
     areas: Yup.string()
       .oneOf([...areasOption], "")
-      .required("* Escolha um opção por favor."),
+      .required("Escolha um opção por favor."),
     disponibilidade: Yup.string().required(
-      "Por favor assinale umas das opções pra prosseguir"
+      "Por favor, assinale umas das opções pra prosseguir"
     ),
     mensagem: Yup.string().required("O campo Mensagem é obrigatório."),
+    diasDaSemana: Yup.array()
+    .of(Yup.string())
+    .test('ao-menos-um-selecionado', 'Por favor, selecione pelo menos um dia da semana.', (value) => {
+      return value && value.length > 0;
+    }),
+    periodo: Yup.array()
+    .of(Yup.string())
+    .test('ao-menos-um-selecionado', 'Por favor, selecione pelo menos um período.', (value) => {
+      return value && value.length > 0;
+    }),
   });
 
   return (
