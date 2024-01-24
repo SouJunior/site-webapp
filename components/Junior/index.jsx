@@ -280,7 +280,7 @@ export const Junior = () => {
                     className={styles}
                   >
                     <label>
-                      Quais são os dias da semana em que você tem disponibilidade para atuar na SouJunior?
+                      Quais são os dias da semana em que você tem disponibilidade para atuar na Sou Junior?
                       *
                     </label>
                     <label
