@@ -1,13 +1,13 @@
-import { useRef } from "react";
 import Image from "next/image";
-import styles from "../OccupationSection/OccupationSection.module.css";
-import { carouselItems } from "../../utils/carouselItems";
-import { Paragraph } from "../commons/Paragraph";
-import { Heading } from "../commons/Heading";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useRef } from "react";
 import { Controller, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { carouselItems } from "../../utils/carouselItems";
+import styles from "../OccupationSection/OccupationSection.module.css";
+import { Heading } from "../commons/Heading";
+import { Paragraph } from "../commons/Paragraph";
 
 export const OccupationSection = () => {
   const navigationPrevRef = useRef(null);
@@ -32,12 +32,14 @@ export const OccupationSection = () => {
               rewind={true}
               modules={[Controller, Navigation]}
               navigation={{
-                prevEl: navigationPrevRef.current,
-                nextEl: navigationNextRef.current,
+                prevEl: navigationPrevRef?.current,
+                nextEl: navigationNextRef?.current,
               }}
-              onBeforeInit={(swiper) => {
-                swiper.params.navigation.prevEl = navigationPrevRef.current;
-                swiper.params.navigation.nextEl = navigationNextRef.current;
+              onInit={(swiper) => {
+                swiper.params.navigation.prevEl = navigationPrevRef?.current;
+                swiper.params.navigation.nextEl = navigationNextRef?.current;
+                swiper.navigation.init();
+                swiper.navigation.update();
               }}
             >
               {carouselItems.map(({ title, icon }) => (
@@ -52,6 +54,7 @@ export const OccupationSection = () => {
           </div>
         </div>
       </section>
+
       <div className={styles.arrowContainer}>
         <button ref={navigationPrevRef}>
           <Image
