@@ -57,7 +57,7 @@ export const OccupationSection = () => {
 
       <div className={styles.arrowContainer}>
         <button ref={navigationPrevRef}>
-          <Image
+          <img
             src="/assets/button-directional-dark-caroussel.svg"
             width={62}
             height={62}
@@ -65,7 +65,7 @@ export const OccupationSection = () => {
           />
         </button>
         <button ref={navigationNextRef}>
-          <Image
+          <img
             src="/assets/button-directional-dark-caroussel.svg"
             width={62}
             height={62}
