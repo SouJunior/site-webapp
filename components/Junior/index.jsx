@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
@@ -16,6 +16,10 @@ export const Junior = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setIsSubmitting(true);
+  }, [isSubmitting]);
 
   const imageUrl = "/assets/popup.svg";
 
@@ -39,14 +43,13 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    setLoading(true);
+    openPopup();
     setIsSubmitting(true);
+    setLoading(true);
 
     const { confirmarEmail, ...data } = values;
 
     if (isSubmitting) {
-      openPopup();
-      setLoading(true);
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
           subject: "Quero ser Junior",
@@ -62,8 +65,9 @@ export const Junior = () => {
       } catch (error) {
         openPopup();
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
   };
 
@@ -122,7 +126,7 @@ export const Junior = () => {
                 email: "",
                 linkedin: "",
                 areas: "",
-                disponibilidade: "",
+                disponibilidade: "Até 5 horas semanais",
                 mensagem: "",
               }}
               validationSchema={validationSchema}
@@ -282,6 +286,11 @@ export const Junior = () => {
                           </option>
                         ))}
                     </Field>
+                    <ErrorMessage
+                      name="areas"
+                      component="div"
+                      className={styles.errorMessage}
+                    />
                   </div>
                   <div>
                     <label>
@@ -310,7 +319,7 @@ export const Junior = () => {
                     />
                   </div>
                   <div className={styles.buttons}>
-                    <button type="submit">Enviar</button>
+                    <button>Enviar</button>
                   </div>
                 </Form>
               )}

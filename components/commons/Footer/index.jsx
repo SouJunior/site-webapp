@@ -67,7 +67,7 @@ export const Footer = () => {
                   <Link href={"/ouvidoria"}>Ouvidoria</Link>
                 </li>
                 <li className={styles.link}>
-                  <Link href={"/apoiar"}>Faça parte</Link>
+                  <Link href={"/?#participation"}>Faça parte</Link>
                 </li>
               </ul>
             </div>
