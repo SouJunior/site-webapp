@@ -14,8 +14,6 @@ export const AdminQuickAccessSection = () => {
   return (
     <>
       <section className="w-screen flex flex-col gap-3 items-center p-16 ">
-        {/* <section className="max-w-5xl flex flex-col gap-3"> */}
-
         <div className="w-full max-w-7xl">
           <h3 className="self-start font-bold text-2xl text-primary pb-3">
             Acessos recentes
