@@ -13,6 +13,8 @@ module.exports = {
         secondary: "#003872",
         primaryHover: "#0C4987",
         submenu: "#006AD7",
+        tablePrimary: "rgba(0, 106, 215, 0.2)",
+        tableSecondary: "rgba(12, 73, 135, 0.2)",
         "primary+1": "#95C6FF",
       },
     },
