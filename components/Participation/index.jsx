@@ -85,7 +85,7 @@ export const ParticipationSection = () => {
                     </Paragraph>
 
                     <button className={styles.button}>
-                      <a href="/seja-junior">Quero Participar!</a>
+                      <a href="https://stars.soujunior.tech/">Quero Participar!</a>
                     </button>
                   </div>
                 </>
