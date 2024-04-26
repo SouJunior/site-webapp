@@ -288,7 +288,7 @@ export const Apoiador = () => {
               <Input
                 type="email"
                 text="Confirme seu e-mail.*"
-                label="Confirmar Email"
+                label="O campo Confirme seu e-mail é obrigatório."
                 placeholder="Digite o seu e-mail"
                 value={confirmEmail}
                 onChange={handleConfirmEmailChange}
