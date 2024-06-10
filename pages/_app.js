@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
       return <Component {...pageProps} />
     case '/admin-login':
       return <Component {...pageProps} />
+    case '/admin-signup':
+      return <Component {...pageProps} />
     default:
       return (
         <Layout>
