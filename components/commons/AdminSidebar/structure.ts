@@ -18,5 +18,5 @@ export const sidebarOptions = [
     {name: 'Suporte', path: '/', sub: [
         {name: 'Reportar Problemas', path: '/'},
     ]},
-    {name: 'Sair', path: '/'}
+    {name: 'Sair', path: '/admin-login'}
 ]
