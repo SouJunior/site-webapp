@@ -1,15 +1,15 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import Image from "next/image"
+import Cookies from 'js-cookie';
 
 const AdminHeader = () => {
-    const userType = {
-        admin: {
-            name: "Administrador"
-        },
-        adminMaster: {
-            name: "Administrador Master"
+    const [name, setName] = useState()
+
+    useEffect(() => {
+        if (Cookies.get("name")) {
+            setName(Cookies.get("name"))
         }
-    }
+    }, [])
 
     return (
         <header className="bg-primary w-screen h-24 px-12 flex items-center justify-between">
@@ -20,7 +20,7 @@ const AdminHeader = () => {
                 height={42}
             />
             <div className="flex items-center gap-4">
-                <span className="text-3xl hidden sm:block">Olá, {userType.admin.name}!</span>
+                <span className="text-3xl hidden sm:block">Olá {name}!</span>
                 <Image
                     src="/assets/foto-perfil-exemplo.svg"
                     alt="Foto de Perfil"

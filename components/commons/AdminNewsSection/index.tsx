@@ -1,3 +1,4 @@
+import React from "react";
 import axios from "axios"
 import * as Dialog from '@radix-ui/react-dialog'
 import { X } from 'lucide-react'
@@ -14,22 +15,23 @@ export const AdminNewsSection = ({ news, setRefetch }) => {
     const startIndex = currentPage * itemsPerPage;
     const endIndex = Math.min(startIndex + itemsPerPage, news.length);
 
-    const handleDelete = async (id) => {
-        const res = await axios.delete(`http://localhost:5000/news/${id}`)
-        if (res.status === 200) {
-            setRefetch(prev => !prev)
-        }
-    }
+    // News Requests Mock com JSON Server
+    // const handleDelete = async (id) => {
+    //     const res = await axios.delete(`http://localhost:5000/news/${id}`)
+    //     if (res.status === 200) {
+    //         setRefetch(prev => !prev)
+    //     }
+    // }
 
-    const handleEdit = async (id) => {
-        const res = await axios.put(`http://localhost:5000/news/${id}`, {
-            title,
-            content,
-        })
-        if (res.status === 200) {
-            setRefetch(prev => !prev)
-        }
-    }
+    // const handleEdit = async (id) => {
+    //     const res = await axios.put(`http://localhost:5000/news/${id}`, {
+    //         title,
+    //         content,
+    //     })
+    //     if (res.status === 200) {
+    //         setRefetch(prev => !prev)
+    //     }
+    // }
 
     const nextPage = () => {
         setCurrentPage((prev) => Math.min(prev + 1, totalPages - 1));
@@ -67,7 +69,14 @@ export const AdminNewsSection = ({ news, setRefetch }) => {
                                     {
                                         item.title &&
                                         <button>
-                                            <img onClick={() => handleDelete(item.id)} src="../assets/icons/delete.svg" alt="ícone de remover" className="size-7"/>
+                                            <img
+                                                onClick={() => {
+                                                    // handleDelete(item.id)
+                                                }}
+                                                src="../assets/icons/delete.svg"
+                                                alt="ícone de remover"
+                                                className="size-7"
+                                            />
                                         </button>
                                     }
                                 </td>
@@ -106,7 +115,7 @@ export const AdminNewsSection = ({ news, setRefetch }) => {
                                 className='flex-1 flex flex-col'
                                 onSubmit={(e) => {
                                     e.preventDefault()
-                                    handleEdit(newsId)
+                                    // handleEdit(newsId)
                                 }}
                             >
                                 <input

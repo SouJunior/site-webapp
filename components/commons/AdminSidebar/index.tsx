@@ -1,4 +1,5 @@
     import React, { useEffect, useState } from "react";
+    import Cookies from 'js-cookie';
     import Link from "next/link";
     import Image from "next/image";
     import { sidebarOptions } from "./structure";
@@ -7,6 +8,11 @@
     const AdminSidebar = () => {
         const [isCollapsed, setIsCollapsed] = useState(false);
         const [expandedOptions, setExpandedOptions] = useState({});
+
+        const signOut = () => {
+            Cookies.remove('email');
+            Cookies.remove('name');        
+        }
 
         const toggleOption = (optionName) => {
             setExpandedOptions(prevState => {
@@ -47,7 +53,13 @@
                                 <div key={option.name}>
                                     <li
                                         key={option.name}
-                                        onClick={() => toggleOption(option.name)}
+                                        onClick={() => {
+                                            if (option.name === "Sair") {
+                                                signOut()
+                                            } else {
+                                                toggleOption(option.name)
+                                            }
+                                        }}
                                         className={`${isCollapsed ? 'pl-0 hidden' : 'pl-2'} w-full text-2xl py-2  border-b border-b-secondary bg-primary hover:bg-primaryHover cursor-pointer`} 
                                     >
                                         <Link href={option.path}>{option.name}</Link>

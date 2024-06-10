@@ -1,23 +1,25 @@
-import axios from "axios"
-import * as Dialog from '@radix-ui/react-dialog'
-import { X } from 'lucide-react'
-import { uniqueId } from '../../../utils/uniqueId'
+import React from "react";
+import axios from "axios";
+import * as Dialog from '@radix-ui/react-dialog';
+import { X } from 'lucide-react';
+import { uniqueId } from '../../../utils/uniqueId';
 import { useState } from 'react';
 
-export const AdminModal = ({setRefetch}) => {
+export const AdminModal = ({ setRefetch }) => {
     const [title, setTitle] = useState("")
     const [content, setContent] = useState("")
 
-    const handleNews = async () => {
-        const res = await axios.post("http://localhost:5000/news", {
-            title,
-            content,
-            id: uniqueId()
-        })
-        if (res.status === 201) {
-            setRefetch(prev => !prev)
-        }
-    }
+    // Fetch News Mock com JSON Server
+    // const handleNews = async () => {
+    //     const res = await axios.post("http://localhost:5000/news", {
+    //         title,
+    //         content,
+    //         id: uniqueId()
+    //     })
+    //     if (res.status === 201) {
+    //         setRefetch(prev => !prev)
+    //     }
+    // }
 
     return (
         <Dialog.Root>
@@ -40,7 +42,7 @@ export const AdminModal = ({setRefetch}) => {
                         className='flex-1 flex flex-col'
                         onSubmit={(e) => {
                             e.preventDefault()
-                            handleNews()
+                            // handleNews()
                         }}
                     >
                         <input
