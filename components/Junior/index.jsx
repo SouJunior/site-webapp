@@ -48,6 +48,7 @@ export const Junior = () => {
 
   const onSubmit = async (values, { resetForm }) => {
     setShowAlertMessage(true)
+    return;
     openPopup();
     setIsSubmitting(true);
     setLoading(true);
