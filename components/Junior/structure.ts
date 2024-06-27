@@ -69,26 +69,26 @@ export const areasOption = [
 
 export const getValidationSchema = (hasSubareas, requiresDate) => {
   return Yup.object().shape({
-    nome: Yup.string()
+    name: Yup.string()
       .min(3, "O campo Nome precisa ter no mínimo 3 caracteres.")
       .required("O campo Nome completo é obrigatório."),
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
-    confirmarEmail: Yup.string()
+    confirmEmail: Yup.string()
       .oneOf([Yup.ref("email")], "O email deve ser o mesmo")
       .required("O campo Confirmar e-mail é obrigatório."),
     linkedin: Yup.string()
       .url("Link inválido.")
       .required("O campo Linkedin é obrigatório."),
-    areas: Yup.string()
+    area: Yup.string()
       .required("* Escolha um opção por favor."),
     subarea: hasSubareas
       ? Yup.string().required("* Escolha uma subárea por favor.")
       : Yup.string().nullable(),
-    disponibilidade: Yup.string()
+    availability: Yup.string()
       .required("Por favor assinale umas das opções pra prosseguir"),
-    inicioDate: requiresDate
+    startDate: requiresDate
       ? Yup.date().required("Por favor, escolha uma data.")
       : Yup.date().nullable(),
     toolsKnowledge: Yup.string()
@@ -103,24 +103,24 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
       .min(200, "O campo deve ter no mínimo 200 caracteres.")
       .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
-      infos: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
-      terms: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
+    contactAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
+    termsAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
   });
 };
 
 export const initialValues = {
-  nome: "",
+  name: "",
   email: "",
-  confirmarEmail: "",
+  confirmEmail: "",
   linkedin: "",
-  areas: "",
+  area: "",
   subarea: "",
-  disponibilidade: "Até 5 horas semanais",
-  turno: "turno-disponivel",
-  inicioDate: "",
+  availability: "Até 5 horas semanais",
+  turn: "turno-disponivel",
+  startOption: "imediato", 
   toolsKnowledge: "",
   fieldKnowledge: "",
   volunteerMotivation: "",
-  infos: false,
-  terms: false
+  contactAgreement: false,
+  termsAgreement: false
 }

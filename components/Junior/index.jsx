@@ -47,6 +47,8 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
+    console.log(values)
+    return
     setShowAlertMessage(true)
     openPopup();
     setIsSubmitting(true);
@@ -81,7 +83,7 @@ export const Junior = () => {
   };
 
   const handleAreaChange = (setFieldValue, area) => {
-    setFieldValue("areas", area);
+    setFieldValue("area", area);
     const selectedArea = areasOption.find(option => option.value === area);
 
     if (selectedArea && selectedArea.sub) {
@@ -94,7 +96,7 @@ export const Junior = () => {
   };
 
   const handleInicioChange = (setFieldValue, value) => {
-    setFieldValue("inicio", value);
+    setFieldValue("startOption", value);
     if (value === "Em uma data específica") {
       setRequiresDate(true);
     } else {
@@ -129,7 +131,8 @@ export const Junior = () => {
               validationSchema={getValidationSchema(subareas.length > 0, requiresDate)}
               onSubmit={onSubmit}
             >
-              {({ isSubmitting, values, setFieldValue, resetForm, isValid, dirty }) => {
+              {({ isSubmitting, values, setFieldValue, resetForm, isValid, dirty, errors }) => {
+                console.log(errors)
                 if (dirty) {
                   setFormDirty(true)
                 }
@@ -139,14 +142,14 @@ export const Junior = () => {
                       <label>Nome completo: *</label>
                       <Field
                         type="text"
-                        name="nome"
+                        name="name"
                         placeholder="Escrever o nome aqui"
                         maxLength={100}
                         className={styles.input}
                         onBlur={() => setFormDirty(true)}
                       />
                       <ErrorMessage
-                        name="nome"
+                        name="name"
                         component="div"
                         className={styles.errorMessage}
                       />
@@ -169,12 +172,12 @@ export const Junior = () => {
                       <label>Confirmar e-mail: *</label>
                       <Field
                         type="email"
-                        name="confirmarEmail"
+                        name="confirmEmail"
                         placeholder="email@email.com"
                         className={styles.input}
                       />
                       <ErrorMessage
-                        name="confirmarEmail"
+                        name="confirmEmail"
                         component="div"
                         className={styles.errorMessage}
                       />
@@ -213,7 +216,7 @@ export const Junior = () => {
                             id="turno-disponivel"
                             className={styles.customRadio}
                             type="radio"
-                            name="turno"
+                            name="turn"
                             value="disponivel"
                             checked
                           />
@@ -227,7 +230,7 @@ export const Junior = () => {
                             id="turno-indisponivel"
                             className={styles.customRadio}
                             type="radio"
-                            name="turno"
+                            name="turn"
                             value="indisponivel"
                           />
                           Não
@@ -251,7 +254,7 @@ export const Junior = () => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="Até 5 horas semanais"
                           id="Até 5 horas semanais"
                           checked
@@ -265,7 +268,7 @@ export const Junior = () => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="5 a 10 horas semanais"
                           id="5 a 10 horas semanais"
                         />
@@ -278,7 +281,7 @@ export const Junior = () => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="10 a 15 horas semanais"
                           id="10 a 15 horas semanais"
                         />
@@ -291,7 +294,7 @@ export const Junior = () => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="Mais de 15 horas semanais"
                           id="Mais de 15 horas semanais"
                         />
@@ -315,7 +318,7 @@ export const Junior = () => {
                           <Field
                             className={styles.customRadio}
                             type="radio"
-                            name="inicio"
+                            name="startOption"
                             onChange={() => handleInicioChange(setFieldValue, "Imediato")}
                             value="Imediato"
                             id="Imediato"
@@ -330,7 +333,7 @@ export const Junior = () => {
                           <Field
                             className={styles.customRadio}
                             type="radio"
-                            name="inicio"
+                            name="startOption"
                             onChange={() => handleInicioChange(setFieldValue, "Em até 1 mês")}
                             value="Em até 1 mês"
                             id="Em até 1 mês"
@@ -344,7 +347,7 @@ export const Junior = () => {
                           <Field
                             className={styles.customRadio}
                             type="radio"
-                            name="inicio"
+                            name="startOption"
                             onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
                             value="Em uma data específica"
                             id="Em uma data específica"
@@ -353,12 +356,12 @@ export const Junior = () => {
                           <Field
                             className={styles.customSelectDate}
                             type="date"
-                            name="inicioDate"
-                            id="inicioDate"
-                            disabled={values.inicio !== "Em uma data específica"}
+                            name="startDate"
+                            id="startDate"
+                            disabled={values.startOption !== "Em uma data específica"}
                           />
                           <ErrorMessage
-                            name="inicioDate"
+                            name="startDate"
                             component="div"
                             className={styles.errorMessage}
                           />
@@ -371,7 +374,7 @@ export const Junior = () => {
                       </label>
                       <Field
                         as="select"
-                        name="areas"
+                        name="area"
                         className={styles.select}
                         onChange={(e) => handleAreaChange(setFieldValue, e.target.value)}
                       >
@@ -394,7 +397,7 @@ export const Junior = () => {
                           ))}
                       </Field>
                       <ErrorMessage
-                        name="areas"
+                        name="area"
                         component="div"
                         className={styles.errorMessage}
                       />
@@ -511,16 +514,16 @@ export const Junior = () => {
                       <div className={styles.fieldDiv}>
                         <label
                           className={styles.radioLabel}
-                          htmlFor="infos"
+                          htmlFor="contactAgreement"
                         >
                           <Field
                             type="checkbox"
-                            name="infos"
+                            name="contactAgreement"
                           />
                           Declaro as informações fornecidas corretas e autorizo a SouJunior a me contatar
                         </label>
                         <ErrorMessage
-                          name="infos"
+                          name="contactAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
@@ -528,16 +531,16 @@ export const Junior = () => {
                       <div className={styles.fieldDiv}>
                         <label
                           className={styles.radioLabel}
-                          htmlFor="terms"
+                          htmlFor="termsAgreement"
                         >
                           <Field
                             type="checkbox"
-                            name="terms"
+                            name="termsAgreement"
                           />
                           Estou de acordo com os Termos e Condições
                         </label>
                         <ErrorMessage
-                          name="terms"
+                          name="termsAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
