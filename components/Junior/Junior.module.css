@@ -315,3 +315,12 @@ form .buttons {
     padding: 0;
   }
 }
+
+@media (max-width: 425px) {
+  .turnoRadioGroup{
+    flex-direction: column;
+  }
+  .form label {
+    font-size: 15px;
+  }
+}
