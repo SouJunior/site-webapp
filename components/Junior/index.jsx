@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { areasOption, getValidationSchema, initialValues } from "./structure";
+import { getValidationSchema, initialValues } from "./structure";
 
 import styles from "./Junior.module.css";
 
@@ -17,12 +17,19 @@ export const Junior = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [areas, setAreas] = useState([]);
   const [subareas, setSubareas] = useState([]);
   const [requiresDate, setRequiresDate] = useState(false);
   const [showAlertMessage, setShowAlertMessage] = useState(false);
   const [formDirty, setFormDirty] = useState(false);
 
   useEffect(() => {
+    (async () => {
+      const res = await api.get("/area")
+
+      setAreas(res.data)
+    })()
+    
     setIsSubmitting(true);
 
     const confirmExit = (e) => {
@@ -47,23 +54,40 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    console.log(values)
-    return
-    setShowAlertMessage(true)
-    openPopup();
+    setShowAlertMessage(true);
     setIsSubmitting(true);
     setLoading(true);
 
     const { confirmarEmail, ...data } = values;
 
+    const startDate = values.startOption === "imediato" ?
+      new Date()
+      : values.startOption === "em até 1 mês" ?
+        new Date(new Date().setMonth(new Date().getMonth() + 1))
+          : new Date(values.startDate)
+  
     if (isSubmitting) {
       try {
-        const response = await api.sendMailAdmin("/mail/collaborator", {
-          subject: "Quero ser Junior",
-          data: { ...data },
-        });
+        const response = await api.post("/juniors",
+          {
+            name: values.name,
+            email: values.email,
+            linkedin: values.linkedin,
+            turn: values.turn === "turno-disponivel" ? true : false,
+            start_option: values.startOption,
+            availability: values.availability,
+            tools_knowledge: values.toolsKnowledge,
+            field_knowledge: values.fieldKnowledge,
+            volunteer_motivation: values.volunteerMotivation,
+            contact_agreement: values.contactAgreement ? true : false,
+            terms_agreement: values.termsAgreement ? true : false,
+            start_date: startDate,
+            id_area: Number(values.area),
+            id_subarea: Number(values.subarea),
+          }
+        )
 
-        if (response.status !== 200) {
+        if (response.status !== 201) {
           throw new Error("Não foi possível enviar a requisição");
         }
         setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
@@ -78,16 +102,12 @@ export const Junior = () => {
     }
   };
 
-  const handleClear = (resetForm) => {
-    resetForm();
-  };
+  const handleAreaChange = (setFieldValue, id) => {
+    setFieldValue("area", id);
+    const selectedArea = areas.find(option => option.id === Number(id));
 
-  const handleAreaChange = (setFieldValue, area) => {
-    setFieldValue("area", area);
-    const selectedArea = areasOption.find(option => option.value === area);
-
-    if (selectedArea && selectedArea.sub) {
-      setSubareas(selectedArea.sub);
+    if (selectedArea && selectedArea.subareas) {
+      setSubareas(selectedArea.subareas);
       setFieldValue("subarea", "");
     } else {
       setSubareas([]);
@@ -131,8 +151,7 @@ export const Junior = () => {
               validationSchema={getValidationSchema(subareas.length > 0, requiresDate)}
               onSubmit={onSubmit}
             >
-              {({ isSubmitting, values, setFieldValue, resetForm, isValid, dirty, errors }) => {
-                console.log(errors)
+              {({ isSubmitting, values, setFieldValue, isValid, dirty, errors }) => {
                 if (dirty) {
                   setFormDirty(true)
                 }
@@ -385,12 +404,12 @@ export const Junior = () => {
                         >
                           Selecione a área de atuação
                         </option>
-                        {areasOption
+                        {areas
                           .map((areaOption) => (
                             <option
                               label={areaOption.name}
-                              value={areaOption.value}
-                              key={areaOption.value}
+                              value={areaOption.id}
+                              key={areaOption.id}
                             >
                               {areaOption.name}
                             </option>
@@ -418,8 +437,8 @@ export const Junior = () => {
                           {subareas.map((subarea) => (
                             <option
                               label={subarea.name}
-                              value={subarea.value}
-                              key={subarea.value}
+                              value={subarea.id}
+                              key={subarea.id}
                             >
                               {subarea.name}
                             </option>
