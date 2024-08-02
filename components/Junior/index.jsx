@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
-import { areasOption, getValidationSchema, initialValues } from "./structure";
+import { getValidationSchema, initialValues } from "./structure";
 
 import styles from "./Junior.module.css";
 
@@ -18,6 +18,7 @@ export const Junior = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [areas, setAreas] = useState([]);
   const [subareas, setSubareas] = useState([]);
   const [requiresDate, setRequiresDate] = useState(false);
   const [showAlertMessage, setShowAlertMessage] = useState(false);
@@ -26,6 +27,12 @@ export const Junior = () => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   useEffect(() => {
+    (async () => {
+      const res = await api.get("/area")
+
+      setAreas(res.data)
+    })()
+    
     setIsSubmitting(true);
 
     const confirmExit = (e) => {
@@ -50,21 +57,40 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    setShowAlertMessage(true)
-    openPopup();
+    setShowAlertMessage(true);
     setIsSubmitting(true);
     setLoading(true);
 
     const { confirmarEmail, ...data } = values;
 
+    const startDate = values.startOption === "imediato" ?
+      new Date()
+      : values.startOption === "em até 1 mês" ?
+        new Date(new Date().setMonth(new Date().getMonth() + 1))
+          : new Date(values.startDate)
+  
     if (isSubmitting) {
       try {
-        const response = await api.sendMailAdmin("/mail/collaborator", {
-          subject: "Quero ser Junior",
-          data: { ...data },
-        });
+        const response = await api.post("/juniors",
+          {
+            name: values.name,
+            email: values.email,
+            linkedin: values.linkedin,
+            turn: values.turn === "turno-disponivel" ? true : false,
+            start_option: values.startOption,
+            availability: values.availability,
+            tools_knowledge: values.toolsKnowledge,
+            field_knowledge: values.fieldKnowledge,
+            volunteer_motivation: values.volunteerMotivation,
+            contact_agreement: values.contactAgreement ? true : false,
+            terms_agreement: values.termsAgreement ? true : false,
+            start_date: startDate,
+            id_area: Number(values.area),
+            id_subarea: Number(values.subarea),
+          }
+        )
 
-        if (response.status !== 200) {
+        if (response.status !== 201) {
           throw new Error("Não foi possível enviar a requisição");
         }
         setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
@@ -79,16 +105,12 @@ export const Junior = () => {
     }
   };
 
-  const handleClear = (resetForm) => {
-    resetForm();
-  };
+  const handleAreaChange = (setFieldValue, id) => {
+    setFieldValue("area", id);
+    const selectedArea = areas.find(option => option.id === Number(id));
 
-  const handleAreaChange = (setFieldValue, area) => {
-    setFieldValue("areas", area);
-    const selectedArea = areasOption.find(option => option.value === area);
-
-    if (selectedArea && selectedArea.sub) {
-      setSubareas(selectedArea.sub);
+    if (selectedArea && selectedArea.subareas) {
+      setSubareas(selectedArea.subareas);
       setFieldValue("subarea", "");
     } else {
       setSubareas([]);
@@ -97,7 +119,7 @@ export const Junior = () => {
   };
 
   const handleInicioChange = (setFieldValue, value) => {
-    setFieldValue("inicio", value);
+    setFieldValue("startOption", value);
     if (value === "Em uma data específica") {
       setRequiresDate(true);
     } else {
@@ -151,7 +173,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
               validationSchema={getValidationSchema(subareas.length > 0, requiresDate)}
               onSubmit={onSubmit}
             >
-              {({ isSubmitting, values, setFieldValue, resetForm, isValid, dirty }) => {
+              {({ isSubmitting, values, setFieldValue, isValid, dirty, errors }) => {
                 if (dirty) {
                   setFormDirty(true)
                 }
@@ -161,14 +183,14 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       <label>Nome completo: *</label>
                       <Field
                         type="text"
-                        name="nome"
+                        name="name"
                         placeholder="Escrever o nome aqui"
                         maxLength={100}
                         className={styles.input}
                         onBlur={() => setFormDirty(true)}
                       />
                       <ErrorMessage
-                        name="nome"
+                        name="name"
                         component="div"
                         className={styles.errorMessage}
                       />
@@ -191,12 +213,12 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       <label>Confirmar e-mail: *</label>
                       <Field
                         type="email"
-                        name="confirmarEmail"
+                        name="confirmEmail"
                         placeholder="email@email.com"
                         className={styles.input}
                       />
                       <ErrorMessage
-                        name="confirmarEmail"
+                        name="confirmEmail"
                         component="div"
                         className={styles.errorMessage}
                       />
@@ -235,7 +257,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             id="turno-disponivel"
                             className={styles.customRadio}
                             type="radio"
-                            name="turno"
+                            name="turn"
                             value="disponivel"
                             checked
                           />
@@ -249,7 +271,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             id="turno-indisponivel"
                             className={styles.customRadio}
                             type="radio"
-                            name="turno"
+                            name="turn"
                             value="indisponivel"
                           />
                           Não
@@ -273,7 +295,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="Até 5 horas semanais"
                           id="Até 5 horas semanais"
                           checked
@@ -287,7 +309,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="5 a 10 horas semanais"
                           id="5 a 10 horas semanais"
                         />
@@ -300,7 +322,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="10 a 15 horas semanais"
                           id="10 a 15 horas semanais"
                         />
@@ -313,7 +335,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         <Field
                           className={styles.customRadio}
                           type="radio"
-                          name="disponibilidade"
+                          name="availability"
                           value="Mais de 15 horas semanais"
                           id="Mais de 15 horas semanais"
                         />
@@ -337,7 +359,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                           <Field
                             className={styles.customRadio}
                             type="radio"
-                            name="inicio"
+                            name="startOption"
                             onChange={() => handleInicioChange(setFieldValue, "Imediato")}
                             value="Imediato"
                             id="Imediato"
@@ -352,7 +374,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                           <Field
                             className={styles.customRadio}
                             type="radio"
-                            name="inicio"
+                            name="startOption"
                             onChange={() => handleInicioChange(setFieldValue, "Em até 1 mês")}
                             value="Em até 1 mês"
                             id="Em até 1 mês"
@@ -366,7 +388,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                           <Field
                             className={styles.customRadio}
                             type="radio"
-                            name="inicio"
+                            name="startOption"
                             onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
                             value="Em uma data específica"
                             id="Em uma data específica"
@@ -375,12 +397,12 @@ const handleCheckboxChange = (e, setFieldValue) => {
                           <Field
                             className={styles.customSelectDate}
                             type="date"
-                            name="inicioDate"
-                            id="inicioDate"
-                            disabled={values.inicio !== "Em uma data específica"}
+                            name="startDate"
+                            id="startDate"
+                            disabled={values.startOption !== "Em uma data específica"}
                           />
                           <ErrorMessage
-                            name="inicioDate"
+                            name="startDate"
                             component="div"
                             className={styles.errorMessage}
                           />
@@ -393,7 +415,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       </label>
                       <Field
                         as="select"
-                        name="areas"
+                        name="area"
                         className={styles.select}
                         onChange={(e) => handleAreaChange(setFieldValue, e.target.value)}
                       >
@@ -404,19 +426,19 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         >
                           Selecione a área de atuação
                         </option>
-                        {areasOption
+                        {areas
                           .map((areaOption) => (
                             <option
                               label={areaOption.name}
-                              value={areaOption.value}
-                              key={areaOption.value}
+                              value={areaOption.id}
+                              key={areaOption.id}
                             >
                               {areaOption.name}
                             </option>
                           ))}
                       </Field>
                       <ErrorMessage
-                        name="areas"
+                        name="area"
                         component="div"
                         className={styles.errorMessage}
                       />
@@ -437,8 +459,8 @@ const handleCheckboxChange = (e, setFieldValue) => {
                           {subareas.map((subarea) => (
                             <option
                               label={subarea.name}
-                              value={subarea.value}
-                              key={subarea.value}
+                              value={subarea.id}
+                              key={subarea.id}
                             >
                               {subarea.name}
                             </option>
@@ -533,16 +555,16 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       <div className={styles.fieldDiv}>
                         <label
                           className={styles.radioLabel}
-                          htmlFor="infos"
+                          htmlFor="contactAgreement"
                         >
                           <Field
                             type="checkbox"
-                            name="infos"
+                            name="contactAgreement"
                           />
                           Declaro as informações fornecidas corretas e autorizo a SouJunior a me contatar
                         </label>
                         <ErrorMessage
-                          name="infos"
+                          name="contactAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
@@ -550,19 +572,19 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       <div className={styles.fieldDiv}>
                         <label
                           className={styles.radioLabel}
-                          htmlFor="terms"
+                          htmlFor="termsAgreement"
                         >
                           <Field
                             type="checkbox"
+                            name="termsAgreement"
                             id="terms"
-                            name="terms"
                             checked={termsAccepted}
                             onChange={(e) => handleCheckboxChange(e, setFieldValue)}
                           />
                           Estou de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
                         </label>
                         <ErrorMessage
-                          name="terms"
+                          name="termsAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
