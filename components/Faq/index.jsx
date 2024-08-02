@@ -163,7 +163,7 @@ export const Faq = () => {
             </TabPanel>
             <TabPanel>
               <Accordion className={styles.accordion} allowMultiple>
-                {mentor.map(({ titulo, descricao, id }) => (
+                {voluntario.map(({ titulo, descricao, id }) => (
                   <AccordionItem
                     initialEntered
                     className={styles.accordionItem}
@@ -182,7 +182,7 @@ export const Faq = () => {
             </TabPanel>
             <TabPanel>
               <Accordion className={styles.accordion} allowMultiple>
-                {voluntario.map(({ titulo, descricao, id }) => (
+                {mentor.map(({ titulo, descricao, id }) => (
                   <AccordionItem
                     initialEntered
                     className={styles.accordionItem}
