@@ -1,0 +1,102 @@
+.termsContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.disabled {
+    opacity: 0.5; /* Opacidade reduzida para indicar que está desabilitado */
+    cursor: not-allowed !important; /* Cursor de 'não permitido' */
+    /* Outros estilos visuais para indicar desabilitado, como cor de fundo ou borda */
+}
+.modaltermsText{
+    background-color: #F2F2F2;
+    color: black;
+    width: 901px;
+    height: 749px;
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    border: 1px solid #c1c1c1;
+    border-radius: 3px;
+}
+.modaltermsText::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(https://www.soujunior.tech/assets/logo-background.svg);
+    opacity: 0.17;
+    z-index: -1;
+    filter: grayscale(70%);
+}
+.modaltermsText h2{
+    font-size: 36px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 24px;
+}
+.textContent{
+    height: 500px;
+    overflow-y: scroll;
+    padding: 0 15px 0 15px;
+}
+.modaltermsText h4{
+    font-size: 24px;
+    margin-top: 10px;
+}
+.modaltermsText p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: center;   
+     margin-top: 30px;
+}
+.inButton{
+    background-color: #95C6FF !important;
+    color: black !important;
+    padding: 17px 27px 17px 27px !important;
+    width: 240px !important;
+}
+.spacenumber{
+    padding-left: 10px;
+}
+
+@media (max-width: 1024px) {
+    .modaltermsText {
+            width: 600px;
+        }
+    
+        .modaltermsText h2 {
+            font-size: 26px;
+        }
+    
+        .modaltermsText h4 {
+            font-size: 16px;
+        }
+    
+        .modaltermsText p {
+            font-size: 12px;
+        }
+}
+
+@media (max-width: 425px) {
+    .modaltermsText {
+        width: 400px;
+    }
+
+    .modaltermsText h2 {
+        font-size: 16px;
+    }
+
+    .modaltermsText h4 {
+        font-size: 12px;
+    }
+
+    .modaltermsText p {
+        font-size: 10px;
+    }
+}
