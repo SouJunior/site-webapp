@@ -78,6 +78,43 @@
   gap: 10px;
 }
 
+.button:disabled {
+  background: #a0a0a0;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.customSelectDate {
+  border: none;
+  border-radius: 8px;
+  background: white;
+  padding: 0.5rem 1rem;
+}
+
+.turnoRadioGroup {
+  display: flex;
+  gap: 32px;
+}
+
+.turnoRadiolabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.radioLabel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
 @media (max-width: 960px) {
   .ApoiadorSection,
   .bannerContainer {
@@ -160,10 +197,16 @@
   padding-bottom: 5.2rem;
 }
 
-.form div {
+.fieldDiv {
   display: flex;
   gap: 1.6rem;
   flex-direction: column;
+}
+
+.fieldCheckbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .form label {
@@ -226,6 +269,12 @@
   /* margin: 20px auto; */
   border: none;
   cursor: pointer;
+}
+
+.form button:disabled {
+  background: #a0a0a0;
+  color: #666666;
+  cursor: not-allowed;
 }
 
 form .buttons {

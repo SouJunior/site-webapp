@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { getValidationSchema, initialValues } from "./structure";
 
@@ -11,6 +11,7 @@ import Popup from "../commons/Popup/Popup";
 
 import { api } from "../../services/api";
 import AlertMessage from "../commons/AlertMessage/AlertMessage";
+import TermsModal from "../TermsModal";
 
 export const Junior = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -22,6 +23,8 @@ export const Junior = () => {
   const [requiresDate, setRequiresDate] = useState(false);
   const [showAlertMessage, setShowAlertMessage] = useState(false);
   const [formDirty, setFormDirty] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
 
   useEffect(() => {
     (async () => {
@@ -123,6 +126,25 @@ export const Junior = () => {
       setRequiresDate(false);
     }
   };
+
+  const handleTermsAcceptance = () => {
+    setTermsAccepted(true);
+    setShowTermsModal(false);
+};
+
+  
+const handleCheckboxChange = (e, setFieldValue) => {
+  if (e.target.checked) {
+      setShowTermsModal(true);
+      setFieldValue('terms', true); 
+  } else {
+      setShowTermsModal(false); 
+      setTermsAccepted(false); 
+      setFieldValue('terms', false);
+  }
+};
+  
+  // ------------------------------------------------------
 
   return (
     <>
@@ -555,18 +577,29 @@ export const Junior = () => {
                           <Field
                             type="checkbox"
                             name="termsAgreement"
+                            id="terms"
+                            checked={termsAccepted}
+                            onChange={(e) => handleCheckboxChange(e, setFieldValue)}
                           />
-                          Estou de acordo com os Termos e Condições
+                          Estou de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
                         </label>
                         <ErrorMessage
                           name="termsAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
+                        <TermsModal
+                          show={showTermsModal}
+                          onAccept={handleTermsAcceptance}
+                        />
                       </div>
                     </div>
                     <div className={styles.buttons}>
-                      <button type="submit" disabled={isSubmitting || !isValid || !dirty}>Enviar</button>
+                    <div className={styles.buttons}>
+                      <button 
+                      type="submit" 
+                      disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
+                    </div>
                     </div>
                   </Form>
                 )
