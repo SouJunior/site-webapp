@@ -57,7 +57,6 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    setShowAlertMessage(true);
     setIsSubmitting(true);
     setLoading(true);
 
@@ -93,8 +92,8 @@ export const Junior = () => {
         if (response.status !== 201) {
           throw new Error("Não foi possível enviar a requisição");
         }
-        setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
 
+        setShowAlertMessage(true);
         resetForm();
       } catch (error) {
         openPopup();
@@ -136,15 +135,13 @@ export const Junior = () => {
 const handleCheckboxChange = (e, setFieldValue) => {
   if (e.target.checked) {
       setShowTermsModal(true);
-      setFieldValue('terms', true); 
+      setFieldValue('termsAgreement', true); 
   } else {
       setShowTermsModal(false); 
       setTermsAccepted(false); 
-      setFieldValue('terms', false);
+      setFieldValue('termsAgreement', false);
   }
 };
-  
-  // ------------------------------------------------------
 
   return (
     <>
@@ -623,7 +620,6 @@ const handleCheckboxChange = (e, setFieldValue) => {
             message={`Inscrição concluída. Você receberá um e-mail de confirmação em breve.`}
             onClose={() => {
               setShowAlertMessage(false)
-              window.location.href = "/"
             }}
           />
         }
