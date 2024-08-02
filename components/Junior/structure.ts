@@ -2,9 +2,67 @@ import * as Yup from "yup";
 
 export const areasOption = [
     {
+      name: "Agilista",
+      value: "agilist"
+    },
+    {
+      name: "Business",
+      value: "business",
+      sub: [
+        {
+          name: "Análise de negócios",
+          value: "businessAnalysis"
+        },
+        {
+          name: "Análise de processos",
+          value: "processAnalysis"
+        },
+      ],
+    },
+    {
+      name: "Desenvolvimento",
+      value: "development",
+      sub: [
+        {
+          name: "Back-end",
+          value: "back"
+        },
+        {
+          name: "Front-end",
+          value: "front"
+        },
+      ],
+    },
+    {
+      name: "Dados",
+      value: "data"
+    },
+    {
+      name: "Design",
+      value: "design",
+      sub: [
+        {
+          name: "Design OPS",
+          value: "designOps",
+        },
+        {
+          name: "UX/UI",
+          value: "uxui",
+        },       
+      ],
+    },
+    {
+      name: "DevOps",
+      value: "devops",
+    },
+    {
       name: "Produto",
       value: "product",
       sub: [
+        {
+          name: "APM - Associate Product Manager",
+          value: "apm",
+        },
         {
           name: "Product Growth",
           value: "productGrowth",
@@ -17,54 +75,30 @@ export const areasOption = [
           name: "Product Marketing Manager",
           value: "productMarketingManager",
         },
-        {
-          name: "Social Media",
-          value: "socialMedia",
-        },
-        {
-          name: "APM - Associate Product Manager",
-          value: "apm",
-        },
       ],
-    },
-    {
-      name: "Design",
-      value: "design",
-      sub: [
-        {
-          name: "UX/UI",
-          value: "uxui",
-        },
-        {
-          name: "Design OPS",
-          value: "designOps",
-        }
-      ],
-    },
-    {
-      name: "Agilidade",
-      value: "agility"
-    },
-    {
-      name: "Back-end",
-      value: "back"
-    },
-    {
-      name: "Front-end",
-      value: "front"
-    },
-    {
-      name: "Dados",
-      value: "data"
     },
     {
       name: "QA - Quality Assurance",
-      value: "qa"
+      value: "qa",
     },
     {
-      name: "DevOps",
-      value: "devops"
-    }
+      name: "Social Media",
+      value: "socialMedia",
+      sub: [
+        {
+          name: "Criação de conteúdo - Redação",
+          value: "contentWriting"
+        },
+        {
+          name: "Criação de peças - Design",
+          value: "designPieces"
+        },
+      ],
+    },
+    {
+      name: "Tech Recruiter",
+      value: "techRecruiter"
+    },
 ];
 
 export const getValidationSchema = (hasSubareas, requiresDate) => {
