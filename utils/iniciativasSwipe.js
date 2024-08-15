@@ -2,7 +2,7 @@ export const iniciativasSouJunior = [
   {
     id: 1,
     title: "Conheça outras iniciativas da SouJunior",
-    subtitle: "SouJunior Lab",
+    subtitle: "SouJunior Labs",
     description: [
       "Coloque em pratica suas expertises em projetos reais, e ganhe experiência no mercado de trabalho.",
     ],
