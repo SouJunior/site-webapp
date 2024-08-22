@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'admin-login': "url('/assets/squares.svg')",
+      },
       colors: {
         primary: "#00205F",
         secondary: "#003872",
@@ -16,6 +19,8 @@ module.exports = {
         tablePrimary: "rgba(0, 106, 215, 0.2)",
         tableSecondary: "rgba(12, 73, 135, 0.2)",
         "primary+1": "#95C6FF",
+        adminLogin: "#FDFDFD",
+        correct: "#149911"
       },
     },
   },
