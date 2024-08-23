@@ -21,7 +21,6 @@
     "formik": "^2.4.3",
     "hamburger-react": "^2.5.0",
     "js-cookie": "^3.0.5",
-    "json-server": "^1.0.0-alpha.23",
     "lucide-react": "^0.363.0",
     "next": "^12.3.1",
     "pure-react-carousel": "^1.30.1",
