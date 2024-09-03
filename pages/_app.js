@@ -13,6 +13,10 @@ function MyApp({ Component, pageProps }) {
       return <Component {...pageProps} />
     case '/admin-signup':
       return <Component {...pageProps} />
+    case '/admin-forgot-password':
+      return <Component {...pageProps} />
+    case '/admin-new-password':
+      return <Component {...pageProps} />
     default:
       return (
         <Layout>
