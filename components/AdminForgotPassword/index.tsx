@@ -49,7 +49,7 @@ export const AdminForgotPassword = () => {
                                         </div>
                                         {errors.email && (
                                             <ul className="text-base lg:text-lg border-l-2 border-l-red-500 pl-4 flex flex-col mb-6 lg:mb-8">
-                                                <li className="list-disc ml-4 text-red-500">{errors?.email}</li>
+                                                <li className="list-disc ml-4 text-red-500">{errors?.email as string}</li>
                                             </ul>
                                         )}
                                         <button
