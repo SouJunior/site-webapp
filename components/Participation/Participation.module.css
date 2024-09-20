@@ -129,7 +129,6 @@
   display: flex;
   width: 100%;
   height: 66px;
-  padding: 24px 32px;
   justify-content: center;
   align-items: center;
   border-radius: 10px;
@@ -142,6 +141,14 @@
   font-size: 24px;
   border: none;
   margin-top: 2rem;
+}
+
+.button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .button:hover {

@@ -7,8 +7,8 @@ import {
   FaYoutube,
   FaTelegram,
   FaTwitch,
+  FaTiktok,
 } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
 
 export const dataSocial = [
   {
@@ -42,10 +42,10 @@ export const dataSocial = [
     path: "https://www.youtube.com/@soujuniortech",
   },
   {
-    id: "twitter",
-    name: "twitter",
-    icon: <FaXTwitter />,
-    path: "https://mobile.twitter.com/SouJunior_Tech",
+    id: "tiktok",
+    name: "tiktok",
+    icon: <FaTiktok />,
+    path: "https://www.tiktok.com/@soujuniortech",
   },
   {
     id: "facebook",

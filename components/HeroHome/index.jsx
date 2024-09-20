@@ -3,7 +3,7 @@ import ContentHero from "./contentHero";
 
 const HeaderHome = () => {
   const contentText =
-    "A SouJunior oferece a oportunidade de trabalhar com produtos digitais e adquirir habilidade valiosas para a sua transição de carreira. \n Com o nosso apoio, você terá chance de desenvolver suas competências e aprofundar o seu conhecimento em áreas de seu interesse, aumentando assim suas chances de sucesso na sua trajetoria profissional";
+    "A SouJunior oferece a oportunidade de trabalhar com produtos digitais e adquirir habilidades valiosas para a sua transição de carreira. \n Com o nosso apoio, você terá chance de desenvolver suas competências e aprofundar o seu conhecimento em áreas de seu interesse, aumentando assim suas chances de sucesso na sua trajetoria profissional";
 
   return (
     <section className={styles.HeroHomeContainer}>
