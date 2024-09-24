@@ -69,10 +69,6 @@ const AreaItem = () => {
     router.push(`/areas-de-atuacao/${areaData[index].url}`);
   };
 
-  if (areaItem === null) {
-    return null;
-  }
-
   const inlineStyle = {
     backgroundColor: "transparent",
     color: "#FFF",
@@ -80,6 +76,8 @@ const AreaItem = () => {
     borderShadow: "0px",
     padding: "2.6rem 0rem",
   };
+
+  if (areaItem === null || areaItem === undefined) return null;
 
   return (
     <>
