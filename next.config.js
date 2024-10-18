@@ -28,7 +28,17 @@ const nextConfig = {
         destination: "/#areas-de-atuacao",
         permanent: true,
       },
+      {
+        source: "/",
+        destination: "/home",
+        permanent: true,
+      },
     ];
+  },
+
+  webpack(config) {
+    config.resolve.modules.push(__dirname);
+    return config;
   },
 };
 
