@@ -3,8 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import Script from "next/script";
 
-import { Navbar } from "../../commons/Navbar";
-import { MenuMobile } from "../../commons/MenuMobile";
+import { Navbar } from "../Navbar";
+import { MenuMobile } from "../MenuMobile";
 import { keyWords } from "../../../utils/keyWords";
 import styles from "./Header.module.css";
 

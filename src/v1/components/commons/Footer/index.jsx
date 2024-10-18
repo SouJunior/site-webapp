@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FaArrowUp } from "react-icons/fa";
 import styles from "./Footer.module.css";
 import { dataSocial } from "../../../utils/dataSocial";
-import { Heading } from "../../commons/Heading";
+import { Heading } from "../Heading";
 
 export const Footer = () => {
   //função voltar para o topo
