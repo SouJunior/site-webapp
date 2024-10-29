@@ -1,3 +1,3 @@
-export type DailyCallsViewProps = {
-  title: string;
-};
+export interface HomeViewProps {
+  handleLink: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+}

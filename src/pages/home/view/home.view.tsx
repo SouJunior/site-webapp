@@ -1,12 +1,16 @@
-import React from "react";
-import { DailyCallsViewProps } from "../types";
+import Navbar from "../../../components/navbar/navbar.component";
+import { HomeContent, PageWrapper } from "../home.styled";
+import { HomeViewProps } from "../types";
 
-const HomeView: React.FC<DailyCallsViewProps> = ({ title }) => {
+const HomeView: React.FC<HomeViewProps> = ({ handleLink }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <p>Here is the content of the daily calls page.</p>
-    </div>
+    <PageWrapper>
+      <Navbar handleLink={handleLink} />
+      <HomeContent>
+        <h1>Welcome to SouJunior</h1>
+        <p>This is a brief description of the SouJunior initiative.</p>
+      </HomeContent>
+    </PageWrapper>
   );
 };
 

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { FC, MouseEvent } from "react";
 import HomeView from "../view/home.view";
 
-const HomeController: React.FC = () => {
-  const title = "Today's Daily Calls";
+const HomeController: FC = () => {
+  const handleLink = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.preventDefault();
+    window.location.href = "https://google.com";
+  };
 
-  return <HomeView title={title} />;
+  return <HomeView handleLink={handleLink} />;
 };
 
 export default HomeController;
