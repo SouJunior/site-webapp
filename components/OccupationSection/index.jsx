@@ -21,8 +21,10 @@ export const OccupationSection = () => {
 
   useEffect(() => {
     if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.params.navigation.prevEl = navigationPrevRef.current;
-      swiperRef.current.swiper.params.navigation.nextEl = navigationNextRef.current;
+      swiperRef.current.swiper.params.navigation.prevEl =
+        navigationPrevRef.current;
+      swiperRef.current.swiper.params.navigation.nextEl =
+        navigationNextRef.current;
       swiperRef.current.swiper.navigation.init();
       swiperRef.current.swiper.navigation.update();
     }
@@ -44,7 +46,7 @@ export const OccupationSection = () => {
               ref={swiperRef}
               slidesPerView={8}
               freeMode={true}
-              loop={true}
+              loop={false}
               rewind={true}
               modules={[Controller, Navigation]}
               navigation={{

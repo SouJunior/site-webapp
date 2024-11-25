@@ -23,10 +23,11 @@ const Card = ({ title, subtitle, description, image, type, path }) => (
             <span style={localStyle}>{paragraph}</span>
           </Paragraph>
         ))}
-        <button className={style.button}>
-          <a href={path} target="_blank" rel="noreferrer">
-            Clique aqui e Confira!
-          </a>
+        <button
+          className={style.button}
+          onClick={() => window.open(path, "_blank", "noopener noreferrer")}
+        >
+          Clique aqui e Confira!
         </button>
       </div>
 
