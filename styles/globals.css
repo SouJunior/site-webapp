@@ -42,6 +42,13 @@ body {
   filter: blur(164px); */
 }
 
+input, textarea {
+  /*font-family: 'Roboto', sans-serif;*/
+  color: #000000;
+  font-weight: 400;
+  font-size: 2rem;
+} 
+
 a {
   color: inherit;
   text-decoration: none;
