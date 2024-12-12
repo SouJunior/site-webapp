@@ -1227,5 +1227,649 @@
         }
       ]
     }
+  },
+  {
+    "id": 8,
+    "title": "QA - Quality Assurance",
+    "url": "qa",
+    "image-hero": "/assets/hero-back-end.svg",
+    "head": {
+      "name": "",
+      "role": "Head de Back end",
+      "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
+      "descripition": [
+        "A área de Quality Assurance (QA) é fundamental no desenvolvimento de software, garantindo que produtos sejam entregues com alta qualidade, atendendo às expectativas dos usuários e aos requisitos definidos. O principal objetivo do QA é prevenir problemas antes que eles ocorram, por meio de testes rigorosos e análises detalhadas durante todo o ciclo de desenvolvimento. Entre as principais atividades da área estão o planejamento e execução de testes, identificação e acompanhamento de bugs, automação de processos e a busca constante por melhorias nos produtos e nos métodos de trabalho.",
+        "Com o avanço das tecnologias, o futuro do QA aponta para uma transformação significativa. A automação está se tornando indispensável para acompanhar o ritmo acelerado das metodologias Agile e DevOps. Ferramentas baseadas em inteligência artificial e machine learning serão cada vez mais usadas para identificar e corrigir problemas com maior eficiência. Além disso, a integração de testes contínuos ao longo de todas as etapas do desenvolvimento, desde o design até o lançamento, será essencial para garantir qualidade em ciclos de entrega mais rápidos.",
+        "Outro ponto relevante é a necessidade de QA para validar sistemas cada vez mais complexos, como dispositivos IoT, tecnologias 5G e soluções baseadas em inteligência artificial. A área também se tornará mais estratégica, com um foco crescente na experiência do usuário (UX), avaliando não apenas a funcionalidade, mas também a usabilidade dos produtos. Além disso, a qualidade será tratada como uma responsabilidade de toda a equipe, fortalecendo a colaboração entre QA, desenvolvedores e demais stakeholders.",
+        "Em resumo, o futuro do QA será promissor e desafiador, exigindo profissionais capacitados em automação, tecnologias emergentes e metodologias colaborativas. À medida que os sistemas se tornam mais complexos, o QA se consolidará como um pilar indispensável para a entrega de produtos confiáveis, inovadores e que ofereçam uma excelente experiência aos usuários."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/wandersongsantos/",
+        "discord": "https://discordapp.com/users/427653385123135490/"
+      },
+      "resume": "Wanderson Santos, desenvolvedor Back-end, gosta de participar de projetos onde contribui para solucionar problemas. É casado, pai de dois filhos, fez a sua transição de carreira no início do ano passado e não tem medo de encarar algo novo."
+    },
+    "interview": {
+      "introduction": [
+        "Wanderson Santos é um desenvolvedor Back-end casado e pai de dois filhos, que fez sua transição de carreira no início do ano passado. Ele gosta de participar de projetos desafiadores, onde pode contribuir para solucionar problemas, e não tem medo de encarar algo novo. Especializado em NodeJs, ele possui experiência em sistemas Linux e Windows, além de habilidades em versionamento com Git e documentação de software com Swagger, Postman e Insomnia.",
+        "Além disso, também tem conhecimentos em Typescript com express, Nestjs e tem familiaridade com bancos de dados não-relacionais, como Mongo DB e relacionais como MySql e Postgres.",
+        "É uma pessoa comunicativa e flexível, com forte gerenciamento de tempo e capacidade de trabalhar em equipe. Sempre motivado e comprometido em aprender e lidar com novas ferramentas de trabalho para continuar aprimorando suas habilidades."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhava e estudava ao mesmo tempo, acordava muito cedo 4h da manhã, e ficava estudando até a meia-noite, esse ponto fez com que eu aprendesse um pouco mais devagar. ainda mais por está em processo de migração de carreira, foi Bastante difícil e complicado, pois, não sabia o que estudar então consumia um pouco de tudo, até pegar firme no roadmap do Back-end."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Gosto de projetos Open source e de aprender, então na SouJunior eu consegui encontrar essas duas coisas."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Temos reuniões com as equipes para alinhamentos, o servidor evoluiu muito e a comunicação melhorou bastante, pois, cada equipe tem uma pessoa responsável por ela, assim podemos ter uma melhor colaboração."
+        },
+        {
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Entender que estamos resolvendo os problemas das pessoas, e isso é extremamente gratificante, nada melhor do que construir algo e ver alguém usando."
+        },
+        {
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Tento entender a dificuldade de cada um e separar as demandas para que todos possam colaborar e poder aprender. Fazemos call para alinhamentos, reuniões para \"pair programming\" e temos um servidor para ajudar os juniores no que eles precisarem. Porém a comunicação principal permanece o nosso canal na SouJunior."
+        },
+        {
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Cada uma tem suas qualidades, porém Javascript pode abrir um leque maior de opções, pois, com ele você pode ir para mobile, front-end e back-end."
+        },
+        {
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor back-end?",
+          "awnser": "Saber expressar suas dúvidas, não segurar problemas/impedimentos, buscar sempre tentar resolver, não conseguiu peça ajuda. Pois, impedimentos podem atrasar as entregas, além disso uma boa comunicação com o time é essencial."
+        },
+        {
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Extraia de cada entrevista um aprendizado, tudo o que é perguntado é o que você precisa aprender, fiz assim, quando me perguntavam algo que eu não sabia, depois da entrevista corria para aprender."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Edcleidson Júnior",
+          "img": "https://user-images.githubusercontent.com/31568030/274428726-70677ec4-cd75-4639-a2bc-6f3a234301ed.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/eddiescj/",
+          "discord": "https://discordapp.com/users/856534558229266461/"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Bruna Oliveira",
+          "img": "https://avatars.githubusercontent.com/u/102394235?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/bruoliveiraalves/",
+          "discord": "https://discordapp.com/users/966470010191118337/"
+        },
+        {
+          "id": 2,
+          "nome": "Gabriel Ferreira",
+          "img": "https://avatars.githubusercontent.com/u/98713459?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabriel-ferreira-2755b6164/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/31568030/273002546-e150151e-6bae-492c-8e6d-9163963c8df2.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": "https://discordapp.com/users/889953880576774204"
+        },
+        {
+          "id": 4,
+          "nome": "João Lucas Bugati",
+          "img": "https://avatars.githubusercontent.com/u/102599241?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-lucas-bugati-591009236/",
+          "discord": "https://discordapp.com/users/442345207342825472"
+        },
+        {
+          "id": 5,
+          "nome": "Patrick da Rocha Otero",
+          "img": "https://avatars.githubusercontent.com/u/83041269?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/patrick-da-rocha-otero/",
+          "discord": "https://discordapp.com/users/487789753916456981"
+        },
+        {
+          "id": 6,
+          "nome": "Ytallo Cesar",
+          "img": "https://user-images.githubusercontent.com/81826043/262431538-a3721978-99b7-4e95-903d-e5c2971390d7.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ytallocesar/",
+          "discord": "https://discordapp.com/users/457845559609262081"
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "title": "DevOps",
+    "url": "devops",
+    "image-hero": "/assets/hero-back-end.svg",
+    "head": {
+      "name": "",
+      "role": "Head de Back end",
+      "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
+      "descripition": [
+        "A área de DevOps é uma abordagem que integra desenvolvimento (Dev) e operações (Ops) para acelerar e otimizar o ciclo de vida do software, desde a concepção até a entrega e manutenção. O foco principal do DevOps é fomentar a colaboração entre equipes, automatizar processos e criar fluxos de trabalho eficientes, com o objetivo de entregar produtos de alta qualidade de forma contínua e ágil. Essa prática envolve a implementação de pipelines de integração e entrega contínua (CI/CD), gerenciamento de infraestrutura como código (IaC), monitoramento e práticas de segurança integrada (DevSecOps).",
+        "O futuro do DevOps é marcado por avanços em automação e inteligência artificial, que vão aprimorar ainda mais a eficiência dos processos. Ferramentas baseadas em machine learning serão utilizadas para prever falhas, otimizar recursos e até mesmo sugerir melhorias no código. A cultura de DevOps continuará evoluindo para suportar tecnologias emergentes como IoT, 5G e arquiteturas serverless, tornando os processos mais robustos e escaláveis. Além disso, a adoção do DevSecOps será uma tendência crescente, garantindo que práticas de segurança sejam integradas ao ciclo de desenvolvimento desde o início.",
+        "Outro aspecto relevante é o papel crescente da observabilidade, permitindo que equipes monitorem e analisem métricas em tempo real para identificar e solucionar problemas rapidamente. Também haverá uma maior adoção de práticas de \"GitOps\", onde o versionamento de código será estendido para o gerenciamento de toda a infraestrutura, promovendo ainda mais consistência e rastreabilidade. A cultura de DevOps será cada vez mais integrada às metodologias ágeis, reforçando a colaboração e a responsabilidade compartilhada entre todas as partes envolvidas no ciclo de desenvolvimento.",
+        "Em resumo, o DevOps continuará sendo uma área vital para o desenvolvimento de software, moldando o futuro da tecnologia com foco em automação, eficiência e segurança. Profissionais da área devem estar preparados para lidar com ferramentas modernas, tecnologias emergentes e um ambiente dinâmico que demanda aprendizado contínuo. Com sua capacidade de transformar a forma como produtos são desenvolvidos e entregues, o DevOps se consolidará como um dos pilares essenciais para a inovação e competitividade no mercado digital."
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/wandersongsantos/",
+        "discord": "https://discordapp.com/users/427653385123135490/"
+      },
+      "resume": "Wanderson Santos, desenvolvedor Back-end, gosta de participar de projetos onde contribui para solucionar problemas. É casado, pai de dois filhos, fez a sua transição de carreira no início do ano passado e não tem medo de encarar algo novo."
+    },
+    "interview": {
+      "introduction": [
+        "Wanderson Santos é um desenvolvedor Back-end casado e pai de dois filhos, que fez sua transição de carreira no início do ano passado. Ele gosta de participar de projetos desafiadores, onde pode contribuir para solucionar problemas, e não tem medo de encarar algo novo. Especializado em NodeJs, ele possui experiência em sistemas Linux e Windows, além de habilidades em versionamento com Git e documentação de software com Swagger, Postman e Insomnia.",
+        "Além disso, também tem conhecimentos em Typescript com express, Nestjs e tem familiaridade com bancos de dados não-relacionais, como Mongo DB e relacionais como MySql e Postgres.",
+        "É uma pessoa comunicativa e flexível, com forte gerenciamento de tempo e capacidade de trabalhar em equipe. Sempre motivado e comprometido em aprender e lidar com novas ferramentas de trabalho para continuar aprimorando suas habilidades."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhava e estudava ao mesmo tempo, acordava muito cedo 4h da manhã, e ficava estudando até a meia-noite, esse ponto fez com que eu aprendesse um pouco mais devagar. ainda mais por está em processo de migração de carreira, foi Bastante difícil e complicado, pois, não sabia o que estudar então consumia um pouco de tudo, até pegar firme no roadmap do Back-end."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Gosto de projetos Open source e de aprender, então na SouJunior eu consegui encontrar essas duas coisas."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Temos reuniões com as equipes para alinhamentos, o servidor evoluiu muito e a comunicação melhorou bastante, pois, cada equipe tem uma pessoa responsável por ela, assim podemos ter uma melhor colaboração."
+        },
+        {
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Entender que estamos resolvendo os problemas das pessoas, e isso é extremamente gratificante, nada melhor do que construir algo e ver alguém usando."
+        },
+        {
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Tento entender a dificuldade de cada um e separar as demandas para que todos possam colaborar e poder aprender. Fazemos call para alinhamentos, reuniões para \"pair programming\" e temos um servidor para ajudar os juniores no que eles precisarem. Porém a comunicação principal permanece o nosso canal na SouJunior."
+        },
+        {
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Cada uma tem suas qualidades, porém Javascript pode abrir um leque maior de opções, pois, com ele você pode ir para mobile, front-end e back-end."
+        },
+        {
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor back-end?",
+          "awnser": "Saber expressar suas dúvidas, não segurar problemas/impedimentos, buscar sempre tentar resolver, não conseguiu peça ajuda. Pois, impedimentos podem atrasar as entregas, além disso uma boa comunicação com o time é essencial."
+        },
+        {
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Extraia de cada entrevista um aprendizado, tudo o que é perguntado é o que você precisa aprender, fiz assim, quando me perguntavam algo que eu não sabia, depois da entrevista corria para aprender."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Edcleidson Júnior",
+          "img": "https://user-images.githubusercontent.com/31568030/274428726-70677ec4-cd75-4639-a2bc-6f3a234301ed.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/eddiescj/",
+          "discord": "https://discordapp.com/users/856534558229266461/"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Bruna Oliveira",
+          "img": "https://avatars.githubusercontent.com/u/102394235?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/bruoliveiraalves/",
+          "discord": "https://discordapp.com/users/966470010191118337/"
+        },
+        {
+          "id": 2,
+          "nome": "Gabriel Ferreira",
+          "img": "https://avatars.githubusercontent.com/u/98713459?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabriel-ferreira-2755b6164/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/31568030/273002546-e150151e-6bae-492c-8e6d-9163963c8df2.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": "https://discordapp.com/users/889953880576774204"
+        },
+        {
+          "id": 4,
+          "nome": "João Lucas Bugati",
+          "img": "https://avatars.githubusercontent.com/u/102599241?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-lucas-bugati-591009236/",
+          "discord": "https://discordapp.com/users/442345207342825472"
+        },
+        {
+          "id": 5,
+          "nome": "Patrick da Rocha Otero",
+          "img": "https://avatars.githubusercontent.com/u/83041269?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/patrick-da-rocha-otero/",
+          "discord": "https://discordapp.com/users/487789753916456981"
+        },
+        {
+          "id": 6,
+          "nome": "Ytallo Cesar",
+          "img": "https://user-images.githubusercontent.com/81826043/262431538-a3721978-99b7-4e95-903d-e5c2971390d7.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ytallocesar/",
+          "discord": "https://discordapp.com/users/457845559609262081"
+        }
+      ]
+    }
+  },
+  {
+    "id": 10,
+    "title": "Business",
+    "url": "business",
+    "image-hero": "/assets/hero-back-end.svg",
+    "head": {
+      "name": "",
+      "role": "Head de Back end",
+      "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
+      "descripition": [
+        "Business é um campo abrangente que envolve a gestão e operação de organizações, visando maximizar eficiência e lucratividade. Este setor abrange diversas atividades, desde a análise de mercado até o gerenciamento financeiro, e é fundamental para o sucesso de qualquer empreendimento. Profissionais dessa área são responsáveis por tomar decisões estratégicas que impactam diretamente o desempenho da empresa.",
+        "Subáreas de Business",
+        "° Gestão Financeira: Envolve o controle e planejamento das finanças da empresa, garantindo que os recursos sejam utilizados de forma eficiente e que a organização mantenha sua saúde financeira.",
+        "° Gestão de Recursos Humanos: Foca na administração do capital humano da empresa, incluindo recrutamento, seleção, treinamento e desenvolvimento dos colaboradores, além de promover um ambiente de trabalho saudável.",
+        "° Gestão de Marketing: Trata do relacionamento entre a empresa e seus consumidores, desenvolvendo estratégias para atrair e fidelizar clientes, além de fortalecer a marca.",
+        "° Logística: Responsável pela coordenação dos processos de produção, armazenamento e distribuição de produtos, assegurando que tudo funcione de maneira eficiente e econômica.",
+        "° Planejamento Estratégico: Envolve a definição de metas e a elaboração de planos para alcançá-las, considerando tanto fatores internos quanto externos que podem afetar o desempenho da empresa.",
+        "Essas subáreas são interconectadas e contribuem para o desenvolvimento sustentável das organizações em diversos setores. Com a evolução do mercado, espera-se que até 2025 haja um aumento significativo na demanda por profissionais capacitados em Business, especialmente nas áreas de inovação e tecnologia.",
+        "Para juniores que desejam explorar esse universo, a SouJunior oferece uma oportunidade valiosa. Ao participar de projetos práticos, você aprenderá como aplicar conceitos de gestão e colaborar com outros voluntários e mentores.",
+        "Se você está pronto para dar o primeiro passo em sua jornada no mundo dos negócios e contribuir para um propósito maior, junte-se à SouJunior e faça a diferença!"
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/wandersongsantos/",
+        "discord": "https://discordapp.com/users/427653385123135490/"
+      },
+      "resume": "Wanderson Santos, desenvolvedor Back-end, gosta de participar de projetos onde contribui para solucionar problemas. É casado, pai de dois filhos, fez a sua transição de carreira no início do ano passado e não tem medo de encarar algo novo."
+    },
+    "interview": {
+      "introduction": [
+        "Wanderson Santos é um desenvolvedor Back-end casado e pai de dois filhos, que fez sua transição de carreira no início do ano passado. Ele gosta de participar de projetos desafiadores, onde pode contribuir para solucionar problemas, e não tem medo de encarar algo novo. Especializado em NodeJs, ele possui experiência em sistemas Linux e Windows, além de habilidades em versionamento com Git e documentação de software com Swagger, Postman e Insomnia.",
+        "Além disso, também tem conhecimentos em Typescript com express, Nestjs e tem familiaridade com bancos de dados não-relacionais, como Mongo DB e relacionais como MySql e Postgres.",
+        "É uma pessoa comunicativa e flexível, com forte gerenciamento de tempo e capacidade de trabalhar em equipe. Sempre motivado e comprometido em aprender e lidar com novas ferramentas de trabalho para continuar aprimorando suas habilidades."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhava e estudava ao mesmo tempo, acordava muito cedo 4h da manhã, e ficava estudando até a meia-noite, esse ponto fez com que eu aprendesse um pouco mais devagar. ainda mais por está em processo de migração de carreira, foi Bastante difícil e complicado, pois, não sabia o que estudar então consumia um pouco de tudo, até pegar firme no roadmap do Back-end."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Gosto de projetos Open source e de aprender, então na SouJunior eu consegui encontrar essas duas coisas."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Temos reuniões com as equipes para alinhamentos, o servidor evoluiu muito e a comunicação melhorou bastante, pois, cada equipe tem uma pessoa responsável por ela, assim podemos ter uma melhor colaboração."
+        },
+        {
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Entender que estamos resolvendo os problemas das pessoas, e isso é extremamente gratificante, nada melhor do que construir algo e ver alguém usando."
+        },
+        {
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Tento entender a dificuldade de cada um e separar as demandas para que todos possam colaborar e poder aprender. Fazemos call para alinhamentos, reuniões para \"pair programming\" e temos um servidor para ajudar os juniores no que eles precisarem. Porém a comunicação principal permanece o nosso canal na SouJunior."
+        },
+        {
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Cada uma tem suas qualidades, porém Javascript pode abrir um leque maior de opções, pois, com ele você pode ir para mobile, front-end e back-end."
+        },
+        {
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor back-end?",
+          "awnser": "Saber expressar suas dúvidas, não segurar problemas/impedimentos, buscar sempre tentar resolver, não conseguiu peça ajuda. Pois, impedimentos podem atrasar as entregas, além disso uma boa comunicação com o time é essencial."
+        },
+        {
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Extraia de cada entrevista um aprendizado, tudo o que é perguntado é o que você precisa aprender, fiz assim, quando me perguntavam algo que eu não sabia, depois da entrevista corria para aprender."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Edcleidson Júnior",
+          "img": "https://user-images.githubusercontent.com/31568030/274428726-70677ec4-cd75-4639-a2bc-6f3a234301ed.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/eddiescj/",
+          "discord": "https://discordapp.com/users/856534558229266461/"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Bruna Oliveira",
+          "img": "https://avatars.githubusercontent.com/u/102394235?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/bruoliveiraalves/",
+          "discord": "https://discordapp.com/users/966470010191118337/"
+        },
+        {
+          "id": 2,
+          "nome": "Gabriel Ferreira",
+          "img": "https://avatars.githubusercontent.com/u/98713459?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabriel-ferreira-2755b6164/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/31568030/273002546-e150151e-6bae-492c-8e6d-9163963c8df2.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": "https://discordapp.com/users/889953880576774204"
+        },
+        {
+          "id": 4,
+          "nome": "João Lucas Bugati",
+          "img": "https://avatars.githubusercontent.com/u/102599241?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-lucas-bugati-591009236/",
+          "discord": "https://discordapp.com/users/442345207342825472"
+        },
+        {
+          "id": 5,
+          "nome": "Patrick da Rocha Otero",
+          "img": "https://avatars.githubusercontent.com/u/83041269?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/patrick-da-rocha-otero/",
+          "discord": "https://discordapp.com/users/487789753916456981"
+        },
+        {
+          "id": 6,
+          "nome": "Ytallo Cesar",
+          "img": "https://user-images.githubusercontent.com/81826043/262431538-a3721978-99b7-4e95-903d-e5c2971390d7.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ytallocesar/",
+          "discord": "https://discordapp.com/users/457845559609262081"
+        }
+      ]
+    }
+  },
+  {
+    "id": 11,
+    "title": "Social Media",
+    "url": "social-media",
+    "image-hero": "/assets/hero-back-end.svg",
+    "head": {
+      "name": "",
+      "role": "Head de Back end",
+      "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
+      "descripition": [
+        "Social Media é um campo em crescimento que se concentra na gestão da presença digital de empresas, marcas ou personalidades nas redes sociais. Esse profissional é responsável por planejar, criar e publicar conteúdos que atraem seguidores e geram engajamento. Além disso, eles monitoram tendências, interagem com a comunidade e analisam métricas para avaliar a eficácia das estratégias.",
+        "Subáreas de Social Media",
+        "° Planejamento de Conteúdo: Define a linha editorial e o calendário de publicações, escolhendo os formatos mais adequados para cada plataforma e público-alvo.",
+        "° Criação de Conteúdo: Produz textos, imagens e vídeos que refletem a identidade da marca e capturam a atenção do público.",
+        "° Gerenciamento de Redes Sociais: Publica conteúdos, responde a comentários e mensagens, além de monitorar a reputação online da marca.",
+        "° Análise de Resultados: Acompanha métricas como alcance, engajamento e conversões, ajustando estratégias conforme necessário.",
+        "° Gestão de Comunidades: Incentiva a interação dos seguidores por meio de enquetes, desafios e sorteios, fortalecendo o relacionamento com o público.",
+        "Essas subáreas estão interligadas e são essenciais para o sucesso das marcas nas mídias sociais. Com o aumento do uso das redes sociais, espera-se que até 2025 a demanda por profissionais de Social Media cresça ainda mais, impulsionada pela necessidade de comunicação eficaz e engajamento com os clientes.",
+        "Para juniores que desejam explorar esse universo, a SouJunior oferece uma oportunidade valiosa. Ao participar de projetos práticos, você aprenderá como criar estratégias impactantes e colaborar com outros voluntários e mentores.",
+        "Se você está pronto para dar o primeiro passo em sua jornada no mundo das mídias sociais e contribuir para um propósito maior, junte-se à SouJunior e faça a diferença!"
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/wandersongsantos/",
+        "discord": "https://discordapp.com/users/427653385123135490/"
+      },
+      "resume": "Wanderson Santos, desenvolvedor Back-end, gosta de participar de projetos onde contribui para solucionar problemas. É casado, pai de dois filhos, fez a sua transição de carreira no início do ano passado e não tem medo de encarar algo novo."
+    },
+    "interview": {
+      "introduction": [
+        "Wanderson Santos é um desenvolvedor Back-end casado e pai de dois filhos, que fez sua transição de carreira no início do ano passado. Ele gosta de participar de projetos desafiadores, onde pode contribuir para solucionar problemas, e não tem medo de encarar algo novo. Especializado em NodeJs, ele possui experiência em sistemas Linux e Windows, além de habilidades em versionamento com Git e documentação de software com Swagger, Postman e Insomnia.",
+        "Além disso, também tem conhecimentos em Typescript com express, Nestjs e tem familiaridade com bancos de dados não-relacionais, como Mongo DB e relacionais como MySql e Postgres.",
+        "É uma pessoa comunicativa e flexível, com forte gerenciamento de tempo e capacidade de trabalhar em equipe. Sempre motivado e comprometido em aprender e lidar com novas ferramentas de trabalho para continuar aprimorando suas habilidades."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhava e estudava ao mesmo tempo, acordava muito cedo 4h da manhã, e ficava estudando até a meia-noite, esse ponto fez com que eu aprendesse um pouco mais devagar. ainda mais por está em processo de migração de carreira, foi Bastante difícil e complicado, pois, não sabia o que estudar então consumia um pouco de tudo, até pegar firme no roadmap do Back-end."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Gosto de projetos Open source e de aprender, então na SouJunior eu consegui encontrar essas duas coisas."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Temos reuniões com as equipes para alinhamentos, o servidor evoluiu muito e a comunicação melhorou bastante, pois, cada equipe tem uma pessoa responsável por ela, assim podemos ter uma melhor colaboração."
+        },
+        {
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Entender que estamos resolvendo os problemas das pessoas, e isso é extremamente gratificante, nada melhor do que construir algo e ver alguém usando."
+        },
+        {
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Tento entender a dificuldade de cada um e separar as demandas para que todos possam colaborar e poder aprender. Fazemos call para alinhamentos, reuniões para \"pair programming\" e temos um servidor para ajudar os juniores no que eles precisarem. Porém a comunicação principal permanece o nosso canal na SouJunior."
+        },
+        {
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Cada uma tem suas qualidades, porém Javascript pode abrir um leque maior de opções, pois, com ele você pode ir para mobile, front-end e back-end."
+        },
+        {
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor back-end?",
+          "awnser": "Saber expressar suas dúvidas, não segurar problemas/impedimentos, buscar sempre tentar resolver, não conseguiu peça ajuda. Pois, impedimentos podem atrasar as entregas, além disso uma boa comunicação com o time é essencial."
+        },
+        {
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Extraia de cada entrevista um aprendizado, tudo o que é perguntado é o que você precisa aprender, fiz assim, quando me perguntavam algo que eu não sabia, depois da entrevista corria para aprender."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Edcleidson Júnior",
+          "img": "https://user-images.githubusercontent.com/31568030/274428726-70677ec4-cd75-4639-a2bc-6f3a234301ed.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/eddiescj/",
+          "discord": "https://discordapp.com/users/856534558229266461/"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Bruna Oliveira",
+          "img": "https://avatars.githubusercontent.com/u/102394235?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/bruoliveiraalves/",
+          "discord": "https://discordapp.com/users/966470010191118337/"
+        },
+        {
+          "id": 2,
+          "nome": "Gabriel Ferreira",
+          "img": "https://avatars.githubusercontent.com/u/98713459?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabriel-ferreira-2755b6164/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/31568030/273002546-e150151e-6bae-492c-8e6d-9163963c8df2.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": "https://discordapp.com/users/889953880576774204"
+        },
+        {
+          "id": 4,
+          "nome": "João Lucas Bugati",
+          "img": "https://avatars.githubusercontent.com/u/102599241?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-lucas-bugati-591009236/",
+          "discord": "https://discordapp.com/users/442345207342825472"
+        },
+        {
+          "id": 5,
+          "nome": "Patrick da Rocha Otero",
+          "img": "https://avatars.githubusercontent.com/u/83041269?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/patrick-da-rocha-otero/",
+          "discord": "https://discordapp.com/users/487789753916456981"
+        },
+        {
+          "id": 6,
+          "nome": "Ytallo Cesar",
+          "img": "https://user-images.githubusercontent.com/81826043/262431538-a3721978-99b7-4e95-903d-e5c2971390d7.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ytallocesar/",
+          "discord": "https://discordapp.com/users/457845559609262081"
+        }
+      ]
+    }
+  },
+  {
+    "id": 12,
+    "title": "Data",
+    "url": "data",
+    "image-hero": "/assets/hero-back-end.svg",
+    "head": {
+      "name": "",
+      "role": "Head de Back end",
+      "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
+      "descripition": [
+        "Data é um campo dinâmico que lida com a coleta, análise e interpretação de grandes volumes de dados. Esses dados podem vir de diversas fontes, como redes sociais, transações online e dispositivos conectados. A capacidade de extrair informações valiosas a partir desses dados é fundamental para empresas e organizações que buscam tomar decisões informadas e inovadoras.",
+        "Subáreas de Data",
+        "° Análise de Dados: Foca na extração de insights a partir de grandes conjuntos de dados, utilizando estatísticas e algoritmos para identificar padrões e tendências.",
+        "° Machine Learning: Uma subárea da inteligência artificial que utiliza algoritmos para permitir que as máquinas aprendam com os dados e façam previsões ou decisões sem intervenção humana.",
+        "° Internet das Coisas (IoT): Refere-se à interconexão de dispositivos que coletam e trocam dados. Essa subárea gera uma quantidade massiva de informações que podem ser analisadas para melhorar serviços e produtos.",
+        "° Engenharia de Dados: Envolve a construção e manutenção de sistemas que permitem a coleta, armazenamento e processamento eficiente dos dados. Profissionais dessa área garantem que os dados estejam prontos para análise.",
+        "° Visualização de Dados: Trata da apresentação visual dos dados, facilitando a compreensão e interpretação das informações por meio de gráficos, dashboards e outras ferramentas visuais.",
+        "° Data Analytics: Esta subárea se concentra na análise detalhada dos dados para descobrir insights significativos. O Data Analytics é crucial para entender o comportamento do consumidor, otimizar processos e melhorar estratégias empresariais.",
+        "Essas subáreas são interconectadas e contribuem para o desenvolvimento de soluções inovadoras em diversas indústrias, como saúde, finanças e marketing. Com o avanço da tecnologia, espera-se que até 2025 a demanda por profissionais capacitados em Data cresça ainda mais, impulsionada pela expansão da inteligência artificial e pela necessidade crescente de decisões baseadas em dados.",
+        "Para juniores que desejam se aprofundar nesse universo, a SouJunior oferece uma oportunidade incrível. Ao se envolver em projetos práticos, você terá a chance de aprender como transformar dados em insights significativos, colaborando com outros voluntários e mentores.",
+        "Se você está pronto para dar o primeiro passo em sua jornada no fascinante mundo do Data e contribuir para um propósito maior, junte-se à SouJunior e faça a diferença!"
+      ],
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/wandersongsantos/",
+        "discord": "https://discordapp.com/users/427653385123135490/"
+      },
+      "resume": "Wanderson Santos, desenvolvedor Back-end, gosta de participar de projetos onde contribui para solucionar problemas. É casado, pai de dois filhos, fez a sua transição de carreira no início do ano passado e não tem medo de encarar algo novo."
+    },
+    "interview": {
+      "introduction": [
+        "Wanderson Santos é um desenvolvedor Back-end casado e pai de dois filhos, que fez sua transição de carreira no início do ano passado. Ele gosta de participar de projetos desafiadores, onde pode contribuir para solucionar problemas, e não tem medo de encarar algo novo. Especializado em NodeJs, ele possui experiência em sistemas Linux e Windows, além de habilidades em versionamento com Git e documentação de software com Swagger, Postman e Insomnia.",
+        "Além disso, também tem conhecimentos em Typescript com express, Nestjs e tem familiaridade com bancos de dados não-relacionais, como Mongo DB e relacionais como MySql e Postgres.",
+        "É uma pessoa comunicativa e flexível, com forte gerenciamento de tempo e capacidade de trabalhar em equipe. Sempre motivado e comprometido em aprender e lidar com novas ferramentas de trabalho para continuar aprimorando suas habilidades."
+      ],
+      "questions": [
+        {
+          "question": "Como você iniciou na área da tecnologia?",
+          "awnser": "Eu trabalhava e estudava ao mesmo tempo, acordava muito cedo 4h da manhã, e ficava estudando até a meia-noite, esse ponto fez com que eu aprendesse um pouco mais devagar. ainda mais por está em processo de migração de carreira, foi Bastante difícil e complicado, pois, não sabia o que estudar então consumia um pouco de tudo, até pegar firme no roadmap do Back-end."
+        },
+        {
+          "question": "O que te motivou a fazer parte da SouJunior?",
+          "awnser": "Gosto de projetos Open source e de aprender, então na SouJunior eu consegui encontrar essas duas coisas."
+        },
+        {
+          "question": "Como você garante a colaboração e comunicação efetiva com as equipes envolvidas no desenvolvimento?",
+          "awnser": "Temos reuniões com as equipes para alinhamentos, o servidor evoluiu muito e a comunicação melhorou bastante, pois, cada equipe tem uma pessoa responsável por ela, assim podemos ter uma melhor colaboração."
+        },
+        {
+          "question": "O que mais entusiasma você no desenvolvimento?",
+          "awnser": "Entender que estamos resolvendo os problemas das pessoas, e isso é extremamente gratificante, nada melhor do que construir algo e ver alguém usando."
+        },
+        {
+          "question": "Como faz para se comunicar de forma eficaz com os membros da equipe Sou Junior?",
+          "awnser": "Tento entender a dificuldade de cada um e separar as demandas para que todos possam colaborar e poder aprender. Fazemos call para alinhamentos, reuniões para \"pair programming\" e temos um servidor para ajudar os juniores no que eles precisarem. Porém a comunicação principal permanece o nosso canal na SouJunior."
+        },
+        {
+          "question": "Dentro das linguagens de programação qual você considera a mais importante e porque?",
+          "awnser": "Cada uma tem suas qualidades, porém Javascript pode abrir um leque maior de opções, pois, com ele você pode ir para mobile, front-end e back-end."
+        },
+        {
+          "question": "Qual Soft Skills você considera fundamental para um desenvolvedor back-end?",
+          "awnser": "Saber expressar suas dúvidas, não segurar problemas/impedimentos, buscar sempre tentar resolver, não conseguiu peça ajuda. Pois, impedimentos podem atrasar as entregas, além disso uma boa comunicação com o time é essencial."
+        },
+        {
+          "question": "Dica para algum juninho de como entrar no mercado?",
+          "awnser": "Extraia de cada entrevista um aprendizado, tudo o que é perguntado é o que você precisa aprender, fiz assim, quando me perguntavam algo que eu não sabia, depois da entrevista corria para aprender."
+        }
+      ]
+    },
+    "team": {
+      "mentores": [
+        {
+          "id": 1,
+          "nome": "Edcleidson Júnior",
+          "img": "https://user-images.githubusercontent.com/31568030/274428726-70677ec4-cd75-4639-a2bc-6f3a234301ed.jpg",
+          "role": "Mentor",
+          "linkedin": "https://www.linkedin.com/in/eddiescj/",
+          "discord": "https://discordapp.com/users/856534558229266461/"
+        }
+      ],
+      "juninhos": [
+        {
+          "id": 1,
+          "nome": "Bruna Oliveira",
+          "img": "https://avatars.githubusercontent.com/u/102394235?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/bruoliveiraalves/",
+          "discord": "https://discordapp.com/users/966470010191118337/"
+        },
+        {
+          "id": 2,
+          "nome": "Gabriel Ferreira",
+          "img": "https://avatars.githubusercontent.com/u/98713459?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/gabriel-ferreira-2755b6164/",
+          "discord": ""
+        },
+        {
+          "id": 3,
+          "nome": "Igor Gonçalves",
+          "img": "https://user-images.githubusercontent.com/31568030/273002546-e150151e-6bae-492c-8e6d-9163963c8df2.png",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/igords-goncalves/",
+          "discord": "https://discordapp.com/users/889953880576774204"
+        },
+        {
+          "id": 4,
+          "nome": "João Lucas Bugati",
+          "img": "https://avatars.githubusercontent.com/u/102599241?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/jo%C3%A3o-lucas-bugati-591009236/",
+          "discord": "https://discordapp.com/users/442345207342825472"
+        },
+        {
+          "id": 5,
+          "nome": "Patrick da Rocha Otero",
+          "img": "https://avatars.githubusercontent.com/u/83041269?v=4",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/patrick-da-rocha-otero/",
+          "discord": "https://discordapp.com/users/487789753916456981"
+        },
+        {
+          "id": 6,
+          "nome": "Ytallo Cesar",
+          "img": "https://user-images.githubusercontent.com/81826043/262431538-a3721978-99b7-4e95-903d-e5c2971390d7.jpeg",
+          "role": "Juninho",
+          "linkedin": "https://www.linkedin.com/in/ytallocesar/",
+          "discord": "https://discordapp.com/users/457845559609262081"
+        }
+      ]
+    }
   }
 ]

@@ -123,7 +123,9 @@ const AreaItem = () => {
               </div>
             </section>
 
-            <section className={styles.InterviewSection}>
+            {(areaItem.head.name != "") &&(
+              <>
+                <section className={styles.InterviewSection}>
               
               <div className={styles.ceo}>
                 <div className={styles.avatar}>
@@ -258,6 +260,8 @@ const AreaItem = () => {
                   ))}
               </div>
             </section>
+              </>
+            )}
           </div>
         )}
     </>
