@@ -16,13 +16,17 @@ import { Paragraph } from "../../../components/commons/Paragraph";
 import { Loading } from "../../../components/commons/Loading";
 import { apiArea } from "../../../services/api";
 
+var index = 0;
+
 const AreaItem = () => {
   const [areaItem, setAreaItem] = useState(null);
   const [areaData, setAreaData] = useState(null);
+  const [areaAtuacao, setAreaAtuacao] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [index, setIndex] = useState(0);
   const router = useRouter();
   const { area } = router.query;
+
+  var areaPath = router.asPath.substring(18);
 
   useEffect(() => {
     if (!router.isReady) {
@@ -32,40 +36,67 @@ const AreaItem = () => {
 
     getArea();
     setLoading(false);
+    setCurrentId();
   }, [area]);
+
 
   const getArea = async () => {
     const { data } = await apiArea.getArea();
     setAreaData(data);
     setAreaItem(...data.filter(({ url }) => url === area));
     return data;
-  };
+  };  
+
+  const setCurrentId = () => {
+    switch(areaPath){
+      case 'business' :
+        index = 0;
+        break;
+      case 'tech-recruiter' :
+        index = 1;
+        break;
+      case 'produtos' :
+        index = 2;
+        break;
+      case 'agil' :
+        index = 3;
+        break;
+      case 'social-media' :
+        index = 4;
+        break;
+      case 'ui-ux-design' :
+        index = 5;
+        break;
+      case 'front-end' :
+        index = 6;
+        break;
+      case 'back-end' :
+        index = 7;
+        break;
+      case 'data' :
+        index = 8;
+        break;
+      case 'mobile' :
+        index = 9;
+        break;
+      case 'qa' :
+        index = 10;
+        break;
+      case 'devops' :
+        index = 11;
+        break;
+      default:
+        index = 0;
+    }
+  }
 
   const previewArea = () => {
-    if (index < 0) {
-      setIndex(areaData.length - 1);
-    }
-
-    if (index > areaData.length - 1) {
-      setIndex(0);
-    }
-
-    setIndex(index + 1 > areaData.length - 1 ? 0 : index + 1);
-
+    index = index - 1 < 0 ? areaData.length - 1 : index - 1; 
     router.push(`/areas-de-atuacao/${areaData[index].url}`);
   };
 
   const nextArea = () => {
-    if (index < 0) {
-      setIndex(areaData.length - 1);
-    }
-
-    if (index > areaData.length - 1) {
-      setIndex(0);
-    }
-
-    setIndex(index + 1 > areaData.length - 1 ? 0 : index + 1);
-
+    index = index + 1 > areaData.length - 1 ? 0 : index + 1;
     router.push(`/areas-de-atuacao/${areaData[index].url}`);
   };
 
@@ -123,7 +154,9 @@ const AreaItem = () => {
               </div>
             </section>
 
-            <section className={styles.InterviewSection}>
+            {(areaItem.head.name != "") &&(
+              <>
+                <section className={styles.InterviewSection}>
               
               <div className={styles.ceo}>
                 <div className={styles.avatar}>
@@ -258,6 +291,8 @@ const AreaItem = () => {
                   ))}
               </div>
             </section>
+              </>
+            )}
           </div>
         )}
     </>
