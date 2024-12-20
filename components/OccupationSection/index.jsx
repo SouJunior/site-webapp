@@ -44,10 +44,9 @@ export const OccupationSection = () => {
           <div className={styles.areasContainer}>
             <Swiper
               ref={swiperRef}
-              slidesPerView={8}
-              freeMode={true}
-              loop={false}
-              rewind={true}
+              loop={true} // Habilita o loop infinito
+              speed={600}
+              rewind={false} // Desabilita o rewind
               modules={[Controller, Navigation]}
               navigation={{
                 prevEl: navigationPrevRef.current,
@@ -57,17 +56,28 @@ export const OccupationSection = () => {
                 swiper.params.navigation.prevEl = navigationPrevRef.current;
                 swiper.params.navigation.nextEl = navigationNextRef.current;
               }}
+              breakpoints={{
+                1200: { slidesPerView: 7, spaceBetween: 10 },
+                992: { slidesPerView: 6, spaceBetween: 16 },
+                768: { slidesPerView: 4, spaceBetween: 12 },
+                480: { slidesPerView: 2, spaceBetween: 10 }, // Configuração para >=480px
+              }}
+              slidesPerView={2} // Configuração padrão (aplicada abaixo de 480px)
+              spaceBetween={10} // Espaçamento padrão para telas menores
             >
-              {carouselItems.map(({ title, icon, url }) => (
-                <SwiperSlide key={title}>
-                  <Link href={`/areas-de-atuacao/${url}`}>
-                    <div className={styles.areaItem}>
-                      <Image src={icon} alt={title} width={62} height={62} />
-                      <p>{title}</p>
-                    </div>
-                  </Link>
-                </SwiperSlide>
-              ))}
+              {/* Duplicando os slides manualmente */}
+              {[...carouselItems, ...carouselItems].map(
+                ({ title, icon, url }) => (
+                  <SwiperSlide key={title}>
+                    <Link href={`/areas-de-atuacao/${url}`}>
+                      <div className={styles.areaItem}>
+                        <Image src={icon} alt={title} width={62} height={62} />
+                        <p>{title}</p>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                )
+              )}
             </Swiper>
           </div>
         </div>
