@@ -84,22 +84,22 @@
   cursor: not-allowed;
 }
 
-.customSelectDate {
-  border: none;
-  border-radius: 8px;
-  background: white;
-  padding: 0.5rem 1rem;
+.turnoRadiolabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fieldDiv {
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
 }
 
 .turnoRadioGroup {
   display: flex;
   gap: 32px;
-}
-
-.turnoRadiolabel {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  flex-direction: row;
 }
 
 .radioLabel {
@@ -115,21 +115,11 @@
   cursor: pointer;
 }
 
-@media (max-width: 960px) {
-  .ApoiadorSection,
-  .bannerContainer {
-    gap: 3.2rem;
-  }
-  .ApoiadorSection {
-    padding: 0 3.2rem;
-  }
-
-  .radios {
-    gap: 2.4rem;
-  }
-  .button {
-    width: 100%;
-  }
+.customSelectDate {
+  border: none;
+  border-radius: 8px;
+  background: white;
+  padding: 0.5rem 1rem;
 }
 
 .bannerContainer,
@@ -145,6 +135,7 @@
 }
 
 .container {
+  min-width: 284px;
   max-width: 120.4rem;
   width: 100%;
   display: flex;
@@ -295,7 +286,26 @@ form .buttons {
   font-size: 18px;
 }
 
-@media (max-width: 960px) {
+.customStartDate{
+  display: block;
+}
+
+@media (max-width: 960px){
+  .ApoiadorSection,
+  .bannerContainer {
+    gap: 3.2rem;
+  }
+  .ApoiadorSection {
+    padding: 0 3.2rem;
+  }
+
+  .radios {
+    gap: 2.4rem;
+  }
+  .button {
+    width: 100%;
+  }
+
   .left {
     gap: 2.2rem;
   }
@@ -315,5 +325,25 @@ form .buttons {
   .buttons {
     width: 100%;
     padding: 0;
+  }
+
+  .turnoRadioGroup {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  .customLabelDate{
+    position: absolute;
+  }
+  
+  .customDate{
+    position: relative;
+    left: 0;
+    top: 35px;
   }
 }

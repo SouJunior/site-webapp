@@ -229,8 +229,7 @@ export const Mentor = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Quanto tempo você tem disponível para atual na Sou Junior?
-                        *
+                        Quanto tempo você tem disponível para atual na Sou Junior?*
                       </label>
                       <label
                         className={styles.radioLabel}
@@ -285,7 +284,7 @@ export const Mentor = () => {
                         />
                         Mais de 15 horas semanais
                       </label>
-                    </div>
+                    </div>                    
                     <div
                       role="radioGroup"
                       id="radioGroup"
@@ -300,51 +299,55 @@ export const Mentor = () => {
                           className={styles.radioLabel}
                           htmlFor="Imediato"
                         >
-                          <Field
-                            className={styles.customRadio}
-                            type="radio"
-                            name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Imediato")}
-                            value="Imediato"
-                            id="Imediato"
-                            checked
-                          />
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="startOption"
+                          //onChange={() => handleInicioChange(setFieldValue, "Imediato")}
+                          value="Imediato"
+                          id="Imediato"
+                          checked
+                        />
                           Imediato
                         </label>
                         <label
                           className={styles.radioLabel}
                           htmlFor="Em até 1 mês"
                         >
-                          <Field
-                            className={styles.customRadio}
-                            type="radio"
-                            name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Em até 1 mês")}
-                            value="Em até 1 mês"
-                            id="Em até 1 mês"
-                          />
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="startOption"
+                          //onChange={() => handleInicioChange(setFieldValue, "Em até 1 mês")}
+                          value="Em até 1 mês"
+                          id="Em até 1 mês"
+                        />
                           Em até 1 mês
                         </label>
                         <label
                           className={styles.radioLabel}
                           htmlFor="Em uma data específica"
                         >
-                          <Field
-                            className={styles.customRadio}
-                            type="radio"
-                            name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
-                            value="Em uma data específica"
-                            id="Em uma data específica"
-                          />
-                          Em uma data específica:
-                          <Field
-                            className={styles.customSelectDate}
-                            type="date"
-                            name="startDate"
-                            id="startDate"
-                            disabled={values.startOption !== "Em uma data específica"}
-                          />
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="startOption"
+                          //onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
+                          value="Em uma data específica"
+                          id="Em uma data específica"
+                        />
+                            Em uma data específica:
+                        <div className={styles.customLabelDate}>
+                          <label className={styles.customDate}>
+                            <Field
+                              className={styles.customSelectDate}
+                              type="date"
+                              name="startDate"
+                              id="startDate"
+                              disabled={values.startOption !== "Em uma data específica"}
+                            />
+                          </label>
+                        </div>
                           <ErrorMessage
                             name="startDate"
                             component="div"
