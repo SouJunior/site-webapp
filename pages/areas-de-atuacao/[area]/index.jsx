@@ -124,21 +124,7 @@ const AreaItem = () => {
             </section>
 
             <section className={styles.InterviewSection}>
-              <Heading level={"h3"}>
-                Entrevista com Head de {areaItem.title} da Sou Junior -{" "}
-                {areaItem.head.name}
-              </Heading>
-              {areaItem.interview.introduction.length > 1 ? (
-                <div className={styles.container}>
-                  <div className={styles.paragraphWrapper}>
-                    {areaItem.interview.introduction.map((paragraph) => (
-                      <Paragraph key={paragraph}>{paragraph}</Paragraph>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                ""
-              )}
+              
               <div className={styles.ceo}>
                 <div className={styles.avatar}>
                   <Image
@@ -178,32 +164,7 @@ const AreaItem = () => {
                 </div>
               </div>
               <div className={styles.container}>
-                {areaItem.interview.questions.map(({ question, awnser }) => (
-                  <>
-                    <Accordion defaultExpanded={true} style={inlineStyle}>
-                      <AccordionSummary
-                        aria-controls="panel1a-content"
-                        id="panel1a-header"
-                        key={question}
-                      >
-                        <Typography
-                          variant="string"
-                          className={styles.question}
-                        >
-                          {question}
-                        </Typography>
-                      </AccordionSummary>
-                      <AccordionDetails
-                        className={styles.AccordionDetails}
-                        key={awnser}
-                      >
-                        <Typography variant="string">
-                          <Paragraph>{awnser}</Paragraph>
-                        </Typography>
-                      </AccordionDetails>
-                    </Accordion>
-                  </>
-                ))}
+                
               </div>
             </section>
 
