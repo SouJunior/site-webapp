@@ -42,12 +42,13 @@
 .areasContainer {
   display: flex;
   align-items: center;
-  max-width: inherit;
-  overflow: scroll;
+  width: 100%;
+  overflow: hidden;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
   padding-top: 16.2rem;
   padding-bottom: 5.8rem;
+  padding-right: 1.8rem;
 }
 
 .areasContainer::-webkit-scrollbar {

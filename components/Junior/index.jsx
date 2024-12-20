@@ -27,11 +27,25 @@ export const Junior = () => {
   const [termsAccepted, setTermsAccepted] = useState(false);
 
   useEffect(() => {
-    (async () => {
-      const res = await api.get("/area")
+    // (async () => {
+    //   const res = await api.get("/area")
 
-      setAreas(res.data)
-    })()
+    //   setAreas(res.data)
+    // })()
+
+    setAreas([
+      {name: "Agilidade", id: 1},
+      {name: "Back-End", id: 2},
+      {name: "Business", id: 3},
+      {name: "Dados", id: 4},
+      {name: "Design", id: 5},
+      {name: "DevOps", id: 6},
+      {name: "Front-End", id: 7},
+      {name: "Produto", id: 8},
+      {name: "QA - Quality Assurance", id: 9},
+      {name: "Social Media", id: 10},
+      {name: "Tech Recruitment", id: 11}
+    ]);
     
     setIsSubmitting(true);
 
