@@ -85,7 +85,7 @@ export const ParticipationSection = () => {
                     </Paragraph>
 
                     <button className={styles.button}>
-                      <a href="/seja-junior">Quero Participar!</a>
+                      <a href="https://stars.soujunior.tech/">Quero Participar!</a>
                     </button>
                   </div>
                 </>
@@ -114,7 +114,7 @@ export const ParticipationSection = () => {
                       atuação.”
                     </Paragraph>
                     <button className={styles.button}>
-                      <Link href="/seja-mentor">Quero Participar!</Link>
+                      <Link href="https://stars.soujunior.tech/">Quero Participar!</Link>
                     </button>
                   </div>
                 </>
