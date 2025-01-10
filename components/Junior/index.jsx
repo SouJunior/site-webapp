@@ -25,6 +25,7 @@ export const Junior = () => {
   const [formDirty, setFormDirty] = useState(false);
   const [showTermsModal, setShowTermsModal] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
     // (async () => {
@@ -36,17 +37,55 @@ export const Junior = () => {
     setAreas([
       {name: "Agilidade", id: 1},
       {name: "Back-End", id: 2},
-      {name: "Business", id: 3},
-      {name: "Dados", id: 4},
-      {name: "Design", id: 5},
-      {name: "DevOps", id: 6},
-      {name: "Front-End", id: 7},
-      {name: "Produto", id: 8},
+      {name: "Front-End", id: 3},
+      {
+        name: "Business", 
+        id: 4,
+        subareas: [
+          {name: "Análise de Negócios", id: 1},
+          {name: "Análise de Processos", id: 2},
+        ],
+      },
+      {
+        name: "Dados", 
+        id: 5,
+        subareas: [
+          {name: "Analytics", id: 3},
+          {name: "BI", id: 4},
+          {name: "Engenharia de Dados", id: 5},
+        ],
+      },
+      {
+        name: "Design", 
+        id: 6,
+        subareas: [
+          {name: "Design Ops", id: 6},
+          {name: "UX/UI", id: 7},
+        ],
+      },
+      {name: "DevOps", id: 7},
+      {
+        name: "Produto",
+        id: 8,
+        subareas: [
+          {name: "APM - Associate Product Manager", id: 8},
+          {name: "Product Growth", id: 9},
+          {name: "Product Marketing Manager", id: 10},
+          {name: "Product Ops", id: 11},
+        ],
+      },
       {name: "QA - Quality Assurance", id: 9},
-      {name: "Social Media", id: 10},
-      {name: "Tech Recruitment", id: 11}
+      {name: "Tech Recruitment", id: 10},
+      {
+        name: "Social Media",
+        id: 11,
+        subareas: [
+          {name: "Criação de Conteúdo - Redação", id: 12},
+          {name: "Criação de Peças - Design", id: 13},
+        ],
+      }   
     ]);
-    
+
     setIsSubmitting(true);
 
     const confirmExit = (e) => {
@@ -87,6 +126,7 @@ export const Junior = () => {
         const response = await api.post("/juniors",
           {
             name: values.name,
+            cpf: values.cpf,
             email: values.email,
             linkedin: values.linkedin,
             turn: values.turn === "turno-disponivel" ? true : false,
@@ -95,7 +135,9 @@ export const Junior = () => {
             tools_knowledge: values.toolsKnowledge,
             field_knowledge: values.fieldKnowledge,
             volunteer_motivation: values.volunteerMotivation,
+            other_experiences: values.otherExperiences,
             contact_agreement: values.contactAgreement ? true : false,
+            volunteering_agreement: values.volunteeringAgreement ? true : false,
             terms_agreement: values.termsAgreement ? true : false,
             start_date: startDate,
             id_area: Number(values.area),
@@ -112,6 +154,27 @@ export const Junior = () => {
       } catch (error) {
         openPopup();
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        console.log(
+          {
+            name: values.name,
+            cpf: values.cpf,
+            email: values.email,
+            linkedin: values.linkedin,
+            turn: values.turn === "turno-disponivel" ? true : false,
+            start_option: values.startOption,
+            availability: values.availability,
+            tools_knowledge: values.toolsKnowledge,
+            field_knowledge: values.fieldKnowledge,
+            volunteer_motivation: values.volunteerMotivation,
+            other_experiences: values.otherExperiences,
+            contact_agreement: values.contactAgreement ? true : false,
+            volunteering_agreement: values.volunteeringAgreement ? true : false,
+            terms_agreement: values.termsAgreement ? true : false,
+            start_date: startDate,
+            id_area: Number(values.area),
+            id_subarea: Number(values.subarea),
+          }
+        )
       } finally {
         setLoading(false);
       }
@@ -121,6 +184,7 @@ export const Junior = () => {
   const handleAreaChange = (setFieldValue, id) => {
     setFieldValue("area", id);
     const selectedArea = areas.find(option => option.id === Number(id));
+    setSelectedArea(selectedArea);
 
     if (selectedArea && selectedArea.subareas) {
       setSubareas(selectedArea.subareas);
@@ -167,10 +231,8 @@ const handleCheckboxChange = (e, setFieldValue) => {
         <div className={styles.bannerText}>
           <Heading level={"h2"}>Quero ser Junior</Heading>
           <Paragraph>
-            Para se candidatar como junior, preencha as informações abaixo.
-          </Paragraph>
-          <Paragraph>
-            Nosso time entrará em contato para te conhecer um pouco mais e
+            Para se candidatar como junior, preencha as informações do formulário abaixo e
+            nosso time entrará em contato para te conhecer um pouco mais e
             entender de que forma você poderá contribuir com os projetos e
             iniciativas da SouJunior.
           </Paragraph>
@@ -184,21 +246,21 @@ const handleCheckboxChange = (e, setFieldValue) => {
               validationSchema={getValidationSchema(subareas.length > 0, requiresDate)}
               onSubmit={onSubmit}
             >
-              {({ isSubmitting, values, setFieldValue, isValid, dirty, errors }) => {
+              {({ isSubmitting, values, setFieldValue, isValid, dirty, errors, handleBlur, handleChange }) => {
                 if (dirty) {
                   setFormDirty(true)
                 }
                 return (
                   <Form>
                     <div className={styles.fieldDiv}>
-                      <label>Nome completo: *</label>
+                      <label>Nome completo *</label>
                       <Field
                         type="text"
                         name="name"
-                        placeholder="Escrever o nome aqui"
-                        maxLength={100}
+                        placeholder="Digite seu nome completo"
+                        maxLength={150}
                         className={styles.input}
-                        onBlur={() => setFormDirty(true)}
+                        onBlur={handleBlur}
                       />
                       <ErrorMessage
                         name="name"
@@ -207,11 +269,31 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       />
                     </div>
                     <div className={styles.fieldDiv}>
-                      <label>E-mail: *</label>
+                      <label>CPF *</label>
+                      <Field
+                        type="text"
+                        name="cpf"
+                        maxLength={11}
+                        placeholder="Digite seu CPF (somente números)"
+                        className={styles.input}
+                        onChange = {(e) => {
+                          const value = e.target.value.replace(/\D/g, '');
+                          handleChange(e);
+                          setFieldValue('cpf', value);
+                        }}
+                      />
+                      <ErrorMessage
+                        name="cpf"
+                        component="div"
+                        className={styles.errorMessage}
+                      />
+                    </div>
+                    <div className={styles.fieldDiv}>
+                      <label>E-mail *</label>
                       <Field
                         type="email"
                         name="email"
-                        placeholder="email@email.com"
+                        placeholder="Digite seu endereço de e-mail"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -221,11 +303,11 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       />
                     </div>
                     <div className={styles.fieldDiv}>
-                      <label>Confirmar e-mail: *</label>
+                      <label>Confirmar e-mail *</label>
                       <Field
                         type="email"
                         name="confirmEmail"
-                        placeholder="email@email.com"
+                        placeholder="Digite seu endereço de e-mail"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -235,7 +317,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       />
                     </div>
                     <div className={styles.fieldDiv}>
-                      <label>Linkedin: *</label>
+                      <label>Linkedin *</label>
                       <Field
                         type="text"
                         name="linkedin"
@@ -255,7 +337,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        A SouJunior realiza reuniões e atividades no período noturno. Você tem disponibilidade para atuar nesse turno? *
+                        A SouJunior realiza reuniões e atividades no período noturno. Você possui disponibilidade para participar das cerimônias e atividades neste turno? *
                       </label>
                       <div
                         className={styles.turnoRadioGroup}
@@ -269,8 +351,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             className={styles.customRadio}
                             type="radio"
                             name="turn"
-                            value="disponivel"
-                            checked
+                            value="turno-disponivel"
                           />
                           Sim
                         </label>
@@ -283,7 +364,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             className={styles.customRadio}
                             type="radio"
                             name="turn"
-                            value="indisponivel"
+                            value="turno-indisponivel"
                           />
                           Não
                         </label>
@@ -296,61 +377,61 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Quanto tempo você tem disponível para atual na Sou Junior?
+                        Quanto tempo por semana você poderia se dedicar ao voluntariado na SouJunior?
                         *
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="Até 5 horas semanais"
+                        htmlFor="5 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="Até 5 horas semanais"
-                          id="Até 5 horas semanais"
+                          value="5 horas"
+                          id="5 horas"
                           checked
                         />
-                        Até 5 horas semanais
+                        5 horas
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="5 a 10 horas semanais"
+                        htmlFor="5 a 10 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="5 a 10 horas semanais"
-                          id="5 a 10 horas semanais"
+                          value="5 a 10 horas"
+                          id="5 a 10 horas"
                         />
-                        5 a 10 horas semanais
+                        5 a 10 horas
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="10 a 15 horas semanais"
+                        htmlFor="10 a 15 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="10 a 15 horas semanais"
-                          id="10 a 15 horas semanais"
+                          value="10 a 15 horas"
+                          id="10 a 15 horas"
                         />
-                        10 a 15 horas semanais
+                        10 a 15 horas
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="Mais de 15 horas semanais"
+                        htmlFor="Mais de 15 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="Mais de 15 horas semanais"
-                          id="Mais de 15 horas semanais"
+                          value="Mais de 15 horas"
+                          id="Mais de 15 horas"
                         />
-                        Mais de 15 horas semanais
+                        Mais de 15 horas
                       </label>
                     </div>
                     <div
@@ -360,7 +441,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Qual a sua disponibilidade para início?*
+                        Você possui disponibilidade imediata para iniciar no voluntariado? Se não, quando poderia iniciar? *
                       </label>
                       <div className={styles.turnoRadioGroup}>
                         <label
@@ -374,23 +455,8 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             onChange={() => handleInicioChange(setFieldValue, "Imediato")}
                             value="Imediato"
                             id="Imediato"
-                            checked
                           />
-                          Imediato
-                        </label>
-                        <label
-                          className={styles.radioLabel}
-                          htmlFor="Em até 1 mês"
-                        >
-                          <Field
-                            className={styles.customRadio}
-                            type="radio"
-                            name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Em até 1 mês")}
-                            value="Em até 1 mês"
-                            id="Em até 1 mês"
-                          />
-                          Em até 1 mês
+                          Sim
                         </label>
                         <label
                           className={styles.radioLabel}
@@ -404,11 +470,12 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             value="Em uma data específica"
                             id="Em uma data específica"
                           />
-                          Em uma data específica:
+                          Não, somente a partir de: 
                           <Field
                             className={styles.customSelectDate}
                             type="date"
                             name="startDate"
+                            placeholder="informe aqui sua disponibilidade"
                             id="startDate"
                             disabled={values.startOption !== "Em uma data específica"}
                           />
@@ -422,7 +489,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Qual das opções abaixo seria sua área de interesse?*
+                        Qual das áreas de atuação da SouJunior você possui interesse?*
                       </label>
                       <Field
                         as="select"
@@ -457,7 +524,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     {subareas.length > 0 && (
                       <div className={styles.fieldDiv}>
                         <label>
-                          Qual das opções abaixo seria sua subárea de interesse?*
+                          {`Em qual área de ${selectedArea.name} você gostaria de atuar? *`}
                         </label>
                         <Field as="select" name="subarea" className={styles.select}>
                           <option
@@ -486,7 +553,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     )}
                     <div className={styles.fieldDiv}>
                       <label>
-                        Você tem conhecimento/experiência com ferramentas e tecnologias na área em que deseja atuar?*
+                        Você possui conhecimento/experiência com ferramentas e/ou tecnologias na área em que deseja atuar?*
                       </label>
                       <Field
                         as="textarea"
@@ -494,7 +561,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Fale um pouco sobre seus conhecimentos com ferramentas nessa área."
+                        placeholder="Conte-nos um pouco sobre sua experiência na área desejada!"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.toolsKnowledge.length}
@@ -512,7 +579,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Você já possui algum conhecimento prévio sobre os conceitos teóricos da área em que deseja atuar?*
+                        E sobre os conceitos teóricos, você já possui algum conhecimento referente a área que deseja atuar? Quais cursos referente a esta área você já realizou? *
                       </label>
                       <Field
                         as="textarea"
@@ -520,7 +587,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Fale um pouco sobre seus conhecimentos nessa área."
+                        placeholder="Conte-nos um pouco sobre seu conhecimento teórico e cursos realizados!"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.fieldKnowledge.length}
@@ -538,7 +605,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Antes de finalizarmos sua candidatura, há algum aspecto importante sobre sua motivação para se tornar voluntário na SouJunior?*
+                        Conte-nos um pouco sobre sua motivação para se tornar um Júnior na SouJunior.*
                       </label>
                       <Field
                         as="textarea"
@@ -546,7 +613,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Compartilhe um pouco mais sobre sua motivação para ser voluntário na SouJunior."
+                        placeholder="Qual sua motivação para se tornar vonlutário?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -562,6 +629,32 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
+                    <div className={styles.fieldDiv}>
+                      <label>
+                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência que possa ser relevante como um Júnior na SouJunior?
+                      </label>
+                      <Field
+                        as="textarea"
+                        name="otherExperiences"
+                        minLength={200}
+                        maxLength={500}
+                        className={styles.textarea}
+                        placeholder="Caso queira compartilhar algo mais conosco, essa é a hora!"
+                      />
+                      <span className={styles.count}>
+                        Caracteres restantes: {500 - values.otherExperiences.length}
+                      </span>
+                      {values.otherExperiences.length > 500 && (
+                        <span className={styles.count} style={{ color: "red" }}>
+                          Limite de caracteres excedido.
+                        </span>
+                      )}
+                      <ErrorMessage
+                        name="otherExperiences"
+                        component="div"
+                        className={styles.errorMessage}
+                      />
+                    </div>
                     <div className={styles.fieldCheckbox}>
                       <div className={styles.fieldDiv}>
                         <label
@@ -572,10 +665,27 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             type="checkbox"
                             name="contactAgreement"
                           />
-                          Declaro as informações fornecidas corretas e autorizo a SouJunior a me contatar
+                          Declaro que as informações fornecidas são verídicas e autorizo a SouJunior a me contatar.
                         </label>
                         <ErrorMessage
                           name="contactAgreement"
+                          component="div"
+                          className={styles.errorMessage}
+                        />
+                      </div>
+                      <div className={styles.fieldDiv}>
+                        <label
+                          className={styles.radioLabel}
+                          htmlFor="volunteeringAgreement"
+                        >
+                          <Field
+                            type="checkbox"
+                            name="volunteeringAgreement"
+                          />
+                          Declaro que compreendo e concordo com o fato da SouJunior ser um projeto de voluntariado sem fins lucrativos.
+                        </label>
+                        <ErrorMessage
+                          name="volunteeringAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
@@ -592,7 +702,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             checked={termsAccepted}
                             onChange={(e) => handleCheckboxChange(e, setFieldValue)}
                           />
-                          Estou de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
+                          Declaro ter lido e estar de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
                         </label>
                         <ErrorMessage
                           name="termsAgreement"
@@ -631,7 +741,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
         {
           showAlertMessage &&
           <AlertMessage
-            message={`Inscrição concluída. Você receberá um e-mail de confirmação em breve.`}
+            message={`Inscrição realizada com sucesso! Vamos analisar seus dados e entraremos em contato.`}
             onClose={() => {
               setShowAlertMessage(false)
             }}
