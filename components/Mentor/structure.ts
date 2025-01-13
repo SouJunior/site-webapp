@@ -1,105 +1,18 @@
 import * as Yup from "yup";
+import { pt } from 'yup-locale-pt';
+import { cpfValidator } from "../../utils/cpfValidator";
 
-export const areasOption = [
-    {
-        name: "Agilidade",
-        value: "agility"
-    },
-    {
-      name: "Business",
-      value: "business",
-      sub: [
-        {
-          name: "Análise de Negócios",
-          value: "businessAnalist",
-        },
-        {
-          name: "Análise de Processos",
-          value: "processAnalist",
-        },
-      ],
-    },
-    {
-      name: "Desenvolvimento",
-      value: "development",
-      sub: [
-        {
-          name: "Back-end",
-          value: "backend",
-        },
-        {
-          name: "Front-end",
-          value: "frontend",
-        },
-      ],
-    },
-    {
-        name: "Dados",
-        value: "data"
-    },
-    {
-        name: "Design",
-        value: "design",
-        sub: [
-          {
-            name: "UX/UI",
-            value: "uxui",
-          },
-          {
-            name: "Design OPS",
-            value: "designOps",
-          }
-        ],
-    },
-    {
-        name: "DevOps",
-        value: "devops"
-    },
-    {
-      name: "Produto",
-      value: "product",
-      sub: [
-        {
-          name: "Product Growth",
-          value: "productGrowth",
-        },
-        {
-          name: "Product OPS",
-          value: "productOps",
-        },
-        {
-          name: "Product Marketing Manager",
-          value: "productMarketingManager",
-        },
-        {
-          name: "Social Media",
-          value: "socialMedia",
-        },
-        {
-          name: "APM - Associate Product Manager",
-          value: "apm",
-        },
-      ],
-    },
-    {
-      name: "QA - Quality Assurance",
-      value: "qa"
-    },
-    {
-      name: "Social Media",
-      value: "sm"
-    },
-    {
-      name: "Tech Recruiter",
-      value: "recruiter"
-    },
-];
+Yup.setLocale(pt);
 
 export const getValidationSchema = (hasSubareas, requiresDate) => {
   return Yup.object().shape({
     name: Yup.string()
       .min(3, "O campo Nome precisa ter no mínimo 3 caracteres.")
       .required("O campo Nome completo é obrigatório."),
+    cpf: Yup.string()
+    .matches(/^\d{11}$/, 'O CPF deve conter 11 dígitos numéricos.')
+    .required("O campo CPF é obrigatório.")
+    .test((value) => cpfValidator(value)),
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
@@ -114,43 +27,43 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     subarea: hasSubareas
       ? Yup.string().required("* Escolha uma subárea por favor.")
       : Yup.string().nullable(),
-    availability: Yup.string()
-      .required("Por favor assinale umas das opções pra prosseguir"),
-    turn: Yup.string()
-      .required("Por favor assinale umas das opções pra prosseguir"),
-    startOption: requiresDate
+    startDate: requiresDate
       ? Yup.date().required("Por favor, escolha uma data.")
       : Yup.date().nullable(),
-    jobExperience: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
-      .required("O campo é obrigatório."),
-    mentorExperience: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
-      .required("O campo é obrigatório."),
     volunteerMotivation: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
       .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
-      contactAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
-      termsAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
+    experienceTime: Yup.string()
+      .max(500, "O campo deve ter no máximo 500 caracteres.")
+      .required("O campo é obrigatório."),
+    jobExperience: Yup.string()
+      .max(500, "O campo deve ter no máximo 500 caracteres.")
+      .required("O campo é obrigatório."),
+    otherExperiences: Yup.string()
+      .max(500, "O campo deve ter no máximo 500 caracteres."),
+    contactAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
+    volunteeringAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
+    termsAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
   });
 };
 
 export const initialValues = {
   name: "",
+  cpf: "",
   email: "",
   confirmEmail: "",
   linkedin: "",
   area: "",
-  subarea: "",
   availability: "Até 5 horas semanais",
+  experienceTime: "1 ano",
   turn: "turno-disponivel",
-  startOption: "",
+  startOption: "Imediato",
+  toolsKnowledge: "",
+  fieldKnowledge: "",
   jobExperience: "",
-  mentorExperience: "",
   volunteerMotivation: "",
+  otherExperiences: "",
   contactAgreement: false,
+  volunteeringAgreement: false,
   termsAgreement: false
 }

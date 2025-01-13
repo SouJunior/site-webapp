@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, {useState, useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
+import { getValidationSchema, initialValues } from "./structure";
 
 import styles from "./Mentor.module.css";
-import { areasOption, getValidationSchema, initialValues } from "./structure";
 
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
@@ -10,17 +10,44 @@ import { Loading } from "../commons/Loading";
 import Popup from "../commons/Popup/Popup";
 
 import { api } from "../../services/api";
+import AlertMessage from "../commons/AlertMessage/AlertMessage";
+import TermsModal from "../TermsModal";
 
 export const Mentor = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [areas, setAreas] = useState([]);
   const [subareas, setSubareas] = useState([]);
   const [requiresDate, setRequiresDate] = useState(false);
+  const [showAlertMessage, setShowAlertMessage] = useState(false);
   const [formDirty, setFormDirty] = useState(false);
+  const [showTermsModal, setShowTermsModal] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
+    // (async () => {
+    //   const res = await api.get("/area")
+
+    //   setAreas(res.data)
+    // })()
+
+    setAreas([
+      {name: "Agilidade", id: 1},
+      {name: "Back-End", id: 2},
+      {name: "Front-End", id: 3},
+      {name: "Business",  id: 4},
+      {name: "Dados", id: 5},
+      {name: "Design", id: 6},
+      {name: "DevOps", id: 7},
+      {name: "Produto", id: 8},
+      {name: "QA - Quality Assurance", id: 9},
+      {name: "Tech Recruitment", id: 10},
+      {name: "Social Media", id: 11}
+    ]);
+
     setIsSubmitting(true);
 
     const confirmExit = (e) => {
@@ -45,49 +72,65 @@ export const Mentor = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    setLoading(true);
     setIsSubmitting(true);
+    setLoading(true);
 
     const { confirmarEmail, ...data } = values;
 
+    const startDate = values.startOption === "imediato" ?
+      new Date()
+      : values.startOption === "em até 1 mês" ?
+        new Date(new Date().setMonth(new Date().getMonth() + 1))
+          : new Date(values.startDate)
+  
     if (isSubmitting) {
-      openPopup();
-      setLoading(true);
       try {
-        const response = await api.sendMailAdmin("/mail/collaborator", {
-          subject: "Quero ser Mentor",
-          data: { ...data },
-        });
+        const response = await api.post("/mentor",
+          {
+            name: values.name,
+            cpf: values.cpf,
+            email: values.email,
+            linkedin: values.linkedin,
+            turn: values.turn === "turno-disponivel" ? true : false,
+            start_option: values.startOption,
+            availability: values.availability,
+            experience_time: values.experienceTime,
+            tools_knowledge: values.toolsKnowledge,
+            field_knowledge: values.fieldKnowledge,
+            job_experience: values.jobExperience,
+            volunteer_motivation: values.volunteerMotivation,
+            other_experiences: values.otherExperiences,
+            contact_agreement: values.contactAgreement ? true : false,
+            volunteering_agreement: values.volunteeringAgreement ? true : false,
+            terms_agreement: values.termsAgreement ? true : false,
+            start_date: startDate,
+            id_area: Number(values.area),
+            id_subarea: Number(values.subarea),
+          }
+        )
 
-        if (response.status !== 200) {
+        if (response.status !== 201) {
           throw new Error("Não foi possível enviar a requisição");
         }
-        setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
 
+        setShowAlertMessage(true);
         resetForm();
       } catch (error) {
         openPopup();
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
+      } finally {
+        setLoading(false);
       }
-      setLoading(false);
     }
   };
 
-  const handleInicioChange = (setFieldValue, value) => {
-    setFieldValue("inicio", value);
-    if (value === "Em uma data específica") {
-      setRequiresDate(true);
-    } else {
-      setRequiresDate(false);
-    }
-  };
+  const handleAreaChange = (setFieldValue, id) => {
+    setFieldValue("area", id);
+    const selectedArea = areas.find(option => option.id === Number(id));
+    setSelectedArea(selectedArea);
 
-  const handleAreaChange = (setFieldValue, area) => {
-    setFieldValue("area", area);
-    const selectedArea = areasOption.find(option => option.value === area);
-
-    if (selectedArea && selectedArea.sub) {
-      setSubareas(selectedArea.sub);
+    if (selectedArea && selectedArea.subareas) {
+      setSubareas(selectedArea.subareas);
       setFieldValue("subarea", "");
     } else {
       setSubareas([]);
@@ -95,9 +138,31 @@ export const Mentor = () => {
     }
   };
 
-  const handleClear = (resetForm) => {
-    resetForm();
+  const handleInicioChange = (setFieldValue, value) => {
+    setFieldValue("startOption", value);
+    if (value === "Em uma data específica") {
+      setRequiresDate(true);
+    } else {
+      setRequiresDate(false);
+    }
   };
+
+  const handleTermsAcceptance = () => {
+    setTermsAccepted(true);
+    setShowTermsModal(false);
+};
+
+  
+const handleCheckboxChange = (e, setFieldValue) => {
+  if (e.target.checked) {
+      setShowTermsModal(true);
+      setFieldValue('termsAgreement', true); 
+  } else {
+      setShowTermsModal(false); 
+      setTermsAccepted(false); 
+      setFieldValue('termsAgreement', false);
+  }
+};
 
   return (
     <>
@@ -109,14 +174,12 @@ export const Mentor = () => {
         <div className={styles.bannerText}>
           <Heading level={"h2"}>Quero ser Mentor</Heading>
           <Paragraph>
-            Para se candidatar como mentor preencha as informações abaixo. Nosso
+            Para se candidatar como mentor preencha as informações do formulário abaixo e nosso
             time entrará em contato para te conhecer um pouco mais e entender de
-            que forma você poderá contribuir com os projetos e iniciativas da
-            SouJunior.
+            que forma você poderá contribuir com os projetos e iniciativas da SouJunior.
           </Paragraph>
         </div>
       </div>
-
       <section className={styles.formSection}>
         <div className={styles.container}>
           <div className={styles.form}>
@@ -125,20 +188,21 @@ export const Mentor = () => {
               validationSchema={getValidationSchema(subareas.length > 0, requiresDate)}
               onSubmit={onSubmit}
             >
-              {({ isSubmitting, values, setFieldValue, resetForm, isValid, dirty }) => {
+              {({ isSubmitting, values, setFieldValue, isValid, dirty, errors, handleBlur, handleChange }) => {
                 if (dirty) {
                   setFormDirty(true)
                 }
-                return (                  
+                return (
                   <Form>
-                    <div>
-                      <label>Nome completo: *</label>
+                    <div className={styles.fieldDiv}>
+                      <label>Nome completo *</label>
                       <Field
                         type="text"
                         name="name"
-                        maxLength={100}
+                        placeholder="Digite seu nome completo"
+                        maxLength={150}
                         className={styles.input}
-                        onBlur={() => setFormDirty(true)}
+                        onBlur={handleBlur}
                       />
                       <ErrorMessage
                         name="name"
@@ -146,20 +210,46 @@ export const Mentor = () => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    <div>
-                      <label>E-mail: *</label>
-                      <Field type="email" name="email" className={styles.input} />
+                    <div className={styles.fieldDiv}>
+                      <label>CPF *</label>
+                      <Field
+                        type="text"
+                        name="cpf"
+                        maxLength={11}
+                        placeholder="Digite seu CPF (somente números)"
+                        className={styles.input}
+                        onChange = {(e) => {
+                          const value = e.target.value.replace(/\D/g, '');
+                          handleChange(e);
+                          setFieldValue('cpf', value);
+                        }}
+                      />
+                      <ErrorMessage
+                        name="cpf"
+                        component="div"
+                        className={styles.errorMessage}
+                      />
+                    </div>
+                    <div className={styles.fieldDiv}>
+                      <label>E-mail *</label>
+                      <Field
+                        type="email"
+                        name="email"
+                        placeholder="Digite seu endereço de e-mail"
+                        className={styles.input}
+                      />
                       <ErrorMessage
                         name="email"
                         component="div"
                         className={styles.errorMessage}
                       />
                     </div>
-                    <div>
-                      <label>Confirmar e-mail: *</label>
+                    <div className={styles.fieldDiv}>
+                      <label>Confirmar e-mail *</label>
                       <Field
                         type="email"
                         name="confirmEmail"
+                        placeholder="Digite seu endereço de e-mail"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -168,11 +258,12 @@ export const Mentor = () => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    <div>
-                      <label>Linkedin: *</label>
+                    <div className={styles.fieldDiv}>
+                      <label>Linkedin *</label>
                       <Field
                         type="text"
                         name="linkedin"
+                        placeholder="https://www.linkedin.com/in/"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -188,7 +279,7 @@ export const Mentor = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        A SouJunior realiza reuniões e atividades no período noturno. Você tem disponibilidade para atuar nesse turno? *
+                        A SouJunior realiza reuniões e atividades no período noturno. Você possui disponibilidade para participar das cerimônias e atividades neste turno? *
                       </label>
                       <div
                         className={styles.turnoRadioGroup}
@@ -202,8 +293,7 @@ export const Mentor = () => {
                             className={styles.customRadio}
                             type="radio"
                             name="turn"
-                            value="disponivel"
-                            checked
+                            value="turno-disponivel"
                           />
                           Sim
                         </label>
@@ -216,7 +306,7 @@ export const Mentor = () => {
                             className={styles.customRadio}
                             type="radio"
                             name="turn"
-                            value="indisponivel"
+                            value="turno-indisponivel"
                           />
                           Não
                         </label>
@@ -229,62 +319,63 @@ export const Mentor = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Quanto tempo você tem disponível para atual na Sou Junior?*
+                        Quanto tempo por semana você poderia se dedicar ao voluntariado na SouJunior?
+                        *
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="Até 5 horas semanais"
+                        htmlFor="5 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="Até 5 horas semanais"
-                          id="Até 5 horas semanais"
+                          value="5 horas"
+                          id="5 horas"
                           checked
                         />
-                        Até 5 horas semanais
+                        5 horas
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="5 a 10 horas semanais"
+                        htmlFor="5 a 10 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="5 a 10 horas semanais"
-                          id="5 a 10 horas semanais"
+                          value="5 a 10 horas"
+                          id="5 a 10 horas"
                         />
-                        5 a 10 horas semanais
+                        5 a 10 horas
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="10 a 15 horas semanais"
+                        htmlFor="10 a 15 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="10 a 15 horas semanais"
-                          id="10 a 15 horas semanais"
+                          value="10 a 15 horas"
+                          id="10 a 15 horas"
                         />
-                        10 a 15 horas semanais
+                        10 a 15 horas
                       </label>
                       <label
                         className={styles.radioLabel}
-                        htmlFor="Mais de 15 horas semanais"
+                        htmlFor="Mais de 15 horas"
                       >
                         <Field
                           className={styles.customRadio}
                           type="radio"
                           name="availability"
-                          value="Mais de 15 horas semanais"
-                          id="Mais de 15 horas semanais"
+                          value="Mais de 15 horas"
+                          id="Mais de 15 horas"
                         />
-                        Mais de 15 horas semanais
+                        Mais de 15 horas
                       </label>
-                    </div>                    
+                    </div>
                     <div
                       role="radioGroup"
                       id="radioGroup"
@@ -292,62 +383,44 @@ export const Mentor = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Qual a sua disponibilidade para início?*
+                        Você possui disponibilidade imediata para iniciar no voluntariado? Se não, quando poderia iniciar? *
                       </label>
                       <div className={styles.turnoRadioGroup}>
                         <label
                           className={styles.radioLabel}
                           htmlFor="Imediato"
                         >
-                        <Field
-                          className={styles.customRadio}
-                          type="radio"
-                          name="startOption"
-                          //onChange={() => handleInicioChange(setFieldValue, "Imediato")}
-                          value="Imediato"
-                          id="Imediato"
-                          checked
-                        />
-                          Imediato
-                        </label>
-                        <label
-                          className={styles.radioLabel}
-                          htmlFor="Em até 1 mês"
-                        >
-                        <Field
-                          className={styles.customRadio}
-                          type="radio"
-                          name="startOption"
-                          //onChange={() => handleInicioChange(setFieldValue, "Em até 1 mês")}
-                          value="Em até 1 mês"
-                          id="Em até 1 mês"
-                        />
-                          Em até 1 mês
+                          <Field
+                            className={styles.customRadio}
+                            type="radio"
+                            name="startOption"
+                            onChange={() => handleInicioChange(setFieldValue, "Imediato")}
+                            value="Imediato"
+                            id="Imediato"
+                          />
+                          Sim
                         </label>
                         <label
                           className={styles.radioLabel}
                           htmlFor="Em uma data específica"
                         >
-                        <Field
-                          className={styles.customRadio}
-                          type="radio"
-                          name="startOption"
-                          //onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
-                          value="Em uma data específica"
-                          id="Em uma data específica"
-                        />
-                            Em uma data específica:
-                        <div className={styles.customLabelDate}>
-                          <label className={styles.customDate}>
-                            <Field
-                              className={styles.customSelectDate}
-                              type="date"
-                              name="startDate"
-                              id="startDate"
-                              disabled={values.startOption !== "Em uma data específica"}
-                            />
-                          </label>
-                        </div>
+                          <Field
+                            className={styles.customRadio}
+                            type="radio"
+                            name="startOption"
+                            onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
+                            value="Em uma data específica"
+                            id="Em uma data específica"
+                          />
+                          Não, somente a partir de: 
+                          <Field
+                            className={styles.customSelectDate}
+                            type="date"
+                            name="startDate"
+                            placeholder="informe aqui sua disponibilidade"
+                            id="startDate"
+                            disabled={values.startOption !== "Em uma data específica"}
+                          />
                           <ErrorMessage
                             name="startDate"
                             component="div"
@@ -358,7 +431,7 @@ export const Mentor = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Qual das opções abaixo seria sua área de interesse?*
+                        Qual das áreas de atuação da SouJunior você possui interesse?*
                       </label>
                       <Field
                         as="select"
@@ -373,12 +446,12 @@ export const Mentor = () => {
                         >
                           Selecione a área de atuação
                         </option>
-                        {areasOption
+                        {areas
                           .map((areaOption) => (
                             <option
                               label={areaOption.name}
-                              value={areaOption.value}
-                              key={areaOption.value}
+                              value={areaOption.id}
+                              key={areaOption.id}
                             >
                               {areaOption.name}
                             </option>
@@ -393,7 +466,7 @@ export const Mentor = () => {
                     {subareas.length > 0 && (
                       <div className={styles.fieldDiv}>
                         <label>
-                          Qual das opções abaixo seria sua subárea de interesse?*
+                          {`Em qual área de ${selectedArea.name} você gostaria de atuar? *`}
                         </label>
                         <Field as="select" name="subarea" className={styles.select}>
                           <option
@@ -406,8 +479,8 @@ export const Mentor = () => {
                           {subareas.map((subarea) => (
                             <option
                               label={subarea.name}
-                              value={subarea.value}
-                              key={subarea.value}
+                              value={subarea.id}
+                              key={subarea.id}
                             >
                               {subarea.name}
                             </option>
@@ -420,9 +493,73 @@ export const Mentor = () => {
                         />
                       </div>
                     )}
+                    <div
+                      role="radioGroup"
+                      id="radioGroup"
+                      name="radioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Há quanto tempo você já atua no mercado de trabalho na área selecionada? *
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="1 ano"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="1 ano"
+                          id="1 ano"
+                          checked
+                        />
+                        1 ano
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="1 a 3 anos"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="1 a 3 anos"
+                          id="1 a 3 anos"
+                        />
+                        1 a 3 anos
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="3 a 6 anos"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="3 a 6 anos"
+                          id="3 a 6 anos"
+                        />
+                        3 a 6 anos
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="Acima de 6 anos"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="Acima de 6 anos"
+                          id="Acima de 6 anos"
+                        />
+                        Acima de 6 anos
+                      </label>
+                    </div>       
                     <div className={styles.fieldDiv}>
                       <label>
-                        Compartilhe um pouco mais sobre sua experiência no mercado.*
+                        Conte-nos um pouco sobre sua experiência na área selecionada e possíveis
+                        papéis de liderança e/ou mentoria que tenha participado.*
                       </label>
                       <Field
                         as="textarea"
@@ -430,7 +567,7 @@ export const Mentor = () => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Inclua qualquer outra informação que julgue relevante para sua inscrição"
+                        placeholder="Conte-nos um pouco sobre sua experiência!"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.jobExperience.length}
@@ -448,33 +585,7 @@ export const Mentor = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Você já possui experiência anterior em mentoria?*
-                      </label>
-                      <Field
-                        as="textarea"
-                        name="mentorExperience"
-                        minLength={200}
-                        maxLength={500}
-                        className={styles.textarea}
-                        placeholder="Descreva brevemente sua experiência, se aplicável"
-                      />
-                      <span className={styles.count}>
-                        Caracteres restantes: {500 - values.mentorExperience.length}
-                      </span>
-                      {values.mentorExperience.length > 500 && (
-                        <span className={styles.count} style={{ color: "red" }}>
-                          Limite de caracteres excedido.
-                        </span>
-                      )}
-                      <ErrorMessage
-                        name="mentorExperience"
-                        component="div"
-                        className={styles.errorMessage}
-                      />
-                    </div>
-                    <div className={styles.fieldDiv}>
-                      <label>
-                        Antes de finalizarmos sua candidatura, há algum aspecto importante sobre sua motivação para se tornar voluntário na SouJunior?*
+                        Conte-nos qual sua motivação para se tornar um Mentor na SouJunior. *
                       </label>
                       <Field
                         as="textarea"
@@ -482,7 +593,7 @@ export const Mentor = () => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Compartilhe um pouco mais sobre sua motivação para ser voluntário na SouJunior."
+                        placeholder="Qual é a sua motivação para se tornar um Mentor na Sou Junior?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -498,6 +609,32 @@ export const Mentor = () => {
                         className={styles.errorMessage}
                       />
                     </div>
+                    <div className={styles.fieldDiv}>
+                      <label>
+                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência 
+                        que possa ser relevante como um Mentor na SouJunior?
+                      </label>
+                      <Field
+                        as="textarea"
+                        name="otherExperiences"
+                        maxLength={500}
+                        className={styles.textarea}
+                        placeholder="Compartilhe um pouco mais sobre sua motivação para ser voluntário na SouJunior."
+                      />
+                      <span className={styles.count}>
+                        Caracteres restantes: {500 - values.otherExperiences.length}
+                      </span>
+                      {values.otherExperiences.length > 500 && (
+                        <span className={styles.count} style={{ color: "red" }}>
+                          Limite de caracteres excedido.
+                        </span>
+                      )}
+                      <ErrorMessage
+                        name="otherExperiences"
+                        component="div"
+                        className={styles.errorMessage}
+                      />
+                    </div>
                     <div className={styles.fieldCheckbox}>
                       <div className={styles.fieldDiv}>
                         <label
@@ -508,10 +645,27 @@ export const Mentor = () => {
                             type="checkbox"
                             name="contactAgreement"
                           />
-                          Declaro as informações fornecidas corretas e autorizo a SouJunior a me contatar
+                          Declaro que as informações fornecidas são verídicas e autorizo a SouJunior a me contatar.
                         </label>
                         <ErrorMessage
                           name="contactAgreement"
+                          component="div"
+                          className={styles.errorMessage}
+                        />
+                      </div>
+                      <div className={styles.fieldDiv}>
+                        <label
+                          className={styles.radioLabel}
+                          htmlFor="volunteeringAgreement"
+                        >
+                          <Field
+                            type="checkbox"
+                            name="volunteeringAgreement"
+                          />
+                          Declaro que compreendo e concordo com o fato da SouJunior ser um projeto de voluntariado sem fins lucrativos.
+                        </label>
+                        <ErrorMessage
+                          name="volunteeringAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
@@ -524,18 +678,29 @@ export const Mentor = () => {
                           <Field
                             type="checkbox"
                             name="termsAgreement"
+                            id="terms"
+                            checked={termsAccepted}
+                            onChange={(e) => handleCheckboxChange(e, setFieldValue)}
                           />
-                          Estou de acordo com os Termos e Condições
+                          Declaro ter lido e estar de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
                         </label>
                         <ErrorMessage
                           name="termsAgreement"
                           component="div"
                           className={styles.errorMessage}
                         />
+                        <TermsModal
+                          show={showTermsModal}
+                          onAccept={handleTermsAcceptance}
+                        />
                       </div>
                     </div>
                     <div className={styles.buttons}>
-                      <button type="submit" disabled={isSubmitting || !isValid || !dirty}>Enviar</button>
+                    <div className={styles.buttons}>
+                      <button 
+                      type="submit"
+                      disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
+                    </div>
                     </div>
                   </Form>
                 )
@@ -553,6 +718,15 @@ export const Mentor = () => {
             </Popup>
           )}
         </div>
+        {
+          showAlertMessage &&
+          <AlertMessage
+            message={`Inscrição realizada com sucesso! Vamos analisar seus dados e entraremos em contato.`}
+            onClose={() => {
+              setShowAlertMessage(false)
+            }}
+          />
+        }
       </section>
     </>
   );

@@ -154,27 +154,6 @@ export const Junior = () => {
       } catch (error) {
         openPopup();
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
-        console.log(
-          {
-            name: values.name,
-            cpf: values.cpf,
-            email: values.email,
-            linkedin: values.linkedin,
-            turn: values.turn === "turno-disponivel" ? true : false,
-            start_option: values.startOption,
-            availability: values.availability,
-            tools_knowledge: values.toolsKnowledge,
-            field_knowledge: values.fieldKnowledge,
-            volunteer_motivation: values.volunteerMotivation,
-            other_experiences: values.otherExperiences,
-            contact_agreement: values.contactAgreement ? true : false,
-            volunteering_agreement: values.volunteeringAgreement ? true : false,
-            terms_agreement: values.termsAgreement ? true : false,
-            start_date: startDate,
-            id_area: Number(values.area),
-            id_subarea: Number(values.subarea),
-          }
-        )
       } finally {
         setLoading(false);
       }
