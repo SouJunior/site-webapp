@@ -129,6 +129,40 @@ export const ParticipationSection = () => {
                 }
               >
                 {textSupporter ? <IoMdClose /> : <IoMdAdd />}
+                <Heading level={"h3"}>Sou Head</Heading>
+              </button>
+
+              {textSupporter && (
+                <>
+                  <div className={styles.ParagraphWrapper}>
+                  <Paragraph>
+                      A SouJunior busca profissionais atuantes no mercado de
+                      trabalho para atuar como head.
+                    </Paragraph>
+                    <Paragraph>
+                      Os interessados devem preencher o formulário de inscrição
+                      e serão contatados quando houver demanda na área de
+                      atuação.”
+                    </Paragraph>
+
+                    <button className={styles.button}>
+                      <a href="/seja-head" rel="noopener noreferrer">
+                        Quero Participar!
+                      </a>
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+
+            <div className={textSupporter ? styles.textSupporter : styles.hide}>
+              <button
+                className={styles.btnCross}
+                onClick={() =>
+                  setTextSupporter(!textSupporter) && setIcon(IoMdClose)
+                }
+              >
+                {textSupporter ? <IoMdClose /> : <IoMdAdd />}
                 <Heading level={"h3"}>Sou Apoiador</Heading>
               </button>
 

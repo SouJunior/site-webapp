@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { getValidationSchema, initialValues } from "./structure";
 
-import styles from "./Mentor.module.css";
+import styles from "./Head.module.css";
 
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
@@ -13,7 +13,7 @@ import { api } from "../../services/api";
 import AlertMessage from "../commons/AlertMessage/AlertMessage";
 import TermsModal from "../TermsModal";
 
-export const Mentor = () => {
+export const Head = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
@@ -84,7 +84,7 @@ export const Mentor = () => {
       setLoading(true);
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
-          subject: "Quero ser Mentor",
+          subject: "Quero ser Header",
           data: { ...data },
         });
 
@@ -150,9 +150,9 @@ const handleCheckboxChange = (e, setFieldValue) => {
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div className={styles.bannerText}>
-          <Heading level={"h2"}>Quero ser Mentor</Heading>
+          <Heading level={"h2"}>Quero ser Head</Heading>
           <Paragraph>
-            Para se candidatar como mentor preencha as informações do formulário abaixo e nosso
+            Para se candidatar como head, preencha as informações do formulário abaixo e nosso
             time entrará em contato para te conhecer um pouco mais e entender de
             que forma você poderá contribuir com os projetos e iniciativas da SouJunior.
           </Paragraph>
@@ -563,7 +563,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Conte-nos qual sua motivação para se tornar um Mentor na SouJunior. *
+                        Conte-nos qual sua motivação para se tornar um Head na SouJunior. *
                       </label>
                       <Field
                         as="textarea"
@@ -571,7 +571,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Qual é a sua motivação para se tornar um Mentor na Sou Junior?"
+                        placeholder="Qual é a sua motivação para se tornar um Head na Sou Junior?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -590,14 +590,14 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     <div className={styles.fieldDiv}>
                       <label>
                         Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência 
-                        que possa ser relevante como um Mentor na SouJunior?
+                        que possa ser relevante como um Head na SouJunior?
                       </label>
                       <Field
                         as="textarea"
                         name="otherExperiences"
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Compartilhe um pouco mais sobre sua motivação para ser voluntário na SouJunior."
+                        placeholder="Caso queira compartilhar algo mais conosco, essa é a hora!"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.otherExperiences.length}
