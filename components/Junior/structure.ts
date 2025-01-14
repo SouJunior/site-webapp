@@ -16,9 +16,9 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
-    confirmEmail: Yup.string()
-      .oneOf([Yup.ref("email")], "O email deve ser o mesmo")
-      .required("O campo Confirmar e-mail é obrigatório."),
+    // confirmEmail: Yup.string()
+    //   .oneOf([Yup.ref("email")], "O email deve ser o mesmo")
+    //   .required("O campo Confirmar e-mail é obrigatório."),
     linkedin: Yup.string()
       .url("Link inválido.")
       .required("O campo Linkedin é obrigatório."),
@@ -56,7 +56,7 @@ export const initialValues = {
   name: "",
   cpf: "",
   email: "",
-  confirmEmail: "",
+  // confirmEmail: "",
   linkedin: "",
   area: "",
   subarea: "",

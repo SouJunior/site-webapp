@@ -28,12 +28,6 @@ export const Mentor = () => {
   const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
-    // (async () => {
-    //   const res = await api.get("/area")
-
-    //   setAreas(res.data)
-    // })()
-
     setAreas([
       {name: "Agilidade", id: 1},
       {name: "Back-End", id: 2},
@@ -74,8 +68,6 @@ export const Mentor = () => {
   const onSubmit = async (values, { resetForm }) => {
     setLoading(true);
     setIsSubmitting(true);
-
-    console.log(values);
 
     const { confirmarEmail, ...data } = values;
 
@@ -222,7 +214,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    <div className={styles.fieldDiv}>
+                    {/* <div className={styles.fieldDiv}>
                       <label>Confirmar e-mail *</label>
                       <Field
                         type="email"
@@ -235,7 +227,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         component="div"
                         className={styles.errorMessage}
                       />
-                    </div>
+                    </div> */}
                     <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
                       <Field

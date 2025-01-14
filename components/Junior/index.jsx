@@ -28,12 +28,6 @@ export const Junior = () => {
   const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
-    // (async () => {
-    //   const res = await api.get("/area")
-
-    //   setAreas(res.data)
-    // })()
-
     setAreas([
       {name: "Agilidade", id: 1},
       {name: "Back-End", id: 2},
@@ -113,14 +107,12 @@ export const Junior = () => {
     setIsSubmitting(true);
     setLoading(true);
 
-    const { confirmarEmail, ...data } = values;
-
     const startDate = values.startOption === "imediato" ?
       new Date()
       : values.startOption === "em até 1 mês" ?
         new Date(new Date().setMonth(new Date().getMonth() + 1))
           : new Date(values.startDate)
-  
+
     if (isSubmitting) {
       try {
         const response = await api.post("/juniors",
@@ -281,7 +273,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    <div className={styles.fieldDiv}>
+                    {/* <div className={styles.fieldDiv}>
                       <label>Confirmar e-mail *</label>
                       <Field
                         type="email"
@@ -294,7 +286,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         component="div"
                         className={styles.errorMessage}
                       />
-                    </div>
+                    </div> */}
                     <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
                       <Field

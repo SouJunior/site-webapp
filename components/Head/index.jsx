@@ -28,12 +28,6 @@ export const Head = () => {
   const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
-    // (async () => {
-    //   const res = await api.get("/area")
-
-    //   setAreas(res.data)
-    // })()
-
     setAreas([
       {name: "Agilidade", id: 1},
       {name: "Back-End", id: 2},
@@ -75,10 +69,8 @@ export const Head = () => {
     setLoading(true);
     setIsSubmitting(true);
 
-    console.log(values);
-
     const { confirmarEmail, ...data } = values;
-
+    
     if (isSubmitting) {
       openPopup();
       setLoading(true);
@@ -222,7 +214,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    <div className={styles.fieldDiv}>
+                    {/* <div className={styles.fieldDiv}>
                       <label>Confirmar e-mail *</label>
                       <Field
                         type="email"
@@ -235,7 +227,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         component="div"
                         className={styles.errorMessage}
                       />
-                    </div>
+                    </div> */}
                     <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
                       <Field
@@ -586,6 +578,47 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         component="div"
                         className={styles.errorMessage}
                       />
+                    </div>
+                    <div
+                      id="radioGroup"
+                      role="radioGroup"
+                      name="radioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Você colabora na estruturação estratégica da sua área de expertise com
+                         outros líderes, formando equipes e promovendo o crescimento da sua disciplina? *
+                      </label>
+                      <div
+                        className={styles.turnoRadioGroup}
+                      >
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="with-collaboration"
+                        >
+                          <Field
+                            id="with-collaboration"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="collaboration"
+                            value="with-collaboration"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="without-collaboration"
+                        >
+                          <Field
+                            id="without-collaboration"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="collaboration"
+                            value="without-collaboration"
+                          />
+                          Não
+                        </label>
+                      </div>
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
