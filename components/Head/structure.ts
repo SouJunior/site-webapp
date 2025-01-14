@@ -27,21 +27,16 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     subarea: hasSubareas
       ? Yup.string().required("* Escolha uma subárea por favor.")
       : Yup.string().nullable(),
-    availability: Yup.string()
-      .required("Por favor assinale umas das opções pra prosseguir"),
     startDate: requiresDate
       ? Yup.date().required("Por favor, escolha uma data.")
       : Yup.date().nullable(),
-    toolsKnowledge: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
-      .required("O campo é obrigatório."),
-    fieldKnowledge: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
-      .required("O campo é obrigatório."),
     volunteerMotivation: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
+      .max(500, "O campo deve ter no máximo 500 caracteres.")
+      .required("O campo é obrigatório."),
+    experienceTime: Yup.string()
+      .max(500, "O campo deve ter no máximo 500 caracteres.")
+      .required("O campo é obrigatório."),
+    jobExperience: Yup.string()
       .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
     otherExperiences: Yup.string()
@@ -59,13 +54,15 @@ export const initialValues = {
   // confirmEmail: "",
   linkedin: "",
   area: "",
-  subarea: "",
   availability: "Até 5 horas semanais",
+  experienceTime: "1 ano",
   turn: "turno-disponivel",
-  startOption: "Imediato", 
+  startOption: "Imediato",
   toolsKnowledge: "",
   fieldKnowledge: "",
+  jobExperience: "",
   volunteerMotivation: "",
+  collaboration: "with-collaboration",
   otherExperiences: "",
   contactAgreement: false,
   volunteeringAgreement: false,
