@@ -2,7 +2,7 @@ export function cpfValidator(strCPF) {
     var Soma;
     var Resto;
     Soma = 0;
-  if (strCPF == "00000000000") return false;
+    if (/^(\d)\1{10}$/.test(strCPF)) return false;
 
   for (let i=1; i<=9; i++) Soma = Soma + parseInt(strCPF.substring(i-1, i)) * (11 - i);
   Resto = (Soma * 10) % 11;

@@ -67,16 +67,12 @@ export const Head = () => {
 
   const onSubmit = async (values, { resetForm }) => {
     setLoading(true);
-    setIsSubmitting(true);
 
     const { confirmarEmail, ...data } = values;
     
-    if (isSubmitting) {
-      openPopup();
-      setLoading(true);
       try {
         const response = await api.sendMailAdmin("/mail/collaborator", {
-          subject: "Quero ser Header",
+          subject: "Quero ser Head",
           data: { ...data },
         });
 
@@ -91,7 +87,6 @@ export const Head = () => {
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
       }
       setLoading(false);
-    }
   };
 
   const handleAreaChange = (setFieldValue, id) => {
@@ -214,20 +209,6 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    {/* <div className={styles.fieldDiv}>
-                      <label>Confirmar e-mail *</label>
-                      <Field
-                        type="email"
-                        name="confirmEmail"
-                        placeholder="Digite seu endereço de e-mail"
-                        className={styles.input}
-                      />
-                      <ErrorMessage
-                        name="confirmEmail"
-                        component="div"
-                        className={styles.errorMessage}
-                      />
-                    </div> */}
                     <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
                       <Field
@@ -284,7 +265,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="availabilityRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -348,7 +329,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="startDateRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -465,7 +446,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     )}
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="collaborationRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >

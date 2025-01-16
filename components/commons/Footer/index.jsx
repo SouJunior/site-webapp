@@ -76,7 +76,7 @@ export const Footer = () => {
               <Heading level={"h4"}>Faça parte da nossa comunidade!</Heading>
               <div className={styles.icons}>
                 {dataSocial.map(({ name, icon, path, id }) => (
-                  <a
+                  <Link
                     href={path}
                     className={styles.socialBtn}
                     id={id}
@@ -85,7 +85,7 @@ export const Footer = () => {
                     rel="noreferrer"
                   >
                     {icon}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

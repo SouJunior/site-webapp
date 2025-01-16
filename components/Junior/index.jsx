@@ -109,9 +109,7 @@ export const Junior = () => {
 
     const startDate = values.startOption === "imediato" ?
       new Date()
-      : values.startOption === "em até 1 mês" ?
-        new Date(new Date().setMonth(new Date().getMonth() + 1))
-          : new Date(values.startDate)
+      : new Date(values.startDate)
 
     if (isSubmitting) {
       try {
@@ -273,20 +271,6 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
-                    {/* <div className={styles.fieldDiv}>
-                      <label>Confirmar e-mail *</label>
-                      <Field
-                        type="email"
-                        name="confirmEmail"
-                        placeholder="Digite seu endereço de e-mail"
-                        className={styles.input}
-                      />
-                      <ErrorMessage
-                        name="confirmEmail"
-                        component="div"
-                        className={styles.errorMessage}
-                      />
-                    </div> */}
                     <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
                       <Field
