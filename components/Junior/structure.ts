@@ -12,7 +12,7 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     cpf: Yup.string()
     .matches(/^\d{11}$/, 'O CPF deve conter 11 dígitos numéricos.')
     .required("O campo CPF é obrigatório.")
-    .test((value) => cpfValidator(value)),
+    .test('cpf-valido', 'CPF inválido.', (value) => cpfValidator(value)),
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),

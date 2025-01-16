@@ -94,7 +94,7 @@ export const Head = () => {
     const selectedArea = areas.find(option => option.id === Number(id));
     setSelectedArea(selectedArea);
 
-    if (selectedArea && selectedArea.subareas) {
+    if (selectedArea?.subareas) {
       setSubareas(selectedArea.subareas);
       setFieldValue("subarea", "");
     } else {
@@ -688,11 +688,9 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       </div>
                     </div>
                     <div className={styles.buttons}>
-                    <div className={styles.buttons}>
                       <button 
                       type="submit"
                       disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
-                    </div>
                     </div>
                   </Form>
                 )

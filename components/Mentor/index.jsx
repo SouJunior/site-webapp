@@ -99,7 +99,7 @@ export const Mentor = () => {
     const selectedArea = areas.find(option => option.id === Number(id));
     setSelectedArea(selectedArea);
 
-    if (selectedArea && selectedArea.subareas) {
+    if (selectedArea?.subareas) {
       setSubareas(selectedArea.subareas);
       setFieldValue("subarea", "");
     } else {
