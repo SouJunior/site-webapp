@@ -93,6 +93,7 @@
 .textJr,
 .textMentor,
 .textSupporter,
+.textHead,
 .textCommunity {
   width: 100%;
   display: flex;

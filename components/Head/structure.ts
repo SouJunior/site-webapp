@@ -12,7 +12,7 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     cpf: Yup.string()
     .matches(/^\d{11}$/, 'O CPF deve conter 11 dígitos numéricos.')
     .required("O campo CPF é obrigatório.")
-    .test('cpf-valido', 'CPF inválido.', (value) => cpfValidator(value)),
+    .test((value) => cpfValidator(value)),
     email: Yup.string()
       .email("E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
@@ -40,7 +40,6 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
       .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
     otherExperiences: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
       .max(500, "O campo deve ter no máximo 500 caracteres."),
     contactAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
     volunteeringAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
@@ -62,6 +61,7 @@ export const initialValues = {
   fieldKnowledge: "",
   jobExperience: "",
   volunteerMotivation: "",
+  collaboration: "with-collaboration",
   otherExperiences: "",
   contactAgreement: false,
   volunteeringAgreement: false,

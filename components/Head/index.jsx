@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { getValidationSchema, initialValues } from "./structure";
 
-import styles from "./Junior.module.css";
+import styles from "./Head.module.css";
 
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
@@ -13,7 +13,7 @@ import { api } from "../../services/api";
 import AlertMessage from "../commons/AlertMessage/AlertMessage";
 import TermsModal from "../TermsModal";
 
-export const Junior = () => {
+export const Head = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
@@ -32,52 +32,14 @@ export const Junior = () => {
       {name: "Agilidade", id: 1},
       {name: "Back-End", id: 2},
       {name: "Front-End", id: 3},
-      {
-        name: "Business", 
-        id: 4,
-        subareas: [
-          {name: "Análise de Negócios", id: 1},
-          {name: "Análise de Processos", id: 2},
-        ],
-      },
-      {
-        name: "Dados", 
-        id: 5,
-        subareas: [
-          {name: "Analytics", id: 3},
-          {name: "BI", id: 4},
-          {name: "Engenharia de Dados", id: 5},
-        ],
-      },
-      {
-        name: "Design", 
-        id: 6,
-        subareas: [
-          {name: "Design Ops", id: 6},
-          {name: "UX/UI", id: 7},
-        ],
-      },
+      {name: "Business",  id: 4},
+      {name: "Dados", id: 5},
+      {name: "Design", id: 6},
       {name: "DevOps", id: 7},
-      {
-        name: "Produto",
-        id: 8,
-        subareas: [
-          {name: "APM - Associate Product Manager", id: 8},
-          {name: "Product Growth", id: 9},
-          {name: "Product Marketing Manager", id: 10},
-          {name: "Product Ops", id: 11},
-        ],
-      },
+      {name: "Produto", id: 8},
       {name: "QA - Quality Assurance", id: 9},
       {name: "Tech Recruitment", id: 10},
-      {
-        name: "Social Media",
-        id: 11,
-        subareas: [
-          {name: "Criação de Conteúdo - Redação", id: 12},
-          {name: "Criação de Peças - Design", id: 13},
-        ],
-      }   
+      {name: "Social Media", id: 11}
     ]);
 
     setIsSubmitting(true);
@@ -104,50 +66,27 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    setIsSubmitting(true);
     setLoading(true);
 
-    const startDate = values.startOption === "imediato" ?
-      new Date()
-      : new Date(values.startDate)
-
-    if (isSubmitting) {
+    const { confirmarEmail, ...data } = values;
+    
       try {
-        const response = await api.post("/juniors",
-          {
-            name: values.name,
-            cpf: values.cpf,
-            email: values.email,
-            linkedin: values.linkedin,
-            turn: values.turn === "turno-disponivel" ? true : false,
-            start_option: values.startOption,
-            availability: values.availability,
-            tools_knowledge: values.toolsKnowledge,
-            field_knowledge: values.fieldKnowledge,
-            volunteer_motivation: values.volunteerMotivation,
-            other_experiences: values.otherExperiences,
-            contact_agreement: values.contactAgreement ? true : false,
-            volunteering_agreement: values.volunteeringAgreement ? true : false,
-            terms_agreement: values.termsAgreement ? true : false,
-            start_date: startDate,
-            id_area: Number(values.area),
-            id_subarea: Number(values.subarea),
-          }
-        )
+        const response = await api.sendMailAdmin("/mail/collaborator", {
+          subject: "Quero ser Head",
+          data: { ...data },
+        });
 
-        if (response.status !== 201) {
+        if (response.status !== 200) {
           throw new Error("Não foi possível enviar a requisição");
         }
+        setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
 
-        setShowAlertMessage(true);
         resetForm();
       } catch (error) {
         openPopup();
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
-      } finally {
-        setLoading(false);
       }
-    }
+      setLoading(false);
   };
 
   const handleAreaChange = (setFieldValue, id) => {
@@ -192,18 +131,17 @@ const handleCheckboxChange = (e, setFieldValue) => {
 
   return (
     <>
-      <div className={styles.bannerContainer} id="junior">
+      <div className={styles.bannerContainer} id="mentor">
         <img
-          src="/assets/sou-junior-cover.svg"
+          src="/assets/sou-mentor-cover.svg"
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div className={styles.bannerText}>
-          <Heading level={"h2"}>Quero ser Junior</Heading>
+          <Heading level={"h2"}>Quero ser Head</Heading>
           <Paragraph>
-            Para se candidatar como junior, preencha as informações do formulário abaixo e
-            nosso time entrará em contato para te conhecer um pouco mais e
-            entender de que forma você poderá contribuir com os projetos e
-            iniciativas da SouJunior.
+            Para se candidatar como head, preencha as informações do formulário abaixo e nosso
+            time entrará em contato para te conhecer um pouco mais e entender de
+            que forma você poderá contribuir com os projetos e iniciativas da SouJunior.
           </Paragraph>
         </div>
       </div>
@@ -327,7 +265,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="availabilityRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -391,7 +329,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                     </div>
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="startDateRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -506,61 +444,99 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         />
                       </div>
                     )}
+                    <div
+                      role="radioGroup"
+                      id="collaborationRadioGroup"
+                      name="radioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Há quanto tempo você já atua no mercado de trabalho na área selecionada? *
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="1 ano"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="1 ano"
+                          id="1 ano"
+                          checked
+                        />
+                        1 ano
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="1 a 3 anos"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="1 a 3 anos"
+                          id="1 a 3 anos"
+                        />
+                        1 a 3 anos
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="3 a 6 anos"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="3 a 6 anos"
+                          id="3 a 6 anos"
+                        />
+                        3 a 6 anos
+                      </label>
+                      <label
+                        className={styles.radioLabel}
+                        htmlFor="Acima de 6 anos"
+                      >
+                        <Field
+                          className={styles.customRadio}
+                          type="radio"
+                          name="experienceTime"
+                          value="Acima de 6 anos"
+                          id="Acima de 6 anos"
+                        />
+                        Acima de 6 anos
+                      </label>
+                    </div>       
                     <div className={styles.fieldDiv}>
                       <label>
-                        Você possui conhecimento/experiência com ferramentas e/ou tecnologias na área em que deseja atuar?*
+                        Conte-nos um pouco sobre sua experiência na área selecionada e possíveis
+                        papéis de liderança e/ou mentoria que tenha participado.*
                       </label>
                       <Field
                         as="textarea"
-                        name="toolsKnowledge"
+                        name="jobExperience"
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Conte-nos um pouco sobre sua experiência na área desejada!"
+                        placeholder="Conte-nos um pouco sobre sua experiência!"
                       />
                       <span className={styles.count}>
-                        Caracteres restantes: {500 - values.toolsKnowledge.length}
+                        Caracteres restantes: {500 - values.jobExperience.length}
                       </span>
-                      {values.toolsKnowledge.length > 500 && (
+                      {values.jobExperience.length > 500 && (
                         <span className={styles.count} style={{ color: "red" }}>
                           Limite de caracteres excedido.
                         </span>
                       )}
                       <ErrorMessage
-                        name="toolsKnowledge"
+                        name="jobExperience"
                         component="div"
                         className={styles.errorMessage}
                       />
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        E sobre os conceitos teóricos, você já possui algum conhecimento referente a área que deseja atuar? Quais cursos referente a esta área você já realizou? *
-                      </label>
-                      <Field
-                        as="textarea"
-                        name="fieldKnowledge"
-                        minLength={200}
-                        maxLength={500}
-                        className={styles.textarea}
-                        placeholder="Conte-nos um pouco sobre seu conhecimento teórico e cursos realizados!"
-                      />
-                      <span className={styles.count}>
-                        Caracteres restantes: {500 - values.fieldKnowledge.length}
-                      </span>
-                      {values.fieldKnowledge.length > 500 && (
-                        <span className={styles.count} style={{ color: "red" }}>
-                          Limite de caracteres excedido.
-                        </span>
-                      )}
-                      <ErrorMessage
-                        name="fieldKnowledge"
-                        component="div"
-                        className={styles.errorMessage}
-                      />
-                    </div>
-                    <div className={styles.fieldDiv}>
-                      <label>
-                        Conte-nos um pouco sobre sua motivação para se tornar um Júnior na SouJunior.*
+                        Conte-nos qual sua motivação para se tornar um Head na SouJunior. *
                       </label>
                       <Field
                         as="textarea"
@@ -568,7 +544,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Qual sua motivação para se tornar vonlutário?"
+                        placeholder="Qual é a sua motivação para se tornar um Head na Sou Junior?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -584,14 +560,55 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
+                    <div
+                      id="radioGroup"
+                      role="radioGroup"
+                      name="radioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Você colabora na estruturação estratégica da sua área de expertise com
+                         outros líderes, formando equipes e promovendo o crescimento da sua disciplina? *
+                      </label>
+                      <div
+                        className={styles.turnoRadioGroup}
+                      >
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="with-collaboration"
+                        >
+                          <Field
+                            id="with-collaboration"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="collaboration"
+                            value="with-collaboration"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="without-collaboration"
+                        >
+                          <Field
+                            id="without-collaboration"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="collaboration"
+                            value="without-collaboration"
+                          />
+                          Não
+                        </label>
+                      </div>
+                    </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência que possa ser relevante como um Júnior na SouJunior?
+                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência 
+                        que possa ser relevante como um Head na SouJunior?
                       </label>
                       <Field
                         as="textarea"
                         name="otherExperiences"
-                        minLength={200}
                         maxLength={500}
                         className={styles.textarea}
                         placeholder="Caso queira compartilhar algo mais conosco, essa é a hora!"
@@ -671,11 +688,9 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       </div>
                     </div>
                     <div className={styles.buttons}>
-                    <div className={styles.buttons}>
                       <button 
-                      type="submit" 
+                      type="submit"
                       disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
-                    </div>
                     </div>
                   </Form>
                 )

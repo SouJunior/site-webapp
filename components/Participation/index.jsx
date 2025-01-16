@@ -12,6 +12,7 @@ export const ParticipationSection = () => {
   const [textJr, setTextJr] = useState(false);
   const [textMentor, setTextMentor] = useState(false);
   const [textSupporter, setTextSupporter] = useState(false);
+  const [textHead, setTextHead] = useState(false);
   const [icon, setIcon] = useState(IoMdAdd);
 
   return (
@@ -124,6 +125,8 @@ export const ParticipationSection = () => {
             <div className={textSupporter ? styles.textSupporter : styles.hide}>
               <button
                 className={styles.btnCross}
+                aria-expanded={textSupporter}
+                aria-controls="head-content"
                 onClick={() =>
                   setTextSupporter(!textSupporter) && setIcon(IoMdClose)
                 }
@@ -133,7 +136,7 @@ export const ParticipationSection = () => {
               </button>
 
               {textSupporter && (
-                <>
+                <div id="head-content">
                   <div className={styles.ParagraphWrapper}>
                     <Paragraph>
                       A SouJunior busca pessoas interessadas em contribuir para
@@ -150,6 +153,40 @@ export const ParticipationSection = () => {
 
                     <button className={styles.button}>
                       <Link href="/apoiar" rel="noopener noreferrer">
+                        Quero Participar!
+                      </Link>
+                    </button>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className={textHead ? styles.textHead : styles.hide}>
+              <button
+                className={styles.btnCross}
+                onClick={() =>
+                  setTextHead(!textHead) && setIcon(IoMdClose)
+                }
+              >
+                {textHead ? <IoMdClose /> : <IoMdAdd />}
+                <Heading level={"h3"}>Sou Head</Heading>
+              </button>
+
+              {textHead && (
+                <>
+                  <div className={styles.ParagraphWrapper}>
+                  <Paragraph>
+                      A SouJunior busca profissionais atuantes no mercado de
+                      trabalho para atuar como head.
+                    </Paragraph>
+                    <Paragraph>
+                      Os interessados devem preencher o formulário de inscrição
+                      e serão contatados quando houver demanda na área de
+                      atuação.”
+                    </Paragraph>
+
+                    <button className={styles.button}>
+                      <Link href="/seja-head" rel="noopener noreferrer">
                         Quero Participar!
                       </Link>
                     </button>
