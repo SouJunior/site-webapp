@@ -32,8 +32,6 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
       .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
     experienceTime: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
     jobExperience: Yup.string()
       .min(200, "O campo deve ter no mínimo 200 caracteres.")
