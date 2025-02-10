@@ -18,6 +18,10 @@
   gap: 2.8rem;
 }
 
+.bannerText {
+  margin-bottom: 3.2rem;
+}
+
 .bannerContainer p {
   max-width: 64.5ch;
   text-align: center;
@@ -74,7 +78,210 @@
   gap: 10px;
 }
 
-@media (max-width: 960px) {
+.button:disabled {
+  background: #a0a0a0;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.turnoRadiolabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fieldDiv {
+  display: flex;
+  gap: 1.6rem;
+  flex-direction: column;
+}
+
+.turnoRadioGroup {
+  display: flex;
+  gap: 32px;
+  flex-direction: row;
+}
+
+.pessoaRadioGroup {
+  display: flex;
+  gap: 32px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.radioLabel {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.customSelectDate {
+  border: none;
+  border-radius: 8px;
+  background: white;
+  padding: 0.5rem 1rem;
+}
+
+.bannerContainer,
+.formSection {
+  width: 100%;
+  padding: 0 3.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 6.2rem;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 4.2rem;
+}
+
+.left {
+  flex: 1 1 300px;
+  display: flex;
+  gap: 3.2rem;
+  flex-direction: column;
+}
+
+.rigth {
+  flex: 1 1 300px;
+}
+
+.imageContainer {
+  flex: 1 1 0;
+}
+
+.rigth img {
+  width: 100%;
+}
+
+/*Formulário*/
+
+.form {
+  width: 100%;
+}
+
+.form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4.2rem;
+}
+
+.formSection h2 {
+  padding-bottom: 5.2rem;
+}
+
+.fieldCheckbox {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form label {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+}
+
+.form .input {
+  padding: 18px 32px;
+  gap: 10px;
+  width: 100%;
+  height: 65px;
+  background: #ffffff;
+  border-radius: 3px;
+  outline: none;
+}
+
+.form .select {
+  height: 62px;
+  left: 269px;
+  top: 26px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 18px;
+  border: none;
+  border-bottom: 1px solid #858c93;
+  background: #171123;
+  color: #ffffff;
+  outline: none;
+}
+
+.form .select option {
+  width: 1306px;
+  height: 917px;
+}
+
+.form .textarea {
+  width: 100%;
+  height: 330px;
+  padding: 15px;
+  outline: none;
+}
+
+.form button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 352px;
+  height: 66px;
+  padding: 24px 32px;
+  border-radius: 10px;
+  background: #046ad0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+  color: #ededed;
+  /* margin: 20px auto; */
+  border: none;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  background: #a0a0a0;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+form .buttons {
+  display: flex;
+  flex-direction: row;
+  /* width: 90%; */
+  justify-content: center;
+  align-items: center;
+  /* padding-left: 150px; */
+}
+
+.count {
+  font-size: 18px;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 18px;
+}
+
+.customStartDate{
+  display: block;
+}
+
+@media (max-width: 960px){
   .ApoiadorSection,
   .bannerContainer {
     gap: 3.2rem;
@@ -88,5 +295,46 @@
   }
   .button {
     width: 100%;
+  }
+
+  .left {
+    gap: 2.2rem;
+  }
+
+  .left h1 {
+    padding-bottom: 0;
+  }
+
+  .form .select {
+    width: 100%;
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .buttons {
+    width: 100%;
+    padding: 0;
+  }
+
+  .turnoRadioGroup {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+  }
+
+}
+
+@media (max-width: 600px){
+
+  .customLabelDate{
+    position: absolute;
+  }
+  
+  .customDate{
+    position: relative;
+    left: 0;
+    top: 35px;
   }
 }

@@ -35,7 +35,7 @@
     "react-tabs": "^6.0.0",
     "sou-junior": "file:",
     "swiper": "^9.3.2",
-    "yup": "^1.2.0",
+    "yup": "^0.32.11",
     "yup-locale-pt": "^0.0.9",
     "yup-password": "^0.4.0"
   },

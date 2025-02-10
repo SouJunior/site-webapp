@@ -12,6 +12,7 @@ import Popup from "../commons/Popup/Popup";
 import { api } from "../../services/api";
 import AlertMessage from "../commons/AlertMessage/AlertMessage";
 import TermsModal from "../TermsModal";
+import DataConfirmationModal from "../DataConfirmationModal";
 
 export const Head = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,6 +26,8 @@ export const Head = () => {
   const [formDirty, setFormDirty] = useState(false);
   const [showTermsModal, setShowTermsModal] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showDataModal, setShowDataModal] = useState(false);
+  const [dataAccepted, setDataAccepted] = useState(false);
   const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
@@ -66,28 +69,56 @@ export const Head = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    setLoading(true);
-
-    const { confirmarEmail, ...data } = values;
-    
-      try {
-        const response = await api.sendMailAdmin("/mail/collaborator", {
-          subject: "Quero ser Head",
-          data: { ...data },
-        });
-
-        if (response.status !== 200) {
-          throw new Error("Não foi possível enviar a requisição");
+  
+      {!dataAccepted && setShowDataModal(true)}
+  
+      setIsSubmitting(true);
+      setLoading(true);
+  
+      const startDate = values.startOption === "imediato" ?
+        new Date()
+        : new Date(values.startDate)
+  
+      if (isSubmitting && dataAccepted) {
+        try {
+          const response = await api.post("/head",
+            {
+              name: values.name,
+              email: values.email,
+              linkedin: values.linkedin,
+              indication: values.indication,
+              linkedin_indication: values.linkedinIndication,
+              turn: values.turn === "turno-disponivel" ? true : false,
+              start_option: values.startOption,
+              availability: values.availability,
+              volunteer_motivation: values.volunteerMotivation,
+              other_experiences: values.otherExperiences,
+              contact_agreement: values.contactAgreement ? true : false,
+              volunteering_agreement: values.volunteeringAgreement ? true : false,
+              terms_agreement: values.termsAgreement ? true : false,
+              start_date: startDate,
+              id_area: Number(values.area),
+              id_subarea: Number(values.subarea),
+              experience_time: values.experienceTime,
+              job_experience: values.jobExperience,
+              collaboration: values.collaboration
+            }
+          )
+  
+          if (response.status !== 201) {
+            throw new Error("Não foi possível enviar a requisição");
+          }
+  
+          setShowAlertMessage(true);
+          resetForm();
+        } catch (error) {
+          openPopup();
+          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        } finally {
+          setLoading(false);
         }
-        setPopupMessage("Obrigado por ajudar a SouJunior a crescer!");
-
-        resetForm();
-      } catch (error) {
-        openPopup();
-        setPopupMessage("Erro inesperado, tente novamente mais tarde");
       }
-      setLoading(false);
-  };
+    };
 
   const handleAreaChange = (setFieldValue, id) => {
     setFieldValue("area", id);
@@ -117,7 +148,16 @@ export const Head = () => {
     setShowTermsModal(false);
 };
 
-  
+const handleDataAcceptance = () => {
+  setDataAccepted(true);
+  setShowDataModal(false);
+};
+
+const handleDataNotAccept = () => {
+  setDataAccepted(false);
+  setShowDataModal(false);
+}
+
 const handleCheckboxChange = (e, setFieldValue) => {
   if (e.target.checked) {
       setShowTermsModal(true);
@@ -128,6 +168,10 @@ const handleCheckboxChange = (e, setFieldValue) => {
       setFieldValue('termsAgreement', false);
   }
 };
+
+const handleClearInput = (setFieldValue, nameInput) => {
+  setFieldValue(nameInput, "");
+}
 
   return (
     <>
@@ -176,26 +220,6 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       />
                     </div>
                     <div className={styles.fieldDiv}>
-                      <label>CPF *</label>
-                      <Field
-                        type="text"
-                        name="cpf"
-                        maxLength={11}
-                        placeholder="Digite seu CPF (somente números)"
-                        className={styles.input}
-                        onChange = {(e) => {
-                          const value = e.target.value.replace(/\D/g, '');
-                          handleChange(e);
-                          setFieldValue('cpf', value);
-                        }}
-                      />
-                      <ErrorMessage
-                        name="cpf"
-                        component="div"
-                        className={styles.errorMessage}
-                      />
-                    </div>
-                    <div className={styles.fieldDiv}>
                       <label>E-mail *</label>
                       <Field
                         type="email"
@@ -223,6 +247,66 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
+                    <div
+                      id="indicationRadioGroup"
+                      role="indicationRadioGroup"
+                      name="indicationRadioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Você foi indicado por alguém da SouJunior? *
+                      </label>
+                      <div
+                        className={styles.turnoRadioGroup}
+                      >
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-indication"
+                        >
+                          <Field
+                            id="is-indication"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="indication"
+                            value="sim"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-not-indication"
+                        >
+                          <Field
+                            id="is-not-indication"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="indication"
+                            value="não"
+                            onChange={(e) => {
+                              handleClearInput(setFieldValue, "indicationLinkedin");
+                              handleChange(e);
+                            }}
+                          />
+                          Não
+                        </label>
+                      </div>
+                    </div>
+                    {values.indication == "sim" && 
+                      <div className={styles.fieldDiv}>
+                        <label>Informe o LinkedIn de quem te indicou ao projeto *</label>
+                        <Field
+                          type="text"
+                          name="indicationLinkedin"
+                          placeholder="https://www.linkedin.com/in/"
+                          className={styles.input}
+                        />
+                        <ErrorMessage
+                          name="indicationLinkedin"
+                          component="div"
+                          className={styles.errorMessage}
+                        />
+                      </div>
+                    }
                     <div
                       id="radioGroup"
                       role="radioGroup"
@@ -345,7 +429,12 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             className={styles.customRadio}
                             type="radio"
                             name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Imediato")}
+                            onChange={(e) => {
+                                handleInicioChange(setFieldValue, "Imediato");
+                                handleClearInput(setFieldValue, "startDate");
+                                handleChange(e);
+                              }
+                            }
                             value="Imediato"
                             id="Imediato"
                           />
@@ -367,6 +456,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                           <Field
                             className={styles.customSelectDate}
                             type="date"
+                            min={new Date().toISOString().split("T")[0]}
                             name="startDate"
                             placeholder="informe aqui sua disponibilidade"
                             id="startDate"
@@ -544,7 +634,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Qual é a sua motivação para se tornar um Head na Sou Junior?"
+                        placeholder="Qual é a sua motivação para se tornar um Head na SouJunior?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -674,7 +764,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             checked={termsAccepted}
                             onChange={(e) => handleCheckboxChange(e, setFieldValue)}
                           />
-                          Declaro ter lido e estar de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
+                          <p>Declaro ter lido e estar de acordo com os <strong> Termos e Condições</strong></p>
                         </label>
                         <ErrorMessage
                           name="termsAgreement"
@@ -687,6 +777,12 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         />
                       </div>
                     </div>
+                    <DataConfirmationModal
+                      show={showDataModal}
+                      onAccept={handleDataAcceptance}
+                      notAccept={handleDataNotAccept}
+                      dataForm={[values]}
+                    />
                     <div className={styles.buttons}>
                       <button 
                       type="submit"
