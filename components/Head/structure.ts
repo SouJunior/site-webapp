@@ -15,32 +15,28 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
       .matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/,"Link inválido.")
       .required("O campo Linkedin é obrigatório."),
     indicationLinkedin: Yup.string()
-      .when('indication', {
-        is: 'sim',
-        then: Yup.string()
-          .matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/, "Link inválido.")
+        .when('indication', {
+          is: 'sim',
+          then: Yup.string()
+          .matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/,"Link inválido.")
           .required("O campo Linkedin é obrigatório."),
-        otherwise: Yup.string().nullable(),
-      }),
+          otherwise: Yup.string().nullable(),
+        }),
     area: Yup.string()
       .required("* Escolha uma opção por favor."),
     subarea: hasSubareas
       ? Yup.string().required("* Escolha uma opção por favor.")
       : Yup.string().nullable(),
-    availability: Yup.string()
-      .required("Por favor assinale umas das opções pra prosseguir"),
     startDate: requiresDate
       ? Yup.date().min(new Date().toISOString().split("T")[0],"* A data não deve ser retroativa.").required("Por favor, escolha uma data.")
       : Yup.date().nullable(),
-    toolsKnowledge: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
-      .required("O campo é obrigatório."),
-    fieldKnowledge: Yup.string()
-      .min(200, "O campo deve ter no mínimo 200 caracteres.")
-      .max(500, "O campo deve ter no máximo 500 caracteres.")
-      .required("O campo é obrigatório."),
     volunteerMotivation: Yup.string()
+      .min(200, "O campo deve ter no mínimo 200 caracteres.")
+      .max(500, "O campo deve ter no máximo 500 caracteres.")
+      .required("O campo é obrigatório."),
+    experienceTime: Yup.string()
+      .required("O campo é obrigatório."),
+    jobExperience: Yup.string()
       .min(200, "O campo deve ter no mínimo 200 caracteres.")
       .max(500, "O campo deve ter no máximo 500 caracteres.")
       .required("O campo é obrigatório."),
@@ -59,13 +55,13 @@ export const initialValues = {
   indication:"não",
   indicationLinkedin:"",
   area: "",
-  subarea: "",
   availability: "Até 5 horas semanais",
+  experienceTime: "1 ano",
   turn: "turno-disponivel",
-  startOption: "Imediato", 
-  toolsKnowledge: "",
-  fieldKnowledge: "",
+  startOption: "Imediato",
+  jobExperience: "",
   volunteerMotivation: "",
+  collaboration: "with-collaboration",
   otherExperiences: "",
   contactAgreement: false,
   volunteeringAgreement: false,

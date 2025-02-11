@@ -102,13 +102,6 @@
   flex-direction: row;
 }
 
-.pessoaRadioGroup {
-  display: flex;
-  gap: 32px;
-  flex-direction: row;
-  justify-content: center;
-}
-
 .radioLabel {
   display: flex;
   gap: 10px;

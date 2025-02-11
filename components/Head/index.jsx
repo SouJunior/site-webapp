@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, {useState, useEffect} from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { getValidationSchema, initialValues } from "./structure";
 
-import styles from "./Mentor.module.css";
+import styles from "./Head.module.css";
 
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
@@ -14,7 +14,7 @@ import AlertMessage from "../commons/AlertMessage/AlertMessage";
 import TermsModal from "../TermsModal";
 import DataConfirmationModal from "../DataConfirmationModal";
 
-export const Mentor = () => {
+export const Head = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState(null);
@@ -31,57 +31,19 @@ export const Mentor = () => {
   const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
-      setAreas([
-        { name: "Agilidade", id: 1 },
-        { name: "Back-End", id: 2 },
-        { name: "Front-End", id: 3 },
-        {
-          name: "Business",
-          id: 4,
-          subareas: [
-            { name: "Análise de Negócios", id: 1 },
-            { name: "Análise de Processos", id: 2 },
-          ],
-        },
-        {
-          name: "Dados",
-          id: 5,
-          subareas: [
-            { name: "Analytics", id: 3 },
-            { name: "BI", id: 4 },
-            { name: "Engenharia de Dados", id: 5 },
-          ],
-        },
-        {
-          name: "Design",
-          id: 6,
-          subareas: [
-            { name: "Design Ops", id: 6 },
-            { name: "UX/UI", id: 7 },
-          ],
-        },
-        { name: "DevOps", id: 7 },
-        {
-          name: "Produto",
-          id: 8,
-          subareas: [
-            { name: "APM - Associate Product Manager", id: 8 },
-            { name: "Product Growth", id: 9 },
-            { name: "Product Marketing Manager", id: 10 },
-            { name: "Product Ops", id: 11 },
-          ],
-        },
-        { name: "QA - Quality Assurance", id: 9 },
-        { name: "Tech Recruitment", id: 10 },
-        {
-          name: "Social Media",
-          id: 11,
-          subareas: [
-            { name: "Criação de Conteúdo - Redação", id: 12 },
-            { name: "Criação de Peças - Design", id: 13 },
-          ],
-        }
-      ]);
+    setAreas([
+      {name: "Agilidade", id: 1},
+      {name: "Back-End", id: 2},
+      {name: "Front-End", id: 3},
+      {name: "Business",  id: 4},
+      {name: "Dados", id: 5},
+      {name: "Design", id: 6},
+      {name: "DevOps", id: 7},
+      {name: "Produto", id: 8},
+      {name: "QA - Quality Assurance", id: 9},
+      {name: "Tech Recruitment", id: 10},
+      {name: "Social Media", id: 11}
+    ]);
 
     setIsSubmitting(true);
 
@@ -107,55 +69,56 @@ export const Mentor = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-
-    { !dataAccepted && setShowDataModal(true) }
-
-    setIsSubmitting(true);
-    setLoading(true);
-
-    const startDate = values.startOption === "imediato" ?
-      new Date()
-      : new Date(values.startDate)
-
-    if (isSubmitting && dataAccepted) {
-      try {
-        const response = await api.post("/mentor",
-          {
-            name: values.name,
-            email: values.email,
-            linkedin: values.linkedin,
-            indication: values.indication,
-            linkedin_indication: values.linkedinIndication,
-            turn: values.turn === "turno-disponivel" ? true : false,
-            start_option: values.startOption,
-            availability: values.availability,
-            volunteer_motivation: values.volunteerMotivation,
-            other_experiences: values.otherExperiences,
-            contact_agreement: values.contactAgreement ? true : false,
-            volunteering_agreement: values.volunteeringAgreement ? true : false,
-            terms_agreement: values.termsAgreement ? true : false,
-            start_date: startDate,
-            id_area: Number(values.area),
-            id_subarea: Number(values.subarea),
-            experience_time: values.experienceTime,
-            job_experience: values.jobExperience
+  
+      {!dataAccepted && setShowDataModal(true)}
+  
+      setIsSubmitting(true);
+      setLoading(true);
+  
+      const startDate = values.startOption === "imediato" ?
+        new Date()
+        : new Date(values.startDate)
+  
+      if (isSubmitting && dataAccepted) {
+        try {
+          const response = await api.post("/head",
+            {
+              name: values.name,
+              email: values.email,
+              linkedin: values.linkedin,
+              indication: values.indication,
+              linkedin_indication: values.linkedinIndication,
+              turn: values.turn === "turno-disponivel" ? true : false,
+              start_option: values.startOption,
+              availability: values.availability,
+              volunteer_motivation: values.volunteerMotivation,
+              other_experiences: values.otherExperiences,
+              contact_agreement: values.contactAgreement ? true : false,
+              volunteering_agreement: values.volunteeringAgreement ? true : false,
+              terms_agreement: values.termsAgreement ? true : false,
+              start_date: startDate,
+              id_area: Number(values.area),
+              id_subarea: Number(values.subarea),
+              experience_time: values.experienceTime,
+              job_experience: values.jobExperience,
+              collaboration: values.collaboration
+            }
+          )
+  
+          if (response.status !== 201) {
+            throw new Error("Não foi possível enviar a requisição");
           }
-        )
-
-        if (response.status !== 201) {
-          throw new Error("Não foi possível enviar a requisição");
+  
+          setShowAlertMessage(true);
+          resetForm();
+        } catch (error) {
+          openPopup();
+          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        } finally {
+          setLoading(false);
         }
-
-        setShowAlertMessage(true);
-        resetForm();
-      } catch (error) {
-        openPopup();
-        setPopupMessage("Erro inesperado, tente novamente mais tarde");
-      } finally {
-        setLoading(false);
       }
-    }
-  };
+    };
 
   const handleAreaChange = (setFieldValue, id) => {
     setFieldValue("area", id);
@@ -183,32 +146,32 @@ export const Mentor = () => {
   const handleTermsAcceptance = () => {
     setTermsAccepted(true);
     setShowTermsModal(false);
-  };
+};
 
-  const handleDataAcceptance = () => {
-    setDataAccepted(true);
-    setShowDataModal(false);
-  };
+const handleDataAcceptance = () => {
+  setDataAccepted(true);
+  setShowDataModal(false);
+};
 
-  const handleDataNotAccept = () => {
-    setDataAccepted(false);
-    setShowDataModal(false);
-  }
+const handleDataNotAccept = () => {
+  setDataAccepted(false);
+  setShowDataModal(false);
+}
 
-  const handleCheckboxChange = (e, setFieldValue) => {
-    if (e.target.checked) {
+const handleCheckboxChange = (e, setFieldValue) => {
+  if (e.target.checked) {
       setShowTermsModal(true);
-      setFieldValue('termsAgreement', true);
-    } else {
-      setShowTermsModal(false);
-      setTermsAccepted(false);
+      setFieldValue('termsAgreement', true); 
+  } else {
+      setShowTermsModal(false); 
+      setTermsAccepted(false); 
       setFieldValue('termsAgreement', false);
-    }
-  };
-
-  const handleClearInput = (setFieldValue, nameInput) => {
-    setFieldValue(nameInput, "");
   }
+};
+
+const handleClearInput = (setFieldValue, nameInput) => {
+  setFieldValue(nameInput, "");
+}
 
   return (
     <>
@@ -218,9 +181,9 @@ export const Mentor = () => {
           alt="Uma experiência real de trabalho em uma empresa de tecnologia."
         />
         <div className={styles.bannerText}>
-          <Heading level={"h2"}>Quero ser Mentor</Heading>
+          <Heading level={"h2"}>Quero ser Head</Heading>
           <Paragraph>
-            Para se candidatar como mentor preencha as informações do formulário abaixo e nosso
+            Para se candidatar como head, preencha as informações do formulário abaixo e nosso
             time entrará em contato para te conhecer um pouco mais e entender de
             que forma você poderá contribuir com os projetos e iniciativas da SouJunior.
           </Paragraph>
@@ -283,67 +246,67 @@ export const Mentor = () => {
                         component="div"
                         className={styles.errorMessage}
                       />
-                      <div
-                        id="indicationRadioGroup"
-                        role="indicationRadioGroup"
-                        name="indicationRadioGroup"
-                        className={styles.fieldDiv}
-                      >
-                        <label>
-                          Você foi indicado por alguém da SouJunior? *
-                        </label>
-                        <div
-                          className={styles.turnoRadioGroup}
-                        >
-                          <label
-                            className={styles.turnoRadiolabel}
-                            htmlFor="is-indication"
-                          >
-                            <Field
-                              id="is-indication"
-                              className={styles.customRadio}
-                              type="radio"
-                              name="indication"
-                              value="sim"
-                            />
-                            Sim
-                          </label>
-                          <label
-                            className={styles.turnoRadiolabel}
-                            htmlFor="is-not-indication"
-                          >
-                            <Field
-                              id="is-not-indication"
-                              className={styles.customRadio}
-                              type="radio"
-                              name="indication"
-                              value="não"
-                              onChange={(e) => {
-                                handleClearInput(setFieldValue, "indicationLinkedin");
-                                handleChange(e);
-                              }}
-                            />
-                            Não
-                          </label>
-                        </div>
-                      </div>
-                      {values.indication == "sim" &&
-                        <div className={styles.fieldDiv}>
-                          <label>Informe o LinkedIn de quem te indicou ao projeto *</label>
-                          <Field
-                            type="text"
-                            name="indicationLinkedin"
-                            placeholder="https://www.linkedin.com/in/"
-                            className={styles.input}
-                          />
-                          <ErrorMessage
-                            name="indicationLinkedin"
-                            component="div"
-                            className={styles.errorMessage}
-                          />
-                        </div>
-                      }
                     </div>
+                    <div
+                      id="indicationRadioGroup"
+                      role="indicationRadioGroup"
+                      name="indicationRadioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Você foi indicado por alguém da SouJunior? *
+                      </label>
+                      <div
+                        className={styles.turnoRadioGroup}
+                      >
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-indication"
+                        >
+                          <Field
+                            id="is-indication"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="indication"
+                            value="sim"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-not-indication"
+                        >
+                          <Field
+                            id="is-not-indication"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="indication"
+                            value="não"
+                            onChange={(e) => {
+                              handleClearInput(setFieldValue, "indicationLinkedin");
+                              handleChange(e);
+                            }}
+                          />
+                          Não
+                        </label>
+                      </div>
+                    </div>
+                    {values.indication == "sim" && 
+                      <div className={styles.fieldDiv}>
+                        <label>Informe o LinkedIn de quem te indicou ao projeto *</label>
+                        <Field
+                          type="text"
+                          name="indicationLinkedin"
+                          placeholder="https://www.linkedin.com/in/"
+                          className={styles.input}
+                        />
+                        <ErrorMessage
+                          name="indicationLinkedin"
+                          component="div"
+                          className={styles.errorMessage}
+                        />
+                      </div>
+                    }
                     <div
                       id="radioGroup"
                       role="radioGroup"
@@ -386,7 +349,7 @@ export const Mentor = () => {
                     </div>
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="availabilityRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -450,7 +413,7 @@ export const Mentor = () => {
                     </div>
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="startDateRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -489,7 +452,7 @@ export const Mentor = () => {
                             value="Em uma data específica"
                             id="Em uma data específica"
                           />
-                          Não, somente a partir de:
+                          Não, somente a partir de: 
                           <Field
                             className={styles.customSelectDate}
                             type="date"
@@ -573,7 +536,7 @@ export const Mentor = () => {
                     )}
                     <div
                       role="radioGroup"
-                      id="radioGroup"
+                      id="collaborationRadioGroup"
                       name="radioGroup"
                       className={styles.fieldDiv}
                     >
@@ -633,7 +596,7 @@ export const Mentor = () => {
                         />
                         Acima de 6 anos
                       </label>
-                    </div>
+                    </div>       
                     <div className={styles.fieldDiv}>
                       <label>
                         Conte-nos um pouco sobre sua experiência na área selecionada e possíveis
@@ -663,7 +626,7 @@ export const Mentor = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Conte-nos qual sua motivação para se tornar um Mentor na SouJunior. *
+                        Conte-nos qual sua motivação para se tornar um Head na SouJunior. *
                       </label>
                       <Field
                         as="textarea"
@@ -671,7 +634,7 @@ export const Mentor = () => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Qual é a sua motivação para se tornar um Mentor na SouJunior?"
+                        placeholder="Qual é a sua motivação para se tornar um Head na SouJunior?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -687,10 +650,51 @@ export const Mentor = () => {
                         className={styles.errorMessage}
                       />
                     </div>
+                    <div
+                      id="radioGroup"
+                      role="radioGroup"
+                      name="radioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Você colabora na estruturação estratégica da sua área de expertise com
+                         outros líderes, formando equipes e promovendo o crescimento da sua disciplina? *
+                      </label>
+                      <div
+                        className={styles.turnoRadioGroup}
+                      >
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="with-collaboration"
+                        >
+                          <Field
+                            id="with-collaboration"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="collaboration"
+                            value="with-collaboration"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="without-collaboration"
+                        >
+                          <Field
+                            id="without-collaboration"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="collaboration"
+                            value="without-collaboration"
+                          />
+                          Não
+                        </label>
+                      </div>
+                    </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência
-                        que possa ser relevante como um Mentor na SouJunior?
+                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência 
+                        que possa ser relevante como um Head na SouJunior?
                       </label>
                       <Field
                         as="textarea"
@@ -780,9 +784,9 @@ export const Mentor = () => {
                       dataForm={[values]}
                     />
                     <div className={styles.buttons}>
-                      <button
-                        type="submit"
-                        disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
+                      <button 
+                      type="submit"
+                      disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
                     </div>
                   </Form>
                 )
