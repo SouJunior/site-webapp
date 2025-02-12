@@ -17,10 +17,9 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     indicationLinkedin: Yup.string()
       .when('indication', {
         is: 'sim',
-        then: Yup.string()
-          .matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/, "Link inválido.")
+        then: (schema) => schema.matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/, "Link inválido.")
           .required("O campo Linkedin é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        otherwise: (schema) => schema.nullable(),
       }),
     area: Yup.string()
       .required("* Escolha uma opção por favor."),

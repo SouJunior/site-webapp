@@ -9,14 +9,14 @@ export const getValidationSchema = () => {
     name: Yup.string()
       .when('pessoa', {
         is: 'pessoa-fisica',
-        then: Yup.string().required("Campo Nome completo é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        then: (schema) => schema.required("Campo Nome completo é obrigatório."),
+        otherwise: (schema) => schema.nullable(),
       }),
     companyName: Yup.string()
       .when('pessoa', {
         is: 'pessoa-juridica',
-        then: Yup.string().required("Campo Instituição/Afiliada é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        then: (schema) => schema.required("Campo Instituição/Afiliada é obrigatório."),
+        otherwise: (schema) => schema.nullable(),
       }),
     email: Yup.string()
       .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,"E-mail inválido.")
@@ -29,38 +29,38 @@ export const getValidationSchema = () => {
     describeLinks: Yup.string()
       .when('supportOptions', {
         is: 'divulgador',
-        then: Yup.string()
+        then: (schema) => schema
           .min(10, "O campo deve ter no mínimo 10 caracteres.")
           .max(500, "O campo deve ter no máximo 500 caracteres.")
           .required("O campo é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        otherwise: (schema) => schema.nullable(),
       }),
     areasOfExperience: Yup.string()
       .when('supportOptions', {
         is: 'palestrador',
-        then: Yup.string()
+        then: (schema) => schema
           .min(10, "O campo deve ter no mínimo 10 caracteres.")
           .max(500, "O campo deve ter no máximo 500 caracteres.")
           .required("O campo é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        otherwise: (schema) => schema.nullable(),
       }),
     opportunityAvailable: Yup.string()
       .when('supportOptions', {
         is: (value) => (value === 'recrutador' || value === 'contratante'),
-        then: Yup.string()
+        then: (schema) => schema
           .min(10, "O campo deve ter no mínimo 10 caracteres.")
           .max(500, "O campo deve ter no máximo 500 caracteres.")
           .required("O campo é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        otherwise: (schema) => schema.nullable(),
       }),
     otherSupport: Yup.string()
       .when('supportOptions', {
         is: 'outros',
-        then: Yup.string()
+        then: (schema) => schema
           .min(10, "O campo deve ter no mínimo 10 caracteres.")
           .max(500, "O campo deve ter no máximo 500 caracteres.")
           .required("O campo é obrigatório."),
-        otherwise: Yup.string().nullable(),
+        otherwise: (schema) => schema.nullable(),
       }),
     suggestion: Yup.string()
       .min(200, "O campo deve ter no mínimo 200 caracteres.")
