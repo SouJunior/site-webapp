@@ -12,12 +12,12 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
       .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/,"E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
     linkedin: Yup.string()
-      .matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/,"Link inválido.")
+      .matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/,"Linkedin inválido.")
       .required("O campo Linkedin é obrigatório."),
     indicationLinkedin: Yup.string()
       .when('indication', {
         is: 'sim',
-        then: (schema) => schema.matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/, "Link inválido.")
+        then: (schema) => schema.matches(/((https:\/\/)((www|\w\w)\.)linkedin\.com\/)((([\w]{2,3}))|([^\/]+\/(([\w|\d-&#=])+\/){1,}))$/, "Linkedin inválido.")
           .required("O campo Linkedin é obrigatório."),
         otherwise: (schema) => schema.nullable(),
       }),
