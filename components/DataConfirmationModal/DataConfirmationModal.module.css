@@ -11,24 +11,21 @@
     overflow: hidden;
     background-color: rgba(1, 1, 1, 0.8);
 }
-
 .disabled {
     opacity: 0.5; /* Opacidade reduzida para indicar que está desabilitado */
     cursor: not-allowed !important; /* Cursor de 'não permitido' */
     /* Outros estilos visuais para indicar desabilitado, como cor de fundo ou borda */
 }
-
 .modaltermsText{
     background-color: #F2F2F2;
     color: black;
     width: 901px;
-    
+    height: 500px;
+    position: absolute;
     z-index: 999;
-    bottom: 0;
     border: 1px solid #c1c1c1;
     border-radius: 3px;
 }
-
 .modaltermsText::before {
     content: "";
     position: absolute;
@@ -39,18 +36,24 @@
     z-index: -1;
     filter: grayscale(70%);
 }
-
 .modaltermsText h2{
     font-size: 36px;
     text-align: center;
-    padding-top: 6%;
-    padding-bottom: 16px;
+    padding-top: 50px;
+    padding-bottom: 0;
 }
 .textContent{
-    height: 300px;
+    height: 200px;
     overflow-y: scroll;
-    padding: 0 15px 0 15px;
+    padding: 0 50px 0 50px;
 }
+
+.itemContent{
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
 .modaltermsText h4{
     font-size: 24px;
     margin-top: 10px;
@@ -61,12 +64,17 @@
 }
 .buttonContainer{
     display: flex;
-    justify-content: center;   
-    margin-top: 30px;
-    margin-bottom: 30px;
+    justify-content: space-evenly;   
+    margin-top: 10px;
 }
 .inButton{
     background-color: #95C6FF !important;
+    color: black !important;
+    padding: 17px 27px 17px 27px !important;
+    width: 240px !important;
+}
+.notAcceptButton{
+    background-color: #acacac !important;
     color: black !important;
     padding: 17px 27px 17px 27px !important;
     width: 240px !important;
@@ -78,23 +86,22 @@
 @media (max-width: 1024px) {
     .modaltermsText {
             width: 600px;
-    }
-
-    .modaltermsText h2 {
-        font-size: 26px;
-        padding-top: 10px;
-    }
-
-    .modaltermsText h4 {
-        font-size: 16px;
-    }
-
-    .modaltermsText p {
-        font-size: 12px;
-    }
+        }
+    
+        .modaltermsText h2 {
+            font-size: 26px;
+        }
+    
+        .modaltermsText h4 {
+            font-size: 16px;
+        }
+    
+        .modaltermsText p {
+            font-size: 12px;
+        }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 665px) {
     .modaltermsText {
         width: 400px;
     }
@@ -109,5 +116,14 @@
 
     .modaltermsText p {
         font-size: 10px;
+    }
+
+    .inButton{
+        padding: 17px 27px 17px 27px !important;
+        width: 150px !important;
+    }
+    .notAcceptButton{
+        padding: 17px 27px 17px 27px !important;
+        width: 150px !important;
     }
 }

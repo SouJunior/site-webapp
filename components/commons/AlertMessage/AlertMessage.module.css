@@ -21,22 +21,30 @@
     border-radius: 16px;
 }
 
+.onClose {
+    position: relative;
+    top: -30px;
+    left: 130px;
+    cursor: pointer;
+}
+
 .box p {
     text-align: center;
     font-weight: semibold;
-    font-size: 16px;
+    font-size: 18px;
     color: black;
 }
 
 .box button {
     padding: 12px 24px;
     margin-top: 16px;
-    background-color: #95C6FF;
+    background-color: #5da6fa;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 .box button:hover {
-    background-color: #99BAE0;
+    background-color: #096cdd;
 }
