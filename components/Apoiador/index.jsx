@@ -52,14 +52,40 @@ export const Apoiador = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    {!dataAccepted && setShowDataModal(true)}
     
+    {!dataAccepted && setShowDataModal(true)}
+        
         setIsSubmitting(true);
         setLoading(true);
     
         if (isSubmitting && dataAccepted) {
           try {
-            const response = await api.post("/apoiar", {values});
+            const response = await api.post(
+              "/apoiar", 
+              {
+                areasOfExperience: values.areasOfExperience,
+                companyName: values.companyName,
+                contactAgreement: values.contactAgreement ? true : false,
+                describeLinks:values.describeLinks,
+                email: values.email,
+                name: values.name,
+                opportunityAvailable: values.opportunityAvailable,
+                otherSupport: values.otherSupport,
+                pessoa: values.pessoa,
+                phone:values.phone,
+                suggestion: values.suggestion,
+                supportOptions: values.supportOptions,
+                termsAgreement: values.termsAgreement ? true : false,
+                volunteerMotivation: values.volunteerMotivation,
+                volunteeringAgreement: values.volunteeringAgreement ? true : false,
+                whatsapp: values.whatsapp
+              },
+              {headers: 
+                {
+                  'x-api-key':process.env.NEXT_PUBLIC_X_API_KEY,
+                }
+              }
+            );
     
             if (response.status !== 201) {
               throw new Error("Não foi possível enviar a requisição");

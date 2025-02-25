@@ -107,7 +107,7 @@ export const Mentor = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-
+    
     { !dataAccepted && setShowDataModal(true) }
 
     setIsSubmitting(true);
@@ -125,20 +125,25 @@ export const Mentor = () => {
             email: values.email,
             linkedin: values.linkedin,
             indication: values.indication,
-            linkedin_indication: values.linkedinIndication,
+            linkedinIndication: values.indicationLinkedin,
             turn: values.turn === "turno-disponivel" ? true : false,
-            start_option: values.startOption,
+            startOption: values.startOption,
             availability: values.availability,
-            volunteer_motivation: values.volunteerMotivation,
-            other_experiences: values.otherExperiences,
-            contact_agreement: values.contactAgreement ? true : false,
-            volunteering_agreement: values.volunteeringAgreement ? true : false,
-            terms_agreement: values.termsAgreement ? true : false,
-            start_date: startDate,
-            id_area: Number(values.area),
-            id_subarea: Number(values.subarea),
-            experience_time: values.experienceTime,
-            job_experience: values.jobExperience
+            volunteerMotivation: values.volunteerMotivation,
+            otherExperiences: values.otherExperiences,
+            contactAgreement: values.contactAgreement ? true : false,
+            volunteeringAgreement: values.volunteeringAgreement ? true : false,
+            termsAgreement: values.termsAgreement ? true : false,
+            startDate: values.startDate,
+            area: Number(values.area),
+            subarea: Number(values.subarea),
+            experienceTime: values.experienceTime,
+            jobExperience: values.jobExperience
+          }, 
+          {headers: 
+            {
+              'x-api-key':process.env.NEXT_PUBLIC_X_API_KEY,
+            }
           }
         )
 
