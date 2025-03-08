@@ -61,24 +61,24 @@ export const Apoiador = () => {
         if (isSubmitting && dataAccepted) {
           try {
             const response = await api.post(
-              "/apoiar", 
+              "/supporter", 
               {
-                areasOfExperience: values.areasOfExperience,
-                companyName: values.companyName,
+                expertiseAreas: values.areasOfExperience,
+                institution: values.companyName,
                 contactAgreement: values.contactAgreement ? true : false,
                 describeLinks:values.describeLinks,
                 email: values.email,
                 name: values.name,
-                opportunityAvailable: values.opportunityAvailable,
+                opportunitiesDescription: values.opportunityAvailable,
                 otherSupport: values.otherSupport,
-                pessoa: values.pessoa,
+                personType: values.pessoa,
                 phone:values.phone,
                 suggestion: values.suggestion,
                 supportOptions: values.supportOptions,
                 termsAgreement: values.termsAgreement ? true : false,
                 volunteerMotivation: values.volunteerMotivation,
                 volunteeringAgreement: values.volunteeringAgreement ? true : false,
-                whatsapp: values.whatsapp
+                hasWhatsApp: values.whatsapp === "sim" ? true : false,
               },
               {headers: 
                 {

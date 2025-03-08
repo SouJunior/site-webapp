@@ -75,9 +75,9 @@ export const Head = () => {
       setIsSubmitting(true);
       setLoading(true);
   
-      const startDate = values.startOption === "imediato" ?
+      const startDate = values.startOption === "Imediato" ?
         new Date()
-        : new Date(values.startDate)
+        : new Date(values.startDate.split('-'))
   
       if (isSubmitting && dataAccepted) {
         try {
@@ -86,7 +86,7 @@ export const Head = () => {
               name: values.name,
               email: values.email,
               linkedin: values.linkedin,
-              indication: values.indication,
+              indication: values.indication === "sim" ? true : false,
               linkedinIndication: values.indicationLinkedin,
               turn: values.turn === "turno-disponivel" ? true : false,
               startOption: values.startOption,
@@ -94,14 +94,14 @@ export const Head = () => {
               volunteerMotivation: values.volunteerMotivation,
               otherExperiences: values.otherExperiences,
               contactAgreement: values.contactAgreement ? true : false,
-              volunteeringAgreement: values.volunteeringAgreement ? true : false,
+              volunteerAgreement: values.volunteeringAgreement ? true : false,
               termsAgreement: values.termsAgreement ? true : false,
-              startDate: values.startDate,
+              startDate: startDate,
               area: Number(values.area),
               subarea: Number(values.subarea),
               experienceTime: values.experienceTime,
               jobExperience: values.jobExperience,
-              collaboration: values.collaboration
+              collaboration: values.collaboration === "with-collaboration" ? true : false,
             }, 
             {headers: 
               {

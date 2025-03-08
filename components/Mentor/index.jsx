@@ -82,7 +82,7 @@ export const Mentor = () => {
           ],
         }
       ]);
-
+      
     setIsSubmitting(true);
 
     const confirmExit = (e) => {
@@ -113,10 +113,10 @@ export const Mentor = () => {
     setIsSubmitting(true);
     setLoading(true);
 
-    const startDate = values.startOption === "imediato" ?
+    const startDate = values.startOption === "Imediato" ?
       new Date()
-      : new Date(values.startDate)
-
+      : new Date(values.startDate.split('-'))
+    
     if (isSubmitting && dataAccepted) {
       try {
         const response = await api.post("/mentor",
@@ -124,7 +124,7 @@ export const Mentor = () => {
             name: values.name,
             email: values.email,
             linkedin: values.linkedin,
-            indication: values.indication,
+            indication: values.indication === "sim" ? true : false,
             linkedinIndication: values.indicationLinkedin,
             turn: values.turn === "turno-disponivel" ? true : false,
             startOption: values.startOption,
@@ -134,7 +134,7 @@ export const Mentor = () => {
             contactAgreement: values.contactAgreement ? true : false,
             volunteeringAgreement: values.volunteeringAgreement ? true : false,
             termsAgreement: values.termsAgreement ? true : false,
-            startDate: values.startDate,
+            startDate: startDate,
             area: Number(values.area),
             subarea: Number(values.subarea),
             experienceTime: values.experienceTime,
