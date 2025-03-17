@@ -43,6 +43,27 @@ Esse projeto é usado pela [SouJunior](https://github.com/SouJunior).
 
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="60" height="60" />  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="60" height="60"/>  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="60" height="60" /> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="60" height="60" />  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" width="60" height="60"/>
 
+## DevOps
+
+```mermaid
+sequenceDiagram
+    actor Dev as Desenvolvedores
+    participant Git as GitHub
+    participant Net as Netlify
+
+    Note over Dev,Net: Fluxo de Deploy com Preview
+
+    Dev->>Git: Abre Pull Request (PR) para main
+    Git->>Net: Novo Evento: PR criada
+    Net-->>Git: Deploy Preview criado
+    
+    Note over Dev,Net: Loop de desenvolvimento
+    
+    Dev->>Git: Aprova e mergeia PR para main
+    Git->>Net: Novo Evento: Branch main atualizada
+    Net-->>Git: Deploy de Produção atualizado
+```
+
 ## Autor(es) 🙎🏻‍♂️
 
 - Anderson Nunes | [GitHub](https://https://github.com/Dande94) - [LinkedIn](https://www.linkedin.com/in/anderson-nunes-000541225/)
