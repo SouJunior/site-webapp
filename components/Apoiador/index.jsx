@@ -11,7 +11,6 @@ import Popup from "../commons/Popup/Popup";
 
 import { api } from "../../services/api";
 import AlertMessage from "../commons/AlertMessage/AlertMessage";
-import TermsModal from "../TermsModal";
 import DataConfirmationModal from "../DataConfirmationModal";
 
 export const Apoiador = () => {
@@ -21,11 +20,8 @@ export const Apoiador = () => {
   const [loading, setLoading] = useState(false);
   const [showAlertMessage, setShowAlertMessage] = useState(false);
   const [formDirty, setFormDirty] = useState(false);
-  const [showTermsModal, setShowTermsModal] = useState(false);
   const [showDataModal, setShowDataModal] = useState(false);
   const [dataAccepted, setDataAccepted] = useState(false);
-  const [termsAccepted, setTermsAccepted] = useState(false);
-
 
   useEffect(() => {
     setIsSubmitting(true);
@@ -75,7 +71,6 @@ export const Apoiador = () => {
                 phone:values.phone,
                 suggestion: values.suggestion,
                 supportOptions: values.supportOptions,
-                termsAgreement: values.termsAgreement ? true : false,
                 volunteerMotivation: values.volunteerMotivation,
                 volunteeringAgreement: values.volunteeringAgreement ? true : false,
                 hasWhatsApp: values.whatsapp === "sim" ? true : false,
@@ -101,11 +96,6 @@ export const Apoiador = () => {
         }
   };
 
-  const handleTermsAcceptance = () => {
-    setTermsAccepted(true);
-    setShowTermsModal(false);
-  };
-
   const handleDataAcceptance = () => {
     setDataAccepted(true);
     setShowDataModal(false);
@@ -115,17 +105,6 @@ export const Apoiador = () => {
     setDataAccepted(false);
     setShowDataModal(false);
   }
-
-  const handleCheckboxChange = (e, setFieldValue) => {
-    if (e.target.checked) {
-      setShowTermsModal(true);
-      setFieldValue('termsAgreement', true);
-    } else {
-      setShowTermsModal(false);
-      setTermsAccepted(false);
-      setFieldValue('termsAgreement', false);
-    }
-  };
 
   const handleClearInput = (setFieldValue, nameInput) => {
     setFieldValue(nameInput, "");
@@ -621,30 +600,6 @@ export const Apoiador = () => {
                           className={styles.errorMessage}
                         />
                       </div>
-                      <div className={styles.fieldDiv}>
-                        <label
-                          className={styles.radioLabel}
-                          htmlFor="termsAgreement"
-                        >
-                          <Field
-                            type="checkbox"
-                            name="termsAgreement"
-                            id="terms"
-                            checked={termsAccepted}
-                            onChange={(e) => handleCheckboxChange(e, setFieldValue)}
-                          />
-                          <p>Declaro ter lido e estar de acordo com os <strong> Termos e Condições</strong></p>
-                        </label>
-                        <ErrorMessage
-                          name="termsAgreement"
-                          component="div"
-                          className={styles.errorMessage}
-                        />
-                        <TermsModal
-                          show={showTermsModal}
-                          onAccept={handleTermsAcceptance}
-                        />
-                      </div>
                     </div>
                     <DataConfirmationModal
                       show={showDataModal}
@@ -655,7 +610,7 @@ export const Apoiador = () => {
                     <div className={styles.buttons}>
                       <button
                         type="submit"
-                        disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
+                        disabled={isSubmitting || !isValid || !dirty}>Enviar</button>
                     </div>
                   </Form>
                 )

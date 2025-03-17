@@ -72,7 +72,6 @@ export const getValidationSchema = () => {
       .required("O campo é obrigatório."),
     contactAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
     volunteeringAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."),
-    termsAgreement: Yup.boolean().oneOf([true], "Você deve marcar esta opção."), 
   });
 };
 
@@ -91,6 +90,5 @@ export const initialValues = {
   suggestion: "",
   volunteerMotivation: "",
   contactAgreement: false,
-  volunteeringAgreement: false,
-  termsAgreement: false
+  volunteeringAgreement: false
 }
