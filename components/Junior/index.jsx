@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { getValidationSchema, initialValues } from "./structure";
 
@@ -12,6 +12,7 @@ import Popup from "../commons/Popup/Popup";
 import { api } from "../../services/api";
 import AlertMessage from "../commons/AlertMessage/AlertMessage";
 import TermsModal from "../TermsModal";
+import DataConfirmationModal from "../DataConfirmationModal";
 
 export const Junior = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -25,59 +26,61 @@ export const Junior = () => {
   const [formDirty, setFormDirty] = useState(false);
   const [showTermsModal, setShowTermsModal] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const [showDataModal, setShowDataModal] = useState(false);
+  const [dataAccepted, setDataAccepted] = useState(false);
   const [selectedArea, setSelectedArea] = useState({});
 
   useEffect(() => {
     setAreas([
-      {name: "Agilidade", id: 1},
-      {name: "Back-End", id: 2},
-      {name: "Front-End", id: 3},
+      { name: "Agilidade", id: 1 },
+      { name: "Back-End", id: 2 },
+      { name: "Front-End", id: 3 },
       {
-        name: "Business", 
+        name: "Business",
         id: 4,
         subareas: [
-          {name: "Análise de Negócios", id: 1},
-          {name: "Análise de Processos", id: 2},
+          { name: "Análise de Negócios", id: 1 },
+          { name: "Análise de Processos", id: 2 },
         ],
       },
       {
-        name: "Dados", 
+        name: "Dados",
         id: 5,
         subareas: [
-          {name: "Analytics", id: 3},
-          {name: "BI", id: 4},
-          {name: "Engenharia de Dados", id: 5},
+          { name: "Analytics", id: 3 },
+          { name: "BI", id: 4 },
+          { name: "Engenharia de Dados", id: 5 },
         ],
       },
       {
-        name: "Design", 
+        name: "Design",
         id: 6,
         subareas: [
-          {name: "Design Ops", id: 6},
-          {name: "UX/UI", id: 7},
+          { name: "Design Ops", id: 6 },
+          { name: "UX/UI", id: 7 },
         ],
       },
-      {name: "DevOps", id: 7},
+      { name: "DevOps", id: 7 },
       {
         name: "Produto",
         id: 8,
         subareas: [
-          {name: "APM - Associate Product Manager", id: 8},
-          {name: "Product Growth", id: 9},
-          {name: "Product Marketing Manager", id: 10},
-          {name: "Product Ops", id: 11},
+          { name: "APM - Associate Product Manager", id: 8 },
+          { name: "Product Growth", id: 9 },
+          { name: "Product Marketing Manager", id: 10 },
+          { name: "Product Ops", id: 11 },
         ],
       },
-      {name: "QA - Quality Assurance", id: 9},
-      {name: "Tech Recruitment", id: 10},
+      { name: "QA - Quality Assurance", id: 9 },
+      { name: "Tech Recruitment", id: 10 },
       {
         name: "Social Media",
         id: 11,
         subareas: [
-          {name: "Criação de Conteúdo - Redação", id: 12},
-          {name: "Criação de Peças - Design", id: 13},
+          { name: "Criação de Conteúdo - Redação", id: 12 },
+          { name: "Criação de Peças - Design", id: 13 },
         ],
-      }   
+      }
     ]);
 
     setIsSubmitting(true);
@@ -104,34 +107,43 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
+    
+    {!dataAccepted && setShowDataModal(true)}
+
     setIsSubmitting(true);
     setLoading(true);
 
-    const startDate = values.startOption === "imediato" ?
+    const startDate = values.startOption === "Imediato" ?
       new Date()
-      : new Date(values.startDate)
+      : new Date(values.startDate.split('-'))
 
-    if (isSubmitting) {
+    if (isSubmitting && dataAccepted) {
       try {
         const response = await api.post("/juniors",
           {
             name: values.name,
-            cpf: values.cpf,
             email: values.email,
             linkedin: values.linkedin,
+            indication: values.indication === "sim" ? true : false,
+            linkedinIndication: values.indicationLinkedin,
             turn: values.turn === "turno-disponivel" ? true : false,
-            start_option: values.startOption,
+            startOption: values.startOption,
             availability: values.availability,
-            tools_knowledge: values.toolsKnowledge,
-            field_knowledge: values.fieldKnowledge,
-            volunteer_motivation: values.volunteerMotivation,
-            other_experiences: values.otherExperiences,
-            contact_agreement: values.contactAgreement ? true : false,
-            volunteering_agreement: values.volunteeringAgreement ? true : false,
-            terms_agreement: values.termsAgreement ? true : false,
-            start_date: startDate,
-            id_area: Number(values.area),
-            id_subarea: Number(values.subarea),
+            toolsKnowledge: values.toolsKnowledge,
+            fieldKnowledge: values.fieldKnowledge,
+            volunteerMotivation: values.volunteerMotivation,
+            otherExperiences: values.otherExperiences,
+            contactAgreement: values.contactAgreement ? true : false,
+            volunteeringAgreement: values.volunteeringAgreement ? true : false,
+            termsAgreement: values.termsAgreement ? true : false,
+            startDate: startDate,
+            area: Number(values.area),
+            subarea: Number(values.subarea),
+          }, 
+          {headers: 
+            {
+              'x-api-key':process.env.NEXT_PUBLIC_X_API_KEY,
+            }
           }
         )
 
@@ -176,19 +188,32 @@ export const Junior = () => {
   const handleTermsAcceptance = () => {
     setTermsAccepted(true);
     setShowTermsModal(false);
-};
+  };
 
-  
-const handleCheckboxChange = (e, setFieldValue) => {
-  if (e.target.checked) {
-      setShowTermsModal(true);
-      setFieldValue('termsAgreement', true); 
-  } else {
-      setShowTermsModal(false); 
-      setTermsAccepted(false); 
-      setFieldValue('termsAgreement', false);
+  const handleDataAcceptance = () => {
+    setDataAccepted(true);
+    setShowDataModal(false);
+  };
+
+  const handleDataNotAccept = () => {
+    setDataAccepted(false);
+    setShowDataModal(false);
   }
-};
+
+  const handleCheckboxChange = (e, setFieldValue) => {
+    if (e.target.checked) {
+      setShowTermsModal(true);
+      setFieldValue('termsAgreement', true);
+    } else {
+      setShowTermsModal(false);
+      setTermsAccepted(false);
+      setFieldValue('termsAgreement', false);
+    }
+  };
+
+  const handleClearInput = (setFieldValue, nameInput) => {
+    setFieldValue(nameInput, "");
+  }
 
   return (
     <>
@@ -238,26 +263,6 @@ const handleCheckboxChange = (e, setFieldValue) => {
                       />
                     </div>
                     <div className={styles.fieldDiv}>
-                      <label>CPF *</label>
-                      <Field
-                        type="text"
-                        name="cpf"
-                        maxLength={11}
-                        placeholder="Digite seu CPF (somente números)"
-                        className={styles.input}
-                        onChange = {(e) => {
-                          const value = e.target.value.replace(/\D/g, '');
-                          handleChange(e);
-                          setFieldValue('cpf', value);
-                        }}
-                      />
-                      <ErrorMessage
-                        name="cpf"
-                        component="div"
-                        className={styles.errorMessage}
-                      />
-                    </div>
-                    <div className={styles.fieldDiv}>
                       <label>E-mail *</label>
                       <Field
                         type="email"
@@ -285,6 +290,66 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         className={styles.errorMessage}
                       />
                     </div>
+                    <div
+                      id="indicationRadioGroup"
+                      role="indicationRadioGroup"
+                      name="indicationRadioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>
+                        Você foi indicado por alguém da SouJunior? *
+                      </label>
+                      <div
+                        className={styles.turnoRadioGroup}
+                      >
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-indication"
+                        >
+                          <Field
+                            id="is-indication"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="indication"
+                            value="sim"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-not-indication"
+                        >
+                          <Field
+                            id="is-not-indication"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="indication"
+                            value="não"
+                            onChange={(e) => {
+                              handleClearInput(setFieldValue, "indicationLinkedin");
+                              handleChange(e);
+                            }}
+                          />
+                          Não
+                        </label>
+                      </div>
+                    </div>
+                    {values.indication == "sim" && 
+                      <div className={styles.fieldDiv}>
+                        <label>Informe o LinkedIn de quem te indicou ao projeto *</label>
+                        <Field
+                          type="text"
+                          name="indicationLinkedin"
+                          placeholder="https://www.linkedin.com/in/"
+                          className={styles.input}
+                        />
+                        <ErrorMessage
+                          name="indicationLinkedin"
+                          component="div"
+                          className={styles.errorMessage}
+                        />
+                      </div>
+                    }
                     <div
                       id="radioGroup"
                       role="radioGroup"
@@ -407,7 +472,12 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             className={styles.customRadio}
                             type="radio"
                             name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Imediato")}
+                            onChange={(e) => {
+                                handleInicioChange(setFieldValue, "Imediato");
+                                handleClearInput(setFieldValue, "startDate");
+                                handleChange(e);
+                              }
+                            }
                             value="Imediato"
                             id="Imediato"
                           />
@@ -425,10 +495,11 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             value="Em uma data específica"
                             id="Em uma data específica"
                           />
-                          Não, somente a partir de: 
+                          Não, somente a partir de:
                           <Field
                             className={styles.customSelectDate}
                             type="date"
+                            min={new Date().toISOString().split("T")[0]}
                             name="startDate"
                             placeholder="informe aqui sua disponibilidade"
                             id="startDate"
@@ -568,7 +639,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         minLength={200}
                         maxLength={500}
                         className={styles.textarea}
-                        placeholder="Qual sua motivação para se tornar vonlutário?"
+                        placeholder="Qual sua motivação para se tornar voluntário?"
                       />
                       <span className={styles.count}>
                         Caracteres restantes: {500 - values.volunteerMotivation.length}
@@ -657,7 +728,7 @@ const handleCheckboxChange = (e, setFieldValue) => {
                             checked={termsAccepted}
                             onChange={(e) => handleCheckboxChange(e, setFieldValue)}
                           />
-                          Declaro ter lido e estar de acordo com os{' '} <a><strong> Termos e Condições</strong></a>
+                          <p>Declaro ter lido e estar de acordo com os <strong> Termos e Condições</strong></p>
                         </label>
                         <ErrorMessage
                           name="termsAgreement"
@@ -670,12 +741,16 @@ const handleCheckboxChange = (e, setFieldValue) => {
                         />
                       </div>
                     </div>
+                    <DataConfirmationModal
+                      show={showDataModal}
+                      onAccept={handleDataAcceptance}
+                      notAccept={handleDataNotAccept}
+                      dataForm={[values]}
+                    />
                     <div className={styles.buttons}>
-                    <div className={styles.buttons}>
-                      <button 
-                      type="submit" 
-                      disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
-                    </div>
+                      <button
+                        type="submit"
+                        disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
                     </div>
                   </Form>
                 )
