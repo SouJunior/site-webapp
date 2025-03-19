@@ -1,0 +1,40 @@
+@media (max-width: 1180px) {
+  .menuNav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0rem;
+    position: absolute;
+    right: 1rem;
+    padding: 0rem 0rem;
+    z-index: 99;
+    border-radius: 0.25rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .linkNav {
+    width: 100%;
+    font-size: 24px;
+    color: #046ad0;
+    padding: 3.2rem;
+  }
+
+  .linkNav:hover::after {
+    border-bottom: none;
+  }
+  .linkNav:hover {
+    color: #021a55;
+  }
+  .linkNav:not(:last-child) {
+    box-shadow: 0 2px 0px 0 white;
+  }
+  .active {
+    border-bottom: 0px;
+    color: #021a55;
+  }
+  .active::after {
+    border: none;
+  }
+}

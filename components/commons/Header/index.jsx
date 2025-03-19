@@ -7,6 +7,7 @@ import { Navbar } from "../../commons/Navbar";
 import { MenuMobile } from "../../commons/MenuMobile";
 import { keyWords } from "../../../utils/keyWords";
 import styles from "./Header.module.css";
+import ButtonApoiar from "../Button/Button";
 
 export const Header = () => {
   const getKeywords = () => keyWords.map(({ title }) => ` ${title}`);
@@ -45,6 +46,9 @@ export const Header = () => {
         </div>
         <div className={styles.mobileMenu}>
           <MenuMobile />
+        </div>
+        <div className={styles.buttonApoiar}>
+          <ButtonApoiar title="Apoie a SouJunior" path="#apoie-a-soujunior"/>
         </div>
       </div>
     </header>
