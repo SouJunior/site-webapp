@@ -22,7 +22,7 @@
     padding: 10px;
   }
 
-  .acordionArrown {
+  .accordionArrown {
     display: flex;
     justify-content: space-between;
   }
@@ -36,7 +36,6 @@
     left: 264px !important;
   }
 }
-
 
 .apoiarContent {
   display: flex;
@@ -82,7 +81,7 @@
   background-color: #072280;
 }
 
-.acordionContainer {
+.accordionContainer {
   display: flex;
   flex-direction: column;
   max-width: 1324px;
@@ -91,7 +90,7 @@
   gap: 2.4rem;
 }
 
-.acordionArrown {
+.accordionArrown {
   display: flex;
   justify-content: space-between;
 }
@@ -101,14 +100,14 @@
   cursor: pointer;
 }
 
-.acordionTitle {
+.accordionTitle {
   font-size: 3rem;
   text-align: start;
   cursor: pointer;
   padding-bottom: 24px;
 }
 
-.rowAcordion {
+.rowAccordion {
   color: #EDEDED;
 }
 

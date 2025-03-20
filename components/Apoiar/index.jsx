@@ -1,35 +1,13 @@
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'lucide-react';
 
+import { accordionItems} from '../../utils/accordionItems'
 import styles from './Apoiar.module.css'
 import apoiarImagem from '../../public/assets/apoio.png'
 import Image from 'next/image'
 
 export function Apoiar() {
   const [openItem, setOpenItem] = useState(null);
-
-  const accordionItems = [
-    {
-      id: 1,
-      title: 'Divulgador (Youtube, LinkedIn, e etc)',
-      content: 'Se você tem um canal no YouTube, podcast, blog ou qualquer plataforma de comunicação, divulgue nosso projeto e amplie o alcance das nossas iniciativas.'
-    },
-    {
-      id: 2,
-      title: 'Especialistas interessados em palestrar',
-      content: 'Se você tem um canal no YouTube, podcast, blog ou qualquer plataforma de comunicação, divulgue nosso projeto e amplie o alcance das nossas iniciativas.'
-    },
-    {
-      id: 3,
-      title: 'Recrutadores e consultores de carreira',
-      content: 'Se você tem um canal no YouTube, podcast, blog ou qualquer plataforma de comunicação, divulgue nosso projeto e amplie o alcance das nossas iniciativas.'
-    },
-    {
-      id: 4,
-      title: 'Empresas interessadas em contratar',
-      content: 'Se você tem um canal no YouTube, podcast, blog ou qualquer plataforma de comunicação, divulgue nosso projeto e amplie o alcance das nossas iniciativas.'
-    },
-  ];
 
   const handleOpen = (id) => {
     setOpenItem((prev) => (prev === id ? null : id));
@@ -43,11 +21,11 @@ export function Apoiar() {
           <p className={styles.paragraph}>Apoiar a SouJunior é contribuir para que mais profissionais juniores possam desenvolver as habilidades técnicas necessárias para ingressar no mercado de tecnologia. Com o seu apoio, ampliamos as oportunidades para quem está dando os primeiros passos na área de tecnologia.</p>
         </div>
 
-        <ul className={styles.acordionContainer}>
+        <ul className={styles.accordionContainer}>
           {accordionItems.map((item) => (
             <div key={item.id}>
-              <div onClick={() => handleOpen(item.id)} className={styles.acordionArrown}>
-                <h2 className={styles.acordionTitle}>
+              <div onClick={() => handleOpen(item.id)} className={styles.accordionArrown}>
+                <h2 className={styles.accordionTitle}>
                   {item.title}
                 </h2>
                 {openItem === item.id ? (
@@ -63,7 +41,7 @@ export function Apoiar() {
                   <button className={styles.buttonStyle}>Cadastre-se como apoiador</button>
                 </li>
               )}
-              <hr className={styles.rowAcordion} />
+              <hr className={styles.rowAccordion} />
             </div>
           ))}
         </ul>
