@@ -19,6 +19,26 @@
   align-items: center;
 }
 
+.linkNav:last-child {
+  background-color: #072280;
+  color: #ededed;
+  border-radius: 30px;
+  padding: 10px 20px;
+  border-bottom: none;
+}
+
+.linkNav:last-child:hover {
+  background-color: #171123;
+}
+
+.linkNav:hover:last-child::after {
+  border-bottom: none;
+}
+
+.active:last-child::after {
+  border-bottom: none;
+}
+
 .linkNav:hover::after {
   content: "";
   width: 100%;
