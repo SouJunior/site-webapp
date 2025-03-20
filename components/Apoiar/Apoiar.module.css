@@ -30,11 +30,6 @@
   .itemArrown {
     cursor: pointer;
   }
-
-  .imageApoiar {
-    top: -12px;
-    left: 264px !important;
-  }
 }
 
 .apoiarContent {
@@ -68,6 +63,7 @@
 }
 
 .buttonStyle {
+  display: inline-flex;
   font-size: 2.4rem;
   background-color: #046AD0;
   margin-bottom: 2.4rem;
@@ -93,6 +89,8 @@
 .accordionArrown {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .itemArrown {
@@ -124,7 +122,8 @@
 }
 
 .buttonContainer {
-  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .apoiarButton {
@@ -133,7 +132,7 @@
   background-color: #046AD0;
   color: #ededed;
   border-radius: 30px;
-  padding: 10px 60px 10px 20px;
+  padding: 10px 20px;
 }
 
 .apoiarButton:hover {
@@ -141,8 +140,6 @@
 }
 
 .imageApoiar {
-  position: absolute;
-  top: -12px;
-  left: 284px;
+  margin-left: -20px;
   width: 100px;
 }
