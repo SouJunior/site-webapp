@@ -15,6 +15,29 @@
   align-items: center;
 }
 
+@media (max-width: 1024px) {
+  .apoiarContainer {
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .acordionArrown {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .itemArrown {
+    cursor: pointer;
+  }
+
+  .imageApoiar {
+    top: -12px;
+    left: 264px !important;
+  }
+}
+
+
 .apoiarContent {
   display: flex;
   align-items: center;
@@ -87,7 +110,7 @@
   padding-bottom: 40px;
 }
 
-.buttonContainer{
+.buttonContainer {
   position: relative;
 }
 
