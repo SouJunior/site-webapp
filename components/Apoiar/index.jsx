@@ -60,6 +60,7 @@ export function Apoiar() {
                 <li>
                   <h3 className={styles.subTitle}>Ajude a espalhar a voz sobre a SouJunior!</h3>
                   <p className={styles.paragraph}>{item.content}</p>
+                  <button className={styles.buttonStyle}>Cadastre-se como apoiador</button>
                 </li>
               )}
               <hr className={styles.rowAcordion} />

@@ -68,6 +68,20 @@
   padding: 24px 0;
 }
 
+.buttonStyle {
+  font-size: 2.4rem;
+  background-color: #046AD0;
+  margin-bottom: 2.4rem;
+  padding: 1rem 2rem;
+  border-radius: 3.0rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.buttonStyle:hover {
+  background-color: #072280;
+}
+
 .acordionContainer {
   display: flex;
   flex-direction: column;
