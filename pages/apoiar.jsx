@@ -1,5 +1,6 @@
-import { Apoiador } from "../components/Apoiador";
+import { Apoiar } from "../components/Apoiar";
 
-const apoiar = () => <Apoiador />;
+
+const apoiar = () => <Apoiar />;
 
 export default apoiar;

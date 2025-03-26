@@ -1,0 +1,145 @@
+.ContainerBox {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #171123;
+  padding-top: 90px;
+}
+
+.apoiarContainer {
+  max-width: 1324px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .apoiarContainer {
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .accordionArrown {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .itemArrown {
+    cursor: pointer;
+  }
+}
+
+.apoiarContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 600;
+  color: #EDEDED;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.subTitle {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #EDEDED;
+}
+
+.paragraph {
+  font-size: 2.4rem;
+  color: #EDEDED;
+  padding: 24px 0;
+}
+
+.buttonStyle {
+  display: inline-flex;
+  font-size: 2.4rem;
+  background-color: #046AD0;
+  margin-bottom: 2.4rem;
+  padding: 1rem 2rem;
+  border-radius: 3.0rem;
+  transition: ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.buttonStyle:hover {
+  background-color: #072280;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 1324px;
+  width: 100%;
+  padding-bottom: 24px;
+  gap: 2.4rem;
+}
+
+.accordionArrown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.itemArrown {
+  margin-top: 14px;
+  cursor: pointer;
+}
+
+.accordionTitle {
+  font-size: 3rem;
+  text-align: start;
+  cursor: pointer;
+  padding-bottom: 24px;
+}
+
+.rowAccordion {
+  color: #EDEDED;
+}
+
+.financiadorContainer {
+  max-width: 1324px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+}
+
+.apoiarButton {
+  align-items: center;
+  font-size: 2.4rem;
+  background-color: #046AD0;
+  color: #ededed;
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+
+.apoiarButton:hover {
+  background-color: #0A4F9E;
+}
+
+.imageApoiar {
+  margin-left: -20px;
+  width: 100px;
+}
