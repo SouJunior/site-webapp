@@ -1,0 +1,250 @@
+.ParticipationSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.125rem;
+  font-family: inherit;
+  padding: 72px 32px;
+  width: 1324px;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+}
+  
+.headerContainer h1 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.contentBtn{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.titleFooter{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+.titleFooter h1{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.ParagraphWrapper {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.ParagraphWrapper h1{
+  font-size: 25px;
+}
+
+.ParagraphWrapper p{
+  font-size: 20px;
+}  
+  
+  .hide {
+    width: 100%;
+    padding-left: 1rem;
+    margin-bottom: 7.5rem;
+  }
+  
+  .textJr,
+  .textMentor,
+  .textSupporter,
+  .textHead,
+  .textCommunity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 0.3rem solid #fff;
+    transition: ease-out 0.1s;
+    margin-bottom: 12rem;
+  }
+  
+  .btnCross {
+    border: none;
+    background: none;
+    color: rgba(249, 249, 249, 1);
+    margin-right: 3rem;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    content: "";
+    border-bottom: 0.4rem solid rgba(249, 249, 249, 1);
+    padding-left: 2rem;
+    padding-bottom: 1.6rem;
+    bottom: 0px;
+    cursor: pointer;
+  }
+
+  .btnCross2 {
+    border: none;
+    background: none;
+    color: rgba(249, 249, 249, 1);
+    margin-right: 3rem;
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+    justify-content: flex-start;
+    align-items: center;
+    content: "";
+    padding-left: 2rem;
+    padding-bottom: 1.6rem;
+    bottom: 0px;
+    cursor: pointer;
+  }
+  
+  .btnCross svg {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+
+  .btnCross2 svg {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+  
+  .button {
+    display: flex;
+    width: 352px;
+    height: 49px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #046AD0;
+    color: #fff;
+    font-size: 24px;
+    flex-direction: row;
+    transition: ease 0.15s;
+    font-size: 24px;
+    border: none;
+    border-radius: 32px;
+    margin-top: 2rem;
+  }
+  
+  .button a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .button:hover {
+    background-color: rgba(1, 76, 151, 1);
+    cursor: pointer;
+    border: 0.1rem solid transparent;
+  }
+
+  .buttonApoiar {
+    display: flex;
+    width: 387px;
+    height: 49px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #046AD0;
+    color: #fff;
+    font-size: 24px;
+    flex-direction: row;
+    transition: ease 0.15s;
+    font-size: 24px;
+    border: none;
+    border-radius: 32px;
+    margin-top: 2rem;
+  }
+
+  .buttonApoiar:hover {
+    background-color: rgba(1, 76, 151, 1);
+    cursor: pointer;
+    border: 0.1rem solid transparent;
+  }
+
+  .apoiarContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 41px 0;
+  }
+
+  .buttonApoiarContent{
+    display: flex;
+    align-items: center;
+  }
+
+  .buttonApoiarContent p{
+    margin-left: 60px;
+  }
+
+  .buttonApoiarContent div{
+    position: relative;
+    left: 16px;
+    top: 5px;
+  }
+
+  
+  .ParagraphWrapper,
+  .button {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.3s ease-in;
+    animation: p 0.3s forwards;
+  }
+  
+  .indent ::before {
+    content: " ";
+    padding-left: 5rem;
+  }
+  
+  @keyframes p {
+    to {
+      opacity: 1;
+      transform: initial;
+    }
+  }
+  
+  
