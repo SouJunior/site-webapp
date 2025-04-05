@@ -4,6 +4,7 @@ import HeroHome from "../components/HeroHome";
 import Iniciativas from "../components/Iniciativas";
 import PrivacyPolicy from "../components/commons/PrivacyPolicy/PrivacyPolicy";
 import { Depositions } from "../components/Depositions";
+import { ApoiarSection } from "../components/Apoiar";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Depositions />
       <ParticipationSection />
       <PrivacyPolicy />
+      <ApoiarSection />
     </>
   );
 };

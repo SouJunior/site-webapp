@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700;1,300..700&display=swap');
+
+.button{
+    height: 49px;
+    width: 246px;
+    border: 0;
+    background: #171123;
+    color: white;
+    font-family: "Radio Canada", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    margin-left: 60px;
+    border-radius: 32px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background: #072280;
+    transition: background-color 0.2s;
+}

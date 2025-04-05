@@ -47,6 +47,10 @@
     display: block;
     cursor: pointer;
   }
+
+  .buttonApoiar {
+    display: none;
+  }
 }
 
 @media (max-width: 414px) {
