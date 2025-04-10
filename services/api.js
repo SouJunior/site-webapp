@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "https://site-backend-jw1r.onrender.com/",
+  baseURL: "https://dev-api.soujunior.tech/api",
 });
 
 const tempInstance = axios.create({
