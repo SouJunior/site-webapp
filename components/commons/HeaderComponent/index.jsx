@@ -31,7 +31,7 @@ const HeaderComponent = ({ img = "/assets/BannerV2.svg" }) => {
       <div className={styles.front}>
         <div className={styles.navbar}>
           <div className={styles.logo}>
-            <Link href="/">
+            <Link href="/" legacyBehavior>
               <a>
                 <Image
                   src="/assets/icons/Logo.svg"
