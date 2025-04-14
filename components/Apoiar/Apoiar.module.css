@@ -1,20 +1,119 @@
-.ParticipationSection {
+.apoiarSection {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 90px 32px;
 }
 
 .container {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
-  align-items: center;
-  gap: 3.125rem;
   font-family: inherit;
-  padding: 72px 32px;
   width: 1324px;
 }
+
+.container h1 {
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer{
+  margin-top: 50px;
+}
+
+.titleFooter{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 100%;
+}
+
+.titleFooter h1{
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.apoiarContent{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 41px 0;
+}
+
+.buttonApoiar {
+  display: flex;
+  width: 387px;
+  height: 49px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #046AD0;
+  color: #fff;
+  font-size: 24px;
+  flex-direction: row;
+  transition: ease 0.15s;
+  font-size: 24px;
+  border: none;
+  border-radius: 32px;
+}
+
+.buttonApoiar:hover {
+  background-color: rgba(1, 76, 151, 1);
+  cursor: pointer;
+}
+
+.buttonApoiarContent{
+  display: flex;
+  align-items: center;
+}
+
+.buttonApoiarContent p{
+  margin-left: 60px;
+}
+
+.buttonApoiarContent div{
+  position: relative;
+  left: 16px;
+  top: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+
 
 .headerContainer {
   display: flex;
@@ -24,14 +123,7 @@
   width: 100%; 
 }
   
-.headerContainer h1 {
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 120%;
-  text-align: center;
-}
+
 
 .rightSide {
   display: flex;
@@ -49,23 +141,7 @@
   width: 100%;
 }
 
-.titleFooter{
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  width: 100%;
-}
 
-.titleFooter h1{
-  font-family: inherit;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 48px;
-  line-height: 120%;
-  text-align: center;
-  margin-bottom: 1rem;
-}
 
 .ParagraphWrapper {
   background-color: transparent;
@@ -180,51 +256,7 @@
     border: 0.1rem solid transparent;
   }
 
-  .buttonApoiar {
-    display: flex;
-    width: 387px;
-    height: 49px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background: #046AD0;
-    color: #fff;
-    font-size: 24px;
-    flex-direction: row;
-    transition: ease 0.15s;
-    font-size: 24px;
-    border: none;
-    border-radius: 32px;
-    margin-top: 2rem;
-  }
-
-  .buttonApoiar:hover {
-    background-color: rgba(1, 76, 151, 1);
-    cursor: pointer;
-    border: 0.1rem solid transparent;
-  }
-
-  .apoiarContent{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 41px 0;
-  }
-
-  .buttonApoiarContent{
-    display: flex;
-    align-items: center;
-  }
-
-  .buttonApoiarContent p{
-    margin-left: 60px;
-  }
-
-  .buttonApoiarContent div{
-    position: relative;
-    left: 16px;
-    top: 5px;
-  }
+  
 
   
   .ParagraphWrapper,
@@ -247,4 +279,4 @@
     }
   }
   
-  
+   */
