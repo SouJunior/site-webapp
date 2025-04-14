@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Image from "next/image";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
@@ -8,9 +7,6 @@ import { Accordion } from "../Accordion";
 import styles from "./Apoiar.module.css";
 
 export const ApoiarSection = () => {
-
-  const [icon, setIcon] = useState(IoIosArrowUp);
-
   return (
     <section className={styles.apoiarSection} id={"apoie-a-soujunior"}>
       <div className={styles.container}>
