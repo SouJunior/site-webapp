@@ -64,10 +64,8 @@
   height: 49px;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
   background: #046AD0;
   color: #fff;
-  font-size: 24px;
   flex-direction: row;
   transition: ease 0.15s;
   font-size: 24px;

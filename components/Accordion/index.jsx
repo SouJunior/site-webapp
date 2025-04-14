@@ -52,6 +52,8 @@ const AccordionSection = ({
             <button
                 onClick={onClick}
                 className={styles.btnTitle}
+                role="button"
+                tabIndex="0"
             >
                 {title}
             </button>

@@ -7,7 +7,7 @@ export const accordionData = [
     },
     {
       id:2,
-      title: 'Especialista interessados em palestrar',
+      title: 'Especialistas interessados em palestrar',
       subtitle: 'Compartilhe seu conhecimento e inspire profissionais juniores!',
       content: `Se você é um especialista em tecnologia, participe como palestrante e contribua para o desenvolvimento técnico e profissional da nossa comunidade.`
     },

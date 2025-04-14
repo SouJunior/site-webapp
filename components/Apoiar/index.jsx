@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Image from "next/image";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
