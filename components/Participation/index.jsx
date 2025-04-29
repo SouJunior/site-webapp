@@ -61,8 +61,7 @@ export const ParticipationSection = () => {
             <div className={textJr ? styles.textJr : styles.hide}>
               <button
                 className={styles.btnCross}
-                onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}
-              >
+                onClick={() => setTextJr(!textJr) && setIcon(IoMdClose)}>
                 {textJr ? <IoMdClose /> : <IoMdAdd />}
                 <Heading level={"h3"}>Sou Júnior</Heading>
               </button>
@@ -86,7 +85,12 @@ export const ParticipationSection = () => {
                     </Paragraph>
 
                     <button className={styles.button}>
-                      <Link href="https://stars.soujunior.tech" target="_blank" rel="noopener noreferrer">Quero Participar!</Link>
+                      <Link
+                        href="https://forms.gle/Djzawj94ppeUAd6cA"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Quero Participar!
+                      </Link>
                     </button>
                   </div>
                 </>
@@ -96,8 +100,9 @@ export const ParticipationSection = () => {
             <div className={textMentor ? styles.textMentor : styles.hide}>
               <button
                 className={styles.btnCross}
-                onClick={() => setTextMentor(!textMentor) && setIcon(IoMdClose)}
-              >
+                onClick={() =>
+                  setTextMentor(!textMentor) && setIcon(IoMdClose)
+                }>
                 {textMentor ? <IoMdClose /> : <IoMdAdd />}
                 <Heading level={"h3"}>Sou Mentor</Heading>
               </button>
@@ -115,7 +120,12 @@ export const ParticipationSection = () => {
                       atuação.”
                     </Paragraph>
                     <button className={styles.button}>
-                      <Link href="https://stars.soujunior.tech" target="_blank" rel="noopener noreferrer">Quero Participar!</Link>
+                      <Link
+                        href="https://stars.soujunior.tech"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Quero Participar!
+                      </Link>
                     </button>
                   </div>
                 </>
@@ -129,8 +139,7 @@ export const ParticipationSection = () => {
                 aria-controls="head-content"
                 onClick={() =>
                   setTextSupporter(!textSupporter) && setIcon(IoMdClose)
-                }
-              >
+                }>
                 {textSupporter ? <IoMdClose /> : <IoMdAdd />}
                 <Heading level={"h3"}>Sou Apoiador</Heading>
               </button>
@@ -164,10 +173,7 @@ export const ParticipationSection = () => {
             <div className={textHead ? styles.textHead : styles.hide}>
               <button
                 className={styles.btnCross}
-                onClick={() =>
-                  setTextHead(!textHead) && setIcon(IoMdClose)
-                }
-              >
+                onClick={() => setTextHead(!textHead) && setIcon(IoMdClose)}>
                 {textHead ? <IoMdClose /> : <IoMdAdd />}
                 <Heading level={"h3"}>Sou Head</Heading>
               </button>
@@ -175,7 +181,7 @@ export const ParticipationSection = () => {
               {textHead && (
                 <>
                   <div className={styles.ParagraphWrapper}>
-                  <Paragraph>
+                    <Paragraph>
                       A SouJunior busca profissionais atuantes no mercado de
                       trabalho para atuar como head.
                     </Paragraph>

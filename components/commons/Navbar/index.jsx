@@ -11,7 +11,7 @@ export const Navbar = () => {
     <ul className={styles.menuNav}>
       {dataNavbar.map((link, index) => (
         <li className={styles.linkNav} key={index}>
-          <Link href={link.path} passHref scroll={false}>
+          <Link href={link.path} passHref scroll={false} legacyBehavior>
             <a className={router.asPath === link.path ? styles.active : ""}>
               {link.title}
             </a>
