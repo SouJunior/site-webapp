@@ -70,7 +70,6 @@
 .paragraphWrapper {
   display: flex;
   flex-direction: column;
-  gap: 2.6rem;
   border-bottom: 2px solid #ffffff;
   padding-bottom: 5.2rem;
   text-align: left;
@@ -232,7 +231,7 @@
   font-size: 1.8rem;
 }
 
-@media (max-width: 960px) {
+@media (width < 960px) {
   .HeadersSection h2 {
     padding-top: 10rem;
   }
