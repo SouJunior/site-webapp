@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Paragraph } from "../commons/Paragraph";
 
 interface DescriptionRendererProps {
@@ -8,7 +11,7 @@ function parseDescription(description: string[]) {
   const result: Array<
     | { type: "paragraph"; content: string }
     | { type: "list"; style: "number" | "bullet"; items: string[] }
-    | { type: "question"; content: string }
+    | { type: "subtitle"; content: string }
   > = [];
 
   let currentList: {
@@ -44,10 +47,9 @@ function parseDescription(description: string[]) {
       currentList = null;
     }
 
-    if (text.includes("?") || text.includes("–")) {
-      console.log('text', text);
+    if (text.includes("?") || text.includes("–") || text.includes("Product")) {
       result.push({
-        type: "question",
+        type: "subtitle",
         content: text,
       });
     } else {
@@ -65,11 +67,24 @@ function parseDescription(description: string[]) {
 export default function DescriptionRenderer({
   descripition,
 }: DescriptionRendererProps) {
+  const [isMobile, setIsMobile] = useState<boolean | null>(null);
   const parsedDescription = parseDescription(descripition ?? []);
-  const isMobile = window.innerWidth < 768;
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 768);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  if (isMobile === null) return null;
 
   return (
-    <div style={!isMobile && {width: '70%'}}>
+    <div style={!isMobile ? { width: "70%" } : undefined}>
       {parsedDescription.map((item, index) => {
         if (item.type === "paragraph") {
           return (
@@ -79,7 +94,7 @@ export default function DescriptionRenderer({
           );
         }
 
-        if (item.type === "question") {
+        if (item.type === "subtitle") {
           return (
             <Paragraph descripition={true} key={index}>
               <strong style={{ fontSize: "3rem" }}>{item.content}</strong>
