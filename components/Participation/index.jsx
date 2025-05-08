@@ -86,7 +86,7 @@ export const ParticipationSection = () => {
 
                     <button className={styles.button}>
                       <Link
-                        href="https://forms.gle/Q6S4reEUTmqGCLF47"
+                        href="/seja-junior"
                         target="_blank"
                         rel="noopener noreferrer">
                         Quero Participar!
@@ -121,7 +121,7 @@ export const ParticipationSection = () => {
                     </Paragraph>
                     <button className={styles.button}>
                       <Link
-                        href="https://forms.gle/NfMzRs5QRh2Shih19"
+                        href="/seja-mentor"
                         target="_blank"
                         rel="noopener noreferrer">
                         Quero Participar!
@@ -192,9 +192,7 @@ export const ParticipationSection = () => {
                     </Paragraph>
 
                     <button className={styles.button}>
-                      <Link
-                        href="https://forms.gle/Aa3SDKLVY14v4nFP7"
-                        rel="noopener noreferrer">
+                      <Link href="/seja-head" rel="noopener noreferrer">
                         Quero Participar!
                       </Link>
                     </button>
