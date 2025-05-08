@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 
 import styles from "./Area.module.css";
 
+import DescriptionRenderer from "../../../components/DescriptionRenderer";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -144,13 +145,8 @@ const AreaItem = () => {
         ) && (
           <div>
             <section className={styles.AboutSection}>
-              <h1 className={styles.title}>Sobre a Área de {areaItem.title}</h1>
-              <div className={styles.container}>
-                <div className={styles.paragraphWrapper}>
-                  {areaItem.head.descripition.map((paragraph) => (
-                    <Paragraph key={paragraph}>{paragraph}</Paragraph>
-                  ))}
-                </div>
+              <div style={{display: 'contents'}}>
+                  <DescriptionRenderer descripition={areaItem.head.descripition}/>
               </div>
             </section>
 
@@ -195,9 +191,6 @@ const AreaItem = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
-              <div className={styles.container}>
-                
               </div>
             </section>
 
