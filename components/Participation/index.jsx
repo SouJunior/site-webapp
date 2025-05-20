@@ -4,7 +4,6 @@ import Link from "next/link";
 import { IoMdAdd, IoMdClose } from "react-icons/io";
 
 import styles from "./Participation.module.css";
-import { headers } from "../../utils/headers";
 import { Heading } from "../commons/Heading";
 import { Paragraph } from "../commons/Paragraph";
 
@@ -21,20 +20,6 @@ export const ParticipationSection = () => {
         <Heading level={"h1"}>
           Faça você também parte da nossa comunidade!
         </Heading>
-        <div className={styles.headers}>
-          {headers
-            .filter((header) => header.id <= 9)
-            .map(({ id, img }) => (
-              <div key={id} className={styles.headersImg}>
-                <Image
-                  src={img}
-                  width={150}
-                  height={150}
-                  className={styles.image}
-                />
-              </div>
-            ))}
-        </div>
       </div>
       <section className={styles.ParticipationSection} id={"participar"}>
         <div className={styles.container}>
