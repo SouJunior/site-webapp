@@ -285,7 +285,7 @@ export const Junior = () => {
                       <Field
                         type="text"
                         name="linkedin"
-                        placeholder="https://www.linkedin.com/in/"
+                        placeholder="https://www.linkedin.com/in/usuario/"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -344,7 +344,7 @@ export const Junior = () => {
                         <Field
                           type="text"
                           name="indicationLinkedin"
-                          placeholder="https://www.linkedin.com/in/"
+                          placeholder="https://www.linkedin.com/in/usuario/"
                           className={styles.input}
                         />
                         <ErrorMessage
