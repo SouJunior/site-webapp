@@ -155,7 +155,11 @@ export const Mentor = () => {
         resetForm();
       } catch (error) {
         openPopup();
-        setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        {
+          error.response ?
+          setPopupMessage(error.response.data.message) :
+          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        }
       } finally {
         setLoading(false);
       }
@@ -280,7 +284,7 @@ export const Mentor = () => {
                       <Field
                         type="text"
                         name="linkedin"
-                        placeholder="https://www.linkedin.com/in/"
+                        placeholder="https://www.linkedin.com/in/usuario/"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -338,7 +342,7 @@ export const Mentor = () => {
                           <Field
                             type="text"
                             name="indicationLinkedin"
-                            placeholder="https://www.linkedin.com/in/"
+                            placeholder="https://www.linkedin.com/in/usuario/"
                             className={styles.input}
                           />
                           <ErrorMessage

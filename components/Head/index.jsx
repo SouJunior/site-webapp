@@ -118,7 +118,11 @@ export const Head = () => {
           resetForm();
         } catch (error) {
           openPopup();
-          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+          {
+            error.response ?
+            setPopupMessage(error.response.data.message) :
+            setPopupMessage("Erro inesperado, tente novamente mais tarde");
+          }
         } finally {
           setLoading(false);
         }
@@ -243,7 +247,7 @@ const handleClearInput = (setFieldValue, nameInput) => {
                       <Field
                         type="text"
                         name="linkedin"
-                        placeholder="https://www.linkedin.com/in/"
+                        placeholder="https://www.linkedin.com/in/usuario/"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -302,7 +306,7 @@ const handleClearInput = (setFieldValue, nameInput) => {
                         <Field
                           type="text"
                           name="indicationLinkedin"
-                          placeholder="https://www.linkedin.com/in/"
+                          placeholder="https://www.linkedin.com/in/usuario/"
                           className={styles.input}
                         />
                         <ErrorMessage
