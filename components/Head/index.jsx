@@ -118,7 +118,11 @@ export const Head = () => {
           resetForm();
         } catch (error) {
           openPopup();
-          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+          {
+            error.response ?
+            setPopupMessage(error.response.data.message) :
+            setPopupMessage("Erro inesperado, tente novamente mais tarde");
+          }
         } finally {
           setLoading(false);
         }
