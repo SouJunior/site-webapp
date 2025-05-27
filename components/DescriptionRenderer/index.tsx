@@ -47,7 +47,7 @@ function parseDescription(description: string[]) {
       currentList = null;
     }
 
-    if (text.includes("?") || text.includes("–") || text.includes("-end na SouJunior") || text.includes("como QA") || text.includes("Engenharia de Dados  ") || text.includes("Analytics  ")) {
+    if (text.includes("  ")) {
       result.push({
         type: "subtitle",
         content: text,
