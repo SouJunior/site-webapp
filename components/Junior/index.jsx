@@ -775,7 +775,10 @@ export const Junior = () => {
         {
           showAlertMessage &&
           <AlertMessage
-            message={`Inscrição realizada com sucesso! Vamos analisar seus dados e entraremos em contato.`}
+            message={`Obrigado por se candidatar! Sua candidatura foi registrada com sucesso.
+                      Seu perfil está agora em nosso banco de talentos e entraremos em contato via LinkedIn assim que surgir uma oportunidade que tenha fit com seu perfil.
+                      Agradecemos sua paciência e compreensão!
+              `}
             onClose={() => {
               setShowAlertMessage(false)
             }}
