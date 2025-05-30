@@ -401,8 +401,7 @@ export const Junior = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Quanto tempo por semana você poderia se dedicar ao voluntariado na SouJunior?
-                        *
+                        Quanto tempo por semana você poderia se dedicar ao voluntariado na SouJunior?*
                       </label>
                       <label
                         className={styles.radioLabel}
