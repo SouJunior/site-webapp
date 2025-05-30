@@ -16,22 +16,15 @@
     align-items: center;
     flex-direction: column;
     background: rgb(255, 255, 255);
-    width: 320px;
+    width: 500px;
     padding: 40px 16px;
     border-radius: 16px;
-}
-
-.onClose {
-    position: relative;
-    top: -30px;
-    left: 130px;
-    cursor: pointer;
 }
 
 .box p {
     text-align: center;
     font-weight: semibold;
-    font-size: 18px;
+    font-size: 20px;
     color: black;
 }
 
@@ -42,9 +35,23 @@
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 .box button:hover {
     background-color: #096cdd;
+}
+
+@media screen and (max-width:640px){
+    .box{
+        width: 320px;
+    }
+
+    .box p{
+        font-size: 16px;
+    }
+
+    .box button {
+        font-size: 16px;
+    }   
 }
