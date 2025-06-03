@@ -7,7 +7,6 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaDiscord } from "react-icons/fa";
-import { headers } from "../../utils/headers";
 import { Paragraph } from "../commons/Paragraph";
 import { Heading } from "../commons/Heading";
 
@@ -350,44 +349,6 @@ export const SobreNos = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-        </div>
-      </section>
-
-      <section className={styles.HeadersSection}>
-        <h1>
-          Essa é a equipe de heads que, junto com o Brandão, gerenciam os
-          produtos do projeto!
-        </h1>
-
-        <div className={styles.headersContainer}>
-          {headers.map(({ id, nome, cargo, img, linkedin, discord }) => {
-            return (
-              <div key={nome} className={styles.headerWrapper}>
-                <Image src={img} width={100} height={100} />
-                <div>
-                  <h2>{nome}</h2>
-                  <h3>{cargo}</h3>
-                </div>
-                <ul>
-                  <li>
-                    <a
-                      href={linkedin}
-                      key={id}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <AiFillLinkedin />
-                    </a>
-                  </li>
-                  <li>
-                    <a href={discord} key={id} target="_blank" rel="noreferrer">
-                      <FaDiscord />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
         </div>
       </section>
     </>
