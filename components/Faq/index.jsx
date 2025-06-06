@@ -14,7 +14,7 @@ import { Loading } from "../commons/Loading";
 import { api } from "../../services/api";
 
 export const Faq = () => {
-  const [radioOption, setRadioOption] = useState("Sou Junior");
+  const [radioOption, setRadioOption] = useState("sou-junior");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -37,9 +37,6 @@ export const Faq = () => {
 
   function closePopup() {
     setShowPopup(false);
-    // setName("");
-    // setEmail("");
-    // setMessage("");
   }
 
   const handleNameChange = (event) => {
@@ -69,35 +66,39 @@ export const Faq = () => {
   }
 
   function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
     return emailRegex.test(email);
   }
 
   async function handleSubmit(event) {
     setLoading(true);
-
     event.preventDefault();
-    if (isNameValid && isEmailValid && isTextValid) {
+    if (isNameValid || isEmailValid || isTextValid) {
       openPopup();
       setLoading(true);
       try {
-        const response = await api.sendMailAdmin("/mail", {
-          subject: "FAQ",
-          data: {
-            name,
-            email,
-            type: radioOption,
-            description: message,
-          },
-        });
+        const response = await api.post(
+              "/faq", 
+              {
+               type: radioOption,
+               name: name,
+               email: email,
+               message: message
+              },
+              {headers: 
+                {
+                  'x-api-key':process.env.NEXT_PUBLIC_X_API_KEY,
+                }
+              }
+            );
 
         if (response.status !== 200) {
           throw new Error("Não foi possível enviar a requisição");
         }
         setPopupMessage("Enviado com sucesso");
-        setName(""); // Limpa o campo de nome
-        setEmail(""); // Limpa o campo de email
-        setMessage(""); // Limpa o campo de mensagem
+        setName("");
+        setEmail("");
+        setMessage("");
       } catch (error) {
         openPopup();
         setPopupMessage("Erro inesperado, tente novamente mais tarde");
@@ -219,10 +220,10 @@ export const Faq = () => {
             <div className={styles.radios}>
               <RadioButton
                 options={[
-                  "Sou Junior",
-                  "Voluntário",
-                  "Mentor/Apoiador",
-                  "Outros",
+                  "sou-junior",
+                  "voluntario",
+                  "mentor-apoiador",
+                  "outros",
                 ]}
                 value={radioOption}
                 setValue={setRadioOption}
@@ -267,7 +268,7 @@ export const Faq = () => {
               <button
                 className={styles.button}
                 type="submit"
-                disabled={!isNameValid && !isEmailValid && !isTextValid}
+                disabled={!isNameValid || !isEmailValid || !isTextValid}
               >
                 Enviar
               </button>
