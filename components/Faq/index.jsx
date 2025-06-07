@@ -66,14 +66,14 @@ export const Faq = () => {
   }
 
   function validateEmail(email) {
-    const emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
 
   async function handleSubmit(event) {
     setLoading(true);
     event.preventDefault();
-    if (isNameValid || isEmailValid || isTextValid) {
+    if (isNameValid && isEmailValid && isTextValid) {
       openPopup();
       setLoading(true);
       try {
