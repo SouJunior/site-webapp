@@ -155,7 +155,11 @@ export const Junior = () => {
         resetForm();
       } catch (error) {
         openPopup();
-        setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        {
+          error.response ?
+          setPopupMessage(error.response.data.message) :
+          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+        }
       } finally {
         setLoading(false);
       }
@@ -281,7 +285,7 @@ export const Junior = () => {
                       <Field
                         type="text"
                         name="linkedin"
-                        placeholder="https://www.linkedin.com/in/"
+                        placeholder="https://www.linkedin.com/in/usuario/"
                         className={styles.input}
                       />
                       <ErrorMessage
@@ -340,7 +344,7 @@ export const Junior = () => {
                         <Field
                           type="text"
                           name="indicationLinkedin"
-                          placeholder="https://www.linkedin.com/in/"
+                          placeholder="https://www.linkedin.com/in/usuario/"
                           className={styles.input}
                         />
                         <ErrorMessage
@@ -771,7 +775,10 @@ export const Junior = () => {
         {
           showAlertMessage &&
           <AlertMessage
-            message={`Inscrição realizada com sucesso! Vamos analisar seus dados e entraremos em contato.`}
+            message={`Obrigado por se candidatar! Sua candidatura foi registrada com sucesso.
+                      Seu perfil está agora em nosso banco de talentos e entraremos em contato via LinkedIn assim que surgir uma oportunidade que tenha fit com seu perfil.
+                      Agradecemos sua paciência e compreensão!
+              `}
             onClose={() => {
               setShowAlertMessage(false)
             }}
