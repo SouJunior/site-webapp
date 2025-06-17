@@ -132,22 +132,21 @@ export const Faq = () => {
       <section className={styles.FaqSection}>
         <div className={styles.container}>
           <Tabs>
-            <TabList className={styles.tabList}>
-              <Tab className={styles.tab}>
+            <TabList className={styles.tabList} style={{display: "flex", gap: "5rem"}}>
+              <Tab className={styles.tab} style={{cursor: "pointer", width: "20rem"}}>
                 <Heading level={"h3"}> Sou Junior</Heading>
               </Tab>
-              <Tab>
+              <Tab className={styles.tab} style={{cursor: "pointer"}}>
                 <Heading level={"h3"}>Voluntário</Heading>
               </Tab>
-              <Tab>
-                <Heading level={"h3"}>Mentor/Apoiador</Heading>
+              <Tab className={styles.tab} style={{cursor: "pointer"}}>
+                <Heading level={"h3"}>Apoiador/Head/Mentor</Heading>
               </Tab>
             </TabList>
             <TabPanel className={styles.tabPanel}>
-              <Accordion className={styles.accordion} allowMultiple>
+              <Accordion className={styles.accordion}>
                 {souJunior.map(({ titulo, descricao, id }) => (
                   <AccordionItem
-                    initialEntered
                     className={styles.accordionItem}
                     key={id}
                     header={
@@ -163,10 +162,9 @@ export const Faq = () => {
               </Accordion>
             </TabPanel>
             <TabPanel>
-              <Accordion className={styles.accordion} allowMultiple>
+              <Accordion className={styles.accordion}>
                 {voluntario.map(({ titulo, descricao, id }) => (
                   <AccordionItem
-                    initialEntered
                     className={styles.accordionItem}
                     key={id}
                     header={
@@ -182,10 +180,9 @@ export const Faq = () => {
               </Accordion>
             </TabPanel>
             <TabPanel>
-              <Accordion className={styles.accordion} allowMultiple>
+              <Accordion className={styles.accordion}>
                 {mentor.map(({ titulo, descricao, id }) => (
                   <AccordionItem
-                    initialEntered
                     className={styles.accordionItem}
                     key={id}
                     header={
