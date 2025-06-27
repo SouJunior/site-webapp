@@ -53,33 +53,25 @@ export const mentor = [
       `Mentores apoiam juniores na execução de atividades, esclarecendo dúvidas e orientando sobre a área de atuação. Para ser mentor, é necessário ter pelo menos 6 meses de experiência e disposição para ensinar.
       Para se candidatar, acesse o menu “Faça Parte” no site, clique em “+Sou Mentor” e depois em “Quero Participar”. Após o envio do formulário, você será avaliado e contatado quando surgir uma oportunidade com o seu perfil.`,
   },
-
-
-  {
-    id: 4,
-    titulo: "Como posso me tornar um voluntário na SouJunior?",
-    descricao:
-      "Para se tornar um voluntário na SouJunior, basta acessar o menu “Faça Parte” no nosso site, clicar na seção “+SouJunior” e depois em “Quero Participar”. Você será redirecionado para o formulário de candidatura. Após o envio, seu perfil será avaliado e entraremos em contato quando surgir uma oportunidade com seu perfil.",
-  }
 ];
 
 export const voluntario = [
   {
-    id: 3,
+    id: 1,
     titulo: "Como ser voluntário na SouJunior?",
     descricao:
       "É simples! Acesse o menu “Faça Parte” no nosso site, clique na seção “+SouJunior” e depois em “Quero Participar”. Você será redirecionado para o formulário de candidatura. Após o envio, seu perfil será avaliado e entraremos em contato quando surgir uma oportunidade com seu perfil.",
   },
 
   {
-    id: 4,
+    id: 2,
     titulo: "Quanto tempo preciso me dedicar por semana?",
     descricao:
       "As atividades são majoritariamente assíncronas, o que permite mais flexibilidade. Cada time possui metas e alguns encontros pontuais. Durante o processo seletivo, alinhe com o Head da área o tempo médio esperado e veja possibilidades de adaptação.",
   },
 
   {
-    id: 5,
+    id: 3,
     titulo:
       "O que acontece depois que eu envio minha candidatura?",
     descricao:
@@ -87,7 +79,7 @@ export const voluntario = [
   },
 
   {
-    id: 6,
+    id: 4,
     titulo:
       "Posso ser voluntário mesmo trabalhando em outra empresa ou iniciativa?",
     descricao:
@@ -95,7 +87,7 @@ export const voluntario = [
   },
 
   {
-    id: 7,
+    id: 5,
     titulo:
       "Preciso ir até algum lugar para atuar como voluntário?",
     descricao: "Não. Todas as atividades são 100% remotas (home office).",
