@@ -134,10 +134,10 @@ export const Faq = () => {
           <Tabs>
             <TabList className={styles.tabList} style={{display: "flex", gap: "5rem"}}>
               <Tab className={styles.tab} style={{cursor: "pointer", width: "33rem"}}>
-                <Heading level={"h3"}>A SouJunior</Heading>
+                <Heading level={"h3"}>SouJunior</Heading>
               </Tab>
               <Tab className={styles.tab} style={{cursor: "pointer"}}>
-                <Heading level={"h3"}>Junior</Heading>
+                <Heading level={"h3"}>Voluntário</Heading>
               </Tab>
               <Tab className={styles.tab} style={{cursor: "pointer"}}>
                 <Heading level={"h3"}>Apoiador/Head/Mentor</Heading>
