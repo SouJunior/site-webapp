@@ -1,6 +1,6 @@
 import styles from "./Paragraph.module.css";
 
-export const Paragraph = ({ descripition, children }) => {
+export const Paragraph = ({ description, children }) => {
   const convertTextToLink = (text) => {
     if(typeof text !== 'string') return text;
     if(!text.includes('em faça parte')) return text;
@@ -31,8 +31,8 @@ export const Paragraph = ({ descripition, children }) => {
     <p
       className={styles.Paragraph}
       style={
-        descripition ? { marginBlock: "1.5rem" } : { marginBlock: "0rem" }
-      }>
+        description ? { marginBlock: "1.5rem" } : { marginBlock: "0rem" }
+      }>  
       {convertTextToLink(children)}
     </p>
   );

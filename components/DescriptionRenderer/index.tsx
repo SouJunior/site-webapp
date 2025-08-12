@@ -2,73 +2,11 @@
 
 import { useEffect, useState } from "react";
 import { Paragraph } from "../commons/Paragraph";
+import parseText from '../../utils/parseText';
 
-interface DescriptionRendererProps {
-  descripition: string[];
-}
-
-function parseDescription(description: string[]) {
-  const result: Array<
-    | { type: "paragraph"; content: string }
-    | { type: "list"; style: "number" | "bullet"; items: string[] }
-    | { type: "subtitle"; content: string }
-  > = [];
-
-  let currentList: {
-    type: "list";
-    style: "number" | "bullet";
-    items: string[];
-  } | null = null;
-
-  for (const text of description) {
-    const match = text.match(/^(\d+\.\s|•\s)/);
-
-    if (match) {
-      const style = match[0].startsWith("•") ? "bullet" : "number";
-      const item = text.replace(match[0], "");
-
-      if (currentList?.style === style) {
-        currentList.items.push(item);
-      } else {
-        if (currentList) result.push(currentList);
-        currentList = {
-          type: "list",
-          style,
-          items: [item],
-        };
-      }
-
-      continue;
-    }
-
-    // Texto comum (parágrafo ou pergunta)
-    if (currentList) {
-      result.push(currentList);
-      currentList = null;
-    }
-
-    if (text.includes("  ")) {
-      result.push({
-        type: "subtitle",
-        content: text,
-      });
-    } else {
-      result.push({
-        type: "paragraph",
-        content: text,
-      });
-    }
-  }
-
-  if (currentList) result.push(currentList);
-  return result;
-}
-
-export default function DescriptionRenderer({
-  descripition,
-}: DescriptionRendererProps) {
+export default function DescriptionRenderer({ description }: { description: string[] }) {
   const [isMobile, setIsMobile] = useState<boolean | null>(null);
-  const parsedDescription = parseDescription(descripition ?? []);
+  const parsedDescription = parseText(description ?? []);
 
   useEffect(() => {
     setIsMobile(window.innerWidth <= 768);
@@ -88,7 +26,7 @@ export default function DescriptionRenderer({
       {parsedDescription.map((item, index) => {
         if (item.type === "paragraph") {
           return (
-            <Paragraph descripition={true} key={index}>
+            <Paragraph description={true} key={index}>
               {item.content}
             </Paragraph>
           );
@@ -96,7 +34,7 @@ export default function DescriptionRenderer({
 
         if (item.type === "subtitle") {
           return (
-            <Paragraph descripition={true} key={index}>
+            <Paragraph description={true} key={index}>
               <strong style={{ fontSize: "3rem" }}>{item.content}</strong>
             </Paragraph>
           );

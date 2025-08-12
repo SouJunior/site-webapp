@@ -208,8 +208,7 @@ form .buttons {
   background: white;
   border-radius: 8px;
   padding: 2rem;
-  max-width: 500px;
-  width: 90%;
+  width: 58rem;
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);

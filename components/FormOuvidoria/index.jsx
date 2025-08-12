@@ -93,7 +93,7 @@ const OuvidoriaForm = () => {
     setShowAuthModal(true);
   };
 
-  const handleConfirmSubmit = async (values, resetForm) => {
+  const handleConfirmSubmit = async (values) => {
     setLoading(true);
     setShowAuthModal(false);
     pendingFormActions.setSubmitting(false);
@@ -134,7 +134,7 @@ const OuvidoriaForm = () => {
       .oneOf(["Sugestão", "Reclamação", "Elogio", "Denúncia"], "")
       .required("*Escolha um opção por favor."),
     mensagem: Yup.string().required("O campo Mensagem é obrigatório."),
-    arquivo: Yup.mixed()
+    arquivo: Yup.mixed().nullable().notRequired()
       .test("fileSize", "O arquivo deve ter no máximo 5MB", (value) => {
         if (!value) return true;
         return value.size <= 5 * 1024 * 1024; // 5MB
@@ -220,7 +220,7 @@ const OuvidoriaForm = () => {
                 confirmarEmail: "",
                 assunto: "",
                 mensagem: "",
-                arquivo: null,
+                arquivo: undefined,
               }}
               validationSchema={validationSchema}
               onSubmit={onSubmit}>
@@ -349,7 +349,7 @@ const OuvidoriaForm = () => {
                       type="button"
                       onClick={() => {
                         resetForm();
-                        setFieldValue("arquivo", null);
+                        setFieldValue("arquivo", undefined);
                         const fileInput = document.getElementById("arquivo");
                         if (fileInput) fileInput.value = null;
                       }}>
