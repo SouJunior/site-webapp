@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { accordionData } from '../../utils/accordionData';
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import styles from "./Accordion.module.css";

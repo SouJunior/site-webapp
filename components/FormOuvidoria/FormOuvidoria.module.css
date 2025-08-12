@@ -46,6 +46,11 @@
   width: 100%;
 }
 
+.question {
+  font-weight: 600;
+  font-size: 20px;
+}
+
 /*Formulário*/
 
 .form {
@@ -86,24 +91,39 @@
   outline: none;
 }
 
-.form .select {
-  width: 293px;
-  height: 62px;
-  left: 269px;
-  top: 26px;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 18px;
-  border: none;
-  border-bottom: 1px solid #858c93;
-  background: #171123;
-  color: #ffffff;
-  outline: none;
+.form .checkboxGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 0.5rem;
 }
 
-.form .select option {
-  width: 1306px;
-  height: 917px;
+.form .checkboxItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.checkboxLabel {
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsividade para checkboxes */
+@media (min-width: 768px) {
+  .checkboxGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 .form .textarea {
@@ -111,6 +131,36 @@
   height: 330px;
   padding: 15px;
   outline: none;
+  border-radius: 3px;
+}
+
+.fileInput {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+.fileInput:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.fileInfo {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.selectedFile {
+  margin-top: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  background-color: #e9ecef;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  color: #495057;
 }
 
 .form button {
@@ -139,6 +189,93 @@ form .buttons {
   align-items: center;
   /* padding-left: 150px; */
 }
+
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modalTitle {
+  margin: 0 0 1rem 0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.modalText {
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.modalText p {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.modalButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancelButton {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #666;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.cancelButton:hover {
+  background-color: #f8f9fa;
+  border-color: #999;
+}
+
+.confirmButton {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.confirmButton:hover {
+  background-color: #0056b3;
+}
+
+.confirmButton:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
 
 .count {
   font-size: 18px;
