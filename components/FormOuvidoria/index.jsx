@@ -12,40 +12,47 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import DescriptionRenderer from "../DescriptionRenderer";
 
 const ouvidoriaFaq = [
   {
     id: "faq-ouvidoria-1",
     question: "Ouvidoria é só para quem já participa da iniciativa?",
-    answer: `Não. Este canal está aberto a qualquer pessoa que tenha tido contato com a nossa iniciativa, mesmo que ainda não faça parte oficialmente.
-    Se você é uma pessoa interessada, já participou de alguma atividade, ou quer relatar algo que viveu ao interagir conosco este espaço é seu também.`,
+    answer: [
+      "Não. Este canal está aberto a qualquer pessoa que tenha tido contato com a nossa iniciativa, mesmo que ainda não faça parte oficialmente. Se você é uma pessoa interessada, já participou de alguma atividade, ou quer relatar algo que viveu ao interagir conosco este espaço é seu também.",
+    ],
   },
   {
     id: "faq-ouvidoria-2",
     question: "Quando devo utilizar a ouvidoria?",
-    answer: `Use a ouvidoria sempre que sentir que precisa:
-        • Sugerir melhorias para a iniciativa;
-        • Relatar dificuldades ou situações desconfortáveis que tenha vivenciado;
-        • Compartilhar alguma experiência positiva que queira registrar;
-        • Fazer denúncias de condutas inadequadas ou desrespeitosas.`,
+    answer: [
+      "Use a ouvidoria sempre que sentir que precisa:",
+      "• Sugerir melhorias para a iniciativa;",
+      "• Relatar dificuldades ou situações desconfortáveis que tenha vivenciado;",
+      "• Compartilhar alguma experiência positiva que queira registrar;",
+      "• Fazer denúncias de condutas inadequadas ou desrespeitosas.",
+    ],
   },
   {
     id: "faq-ouvidoria-3",
     question: "Meu relato é confidencial?",
-    answer:
+    answer: [
       "Sim. Todas as mensagens enviadas por aqui são tratadas com sigilo. Se desejar, você pode se identificar ou permanecer anônima(o). Nosso compromisso é escutar com respeito e responsabilidade.",
+    ],
   },
   {
     id: "faq-ouvidoria-4",
     question: "Como a iniciativa utiliza as informações recebidas?",
-    answer:
+    answer: [
       "As informações nos ajudam a identificar melhorias, corrigir falhas e criar um ambiente de aprendizado mais justo e transparente. Nenhuma ação será tomada sem análise prévia e, sempre que possível, buscamos dar retorno aos envolvidos.",
+    ],
   },
   {
     id: "faq-ouvidoria-5",
     question: "O que acontece depois que eu envio o formulário?",
-    answer:
+    answer: [
       "Após o envio, a equipe responsável pela ouvidoria irá analisar cuidadosamente o conteúdo e tomar as providências necessárias, dentro de um prazo razoável. Caso você tenha deixado um e-mail, poderemos entrar em contato para atualizações ou esclarecimentos.",
+    ],
   },
 ];
 
@@ -65,7 +72,7 @@ const OuvidoriaForm = () => {
   const [loading, setLoading] = useState(false);
   const [showAuthModal, setShowAuthModal] = useState(false);
   const [pendingFormData, setPendingFormData] = useState(null);
-  const [pendingFormActions, setPendingFormActions] = useState(null)
+  const [pendingFormActions, setPendingFormActions] = useState(null);
 
   const handleAccordionChange = (panelId) => (event, isExpanded) => {
     const newExpanded = new Set(expandedPanels);
@@ -120,7 +127,7 @@ const OuvidoriaForm = () => {
     setShowAuthModal(false);
     setPendingFormData(null);
     setPendingFormActions(null);
-  }
+  };
 
   const validationSchema = Yup.object().shape({
     nome: Yup.string(),
@@ -134,7 +141,9 @@ const OuvidoriaForm = () => {
       .oneOf(["Sugestão", "Reclamação", "Elogio", "Denúncia"], "")
       .required("*Escolha um opção por favor."),
     mensagem: Yup.string().required("O campo Mensagem é obrigatório."),
-    arquivo: Yup.mixed().nullable().notRequired()
+    arquivo: Yup.mixed()
+      .nullable()
+      .notRequired()
       .test("fileSize", "O arquivo deve ter no máximo 5MB", (value) => {
         if (!value) return true;
         return value.size <= 5 * 1024 * 1024; // 5MB
@@ -191,8 +200,7 @@ const OuvidoriaForm = () => {
                 style={inlineStyle}
                 key={faq.id}
                 expanded={expandedPanels.has(faq.id)}
-                onChange={handleAccordionChange(faq.id)}
-              >
+                onChange={handleAccordionChange(faq.id)}>
                 <AccordionSummary
                   expandIcon={<ExpandMoreIcon />}
                   aria-controls={`${faq.id}-content`}
@@ -203,7 +211,7 @@ const OuvidoriaForm = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography variant="string">
-                    <Paragraph>{faq.answer}</Paragraph>
+                    <DescriptionRenderer description={faq.answer} />
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -334,9 +342,9 @@ const OuvidoriaForm = () => {
                         setFieldValue("arquivo", file || null);
                       }}
                     />
-                      <small className={styles.fileInfo}>
-                        Formatos aceitos: .jpg, .jpeg, .png, .gif (máximo 5MB)
-                      </small>
+                    <small className={styles.fileInfo}>
+                      Formatos aceitos: .jpg, .jpeg, .png, .gif (máximo 5MB)
+                    </small>
                     <ErrorMessage
                       name="arquivo"
                       component="div"
@@ -378,7 +386,10 @@ const OuvidoriaForm = () => {
                   <button
                     className={styles.confirmButton}
                     onClick={() =>
-                      handleConfirmSubmit(pendingFormData, pendingFormActions.resetForm)
+                      handleConfirmSubmit(
+                        pendingFormData,
+                        pendingFormActions.resetForm
+                      )
                     }>
                     Aceitar e enviar
                   </button>
