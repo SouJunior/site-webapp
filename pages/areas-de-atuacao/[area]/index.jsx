@@ -146,7 +146,7 @@ const AreaItem = () => {
           <div>
             <section className={styles.AboutSection}>
               <div style={{display: 'contents'}}>
-                  <DescriptionRenderer descripition={areaItem.head.descripition}/>
+                  <DescriptionRenderer description={areaItem.head.description}/>
               </div>
             </section>
           </div>

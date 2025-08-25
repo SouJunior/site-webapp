@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import styles from "./AboutUs.module.css";
 import Accordion from "@mui/material/Accordion";

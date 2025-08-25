@@ -8,7 +8,7 @@
       "name": "",
       "role": "Head de Back end",
       "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
-      "descripition": [
+      "description": [
         "A área de Business é responsável por conectar o projeto ao mundo externo. Aqui, atuamos com visão estratégica para construir parcerias, estruturar a sustentabilidade financeira e fortalecer o impacto da SouJunior de forma consistente e colaborativa.",
         "Se você gosta de pensar soluções, estruturar ideias, fazer conexões e aprender sobre modelos de negócio, esse é o seu lugar.",
         "O que você aprende e faz em Business na SouJunior  ",
@@ -154,7 +154,7 @@
       "name": "Daniele Oliveira",
       "role": "Head de Tech Recruiter",
       "image-profile": "https://user-images.githubusercontent.com/146049420/275667561-c23cd05f-680c-41e7-8a6b-03db6af0ac07.jpg",
-      "descripition": [
+      "description": [
         "O Tech Recruiter é a pessoa responsável por conectar talentos com oportunidades dentro do projeto. Aqui na SouJunior, esse papel é essencial para garantir que tenhamos pessoas alinhadas com os nossos valores e com vontade de crescer juntas.",
         "Quem atua nessa área participa da definição dos perfis ideais, organiza as etapas do processo seletivo, conduz entrevistas e acompanha os candidatos em sua jornada até entrarem no time.",
         "Como funciona o processo seletivo?  ",
@@ -280,7 +280,7 @@
       "name": "Vanêssa Santana",
       "role": "Head de Produtos",
       "image-profile": "https://user-images.githubusercontent.com/104070821/229590190-be5c776e-9715-4758-be2a-b0fe693959d9.png",
-      "descripition": [
+      "description": [
         "A área de Produto é o coração estratégico de muitos times. São analisados problemas reais, organização de ideias, validação de hipóteses e acompanha a criação de soluções que geram valor para quem as usa.",
         "No nosso voluntariado, a área de Produto está dividida em frentes que oferecem espaço para aprendizado, colaboração e crescimento prático.",
         "Conheça os cargos de Produto que você pode explorar com a gente:",
@@ -593,7 +593,7 @@
       "name": "",
       "role": "Head de Agilidade",
       "image-profile": "https://user-images.githubusercontent.com/31568030/271143655-b632062d-c7b2-4536-a8e2-2bd835369c50.png",
-      "descripition": [
+      "description": [
         "A área de Agilidade é responsável por garantir que os times consigam trabalhar de forma colaborativa, organizada e com foco em entregar valor continuamente.",
         "No nosso projeto, quem atua como Scrum Master ou Agilista ajuda a remover impedimentos, promove uma cultura de melhoria contínua e apoia todos os membros a se desenvolverem dentro do processo.",
         "É o papel de quem cuida do como o trabalho acontece e faz isso com muito diálogo, escuta ativa e empatia.",
@@ -804,7 +804,7 @@
       "name": "",
       "role": "Head de Back end",
       "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
-      "descripition": [
+      "description": [
         "A área de Social Media é responsável por dar voz ao projeto nas redes sociais, contando histórias, divulgando oportunidades e engajando a comunidade com conteúdos que refletem o nosso propósito.",
         "Aqui, a comunicação vai além de likes: ela inspira, educa, atrai voluntários e gera impacto real.",
         "Criação de Conteúdo – Redação  ",
@@ -954,7 +954,7 @@
       "name": "Vinicius L Miguel",
       "role": "Head de UI & UX Design",
       "image-profile": "https://user-images.githubusercontent.com/115566254/233649176-010b3962-037b-4565-9256-0e128fad3cad.jpg",
-      "descripition": [
+      "description": [
         "Na área de Design, o foco está em criar experiências que sejam bonitas, intuitivas e centradas nas pessoas. Aqui, design não é só aparência, é sobre resolver problemas, facilitar jornadas e gerar conexões reais com quem usa o projeto.",
         "Se você é uma pessoa criativa, curiosa e gosta de pensar em como as coisas funcionam para os outros, essa área tem muito a te oferecer.",
         "Dentro do nosso projeto, temos cargos específicos para diferentes etapas e perfis do design. Conheça:",
@@ -1229,7 +1229,7 @@
       "name": "Ricardo Lima",
       "role": "Head de Front end",
       "image-profile": "https://user-images.githubusercontent.com/115566254/238658185-610d2cfc-e15f-4f47-ab02-885da2ea6b98.jpg",
-      "descripition": [
+      "description": [
         "A área de Front-end é responsável por transformar ideias e designs em telas reais, aquelas que as pessoas usuárias de fato vêem e interagem. É aqui que o visual do projeto ganha vida por meio de código, garantindo que tudo funcione de forma fluida, acessível e responsiva.",
         "Se você gosta de ver o resultado do seu trabalho na prática, tem curiosidade por HTML, CSS, JavaScript e frameworks como React, esse pode ser o seu lugar.",
         "O que você aprende e faz no Front-end na SouJunior  ",
@@ -1463,7 +1463,7 @@
       "name": "Wanderson Santos",
       "role": "Head de Back end",
       "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
-      "descripition": [
+      "description": [
         "Na área de Back-end, você cuida da lógica por trás do que aparece na tela. É aqui que moram as regras de negócio, as integrações com banco de dados, as rotas das APIs e tudo o que garante que o sistema funcione com segurança, escalabilidade e eficiência.",
         "Se você curte lógica, organização, performance e resolver problemas que exigem pensamento estruturado, essa pode ser sua área na iniciativa.",
         "O que você aprende e faz como Back-end na SouJunior  ",
@@ -1611,7 +1611,7 @@
       "name": "",
       "role": "Head de Back end",
       "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
-      "descripition": [
+      "description": [
         "Na área de Dados, nosso foco é transformar informações em decisões estratégicas. Trabalhamos para gerar insights, criar visualizações claras, organizar bases de dados e ajudar todas as áreas do projeto a tomar decisões com mais inteligência e segurança.",
         "Se você gosta de números, lógica, organização ou curte encontrar padrões e contar histórias com dados, este pode ser o seu espaço.",
         "Conheça os cargos que você pode explorar na SouJunior:",
@@ -1765,7 +1765,7 @@
       "name": "Mateus Leonardo",
       "role": "Head de Mobile",
       "image-profile": "https://user-images.githubusercontent.com/98753928/256327572-2a4bb7cc-1e4d-4520-a82e-8c9e407581bc.jpeg",
-      "descripition": [
+      "description": [
         "O setor de Mobile é responsável pela criação e aprimoramento de aplicativos e sistemas para dispositivos móveis criando software específico para funcionar em plataformas móveis, como Android e IOS. A área tem como desafio a implementação de abordagens adaptativas proporcionando aos usuários experiências otimizadas em seus dispositivos, permitindo o acesso prático e rápido a informações, serviços e entretenimento."
       ],
       "social": {
@@ -1871,7 +1871,7 @@
       "name": "",
       "role": "Head de Back end",
       "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
-      "descripition": [
+      "description": [
         "A área de QA (Quality Assurance) é essencial para garantir que tudo o que é desenvolvido funcione bem, sem erros e com a melhor experiência possível para quem usa o produto.",
         "Aqui, a gente acredita que qualidade não é responsabilidade só de uma pessoa, mas o time de QA é quem puxa essa frente com mais profundidade, cuidado e atenção aos detalhes.",
         "Se você gosta de testar, encontrar inconsistências e melhorar processos, QA pode ser a sua área.",
@@ -2018,7 +2018,7 @@
       "name": "",
       "role": "Head de Back end",
       "image-profile": "https://user-images.githubusercontent.com/81826043/262431368-f75053e5-8277-44ce-bb3b-1a63770958b7.png",
-      "descripition": [
+      "description": [
         "A área de DevOps é o elo entre o desenvolvimento de software e a operação dos sistemas. O objetivo é garantir que os produtos sejam entregues de forma segura, contínua e escalável, sem fricção entre o que o time desenvolve e o que vai para produção.",
         "Se você gosta de automação, infraestrutura, monitoramento e processos, essa área pode ser a sua.",
         "O que você aprende e faz como DevOps na SouJunior  ",
