@@ -11,6 +11,13 @@ export const getValidationSchema = (hasSubareas, requiresDate) => {
     email: Yup.string()
       .matches(/[a-z0-9]+@[a-z]+\.[a-z]{2,3}/, "E-mail inválido.")
       .required("O campo E-mail é obrigatório."),
+    phone: Yup.string()
+      .matches(
+        /^(?:(?:\+|00)?(55)\s?)?(?:(?:\(?[1-9][0-9]\)?)?\s?)?(?:((?:9\d|[2-9])\d{3})-?(\d{4}))$/,
+        "Telefone inválido."
+      )
+      .max(15, "O campo deve ter no máximo 15 caracteres.")
+      .required("O campo Telefone é obrigatório."),
     linkedin: Yup.string()
       .matches(
         /^(https?:\/\/)(www\.)?linkedin\.com\/in\/[\w-]{3,}(\/)?(\?.*)?(#.*)?$/,
