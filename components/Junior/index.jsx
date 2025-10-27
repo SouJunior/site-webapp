@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Formik, Field, Form, ErrorMessage } from "formik";
 import { getValidationSchema, initialValues } from "./structure";
 
@@ -80,7 +80,7 @@ export const Junior = () => {
           { name: "Criação de Conteúdo - Redação", id: 12 },
           { name: "Criação de Peças - Design", id: 13 },
         ],
-      }
+      },
     ]);
 
     setIsSubmitting(true);
@@ -107,24 +107,28 @@ export const Junior = () => {
   const closePopup = () => setShowPopup(false);
 
   const onSubmit = async (values, { resetForm }) => {
-    
-    {!dataAccepted && setShowDataModal(true)}
+    {
+      !dataAccepted && setShowDataModal(true);
+    }
 
     setIsSubmitting(true);
     setLoading(true);
 
-    const startDate = values.startOption === "Imediato" ?
-      new Date()
-      : new Date(values.startDate.split('-'))
+    const startDate =
+      values.startOption === "Imediato"
+        ? new Date()
+        : new Date(values.startDate.split("-"));
 
     if (isSubmitting && dataAccepted) {
       try {
-        const response = await api.post("/juniors",
+        const response = await api.post(
+          "/juniors",
           {
             name: values.name,
             email: values.email,
             linkedin: values.linkedin,
             indication: values.indication === "sim" ? true : false,
+            phone: values.phone,
             linkedinIndication: values.indicationLinkedin,
             turn: values.turn === "turno-disponivel" ? true : false,
             startOption: values.startOption,
@@ -139,13 +143,13 @@ export const Junior = () => {
             startDate: startDate,
             area: Number(values.area),
             subarea: Number(values.subarea),
-          }, 
-          {headers: 
-            {
-              'x-api-key':process.env.NEXT_PUBLIC_X_API_KEY,
-            }
+          },
+          {
+            headers: {
+              "x-api-key": process.env.NEXT_PUBLIC_X_API_KEY,
+            },
           }
-        )
+        );
 
         if (response.status !== 201) {
           throw new Error("Não foi possível enviar a requisição");
@@ -156,9 +160,9 @@ export const Junior = () => {
       } catch (error) {
         openPopup();
         {
-          error.response ?
-          setPopupMessage(error.response.data.message) :
-          setPopupMessage("Erro inesperado, tente novamente mais tarde");
+          error.response
+            ? setPopupMessage(error.response.data.message)
+            : setPopupMessage("Erro inesperado, tente novamente mais tarde");
         }
       } finally {
         setLoading(false);
@@ -168,7 +172,7 @@ export const Junior = () => {
 
   const handleAreaChange = (setFieldValue, id) => {
     setFieldValue("area", id);
-    const selectedArea = areas.find(option => option.id === Number(id));
+    const selectedArea = areas.find((option) => option.id === Number(id));
     setSelectedArea(selectedArea);
 
     if (selectedArea?.subareas) {
@@ -202,22 +206,22 @@ export const Junior = () => {
   const handleDataNotAccept = () => {
     setDataAccepted(false);
     setShowDataModal(false);
-  }
+  };
 
   const handleCheckboxChange = (e, setFieldValue) => {
     if (e.target.checked) {
       setShowTermsModal(true);
-      setFieldValue('termsAgreement', true);
+      setFieldValue("termsAgreement", true);
     } else {
       setShowTermsModal(false);
       setTermsAccepted(false);
-      setFieldValue('termsAgreement', false);
+      setFieldValue("termsAgreement", false);
     }
   };
 
   const handleClearInput = (setFieldValue, nameInput) => {
     setFieldValue(nameInput, "");
-  }
+  };
 
   return (
     <>
@@ -229,10 +233,10 @@ export const Junior = () => {
         <div className={styles.bannerText}>
           <Heading level={"h2"}>Quero ser Junior</Heading>
           <Paragraph>
-            Para se candidatar como junior, preencha as informações do formulário abaixo e
-            nosso time entrará em contato para te conhecer um pouco mais e
-            entender de que forma você poderá contribuir com os projetos e
-            iniciativas da SouJunior.
+            Para se candidatar como junior, preencha as informações do
+            formulário abaixo e nosso time entrará em contato para te conhecer
+            um pouco mais e entender de que forma você poderá contribuir com os
+            projetos e iniciativas da SouJunior.
           </Paragraph>
         </div>
       </div>
@@ -241,12 +245,24 @@ export const Junior = () => {
           <div className={styles.form}>
             <Formik
               initialValues={initialValues}
-              validationSchema={getValidationSchema(subareas.length > 0, requiresDate)}
+              validationSchema={getValidationSchema(
+                subareas.length > 0,
+                requiresDate
+              )}
               onSubmit={onSubmit}
             >
-              {({ isSubmitting, values, setFieldValue, isValid, dirty, errors, handleBlur, handleChange }) => {
+              {({
+                isSubmitting,
+                values,
+                setFieldValue,
+                isValid,
+                dirty,
+                errors,
+                handleBlur,
+                handleChange,
+              }) => {
                 if (dirty) {
-                  setFormDirty(true)
+                  setFormDirty(true);
                 }
                 return (
                   <Form>
@@ -281,6 +297,28 @@ export const Junior = () => {
                       />
                     </div>
                     <div className={styles.fieldDiv}>
+                      <label>Telefone *</label>
+                      <Field
+                        type="text"
+                        name="phone"
+                        placeholder="Digite seu número de telefone para contato"
+                        className={styles.input}
+                        maxLength={15}
+                        onChange={(e) => {
+                          let value = e.target.value.replace(/\D/g, "");
+                          value = value.replace(/(\d{2})(\d)/, "($1) $2");
+                          value = value.replace(/(\d)(\d{4})$/, "$1-$2");
+                          handleChange(e);
+                          setFieldValue("phone", value);
+                        }}
+                      />
+                      <ErrorMessage
+                        name="phone"
+                        component="div"
+                        className={styles.errorMessage}
+                      />
+                    </div>
+                    <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
                       <Field
                         type="text"
@@ -303,9 +341,7 @@ export const Junior = () => {
                       <label>
                         Você foi indicado por alguém da SouJunior? *
                       </label>
-                      <div
-                        className={styles.turnoRadioGroup}
-                      >
+                      <div className={styles.turnoRadioGroup}>
                         <label
                           className={styles.turnoRadiolabel}
                           htmlFor="is-indication"
@@ -330,7 +366,10 @@ export const Junior = () => {
                             name="indication"
                             value="não"
                             onChange={(e) => {
-                              handleClearInput(setFieldValue, "indicationLinkedin");
+                              handleClearInput(
+                                setFieldValue,
+                                "indicationLinkedin"
+                              );
                               handleChange(e);
                             }}
                           />
@@ -338,9 +377,11 @@ export const Junior = () => {
                         </label>
                       </div>
                     </div>
-                    {values.indication == "sim" && 
+                    {values.indication == "sim" && (
                       <div className={styles.fieldDiv}>
-                        <label>Informe o LinkedIn de quem te indicou ao projeto *</label>
+                        <label>
+                          Informe o LinkedIn de quem te indicou ao projeto *
+                        </label>
                         <Field
                           type="text"
                           name="indicationLinkedin"
@@ -353,7 +394,7 @@ export const Junior = () => {
                           className={styles.errorMessage}
                         />
                       </div>
-                    }
+                    )}
                     <div
                       id="radioGroup"
                       role="radioGroup"
@@ -361,11 +402,11 @@ export const Junior = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        A SouJunior realiza reuniões e atividades no período noturno. Você possui disponibilidade para participar das cerimônias e atividades neste turno? *
+                        A SouJunior realiza reuniões e atividades no período
+                        noturno. Você possui disponibilidade para participar das
+                        cerimônias e atividades neste turno? *
                       </label>
-                      <div
-                        className={styles.turnoRadioGroup}
-                      >
+                      <div className={styles.turnoRadioGroup}>
                         <label
                           className={styles.turnoRadiolabel}
                           htmlFor="turno-disponivel"
@@ -401,13 +442,10 @@ export const Junior = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Quanto tempo por semana você poderia se dedicar ao voluntariado na SouJunior?
-                        *
+                        Quanto tempo por semana você poderia se dedicar ao
+                        voluntariado na SouJunior? *
                       </label>
-                      <label
-                        className={styles.radioLabel}
-                        htmlFor="5 horas"
-                      >
+                      <label className={styles.radioLabel} htmlFor="5 horas">
                         <Field
                           className={styles.customRadio}
                           type="radio"
@@ -465,23 +503,20 @@ export const Junior = () => {
                       className={styles.fieldDiv}
                     >
                       <label>
-                        Você possui disponibilidade imediata para iniciar no voluntariado? Se não, quando poderia iniciar? *
+                        Você possui disponibilidade imediata para iniciar no
+                        voluntariado? Se não, quando poderia iniciar? *
                       </label>
                       <div className={styles.turnoRadioGroup}>
-                        <label
-                          className={styles.radioLabel}
-                          htmlFor="Imediato"
-                        >
+                        <label className={styles.radioLabel} htmlFor="Imediato">
                           <Field
                             className={styles.customRadio}
                             type="radio"
                             name="startOption"
                             onChange={(e) => {
-                                handleInicioChange(setFieldValue, "Imediato");
-                                handleClearInput(setFieldValue, "startDate");
-                                handleChange(e);
-                              }
-                            }
+                              handleInicioChange(setFieldValue, "Imediato");
+                              handleClearInput(setFieldValue, "startDate");
+                              handleChange(e);
+                            }}
                             value="Imediato"
                             id="Imediato"
                           />
@@ -495,7 +530,12 @@ export const Junior = () => {
                             className={styles.customRadio}
                             type="radio"
                             name="startOption"
-                            onChange={() => handleInicioChange(setFieldValue, "Em uma data específica")}
+                            onChange={() =>
+                              handleInicioChange(
+                                setFieldValue,
+                                "Em uma data específica"
+                              )
+                            }
                             value="Em uma data específica"
                             id="Em uma data específica"
                           />
@@ -507,7 +547,9 @@ export const Junior = () => {
                             name="startDate"
                             placeholder="informe aqui sua disponibilidade"
                             id="startDate"
-                            disabled={values.startOption !== "Em uma data específica"}
+                            disabled={
+                              values.startOption !== "Em uma data específica"
+                            }
                           />
                           <ErrorMessage
                             name="startDate"
@@ -519,13 +561,16 @@ export const Junior = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Qual das áreas de atuação da SouJunior você possui interesse?*
+                        Qual das áreas de atuação da SouJunior você possui
+                        interesse?*
                       </label>
                       <Field
                         as="select"
                         name="area"
                         className={styles.select}
-                        onChange={(e) => handleAreaChange(setFieldValue, e.target.value)}
+                        onChange={(e) =>
+                          handleAreaChange(setFieldValue, e.target.value)
+                        }
                       >
                         <option
                           label="Selecione a área de atuação"
@@ -534,16 +579,15 @@ export const Junior = () => {
                         >
                           Selecione a área de atuação
                         </option>
-                        {areas
-                          .map((areaOption) => (
-                            <option
-                              label={areaOption.name}
-                              value={areaOption.id}
-                              key={areaOption.id}
-                            >
-                              {areaOption.name}
-                            </option>
-                          ))}
+                        {areas.map((areaOption) => (
+                          <option
+                            label={areaOption.name}
+                            value={areaOption.id}
+                            key={areaOption.id}
+                          >
+                            {areaOption.name}
+                          </option>
+                        ))}
                       </Field>
                       <ErrorMessage
                         name="area"
@@ -556,7 +600,11 @@ export const Junior = () => {
                         <label>
                           {`Em qual área de ${selectedArea.name} você gostaria de atuar? *`}
                         </label>
-                        <Field as="select" name="subarea" className={styles.select}>
+                        <Field
+                          as="select"
+                          name="subarea"
+                          className={styles.select}
+                        >
                           <option
                             label="Selecione a subárea de atuação"
                             value=""
@@ -583,7 +631,8 @@ export const Junior = () => {
                     )}
                     <div className={styles.fieldDiv}>
                       <label>
-                        Você possui conhecimento/experiência com ferramentas e/ou tecnologias na área em que deseja atuar?*
+                        Você possui conhecimento/experiência com ferramentas
+                        e/ou tecnologias na área em que deseja atuar?*
                       </label>
                       <Field
                         as="textarea"
@@ -594,7 +643,8 @@ export const Junior = () => {
                         placeholder="Conte-nos um pouco sobre sua experiência na área desejada!"
                       />
                       <span className={styles.count}>
-                        Caracteres restantes: {500 - values.toolsKnowledge.length}
+                        Caracteres restantes:{" "}
+                        {500 - values.toolsKnowledge.length}
                       </span>
                       {values.toolsKnowledge.length > 500 && (
                         <span className={styles.count} style={{ color: "red" }}>
@@ -609,7 +659,9 @@ export const Junior = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        E sobre os conceitos teóricos, você já possui algum conhecimento referente a área que deseja atuar? Quais cursos referente a esta área você já realizou? *
+                        E sobre os conceitos teóricos, você já possui algum
+                        conhecimento referente a área que deseja atuar? Quais
+                        cursos referente a esta área você já realizou? *
                       </label>
                       <Field
                         as="textarea"
@@ -620,7 +672,8 @@ export const Junior = () => {
                         placeholder="Conte-nos um pouco sobre seu conhecimento teórico e cursos realizados!"
                       />
                       <span className={styles.count}>
-                        Caracteres restantes: {500 - values.fieldKnowledge.length}
+                        Caracteres restantes:{" "}
+                        {500 - values.fieldKnowledge.length}
                       </span>
                       {values.fieldKnowledge.length > 500 && (
                         <span className={styles.count} style={{ color: "red" }}>
@@ -635,7 +688,8 @@ export const Junior = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Conte-nos um pouco sobre sua motivação para se tornar um Júnior na SouJunior.*
+                        Conte-nos um pouco sobre sua motivação para se tornar um
+                        Júnior na SouJunior.*
                       </label>
                       <Field
                         as="textarea"
@@ -646,7 +700,8 @@ export const Junior = () => {
                         placeholder="Qual sua motivação para se tornar voluntário?"
                       />
                       <span className={styles.count}>
-                        Caracteres restantes: {500 - values.volunteerMotivation.length}
+                        Caracteres restantes:{" "}
+                        {500 - values.volunteerMotivation.length}
                       </span>
                       {values.volunteerMotivation.length > 500 && (
                         <span className={styles.count} style={{ color: "red" }}>
@@ -661,7 +716,9 @@ export const Junior = () => {
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>
-                        Algo mais que você gostaria de nos informar ou compartilhar sobre você ou sua experiência que possa ser relevante como um Júnior na SouJunior?
+                        Algo mais que você gostaria de nos informar ou
+                        compartilhar sobre você ou sua experiência que possa ser
+                        relevante como um Júnior na SouJunior?
                       </label>
                       <Field
                         as="textarea"
@@ -672,7 +729,8 @@ export const Junior = () => {
                         placeholder="Caso queira compartilhar algo mais conosco, essa é a hora!"
                       />
                       <span className={styles.count}>
-                        Caracteres restantes: {500 - values.otherExperiences.length}
+                        Caracteres restantes:{" "}
+                        {500 - values.otherExperiences.length}
                       </span>
                       {values.otherExperiences.length > 500 && (
                         <span className={styles.count} style={{ color: "red" }}>
@@ -691,11 +749,9 @@ export const Junior = () => {
                           className={styles.radioLabel}
                           htmlFor="contactAgreement"
                         >
-                          <Field
-                            type="checkbox"
-                            name="contactAgreement"
-                          />
-                          Declaro que as informações fornecidas são verídicas e autorizo a SouJunior a me contatar.
+                          <Field type="checkbox" name="contactAgreement" />
+                          Declaro que as informações fornecidas são verídicas e
+                          autorizo a SouJunior a me contatar.
                         </label>
                         <ErrorMessage
                           name="contactAgreement"
@@ -708,11 +764,10 @@ export const Junior = () => {
                           className={styles.radioLabel}
                           htmlFor="volunteeringAgreement"
                         >
-                          <Field
-                            type="checkbox"
-                            name="volunteeringAgreement"
-                          />
-                          Declaro que compreendo e concordo com o fato da SouJunior ser um projeto de voluntariado sem fins lucrativos.
+                          <Field type="checkbox" name="volunteeringAgreement" />
+                          Declaro que compreendo e concordo com o fato da
+                          SouJunior ser um projeto de voluntariado sem fins
+                          lucrativos.
                         </label>
                         <ErrorMessage
                           name="volunteeringAgreement"
@@ -730,9 +785,14 @@ export const Junior = () => {
                             name="termsAgreement"
                             id="terms"
                             checked={termsAccepted}
-                            onChange={(e) => handleCheckboxChange(e, setFieldValue)}
+                            onChange={(e) =>
+                              handleCheckboxChange(e, setFieldValue)
+                            }
                           />
-                          <p>Declaro ter lido e estar de acordo com os <strong> Termos e Condições</strong></p>
+                          <p>
+                            Declaro ter lido e estar de acordo com os{" "}
+                            <strong> Termos e Condições</strong>
+                          </p>
                         </label>
                         <ErrorMessage
                           name="termsAgreement"
@@ -754,10 +814,15 @@ export const Junior = () => {
                     <div className={styles.buttons}>
                       <button
                         type="submit"
-                        disabled={isSubmitting || !isValid || !dirty || !termsAccepted}>Enviar</button>
+                        disabled={
+                          isSubmitting || !isValid || !dirty || !termsAccepted
+                        }
+                      >
+                        Enviar
+                      </button>
                     </div>
                   </Form>
-                )
+                );
               }}
             </Formik>
           </div>
@@ -772,18 +837,17 @@ export const Junior = () => {
             </Popup>
           )}
         </div>
-        {
-          showAlertMessage &&
+        {showAlertMessage && (
           <AlertMessage
             message={`Obrigado por se candidatar! Sua candidatura foi registrada com sucesso.
                       Seu perfil está agora em nosso banco de talentos e entraremos em contato via LinkedIn assim que surgir uma oportunidade que tenha fit com seu perfil.
                       Agradecemos sua paciência e compreensão!
               `}
             onClose={() => {
-              setShowAlertMessage(false)
+              setShowAlertMessage(false);
             }}
           />
-        }
+        )}
       </section>
     </>
   );
