@@ -129,6 +129,7 @@ export const Junior = () => {
             linkedin: values.linkedin,
             indication: values.indication === "sim" ? true : false,
             phone: values.phone,
+            hasWhatsapp: values.hasWhatsapp === "sim" ? true : false,
             linkedinIndication: values.indicationLinkedin,
             turn: values.turn === "turno-disponivel" ? true : false,
             startOption: values.startOption,
