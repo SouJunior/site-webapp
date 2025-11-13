@@ -85,6 +85,8 @@ export const Head = () => {
             {
               name: values.name,
               email: values.email,
+              phone: values.phone,
+              hasWhatsApp: values.whatsapp === "sim" ? true : false,
               linkedin: values.linkedin,
               indication: values.indication === "sim" ? true : false,
               linkedinIndication: values.indicationLinkedin,
@@ -241,6 +243,64 @@ const handleClearInput = (setFieldValue, nameInput) => {
                         component="div"
                         className={styles.errorMessage}
                       />
+                    </div>
+                    <div className={styles.fieldDiv}>
+                      <label>Telefone *</label>
+                      <Field
+                        type="text"
+                        name="phone"
+                        placeholder="Digite seu número de telefone para contato"
+                        className={styles.input}
+                        maxLength={15}
+                        onChange={(e) => {
+                          let value = e.target.value.replace(/\D/g, '');
+                          value = value.replace(/(\d{2})(\d)/, '($1) $2');
+                          value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+                          handleChange(e);
+                          setFieldValue('phone', value);
+                        }}
+                      />
+                      <ErrorMessage
+                        name="phone"
+                        component="div"
+                        className={styles.errorMessage}
+                      />
+                    </div>
+                    <div
+                      id="radioGroup"
+                      role="radioGroup"
+                      name="radioGroup"
+                      className={styles.fieldDiv}
+                    >
+                      <label>Este número possui WhatsApp? *</label>
+                      <div className={styles.turnoRadioGroup}>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="is-whatsapp"
+                        >
+                          <Field
+                            id="is-whatsapp"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="whatsapp"
+                            value="sim"
+                          />
+                          Sim
+                        </label>
+                        <label
+                          className={styles.turnoRadiolabel}
+                          htmlFor="isnot-whatsapp"
+                        >
+                          <Field
+                            id="isnot-whatsapp"
+                            className={styles.customRadio}
+                            type="radio"
+                            name="whatsapp"
+                            value="não"
+                          />
+                          Não
+                        </label>
+                      </div>
                     </div>
                     <div className={styles.fieldDiv}>
                       <label>Linkedin *</label>
