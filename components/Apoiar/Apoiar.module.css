@@ -25,19 +25,19 @@
   margin-bottom: 20px;
 }
 
-.footer{
+.footer {
   margin-top: 50px;
 }
 
-.titleFooter{
+.titleFooter {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
 }
 
-.titleFooter h1{
+.titleFooter h1 {
   font-family: inherit;
   font-style: normal;
   font-weight: 600;
@@ -47,7 +47,7 @@
   margin-bottom: 10px;
 }
 
-.apoiarContent{
+.apoiarContent {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -61,7 +61,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: #046AD0;
+  background: #046ad0;
   color: #fff;
   font-size: 24px;
   flex-direction: row;
@@ -76,16 +76,16 @@
   cursor: pointer;
 }
 
-.buttonApoiarContent{
+.buttonApoiarContent {
   display: flex;
   align-items: center;
 }
 
-.buttonApoiarContent p{
+.buttonApoiarContent p {
   margin-left: 60px;
 }
 
-.buttonApoiarContent div{
+.buttonApoiarContent div {
   position: relative;
   left: 16px;
   top: 5px;
