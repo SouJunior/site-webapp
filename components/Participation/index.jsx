@@ -70,7 +70,7 @@ export const ParticipationSection = () => {
 
                     <button className={styles.button}>
                       <Link
-                        href="/seja-junior"
+                        href="https://stars.soujunior.tech/"
                         target="_blank"
                         rel="noopener noreferrer">
                         Quero Participar!
