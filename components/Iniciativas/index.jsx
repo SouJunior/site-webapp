@@ -1,14 +1,14 @@
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
-import styles from "./Iniciativa.module.css";
-import Card from "../commons/Card/Card";
+import "swiper/css/pagination";
+import { Autoplay, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { iniciativasSouJunior } from "../../utils/iniciativasSwipe";
-import { Autoplay, Pagination } from "swiper";
-import { useState, useEffect } from "react";
 import { shuffleArray } from "../../utils/shuffleArray";
+import Card from "../commons/Card/Card";
+import styles from "./Iniciativa.module.css";
 
 export default function App() {
   const [iniciativas, setIniciativas] = useState([]);

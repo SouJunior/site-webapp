@@ -1,17 +1,17 @@
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 
 import styles from "../OccupationSection/OccupationSection.module.css";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Controller, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import { Controller, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 import { carouselItems } from "../../utils/carouselItems";
-import { Paragraph } from "../commons/Paragraph";
 import { Heading } from "../commons/Heading";
+import { Paragraph } from "../commons/Paragraph";
 
 export const OccupationSection = () => {
   const navigationPrevRef = useRef(null);

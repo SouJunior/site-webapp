@@ -1,10 +1,10 @@
 import Image from "next/image";
+import { Controller, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Controller, Navigation } from "swiper";
+import { Heading } from "../../components/commons/Heading";
+import { data } from "../../utils/depositionCarouselInfo";
 import { DepositionCard } from "../commons/DepositionCard";
 import style from "./Depositions.module.css";
-import { data } from "../../utils/depositionCarouselInfo";
-import { Heading } from "../../components/commons/Heading";
 
 export function Depositions() {
   return (
